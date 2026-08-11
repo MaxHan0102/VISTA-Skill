@@ -1,0 +1,7 @@
+\begin{abstract}
+Procedural skills provide a non-parametric mechanism for improving frozen vision-language model (VLM) agents from interaction experience. However, in partially observable embodied environments, an execution failure does not directly reveal whether a reusable skill is incorrect: the same failure may arise from an uncertain visual belief, stale state tracking, incorrect action-effect knowledge, or an executor lapse. Treating every failed trajectory as supervision for skill revision can therefore introduce harmful persistent updates. We formulate this problem as \textbf{visual transition credit assignment}: determining which memory component, if any, should be updated when a skill-predicted effect disagrees with the state change supported by visual observations and environment feedback. We introduce \textbf{VISTA-Skill}, a training-free framework that maintains an instance-level episode belief graph and a persistent action-effect memory while keeping the VLM executor frozen. 
+
+\textcolor{blue}{Method Details}
+
+Experiments on EB-HAB and EB-NAV show that VISTA-Skill improves task success by \textcolor{blue}{X} and beneficial-update precision by \textcolor{blue}{Y}, while reducing harmful-update rate by \textcolor{blue}{Z} over the open-source EmbodiSkill baseline and matched trajectory-level evolution controls.
+\end{abstract}

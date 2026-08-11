@@ -1,0 +1,97 @@
+\section{Experiments}
+\label{sec:experiments}
+
+\begin{table*}[t]
+    \centering
+    \caption{\textbf{Main Result}.}
+    \newcolumntype{Y}{>{\centering\arraybackslash}X}
+    \begin{tabularx}{0.98\textwidth}{lYYYYYYYYYYYYY}
+        \hline
+        \multirow{2}{*}{\textbf{Method}} & \multirow{2}{*}{\textbf{Avg.}} & \multicolumn{6}{c}{\textbf{EB-Habitat}}                                                        & \multirow{2}{*}{\textbf{Avg.}} & \multicolumn{5}{c}{\textbf{EB-Navigation}}                                     \\ \cline{3-8} \cline{10-14} 
+                                        &                                & \textbf{Base} & \textbf{Com.} & \textbf{Comp.} & \textbf{Vis.} & \textbf{Spa.} & \textbf{Long} &                                & \textbf{Base} & \textbf{Com.} & \textbf{Comp.} & \textbf{Vis.} & \textbf{Long} \\ \hline
+        \multicolumn{14}{l}{\textbf{Executor: Closed-source VLM}}                                                                                                                                                                                                                            \\
+        GPT-5.4-mini                     & 0.397                          & 0.76          & 0.34          & 0.30           & 0.36          & 0.36          & 0.26          & 0.597                          & 0.70          & 0.70          & 0.73           & 0.65          & 0.20          \\
+        Gemini-3-Flash                   & 0.460                          & 0.78          & 0.42          & 0.38           & 0.56          & 0.32          & 0.30          & 0.560                          & 0.62          & 0.60          & 0.55           & 0.47          & 0.57          \\
+        Gemini-3.5-Flash                 & 0.580                          & 0.82          & 0.48          & 0.64           & 0.70          & 0.32          & 0.52          & 0.673                          & 0.72          & 0.73          & 0.70           & 0.58          & 0.58          \\ \hline
+        \multicolumn{14}{l}{\textbf{Executor: Qwen 3-VL-8B-Instruct}}                                                                                                                                                                                                                        \\
+        No Skill/Memory                  & 0.240                          & 0.58          & 0.20          & 0.20           & 0.18          & 0.18          & 0.10          & 0.450                          & 0.58          & 0.53          & 0.62           & 0.50          & 0.02          \\
+        Mem0                             & 0.203                          & 0.60          & 0.16          & 0.08           & 0.16          & 0.14          & 0.08          & 0.463                          & 0.58          & 0.57          & 0.62           & 0.55          & 0.00          \\
+        G-Memory                         & 0.257                          & 0.58          & 0.14          & 0.12           & 0.34          & 0.30          & 0.06          & 0.373                          & 0.62          & 0.43          & 0.43           & 0.38          & 0.00          \\
+        EmbodiSkill-GPT                  & 0.453                          & 0.76          & 0.46          & 0.36           & 0.52          & 0.38          & 0.24          & 0.503                          & 0.68          & 0.65          & 0.62           & 0.57          & 0.00          \\
+        EmbodiSkill-Gemini               & 0.410                          & 0.78          & 0.34          & 0.32           & 0.52          & 0.34          & 0.16          & 0.490                          & 0.60          & 0.63          & 0.67           & 0.52          & 0.03          \\ \hline
+        \multicolumn{14}{l}{\textbf{Ours}}                                                                                                                                                                                                                                                   \\
+        Qwen3-VL-8B-Instruct             & 0.333                          & 0.64          & 0.14          & 0.38           & 0.30          & 0.28          & 0.24          & -                              & -             & -             & -              & -             & -             \\
+        +Module1                         & -                              & -             & -             & -              & -             & -             & -             & -                              & -             & -             & -              & -             & -             \\
+        +Module2                         & -                              & -             & -             & -              & -             & -             & -             & -                              & -             & -             & -              & -             & -             \\ \hline
+    \end{tabularx}
+\end{table*}
+
+
+We organize the experiments around four research questions:
+
+\textbf{RQ1:} Does VISTA-Skill improve embodied task success and progress over the open-source EmbodiSkill baseline under the same frozen executor and evaluation protocol?
+
+\textbf{RQ2:} Does visual transition credit assignment identify the correct update target and beneficial skill revisions more accurately than trajectory-level skill/lapse routing and Skill-Pro-style semantic gradients?
+
+\textbf{RQ3:} Which components---instance-level belief, evidence-decoupled transitions, hierarchical attribution, and field-level revision---are responsible for the improvement?
+
+\textbf{RQ4:} Under a common updater and matched evolution budget, does the proposed attribution frontend improve beneficial-update precision while reducing harmful updates, abstention errors, and teacher cost?
+
+
+
+
+\subsection{Experimental Setup}
+\label{sec:experimental_setup}
+
+\subsubsection{Benchmarks and Baselines}
+\label{sec:benchmarks_baselines}
+
+We evaluate on EB-HAB and EB-NAV from EmbodiedBench\cite{yangEmbodiedBenchComprehensiveBenchmarking2025}. All controlled comparisons use the same frozen Qwen3-VL-8B-Instruct executor, visual observations, action space, initial skill pool, acquisition trajectories, evolution teacher, skill-token budget, candidate budget, and evaluation protocol. Initial skills are constructed from the action interface and task-family descriptions without accessing final-test trajectories.
+
+Our primary performance baseline is \textbf{EmbodiSkill}, using its open-source skill-aware reflection pipeline under the matched Qwen3-VL executor. EmbodiSkill distinguishes reusable skill defects from executor deviations at the trajectory level and therefore provides the closest public baseline for selective skill evolution. We match its initial procedural knowledge, acquisition episodes, teacher, and evaluation budget to VISTA-Skill; native configurations that use a different teacher are reported separately rather than treated as controlled comparisons.
+
+We retain \textbf{Skill-Pro-VLM} as a diagnostic evolution baseline. It preserves Skill-Pro's activation--execution--termination schema, semantic-gradient aggregation, candidate generation, non-parametric PPO gate, and score-based pool maintenance, while receiving the same images and feedback as VISTA-Skill. In addition, we construct a common-updater control in which unconditional reflection, EmbodiSkill-style skill/lapse routing, Skill-Pro-style semantic gradients, and VISTA attribution share the same bounded patch generator and paired selection gate. This separates the contribution of selecting and attributing experience from that of a stronger downstream optimizer.
+
+\subsubsection{Evolution Protocol and Data Splits}
+
+We partition tasks and episodes into four disjoint roles. The acquisition split supplies interaction events that may trigger an update; the selection split compares parent and candidate memories; the audit split measures whether a promoted update is beneficial or harmful but is never visible to the optimizer; and the final test split is evaluated only after the method and hyperparameters are frozen. Parent and candidate skills are replayed with paired seeds whenever the environment permits, and all methods receive the same maximum numbers of teacher calls, generated candidates, and candidate-evaluation episodes.
+
+To evaluate credit assignment independently of final task success, we construct a simulator-assisted event set with controlled belief, action-model, skill-field, executor-lapse, insufficient-evidence, and stochastic/no-op faults. Each injected event has a known memory target and, for skill faults, a known affected field. We additionally annotate naturally occurring mismatches to test whether conclusions transfer beyond synthetic faults.
+
+
+\subsubsection{Evaluation Metrics}
+\label{sec:evaluation_metrics}
+
+We report task success, task progress, invalid-action ratio, and premature-termination rate as execution metrics. To evaluate the proposed problem directly, we additionally report target and field Macro-F1, abstention precision and coverage, evidence-supported predicate-transition F1, confidence calibration, beneficial-update precision, harmful-update rate, teacher calls, generated tokens, and candidate-evaluation episodes.
+
+Beneficial-update precision is the fraction of promoted skill revisions that improve performance by more than $\epsilon$ on the held-out audit split. Harmful-update rate is the fraction of promoted revisions that reduce overall performance or cause a protected task category to regress by more than $\epsilon$. We report both metrics together with update coverage so that a method cannot appear reliable merely by rejecting every candidate.
+
+
+\subsection{Quantitative Results}
+\label{sec:quantitative_results}
+
+
+\subsection{Qualitative Results}
+\label{sec:qualitative_results}
+
+% The final VISTA-Skill main-result tables and performance--cost curves will be inserted here after completing the full implementation.
+
+\subsection{Ablation Studies}
+\label{sec:ablation_studies}
+
+We design ablations around the main decisions in VISTA-Skill.
+
+\paragraph{H1: Explicit belief state.}
+We compare raw trajectory history, a flat predicate state with identical information, and the instance-level episode graph. This isolates graph structure from additional state information.
+
+\paragraph{H2: Evidence-decoupled transition interface.}
+We compare no expected effects, a transition updater that can see the skill prediction, and the full information-isolated branches. This tests whether independent evidence contributes beyond structured prompting and exposes the cost of prediction leakage.
+
+\paragraph{H3: Hierarchical credit assignment.}
+We compare unconditional trajectory reflection, EmbodiSkill-style skill/lapse routing, Skill-Pro semantic-gradient evolution, flat mismatch classification, and the proposed target-to-field attribution. All variants are also evaluated with the common updater to isolate the attribution frontend.
+
+\paragraph{H4: Evidence-gated field revision.}
+We compare full-skill rewriting with bounded field patches and remove recurrence, evidence-support checks, paired selection, and subgroup regression protection separately. We measure update utility and harm rather than only final success.
+
+\paragraph{H5: No-update handling.}
+We compare ignoring executor lapses, writing them into a persistent appendix, and using the proposed time-limited Execution Emphasis Buffer. For insufficient evidence, we compare treating unseen effects as negative evidence with abstention and active observation.

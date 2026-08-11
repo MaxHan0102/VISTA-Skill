@@ -1,0 +1,160 @@
+\section{Appendix of Method}
+
+\subsection{Evidence Packet and Typed Transition Mismatch}
+\label{sec:evidence_packet}
+
+For each predicate considered by the episode updater, VISTA-Skill stores an evidence record
+\begin{equation}
+    \epsilon=
+    (\rho,v_t,v_{t+1},q,c,\nu,\kappa),
+\end{equation}
+where $\rho$ is the grounded predicate, $v_t$ and $v_{t+1}$ are its pre- and post-action values, $q$ identifies the evidence source, $c$ is confidence, $\nu$ is the view or feedback identifier, and $\kappa$ describes visual coverage. The packet $E_t$ is the set of records used to construct $\Delta b_t^{\mathrm{ev}}$. Evidence may originate from a post-action frame, an additional verification view, or explicit environment feedback; generated explanations and skill-predicted effects are never valid evidence sources.
+
+The expected and evidence-supported branches are executed in separate prompt contexts. The evidence updater may read $b_t$, $a_t$, $x_{t+1}$, and $f_t$, but it cannot read the active skill's expected effects, $\widehat{\Delta b}_t$, a mismatch label, or a proposed revision. The two branches meet only after their outputs have been materialized. This prevents a skill from producing the state change later used to confirm its own prediction.
+
+The typed mismatch $M_t$ contains predicate-level records rather than a single binary disagreement. We distinguish: (i) an expected change that is not yet supported, (ii) an evidence-supported but unexpected change, (iii) an explicit contradiction, (iv) an unknown or uncovered predicate, (v) an object-identity conflict, and (vi) a timing conflict. An uncovered expected effect is not a contradiction; it triggers evidence acquisition and remains ineligible for persistent revision until coverage is sufficient.
+
+\subsection{Attribution Targets and Corrective Responses}
+\label{sec:attribution_responses}
+
+The target classifier first applies deterministic routing rules. Explicit occlusion and insufficient coverage route to no persistent update; inconsistent instance bindings route to episode belief; and environment feedback with unambiguous action semantics can directly support or contradict an atomic action rule. A constrained teacher handles unresolved events and must return one target, calibrated confidence, cited evidence identifiers, and a structured rationale. Events below the confidence threshold abstain.
+
+\paragraph{Episode belief.}
+The system repairs an instance binding, changes an unsupported false value back to unknown, incorporates reliable feedback, or acquires another view. These operations affect only the current episode.
+
+\paragraph{Persistent action model.}
+An event is accumulated under an atomic action schema only when the same precondition or effect conflict appears across distinct skills, task contexts, object instances, or episodes. A rule candidate is generated only after independent support recurs and is evaluated separately from any skill candidate.
+
+\paragraph{Procedural skill.}
+The second attribution stage selects exactly one of activation, procedure, expected effect, termination, or constraint. The selected field must be traceable to the source of the mismatched predicted predicate. If action knowledge and skill usage cannot be distinguished, the event is deferred rather than assigned to both.
+
+\paragraph{No persistent update.}
+The system retains one of three internal reasons. Executor lapse produces a context-bound reminder with a time-to-live and usage limit; insufficient evidence requests observation and reconstructs the event after new evidence arrives; stochastic or no-op execution is logged until independent repetitions establish a stable pattern. None of these responses changes the canonical skill immediately.
+
+\subsection{Persistent-Update Validation}
+\label{sec:update_validation}
+
+Each candidate patch records the parent version, target field, exact edit operation, old and new text, evidence identifiers, and applicability scope. Patch generation fails if the exact target is absent, if the cited evidence does not support the edit, or if an operation touches a non-attributed field. Repeated textual descriptions derived from the same frame or feedback event share one evidence identifier and count as one support source.
+
+After deterministic checks, parent and candidate are evaluated with identical seeds and episodes on the selection split. Promotion requires a positive paired improvement bound and no material regression on a protected task group. Acquisition episodes, selection episodes, the update-utility audit split, and final test episodes are disjoint. Rejected candidates retain their attribution, evidence, edit, scores, and rejection reason, enabling duplicate-revision suppression and later audit. Accepted skills and action rules remain versioned and can be rolled back.
+
+
+\section{Appendix of Experiments}
+
+\begin{table*}[t]
+    \centering
+    \caption{Closed-Source VLM Baseline Performance on EmbodiedBench (EB-HAB \& EB-NAV). This table establishes the upper-bound performance benchmarks of state-of-the-art closed-source models across diverse evaluation categories.}
+    \label{tab:closed_source_baselines}
+    \small
+    \begin{tabular}{lcccccccc}
+        \toprule
+        \textbf{Model} & \textbf{Benchmark} & \textbf{Avg.} & \textbf{Base} & \textbf{Common Sen.} & \textbf{Complex Instr.} & \textbf{Spatial Rel.} & \textbf{Visual Appear.} & \textbf{Long} \\
+        \midrule
+        Gemini-3-Flash & EB-HAB & 0.600 & 0.94 & 0.66 & 0.58 & 0.30 & 0.66 & 0.46 \\
+        Gemini-3.5-Flash & EB-HAB & 0.580 & 0.82 & 0.48 & 0.64 & 0.32 & 0.70 & 0.52 \\
+        GPT-5.4-mini & EB-HAB & 0.397 & 0.76 & 0.34 & 0.30 & 0.36 & 0.36 & 0.26 \\
+        \midrule
+        Gemini-3-Flash & EB-NAV & 0.730 & 0.78 & 0.74 & 0.80 & 0.70 & 0.70 & 0.66 \\
+        Gemini-3.5-Flash & EB-NAV & \textbf{0.843} & 0.90 & 0.92 & 0.88 & 0.80 & 0.76 & 0.80 \\
+        GPT-5.4-mini & EB-NAV & 0.403 & 0.44 & 0.42 & 0.50 & 0.34 & 0.44 & 0.28 \\
+        \bottomrule
+    \end{tabular}
+\end{table*}
+
+
+\begin{table}[htb]
+    \centering
+    \caption{Fine-Tuned Open-Source Model Performance on EB-NAV (Appendix). Alignment tuning paradigms (SFT vs. RFT) reveal that while RFT improves structural compliance, it remains highly vulnerable to long-horizon degradations.}
+    \label{tab:open_source_reproduction}
+    % \small
+    \newcolumntype{Y}{>{\centering\arraybackslash}X}
+    \begin{tabularx}{\columnwidth}{l|YYY}
+        \toprule
+        \textbf{Eval Sets} & \textbf{SFT} & \textbf{RFT} & \textbf{$\Delta$} \\
+        \midrule
+        Base & 0.26 & 0.62 & +0.36 \\
+        Common Sense & 0.22 & 0.46 & +0.24 \\
+        Complex Instr. & 0.24 & 0.50 & +0.26 \\
+        Spatial Rel. & 0.02 & 0.32 & +0.30 \\
+        Visual Appear. & 0.14 & 0.36 & +0.22 \\
+        Long-Horizon & 0.08 & 0.02 & -0.06 \\
+        \midrule
+        \textbf{Average} & \textbf{0.16} & \textbf{0.38} & \textbf{+0.22} \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\subsection{Pilot Studies and Motivation}
+\label{sec:pilot_studies}
+
+Before implementing the complete VISTA-Skill framework, we conducted a sequence of pilot studies to identify the dominant failure modes and assess whether external procedural memory is a viable adaptation substrate. These experiments are motivational analyses rather than results of the final VISTA-Skill model.
+
+Table~\ref{tab:closed_source_baselines} contextualizes the difficulty of EmbodiedBench using representative closed-source VLMs. The large performance variation across environments and task categories indicates that strong general-purpose VLM capability does not guarantee reliable embodied execution, particularly under spatial and long-horizon constraints.
+
+Table~\ref{tab:open_source_reproduction} compares our reproduced Qwen2.5-VL SFT and RFT planners on EB-NAV. RFT substantially improves the average score from $0.16$ to $0.38$, confirming that reinforcement-based alignment improves structured action generation. However, its Long-Horizon score decreases from $0.08$ to $0.02$. This result motivates an explicit state representation that persists beyond the model's transient reasoning context.
+
+Table~\ref{tab:pilot_study_skillv1} evaluates a hand-crafted static skill on Base and Long-Horizon EB-HAB tasks. The skill slightly reduces invalid actions on Base tasks, but decreases Long-Horizon success from $0.40$ to $0.20$, increases the invalid-action ratio from $0.12$ to $0.32$, and extends the average trajectory from $12.8$ to $18.6$ steps. Qualitative inspection shows that the fixed procedure repeatedly applies the same search and manipulation patterns despite changes in scene state. This performance inversion motivates graph-grounded activation, action preconditions, and termination conditions.
+
+\begin{table}[htb]
+    \centering
+    \caption{Pilot Study: The Performance Inversion of Static Skillv1 (DownSample 0.1, EB-HAB). Hard-coded, static skills (Skillv1) improve short-term metrics but hinder long-horizon capability due to rigid, unadaptable execution patterns.}
+    \label{tab:pilot_study_skillv1}
+    \resizebox{\columnwidth}{!}{
+        \begin{tabular}{lcccc}
+            \hline
+            \multicolumn{1}{c}{\multirow{2}{*}{Metric}} & \multicolumn{2}{c}{\textbf{Base}}     & \multicolumn{2}{c}{\textbf{Long}}     \\ \cline{2-5} 
+            \multicolumn{1}{c}{}                        & \textbf{Baseline} & \textbf{+Skillv1} & \textbf{Baseline} & \textbf{+Skillv1} \\ \hline
+            Task Success $\uparrow$                     & 0.60              & 0.60              & 0.40              & \textbf{0.20}     \\
+            Task Progress $\uparrow$                    & 0.65              & 0.60              & 0.47              & 0.25              \\
+            Invalid Action Ratio $\downarrow$           & 0.28              & \textbf{0.25}     & 0.12              & 0.32              \\
+            Num Steps $\downarrow$                      & 11.6              & 14.4              & 12.8              & 18.6              \\ \hline
+        \end{tabular}
+    }
+\end{table}
+
+We next distill Skill v2 offline from comparative analysis of previous trajectories. As shown in Table~\ref{tab:main_results}, this stronger procedural baseline improves average task success from $0.333$ to $0.363$ and average task progress from $0.410$ to $0.461$. Its largest gains occur on Long-Horizon tasks, where success increases from $0.24$ to $0.34$ and progress from $0.323$ to $0.448$.
+
+These results demonstrate that reusable external procedures can improve a compact frozen VLM. However, Skill v2 is still a fixed textual skill: it does not maintain an instance-level visual graph, verify expected state transitions, or evolve online. It therefore serves as a strong pilot baseline rather than the final VISTA-Skill method.
+
+
+
+\begin{table*}[t]
+    \centering
+    \caption{Pilot comparison between the frozen Qwen3-VL-8B executor and an offline-distilled static Skill v2 on the complete EB-HAB benchmark. These results establish the potential and limitations of external procedural guidance; they are not results of the final VISTA-Skill framework.}
+    \label{tab:main_results}
+    \small
+    \begin{tabular}{lcccccccc}
+        \toprule
+        \textbf{Method} & \textbf{Avg.} & \textbf{Base} & \textbf{Common Sen.} & \textbf{Complex Instr.} & \textbf{Spatial Rel.} & \textbf{Visual Appear.} & \textbf{Long-Horizon} \\
+        \midrule
+        \textbf{Task Success} $\uparrow$ & & & & & & & \\
+        Baseline (Qwen3-VL-8B) & 0.333 & 0.64 & 0.14 & 0.38 & 0.30 & 0.28 & 0.24 \\
+        \textbf{Ours (Baseline+Skillv2)} & \textbf{0.363} & \textbf{0.76} & \textbf{0.18} & 0.38 & 0.26 & 0.26 & \textbf{0.34} \\
+        \midrule
+        \textbf{Task Progress} $\uparrow$ & & & & & & & \\
+        Baseline (Qwen3-VL-8B) & 0.410 & 0.685 & 0.175 & 0.410 & 0.513 & 0.351 & 0.323 \\
+        \textbf{Ours (Baseline+Skillv2)} & \textbf{0.461} & \textbf{0.780} & \textbf{0.250} & 0.410 & 0.547 & 0.331 & \textbf{0.448} \\
+        \bottomrule
+    \end{tabular}
+\end{table*}
+
+Table~\ref{tab:long_horizon_deep_dive} further examines $48$ Long-Horizon episodes. Skill v2 more than doubles task success and substantially improves task progress while reducing invalid actions and planner steps. The remaining invalid-action rate and the absence of visually verified state transitions nevertheless indicate that procedural regularization alone is insufficient. These observations motivate the episode belief, evidence-decoupled transition construction, and hierarchical credit assignment introduced in Sec.~\ref{sec:method}.
+
+\begin{table}[h]
+    \centering
+    \caption{Long-horizon pilot comparison between direct execution and the offline-distilled static Skill v2. Skill v2 improves search and execution discipline but does not perform online evolution or visually verified state tracking.}
+    \label{tab:long_horizon_deep_dive}
+    \resizebox{\columnwidth}{!}{%
+        \begin{tabular}{lccc}
+            \toprule
+            \textbf{Metric} & \textbf{Qwen3-VL-8B} & \textbf{Ours (+ Skillv2)} & \textbf{Relative $\Delta$} \\
+            \midrule
+            Task Success $\uparrow$ & 0.1667 & \textbf{0.3542} & \textbf{+112.5\%} \\
+            Task Progress $\uparrow$ & 0.2830 & \textbf{0.4722} & \textbf{+66.8\%} \\
+            Invalid Action Ratio $\downarrow$ & 0.4134 & \textbf{0.3393} & \textbf{-17.9\%} \\
+            Num Invalid Actions $\downarrow$ & 8.17 & \textbf{7.00} & \textbf{-14.3\%} \\
+            Planner Steps $\downarrow$ & 8.56 & \textbf{7.71} & \textbf{-9.9\%} \\
+            \bottomrule
+        \end{tabular}%
+    }
+\end{table}

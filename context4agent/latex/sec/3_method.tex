@@ -1,0 +1,126 @@
+\section{Method}
+\label{sec:method}
+
+\begin{figure*}[tb]
+    \centering
+    \includegraphics[width=1.0\linewidth]{fig/method.png}
+    \caption{\textbf{Overview of VISTA-Skill.} Raw views ground a task-relevant local graph, and a frozen VLM jointly consumes both representations to execute skills. Information-isolated branches construct the skill-predicted and evidence-supported transitions; their predicate-level mismatch is attributed first to an update target and, only for a reusable skill defect, to a skill field. Persistent revisions are promoted only after evidence checks and paired validation.}
+    \label{fig:method_overview}
+\end{figure*}
+
+\subsection{Problem Formulation and Adaptive State}
+
+
+We model embodied execution as a partially observable decision process $\mathcal{M}=(\mathcal{S},\mathcal{A},\mathcal{T},\mathcal{R},\mathcal{X},\mathcal{O})$. At step $t$, the environment occupies an unobserved state $s_t\in\mathcal{S}$. A frozen vision-language model executor $\pi_{\theta}$ receives a natural-language instruction $I$ and a first-person observation $x_t\in\mathcal{X}$, executes a high-level action $a_t$, and receives environment feedback $f_t$. Since neither $s_t$ nor its true transition is directly observable, VISTA-Skill maintains an external belief $b_t\equiv G_t^{\mathrm{epi}}$ rather than treating the current image as a complete world state. The executor parameters $\theta$ remain fixed throughout execution and evolution.
+
+The adaptive state of VISTA-Skill is
+\begin{equation}
+    \mathcal{H}_t=
+    \left(G_t^{\mathrm{epi}},\bar{G}^{\mathrm{act}},\mathcal{W},\mathcal{C}_t\right),
+\end{equation}
+where $G_t^{\mathrm{epi}}$ is an episode belief graph, $\bar{G}^{\mathrm{act}}$ is persistent action-effect memory, $\mathcal{W}$ is a versioned procedural skill pool, and $\mathcal{C}_t$ stores update-control state such as temporary execution emphasis and rejected revisions.
+
+For an active skill $\omega_t$, the expected branch predicts an intended belief change $\widehat{\Delta b}_t$. Separately, an evidence branch derives an evidence-supported belief change $\Delta b_t^{\mathrm{ev}}$ and an explicit evidence packet $E_t$ from the post-action observation and feedback. We define a transition event as
+\begin{equation}
+    e_t=\left(
+    b_t,\omega_t,a_t,x_{t+1},f_t,
+    \widehat{\Delta b}_t,\Delta b_t^{\mathrm{ev}},E_t
+    \right).
+\end{equation}
+Visual transition credit assignment first maps $e_t$ to an update target
+\begin{equation}
+    z_t^{\mathrm{mem}}=A_{\mathrm{mem}}(e_t)
+    \in\{\mathrm{belief},\mathrm{action\mbox{-}model},
+    \mathrm{skill},\mathrm{no\mbox{-}update}\}.
+\end{equation}
+The label identifies which adaptive component, if any, should absorb the mismatch; it does not assign scalar reward to previous actions or claim access to the hidden physical transition. Only when $z_t^{\mathrm{mem}}=\mathrm{skill}$ do we further locate the responsible skill field.
+
+\subsection{Graph-Grounded Memories and Skills}
+
+The episode graph represents the agent's current instance-level belief. Its nodes include task-relevant object instances, the agent and gripper, subgoals, action events, and supporting views. Edges and attributes encode identity, spatial relations, interaction states, task assignments, and evidence provenance. Predicates take values in $\{\mathrm{true},\mathrm{false},\mathrm{unknown}\}$, preventing view-dependent absence from being interpreted as object absence and preventing visibility from being treated as evidence of reachability or manipulability. VISTA-Skill serializes only a task-relevant local subgraph $G_t^{\mathrm{loc}}$ for each decision.
+
+The persistent action-effect memory stores task-independent atomic interaction knowledge. Each rule contains an action schema, graph-grounded preconditions, expected effects, applicability context, supporting and contradicting evidence identifiers, and confidence statistics. For example, an action rule may state that $\mathrm{pick}(o)$ requires $\mathrm{near}(o)$ and an empty hand and is expected to establish $\mathrm{holding}(o)$. A single event never directly rewrites a persistent rule; comparable evidence must recur across instances, tasks, or skills.
+
+A procedural skill is a five-field executable specification
+\begin{equation}
+    \omega=\left\langle
+    I_{\omega},\pi_{\omega},\Gamma_{\omega},
+    \beta_{\omega},C_{\omega}
+    \right\rangle,
+\end{equation}
+where $I_{\omega}$ is a graph-grounded activation condition, $\pi_{\omega}$ is an execution and recovery procedure, $\Gamma_{\omega}$ specifies step- or subgoal-level expected effects, $\beta_{\omega}$ is a visually verifiable termination condition, and $C_{\omega}$ contains constraints and invariants. Unlike the action model, which describes reusable atomic dynamics, $\Gamma_{\omega}$ captures task- and procedure-specific consequences such as binding a placed object to a completed subgoal or decrementing a remaining-instance checklist. Skills do not contain a belief-update operator: the prediction source cannot also construct the evidence used to validate itself.
+
+The initial skill pool is constructed from the action interface and task-family descriptions without using final-test trajectories. All compared evolution methods receive the same initial skills and skill-token budget. At runtime, a skill is eligible only when its activation condition is supported by the current belief, and the executor samples
+\begin{equation}
+    a_t\sim\pi_{\theta}
+    \left(a\mid I,x_t,G_t^{\mathrm{loc}},\omega_t\right).
+\end{equation}
+Known contradictions in $C_{\omega}$ block an action, whereas unknown preconditions trigger observation or replanning rather than being treated as false. Similarly, $\beta_{\omega}$ is evaluated only on evidence-supported predicates; stale or unknown completion evidence cannot terminate the skill.
+
+\subsection{Evidence-Decoupled Visual Transitions}
+
+VISTA-Skill constructs a transition through two branches that share the pre-action belief and executed action but are isolated before mismatch computation. The expected transition branch reads the active skill and persistent action rules:
+\begin{equation}
+    \widehat{\Delta b}_t=
+    P_{\mathrm{exp}}
+    \left(b_t,a_t,\omega_t,\bar{G}^{\mathrm{act}}\right).
+\end{equation}
+Each predicted predicate change retains its source---an action-rule identifier or a skill identifier and field---so that a later mismatch can distinguish generic action knowledge from procedure-specific knowledge.
+
+The evidence-supported branch reads only the pre-action belief, executed action, post-action image, environment feedback, and any additional view acquired for verification:
+\begin{equation}
+    \left(\Delta b_t^{\mathrm{ev}},E_t\right)=
+    U_{\mathrm{epi}}
+    \left(b_t,a_t,x_{t+1},f_t\right).
+\end{equation}
+It cannot access $\widehat{\Delta b}_t$, $\Gamma_{\omega}$, an attribution decision, or a candidate patch. Thus, independence refers to information isolation rather than requiring a separate model. Each evidence item records the predicate, pre- and post-values, provenance, confidence, view identifier, and visibility or coverage. Only this branch may update the episode belief:
+\begin{equation}
+    b_{t+1}=b_t\oplus\Delta b_t^{\mathrm{ev}}.
+\end{equation}
+
+The mismatch operator compares predicate-level changes rather than applying a binary graph difference:
+\begin{equation}
+    M_t=\mathcal{D}
+    \left(\widehat{\Delta b}_t,\Delta b_t^{\mathrm{ev}},E_t\right).
+\end{equation}
+$M_t$ distinguishes expected-but-unsupported, supported-but-unexpected, contradicted, unknown or uncovered, identity-conflicting, and temporally inconsistent predicates. In particular, an expected effect that is outside the current view remains unknown and is not treated as negative evidence against the skill.
+
+\subsection{Hierarchical Credit Assignment}
+
+The first attribution stage routes $M_t$ to one memory target. VISTA-Skill first applies auditable rules to resolve explicit feedback, unknown coverage, and instance conflicts, and then invokes a constrained teacher only for remaining ambiguous events. The teacher returns a target, confidence, cited evidence identifiers, and a structured rationale. Low-confidence decisions abstain to $\mathrm{no\mbox{-}update}$.
+
+An event is assigned to $\mathrm{belief}$ when the conflict is local to the current instance, view, or state history. It is assigned to $\mathrm{action\mbox{-}model}$ when the same atomic precondition or effect fails across multiple skills or task contexts. It is assigned to $\mathrm{skill}$ when the failure follows a particular skill's activation, object binding, procedural step, expected task effect, constraint, or completion condition. When available evidence cannot distinguish generic action knowledge from procedure-specific use, VISTA-Skill defers the event rather than modifying both memories.
+
+For a skill-target event, a second stage predicts
+\begin{equation}
+    z_t^{\mathrm{field}}=A_{\mathrm{field}}(e_t)
+    \in\left\{
+    \begin{array}{l}
+    \mathrm{activation},\mathrm{procedure},\mathrm{effect},\\
+    \mathrm{termination},\mathrm{constraint}
+    \end{array}
+    \right\}.
+\end{equation}
+This hierarchy prevents perception errors from competing directly with skill fields and bounds any later edit to the field supported by evidence.
+
+The external $\mathrm{no\mbox{-}update}$ label retains an internal reason: executor lapse, insufficient evidence, or stochastic/no-op execution. An executor lapse adds a context-specific reminder to a decaying Execution Emphasis Buffer without changing the canonical skill. Insufficient evidence triggers active observation and event reconstruction, while stochastic or no-op events are logged until independent repetitions establish a stable pattern. Consequently, no persistent update does not mean that the agent takes no corrective action.
+
+\subsection{Evidence-Gated Persistent Updates}
+
+Only events confidently attributed to the same skill and field are eligible for skill evolution. Ordinary events must recur across independent episodes or object instances; repeated descriptions of one observation count as a single evidence source. A high-confidence contradiction may be considered immediately, but it still undergoes all deterministic and empirical checks. Eligible events generate bounded field-level patches
+\begin{equation}
+    p=\left(
+    \mathrm{skill\mbox{-}id},\mathrm{field},\mathrm{operation},
+    \mathrm{old},\mathrm{new},\mathrm{evidence\mbox{-}ids},\mathrm{scope}
+    \right),
+\end{equation}
+using append, exact-target insertion, replacement, or deletion. The target text must match the parent version, the patch may touch only the attributed field, and a missing target causes rejection rather than a fallback rewrite. A per-round field and operation budget limits update magnitude.
+
+Candidate patches undergo schema, exact-target, evidence-support, and transition-consistency checks before evaluation. Surviving candidates are compared with their parent on paired, frozen development episodes that are disjoint from acquisition evidence, audit data, and final test episodes. We score a candidate by
+\begin{equation}
+    S(\omega')=\operatorname{LCB}_{1-\alpha}
+    \left[J_{\mathrm{dev}}(\omega')-J_{\mathrm{dev}}(\omega)\right],
+\end{equation}
+and promote it only when $S(\omega')>0$ and no protected task group exhibits a substantial regression. Events routed to persistent action knowledge follow the same recurrence, evidence, and validation discipline, but are accumulated and patched separately from skill events.
+
+Each promoted or rejected update stores its evidence, parent version, affected field, paired scores, and decision reason. Rejected-update history prevents repeated harmful edits, while versioned skills and action rules support rollback if later audit evidence reveals negative transfer. This gate separates the proposed credit-assignment frontend from the downstream optimizer: the central question is which experience should reach persistent skill evolution, not merely how many candidate rewrites are generated.
