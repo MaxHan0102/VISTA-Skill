@@ -1,8 +1,0 @@
-service_tier = "default"
-model = "gpt-5.6-sol"
-model_reasoning_effort = "xhigh"
-
-[model_providers.maolao]
-name = "Maolao API"
-base_url = "https://maolaoapi.com/v1"
-wire_api = "responses"
