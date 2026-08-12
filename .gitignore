@@ -1,0 +1,20 @@
+# --- Reference repos (read-only, for Agent context; NOT submodules) ----------
+# These are plain clones kept only as local reference material. We ignore them
+# entirely so the main repo never sees the nested .git dirs (which would otherwise
+# turn into broken commit-pointer "gitlinks"). Reproduce them with
+# `bash context4agent/clone_refs.sh` (pins tracked there).
+/context4agent/repository/
+
+# --- Generated run outputs (repo rule: never commit running/ outputs) --------
+/EmbodiedBench/running/
+
+# VISTA-Skill sidecar artifacts and Python build/test caches.
+/running/
+# Habitat import creates this transient symlink to its dataset assets.
+/data
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+dist/
+build/
