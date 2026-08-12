@@ -88,6 +88,7 @@ class VistaSkillEngine:
         self.ledger = ledger or BeliefLedger()
         self.emphasis_buffer = emphasis_buffer or ExecutionEmphasisBuffer()
         self._frozen = skill.frozen
+        self._current_step = 0
 
     def start_episode(self) -> None:
         """Reset episode-local adaptive state while preserving the active Skill."""
@@ -97,6 +98,11 @@ class VistaSkillEngine:
     @property
     def frozen(self) -> bool:
         return self._frozen
+
+    @property
+    def current_step(self) -> int:
+        """Most recently processed step id, used for emphasis decay timing."""
+        return self._current_step
 
     def process(self, transition: PrimitiveTransition) -> TransitionEvent:
         prepared = self.prepare(
@@ -168,6 +174,7 @@ class VistaSkillEngine:
             or prepared.skill_version != self.skill.version
         ):
             raise RuntimeError("active skill changed after the expected transition was prepared")
+        self._current_step = prepared.step_id
         expected = prepared.expected_delta
         request = EvidenceRequest(
             episode_id=prepared.episode_id,
@@ -283,14 +290,6 @@ class VistaSkillEngine:
         self.skill = replace(self.skill, frozen=True)
         self._frozen = True
         return FrozenSkillArtifact(self.skill, skill_digest(self.skill))
-
-
-def _event_id(transition: PrimitiveTransition) -> str:
-    raw = (
-        f"{transition.episode_id}|{transition.task_id}|{transition.step_id}|"
-        f"{getattr(transition.action, 'action_id', '')}"
-    )
-    return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:20]
 
 
 def _prepared_event_id(transition: PreparedTransition) -> str:

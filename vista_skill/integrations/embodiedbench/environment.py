@@ -74,7 +74,12 @@ def seed_process_rngs(seed: int) -> int:
     random.seed(seed)
     numpy = importlib.import_module("numpy")
     numpy.random.seed(seed)
-    torch = importlib.import_module("torch")
+    try:
+        torch = importlib.import_module("torch")
+    except ImportError:
+        # Torch is only required for real Habitat rollouts; in torch-less
+        # environments (unit tests) there is no torch RNG to seed.
+        return seed
     torch.manual_seed(seed)
     cuda = getattr(torch, "cuda", None)
     if cuda is not None and cuda.is_available():

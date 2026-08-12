@@ -112,6 +112,63 @@ def initialize_shared_skill() -> SkillSpec:
     )
 
 
+def minimal_shared_skill() -> SkillSpec:
+    """Minimal S0 variant: the weakest reasonable starting point for evolution.
+
+    A drop-in alternative to :func:`initialize_shared_skill` for the §4.2.3
+    initialization-sensitivity controlled comparison. It carries only what is
+    structurally required to be a valid, runnable Skill against the fixed
+    nav/pick/place/open/close action schema: a single generic activation, a
+    one-line fallback procedure, a valid termination statement, and empty
+    effect/constraint bodies. Compiled ``prediction_rules`` are intentionally
+    empty so the engine falls back to primitive action-schema transitions only,
+    giving the attribution/evolution loop the weakest prior to grow from.
+    """
+    return SkillSpec(
+        skill_id="shared_embodied_execution",
+        version=0,
+        activation=(
+            "Use for embodied tasks that require step-wise execution.",
+        ),
+        procedure=(
+            "Execute the instructed primitive action and observe its result.",
+        ),
+        effect=(),
+        termination=(
+            "Stop when the instructed goal is reached.",
+        ),
+        constraint=(),
+        termination_policy=TerminationPolicy.ALL_GOALS_EVIDENCE,
+        prediction_rules=(),
+        metadata={"initialization": "minimal"},
+    )
+
+
+def empty_shared_skill() -> SkillSpec:
+    """Empty S0 variant: the absolute lower bound for init-sensitivity study.
+
+    Every statement body is empty and there are no compiled ``prediction_rules``,
+    yet the object remains a structurally valid :class:`SkillSpec` (``skill_id``,
+    ``version`` 0, ``termination_policy`` present) so that
+    :meth:`FixedActionSchema.compile` and :class:`VistaSkillEngine` accept it
+    without raising. Represents the "no prior task knowledge" extreme of the
+    §4.2.3 controlled comparison; keep teacher and evolution budget matched
+    against :func:`initialize_shared_skill` and :func:`minimal_shared_skill`.
+    """
+    return SkillSpec(
+        skill_id="shared_embodied_execution",
+        version=0,
+        activation=(),
+        procedure=(),
+        effect=(),
+        termination=(),
+        constraint=(),
+        termination_policy=TerminationPolicy.ALL_GOALS_EVIDENCE,
+        prediction_rules=(),
+        metadata={"initialization": "empty"},
+    )
+
+
 def render_skill(skill: SkillSpec, *, max_statements_per_field: int | None = None) -> str:
     parts = [f"Skill: {skill.skill_id} (v{skill.version})"]
     for skill_field in SkillField:

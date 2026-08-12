@@ -16,21 +16,21 @@
     },
     {
       "id": "embodiskill_star_native",
-      "implementation_status": "library_frontend_and_updater_ready_cli_pending",
+      "implementation_status": "runnable_experiment_cli",
       "executor_skill": true,
       "evolution_frontend": "embodiskill_trajectory_routing",
       "update_backend": "native_body_appendix_revision"
     },
     {
       "id": "embodiskill_star_common_gate",
-      "implementation_status": "library_frontend_and_common_gate_adapter_ready_cli_pending",
+      "implementation_status": "runnable_experiment_cli",
       "executor_skill": true,
       "evolution_frontend": "embodiskill_trajectory_routing",
       "update_backend": "vista_common_gate"
     },
     {
       "id": "vista_without_vtca",
-      "implementation_status": "library_frontend_and_common_gate_adapter_ready_cli_pending",
+      "implementation_status": "runnable_experiment_cli",
       "executor_skill": true,
       "evolution_frontend": "unconditional_failure_reflection",
       "update_backend": "vista_common_gate"

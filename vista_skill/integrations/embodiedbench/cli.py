@@ -8,10 +8,17 @@ import re
 import uuid
 from dataclasses import replace
 from pathlib import Path
-from typing import Sequence
+from typing import Mapping, Sequence
 
 from vista_skill.artifacts import JsonlArtifactWriter
 from vista_skill.attribution import CreditAssigner
+from vista_skill.baselines import (
+    CommonGateProposalAdapter,
+    EmbodiSkillFrontend,
+    EmbodiSkillNativeUpdater,
+    EpisodeSummary,
+    UnconditionalReflectionFrontend,
+)
 from vista_skill.belief import BeliefLedger
 from vista_skill.clustering import EventClusterer
 from vista_skill.config import VistaConfig, load_config
@@ -31,12 +38,16 @@ from vista_skill.integrations.embodiedbench.planner import (
     configure_planner_inference_seed,
     make_skill_aware_planner,
 )
-from vista_skill.integrations.embodiedbench.runner import HabitatRolloutRunner
+from vista_skill.integrations.embodiedbench.runner import (
+    EpisodeResult,
+    HabitatRolloutRunner,
+)
 from vista_skill.lineage import LineageStore
 from vista_skill.models import (
     JsonAttributionTeacher,
     JsonBoundedPatchGenerator,
     JsonGoalGrounder,
+    JsonTrajectoryTeacher,
     JsonVisualEvidenceProvider,
     OpenAICompatibleJsonModel,
 )
@@ -47,6 +58,7 @@ from vista_skill.skills import (
     SkillArtifact,
     initialize_shared_skill,
     load_skill_artifact_record,
+    render_skill,
     save_skill_artifact,
     save_content_addressed_skill,
     skill_digest,
@@ -55,10 +67,23 @@ from vista_skill.update_audit import (
     make_rotated_audit_plan,
     run_rotated_update_audit,
 )
-from vista_skill.workflow import EvolutionWorkflow
+from vista_skill.workflow import (
+    EvolutionWorkflow,
+    TrajectoryEvolutionWorkflow,
+    build_candidate_gate,
+)
 
 
 DEFAULT_MANIFEST = "configs/eb_hab_train_validation_manifest.json"
+
+# Controlled trajectory-level baselines that share the acquisition/freeze/audit
+# skeleton with the full method but evolve from whole-episode reflections.
+_TRAJECTORY_METHODS = (
+    "embodiskill_star_native",
+    "embodiskill_star_common_gate",
+    "vista_without_vtca",
+)
+_METHODS_REQUIRING_TEACHER = ("full", *_TRAJECTORY_METHODS)
 
 
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
@@ -70,7 +95,11 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         "experiment", help="Acquire evidence, evolve through the paired gate, and freeze."
     )
     _add_executor_args(experiment)
-    experiment.add_argument("--method", choices=("full", "rule_only"), default="full")
+    experiment.add_argument(
+        "--method",
+        choices=("full", "rule_only", *_TRAJECTORY_METHODS),
+        default="full",
+    )
     experiment.add_argument("--method-model")
     experiment.add_argument("--method-base-url", default=os.environ.get("VISTA_METHOD_BASE_URL"))
     experiment.add_argument("--method-api-key", default=os.environ.get("VISTA_METHOD_API_KEY"))
@@ -143,8 +172,10 @@ def _run_experiment(args: argparse.Namespace) -> None:
     _validate_controlled_executor(args, config)
     if args.eval_set != "train_validation":
         raise ValueError("the 60/20/20 evolution protocol requires train_validation")
-    if args.method == "full" and not args.method_model:
-        raise ValueError("--method full requires --method-model; use rule_only only as an ablation")
+    if args.method in _METHODS_REQUIRING_TEACHER and not args.method_model:
+        raise ValueError(
+            f"--method {args.method} requires --method-model; use rule_only only as an ablation"
+        )
     if args.max_acquisition_episodes is not None and not args.diagnostic:
         raise ValueError("reduced acquisition requires --diagnostic")
     output_dir = Path(args.output_dir)
@@ -158,7 +189,7 @@ def _run_experiment(args: argparse.Namespace) -> None:
         run_id = f"{experiment_id}_seed_{evolution_seed}"
         method_model = (
             _make_method_model(args, seed=evolution_seed)
-            if args.method == "full"
+            if args.method in _METHODS_REQUIRING_TEACHER
             else None
         )
         engine, goal_grounder = _make_engine(config, method_model)
@@ -199,7 +230,22 @@ def _run_experiment(args: argparse.Namespace) -> None:
                     config=config,
                     protocol=protocol,
                 )
+            elif args.method in _TRAJECTORY_METHODS:
+                lineage = LineageStore(run_dir / "lineage.jsonl")
+                workflow = _make_trajectory_workflow(
+                    args,
+                    engine=engine,
+                    method_model=method_model,
+                    run_manifest=run_manifest,
+                    gate_seeds=gate_seeds,
+                    run_dir=run_dir,
+                    run_id=run_id,
+                    lineage=lineage,
+                    config=config,
+                    protocol=protocol,
+                )
             else:
+                lineage = None
                 workflow = None
 
             runner = _make_runner(
@@ -217,10 +263,14 @@ def _run_experiment(args: argparse.Namespace) -> None:
             ready_cluster_counts = []
             evolution_results = []
             for coordinate in acquisition:
-                acquisition_results.append(
-                    runner.run_episode(expected_episode_id=coordinate.episode_id)
+                episode_result = runner.run_episode(
+                    expected_episode_id=coordinate.episode_id
                 )
+                acquisition_results.append(episode_result)
                 if workflow is not None:
+                    workflow.consume_episode(
+                        _episode_summary(episode_result, engine.skill)
+                    )
                     ready_count, decisions = workflow.evolve_ready()
                     ready_cluster_counts.append(ready_count)
                     evolution_results.extend(decisions)
@@ -264,6 +314,7 @@ def _run_experiment(args: argparse.Namespace) -> None:
             ],
             "frozen_skill_sha256": skill_digest(engine.skill),
             "method_usage": _usage_payload(method_model),
+            "executor_usage": _executor_usage_payload(runner),
             "update_reliability": None
             if update_audit is None
             else dict(update_audit.reliability),
@@ -417,6 +468,70 @@ def _make_engine(
     return VistaSkillEngine(initialize_shared_skill(), **kwargs), grounder
 
 
+def _make_trajectory_workflow(
+    args: argparse.Namespace,
+    *,
+    engine: VistaSkillEngine,
+    method_model: OpenAICompatibleJsonModel,
+    run_manifest: ExperimentManifest,
+    gate_seeds: tuple[int, ...],
+    run_dir: Path,
+    run_id: str,
+    lineage: LineageStore,
+    config: VistaConfig,
+    protocol: Mapping[str, object],
+) -> TrajectoryEvolutionWorkflow:
+    """Build the episode-driven evolution driver for a controlled trajectory baseline.
+
+    All three baselines share the same ``--method-model`` teacher (so teacher
+    model, token budget, and call count stay matched with the full method). The
+    common-gate variants route proposals through the identical VISTA
+    ``CandidateGate``; the native variant uses EmbodiSkill body/appendix
+    semantics without a paired gate.
+    """
+    teacher = JsonTrajectoryTeacher(method_model)
+    if args.method == "vista_without_vtca":
+        frontend = UnconditionalReflectionFrontend(teacher)
+    else:
+        frontend = EmbodiSkillFrontend(
+            teacher, common_gate=(args.method == "embodiskill_star_common_gate")
+        )
+    if args.method == "embodiskill_star_native":
+        updater: CommonGateProposalAdapter | EmbodiSkillNativeUpdater = (
+            EmbodiSkillNativeUpdater(
+                max_statements_per_field=config.patch.max_statements_per_field
+            )
+        )
+    else:
+        paired = _make_paired_evaluator(
+            args, run_manifest, gate_seeds, run_dir, config, run_id=run_id
+        )
+        gate = build_candidate_gate(engine, paired, config)
+        updater = CommonGateProposalAdapter(
+            JsonBoundedPatchGenerator(method_model), gate
+        )
+    return TrajectoryEvolutionWorkflow(
+        engine,
+        frontend=frontend,
+        updater=updater,
+        lineage=lineage,
+        config=config,
+        protocol=protocol,
+    )
+
+
+def _episode_summary(result: EpisodeResult, skill: SkillSpec) -> EpisodeSummary:
+    """Bridge a rolled-out episode to the trajectory reflection contract."""
+    return EpisodeSummary(
+        episode_id=result.episode_id,
+        instruction=result.instruction,
+        success=bool(result.task_success),
+        trajectory=result.trajectory,
+        current_skill=render_skill(skill),
+        failure_reason=result.failure_reason,
+    )
+
+
 def _make_runner(
     args: argparse.Namespace,
     env,
@@ -502,9 +617,7 @@ def _make_planner(
         planner.configure_vista_prompt(
             lambda: engine.skill,
             lambda: engine.ledger,
-            lambda: engine.emphasis_buffer.render(engine.ledger.snapshot()[-1].timestamp)
-            if engine.ledger.snapshot()
-            else "",
+            lambda: engine.emphasis_buffer.render(engine.current_step),
         )
     return planner
 
@@ -860,6 +973,18 @@ def _usage_payload(model: OpenAICompatibleJsonModel | None):
     if model is None:
         return None
     return {purpose: vars(counter) for purpose, counter in model.usage.items()}
+
+
+def _executor_usage_payload(runner) -> dict[str, int] | None:
+    """Acquisition-phase executor calls/tokens, captured by the seed wrapper.
+
+    Returns ``None`` for non-remote executors (``local``/``custom``), which do
+    not route through the OpenAI-compatible seed wrapper; those backends cannot
+    be seed-controlled in a controlled run either (see docs/implementation.md).
+    """
+    planner = getattr(runner, "planner", None)
+    usage = getattr(planner, "_vista_executor_usage", None)
+    return None if usage is None else dict(usage)
 
 
 def _parse_seeds(raw: str) -> tuple[int, ...]:

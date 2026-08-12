@@ -75,9 +75,8 @@ def composite_task_score(
     task_success: float,
     task_progress: float,
     invalid_action_ratio: float = 0.0,
-    premature_termination: float = 0.0,
     success_weight: float = 0.7,
 ) -> float:
     progress_weight = 1.0 - success_weight
-    penalty = 0.1 * invalid_action_ratio + 0.1 * premature_termination
+    penalty = 0.1 * invalid_action_ratio
     return success_weight * task_success + progress_weight * task_progress - penalty

@@ -60,6 +60,8 @@ class EpisodeResult:
     invalid_actions: int
     planner_output_errors: int
     elapsed_seconds: float
+    trajectory: tuple[str, ...] = ()
+    failure_reason: str = ""
 
 
 class HabitatRolloutRunner:
@@ -134,10 +136,12 @@ class HabitatRolloutRunner:
         rewards: list[float] = []
         invalid_actions = 0
         done = False
+        action_texts: list[str] = []
         last_info: dict[str, Any] = {
             "task_success": 0.0,
             "task_progress": 0.0,
             "env_step": 0,
+            "env_feedback": "",
         }
 
         while not done:
@@ -155,6 +159,7 @@ class HabitatRolloutRunner:
             for action_id in actions[:remaining]:
                 raw_action = self.env.skill_set[action_id]
                 action_text = self.env.language_skill_set[action_id]
+                action_texts.append(action_text)
                 action_call = parse_action_call(action_id, raw_action, action_text)
                 prepared = None
                 if self.engine is not None:
@@ -211,10 +216,11 @@ class HabitatRolloutRunner:
                 if done or info.get("last_action_success", 0) == 0:
                     break
 
+        task_success = float(last_info.get("task_success", 0.0))
         result = EpisodeResult(
             episode_id=episode_id,
             instruction=instruction,
-            task_success=float(last_info.get("task_success", 0.0)),
+            task_success=task_success,
             task_progress=float(last_info.get("task_progress", 0.0)),
             reward_mean=sum(rewards) / len(rewards) if rewards else 0.0,
             environment_steps=int(last_info.get("env_step", self.env._current_step)),
@@ -222,6 +228,8 @@ class HabitatRolloutRunner:
             invalid_actions=invalid_actions,
             planner_output_errors=self.planner.output_json_error,
             elapsed_seconds=time.monotonic() - started,
+            trajectory=tuple(action_texts),
+            failure_reason="" if task_success > 0.0 else str(last_info.get("env_feedback", "")),
         )
         self.writer.append("episode_result", result)
         return result

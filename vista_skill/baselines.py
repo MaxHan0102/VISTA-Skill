@@ -5,15 +5,23 @@ from enum import Enum
 from typing import Protocol, Sequence
 
 from vista_skill.clustering import ClusterItem, ClusterKey, EvidenceCluster
-from vista_skill.evolution import CandidateGate, GateDecision, PatchGenerator
+from vista_skill.evolution import (
+    CandidateGate,
+    GateDecision,
+    GateStageResult,
+    PatchGenerator,
+    make_patch_id,
+)
 from vista_skill.schemas import (
     AttributionResult,
     EvidenceSource,
     Mismatch,
     MismatchKind,
+    PatchOperation,
     PredicateEvidence,
     PredicateKey,
     SkillField,
+    SkillPatch,
     SkillSpec,
     TruthValue,
     UpdateTarget,
@@ -111,10 +119,27 @@ class UnconditionalReflectionFrontend:
 
 @dataclass(frozen=True)
 class BaselineUpdateResult:
-    skill: SkillSpec
+    """Outcome of a trajectory-level baseline update.
+
+    ``parent`` is the Skill before the update and ``candidate`` is the revised
+    Skill a frontend/updater produced (``None`` when no revision was proposed,
+    e.g. an execution-lapse appendix note). The ``skill`` property exposes the
+    resulting active Skill (candidate if accepted, else parent) so callers that
+    only need "what do I run next" keep the original single-field contract.
+    """
+
+    parent: SkillSpec
+    candidate: SkillSpec | None
     accepted: bool
     route: str
+    patch: SkillPatch | None = None
     decision: GateDecision | None = None
+
+    @property
+    def skill(self) -> SkillSpec:
+        if self.accepted and self.candidate is not None:
+            return self.candidate
+        return self.parent
 
 
 class CommonGateProposalAdapter:
@@ -135,15 +160,22 @@ class CommonGateProposalAdapter:
             or proposal.target is not UpdateTarget.SKILL_UPDATE
             or proposal.field is None
         ):
-            return BaselineUpdateResult(skill, False, proposal.source_frontend)
+            return BaselineUpdateResult(
+                parent=skill,
+                candidate=None,
+                accepted=False,
+                route=proposal.source_frontend,
+            )
         cluster = proposal_cluster(skill, proposal, episode_ids)
         patch = self.generator.propose(skill, cluster)
         decision, candidate = self.gate.evaluate(skill, patch, cluster)
         return BaselineUpdateResult(
-            candidate if candidate is not None else skill,
-            decision.accepted,
-            proposal.source_frontend,
-            decision,
+            parent=skill,
+            candidate=candidate,
+            accepted=decision.accepted,
+            route=proposal.source_frontend,
+            patch=patch,
+            decision=decision,
         )
 
 
@@ -158,18 +190,60 @@ class EmbodiSkillNativeUpdater:
         self,
         skill: SkillSpec,
         proposal: CommonUpdateProposal,
+        episode_ids: Sequence[str] = (),
     ) -> BaselineUpdateResult:
-        if not proposal.content.strip():
-            return BaselineUpdateResult(skill, False, proposal.source_frontend)
+        content = proposal.content.strip()
+        if not content:
+            return BaselineUpdateResult(
+                parent=skill, candidate=None, accepted=False, route=proposal.source_frontend
+            )
+        # Execution lapses (non-persistent / abstain) go to the appendix and never
+        # mutate the Skill body; persistent proposals revise the attributed field.
         if not proposal.persistent or proposal.target is UpdateTarget.ABSTAIN:
-            self.execution_notes.append(proposal.content.strip())
-            return BaselineUpdateResult(skill, False, proposal.source_frontend)
+            self.execution_notes.append(content)
+            return BaselineUpdateResult(
+                parent=skill, candidate=None, accepted=False, route=proposal.source_frontend
+            )
         field = proposal.field or SkillField.PROCEDURE
-        statements = (*skill.statements(field), proposal.content.strip())
+        statements = (*skill.statements(field), content)
         if len(statements) > self.max_statements_per_field:
             statements = statements[-self.max_statements_per_field :]
+        revised = with_field(skill, field, statements)
+        evidence_ids = tuple(proposal.evidence_ids)
+        patch = SkillPatch(
+            patch_id=make_patch_id(
+                skill, field, PatchOperation.APPEND, "", content, evidence_ids
+            ),
+            skill_id=skill.skill_id,
+            parent_version=skill.version,
+            field=field,
+            operation=PatchOperation.APPEND,
+            old="",
+            new=content,
+            evidence_ids=evidence_ids,
+            scope="embodiskill_native_body_revision",
+        )
+        decision = GateDecision(
+            accepted=True,
+            reason="embodiskill native body revision (append without a paired gate)",
+            parent_version=skill.version,
+            candidate_version=revised.version,
+            patch_id=patch.patch_id,
+            stages=(
+                GateStageResult(
+                    "native_body_revision",
+                    True,
+                    "native semantics revise the attributed field without a paired gate",
+                ),
+            ),
+        )
         return BaselineUpdateResult(
-            with_field(skill, field, statements), True, proposal.source_frontend
+            parent=skill,
+            candidate=revised,
+            accepted=True,
+            route=proposal.source_frontend,
+            patch=patch,
+            decision=decision,
         )
 
 

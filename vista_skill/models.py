@@ -7,6 +7,11 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Mapping, Protocol, Sequence
 
+from vista_skill.baselines import (
+    EmbodiSkillRoute,
+    EpisodeSummary,
+    TrajectoryReflection,
+)
 from vista_skill.evolution import PatchGenerator, make_patch_id
 from vista_skill.clustering import EvidenceCluster
 from vista_skill.schemas import (
@@ -264,6 +269,61 @@ class JsonAttributionTeacher:
         )
 
 
+class JsonTrajectoryTeacher:
+    """Model-backed trajectory reflection for the controlled baseline frontends.
+
+    This is the trajectory-level analogue of :class:`JsonAttributionTeacher`.
+    The full VISTA method attributes predicate-level mismatches per primitive
+    action; the EmbodiSkill-style baselines instead reflect once over a whole
+    completed episode and decide whether a persistent skill revision is
+    warranted. Sharing the same OpenAI-compatible backend (and therefore the
+    same ``--method-model``) keeps teacher model, token budget, and call count
+    matched across the controlled comparison, as required by ``methods.json``.
+    """
+
+    def __init__(self, model: JsonModel) -> None:
+        self.model = model
+
+    def reflect(self, episode: EpisodeSummary) -> TrajectoryReflection:
+        payload = {
+            "instruction": episode.instruction,
+            "episode_succeeded": bool(episode.success),
+            "trajectory": list(episode.trajectory),
+            "current_skill": episode.current_skill,
+            "failure_reason": episode.failure_reason,
+            "allowed_routes": [route.value for route in EmbodiSkillRoute],
+            "allowed_fields": [field.value for field in SkillField],
+            "rule": (
+                "Route as FAIL_EXECUTION when the failure is an execution lapse "
+                "(unsatisfied preconditions, wrong object, not a skill gap). "
+                "Otherwise pick a skill field and propose one concrete, boundable "
+                "statement that revises it. Preserve numbered instance identities; "
+                "do not invent hidden state."
+            ),
+        }
+        result = self.model.complete_json(
+            system=(
+                "Reflect on one completed embodied-agent trajectory and decide "
+                "whether a persistent procedural-skill revision is warranted."
+            ),
+            content=[{"type": "text", "text": json.dumps(payload, sort_keys=True)}],
+            schema=_trajectory_reflection_schema(),
+            purpose="trajectory_reflection",
+        )
+        route = EmbodiSkillRoute(str(result["route"]))
+        field_value = result.get("target_field")
+        evidence_ids = tuple(
+            dict.fromkeys(str(item) for item in result.get("evidence_ids", []))
+        )
+        return TrajectoryReflection(
+            route=route,
+            content=str(result["content"]),
+            target_field=SkillField(field_value) if field_value is not None else None,
+            confidence=float(result["confidence"]),
+            evidence_ids=evidence_ids,
+        )
+
+
 class JsonBoundedPatchGenerator(PatchGenerator):
     def __init__(self, model: JsonModel) -> None:
         self.model = model
@@ -430,6 +490,27 @@ def _attribution_schema() -> dict[str, Any]:
             "mismatch_ids": {"type": "array", "items": {"type": "string"}},
             "evidence_ids": {"type": "array", "items": {"type": "string"}},
             "rationale": {"type": "string"},
+        },
+    }
+
+
+def _trajectory_reflection_schema() -> dict[str, Any]:
+    return {
+        "type": "object",
+        "additionalProperties": False,
+        "required": ["route", "content", "target_field", "confidence", "evidence_ids"],
+        "properties": {
+            "route": {
+                "type": "string",
+                "enum": [item.value for item in EmbodiSkillRoute],
+            },
+            "content": {"type": "string"},
+            "target_field": {
+                "type": ["string", "null"],
+                "enum": [None, *[item.value for item in SkillField]],
+            },
+            "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+            "evidence_ids": {"type": "array", "items": {"type": "string"}},
         },
     }
 

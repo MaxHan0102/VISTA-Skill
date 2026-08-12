@@ -158,9 +158,38 @@ invocation.
 
 `evaluate --stage official_test --eval-set <subset>` supports each of the six
 stock EB-Hab test subsets. `configs/methods.json` records implementation status:
-the Full VISTA workflow and frozen No Skill/Static controls have CLI wiring;
-the three trajectory-level baselines currently expose tested frontend/updater
-library ports, with their CLI experiment orchestration still marked pending.
+the Full VISTA workflow, the frozen No Skill/Static controls, **and the three
+trajectory-level controlled baselines** (`embodiskill_star_native`,
+`embodiskill_star_common_gate`, `vista_without_vtca`) all have full CLI
+experiment wiring. The trajectory baselines share the acquisition → evolve →
+freeze → audit skeleton with the full method but evolve from whole-episode
+reflections: a `JsonTrajectoryTeacher` (same `--method-model` backend, so
+teacher model/calls/tokens stay matched) feeds an `EmbodiSkillFrontend` or
+`UnconditionalReflectionFrontend`; proposals are routed through
+`EmbodiSkillNativeUpdater` (native body/appendix semantics) or the identical
+VISTA `CandidateGate` via `CommonGateProposalAdapter`
+(`vista_skill/workflow.py::TrajectoryEvolutionWorkflow`). A proposal fires only
+after `min_independent_episodes` distinct failed episodes support the same
+attributed field — the trajectory analogue of action-level recurrence — so
+candidate count and validation budget remain comparable across methods. Each
+baseline run emits the same artifact set as the full method (acquisition.jsonl,
+lineage.jsonl, update_proposals/, update_audit.json, gate_rollouts/ for the
+common-gate variants, frozen_skill.json, run_manifest.json,
+experiment_manifest.json).
+
+`run_manifest.json` additionally records `executor_usage` (acquisition-phase
+executor calls and prompt/completion tokens), captured by the seed wrapper in
+`planner.py` without modifying EmbodiedBench; it is `null` for non-remote
+(`local`/`custom`) executors, which cannot be seed-controlled in a controlled
+run.
+
+Supplementary diagnostics for RQ2 and the Phase-2 evidence Go/No-Go are provided
+as library drivers: `vista_skill/fault_injection.py::run_fault_injection_evaluation`
+(target/field Macro-F1, abstention quality, confusion matrix over injected
+faults), `vista_skill/evidence_oracle.py` (`OracleEvidenceProvider`,
+`NoisyEvidenceProvider`, `evaluate_calibration`, `selective_risk_curve`,
+`compare_providers`), and `vista_skill/skills.py::minimal_shared_skill` /
+`empty_shared_skill` for the §4.2.3 initialization-sensitivity comparison.
 
 The core tests exercise model and simulator ports with deterministic fakes. A
 real EB-Hab rollout additionally requires simulator assets, a working headless

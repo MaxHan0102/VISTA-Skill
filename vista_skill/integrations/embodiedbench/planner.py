@@ -11,6 +11,10 @@ class _SeededCompletions:
     def __init__(self, completions, seed: int) -> None:  # type: ignore[no-untyped-def]
         self._completions = completions
         self._seed = int(seed)
+        # The seed wrapper is the single chokepoint every executor request passes
+        # through, so it is the natural place to count executor calls/tokens for
+        # §6.14 cost reporting without modifying EmbodiedBench.
+        self.usage = {"calls": 0, "prompt_tokens": 0, "completion_tokens": 0}
 
     def __getattr__(self, name: str):  # type: ignore[no-untyped-def]
         return getattr(self._completions, name)
@@ -20,7 +24,12 @@ class _SeededCompletions:
         if supplied is not None and int(supplied) != self._seed:
             raise ValueError("executor request seed differs from paired rollout seed")
         kwargs["seed"] = self._seed
-        return self._completions.create(*args, **kwargs)
+        response = self._completions.create(*args, **kwargs)
+        usage = getattr(response, "usage", None)
+        self.usage["calls"] += 1
+        self.usage["prompt_tokens"] += int(getattr(usage, "prompt_tokens", 0) or 0)
+        self.usage["completion_tokens"] += int(getattr(usage, "completion_tokens", 0) or 0)
+        return response
 
 
 class _SeededChat:
@@ -48,7 +57,11 @@ def configure_planner_inference_seed(planner, seed: int) -> None:  # type: ignor
     chat = getattr(client, "chat", None)
     if chat is None or getattr(chat, "completions", None) is None:
         raise RuntimeError("remote executor does not expose OpenAI-compatible chat completions")
-    remote_model.model = _SeededOpenAIClient(client, seed)
+    seeded_client = _SeededOpenAIClient(client, seed)
+    remote_model.model = seeded_client
+    # Expose the executor token-usage accumulator on the planner so cost
+    # reporting can read it later without modifying EmbodiedBench source.
+    planner._vista_executor_usage = seeded_client.chat.completions.usage
 
 
 def compact_ledger(ledger: BeliefLedger, *, max_items: int = 24) -> str:
