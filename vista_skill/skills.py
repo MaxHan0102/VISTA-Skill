@@ -112,6 +112,44 @@ def initialize_shared_skill() -> SkillSpec:
     )
 
 
+def initialize_nav_skill() -> SkillSpec:
+    """Task-agnostic S0 for EB-Navigation (egocentric point/goal navigation).
+
+    Navigation action effects are geometric, so compiled ``prediction_rules``
+    are intentionally empty: :class:`NavActionSchema` owns the structural
+    primitive predictions (position/heading/camera-tilt changed) and
+    ``near(target)`` is observed only through evidence (env distance). The Skill
+    contributes execution guidance via its statements and a goal-evidence
+    termination policy, mirroring the EB-Habitat S0's role without over-claiming
+    geometric effects it cannot deterministically predict.
+    """
+    return SkillSpec(
+        skill_id="shared_navigation",
+        version=0,
+        activation=(
+            "Use for egocentric navigation tasks that require approaching a target.",
+        ),
+        procedure=(
+            "Identify the target object from the instruction and track distance to it.",
+            "Move toward the target and confirm progress from environment feedback.",
+            "Re-observe or replan when a move is blocked or the target leaves view.",
+        ),
+        effect=(
+            "Each movement should reduce the distance to the target object.",
+        ),
+        termination=(
+            "Stop only when near(target) is supported by current evidence.",
+        ),
+        constraint=(
+            "Unknown is not false.",
+            "A blocked move is not evidence that the target has been reached.",
+        ),
+        termination_policy=TerminationPolicy.ALL_GOALS_EVIDENCE,
+        prediction_rules=(),
+        metadata={"initialization": "nav-task-agnostic", "env": "eb_navigation"},
+    )
+
+
 def minimal_shared_skill() -> SkillSpec:
     """Minimal S0 variant: the weakest reasonable starting point for evolution.
 

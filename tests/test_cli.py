@@ -411,3 +411,62 @@ def test_experiment_runs_three_independent_rotated_acquisitions(
     assert manifest["run_count"] == 3
     assert [item["evolution_seed"] for item in manifest["runs"]] == [0, 1, 2]
     assert all((output / f"seed_{seed}" / "frozen_skill.json").exists() for seed in seeded)
+
+
+# --- EB-Navigation evaluate-path selector ----------------------------------
+
+
+def test_evaluate_env_defaults_to_eb_hab() -> None:
+    assert parse_args(["evaluate"]).env == "eb-hab"
+
+
+def test_nav_official_episode_ids() -> None:
+    ids, dataset_hash = _official_episode_ids("base", env_name="eb-nav")
+    assert ids[0] == "nav_0"
+    assert ids == tuple(f"nav_{i}" for i in range(len(ids)))
+    assert len(dataset_hash) == 64
+
+
+def test_nav_official_episode_ids_rejects_hab_subset() -> None:
+    with pytest.raises(ValueError):
+        _official_episode_ids("spatial_relationship", env_name="eb-nav")
+
+
+def test_experiment_rejects_nav_env(tmp_path) -> None:
+    args = parse_args(
+        ["experiment", "--env", "eb-nav", "--method", "full", "--method-model", "m"]
+    )
+    with pytest.raises(ValueError, match="EB-Habitat-only"):
+        cli._run_experiment(args)
+
+
+def test_nav_evaluate_skips_manifest_verification(monkeypatch, tmp_path) -> None:
+    """Nav has no train manifest; evaluate must get past manifest verification to env creation."""
+
+    def _boom(*a, **kw):
+        raise RuntimeError("REACHED_ENV_CREATION")
+
+    monkeypatch.setattr(cli, "create_nav_env", _boom)
+    args = parse_args(
+        [
+            "evaluate", "--env", "eb-nav", "--eval-set", "base",
+            "--stage", "official_test", "--mode", "no_skill",
+            "--config", "configs/vista_nav.json", "--diagnostic",
+            "--output", str(tmp_path / "events.jsonl"),
+        ]
+    )
+    with pytest.raises(RuntimeError, match="REACHED_ENV_CREATION"):
+        cli._run_frozen_evaluation(args)
+
+
+def test_nav_evaluate_rejects_non_official_stage(tmp_path) -> None:
+    args = parse_args(
+        [
+            "evaluate", "--env", "eb-nav", "--eval-set", "base",
+            "--stage", "audit", "--mode", "no_skill",
+            "--config", "configs/vista_nav.json", "--diagnostic",
+            "--output", str(tmp_path / "events.jsonl"),
+        ]
+    )
+    with pytest.raises(ValueError, match="official_test"):
+        cli._run_frozen_evaluation(args)

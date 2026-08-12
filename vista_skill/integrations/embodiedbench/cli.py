@@ -28,10 +28,13 @@ from vista_skill.evaluation import (
     RolloutScore,
     composite_task_score,
 )
-from vista_skill.evidence import EvidenceExtractor
+from vista_skill.evidence import EvidenceExtractor, _nav_feedback_strategy
 from vista_skill.integrations.embodiedbench.environment import (
     create_habitat_env,
+    create_nav_env,
+    nav_goal_predicates,
     seed_habitat_env,
+    seed_nav_env,
     seed_process_rngs,
 )
 from vista_skill.integrations.embodiedbench.planner import (
@@ -56,6 +59,7 @@ from vista_skill.protocol import ExperimentManifest, load_experiment_manifest
 from vista_skill.schemas import SkillSpec
 from vista_skill.skills import (
     SkillArtifact,
+    initialize_nav_skill,
     initialize_shared_skill,
     load_skill_artifact_record,
     render_skill,
@@ -143,6 +147,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
 
 
 def _add_executor_args(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument("--env", choices=("eb-hab", "eb-nav"), default="eb-hab")
     parser.add_argument("--model-name", default="Qwen/Qwen3-VL-8B-Instruct")
     parser.add_argument("--model-type", default="remote")
     parser.add_argument("--executor-base-url", default=os.environ.get("remote_url"))
@@ -164,6 +169,8 @@ def main(argv: Sequence[str] | None = None) -> None:
 
 
 def _run_experiment(args: argparse.Namespace) -> None:
+    if args.env != "eb-hab":
+        raise ValueError("evolution/experiment is EB-Habitat-only; EB-Nav supports 'evaluate'")
     config = load_config(args.config)
     configured_manifest = Path(str(config.raw["task_manifest"])).resolve()
     if Path(args.manifest).resolve() != configured_manifest:
@@ -340,7 +347,9 @@ def _run_frozen_evaluation(args: argparse.Namespace) -> None:
     _require_new_output(summary_output, "evaluation summary")
     config = load_config(args.config)
     run_id = f"evaluate_{uuid.uuid4().hex}"
-    manifest = _load_verified_manifest(args.manifest)
+    is_nav = args.env == "eb-nav"
+    # EB-Nav ships no train_validation split, so there is no controlled manifest to verify.
+    manifest = None if is_nav else _load_verified_manifest(args.manifest)
     artifact = None
     if args.mode == "frozen_skill":
         if not args.skill:
@@ -350,15 +359,22 @@ def _run_frozen_evaluation(args: argparse.Namespace) -> None:
     else:
         if args.skill:
             raise ValueError("--skill is only valid with --mode frozen_skill")
-        skill = replace(initialize_shared_skill(), frozen=True)
+        base_skill = initialize_nav_skill() if is_nav else initialize_shared_skill()
+        skill = replace(base_skill, frozen=True)
     _audit_evaluation_protocol(args, config, manifest, artifact)
-    evaluation_manifest = _artifact_evaluation_manifest(manifest, artifact)
+    evaluation_manifest = (
+        None if manifest is None else _artifact_evaluation_manifest(manifest, artifact)
+    )
     if args.max_episodes is not None and not args.diagnostic:
         raise ValueError("reduced evaluation requires --diagnostic")
+    if is_nav and args.stage != "official_test":
+        raise ValueError("eb-nav only supports --stage official_test (no train_validation split)")
     if args.stage == "official_test":
         if args.eval_set == "train_validation":
-            raise ValueError("official_test requires one of the six stock test subsets")
-        episode_ids, evaluation_dataset_hash = _official_episode_ids(args.eval_set)
+            raise ValueError("official_test requires a stock test subset")
+        episode_ids, evaluation_dataset_hash = _official_episode_ids(
+            args.eval_set, env_name=args.env
+        )
         evaluation_manifest_hash = None
     else:
         if args.eval_set != "train_validation":
@@ -370,7 +386,8 @@ def _run_frozen_evaluation(args: argparse.Namespace) -> None:
     if args.max_episodes is not None:
         episode_ids = episode_ids[: args.max_episodes]
     seed_process_rngs(args.seed)
-    env = create_habitat_env(
+    env = _create_env(
+        args,
         args.eval_set,
         episode_ids=episode_ids,
         exp_name=_habitat_exp_name(
@@ -384,14 +401,10 @@ def _run_frozen_evaluation(args: argparse.Namespace) -> None:
         resolution=args.resolution,
     )
     try:
-        seed_habitat_env(env, args.seed)
+        _seed_env(args, env, args.seed)
         frozen_runtime = None
         if args.mode != "no_skill":
-            frozen_runtime = VistaSkillEngine(
-                skill,
-                evidence_extractor=EvidenceExtractor(),
-                ledger=BeliefLedger(),
-            )
+            frozen_runtime = _make_frozen_runtime(skill, env_name=args.env)
         runner = _make_runner(
             args,
             env,
@@ -402,6 +415,7 @@ def _run_frozen_evaluation(args: argparse.Namespace) -> None:
             expected_episode_ids=episode_ids,
             inject_skill=args.mode != "no_skill",
             rollout_seed=args.seed,
+            goal_predicate_provider=nav_goal_predicates if is_nav else None,
         )
         results = runner.run(max_episodes=len(episode_ids))
     finally:
@@ -409,6 +423,7 @@ def _run_frozen_evaluation(args: argparse.Namespace) -> None:
     _write_json(
         summary_output,
         {
+            "env": args.env,
             "mode": "frozen_evaluation",
             "run_id": run_id,
             "stage": args.stage,
@@ -427,6 +442,51 @@ def _run_frozen_evaluation(args: argparse.Namespace) -> None:
             "mean_task_success": _mean(item.task_success for item in results),
             "mean_task_progress": _mean(item.task_progress for item in results),
         },
+    )
+
+
+def _create_env(
+    args: argparse.Namespace,
+    eval_set: str,
+    *,
+    episode_ids: tuple[str, ...],
+    exp_name: str,
+    resolution: int,
+):
+    if args.env == "eb-nav":
+        return create_nav_env(
+            eval_set, episode_ids=episode_ids, exp_name=exp_name, resolution=resolution
+        )
+    return create_habitat_env(
+        eval_set, episode_ids=episode_ids, exp_name=exp_name, resolution=resolution
+    )
+
+
+def _seed_env(args: argparse.Namespace, env, seed: int) -> None:
+    if args.env == "eb-nav":
+        seed_nav_env(env, seed)
+    else:
+        seed_habitat_env(env, seed)
+
+
+def _make_frozen_runtime(
+    skill: SkillSpec, *, env_name: str = "eb-hab"
+) -> VistaSkillEngine:
+    if env_name == "eb-nav":
+        from vista_skill.action_schema import NavActionSchema
+
+        return VistaSkillEngine(
+            skill,
+            action_schema=NavActionSchema(),
+            evidence_extractor=EvidenceExtractor(
+                feedback_strategy=_nav_feedback_strategy
+            ),
+            ledger=BeliefLedger(),
+        )
+    return VistaSkillEngine(
+        skill,
+        evidence_extractor=EvidenceExtractor(),
+        ledger=BeliefLedger(),
     )
 
 
@@ -544,6 +604,7 @@ def _make_runner(
     inject_skill: bool = True,
     task_coordinates: Sequence = (),
     rollout_seed: int,
+    goal_predicate_provider=None,
 ) -> HabitatRolloutRunner:
     _require_new_output(output, "event artifact")
     planner = _make_planner(
@@ -554,16 +615,20 @@ def _make_runner(
         inject_skill=inject_skill,
         rollout_seed=rollout_seed,
     )
+    if goal_predicate_provider is None:
+        goal_predicate_provider = (
+            None
+            if goal_grounder is None
+            else lambda instruction, image, actions: goal_grounder.ground(
+                instruction, image, actions
+            )
+        )
     return HabitatRolloutRunner(
         env,
         planner,
         engine,
         JsonlArtifactWriter(output),
-        goal_predicate_provider=None
-        if goal_grounder is None
-        else lambda instruction, image, actions: goal_grounder.ground(
-            instruction, image, actions
-        ),
+        goal_predicate_provider=goal_predicate_provider,
         expected_episode_ids=expected_episode_ids,
         task_coordinates=task_coordinates,
     )
@@ -578,34 +643,59 @@ def _make_planner(
     inject_skill: bool = True,
     rollout_seed: int,
 ):
-    from embodiedbench.evaluator.config.system_prompts import habitat_system_prompt
     from embodiedbench.planner import remote_model
-    from embodiedbench.planner.vlm_planner import VLMPlanner
 
     remote_model.temperature = 0.0
     remote_model.max_completion_tokens = 1024
 
-    examples = json.loads(
-        (
-            Path(__file__).parents[3]
-            / "EmbodiedBench/embodiedbench/evaluator/config/habitat_examples.json"
-        ).read_text(encoding="utf-8")
-    )
-    planner_class = make_skill_aware_planner(VLMPlanner)
-    planner = planner_class(
-        args.model_name,
-        args.model_type,
-        env.language_skill_set,
-        habitat_system_prompt,
-        examples,
-        n_shot=args.n_shots,
-        obs_key="head_rgb",
-        chat_history=False,
-        language_only=False,
-        use_feedback=True,
-        multistep=0,
-        tp=args.tp,
-    )
+    if args.env == "eb-nav":
+        from embodiedbench.evaluator.config.system_prompts import (
+            eb_navigation_system_prompt,
+        )
+        from embodiedbench.evaluator.config.eb_navigation_example import (
+            examples as nav_examples,
+        )
+        from embodiedbench.planner.nav_planner import EBNavigationPlanner
+
+        planner_class = make_skill_aware_planner(EBNavigationPlanner)
+        planner = planner_class(
+            args.model_name,
+            args.model_type,
+            env.language_skill_set,
+            eb_navigation_system_prompt,
+            nav_examples,
+            n_shot=args.n_shots,
+            obs_key="head_rgb",
+            chat_history=False,
+            language_only=False,
+            multistep=False,
+            tp=args.tp,
+        )
+    else:
+        from embodiedbench.evaluator.config.system_prompts import habitat_system_prompt
+        from embodiedbench.planner.vlm_planner import VLMPlanner
+
+        examples = json.loads(
+            (
+                Path(__file__).parents[3]
+                / "EmbodiedBench/embodiedbench/evaluator/config/habitat_examples.json"
+            ).read_text(encoding="utf-8")
+        )
+        planner_class = make_skill_aware_planner(VLMPlanner)
+        planner = planner_class(
+            args.model_name,
+            args.model_type,
+            env.language_skill_set,
+            habitat_system_prompt,
+            examples,
+            n_shot=args.n_shots,
+            obs_key="head_rgb",
+            chat_history=False,
+            language_only=False,
+            use_feedback=True,
+            multistep=0,
+            tp=args.tp,
+        )
     if args.model_type == "remote":
         configure_planner_inference_seed(planner, rollout_seed)
     if not inject_skill:
@@ -825,7 +915,29 @@ def _load_verified_manifest(path: str) -> ExperimentManifest:
     return manifest
 
 
-def _official_episode_ids(eval_set: str) -> tuple[tuple[str, ...], str]:
+def _official_episode_ids(
+    eval_set: str, *, env_name: str = "eb-hab"
+) -> tuple[tuple[str, ...], str]:
+    if env_name == "eb-nav":
+        allowed = {
+            "base",
+            "common_sense",
+            "complex_instruction",
+            "visual_appearance",
+            "long_horizon",
+        }
+        if eval_set not in allowed:
+            raise ValueError(f"unsupported official EB-Nav test subset: {eval_set}")
+        dataset = (
+            Path(__file__).parents[3]
+            / "EmbodiedBench/embodiedbench/envs/eb_navigation/datasets"
+            / f"{eval_set}.json"
+        )
+        tasks = json.loads(dataset.read_text(encoding="utf-8"))["tasks"]
+        return (
+            tuple(f"nav_{index}" for index in range(len(tasks))),
+            hashlib.sha256(dataset.read_bytes()).hexdigest(),
+        )
     allowed = {
         "base",
         "common_sense",
@@ -873,7 +985,12 @@ def _protocol_record(
         "frozen": True,
         "evolution_seeds": _parse_seeds(args.evolution_seeds),
         "diagnostic": args.diagnostic,
-        "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+        "env": args.env,
+        "rng_seed_policy": (
+            "python+numpy+torch+ai2thor+openai_request"
+            if args.env == "eb-nav"
+            else "python+numpy+torch+habitat+openai_request"
+        ),
     }
 
 
@@ -886,6 +1003,11 @@ def _audit_evaluation_protocol(
     """Fail closed when a controlled evaluation drifts from its frozen protocol."""
 
     if args.diagnostic:
+        return
+    if args.env == "eb-nav":
+        # EB-Nav has no controlled evolution protocol; only guard artifact frozenness.
+        if artifact is not None and not artifact.skill.frozen:
+            raise ValueError("artifact skill is not frozen")
         return
     mismatches = []
     configured_manifest = Path(str(config.raw["task_manifest"])).resolve()

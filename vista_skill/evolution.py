@@ -8,7 +8,7 @@ from dataclasses import dataclass, field, replace
 from typing import Mapping, Protocol, Sequence
 
 from vista_skill.clustering import EvidenceCluster
-from vista_skill.action_schema import FixedActionSchema
+from vista_skill.action_schema import ActionSchema, FixedActionSchema
 from vista_skill.belief import BeliefLedger
 from vista_skill.mismatch import compare_transitions
 from vista_skill.schemas import (
@@ -192,7 +192,7 @@ class TransitionChecker(Protocol):
 class DeterministicTransitionChecker:
     """Replay cached evidence against parent and candidate structured Skills."""
 
-    def __init__(self, action_schema: FixedActionSchema | None = None) -> None:
+    def __init__(self, action_schema: ActionSchema | None = None) -> None:
         self.action_schema = action_schema or FixedActionSchema()
 
     def check(

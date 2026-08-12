@@ -14,7 +14,6 @@ from vista_skill.schemas import (
     ActionCall,
     AttributionContext,
     PredicateKey,
-    TruthValue,
 )
 
 
@@ -291,7 +290,7 @@ def _online_attribution_context(
     goal_predicates: tuple[PredicateKey, ...],
 ) -> tuple[AttributionContext, dict[str, Any]]:
     """Build attribution inputs only from the active Skill and online state."""
-    checks = _necessary_precondition_checks(engine, action)
+    checks = engine.action_schema.precondition_checks(action, engine.ledger)
     followed = all(item["satisfied"] for item in checks) if checks else True
     object_context = _object_context(action, goal_predicates)
     context = AttributionContext(
@@ -308,36 +307,6 @@ def _online_attribution_context(
         "object_context": object_context,
         "necessary_preconditions": checks,
     }
-
-
-def _necessary_precondition_checks(
-    engine: VistaSkillEngine,
-    action: ActionCall,
-) -> list[dict[str, Any]]:
-    required: list[tuple[PredicateKey, TruthValue]] = []
-    if action.action_type == "pick":
-        required.append((PredicateKey("not_holding"), TruthValue.TRUE))
-    elif action.action_type == "place" and action.arguments:
-        required.extend(
-            (
-                (PredicateKey("not_holding"), TruthValue.FALSE),
-                (PredicateKey("near", (action.arguments[0],)), TruthValue.TRUE),
-            )
-        )
-    elif action.action_type in {"open", "close"} and action.arguments:
-        required.append((PredicateKey("near", (action.arguments[0],)), TruthValue.TRUE))
-    checks = []
-    for key, expected in required:
-        observed = engine.ledger.value(key)
-        checks.append(
-            {
-                "predicate": key.render(),
-                "required": expected.value,
-                "observed": observed.value,
-                "satisfied": observed is expected,
-            }
-        )
-    return checks
 
 
 def _object_context(

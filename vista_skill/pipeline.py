@@ -4,7 +4,7 @@ import hashlib
 from dataclasses import dataclass, replace
 from typing import Mapping
 
-from vista_skill.action_schema import FixedActionSchema
+from vista_skill.action_schema import ActionSchema, FixedActionSchema
 from vista_skill.attribution import CreditAssigner
 from vista_skill.belief import BeliefLedger
 from vista_skill.clustering import EventClusterer
@@ -73,7 +73,7 @@ class VistaSkillEngine:
         self,
         skill: SkillSpec,
         *,
-        action_schema: FixedActionSchema | None = None,
+        action_schema: ActionSchema | None = None,
         evidence_extractor: EvidenceExtractor | None = None,
         credit_assigner: CreditAssigner | None = None,
         clusterer: EventClusterer | None = None,

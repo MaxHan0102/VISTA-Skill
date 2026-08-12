@@ -4,6 +4,7 @@ from dataclasses import dataclass, replace
 from enum import Enum
 from typing import Sequence
 
+from vista_skill.action_schema import ActionSchema
 from vista_skill.attribution import CreditAssigner
 from vista_skill.belief import BeliefLedger
 from vista_skill.metrics import (
@@ -250,7 +251,7 @@ def _contradict(
 def _skill_fault_expected(
     faulty_skill: SkillSpec,
     field: SkillField,
-    action_schema,
+    action_schema: ActionSchema,
     case_index: int,
 ) -> ExpectedChange:
     """Compile a faulty Skill and isolate the injected ``fault_<field>`` rule."""
@@ -275,7 +276,7 @@ def _skill_fault_expected(
 def _build_fault_mismatches(
     fault_type: FaultType,
     base_skill: SkillSpec,
-    action_schema,
+    action_schema: ActionSchema,
     *,
     case_index: int = 0,
 ) -> tuple[Mismatch, ...]:
@@ -437,7 +438,7 @@ class FaultInjectionReport:
 
 def build_fault_cases(
     skill: SkillSpec,
-    action_schema,
+    action_schema: ActionSchema,
     *,
     per_kind: int = 2,
     fault_types: Sequence[FaultType] | None = None,
@@ -491,7 +492,7 @@ def run_fault_injection_evaluation(
     skill: SkillSpec,
     cases: Sequence[FaultCase],
     *,
-    action_schema,
+    action_schema: ActionSchema,
 ) -> FaultInjectionReport:
     """Evaluate attribution quality on a fault-injection diagnostic set.
 
