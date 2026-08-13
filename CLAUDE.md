@@ -15,15 +15,16 @@ VISTA-Skill is a research project (CVPR 2027 target) studying **visual transitio
 
 ## Running evaluations (EmbodiedBench)
 
-There are **three separate conda environments**, one per simulator family — you must activate the right one for the environment you target:
+The conda environments **configured on this machine** are `max_vllm`, `max_embench`, and `max_embench_nav` — activate the one matching your target:
 
-| env flag | conda env | simulator |
-|----------|-----------|-----------|
-| `eb-alf`, `eb-hab` | `embench` | AI2-THOR / Habitat-Sim |
-| `eb-nav` | `embench_nav` | AI2-THOR |
-| `eb-man` | `embench_man` | CoppeliaSim + PyRep |
+| target | conda env | simulator / purpose |
+|--------|-----------|---------------------|
+| `eb-alf`, `eb-hab` | `max_embench` | AI2-THOR / Habitat-Sim |
+| `eb-nav` | `max_embench_nav` | AI2-THOR |
+| model serving | `max_vllm` | serves the frozen executor/teacher Qwen3-VL-8B-Instruct via vLLM (OpenAI-compatible API) |
+| `eb-man` | _(not configured; stock name `max_embench_man`)_ | CoppeliaSim + PyRep |
 
-First-time setup: `cd EmbodiedBench && bash install.sh` (creates all three envs, pulls datasets/sim assets, installs habitat-lab, CoppeliaSim, PyRep). Requires `git lfs`. The conda env definitions live in `EmbodiedBench/conda_envs/`.
+Serve the model from `max_vllm` (`bash scripts/serve_qwen3vl_vllm.sh`), then from a simulator env reach it via the `remote` model type: `remote_url=http://127.0.0.1:8000/v1`, `OPENAI_API_KEY=EMPTY`. First-time setup: `cd EmbodiedBench && bash install.sh` (creates the stock `embench`/`embench_nav`/`embench_man` envs and pulls datasets/sim assets; installs habitat-lab, CoppeliaSim, PyRep). Requires `git lfs`. The conda env definitions live in `EmbodiedBench/conda_envs/`.
 
 AI2-THOR and Coppelia need a headless X server. Start it once in a separate tmux pane (default `X_DISPLAY=:1`):
 ```bash
@@ -32,7 +33,7 @@ python -m embodiedbench.envs.eb_alfred.scripts.startx 1
 
 Run an evaluation (run from inside `EmbodiedBench/`, with the matching env activated):
 ```bash
-conda activate embench
+conda activate max_embench
 python -m embodiedbench.main env=eb-hab model_name=gpt-4o-mini exp_name=baseline
 ```
 CLI args use **Hydra `key=value` syntax** and override the per-env YAML. Useful flags: `down_sample_ratio=0.1` (fast debug run on 10% of data), `eval_sets=[<subset>]` (single capability subset), `language_only=True` (text-only), `chat_history=True`, `n_shots=N`, `multiview`/`multistep`/`visual_icl`, `resolution`, `log_level=DEBUG`.
@@ -42,7 +43,7 @@ There is **no dedicated VISTA-Skill test suite**. Validate project changes with 
 ### Model types
 `model_type=` selects how the model is called:
 - `remote` (default) — OpenAI-style API; set `OPENAI_API_KEY` / `GEMINI_API_KEY` / `ANTHROPIC_API_KEY` / `DASHSCOPE_API_KEY`.
-- `local` — offline via LMDeploy (separate `lmdeploy` conda env from `conda_envs/lmdeploy.yaml`); set `tp` for tensor parallelism.
+- `local` — offline inference; stock EmbodiedBench uses LMDeploy (`conda_envs/lmdeploy.yaml`). On this machine the configured local-serving env is `max_vllm` (vLLM, OpenAI-compatible — run `scripts/serve_qwen3vl_vllm.sh` and access it as `remote`); set `tp` for tensor parallelism.
 - `custom` — a self-hosted Flask server (`EmbodiedBench/server.py`, currently `gemma-3-12b-it`); set `export server_url="IP:port/process"`.
 
 ## Architecture (EmbodiedBench)

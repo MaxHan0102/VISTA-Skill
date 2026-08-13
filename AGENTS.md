@@ -18,7 +18,7 @@ Run benchmark commands from `EmbodiedBench/`.
 - `python -m embodiedbench.envs.eb_habitat.EBHabEnv`: smoke-test Habitat; equivalent entry points cover the other environments.
 - `cd context4agent/latex && latexmk -pdf main.tex`: build the paper with the CVPR LaTeX dependencies.
 
-Use `embench` for `eb-alf`/`eb-hab`, `embench_nav` for `eb-nav`, and `embench_man` for `eb-man`. Start the documented headless X server when required.
+The conda environments configured on this machine are `max_embench` (`eb-alf`/`eb-hab`), `max_embench_nav` (`eb-nav`), and `max_vllm` (serves Qwen3-VL-8B-Instruct via vLLM); `eb-man`/CoppeliaSim is not yet configured. Activate the matching env before running (stock `install.sh` creates `embench`/`embench_nav`/`embench_man`). Start the documented headless X server when required.
 
 ## Coding Style & Naming Conventions
 
