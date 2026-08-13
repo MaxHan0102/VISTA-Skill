@@ -1,45 +1,46 @@
 #!/usr/bin/env bash
 # Serve Qwen3-VL-8B-Instruct locally with vLLM as an OpenAI-compatible API,
-# matching the VISTA-Skill controlled-protocol executor config
-# (configs/vista_p0.json: model=Qwen3-VL-8B-Instruct, precision=fp8, tp=1,
-#  max_model_len=16384, temperature=0, supports OpenAI `seed` field).
+# matching the VISTA-Skill controlled-protocol executor contract
+# (configs/vista_p0.json: model ends with "Qwen3-VL-8B-Instruct", precision=fp8,
+#  temperature=0, accepts the OpenAI `seed` field, returns usage tokens).
 #
-# Usage:  bash scripts/serve_qwen3vl_vllm.sh [GPU_ID] [PORT] [QUANT]
-#   GPU_ID  default 0   (CUDA_VISIBLE_DEVICES; tp=1 -> single GPU)
-#   PORT    default 8000
-#   QUANT   default fp8 (fallback: bf16 -- but bf16 8B needs more VRAM / tp=2)
+# === Verified working recipe on this box (driver 550.90.07 / CUDA 12.4) ===
+# Constraints discovered while bringing it up (see docs/memory):
+#   - Driver 550 => CUDA 12.4 only. vLLM 0.27.x is CUDA-13 only and WILL NOT run.
+#   - Use vLLM 0.11.0 (min version with Qwen3-VL arch) + torch 2.8 cu128
+#     (cu128 empirically runs on driver 550) + transformers 4.57.x (NOT 5.x:
+#     5.x removed all_special_tokens_extended that vLLM 0.11 reads).
+#   - flashinfer MUST be uninstalled: its `array.array[int]` annotation raises
+#     TypeError at import and vLLM's guard only catches ImportError.
+#   - GPUs are shared (~7 GiB resident per card), so use tp=2, util 0.6,
+#     --enforce-eager, max_model_len 16384, --max-num-batched-tokens 4096.
+#     IMPORTANT: max_model_len MUST be 16384 (the config value), NOT 8192 -- the
+#     10-shot executor prompt (~4.2k tok) + max_tokens (up to 4096) overflows
+#     8192 and the planner's 3 retries on the deterministic 400 exhaust, aborting
+#     the episode. --max-num-batched-tokens 4096 shrinks the profile activation
+#     so the larger context fits the shared-GPU KV budget. On a DEDICATED GPU
+#     switch to TP=1 / util 0.9 and drop --enforce-eager for faster serving.
 #
-# Weights are read from the HF cache (already present); no download.
+# Usage:  bash scripts/serve_qwen3vl_vllm.sh [PORT]
 set -euo pipefail
 
-GPU_ID="${1:-0}"
-PORT="${2:-8000}"
-QUANT="${3:-fp8}"
+PORT="${1:-8001}"
 MODEL_ID="Qwen/Qwen3-VL-8B-Instruct"
-# Served name must (a) be the exact string VISTA-Skill sends in the request
-# `model` field, (b) contain substring "Qwen3-VL" (RemoteModel dispatch), and
-# (c) end with "Qwen3-VL-8B-Instruct" (_validate_controlled_executor). The HF
-# id satisfies all three and matches the CLI --model-name default, so no 404.
-SERVED_NAME="Qwen/Qwen3-VL-8B-Instruct"
+SERVED_NAME="Qwen/Qwen3-VL-8B-Instruct"   # must match configs/vista_p0.json + contain "Qwen3-VL"
+PY="${VLLM_PY:-/root/miniconda3/envs/max_vllm/bin/python}"
 
-export CUDA_VISIBLE_DEVICES="$GPU_ID"
-export HF_HUB_OFFLINE=1              # weights already cached; never hit network
+export HF_HUB_OFFLINE=1              # weights already in HF cache; never hit network
 export VLLM_NO_USAGE_STATS=1
+# unset CUDA_VISIBLE_DEVICES so tp=2 sees both GPUs
 
-# --quantization fp8 = dynamic fp8 weight quantization (fits 8B in ~8GB VRAM).
-# If fp8 fails to load, re-run with QUANT=bf16 and GPU tp=2 (edit --tensor-parallel-size).
-QFLAG=()
-if [[ "$QUANT" == "fp8" ]]; then
-  QFLAG=(--quantization fp8)
-fi
-
-exec python -m vllm.entrypoints.openai.api_server \
+exec "$PY" -m vllm.entrypoints.openai.api_server \
   --model "$MODEL_ID" \
   --served-model-name "$SERVED_NAME" \
-  --tensor-parallel-size 1 \
+  --tensor-parallel-size 2 \
   --max-model-len 16384 \
+  --max-num-batched-tokens 4096 \
+  --gpu-memory-utilization 0.6 \
+  --enforce-eager \
   --trust-remote-code \
   --port "$PORT" \
-  --gpu-memory-utilization 0.5 \
-  --dtype auto \
-  "${QFLAG[@]}"
+  --quantization fp8
