@@ -61,6 +61,40 @@ def _select_ordered_episodes(env: Any, episode_ids: Sequence[str]) -> None:
     env.number_of_episodes = len(selected)
     env.down_sample_ratio = 1.0
     env._current_episode_num = 0
+    # The underlying habitat Env serves episodes from an internal iterator
+    # (CustomEpisodeIterator) built at construction from the full dataset; simply
+    # reassigning ``.episodes`` above is ignored, so reset() would still draw the
+    # dataset's original first episode (the dataset is not episode_id-ordered).
+    # Re-point that Env's dataset + iterator at the selected list so reset()
+    # serves the requested episodes in the requested, non-cycling order.
+    _repoint_habitat_episode_iterator(env.env, selected)
+
+
+def _repoint_habitat_episode_iterator(root: Any, selected: Sequence[Any]) -> None:
+    """Drive the deepest habitat ``Env``'s episode iterator from ``selected``."""
+    habitat_env = _find_habitat_env(root)
+    if habitat_env is None:
+        return
+    dataset = getattr(habitat_env, "_dataset", None)
+    if dataset is not None:
+        dataset.episodes = list(selected)
+    habitat_env._episode_iterator = iter(selected)
+    if hasattr(habitat_env, "episode_iterator"):
+        habitat_env.episode_iterator = habitat_env._episode_iterator
+    if selected:
+        habitat_env._current_episode = selected[0]
+
+
+def _find_habitat_env(obj: Any) -> Any:
+    """Walk the GymHabitatEnv -> ... -> habitat.Env wrapper chain."""
+    seen: set[int] = set()
+    current = obj
+    while current is not None and id(current) not in seen:
+        seen.add(id(current))
+        if hasattr(current, "_episode_iterator"):
+            return current
+        current = getattr(current, "env", None) or getattr(current, "_env", None)
+    return None
 
 
 def seed_habitat_env(env: Any, seed: int) -> None:

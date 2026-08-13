@@ -143,7 +143,12 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     evaluate.add_argument("--output", default="running/vista_skill/frozen_audit/events.jsonl")
     evaluate.add_argument("--seed", type=int, default=0)
     evaluate.add_argument("--max-episodes", type=int)
-    return parser.parse_args(argv)
+    args = parser.parse_args(argv)
+    if args.n_shots is None:
+        # Match stock EmbodiedBench per-env defaults (eb-hab.yaml=10, eb-nav.yaml=3)
+        # so VISTA rollouts share the published-EB in-context-example surface.
+        args.n_shots = 3 if args.env == "eb-nav" else 10
+    return args
 
 
 def _add_executor_args(parser: argparse.ArgumentParser) -> None:
@@ -152,7 +157,13 @@ def _add_executor_args(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--model-type", default="remote")
     parser.add_argument("--executor-base-url", default=os.environ.get("remote_url"))
     parser.add_argument("--eval-set", default="train_validation")
-    parser.add_argument("--n-shots", type=int, default=10)
+    parser.add_argument(
+        "--n-shots",
+        type=int,
+        default=None,
+        help="In-context examples; defaults to 10 for eb-hab and 3 for eb-nav "
+        "(matches stock EB per-env YAML so VISTA rollouts share the EB ICL surface).",
+    )
     parser.add_argument("--resolution", type=int, default=500)
     parser.add_argument("--tp", type=int, default=1)
 
@@ -645,8 +656,11 @@ def _make_planner(
 ):
     from embodiedbench.planner import remote_model
 
+    # temperature=0 and a 4096-token cap mirror stock EmbodiedBench's RemoteModel
+    # defaults (embodiedbench/planner/remote_model.py), so VISTA rollouts share the
+    # EB executor surface; temperature=0 also pins rollouts for reproducibility.
     remote_model.temperature = 0.0
-    remote_model.max_completion_tokens = 1024
+    remote_model.max_completion_tokens = 4096
 
     if args.env == "eb-nav":
         from embodiedbench.evaluator.config.system_prompts import (

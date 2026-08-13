@@ -522,7 +522,14 @@ def _patch_schema() -> dict[str, Any]:
         "required": ["rule_id", "action_type", "predicate", "before", "after"],
         "properties": {
             "rule_id": {"type": "string"},
-            "action_type": {"type": "string"},
+            # Constrain to the action types the BoundedPatchApplier accepts
+            # (evolution._ALLOWED_ACTION_TYPES). Without this the model emits
+            # synthetic types like "resolve_conflict" for non-action-bound
+            # fields (e.g. termination), which the applier must then reject.
+            "action_type": {
+                "type": "string",
+                "enum": ["*", "nav", "pick", "place", "open", "close"],
+            },
             "predicate": {"type": "string"},
             "before": {"type": ["string", "null"], "enum": [None, "true", "false", "unknown"]},
             "after": {"type": "string", "enum": ["true", "false", "unknown"]},
