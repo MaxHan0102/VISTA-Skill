@@ -210,7 +210,13 @@ def _run_experiment(args: argparse.Namespace) -> None:
             if args.method in _METHODS_REQUIRING_TEACHER
             else None
         )
-        engine, goal_grounder = _make_engine(config, method_model)
+        # The trajectory baselines evolve from whole-episode reflections, NOT
+        # action-level VTCA -- that is full's mechanism. Give them a rule-only
+        # engine (no per-action evidence/attribution teacher) so they pay only
+        # their own trajectory-reflection cost (fair RQ4 + far faster). The
+        # trajectory teacher is wired separately in _make_trajectory_workflow.
+        engine_model = None if args.method in _TRAJECTORY_METHODS else method_model
+        engine, goal_grounder = _make_engine(config, engine_model)
 
         acquisition = run_manifest.coordinates_for("acquisition")
         if args.max_acquisition_episodes is not None:
@@ -383,7 +389,12 @@ def _run_frozen_evaluation(args: argparse.Namespace) -> None:
     if args.stage == "official_test":
         if args.eval_set == "train_validation":
             raise ValueError("official_test requires a stock test subset")
-        episode_ids, evaluation_dataset_hash = _official_episode_ids(
+        # The stock test subsets' dataset episode_ids do not align with the id
+        # field the manifest reads, so pin-by-id breaks (_select_ordered_episodes
+        # rejects most ids). Load the full subset and iterate in stock order,
+        # capped by --max-episodes (identical across methods => fair).
+        episode_ids = None
+        _, evaluation_dataset_hash = _official_episode_ids(
             args.eval_set, env_name=args.env
         )
         evaluation_manifest_hash = None
@@ -394,7 +405,7 @@ def _run_frozen_evaluation(args: argparse.Namespace) -> None:
         episode_ids = tuple(item.episode_id for item in coordinates)
         evaluation_dataset_hash = manifest.dataset_sha256
         evaluation_manifest_hash = manifest.digest
-    if args.max_episodes is not None:
+    if args.max_episodes is not None and episode_ids is not None:
         episode_ids = episode_ids[: args.max_episodes]
     seed_process_rngs(args.seed)
     env = _create_env(
@@ -428,7 +439,10 @@ def _run_frozen_evaluation(args: argparse.Namespace) -> None:
             rollout_seed=args.seed,
             goal_predicate_provider=nav_goal_predicates if is_nav else None,
         )
-        results = runner.run(max_episodes=len(episode_ids))
+        # official_test loads the full subset (episode_ids=None) and is capped by
+        # --max-episodes; train_validation stages pin a specific id list.
+        max_ep = args.max_episodes if episode_ids is None else len(episode_ids)
+        results = runner.run(max_episodes=max_ep)
     finally:
         env.close()
     _write_json(
@@ -511,7 +525,10 @@ def _make_method_model(
         base_url=args.method_base_url,
         api_key=args.method_api_key,
         temperature=0.0,
-        max_tokens=1024,
+        # Evidence extraction can emit a long observations list; 1024 truncates
+        # it mid-string -> json.loads fails. 4096 matches the executor cap and
+        # leaves headroom for every teacher purpose (evidence/attribution/patch).
+        max_tokens=4096,
         seed=seed,
     )
 

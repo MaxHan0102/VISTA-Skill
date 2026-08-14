@@ -1,7 +1,7 @@
 {
-  "protocol": "vista_skill_p0_2026_08_06",
-  "task_manifest": "configs/eb_hab_train_validation_manifest.json",
-  "evolution_seeds": [0, 1, 2],
+  "protocol": "vista_skill_pilot_2026_08_13",
+  "task_manifest": "configs/eb_hab_pilot_manifest.json",
+  "evolution_seeds": [0],
   "environment": {
     "name": "eb-hab",
     "acquisition_split": "train_validation",
@@ -34,18 +34,18 @@
     "ledger_predicates": 24,
     "history_actions": 12,
     "patch_operations_per_round": 1,
-    "proxy_episodes": 10,
-    "finalist_episodes": 30
+    "proxy_episodes": 2,
+    "finalist_episodes": 3
   },
   "credit": {
     "targets": ["belief_refresh", "skill_update", "abstain"],
     "action_model_updates_enabled": false,
-    "min_independent_episodes": 2,
+    "min_independent_episodes": 1,
     "min_evidence_confidence": 0.75,
     "min_attribution_confidence": 0.7
   },
   "gate": {
-    "bootstrap_samples": 2000,
+    "bootstrap_samples": 200,
     "alpha": 0.05,
     "proxy_lcb_threshold": 0.0,
     "finalist_lcb_threshold": 0.0,

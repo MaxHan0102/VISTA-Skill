@@ -138,19 +138,25 @@ class JsonVisualEvidenceProvider:
             "query_predicates": [key.render() for key in queries],
             "rule": "Not visible means unknown, not false. Preserve numbered instance identities.",
         }
-        result = self.model.complete_json(
-            system=(
-                "Extract only visual evidence supported by the two images and public feedback. "
-                "Do not infer desired or predicted effects. Return unknown when coverage is insufficient."
-            ),
-            content=[
-                {"type": "image_url", "image_url": {"url": _image_data_url(request.pre_image)}},
-                {"type": "image_url", "image_url": {"url": _image_data_url(request.post_image)}},
-                {"type": "text", "text": json.dumps(prompt, sort_keys=True)},
-            ],
-            schema=_evidence_schema(),
-            purpose="vista_visual_evidence",
-        )
+        try:
+            result = self.model.complete_json(
+                system=(
+                    "Extract only visual evidence supported by the two images and public feedback. "
+                    "Do not infer desired or predicted effects. Return unknown when coverage is insufficient."
+                ),
+                content=[
+                    {"type": "image_url", "image_url": {"url": _image_data_url(request.pre_image)}},
+                    {"type": "image_url", "image_url": {"url": _image_data_url(request.post_image)}},
+                    {"type": "text", "text": json.dumps(prompt, sort_keys=True)},
+                ],
+                schema=_evidence_schema(),
+                purpose="vista_visual_evidence",
+            )
+        except json.JSONDecodeError:
+            # A truncated/malformed evidence response must not abort the rollout;
+            # degrade to no evidence for this transition (attribution then
+            # abstains on insufficient evidence) and keep the run alive.
+            return []
         items = []
         pre_values = {item.key: item.value for item in request.pre_ledger}
         for index, observation in enumerate(result.get("observations", [])):
@@ -246,15 +252,28 @@ class JsonAttributionTeacher:
             "allowed_targets": ["belief_refresh", "skill_update", "abstain"],
             "allowed_fields": [field.value for field in SkillField],
         }
-        result = self.model.complete_json(
-            system=(
-                "Assign a persistent-memory update target from cited transition evidence. "
-                "Prefer abstention when evidence cannot distinguish causes. A field is legal only for skill_update."
-            ),
-            content=[{"type": "text", "text": json.dumps(payload, sort_keys=True)}],
-            schema=_attribution_schema(),
-            purpose="vista_attribution",
-        )
+        try:
+            result = self.model.complete_json(
+                system=(
+                    "Assign a persistent-memory update target from cited transition evidence. "
+                    "Prefer abstention when evidence cannot distinguish causes. A field is legal only for skill_update."
+                ),
+                content=[{"type": "text", "text": json.dumps(payload, sort_keys=True)}],
+                schema=_attribution_schema(),
+                purpose="vista_attribution",
+            )
+        except json.JSONDecodeError:
+            # A malformed/truncated teacher response must never abort the rollout;
+            # default to abstention (do not attribute) and keep the run alive.
+            return AttributionResult(
+                target=UpdateTarget.ABSTAIN,
+                field=None,
+                subreason=AbstainReason.AMBIGUOUS,
+                confidence=0.0,
+                mismatch_ids=tuple(item.mismatch_id for item in mismatches),
+                evidence_ids=(),
+                rationale="teacher response unparseable; abstained",
+            )
         target = UpdateTarget(str(result["target"]))
         field_value = result.get("field")
         reason_value = result.get("subreason")
@@ -301,15 +320,26 @@ class JsonTrajectoryTeacher:
                 "do not invent hidden state."
             ),
         }
-        result = self.model.complete_json(
-            system=(
-                "Reflect on one completed embodied-agent trajectory and decide "
-                "whether a persistent procedural-skill revision is warranted."
-            ),
-            content=[{"type": "text", "text": json.dumps(payload, sort_keys=True)}],
-            schema=_trajectory_reflection_schema(),
-            purpose="trajectory_reflection",
-        )
+        try:
+            result = self.model.complete_json(
+                system=(
+                    "Reflect on one completed embodied-agent trajectory and decide "
+                    "whether a persistent procedural-skill revision is warranted."
+                ),
+                content=[{"type": "text", "text": json.dumps(payload, sort_keys=True)}],
+                schema=_trajectory_reflection_schema(),
+                purpose="trajectory_reflection",
+            )
+        except json.JSONDecodeError:
+            # A malformed reflection must never abort the rollout; default to an
+            # execution-lapse route (no persistent proposal) and keep the run alive.
+            return TrajectoryReflection(
+                route=EmbodiSkillRoute.FAIL_EXECUTION,
+                content="",
+                target_field=None,
+                confidence=0.0,
+                evidence_ids=(),
+            )
         route = EmbodiSkillRoute(str(result["route"]))
         field_value = result.get("target_field")
         evidence_ids = tuple(
@@ -466,14 +496,17 @@ def _evidence_schema() -> dict[str, Any]:
             "value": {"type": "string", "enum": ["true", "false", "unknown"]},
             "confidence": {"type": "number", "minimum": 0, "maximum": 1},
             "coverage": {"type": "number", "minimum": 0, "maximum": 1},
-            "evidence": {"type": "string"},
+            # Cap rationale length so a verbose model cannot balloon the JSON
+            # past the completion budget and truncate mid-string.
+            "evidence": {"type": "string", "maxLength": 160},
         },
     }
     return {
         "type": "object",
         "additionalProperties": False,
         "required": ["observations"],
-        "properties": {"observations": {"type": "array", "items": observation}},
+        # Bound the array so total output stays well under the token budget.
+        "properties": {"observations": {"type": "array", "items": observation, "maxItems": 16}},
     }
 
 
@@ -504,13 +537,15 @@ def _trajectory_reflection_schema() -> dict[str, Any]:
                 "type": "string",
                 "enum": [item.value for item in EmbodiSkillRoute],
             },
-            "content": {"type": "string"},
+            # Bound so a verbose/rambling model cannot balloon the response
+            # past the completion budget and corrupt the JSON.
+            "content": {"type": "string", "maxLength": 500},
             "target_field": {
                 "type": ["string", "null"],
                 "enum": [None, *[item.value for item in SkillField]],
             },
             "confidence": {"type": "number", "minimum": 0, "maximum": 1},
-            "evidence_ids": {"type": "array", "items": {"type": "string"}},
+            "evidence_ids": {"type": "array", "items": {"type": "string"}, "maxItems": 16},
         },
     }
 
