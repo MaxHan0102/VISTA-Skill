@@ -25,8 +25,8 @@ import sys
 from pathlib import Path
 
 REPO = Path("/root/max/VISTA-Skill")
-EMBENCH_PY = "/root/miniconda3/envs/embench/bin/python"
-BASE_URL = "http://127.0.0.1:8001/v1"
+EMBENCH_PY = os.environ.get("VISTA_EMBENCH_PY", "/root/miniconda3/envs/max_embench/bin/python")
+BASE_URL = os.environ.get("VISTA_METHOD_BASE_URL", "http://127.0.0.1:8001/v1")
 MODEL = "Qwen/Qwen3-VL-8B-Instruct"
 CONFIG = "configs/vista_pilot.json"
 MANIFEST = "configs/eb_hab_pilot_manifest.json"
@@ -49,7 +49,7 @@ def _env():
         **os.environ,
         "PYTHONPATH": str(REPO),
         "OPENAI_API_KEY": "EMPTY",
-        "CUDA_VISIBLE_DEVICES": "0",  # Habitat renders on GPU0; vLLM is on GPU1
+        "CUDA_VISIBLE_DEVICES": "0",  # Habitat renders on the local GPU; vLLM serves remotely
     }
 
 
