@@ -221,3 +221,150 @@ worth carrying into the next campaign.
 4. Ablation switches not yet implemented (no-decoupling, no-abstain) — needed
    only for the T6 main table.
 5. w/o-VTCA eval was cut short in E5; re-run when a GPU window exists.
+
+---
+
+## 2026-08-19 · E6 · Dual-server client deployment validation (E5 replica + first EB-NAV client run)
+
+**Tested:** that the split layout — vLLM serving on two remote GPU servers
+(192.168.1.185:8000 → EB-HAB client, 192.168.1.173:8000 → EB-NAV client),
+single RTX 4090 D client box for both simulators — reproduces the E5 campaign
+and delivers the first EB-NAV frozen-evaluation numbers. Both endpoints passed
+probe 6/6 + VISTA-layer smoke 3/3 + gate-rollover smoke 4/4 before any run.
+
+**Settings:** identical to E5 (pilot ACQ=15, seed 0, gate 2/3, min_ind=1,
+eval `base` 20 eps seed 0) except serving stack: remote vLLM 0.27.1 /
+torch 2.13 / transformers 5.15 (Stack A) instead of local vLLM 0.11, and both
+simulators render on the client's one GPU. EB-NAV: `evaluate --env eb-nav
+--stage official_test --eval-set base`, 60 eps, seed 0, modes
+`no_skill` / `static_shared_skill`, config `configs/vista_nav.json`.
+
+**Results (eval `base`, 20 eps):**
+
+| method | success | progress |
+|---|---|---|
+| no_skill | 0.550 | 0.633 |
+| static shared Skill (S0) | 0.450 | 0.533 |
+| full VISTA | 0.450 | 0.533 |
+| EmbodiSkill* native | 0.450 | 0.533 |
+| EmbodiSkill* + common gate | 0.450 | 0.533 |
+| VISTA w/o VTCA | 0.450 | 0.533 |
+
+**Results (experiment):** full 3 proposals → 0 accepted (all rejected at
+`transition_consistency`, "target was not repaired", exactly E5's pattern);
+w/o-VTCA 5 proposals → 0 accepted (gate filtered all — first completed
+w/o-VTCA experiment, closing E5 open item 5); native/common-gate 0 persistent
+proposals (execution-lapse routing, as E5). All six frozen Skills = S0
+(`54b60a62…`, v0). Teacher tokens: full 183,934 · w/o-VTCA 9,398 ·
+native = common-gate 7,124; executor ≈ 295–307 k for all (matched).
+
+**EB-NAV client (official_test/base, 60 eps, seed 0):** no_skill **0.633** vs
+static_shared_skill **0.600**. The S0 skill slightly underperforms no-skill on
+nav base (−3.3 pts ≈ 2 episodes) — direction opposite to EB-HAB E5's +5 pts at
+20 eps; treat both as small-sample observations.
+
+**Interpretation:** the dual-server deployment **behaves like the E5
+single-server campaign** — same gate rejections, same S0 freeze, same
+fairness/cost accounting; the no_skill-vs-S0 flip (0.550/0.450 here vs
+0.450/0.500 in E5) is within 20-episode noise (binomial 95% CI ≈ ±0.22) and
+plausibly stems from the vLLM 0.11→0.27 stack change. E5's headline conclusion
+stands: mechanisms validated, "evolution improves performance" still awaits the
+ACQ=60 controlled run. RQ4 multiple: full ≈ 20–26× the trajectory baselines'
+teacher tokens.
+
+**Deployment bugs found and fixed (all in adapters/tests, EmbodiedBench
+untouched):**
+
+| # | symptom | root cause | fix |
+|---|---|---|---|
+| 11 | nav client died `vulkaninfo failed to run` | `CUDA_VISIBLE_DEVICES` set → ai2thor auto-selects `gpu_device` → demands vulkaninfo (absent) for CUDA→Vulkan mapping | unset it for the nav client; CloudRendering + nvidia ICD suffices |
+| 12 | nav client died `'Controller' has no attribute 'random_initilize'` | stock `EBNavEnv.seed()` typo, and ai2thor 5.0.0 removed the real API | `seed_nav_env` swallows the dead call; process-RNG seeding is the effective part |
+| 13 | `full` died on episode 1 `invalid predicate name: ''` | model junk strings reach `PredicateKey.parse` in grounder/evidence paths | per-entry drop (degrade-not-abort) + `minLength`/`minItems` in schemas |
+| 14 | `vista_without_vtca` died `common-gate proposals require independent episodes` | `proposal_cluster` hardcoded ≥2 vs pilot config `min_independent_episodes=1` | configurable floor (`min_episodes`, default 2) wired from config |
+
+**Artifacts:** `running/pilot/` (6 methods + eval), `running/vista_skill/
+nav_official/base/{no_skill,static_shared_skill}/` (local, gitignored).
+
+**Follow-up:** open items 1–4 above remain; EB-NAV has 4 more subsets
+(common_sense, complex_instruction, visual_appearance, long_horizon) to run
+under the same protocol.
+
+---
+
+## 2026-08-20 · E7 · Fault-injection repair campaigns (fast effectiveness test; three fault classes)
+
+**Tested:** the paper's core loop end-to-end — detect → attribute → repair →
+gate-accept → performance recovery — by injecting a structured fault into the
+initial Skill so recurrence is reachable at pilot scale (20 acq eps, seed 0,
+`configs/vista_fault_repair.json`, min_ind=2, gate 2/3). Arms: A corrupted
+frozen (lower bound) · B corrupted + full VISTA · C corrupted +
+vista_without_vtca. New CLI flag `--skill-fault` (diagnostic-gated); driver
+`scripts/fault_repair_effectiveness.py`.
+
+**Results (eval `base`, 20 eps, seed 0, SOLO on the 185 server):**
+
+| fault / arm | success | frozen skill | lineage |
+|---|---|---|---|
+| termination: A corrupted | 0.400 | faulty | — |
+| termination: B full (v1, text-only patch) | 0.400 | faulty | 1 proposal → **field=termination (correct)**, rejected |
+| termination: B full (v2, compiled patch) | 0.400 | faulty | 1 proposal with `termination_policy: all_goals_evidence` (correct compiled repair), rejected at transition_consistency |
+| termination: C w/o-VTCA | 0.400 | faulty | 3 proposals → all field=**procedure (wrong)** |
+| pick-inversion: A = B = C | 0.500 | faulty | B: 1 termination proposal; C: 3 procedure proposals |
+| references | S0 0.450 · no_skill 0.550 | | |
+
+**Verdict: the repair loop did NOT close on any fault class.** Three blockers,
+each a real P0 design conservatism, were isolated:
+
+1. **Synthetic-predicate faults** (`<field>_satisfied` from
+   `inject_skill_fault`) can never route: their mismatches are always
+   uncovered/unsupported and attribution.py abstains on any such mismatch
+   (INSUFFICIENT_EVIDENCE). The E3 diagnostic set bypassed this by
+   constructing covered contradictions directly — confirming E3's
+   "mechanism sanity bound" caveat.
+2. **Termination-policy faults** attribute correctly but are **replay-inert**:
+   `_termination_change` derives `task_complete` from the policy enum, and the
+   goal grounder's predicates (`pick_ball`, `place_ball_on_X`) are never
+   evidence-confirmed, so ANY and ALL compile to identical expectations on
+   cached events — no patch can shrink the mismatch set. (This also explains
+   E5's three termination rejections.)
+3. **Vocabulary-aligned faults** (new `effect_pick_inversion`: inverts S0's
+   `holding` pick rule) ARE detected — 16 picks produced 6 covered holding
+   contradictions — but event-level attribution masked every one: 3 vetoed by
+   co-occurring `task_complete` unsupported expectations, 2 correctly judged
+   execution lapses (pick while holding), 1 schema/skill dedupe ambiguity.
+   20 episodes: 166 abstain / 23 belief_refresh / 9 skill_update (all
+   termination, none effect).
+
+**Positive sub-results worth carrying:**
+- Attribution contrast replicated twice: VTCA located the correct field
+  (termination ×2 campaigns) while trajectory reflection misattributed to
+  procedure 6/6 times.
+- After exposing the compiled view in the patch-generator prompt
+  (`compiled_termination_policy`, field rules, compiled contract), the teacher
+  emitted the correct compiled-level repair (policy enum + text) — the E5/E6
+  text-only failure mode is fixed at the generation side.
+- Gate safety held throughout: every non-repairing or ill-scoped patch was
+  rejected (0 harmful, 0 false accepts across 8 proposals in 4 campaigns).
+
+**Ops findings (ledger #15/16):**
+- **#15** Concurrent load on the vLLM server breaks temp-0 determinism: the
+  same faulty skill evaluated to 0.650 (concurrent) vs 0.400 (solo, twice).
+  All controlled evaluations must run SOLO per server; the probe's
+  seed-determinism check is only valid without concurrency.
+- **#16** A queued `pgrep -f` waiter deadlocked because the tmux *server*
+  process retains the first session's command line; and killing that pid kills
+  the server (and every session). Match on the actual python cmdline, not the
+  tmux invocation string.
+
+**P1 work items implied (ordered):**
+1. Goal-evidence alignment: ground goal predicates onto primitives the visual
+   provider observes (unblocks termination repair verification + removes the
+   task_complete unsupported pollution).
+2. Per-mismatch (not per-event) attribution granularity, or at minimum
+   uncovered-predicate isolation so one uncovered expectation cannot veto a
+   covered contradiction (unblocks vocabulary-aligned faults).
+3. Re-run this fault-repair campaign after 1–2 land; the harness
+   (`scripts/fault_repair_effectiveness.py`, `--skill-fault`) is reusable as-is.
+
+**Artifacts:** `running/fault_repair/` (termination, incl. `full_v1_textonly`
+and `arm_b_v2_solo_rerun`), `running/fault_repair_pick/` (local, gitignored).
