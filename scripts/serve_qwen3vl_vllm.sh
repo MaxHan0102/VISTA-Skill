@@ -11,6 +11,9 @@
 #     all_special_tokens_extended that vLLM 0.11 reads).
 #   - flashinfer MUST be uninstalled: its `array.array[int]` annotation raises
 #     TypeError at import and vLLM's guard only catches ImportError.
+#     (Obsolete on the current vLLM 0.27.x env, which needs flashinfer for
+#     sampling -- see the curand/CPATH block below; the 0.11.0 recipe above is
+#     kept for the driver-550 fallback.)
 #   - Driver 550 => CUDA 12.4 only (vLLM 0.27.x is CUDA-13 only and WILL NOT
 #     run there); driver 575+ also works with this exact recipe.
 #
@@ -53,6 +56,23 @@ command -v nvidia-smi >/dev/null 2>&1 || { echo "ERROR: nvidia-smi not available
 # The env's bin/ must be on PATH: vLLM's compile path shells out to `ninja`,
 # which pip installs next to $PY but nothing puts on PATH without conda activate.
 export PATH="$(dirname "$PY"):$PATH"
+
+# vLLM 0.27.x routes top-k/top-p sampling through flashinfer, which JIT-compiles
+# its kernels with the env's conda nvcc. curand.h is NOT in the conda CUDA 13
+# packages installed here (no cuda-curand-dev) -- it only ships inside the
+# nvidia pip wheels (vLLM deps) under site-packages/nvidia/cu13, which is off
+# nvcc's default search path. Without these exports the server dies at startup:
+#   flashinfer ... sampling.cuh:20: fatal error: curand.h: No such file or directory
+# (The built module is cached under ~/.cache/flashinfer, so this only recompiles
+# after a cache clear or flashinfer upgrade.)
+NVIDIA_CU13="$(dirname "$(dirname "$PY")")/lib/python3.12/site-packages/nvidia/cu13"
+if [[ -d "$NVIDIA_CU13/include" ]]; then
+  export CPATH="$NVIDIA_CU13/include${CPATH:+:$CPATH}"
+  export LIBRARY_PATH="$NVIDIA_CU13/lib${LIBRARY_PATH:+:$LIBRARY_PATH}"
+  export LD_LIBRARY_PATH="$NVIDIA_CU13/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+else
+  echo "WARN: $NVIDIA_CU13/include not found; flashinfer sampling JIT may fail" >&2
+fi
 
 # HF_HUB_OFFLINE=1 forbids downloads, so the weights must already be cached.
 HUB_DIR="${HF_HUB_CACHE:-${HF_HOME:-$HOME/.cache/huggingface}/hub}"

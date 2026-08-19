@@ -49,16 +49,31 @@ GPU server, which may be a different host from the simulator/client machine
 (the recommended layout for a single-GPU client).
 
 Pinned software contract — do not deviate without recording a protocol
-deviation:
+deviation. Two verified stacks, picked by driver version; the serving script
+itself is stack-agnostic.
+
+**Stack A — current default (driver >= 575, CUDA 13)**, as deployed in this
+machine's `max_vllm` env, probe-verified 6/6 on 2026-08-19:
 
 | component | requirement | reason |
 |---|---|---|
-| vLLM | 0.11.0 | minimum with the Qwen3-VL arch; 0.27.x requires CUDA 13 |
+| vLLM | 0.27.1 | CUDA-13 wheels; will NOT run on driver 550 |
+| torch | 2.13.0 | verified wheel of the vLLM 0.27 stack |
+| transformers | 5.14.1 | the "NOT 5.x" constraint below is vLLM-0.11-specific |
+| flashinfer-python | 0.6.16.post3 | vLLM 0.27 routes top-k/top-p sampling through it; its JIT build needs the curand fix below |
+| conda CUDA toolchain | 13.0 (`cuda-nvcc`, `cuda-cudart-dev`, `cuda-cccl`) + `ninja` | flashinfer JIT-compiles its sampling kernels with this nvcc on first launch |
+| weights | `Qwen3-VL-8B-Instruct` in the local HF cache | the script exports `HF_HUB_OFFLINE=1` and refuses to start otherwise |
+
+**Stack B — legacy fallback (driver 550 => CUDA 12.4 only)**, the original
+verified recipe:
+
+| component | requirement | reason |
+|---|---|---|
+| vLLM | 0.11.0 | minimum with the Qwen3-VL arch on CUDA 12 |
 | torch | 2.8 (cu128 on driver >= 550, cu129 on >= 575) | verified wheels |
 | transformers | 4.57.x (NOT 5.x) | 5.x removed `all_special_tokens_extended`, which vLLM 0.11 reads |
-| flashinfer | standalone package must be UNinstalled | import-time `TypeError`; the bundled `vllm-flashinfer` sampler is unaffected |
+| flashinfer | standalone package must be UNinstalled | import-time `TypeError` against vLLM 0.11; the bundled `vllm-flashinfer` sampler is unaffected |
 | ninja | installed in the serving env | the non-eager compile path shells out to it; the script puts the env `bin/` on PATH itself |
-| weights | `Qwen3-VL-8B-Instruct` in the local HF cache | the script exports `HF_HUB_OFFLINE=1` and refuses to start otherwise |
 
 Serving is fixed to the controlled-protocol contract:
 `--max-model-len 16384` (matches `configs/vista_p0.json`; do NOT shrink it —
@@ -95,6 +110,38 @@ authentication — restrict at the firewall on shared networks.
 parallel size. Every compared method and seed must be served by the same host
 with the same settings for the whole study; never mix local/remote or
 fp8/bf16 arms.
+
+### Deployment troubleshooting (Stack A)
+
+Failures actually hit on this machine, most recent first. The serving script
+already handles both automatically; this section is for diagnosing the same
+symptoms outside the script (bare `python`, `docker exec`, fresh hosts).
+
+1. **Startup aborts with `Ninja build failed ... fatal error: curand.h: No
+   such file or directory`** (Stack A only). The engine loads weights and
+   captures CUDA graphs fine, then EngineCore dies during warmup: vLLM 0.27's
+   sampler calls flashinfer, which JIT-compiles its sampling kernels with the
+   env's conda `nvcc` — but the conda CUDA 13 packages ship no `curand.h`
+   (there is no `cuda-curand-dev` in the env). The header exists only inside
+   the `nvidia_curand` pip wheel (pulled in by vLLM) under
+   `site-packages/nvidia/cu13/{include,lib}`, which is off nvcc's default
+   search path. Fix, baked into the script: export
+   `CPATH=<env>/lib/python3.12/site-packages/nvidia/cu13/include` and
+   `LIBRARY_PATH`/`LD_LIBRARY_PATH` pointing at the sibling `lib/`.
+   Alternatives if the wheel layout ever changes:
+   `conda install -n max_vllm -c conda-forge cuda-curand-dev`, or
+   `VLLM_USE_FLASHINFER_SAMPLER=0` to fall back to vLLM's native (slightly
+   slower) sampler. The compiled module is cached under
+   `~/.cache/flashinfer/<ver>/<cc>/cached_ops/sampling/`; it only recompiles
+   after the cache is cleared or flashinfer is upgraded. Note the wheel only
+   ships `libcurand.so.10` (no dev symlink) and the built module has no
+   runtime dependency on it — curand is header-only here — so no manual
+   symlinking is needed.
+2. **`RuntimeError: Could not find nvcc and default cuda_home='/usr/local/cuda'
+   doesn't exist`** when triggering the same JIT outside the script. flashinfer
+   resolves nvcc from `PATH`/`CUDA_HOME`; the conda env has no
+   `/usr/local/cuda`. Activate the env, or export `PATH=<env>/bin:$PATH` and
+   `CUDA_HOME=<env>` like the script does.
 
 ## Client setup and experiment verification
 
