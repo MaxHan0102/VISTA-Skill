@@ -470,3 +470,41 @@ def test_nav_evaluate_rejects_non_official_stage(tmp_path) -> None:
     )
     with pytest.raises(ValueError, match="official_test"):
         cli._run_frozen_evaluation(args)
+
+
+def test_skill_fault_requires_diagnostic() -> None:
+    args = parse_args(
+        [
+            "experiment", "--method", "full", "--method-model", "m",
+            "--skill-fault", "termination",
+        ]
+    )
+    with pytest.raises(ValueError, match="skill-fault"):
+        cli._run_experiment(args)
+
+
+def test_make_engine_injects_requested_skill_fault() -> None:
+    from vista_skill.schemas import TerminationPolicy
+    from vista_skill.skills import skill_digest
+
+    config = load_config("configs/vista_fault_repair.json")
+    clean, _ = cli._make_engine(config, None)
+    faulty, _ = cli._make_engine(config, None, skill_fault="termination")
+    assert skill_digest(clean.skill) != skill_digest(faulty.skill)
+    assert faulty.skill.termination_policy == TerminationPolicy.ANY_GOAL_EVIDENCE
+    assert any("any one required goal" in line for line in faulty.skill.termination)
+    # Without the flag the engine starts from the pristine shared Skill.
+    assert skill_digest(clean.skill) == skill_digest(initialize_shared_skill())
+
+
+def test_protocol_record_marks_skill_fault() -> None:
+    manifest = load_experiment_manifest("configs/eb_hab_train_validation_manifest.json")
+    config = load_config("configs/vista_p0.json")
+    args = parse_args(
+        [
+            "experiment", "--method", "full", "--method-model", "m",
+            "--diagnostic", "--skill-fault", "effect",
+        ]
+    )
+    record = cli._protocol_record(args, config, manifest)
+    assert record["skill_fault"] == "effect"

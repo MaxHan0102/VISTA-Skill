@@ -45,6 +45,12 @@ class FaultType(str, Enum):
     EXECUTION_LAPSE = "execution_lapse"
     INSUFFICIENT_EVIDENCE = "insufficient_evidence"
     STOCHASTIC_NOOP = "stochastic_noop"
+    # Vocabulary-aligned skill fault: inverts S0's compiled pick effect
+    # (holding after pick) so mismatches are COVERED contradictions on a
+    # predicate the visual evidence layer actually observes -- unlike the
+    # synthetic <field>_satisfied predicates, which can only ever produce
+    # uncovered/unsupported mismatches that attribution abstains on.
+    EFFECT_PICK_INVERSION = "effect_pick_inversion"
     # Driver-only marker: a no-fault episode step. Used by build_fault_cases
     # to verify that the assigner does not invent Skill defects on clean input.
     CLEAN = "clean"
@@ -61,6 +67,20 @@ class FaultCase:
 
 
 def inject_skill_fault(skill: SkillSpec, fault_type: FaultType) -> SkillSpec:
+    if fault_type is FaultType.EFFECT_PICK_INVERSION:
+        inverted = tuple(
+            replace(rule, after=TruthValue.FALSE)
+            if rule.rule_id == "effect_pick_holds_target_category"
+            else rule
+            for rule in skill.prediction_rules
+        )
+        if inverted == skill.prediction_rules:
+            raise ValueError("S0 pick effect rule not found; injection target moved")
+        return replace(
+            skill,
+            effect=("Picking up an object leaves the gripper empty.",),
+            prediction_rules=inverted,
+        )
     if fault_type is FaultType.TERMINATION:
         return replace(
             skill,

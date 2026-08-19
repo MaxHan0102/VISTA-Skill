@@ -77,6 +77,83 @@ def test_skill_effect_and_constraint_faults_name_their_field() -> None:
             assert record["pred_field"] == field.value
 
 
+def test_effect_pick_inversion_flips_compiled_rule_and_text() -> None:
+    from vista_skill.skills import skill_digest
+
+    clean = initialize_shared_skill()
+    faulty = inject_skill_fault(clean, FaultType.EFFECT_PICK_INVERSION)
+    assert skill_digest(clean) != skill_digest(faulty)
+    rules = {
+        r.rule_id: r for r in faulty.prediction_rules
+    }
+    assert rules["effect_pick_holds_target_category"].after is TruthValue.FALSE
+    assert faulty.effect == ("Picking up an object leaves the gripper empty.",)
+
+
+def test_effect_pick_inversion_requires_the_s0_target_rule() -> None:
+    clean = initialize_shared_skill()
+    stripped = replace(
+        clean,
+        prediction_rules=tuple(
+            r for r in clean.prediction_rules
+            if r.rule_id != "effect_pick_holds_target_category"
+        ),
+    )
+    import pytest
+
+    with pytest.raises(ValueError, match="injection target moved"):
+        inject_skill_fault(stripped, FaultType.EFFECT_PICK_INVERSION)
+
+
+def test_effect_pick_inversion_is_covered_contradiction_routed_to_effect() -> None:
+    """The vocabulary-aligned fault must survive the real attribution gates.
+
+    Synthetic <field>_satisfied predicates are always uncovered (attribution
+    abstains), but holding() is observed by the visual evidence layer, so the
+    inverted rule yields a covered CONTRADICTION that routes to
+    skill_update(EFFECT) -- the property the repair loop needs.
+    """
+    faulty = inject_skill_fault(initialize_shared_skill(), FaultType.EFFECT_PICK_INVERSION)
+    schema = FixedActionSchema()
+    expected = schema.compile(
+        parse_action_call(1, ("pick", ("apple_1",))), BeliefLedger(), faulty, ()
+    )
+    holding = [
+        c for c in expected
+        if c.key.name == "holding" and c.source is DeltaSource.SKILL
+    ]
+    assert holding and all(c.after is TruthValue.FALSE for c in holding)
+    # Cover every expected predicate the way the live visual provider does
+    # (it observes the predicates the request asks about); the corrupted
+    # holding expectation alone is contradicted by ground truth.
+    evidence = tuple(
+        PredicateEvidence(
+            key=change.key,
+            before=change.before,
+            after=(
+                TruthValue.TRUE
+                if change in holding
+                else change.after
+            ),
+            confidence=0.95,
+            source=EvidenceSource.VISUAL_PAIR,
+            evidence_id=f"ev{index}",
+            timestamp=1,
+            view_id="v1",
+            coverage=0.9,
+            rationale="observed",
+        )
+        for index, change in enumerate(expected)
+    )
+    from vista_skill.mismatch import MismatchKind
+
+    mismatches = compare_transitions(expected, evidence)
+    assert any(m.kind is MismatchKind.CONTRADICTION for m in mismatches)
+    result = CreditAssigner().assign(mismatches, AttributionContext())
+    assert result.target is UpdateTarget.SKILL_UPDATE
+    assert result.field is SkillField.EFFECT
+
+
 def test_belief_fault_attributed_to_belief_refresh_not_skill_update() -> None:
     # Key correctness property: evidence/ledger errors must never mutate the
     # persistent Skill. This includes instance-identity conflicts, which carry

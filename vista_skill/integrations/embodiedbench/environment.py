@@ -245,13 +245,22 @@ def seed_nav_env(env: Any, seed: int) -> None:
     """Apply the paired coordinate seed to nav and its process RNGs.
 
     Best-effort: AI2-THOR determinism is weaker than Habitat's (see plan risks).
+    Stock ``EBNavigationEnv.seed`` calls a typo'd ``random_initilize`` that does
+    not exist on ai2thor 5.0.0 (whose real ``random_initialize`` was itself
+    removed and always raises), so the process-RNG seeding below is the only
+    effective part; the broken stock call is swallowed instead of editing
+    EmbodiedBench in place.
     """
     seed = seed_process_rngs(seed)
     target = env._env if isinstance(env, _NavEnvAdapter) else env
     seed_method = getattr(target, "seed", None)
     if not callable(seed_method):
         raise RuntimeError("stock EBNavigationEnv does not expose seed()")
-    seed_method(seed)
+    try:
+        seed_method(seed)
+    except AttributeError as exc:
+        if "random_initilize" not in str(exc):
+            raise
 
 
 def nav_goal_predicates(instruction: str, image: Any, actions: Any) -> tuple[PredicateKey, ...]:

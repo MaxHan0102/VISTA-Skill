@@ -145,9 +145,19 @@ class BaselineUpdateResult:
 class CommonGateProposalAdapter:
     """Route a trajectory proposal through the exact VISTA candidate gate."""
 
-    def __init__(self, generator: PatchGenerator, gate: CandidateGate) -> None:
+    def __init__(
+        self,
+        generator: PatchGenerator,
+        gate: CandidateGate,
+        *,
+        min_episodes: int = 2,
+    ) -> None:
         self.generator = generator
         self.gate = gate
+        # The adapter's independence floor must follow the configured
+        # recurrence threshold (pilot configs lower it to 1) instead of a
+        # hardcoded 2, else a legal single-episode proposal crashes the gate.
+        self.min_episodes = min_episodes
 
     def update(
         self,
@@ -166,7 +176,9 @@ class CommonGateProposalAdapter:
                 accepted=False,
                 route=proposal.source_frontend,
             )
-        cluster = proposal_cluster(skill, proposal, episode_ids)
+        cluster = proposal_cluster(
+            skill, proposal, episode_ids, min_episodes=self.min_episodes
+        )
         patch = self.generator.propose(skill, cluster)
         decision, candidate = self.gate.evaluate(skill, patch, cluster)
         return BaselineUpdateResult(
@@ -251,13 +263,18 @@ def proposal_cluster(
     skill: SkillSpec,
     proposal: CommonUpdateProposal,
     episode_ids: Sequence[str],
+    *,
+    min_episodes: int = 2,
 ) -> EvidenceCluster:
     """Represent trajectory reflection in the common updater's evidence contract."""
     if proposal.field is None or not proposal.evidence_ids:
         raise ValueError("common-gate proposal requires a field and evidence IDs")
     episodes = tuple(dict.fromkeys(str(item) for item in episode_ids))
-    if len(episodes) < 2:
-        raise ValueError("common-gate trajectory proposals require independent episodes")
+    if len(episodes) < min_episodes:
+        raise ValueError(
+            "common-gate trajectory proposals require at least "
+            f"{min_episodes} independent episodes"
+        )
     cluster = EvidenceCluster(
         ClusterKey(
             skill.skill_id,

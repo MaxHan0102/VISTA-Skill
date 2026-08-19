@@ -1,10 +1,13 @@
 from __future__ import annotations
 
+import pytest
+
 from vista_skill.integrations.embodiedbench.environment import (
     NAV_SKILL_SET,
     _NavEnvAdapter,
     _nav_index_from_id,
     nav_goal_predicates,
+    seed_nav_env,
 )
 
 
@@ -99,3 +102,32 @@ def test_nav_goal_predicates_extracts_target() -> None:
 def test_nav_goal_predicates_falls_back_when_no_object() -> None:
     goals = nav_goal_predicates("explore the kitchen", None, None)
     assert goals and goals[0].arguments == ("target",)
+
+
+class _TypoSeedNavEnv(_FakeNavEnv):
+    """Stock EBNavigationEnv.seed() against ai2thor 5.0.0: typo'd call dies."""
+
+    def seed(self, seed=None):
+        raise AttributeError(
+            "'Controller' object has no attribute 'random_initilize'"
+        )
+
+
+class _BrokenSeedNavEnv(_FakeNavEnv):
+    def seed(self, seed=None):
+        raise AttributeError("'Controller' object has no attribute 'startup'")
+
+
+def test_seed_nav_env_swallows_stock_typo_seed() -> None:
+    # Process RNGs must still be seeded; the dead stock call must not abort.
+    seed_nav_env(_NavEnvAdapter(_TypoSeedNavEnv()), 7)
+
+
+def test_seed_nav_env_reraises_unrelated_seed_failure() -> None:
+    with pytest.raises(AttributeError):
+        seed_nav_env(_NavEnvAdapter(_BrokenSeedNavEnv()), 7)
+
+
+def test_seed_nav_env_requires_seed_method() -> None:
+    with pytest.raises(RuntimeError):
+        seed_nav_env(_FakeNavEnv(), 7)

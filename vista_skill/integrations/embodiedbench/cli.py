@@ -28,6 +28,7 @@ from vista_skill.evaluation import (
     RolloutScore,
     composite_task_score,
 )
+from vista_skill.fault_injection import FaultType, inject_skill_fault
 from vista_skill.evidence import EvidenceExtractor, _nav_feedback_strategy
 from vista_skill.integrations.embodiedbench.environment import (
     create_habitat_env,
@@ -113,6 +114,20 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     experiment.add_argument("--evolution-seeds", default="0,1,2")
     experiment.add_argument("--max-acquisition-episodes", type=int)
     experiment.add_argument(
+        "--skill-fault",
+        choices=(
+            "termination",
+            "procedure",
+            "effect",
+            "constraint",
+            "activation",
+            "effect_pick_inversion",
+        ),
+        help="Inject a structured fault into the initial shared Skill "
+        "(fault-injection effectiveness diagnostic: recurrence becomes reachable, "
+        "so evolution can be observed quickly). Requires --diagnostic.",
+    )
+    experiment.add_argument(
         "--diagnostic",
         action="store_true",
         help="Allow reduced episode counts; outputs are not controlled-protocol results.",
@@ -196,6 +211,8 @@ def _run_experiment(args: argparse.Namespace) -> None:
         )
     if args.max_acquisition_episodes is not None and not args.diagnostic:
         raise ValueError("reduced acquisition requires --diagnostic")
+    if args.skill_fault and not args.diagnostic:
+        raise ValueError("--skill-fault is a diagnostic deviation and requires --diagnostic")
     output_dir = Path(args.output_dir)
     _require_new_output(output_dir, "experiment output directory")
     experiment_id = uuid.uuid4().hex
@@ -216,7 +233,9 @@ def _run_experiment(args: argparse.Namespace) -> None:
         # their own trajectory-reflection cost (fair RQ4 + far faster). The
         # trajectory teacher is wired separately in _make_trajectory_workflow.
         engine_model = None if args.method in _TRAJECTORY_METHODS else method_model
-        engine, goal_grounder = _make_engine(config, engine_model)
+        engine, goal_grounder = _make_engine(
+            config, engine_model, skill_fault=args.skill_fault
+        )
 
         acquisition = run_manifest.coordinates_for("acquisition")
         if args.max_acquisition_episodes is not None:
@@ -536,6 +555,8 @@ def _make_method_model(
 def _make_engine(
     config: VistaConfig,
     model: OpenAICompatibleJsonModel | None,
+    *,
+    skill_fault: str | None = None,
 ) -> tuple[VistaSkillEngine, JsonGoalGrounder | None]:
     kwargs = {
         "ledger": BeliefLedger(config.belief),
@@ -553,7 +574,12 @@ def _make_engine(
             }
         )
         grounder = JsonGoalGrounder(model)
-    return VistaSkillEngine(initialize_shared_skill(), **kwargs), grounder
+    skill = initialize_shared_skill()
+    if skill_fault is not None:
+        # Diagnostic only (--diagnostic enforced upstream): a structured fault
+        # makes recurrence reachable so evolution can be observed cheaply.
+        skill = inject_skill_fault(skill, FaultType(skill_fault))
+    return VistaSkillEngine(skill, **kwargs), grounder
 
 
 def _make_trajectory_workflow(
@@ -596,7 +622,9 @@ def _make_trajectory_workflow(
         )
         gate = build_candidate_gate(engine, paired, config)
         updater = CommonGateProposalAdapter(
-            JsonBoundedPatchGenerator(method_model), gate
+            JsonBoundedPatchGenerator(method_model),
+            gate,
+            min_episodes=config.recurrence.min_independent_episodes,
         )
     return TrajectoryEvolutionWorkflow(
         engine,
@@ -1003,6 +1031,7 @@ def _protocol_record(
         "config_sha256": config.digest,
         "manifest_sha256": manifest.digest,
         "method": args.method,
+        "skill_fault": getattr(args, "skill_fault", None),
         "executor_model": args.model_name,
         "executor_model_type": args.model_type,
         "tensor_parallel": args.tp,

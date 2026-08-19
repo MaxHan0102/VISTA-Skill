@@ -160,7 +160,13 @@ class JsonVisualEvidenceProvider:
         items = []
         pre_values = {item.key: item.value for item in request.pre_ledger}
         for index, observation in enumerate(result.get("observations", [])):
-            key = PredicateKey.parse(str(observation["predicate"]))
+            try:
+                key = PredicateKey.parse(str(observation["predicate"]))
+            except ValueError:
+                # Same degradation contract as the JSONDecodeError branch above:
+                # an unparseable predicate string from the model must not abort
+                # the rollout; drop that observation and keep the rest.
+                continue
             items.append(
                 PredicateEvidence(
                     key=key,
@@ -216,18 +222,22 @@ class JsonGoalGrounder:
                 "properties": {
                     "goal_predicates": {
                         "type": "array",
-                        "items": {"type": "string"},
+                        "minItems": 1,
+                        "items": {"type": "string", "minLength": 1},
                     }
                 },
             },
             purpose="vista_goal_grounding",
         )
-        return tuple(
-            dict.fromkeys(
-                PredicateKey.parse(str(value))
-                for value in result.get("goal_predicates", [])
-            )
-        )
+        grounded: list[PredicateKey] = []
+        for value in result.get("goal_predicates", []):
+            try:
+                grounded.append(PredicateKey.parse(str(value)))
+            except ValueError:
+                # A malformed model string must not abort the episode; drop it
+                # and ground from whatever remains (possibly nothing).
+                continue
+        return tuple(dict.fromkeys(grounded))
 
 
 class JsonAttributionTeacher:
@@ -377,6 +387,26 @@ class JsonBoundedPatchGenerator(PatchGenerator):
                 for item in cluster.items
             ],
             "allowed_operations": [item.value for item in PatchOperation],
+            "compiled_termination_policy": skill.termination_policy.value,
+            "field_prediction_rules": [
+                {
+                    "rule_id": rule.rule_id,
+                    "action_type": rule.action_type,
+                    "predicate": rule.predicate,
+                    "before": None if rule.before is None else rule.before.value,
+                    "after": rule.after.value,
+                }
+                for rule in skill.prediction_rules
+                if rule.field is field
+            ],
+            "compiled_contract": (
+                "Text edits alone do not change compiled predictions; a patch only "
+                "repairs a mismatch if the compiled view changes with it. Set "
+                "termination_policy when the termination field's compiled policy is "
+                "wrong (e.g. task_complete expectations). Provide the field's complete "
+                "replacement prediction_rules when a compiled rule is wrong; rules you "
+                "omit are dropped, so re-emit every rule you want to keep."
+            ),
             "constraints": [
                 "one atomic operation in the attributed field only",
                 "old must exactly match an existing statement when required",
@@ -492,7 +522,7 @@ def _evidence_schema() -> dict[str, Any]:
         "additionalProperties": False,
         "required": ["predicate", "value", "confidence", "coverage", "evidence"],
         "properties": {
-            "predicate": {"type": "string"},
+            "predicate": {"type": "string", "minLength": 1},
             "value": {"type": "string", "enum": ["true", "false", "unknown"]},
             "confidence": {"type": "number", "minimum": 0, "maximum": 1},
             "coverage": {"type": "number", "minimum": 0, "maximum": 1},
