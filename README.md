@@ -59,7 +59,7 @@ machine's `max_vllm` env, probe-verified 6/6 on 2026-08-19:
 |---|---|---|
 | vLLM | 0.27.1 | CUDA-13 wheels; will NOT run on driver 550 |
 | torch | 2.13.0 | verified wheel of the vLLM 0.27 stack |
-| transformers | 5.14.1 | the "NOT 5.x" constraint below is vLLM-0.11-specific |
+| transformers | 5.15.0 | the "NOT 5.x" constraint below is vLLM-0.11-specific |
 | flashinfer-python | 0.6.16.post3 | vLLM 0.27 routes top-k/top-p sampling through it; its JIT build needs the curand fix below |
 | conda CUDA toolchain | 13.0 (`cuda-nvcc`, `cuda-cudart-dev`, `cuda-cccl`) + `ninja` | flashinfer JIT-compiles its sampling kernels with this nvcc on first launch |
 | weights | `Qwen3-VL-8B-Instruct` in the local HF cache | the script exports `HF_HUB_OFFLINE=1` and refuses to start otherwise |
@@ -113,11 +113,34 @@ fp8/bf16 arms.
 
 ### Deployment troubleshooting (Stack A)
 
-Failures actually hit on this machine, most recent first. The serving script
-already handles both automatically; this section is for diagnosing the same
-symptoms outside the script (bare `python`, `docker exec`, fresh hosts).
+Failures actually hit on this machine, most recent first. #2 and #3 are
+handled automatically by the serving script; #1 is fixed at the conda-env
+level (activate.d hook) because it must take effect before any Python import.
+Use this section to diagnose the same symptoms outside the script (bare
+`python`, `docker exec`, fresh hosts).
 
-1. **Startup aborts with `Ninja build failed ... fatal error: curand.h: No
+1. **Startup aborts with `ImportError:
+   /lib/x86_64-linux-gnu/libstdc++.so.6: version 'CXXABI_1.3.15' not found
+   (required by <env>/lib/libicui18n.so.78)`**, raised deep inside
+   `import sqlite3` via vLLM's structured-output import chain. The system
+   libstdc++ (Ubuntu 22.04, gcc 12) predates `CXXABI_1.3.15`, but the env's
+   ICU 78 needs it; some wheel in vLLM's full import chain loads the system
+   libstdc++ first, and once any `libstdc++.so.6` is resident, libicui18n
+   resolves its symbols against that old copy. The failure is load-order
+   sensitive, which is misleading: bare `python -c "import sqlite3"` and even
+   `import vllm` pass (vLLM's `__init__` is lazy); only the full
+   `vllm.entrypoints.openai.api_server` import chain trips it. Fix applied on
+   this host, at env level rather than in the script because it must precede
+   every import: copy conda base's newer `libstdc++.so.6.0.34` into
+   `<env>/lib/libstdc++.so.6`, and inject
+   `LD_PRELOAD=<env>/lib/libstdc++.so.6` via
+   `<env>/etc/conda/activate.d/00-libstdcxx.sh` (with a deactivate.d that
+   strips it again), so any `conda activate max_vllm` shell is covered
+   regardless of how vLLM is launched. Alternatives: `conda install -n
+   max_vllm -c conda-forge libstdcxx-ng>=13`, or export the same
+   `LD_PRELOAD` from the serving script. Stack-agnostic: it is an OS/env
+   layout issue, independent of the vLLM version.
+2. **Startup aborts with `Ninja build failed ... fatal error: curand.h: No
    such file or directory`** (Stack A only). The engine loads weights and
    captures CUDA graphs fine, then EngineCore dies during warmup: vLLM 0.27's
    sampler calls flashinfer, which JIT-compiles its sampling kernels with the
@@ -137,7 +160,7 @@ symptoms outside the script (bare `python`, `docker exec`, fresh hosts).
    ships `libcurand.so.10` (no dev symlink) and the built module has no
    runtime dependency on it — curand is header-only here — so no manual
    symlinking is needed.
-2. **`RuntimeError: Could not find nvcc and default cuda_home='/usr/local/cuda'
+3. **`RuntimeError: Could not find nvcc and default cuda_home='/usr/local/cuda'
    doesn't exist`** when triggering the same JIT outside the script. flashinfer
    resolves nvcc from `PATH`/`CUDA_HOME`; the conda env has no
    `/usr/local/cuda`. Activate the env, or export `PATH=<env>/bin:$PATH` and
