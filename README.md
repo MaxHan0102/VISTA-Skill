@@ -218,4 +218,6 @@ Outputs land under `running/`; every invocation requires a fresh
 `VISTA_METHOD_BASE_URL` and `VISTA_EMBENCH_PY`).
 
 See `docs/implementation.md` for architecture, invariants, experiment split
-requirements, and integration details.
+requirements, and integration details. Every experiment campaign is recorded in
+`docs/experiment_log.md` (settings, results, artifacts, bug ledger) — append
+new entries there rather than editing old ones.
