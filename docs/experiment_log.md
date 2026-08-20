@@ -474,5 +474,17 @@ field in every campaign to date (0/14 cumulative before E9; the E8-series C
 arms add more).
 
 **Artifacts:** `running/fault_repair_e8{h..p}_*` (lapsemask → parityecho →
-ruleecho → duprules → p2power → f4task → e8p in flight), each stage's
-gate_rollouts preserved.
+ruleecho → duprules → p2power → f4task → e8p), each stage's gate_rollouts
+preserved.
+
+**Follow-up (E8p final, 2026-08-21 04:00):** 7 proposals / 0 accepted (2
+passed proxy, both rejected at the full-coverage finalist: mean_delta ≈ +0.21,
+LCB −0.0028). Three-arm eval on `base`: A = B = C = 0.550 (all frozen at the
+faulty skill; identical digests). Two coherent observations close the arc:
+(1) the multihold fault is INVISIBLE on the base eval subset (0.550 ≥
+no_skill's 0.550) while decisive on the gate's two-object selection task —
+the damage, the repair's benefit, and the eval subset's power to see either
+are all bound to the same multi-object task subgroup; (2) the C arm
+misattributed the field 5/5 again (trajectory reflection cumulative
+0/19 vs VTCA 4/4 correct-field campaigns). Full-arm cost: teacher 249k /
+executor 425k tokens including the first-ever finalist rollouts.
