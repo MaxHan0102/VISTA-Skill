@@ -51,6 +51,12 @@ class FaultType(str, Enum):
     # synthetic <field>_satisfied predicates, which can only ever produce
     # uncovered/unsupported mismatches that attribution abstains on.
     EFFECT_PICK_INVERSION = "effect_pick_inversion"
+    # Behaviorally-strong constraint fault: claims the gripper can hold
+    # multiple objects (compiled rule keeps not_holding TRUE after pick), so
+    # the executor keeps picking while holding and fails. Unlike the
+    # termination fault (~0.05 behavioral effect, unprovable at gate budgets),
+    # this fault's damage and repair are both visible in paired rollouts.
+    CONSTRAINT_PICK_MULTIHOLD = "constraint_pick_multihold"
     # Driver-only marker: a no-fault episode step. Used by build_fault_cases
     # to verify that the assigner does not invent Skill defects on clean input.
     CLEAN = "clean"
@@ -67,6 +73,20 @@ class FaultCase:
 
 
 def inject_skill_fault(skill: SkillSpec, fault_type: FaultType) -> SkillSpec:
+    if fault_type is FaultType.CONSTRAINT_PICK_MULTIHOLD:
+        inverted = tuple(
+            replace(rule, after=TruthValue.TRUE)
+            if rule.rule_id == "constraint_pick_occupies_gripper"
+            else rule
+            for rule in skill.prediction_rules
+        )
+        if inverted == skill.prediction_rules:
+            raise ValueError("S0 pick constraint rule not found; injection target moved")
+        return replace(
+            skill,
+            constraint=("The gripper can hold multiple objects; pick freely without releasing.",),
+            prediction_rules=inverted,
+        )
     if fault_type is FaultType.EFFECT_PICK_INVERSION:
         inverted = tuple(
             replace(rule, after=TruthValue.FALSE)
@@ -415,15 +435,21 @@ def _build_fault_mismatches(
         return compare_transitions((expected_change,), (evidence,))
 
     if fault_type is FaultType.EXECUTION_LAPSE:
-        # Skill-sourced contradiction, but the executor deviated from the
-        # canonical Skill, so the canonical rule is not the defect.
-        faulty = inject_skill_fault(base_skill, FaultType.PROCEDURE)
-        expected_change = _skill_fault_expected(
-            faulty, SkillField.PROCEDURE, action_schema, case_index
+        # Pure lapse: the executor deviated and NO skill-sourced expectation is
+        # refuted, so the canonical rule is not the defect. (A covered
+        # refutation of a skill claim now outranks the lapse veto -- see
+        # attribution.P1-8 and its tests; the lapse-with-refutation shape is
+        # covered there.)
+        unexpected = PredicateEvidence(
+            key=PredicateKey("near", (f"target_{case_index}",)),
+            before=TruthValue.UNKNOWN,
+            after=TruthValue.TRUE,
+            confidence=0.9,
+            source=EvidenceSource.ACTIVE_OBSERVATION,
+            evidence_id=f"fault_ev:lapse:{case_index}",
+            timestamp=case_index,
         )
-        return _contradict(
-            expected_change, fault_type=fault_type, case_index=case_index
-        )
+        return compare_transitions((), (unexpected,))
 
     if fault_type is FaultType.STOCHASTIC_NOOP:
         key = PredicateKey("noop_state", (str(case_index),))

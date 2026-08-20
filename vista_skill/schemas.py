@@ -271,6 +271,9 @@ class AttributionContext:
     instruction: str = ""
     action_type: str = ""
     skill_obligations: Mapping[str, tuple[str, ...]] = field(default_factory=dict)
+    # Episode-level grounded goals (not predictions): attribution-side routing
+    # context only, never part of the evidence request.
+    goal_predicates: tuple["PredicateKey", ...] = ()
 
 
 @dataclass(frozen=True)

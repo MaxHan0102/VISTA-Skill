@@ -3,10 +3,11 @@ from __future__ import annotations
 import base64
 import json
 import mimetypes
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 from typing import Any, Mapping, Protocol, Sequence
 
+from vista_skill.action_schema import normalize_entity
 from vista_skill.baselines import (
     EmbodiSkillRoute,
     EpisodeSummary,
@@ -18,9 +19,11 @@ from vista_skill.schemas import (
     AbstainReason,
     AttributionContext,
     AttributionResult,
+    DeltaSource,
     EvidenceRequest,
     EvidenceSource,
     Mismatch,
+    MismatchKind,
     PatchOperation,
     PredicateEvidence,
     PredicateKey,
@@ -185,7 +188,21 @@ class JsonVisualEvidenceProvider:
 
 
 class JsonGoalGrounder:
-    """Ground instruction goals without simulator predicates or expected effects."""
+    """Ground instruction goals without simulator predicates or expected effects.
+
+    Goals are constrained to the primitive vocabulary the action schema
+    predicts and the visual evidence layer observes (holding/at/near/open, see
+    ``_GOAL_ARITY``). Semantic labels (``pick_ball``,
+    ``place_ball_on_Sofa``) are dropped: they describe actions, not observable
+    end states, so ``_termination_change`` can never resolve their satisfaction
+    and the ANY/ALL termination policies compile identically -- which made
+    termination repairs replay-invisible (E7 finding).
+    """
+
+    # Observable final-state families and their arity. ``closed`` end states
+    # (open(x)=false) are not representable as positive goals and are dropped;
+    # such episodes simply emit no task_complete expectation.
+    _GOAL_ARITY = {"holding": 1, "at": 2, "near": 1, "open": 1}
 
     def __init__(self, model: JsonModel) -> None:
         self.model = model
@@ -202,8 +219,16 @@ class JsonGoalGrounder:
         ]
         result = self.model.complete_json(
             system=(
-                "Ground the instruction into task-completion predicates using only the initial image "
-                "and public action catalog. Preserve numbered instance IDs. Do not invent hidden state."
+                "Ground the instruction into FINAL-STATE completion predicates in the "
+                "observable vocabulary only: holding(object) = the gripper holds object at "
+                "the end; at(object, receptacle) = object rests on/in receptacle at the "
+                "end; near(target) = the agent ends at target; open(target) = target ends "
+                "open. Emit one predicate per required end condition, using the exact "
+                "instance names from the image and the public action catalog. A task that "
+                "moves X onto/into Y grounds ONLY as at(X, Y); holding(X) is a goal only "
+                "when the instruction truly ends with X held (e.g. 'pick up X'). Never "
+                "emit semantic labels (task_complete, pick_ball, place_x_on_y, robot "
+                "arguments) and never emit closed(...); a close task has no positive goal."
             ),
             content=[
                 {"type": "image_url", "image_url": {"url": _image_data_url(initial_image)}},
@@ -232,12 +257,29 @@ class JsonGoalGrounder:
         grounded: list[PredicateKey] = []
         for value in result.get("goal_predicates", []):
             try:
-                grounded.append(PredicateKey.parse(str(value)))
+                key = PredicateKey.parse(str(value))
             except ValueError:
                 # A malformed model string must not abort the episode; drop it
                 # and ground from whatever remains (possibly nothing).
                 continue
+            if not self._is_representable(key):
+                continue
+            # Same normalization the action schema applies to action arguments:
+            # the model copies instruction casing ("Sofa") while habitat
+            # entities are lowercase ("sofa"); an un-normalized goal key can
+            # never match an action/evidence key, so its satisfaction never
+            # resolves and the termination policies stay indistinguishable.
+            key = PredicateKey(
+                normalize_entity(key.name),
+                tuple(normalize_entity(argument) for argument in key.arguments),
+            )
+            grounded.append(key)
         return tuple(dict.fromkeys(grounded))
+
+    @classmethod
+    def _is_representable(cls, key: PredicateKey) -> bool:
+        arity = cls._GOAL_ARITY.get(key.name)
+        return arity is not None and len(key.arguments) == arity
 
 
 class JsonAttributionTeacher:
@@ -419,6 +461,49 @@ class JsonBoundedPatchGenerator(PatchGenerator):
             schema=_patch_schema(),
             purpose="vista_bounded_patch",
         )
+        if (
+            field is SkillField.TERMINATION
+            and any(
+                item.mismatch.kind is MismatchKind.TERMINATION_CONFLICT
+                and item.mismatch.evidence is not None
+                and item.mismatch.evidence.after is TruthValue.FALSE
+                for item in cluster.items
+            )
+        ):
+            # Rule-first repair derivation: a termination conflict of the form
+            # "policy expects complete, evidence says incomplete" (with partial
+            # goal satisfaction) has exactly one policy value consistent with
+            # the cached evidence -- ALL goals required. The model keeps
+            # restating the implicated enum under shifted contexts (E8e/E8f),
+            # so the enum comes from evidence semantics, not model choice; the
+            # model only authors the textual statement.
+            result = {**result, "termination_policy": TerminationPolicy.ALL_GOALS_EVIDENCE.value}
+        elif field is not SkillField.TERMINATION:
+            # The policy can only change with the termination field (applier
+            # rule); the model parrots the exposed current value onto every
+            # patch (E8i: 6/6 constraint patches failed static this way), so
+            # strip it for non-termination fields before it reaches the gate.
+            result = {**result, "termination_policy": None}
+            corrected = _evidence_corrected_rules(skill, field, cluster)
+            if corrected is not None:
+                # Same derivation philosophy as the termination policy: the
+                # model restates the exposed (refuted) compiled rules, so for
+                # predicates the cluster's evidence contradicts, the rule's
+                # `after` comes from the observed evidence value. The model
+                # still authors the textual statements.
+                result = {
+                    **result,
+                    "prediction_rules": [
+                        {
+                            "rule_id": rule.rule_id,
+                            "action_type": rule.action_type,
+                            "predicate": rule.predicate,
+                            "before": None if rule.before is None else rule.before.value,
+                            "after": rule.after.value,
+                        }
+                        for rule in corrected
+                    ],
+                }
         operation = PatchOperation(str(result["operation"]))
         old = str(result["old"])
         new = str(result["new"])
@@ -578,6 +663,47 @@ def _trajectory_reflection_schema() -> dict[str, Any]:
             "evidence_ids": {"type": "array", "items": {"type": "string"}, "maxItems": 16},
         },
     }
+
+
+def _evidence_corrected_rules(
+    skill: SkillSpec,
+    field: SkillField,
+    cluster: EvidenceCluster,
+) -> tuple[SkillPredictionRule, ...] | None:
+    """Derive the field's compiled rules with evidence-corrected values.
+
+    For each skill rule whose predicate the cluster's evidence refutes
+    (covered contradiction / missing progress on a skill-sourced
+    expectation), set ``after`` to the observed value. Returns None when the
+    cluster implicates no compiled rule of this field (model output stands).
+    """
+    observed: dict[str, TruthValue] = {}
+    for item in cluster.items:
+        mismatch = item.mismatch
+        if (
+            mismatch.expected is not None
+            and mismatch.expected.source is DeltaSource.SKILL
+            and mismatch.expected.skill_field is field
+            and mismatch.evidence is not None
+        ):
+            observed[mismatch.key.name] = mismatch.evidence.after
+    if not observed:
+        return None
+    corrected = []
+    touched = False
+    for rule in skill.prediction_rules:
+        if rule.field is not field:
+            # The applier retains other fields' rules itself and appends the
+            # patch's rules; returning them here would duplicate them.
+            continue
+        if rule.predicate.split("(")[0] in observed:
+            value = observed[rule.predicate.split("(")[0]]
+            if value is not rule.after:
+                touched = True
+            corrected.append(replace(rule, after=value))
+        else:
+            corrected.append(rule)
+    return tuple(corrected) if touched else None
 
 
 def _patch_schema() -> dict[str, Any]:

@@ -121,11 +121,10 @@ class HabitatRolloutRunner:
         task_id = (
             coordinate.task_id if coordinate is not None else self.task_id_provider(self.env)
         )
-        task_pattern = (
-            coordinate.subgroup
-            if coordinate is not None
-            else _default_task_pattern(self.env)
-        )
+        # Design 4.10: task_pattern is a coarse task TYPE, not a per-task id.
+        # The manifest subgroup is a task hash -- keying recurrence on it made
+        # the same fault in two tasks of the same type forever unclusterable.
+        task_pattern = _task_type_pattern(instruction) or _default_task_pattern(self.env)
         goal_predicates = self.goal_predicate_provider(
             instruction, pre_image, self.env.skill_set
         )
@@ -299,6 +298,7 @@ def _online_attribution_context(
         object_context=object_context,
         instruction=instruction,
         action_type=action.action_type,
+        goal_predicates=tuple(goal_predicates),
     )
     return context, {
         "source": "manifest_or_episode_id+action+episode_local_ledger",
@@ -325,9 +325,46 @@ def _object_context(
 
 
 def _entity_category(value: str) -> str:
+    """Reduce an EB-Habitat entity name to its stable semantic head.
+
+    ``receptacle_aabb_tbl2_top1_frl_apartment_table_02`` -> ``table``;
+    ``receptacle_aabb_sofa_frl_apartment_sofa`` -> ``sofa``;
+    ``receptacle_aabb_counter_right_kitchen_counter`` -> ``counter``;
+    ``apple_1`` -> ``apple``. Design 4.10 wants object/receptacle CONTEXT (a
+    category) in the recurrence key, not the full AABB instance name --
+    otherwise the same fault on two different tables can never recur together.
+    The last surviving token is the head: coarser contexts aggregate more,
+    which is the direction the recurrence gate needs.
+    """
     normalized = value.lower().strip()
-    normalized = re.sub(r"_\d+$", "", normalized)
-    return re.sub(r"[^a-z0-9_]+", "_", normalized).strip("_")
+    normalized = re.sub(r"^receptacle_aabb_", "", normalized)
+    decoration = re.compile(r"^(?:\d+|top\d*|frl|apartment|tbl\d*|tvstnd\d*)$")
+    heads = [
+        token
+        for token in normalized.split("_")
+        if token and not decoration.match(token)
+    ]
+    return heads[-1] if heads else "object"
+
+
+def _task_type_pattern(instruction: str) -> str:
+    """Coarse instruction-derived task type for the recurrence key."""
+    text = (instruction or "").lower()
+    if not text.strip():
+        return ""
+    if re.search(r"\btransport\b|\ball\b", text):
+        return "transport_all_to_receptacle"
+    if "pick up" in text or text.startswith("pick"):
+        return "pick_object"
+    if re.search(r"\b(?:put|place)\b", text):
+        return "place_object_at_receptacle"
+    if "navigate" in text or "go to" in text:
+        return "navigate_to_target"
+    if "open" in text:
+        return "articulation_open"
+    if "close" in text:
+        return "articulation_close"
+    return "other"
 
 
 def _file_sha256(path: str) -> str | None:

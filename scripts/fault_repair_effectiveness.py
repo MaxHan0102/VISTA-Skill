@@ -37,8 +37,15 @@ MODEL = "Qwen/Qwen3-VL-8B-Instruct"
 FAULT = os.environ.get("VISTA_FAULT", "termination")
 ACQ = int(os.environ.get("VISTA_FAULT_ACQ", "20"))
 OUT = Path(os.environ.get("VISTA_FAULT_OUT", str(REPO / "running" / "fault_repair")))
-CONFIG = "configs/vista_fault_repair.json"
-MANIFEST = "configs/eb_hab_pilot_manifest.json"
+CONFIG = os.environ.get("VISTA_FAULT_CONFIG", "configs/vista_fault_repair.json")
+MANIFEST = os.environ.get(
+    "VISTA_FAULT_MANIFEST",
+    "configs/eb_hab_pilot_manifest.json"
+    if CONFIG.endswith("vista_fault_repair.json")
+    or CONFIG.endswith("vista_fault_repair_mind1.json")
+    or CONFIG.endswith("vista_fault_repair_mind1_p10.json")
+    else "configs/eb_hab_train_validation_manifest.json",
+)
 EVAL_SET = "base"
 EVAL_N = 20
 EVAL_SEED = 0

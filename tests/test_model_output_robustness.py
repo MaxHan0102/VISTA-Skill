@@ -64,13 +64,13 @@ def _image(tmp_path):
 
 def test_goal_grounder_drops_unparseable_predicates(tmp_path) -> None:
     model = _FakeJsonModel(
-        {"goal_predicates": ["", "()", "at(apple_1)", "holding(apple_1)"]}
+        {"goal_predicates": ["", "()", "at(apple_1, fridge_1)", "holding(apple_1)"]}
     )
     grounded = JsonGoalGrounder(model).ground(
         "pick the apple", _image(tmp_path), (("pick", ("apple_1",)),)
     )
     assert grounded == (
-        PredicateKey("at", ("apple_1",)),
+        PredicateKey("at", ("apple_1", "fridge_1")),
         PredicateKey("holding", ("apple_1",)),
     )
 

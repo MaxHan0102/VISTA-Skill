@@ -178,9 +178,16 @@ def test_runner_supplies_online_attribution_context_and_cluster_scope(tmp_path) 
     )
     context = transition["metadata"]["attribution_context"]
     assert context["executor_followed_skill"] is False
-    assert context["task_pattern"] == "multi-target"
+    # task_pattern is instruction-derived (design 4.10: a task TYPE, not the
+    # manifest's per-task subgroup hash), so same-type tasks cluster together.
+    assert context["task_pattern"] == "pick_object"
     assert context["object_context"] == "pick:apple"
-    assert transition["attribution"]["subreason"] == "execution_lapse"
+    # A covered mismatch on a skill-sourced expectation outranks the lapse
+    # veto (P1-8). This synthetic event contradicts BOTH the fixed action
+    # schema and the skill rule on holding, so attribution abstains with
+    # action_model_disabled rather than blaming the skill alone.
+    assert transition["attribution"]["target"] == "abstain"
+    assert transition["attribution"]["subreason"] == "action_model_disabled"
     assert not engine.clusterer.ready()
 
 

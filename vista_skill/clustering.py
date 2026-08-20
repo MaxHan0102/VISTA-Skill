@@ -2,7 +2,13 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from vista_skill.schemas import AttributionResult, Mismatch, SkillField, UpdateTarget
+from vista_skill.schemas import (
+    AttributionResult,
+    Mismatch,
+    MismatchKind,
+    SkillField,
+    UpdateTarget,
+)
 from vista_skill.schemas import (
     ActionCall,
     PredicateEvidence,
@@ -106,6 +112,13 @@ class EventClusterer:
         evidence_ids = attribution.evidence_ids or mismatch.evidence_ids
         if not evidence_ids:
             return None
+        if mismatch.kind is MismatchKind.TERMINATION_CONFLICT:
+            # The termination policy is a global skill obligation (design 4.3):
+            # its violations are object- and task-agnostic, so keying them on
+            # the episode's task/object context would fragment one policy fault
+            # into per-episode clusters that never reach recurrence.
+            task_pattern = "any_task"
+            object_context = "policy"
         unique_marker = (
             event_id,
             mismatch.mismatch_id,

@@ -90,6 +90,147 @@ def test_effect_pick_inversion_flips_compiled_rule_and_text() -> None:
     assert faulty.effect == ("Picking up an object leaves the gripper empty.",)
 
 
+def test_constraint_multihold_is_attributable_and_behaviorally_visible() -> None:
+    """The behaviorally-strong fault: covered not_holding contradiction.
+
+    The inverted constraint rule (pick leaves the gripper free) coexists with
+    the schema's own pick expectation via source-distinct dedupe, so every
+    successful pick contradicts the skill rule on a predicate the visual
+    evidence layer observes -> skill_update(CONSTRAINT); restoring the rule
+    is replay-verifiable.
+    """
+    from vista_skill.belief import BeliefLedger
+    from vista_skill.schemas import EvidenceSource, PredicateEvidence, PredicateKey
+
+    faulty = inject_skill_fault(
+        initialize_shared_skill(), FaultType.CONSTRAINT_PICK_MULTIHOLD
+    )
+    rules = {r.rule_id: r for r in faulty.prediction_rules}
+    assert rules["constraint_pick_occupies_gripper"].after is TruthValue.TRUE
+    assert "multiple objects" in faulty.constraint[0]
+
+    expected = FixedActionSchema().compile(
+        parse_action_call(1, ("pick", ("apple_1",))), BeliefLedger(), faulty, ()
+    )
+    skill_not_holding = [
+        c for c in expected
+        if c.key.name == "not_holding" and c.source is DeltaSource.SKILL
+    ]
+    assert skill_not_holding and skill_not_holding[0].after is TruthValue.TRUE
+    evidence = (
+        PredicateEvidence(
+            key=PredicateKey("not_holding"),
+            before=TruthValue.TRUE,
+            after=TruthValue.FALSE,
+            confidence=0.95,
+            source=EvidenceSource.VISUAL_PAIR,
+            evidence_id="ev1",
+            timestamp=1,
+            view_id="v",
+            coverage=0.9,
+            rationale="gripper closed on object",
+        ),
+        PredicateEvidence(
+            key=PredicateKey("holding", ("apple_1",)),
+            before=TruthValue.UNKNOWN,
+            after=TruthValue.TRUE,
+            confidence=0.95,
+            source=EvidenceSource.VISUAL_PAIR,
+            evidence_id="ev2",
+            timestamp=1,
+            view_id="v",
+            coverage=0.9,
+            rationale="apple in gripper",
+        ),
+    )
+    from vista_skill.mismatch import MismatchKind
+
+    mismatches = compare_transitions(expected, evidence)
+    assert any(
+        m.kind is MismatchKind.CONTRADICTION and m.expected is not None
+        and m.expected.source is DeltaSource.SKILL
+        for m in mismatches
+    )
+    result = CreditAssigner().assign(mismatches, AttributionContext())
+    assert result.target is UpdateTarget.SKILL_UPDATE
+    assert result.field is SkillField.CONSTRAINT
+
+
+def test_constraint_contradiction_survives_execution_lapse_context() -> None:
+    """E8h: following a wrong constraint rule looks like a lapse against the
+    world (pick while holding). A covered contradiction on a skill-sourced
+    expectation must outrank the lapse veto."""
+    from vista_skill.schemas import PredicateKey
+
+    faulty = inject_skill_fault(
+        initialize_shared_skill(), FaultType.CONSTRAINT_PICK_MULTIHOLD
+    )
+    expected = FixedActionSchema().compile(
+        parse_action_call(1, ("pick", ("apple_1",))), BeliefLedger(), faulty, ()
+    )
+    evidence = (
+        PredicateEvidence(
+            key=PredicateKey("not_holding"),
+            before=TruthValue.FALSE,
+            after=TruthValue.FALSE,
+            confidence=0.95,
+            source=EvidenceSource.VISUAL_PAIR,
+            evidence_id="ev1",
+            timestamp=1,
+            view_id="v",
+            coverage=0.9,
+            rationale="gripper still occupied",
+        ),
+        PredicateEvidence(
+            key=PredicateKey("holding", ("apple_1",)),
+            before=TruthValue.UNKNOWN,
+            after=TruthValue.TRUE,
+            confidence=0.95,
+            source=EvidenceSource.VISUAL_PAIR,
+            evidence_id="ev2",
+            timestamp=1,
+            view_id="v",
+            coverage=0.9,
+            rationale="second object in gripper view",
+        ),
+    )
+    mismatches = compare_transitions(expected, evidence)
+    result = CreditAssigner().assign(
+        mismatches, AttributionContext(executor_followed_skill=False)
+    )
+    assert result.target is UpdateTarget.SKILL_UPDATE
+    assert result.field is SkillField.CONSTRAINT
+
+
+def test_genuine_lapse_still_abstains() -> None:
+    """Without a skill-sourced contradiction the lapse veto must still fire:
+    a lapse event whose only mismatch is unexpected supported state."""
+    from vista_skill.schemas import PredicateKey
+
+    clean = initialize_shared_skill()
+    unexpected = PredicateEvidence(
+        key=PredicateKey("near", ("sofa",)),
+        before=TruthValue.UNKNOWN,
+        after=TruthValue.TRUE,
+        confidence=0.95,
+        source=EvidenceSource.VISUAL_PAIR,
+        evidence_id="ev1",
+        timestamp=1,
+        view_id="v",
+        coverage=0.9,
+        rationale="agent by the sofa",
+    )
+    from vista_skill.mismatch import compare_transitions as compare
+
+    mismatches = compare((), (unexpected,))
+    assert mismatches
+    result = CreditAssigner().assign(
+        mismatches, AttributionContext(executor_followed_skill=False)
+    )
+    assert result.target is UpdateTarget.ABSTAIN
+    assert result.subreason is AbstainReason.EXECUTION_LAPSE
+
+
 def test_effect_pick_inversion_requires_the_s0_target_rule() -> None:
     clean = initialize_shared_skill()
     stripped = replace(

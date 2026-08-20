@@ -122,6 +122,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
             "constraint",
             "activation",
             "effect_pick_inversion",
+            "constraint_pick_multihold",
         ),
         help="Inject a structured fault into the initial shared Skill "
         "(fault-injection effectiveness diagnostic: recurrence becomes reachable, "

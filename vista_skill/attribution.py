@@ -11,6 +11,7 @@ from vista_skill.schemas import (
     Mismatch,
     MismatchKind,
     SkillField,
+    TruthValue,
     UpdateTarget,
     unique_strings,
 )
@@ -68,7 +69,18 @@ class CreditAssigner:
                 "a required predicate is unknown, uncovered, or low confidence",
                 confidence=0.98,
             )
-        if context.executor_followed_skill is False:
+        if context.executor_followed_skill is False and not any(
+            item.kind in {MismatchKind.CONTRADICTION, MismatchKind.MISSING_PROGRESS}
+            and item.expected is not None
+            and item.expected.source is DeltaSource.SKILL
+            for item in mismatches
+        ):
+            # The lapse veto assumes the canonical skill is correct. When a
+            # covered mismatch refutes a skill-sourced expectation, the
+            # executor acted on a rule the skill itself claims -- following a
+            # wrong constraint looks like a lapse against the world while it
+            # is evidence against the rule (E8h: 12/15 not_holding
+            # contradictions of the multihold fault were masked this way).
             return self._abstain(
                 mismatch_ids,
                 evidence_ids,
@@ -94,6 +106,22 @@ class CreditAssigner:
                 mismatch_ids=mismatch_ids,
                 evidence_ids=evidence_ids,
                 rationale="the conflict is local to instance identity or episode history",
+            )
+        if self._completion_supported_by_evidence(mismatches, context):
+            # "Skill expects not-complete, env says complete" WITH the goals
+            # themselves confirmed true in this step's evidence is belief lag
+            # (the ledger had not absorbed the achieved goals), not a policy
+            # defect: routing it to skill_update(termination) poisons the
+            # policy cluster with events no policy repair can verify.
+            return AttributionResult(
+                target=UpdateTarget.BELIEF_REFRESH,
+                confidence=0.85,
+                mismatch_ids=mismatch_ids,
+                evidence_ids=evidence_ids,
+                rationale=(
+                    "completion goals are confirmed by current evidence but absent from "
+                    "belief; refresh belief instead of blaming the termination policy"
+                ),
             )
 
         action_predictions = [
@@ -154,6 +182,26 @@ class CreditAssigner:
             evidence_ids,
             AbstainReason.AMBIGUOUS,
             "rules and constrained teacher did not establish a unique update target",
+        )
+
+    @staticmethod
+    def _completion_supported_by_evidence(
+        mismatches: Sequence[Mismatch],
+        context: AttributionContext,
+    ) -> bool:
+        termination_affirmed = any(
+            item.kind is MismatchKind.TERMINATION_CONFLICT
+            and item.evidence is not None
+            and item.evidence.after is TruthValue.TRUE
+            for item in mismatches
+        )
+        if not termination_affirmed or not context.goal_predicates:
+            return False
+        return any(
+            item.key in context.goal_predicates
+            and item.evidence is not None
+            and item.evidence.after is TruthValue.TRUE
+            for item in mismatches
         )
 
     @staticmethod

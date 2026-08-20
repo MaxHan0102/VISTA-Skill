@@ -368,3 +368,111 @@ each a real P0 design conservatism, were isolated:
 
 **Artifacts:** `running/fault_repair/` (termination, incl. `full_v1_textonly`
 and `arm_b_v2_solo_rerun`), `running/fault_repair_pick/` (local, gitignored).
+
+---
+
+## 2026-08-20 · E8 · Repair-loop unblocking arc (termination fault, E8→E8g)
+
+**Tested:** whether the E7 blockers could be removed so the repair loop runs
+end-to-end on the termination fault (20 acq eps, seed 0, diagnostic config
+`configs/vista_fault_repair_mind1.json` with `min_independent_episodes=1`
+after E8d measured 1 true positive per 20 episodes — E5-precedent diagnostic
+deviation; the controlled protocol is untouched).
+
+Seven fixes, each isolated by a failing campaign iteration:
+
+| iter | root cause found | fix |
+|---|---|---|
+| E8 | goal predicates were semantic labels (`pick_plate(robot_0)`) — satisfaction never resolves against primitive evidence keys | grounder constrained to holding/at/near/open vocabulary (P1-1) |
+| E8 | recurrence key fragmented on (task-id hash, full AABB names): 16 correct attributions across 7 episodes → 0 proposals | semantic task_pattern + entity head nouns; policy-scope key for termination_conflict (P1-3) |
+| E8b | goal keys copied instruction casing (`Sofa` vs `sofa`) → keys never matched; "put X on Y" grounded as intermediate `holding(X)` | normalize_entity on goal keys (P1-4) + move-task grounding rule |
+| E8c | 3/4 cluster events were false positives: env says complete AND goals confirmed true in the same evidence (belief lag, unfixable by any policy) | route those to belief_refresh via goal-aware attribution context (P1-5) |
+| E8e/E8f | teacher restated the implicated policy enum twice under shifted contexts | for "expects complete, evidence incomplete" conflicts the enum is DERIVED from evidence semantics (all_goals_evidence); the model only authors text (P1-7) |
+
+**E8g outcome (all fixes in):** the loop ran end-to-end for the first time —
+attribution ✓ (termination, 2 events), proposal with the derived
+`all_goals_evidence` ✓, **transition_consistency passed for the first time
+ever** ✓, **real paired rollouts executed for the first time** ✓
+(`gate_rollouts/proxy/`), and the gate **rejected at paired_proxy** —
+correctly: the candidate was never worse (proxy ep90 tie 1.0/1.0; ep91
+progress 0.0→0.125 for the candidate) but the termination fault's behavioral
+effect (~0.05 success, E7) is statistically unprovable at proxy budget 2.
+
+| arm | success | lineage |
+|---|---|---|
+| A corrupted frozen | 0.400 | — |
+| B full evolved | 0.400 (frozen = faulty, repairs rejected) | 0/2 accepted, both static+transition PASSED |
+| C w/o-VTCA | 0.400 | 0/8 accepted, **7 procedure + 1 effect — 0/8 in the true field** |
+
+Attribution contrast across all campaigns now stands at VTCA 4/4 correct
+field vs trajectory reflection 0/14. Teacher 283k / executor 429k tokens for
+the full arm (includes first-ever gate rollouts).
+
+**Interpretation:** the pipeline is now fully exercisable — detection,
+attribution, evidence-derived repair, compiled verification, and real paired
+validation all run. What remains for an ACCEPTED update is a fault whose
+behavioral effect is large enough for the paired gate to certify (see E9,
+the `constraint_pick_multihold` campaign). The gate's rejection here is the
+designed conservatism working, not a defect.
+
+**Artifacts:** `running/fault_repair_e8*_termination*/` (each iteration kept:
+`_fragmented`, `_casebug`, `_falsepos`, `_mind2`, `_echo`, `_echo2`, final
+`e8g_termination`) — a complete root-cause ladder for the paper's
+reliability-mechanism section.
+
+**Post-script (P1-8/9/10, same day):** three further attribution/generation
+fixes were isolated by the constraint-fault campaigns below —
+(P1-8) a covered CONTRADICTION/MISSING_PROGRESS on a skill-sourced expectation
+now outranks the execution-lapse veto (following a wrong rule is evidence
+against the rule, not the executor); (P1-9) non-termination patches strip the
+model's termination_policy echo; (P1-10) the refuted compiled rule's `after`
+value is derived from the observed evidence. Together with P1-7 the patch's
+entire compiled view is evidence-derived; the model authors text only.
+
+---
+
+## 2026-08-20 · E9 · Constraint-fault campaigns (E8h→E8p): the loop reaches real paired validation
+
+**Tested:** the behaviorally-strong `constraint_pick_multihold` fault
+(inverted `not_holding` pick rule + "gripper can hold multiple objects" text)
+— designed so the repair's benefit is provable in paired rollouts, unlike the
+termination fault (~0.05 behavioral effect, E8g). Diagnostic config chain:
+`mind1` (min_ind=1) → `mind1_p10` → `fullsel_p10` (full manifest,
+proxy=10/finalist=10→30, bootstrap=2000); driver gained
+`VISTA_FAULT_CONFIG`/`VISTA_FAULT_MANIFEST` env overrides.
+
+**Iteration ladder (each run kept under `running/fault_repair_e8*`):**
+
+| run | blocker found | fix |
+|---|---|---|
+| E8h | 12/15 not_holding contradictions masked by the execution-lapse veto | P1-8 (constraint attributions 0→6) |
+| E8i | model parrots termination_policy onto constraint patches; 6/6 fail static | P1-9 |
+| E8j | model restates the refuted compiled rule; 7/7 pass static, fail transition | P1-10 |
+| E8k | corrected rules included other fields → applier duplicate-ID crash | field-scope fix |
+| E8l | **behavioral benefit directly observed**: candidate 02521ebd solves the two-object task (1.0/1.0) where the parent fails (0.0); proxy=2 cannot yield a positive LCB (mathematical power ceiling) | budget escalation |
+| E8m/E8n | proxy=10 exceeds the pilot manifest's 5-task selection pool; driver MANIFEST hardcode | fullsel config + env overrides |
+| E8o | **paired_proxy PASSED for the first time**: 10 tasks, mean_delta +0.195, LCB +0.0017, worst subgroup 0.0; finalist covered only 4/10 tasks (budget ÷ 3 seeds) → LCB 0.0 | finalist=30 |
+| E8p | full-coverage finalist (10 tasks × 3 seeds): mean_delta ≈ +0.21, **LCB −0.0028** | — (structural, below) |
+
+**Structural finding (gate design):** the multihold fault only affects
+multi-object tasks (~1/3 of the pool); single-object task deltas are 0 by
+construction, so the task-level bootstrap LCB over ALL tasks is dragged to ≈0
+by the zero tail regardless of effect size. A subgroup-local repair cannot
+satisfy "global LCB > 0" even though the gate's own subgroup machinery
+(worst_subgroup_delta = 0.0, no regression anywhere) certifies it as safe and
+the mean delta (+0.2, consistent across proxy and finalist) is real. The
+acceptance criterion for subgroup-local improvements is a P1 design question:
+candidate semantics = positive LCB within the affected subgroup +
+non-regression elsewhere (which the existing subgroup check already proves).
+
+**Status:** detection → attribution → evidence-derived repair → compiled
+verification → real paired rollouts all work end-to-end; the first proposal
+in history passed the paired proxy. Acceptance remains blocked by the global
+LCB criterion's interaction with subgroup-local faults, not by any mechanism
+failure. Baselines for contrast: trajectory reflection misattributed the
+field in every campaign to date (0/14 cumulative before E9; the E8-series C
+arms add more).
+
+**Artifacts:** `running/fault_repair_e8{h..p}_*` (lapsemask → parityecho →
+ruleecho → duprules → p2power → f4task → e8p in flight), each stage's
+gate_rollouts preserved.
