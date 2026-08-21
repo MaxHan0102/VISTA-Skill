@@ -488,3 +488,88 @@ are all bound to the same multi-object task subgroup; (2) the C arm
 misattributed the field 5/5 again (trajectory reflection cumulative
 0/19 vs VTCA 4/4 correct-field campaigns). Full-arm cost: teacher 249k /
 executor 425k tokens including the first-ever finalist rollouts.
+
+---
+
+## 2026-08-21 · E10 · Decision: build SkillFaultBench as a controlled layer on EmbodiedBench
+
+**Context (why this decision, in full):** E5→E8p established that the repair
+loop's every mechanism works — detection, attribution (VTCA 4/4 correct field
+vs trajectory reflection 0/19), evidence-derived repair generation, compiled
+verification, real paired rollouts, and a first-ever paired_proxy pass
+(mean_delta +0.195, LCB +0.0017, worst subgroup 0.0) — yet zero updates were
+ever accepted and no performance delta ever appeared in A/B/C evals. The
+post-mortem attributes this to three quantified properties of the evaluation
+substrate, not the method:
+
+1. **Fault sparsity.** A frozen 8B executor on EB-HAB produces ~1
+   skill-attributable fault per 20 acquisition episodes (E8d), below the
+   recurrence gate at any feasible scale. Real faults never recur; injected
+   faults had to be used instead (E7 onward).
+2. **Subgroup invisibility.** Effects that are real and decisive at the
+   task-subgroup level (candidate 1.0 vs parent 0.0 on two-object tasks,
+   E8l) are invisible both to the gate's global task-level LCB (E8p: −0.0028
+   against mean +0.21) and to the stock `base` eval subset (A=B=C=0.550).
+   Damage, benefit, and measurement power are bound to the same subgroup the
+   benchmark never stratifies.
+3. **No credit-assignment ground truth.** EmbodiedBench labels task success
+   only; nothing labels which skill field/rule is wrong, so attribution
+   quality (the paper's core claim) is unmeasurable without our own fault
+   injection.
+
+**Survey (2026-08-21):** skill-evolution methods are crowded in 2025-26 —
+SAGE (RL-validated skill libraries), SkillClaw (collective evolution),
+Memento-Skills (RL skill rewrite), SkillMAS (co-evolution with failure
+attribution), GRASP (gated regression-aware proposals), SKILLER (bounded
+edits), SkillAudit (paired-trajectory accept/reject — a method sibling of
+our gate). Evaluation is the recognized gap: SkillsBench measures static
+skill augmentation; LifelongAgentBench measures task domains; PATH-Bench
+measures experience utility; EmbodiSkill itself reports only task success on
+EmbodiedBench. No existing benchmark provides fault ground truth,
+recurrence-density control, subgroup-stratified pools, or update-reliability
+metrics (beneficial/harmful precision, attribution accuracy). Every method
+above needs exactly that.
+
+**Decision process:** three options were considered. (a) Stay on stock
+EmbodiedBench and only fix the gate's acceptance semantics — rejected as
+insufficient: even a subgroup-aware gate cannot show what the base subsets
+cannot measure, and fault sparsity still starves evolution. (b) Build a
+standalone benchmark from scratch — rejected as wasteful: the executor
+substrate, simulators, controlled protocol, and fairness machinery already
+exist and are validated. (c) **Build a controlled fault layer on top of
+EmbodiedBench environments (EB-HAB primary; EB-ALF and EB-NAV as generality
+arms) — chosen.** Nine campaigns of infrastructure (inject_skill_fault fault
+bank, the three-arm fault-repair harness, five-field skill schema with
+compiled views, paired gate) are its seed, and each E8 iteration contributes
+a design rule.
+
+**SkillFaultBench design pillars:**
+
+1. **Fault bank** with three admission criteria learned from E7–E9:
+   vocabulary-aligned (predicates the evidence layer observes), replay-
+   verifiable (repair provably shrinks the cached mismatch set), and
+   behaviorally calibrated (subgroup effect size measured and tunable —
+   faults must be neither behaviorally null like termination nor gate-
+   invisible like un-stratified subgroup faults).
+2. **Subgroup-stratified task pools** per fault: affected and protected
+   subgroups constructed at designed ratios, with eval power computed
+   against the fault's calibrated effect size (the E8p lesson as a spec).
+3. **Reliability metric family:** detection rate, field-attribution accuracy
+   (ground truth = the injected fault), repair-verification rate, acceptance
+   correctness (beneficial/harmful update precision), subgroup-level
+   drop/recovery, teacher cost per accepted update.
+
+**Paper strategy:** main comparison table stays on stock EmbodiedBench
+(matched executor/teacher/budget, EmbodiSkill* baselines); SkillFaultBench
+carries the mechanism/falsifiability section (RQ2 attribution, RQ3
+reliability). The E5→E8p negative results become the benchmark's motivation.
+
+**Open items carried forward:** (1) gate acceptance semantics for
+subgroup-local repairs (affected-subgroup LCB > 0 + global non-regression —
+the existing subgroup check already proves the safety half); (2) executor-
+regime study — a weaker executor should raise skill-fault density and skill-
+text dependence (making evolution matter), at the risk of raising execution
+lapses too; measure before committing (pilot: 20 episodes, attribution
+distribution); (3) EB-ALF adapter (eb-alf runs in `max_embench`; not yet
+wired into the VISTA runner); (4) EB-NAV fault layer (evaluate-only env —
+faults enter through the frozen-skill artifact, evolution stays on EB-HAB).
