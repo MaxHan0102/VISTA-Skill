@@ -573,3 +573,45 @@ lapses too; measure before committing (pilot: 20 episodes, attribution
 distribution); (3) EB-ALF adapter (eb-alf runs in `max_embench`; not yet
 wired into the VISTA runner); (4) EB-NAV fault layer (evaluate-only env —
 faults enter through the frozen-skill artifact, evolution stays on EB-HAB).
+
+---
+
+## 2026-08-21 · E11 · T4-①: 4B-executor regime test (natural fault density)
+
+**Tested:** whether a weaker executor raises natural skill-fault density
+enough to make stock-EB evolution fire without fault injection (Regime B).
+Executor Qwen3-VL-4B-Instruct @192.168.1.192:8000 (new third server),
+teacher unchanged 8B @185:8000; 20 acquisition episodes, no injected fault,
+min_ind=2; config `configs/vista_t4_4b.json`.
+
+**Endpoint note:** probe 5/6 — `json_schema_strict` fails on the 4B. That is
+a teacher-side requirement; in this regime the 4B is executor-only (planner
+path has fix_json repair + retries) and the full 20-episode run completed
+with zero JSON aborts.
+
+**Results:**
+- Attribution: abstain 152 (91.6%) / belief_refresh 11 / **skill_update 3**
+  (episodes 3, 12, 19 — all routed to termination). Mean task_success 0.80
+  (acquisition task mix; not comparable to `base`).
+- **First natural recurrence ever:** 3 skill_update episodes ≥ min_ind=2 →
+  2 proposals fired from REAL trajectories (all previous proposals came from
+  injected faults). Both correctly rejected: #1 inert (the P1-7 derivation
+  emitted `all_goals_evidence`, but S0 already uses it — natural conflicts
+  have the OPPOSITE polarity), #2 duplicate compiled rule IDs caught at
+  static (graceful, no crash).
+
+**New mechanism insight (the deepest yet):** with a CORRECT S0, natural
+termination conflicts take the form "all grounded goals satisfied, env says
+incomplete" — a **goal-coverage defect** (the grounder missed a goal or
+grounded the wrong final state), not a skill-field fault. The five-field
+schema has no repair path for this class, which is why real faults are
+fault-sparse AND unrepairable when they do appear. Natural faults are
+goal-model-shaped; injected faults are skill-field-shaped.
+
+**Verdict: T4-① FAILS both pre-registered criteria** (density 3/20 < 5/20;
+abstain 91.6% > 80%). Regime B alone does not rescue the setting. Density
+did triple vs 8B (1/20 → 3/20) and natural recurrence fired, but the
+dominant failure mass stays in abstain (capability-lapse-shaped), and the
+skill-attributable residue is goal-coverage-shaped. Benchmark urgency UP;
+T4-② (degraded initial skill) pending — it attacks density from the other
+side (guaranteed fault presence) rather than the executor.
