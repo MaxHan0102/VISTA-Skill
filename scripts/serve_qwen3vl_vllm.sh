@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-# Serve Qwen3-VL-8B-Instruct locally with vLLM as an OpenAI-compatible API,
+# Serve a Qwen3-VL model locally with vLLM as an OpenAI-compatible API,
 # matching the VISTA-Skill controlled-protocol executor contract
 # (configs/vista_p0.json: model ends with "Qwen3-VL-8B-Instruct", precision=fp8,
 #  temperature=0, accepts the OpenAI `seed` field, returns usage tokens).
+# The default is the frozen 8B executor; pass another cached Qwen3-VL id
+# (e.g. Qwen/Qwen3-VL-4B-Instruct) as arg 2 or MODEL=... to switch.
 #
 # === Verified working recipe (vLLM 0.11.0 / torch 2.8 / transformers 4.57.x) ===
 # Constraints discovered while bringing it up (see docs/memory):
@@ -18,9 +20,10 @@
 #     run there); driver 575+ also works with this exact recipe.
 #
 # GPU layout is AUTO-DETECTED at launch:
-#   - TP: 1 visible card -> tp=1 (8B fp8 ~= 9 GiB weights, fits one 24 GiB
-#     card); >=2 cards -> tp=2. Larger tp is unverified and unnecessary at 8B;
-#     override with TP=N if you really want it.
+#   - TP: 8B -> 1 visible card tp=1 (fp8 ~= 9 GiB weights, fits one 24 GiB
+#     card); >=2 cards -> tp=2. Larger tp is unverified and unnecessary at 8B.
+#     4B -> always tp=1 by default (fp8 ~= 4.6 GiB weights per card buys
+#     nothing from sharding); override with TP=N if you really want it.
 #   - Cards that already hold > BUSY_THRESHOLD_MIB (default 2048) MiB of other
 #     processes -> treat the box as SHARED: util 0.6 + --enforce-eager +
 #     --max-num-batched-tokens 4096 (the empirically safe shared-GPU recipe).
@@ -34,16 +37,18 @@
 #     recorded in run artifacts -- runs with different TP are not directly
 #     comparable; keep TP matched across anything you report side by side.
 #
-# Env overrides: VLLM_PY (server python), TP, UTIL, BUSY_THRESHOLD_MIB.
-# CUDA_VISIBLE_DEVICES, if set, restricts detection to the listed cards.
+# Env overrides: VLLM_PY (server python), MODEL (HF id), TP, UTIL,
+# BUSY_THRESHOLD_MIB. CUDA_VISIBLE_DEVICES, if set, restricts detection.
 #
-# Usage:  bash scripts/serve_qwen3vl_vllm.sh [PORT]
-#          (docs/implementation.md CLI examples expect port 8000)
+# Usage:  bash scripts/serve_qwen3vl_vllm.sh [PORT] [MODEL_ID]
+#          (docs/implementation.md CLI examples expect port 8000; MODEL_ID
+#           defaults to the frozen 8B executor, e.g. pass
+#           Qwen/Qwen3-VL-4B-Instruct to serve the 4B model)
 set -euo pipefail
 
 PORT="${1:-8001}"
-MODEL_ID="Qwen/Qwen3-VL-8B-Instruct"
-SERVED_NAME="Qwen/Qwen3-VL-8B-Instruct"   # must match configs/vista_p0.json + contain "Qwen3-VL"
+MODEL_ID="${2:-${MODEL:-Qwen/Qwen3-VL-8B-Instruct}}"
+SERVED_NAME="$MODEL_ID"   # callers pass this exact id to --model-name / --method-model
 PY="${VLLM_PY:-/root/miniconda3/envs/max_vllm/bin/python}"
 
 export HF_HUB_OFFLINE=1              # weights already in HF cache; never hit network
@@ -76,8 +81,9 @@ fi
 
 # HF_HUB_OFFLINE=1 forbids downloads, so the weights must already be cached.
 HUB_DIR="${HF_HUB_CACHE:-${HF_HOME:-$HOME/.cache/huggingface}/hub}"
-if ! ls "$HUB_DIR"/models--Qwen--Qwen3-VL-8B-Instruct/snapshots/*/model.safetensors.index.json >/dev/null 2>&1; then
-  echo "ERROR: Qwen3-VL-8B-Instruct weights not found under $HUB_DIR" >&2
+REPO_SLUG="models--${MODEL_ID//\//--}"
+if ! ls "$HUB_DIR/$REPO_SLUG"/snapshots/*/model.safetensors.index.json >/dev/null 2>&1; then
+  echo "ERROR: $MODEL_ID weights not found under $HUB_DIR" >&2
   echo "       pre-download them, or unset HF_HUB_OFFLINE for the first run" >&2
   exit 1
 fi
@@ -102,9 +108,12 @@ read -r MIN_TOTAL_MIB MAX_USED_MIB < <(nvidia-smi --query-gpu=memory.total,memor
 BUSY_THRESHOLD_MIB="${BUSY_THRESHOLD_MIB:-2048}"
 if (( MAX_USED_MIB > BUSY_THRESHOLD_MIB )); then SHARED=1; else SHARED=0; fi
 
-# TP: derived from visible card count, capped at the verified range [1, 2].
+# TP: derived from model + visible card count, capped at the verified [1, 2].
+# 4B stays single-card by default: fp8 weights ~= 4.6 GiB, so sharding only
+# adds cross-card communication. TP is recorded in run artifacts -- set it
+# explicitly when you need runs matched across models.
 if [[ -z "${TP:-}" ]]; then
-  if (( NGPU >= 2 )); then TP=2; else TP=1; fi
+  if (( NGPU >= 2 )) && [[ "$MODEL_ID" == "Qwen/Qwen3-VL-8B-Instruct" ]]; then TP=2; else TP=1; fi
 fi
 (( TP <= NGPU )) || { echo "ERROR: TP=$TP exceeds visible GPU count ($NGPU)" >&2; exit 1; }
 
@@ -118,6 +127,8 @@ fi
 #   KV ~= util*24.56 - 18.6 GiB. One 16384-token sequence needs 2.25 GiB KV:
 #   util 0.8 -> KV 1.28 GiB (vLLM aborts), 0.87 -> ~2.65 GiB (fits, with
 #   ~3 GiB left for habitat-sim), 0.9 -> ~3.4 GiB but only 0.4 GiB free.
+#   (Those numbers are 8B fp8; the 4B model roughly halves the non-KV
+#   overhead, so at 0.87 it simply banks the difference as KV headroom.)
 if [[ -z "${UTIL:-}" ]]; then
   if (( SHARED )); then
     UTIL=$(awk -v t="$MIN_TOTAL_MIB" -v u="$MAX_USED_MIB" \
@@ -129,8 +140,14 @@ if [[ -z "${UTIL:-}" ]]; then
   fi
 fi
 
-# Rough capacity guard: fp8 weights ~= 9 GiB split across TP, plus >=3 GiB KV.
-WEIGHTS_PER_CARD=$(( 9000 / TP ))
+# Rough capacity guard: fp8 weights per model (MiB), split across TP, plus
+# >=3 GiB KV. Unknown models assume the 8B budget (conservative).
+case "$MODEL_ID" in
+  Qwen/Qwen3-VL-8B-Instruct) FP8_WEIGHTS_MIB=9000 ;;
+  Qwen/Qwen3-VL-4B-Instruct) FP8_WEIGHTS_MIB=4600 ;;
+  *) FP8_WEIGHTS_MIB=9000 ;;
+esac
+WEIGHTS_PER_CARD=$(( FP8_WEIGHTS_MIB / TP ))
 UTIL_PCT="$(awk -v u="$UTIL" 'BEGIN{printf "%d", u*100}')"
 BUDGET_PER_CARD=$(( MIN_TOTAL_MIB * UTIL_PCT / 100 ))
 if (( BUDGET_PER_CARD < WEIGHTS_PER_CARD + 3000 )); then
@@ -144,7 +161,7 @@ if (( SHARED )); then
   EXTRA+=(--enforce-eager --max-num-batched-tokens 4096)
 fi
 
-echo "vLLM launch plan: gpus=$NGPU tp=$TP shared=$SHARED (others hold ${MAX_USED_MIB} MiB, card total ${MIN_TOTAL_MIB} MiB) util=$UTIL eager=$([[ $SHARED == 1 ]] && echo yes || echo no) port=$PORT" >&2
+echo "vLLM launch plan: model=$MODEL_ID gpus=$NGPU tp=$TP shared=$SHARED (others hold ${MAX_USED_MIB} MiB, card total ${MIN_TOTAL_MIB} MiB) util=$UTIL eager=$([[ $SHARED == 1 ]] && echo yes || echo no) port=$PORT" >&2
 
 exec "$PY" -m vllm.entrypoints.openai.api_server \
   --model "$MODEL_ID" \

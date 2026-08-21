@@ -27,7 +27,7 @@ from pathlib import Path
 REPO = Path("/root/max/VISTA-Skill")
 EMBENCH_PY = os.environ.get("VISTA_EMBENCH_PY", "/root/miniconda3/envs/max_embench/bin/python")
 BASE_URL = os.environ.get("VISTA_METHOD_BASE_URL", "http://127.0.0.1:8001/v1")
-MODEL = "Qwen/Qwen3-VL-8B-Instruct"
+MODEL = os.environ.get("VISTA_METHOD_MODEL", "Qwen/Qwen3-VL-8B-Instruct")
 CONFIG = "configs/vista_pilot.json"
 MANIFEST = "configs/eb_hab_pilot_manifest.json"
 ACQ = 15

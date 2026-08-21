@@ -69,7 +69,7 @@ from vista_skill.skills import initialize_shared_skill, skill_digest
 from vista_skill.update_audit import make_rotated_audit_plan, run_rotated_update_audit
 
 BASE_URL = os.environ.get("VISTA_METHOD_BASE_URL", "http://127.0.0.1:8001/v1")
-MODEL = "Qwen/Qwen3-VL-8B-Instruct"
+MODEL = os.environ.get("VISTA_METHOD_MODEL", "Qwen/Qwen3-VL-8B-Instruct")
 
 
 class _PassingTransitionChecker:
