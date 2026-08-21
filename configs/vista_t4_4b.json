@@ -1,0 +1,67 @@
+{
+  "protocol": "vista_t4_4b_executor_2026_08_21",
+  "task_manifest": "configs/eb_hab_pilot_manifest.json",
+  "evolution_seeds": [
+    0
+  ],
+  "environment": {
+    "name": "eb-hab",
+    "acquisition_split": "train_validation",
+    "acquisition_tasks": 60,
+    "selection_tasks": 20,
+    "audit_tasks": 20,
+    "final_test_subsets": [
+      "base",
+      "common_sense",
+      "complex_instruction",
+      "spatial_relationship",
+      "visual_appearance",
+      "long_horizon"
+    ],
+    "resolution": 500
+  },
+  "executor": {
+    "model": "Qwen3-VL-4B-Instruct",
+    "model_type": "remote",
+    "tensor_parallel": 1,
+    "frozen": true,
+    "precision": "fp8",
+    "max_model_len": 16384,
+    "max_completion_tokens": 4096,
+    "n_shots": 10,
+    "temperature": 0.0,
+    "note": "T4-① regime B: 4B executor at 192.168.1.192:8000, teacher stays 8B at 185:8000"
+  },
+  "budgets": {
+    "active_skill_words": 512,
+    "ledger_predicates": 24,
+    "history_actions": 12,
+    "patch_operations_per_round": 1,
+    "proxy_episodes": 2,
+    "finalist_episodes": 3
+  },
+  "credit": {
+    "targets": [
+      "belief_refresh",
+      "skill_update",
+      "abstain"
+    ],
+    "action_model_updates_enabled": false,
+    "min_independent_episodes": 2,
+    "min_evidence_confidence": 0.75,
+    "min_attribution_confidence": 0.7
+  },
+  "gate": {
+    "bootstrap_samples": 200,
+    "alpha": 0.05,
+    "proxy_lcb_threshold": 0.0,
+    "finalist_lcb_threshold": 0.0,
+    "subgroup_regression_tolerance": 0.05
+  },
+  "final_test": {
+    "skill_frozen": true,
+    "teacher_enabled": false,
+    "attribution_enabled": false,
+    "patching_enabled": false
+  }
+}

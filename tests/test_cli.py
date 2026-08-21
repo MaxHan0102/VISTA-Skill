@@ -508,3 +508,36 @@ def test_protocol_record_marks_skill_fault() -> None:
     )
     record = cli._protocol_record(args, config, manifest)
     assert record["skill_fault"] == "effect"
+
+
+def test_initial_skill_requires_diagnostic() -> None:
+    args = parse_args(
+        [
+            "experiment", "--method", "full", "--method-model", "m",
+            "--initial-skill", "minimal",
+        ]
+    )
+    with pytest.raises(ValueError, match="initial-skill"):
+        cli._run_experiment(args)
+
+
+def test_initial_skill_exclusive_with_fault() -> None:
+    args = parse_args(
+        [
+            "experiment", "--method", "full", "--method-model", "m",
+            "--diagnostic", "--initial-skill", "minimal",
+            "--skill-fault", "termination",
+        ]
+    )
+    with pytest.raises(ValueError, match="exclusive"):
+        cli._run_experiment(args)
+
+
+def test_make_engine_honors_initial_skill_variant() -> None:
+    from vista_skill.skills import skill_digest
+
+    config = load_config("configs/vista_fault_repair.json")
+    clean, _ = cli._make_engine(config, None)
+    minimal, _ = cli._make_engine(config, None, initial_skill="minimal")
+    assert skill_digest(minimal.skill) != skill_digest(clean.skill)
+    assert minimal.skill.prediction_rules == ()

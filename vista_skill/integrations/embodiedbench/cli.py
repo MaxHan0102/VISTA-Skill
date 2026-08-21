@@ -59,6 +59,8 @@ from vista_skill.pipeline import VistaSkillEngine
 from vista_skill.protocol import ExperimentManifest, load_experiment_manifest
 from vista_skill.schemas import SkillSpec
 from vista_skill.skills import (
+    empty_shared_skill,
+    minimal_shared_skill,
     SkillArtifact,
     initialize_nav_skill,
     initialize_shared_skill,
@@ -113,6 +115,15 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     experiment.add_argument("--output-dir", default="running/vista_skill/full")
     experiment.add_argument("--evolution-seeds", default="0,1,2")
     experiment.add_argument("--max-acquisition-episodes", type=int)
+    experiment.add_argument(
+        "--initial-skill",
+        choices=("shared", "minimal", "empty"),
+        default="shared",
+        help="Initial Skill variant (diagnostic init-sensitivity regime): "
+        "'shared' = S0; 'minimal'/'empty' = degraded starting points for "
+        "testing whether evolution can grow or recover skills. Requires "
+        "--diagnostic.",
+    )
     experiment.add_argument(
         "--skill-fault",
         choices=(
@@ -214,6 +225,10 @@ def _run_experiment(args: argparse.Namespace) -> None:
         raise ValueError("reduced acquisition requires --diagnostic")
     if args.skill_fault and not args.diagnostic:
         raise ValueError("--skill-fault is a diagnostic deviation and requires --diagnostic")
+    if args.initial_skill != "shared" and not args.diagnostic:
+        raise ValueError("--initial-skill is a diagnostic deviation and requires --diagnostic")
+    if args.initial_skill != "shared" and args.skill_fault:
+        raise ValueError("--initial-skill and --skill-fault are exclusive regime knobs")
     output_dir = Path(args.output_dir)
     _require_new_output(output_dir, "experiment output directory")
     experiment_id = uuid.uuid4().hex
@@ -235,7 +250,10 @@ def _run_experiment(args: argparse.Namespace) -> None:
         # trajectory teacher is wired separately in _make_trajectory_workflow.
         engine_model = None if args.method in _TRAJECTORY_METHODS else method_model
         engine, goal_grounder = _make_engine(
-            config, engine_model, skill_fault=args.skill_fault
+            config,
+            engine_model,
+            skill_fault=args.skill_fault,
+            initial_skill=args.initial_skill,
         )
 
         acquisition = run_manifest.coordinates_for("acquisition")
@@ -558,6 +576,7 @@ def _make_engine(
     model: OpenAICompatibleJsonModel | None,
     *,
     skill_fault: str | None = None,
+    initial_skill: str = "shared",
 ) -> tuple[VistaSkillEngine, JsonGoalGrounder | None]:
     kwargs = {
         "ledger": BeliefLedger(config.belief),
@@ -575,7 +594,14 @@ def _make_engine(
             }
         )
         grounder = JsonGoalGrounder(model)
-    skill = initialize_shared_skill()
+    if initial_skill == "minimal":
+        # Degraded starting point (§4.2.3): no compiled rules and one-line
+        # bodies, so the engine predicts from the fixed action schema only.
+        skill = minimal_shared_skill()
+    elif initial_skill == "empty":
+        skill = empty_shared_skill()
+    else:
+        skill = initialize_shared_skill()
     if skill_fault is not None:
         # Diagnostic only (--diagnostic enforced upstream): a structured fault
         # makes recurrence reachable so evolution can be observed cheaply.
@@ -1033,6 +1059,7 @@ def _protocol_record(
         "manifest_sha256": manifest.digest,
         "method": args.method,
         "skill_fault": getattr(args, "skill_fault", None),
+        "initial_skill": getattr(args, "initial_skill", "shared"),
         "executor_model": args.model_name,
         "executor_model_type": args.model_type,
         "tensor_parallel": args.tp,

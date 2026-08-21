@@ -615,3 +615,30 @@ dominant failure mass stays in abstain (capability-lapse-shaped), and the
 skill-attributable residue is goal-coverage-shaped. Benchmark urgency UP;
 T4-② (degraded initial skill) pending — it attacks density from the other
 side (guaranteed fault presence) rather than the executor.
+
+**Follow-up (T4-②, 2026-08-21 17:49): Regime C also fails — benchmark is now
+mandatory.** Minimal initial skill (§4.2.3: one-line bodies, zero compiled
+rules), 8B executor+teacher, min_ind=1, 20 acq + base 20 eval
+(`running/t4c_minimal/`):
+
+- **B (full) cannot evolve from minimal**: 0 skill_update attributions across
+  20 episodes (abstain 133 / belief_refresh 21), 0 proposals — with no
+  skill-sourced expectations there is nothing to contradict, so VTCA's
+  repair-only mechanism has no entry point. Prediction confirmed exactly.
+- **C (w/o-VTCA) fired 7 procedure proposals** (trajectory reflection needs
+  no compiled rules) — the common gate rejected all 7; frozen = minimal.
+- **Eval: A = B = C = 0.400** (identical digests; recovery 0). Minimal scores
+  BELOW no_skill (0.550) and below S0 (0.450): a bad skill is worse than no
+  skill — 20-episode noise caveat, but directionally the reliability
+  narrative's strongest datapoint (bad text actively misleads the executor).
+- **T4 verdict: both rescue attempts failed** (T4-① density 3/20 < 5,
+  abstain 91.6%; T4-② A/B difference 0). Per the pre-registered decision
+  rule, SkillFaultBench construction moves from optional to mandatory.
+
+**Benchmark design inputs from T4:** (1) the fault bank must include
+goal-coverage faults (the natural fault shape, E11) and degraded starts that
+carry PARTIAL rules — empty/minimal starts are unreachable for a repair-only
+mechanism; (2) a "missing-rule" fault class would require a growth
+capability the method currently lacks — either scope the paper's claim to
+reliable REPAIR (honest, well-supported) or add growth as P1 method work;
+(3) subgroup-stratified pools remain required (T2) regardless of regime.

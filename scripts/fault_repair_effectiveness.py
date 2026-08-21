@@ -35,6 +35,9 @@ EMBENCH_PY = os.environ.get("VISTA_EMBENCH_PY", "/root/miniconda3/envs/max_emben
 BASE_URL = os.environ.get("VISTA_METHOD_BASE_URL", "http://127.0.0.1:8000/v1")
 MODEL = "Qwen/Qwen3-VL-8B-Instruct"
 FAULT = os.environ.get("VISTA_FAULT", "termination")
+# Degraded-initial-skill regime (T4-2): when set, no fault is injected and
+# all arms start from the chosen §4.2.3 variant instead of S0.
+INITIAL = os.environ.get("VISTA_INITIAL_SKILL", "shared")
 ACQ = int(os.environ.get("VISTA_FAULT_ACQ", "20"))
 OUT = Path(os.environ.get("VISTA_FAULT_OUT", str(REPO / "running" / "fault_repair")))
 CONFIG = os.environ.get("VISTA_FAULT_CONFIG", "configs/vista_fault_repair.json")
@@ -52,7 +55,18 @@ EVAL_SEED = 0
 
 sys.path.insert(0, str(REPO))
 from vista_skill.fault_injection import FaultType, inject_skill_fault  # noqa: E402
-from vista_skill.skills import initialize_shared_skill, save_skill_artifact  # noqa: E402
+from vista_skill.skills import (  # noqa: E402
+    empty_shared_skill,
+    initialize_shared_skill,
+    minimal_shared_skill,
+    save_skill_artifact,
+)
+
+_INITIAL_SKILLS = {
+    "shared": initialize_shared_skill,
+    "minimal": minimal_shared_skill,
+    "empty": empty_shared_skill,
+}
 
 
 def _env():
@@ -75,6 +89,20 @@ def _cli(args, log):
 def build_arm_a_artifact() -> Path:
     path = OUT / "arm_a_faulty_skill.json"
     if path.exists():
+        return path
+    if INITIAL != "shared":
+        degraded = replace(_INITIAL_SKILLS[INITIAL](), frozen=True)
+        save_skill_artifact(
+            path,
+            degraded,
+            protocol={
+                "purpose": "degraded_initial_arm_a",
+                "initial_skill": INITIAL,
+                "diagnostic": True,
+                "note": "degraded-initial-skill lower bound; evaluate with --diagnostic",
+            },
+        )
+        print(f"[built] arm A degraded skill artifact ({INITIAL}): {path}", flush=True)
         return path
     faulty = replace(
         inject_skill_fault(initialize_shared_skill(), FaultType(FAULT)),
@@ -105,12 +133,18 @@ def run_experiment(method: str) -> None:
         shutil.rmtree(out)
     args = [
         "experiment", "--method", method, "--config", CONFIG, "--manifest", MANIFEST,
-        "--diagnostic", "--skill-fault", FAULT,
+        "--diagnostic",
         "--max-acquisition-episodes", str(ACQ), "--evolution-seeds", "0",
         "--executor-base-url", BASE_URL, "--output-dir", str(out),
         "--method-model", MODEL, "--method-base-url", BASE_URL,
     ]
-    print(f"[run] experiment {method} (fault={FAULT}, acq={ACQ}) ...", flush=True)
+    regime = f"initial={INITIAL}"
+    if INITIAL != "shared":
+        args += ["--initial-skill", INITIAL]
+    else:
+        args += ["--skill-fault", FAULT]
+        regime = f"fault={FAULT}"
+    print(f"[run] experiment {method} ({regime}, acq={ACQ}) ...", flush=True)
     _cli(args, f"/tmp/fault_repair_exp_{method}.log")
     if not (out / "experiment_manifest.json").exists():
         print(f"[FAIL] experiment {method}; see /tmp/fault_repair_exp_{method}.log", flush=True)
