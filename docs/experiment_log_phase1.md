@@ -642,3 +642,102 @@ mechanism; (2) a "missing-rule" fault class would require a growth
 capability the method currently lacks — either scope the paper's claim to
 reliable REPAIR (honest, well-supported) or add growth as P1 method work;
 (3) subgroup-stratified pools remain required (T2) regardless of regime.
+
+---
+
+## 2026-08-22 · E12 · PHASE 1 CLOSURE — what was validated, what it means, where to go
+
+This entry closes the first experimental phase (E1–E11 + T4, 2026-08-13 →
+08-21). The file is renamed to `experiment_log_phase1.md`; phase 2 opens a
+fresh log.
+
+### (1) What was verified, results, and meaning
+
+**Infrastructure (E1–E2, E6):** serving contract (probe 6/6 on three
+servers), real Habitat/AI2-THOR rollouts, dual- then tri-server client
+layout, first EB-NAV official numbers (no_skill 0.633 vs static skill 0.600
+on base/60). Meaning: the experimental apparatus is sound; every early
+failure was an integration bug, all found and fixed.
+
+**Method mechanisms, individually validated:**
+- Attribution (E3 + every campaign): VTCA rule-first separates
+  skill/belief/abstain with target Macro-F1 1.000 on the synthetic set and,
+  on real fault-injection campaigns, located the true field in **4/4**
+  campaigns while trajectory-level reflection misattributed in **0/26**
+  proposals (always procedure/effect, never the true field). This is the
+  paper's RQ2 core and it replicates everywhere.
+- Gate safety (E5–E8p, T4): across ~50 proposals from five fault classes
+  and three regimes — **0 harmful updates, 0 false accepts**. The gate
+  rejected inert patches, parroted policies, duplicate rules, and
+  statistically unprovable benefits, including 7 unguided baseline patches
+  from a minimal start.
+- Evidence-derived repair (E8e–E8l): after P1-7/9/10 the patch's entire
+  compiled view (policy enum + prediction rules) is derived from cached
+  evidence semantics; the model authors text only. Two candidate repairs
+  demonstrably fixed the injected fault (1.0/1.0 vs parent 0.0 on the
+  affected task, E8l) and the first paired_proxy pass in history certified
+  benefit (mean +0.195, LCB +0.0017, worst subgroup 0.0, E8o).
+- Cost accounting (RQ4): full VISTA costs 20–26× the trajectory baselines'
+  teacher tokens at matched executor spend; every accepted update is
+  evidence-bound and auditable.
+
+**The honest headline (E4–E8p, T4): zero accepted updates and zero measured
+performance recovery on stock EmbodiedBench.** Post-mortem isolates three
+substrate properties, each quantified: (i) fault sparsity — a correct S0
+yields ~1 skill-attributable fault per 20 episodes at 8B and 3/20 at 4B,
+below any feasible recurrence gate; the natural fault shape is
+goal-coverage ("all grounded goals satisfied, env says incomplete"), a
+class the five-field schema cannot repair (E11); (ii) subgroup invisibility
+— real, gate-certified benefits are bound to task subgroups the stock eval
+subsets underrepresent, and the gate's global task-level LCB structurally
+cannot accept subgroup-local repairs (E8p: LCB −0.0028 against mean +0.21);
+(iii) no attribution ground truth — nothing in stock EB labels which rule
+is wrong. Two rescue attempts failed by pre-registered criteria (T4-① 4B
+executor: 3/20 < 5/20, abstain 91.6%; T4-② minimal initial skill: 0/20
+attributions — a repair-only mechanism cannot grow from zero rules), and
+one incidental strong datapoint: a bad skill is worse than no skill
+(minimal 0.400 vs no_skill 0.550), the reliability narrative in miniature.
+
+**Ten method fixes (P1-1/3/4/5/7/8/9/10 + grounding rule + diagnostics
+configs)** were isolated by failing campaigns, each pinned by regression
+tests (210 passing). The repair loop now runs end-to-end — detection →
+attribution → evidence-derived repair → compiled verification → real paired
+rollouts → (calibrated) rejection — on injected faults; what no stock
+regime supplies is a fault population dense enough, measurable enough, and
+labeled enough for evolution to matter.
+
+### (2) Where to go — candidate plans
+
+**Plan A — Benchmark-first (recommended).** Build SkillFaultBench per E10 +
+T4 inputs (fault bank: skill-field faults + goal-coverage faults + partial-
+rule degraded starts; subgroup-stratified pools with power analysis;
+reliability metric family). Paper claim scoped to *reliable repair*: RQ1
+recovery deltas on the benchmark, RQ2 attribution ground truth, RQ3
+beneficial/harmful precision, RQ4 cost; stock-EB main table stays honest
+(ties at strong executor = nothing to fix). Step 0 inside this plan: the
+subgroup-LCB gate semantics (affected-subgroup LCB > 0 + global
+non-regression) — it is both a design fix and the benchmark's first tested
+hypothesis. Lowest risk; every component already exists in prototype.
+
+**Plan B — Method-first (higher claim, higher risk).** Extend the method
+before benchmarking: add a rule-growth capability (making "missing-rule"
+faults repairable and minimal starts viable) and a goal-model repair path
+(goal-coverage faults). Stronger paper claim (repair AND growth), but new
+mechanism work with all the iteration risk E8 demonstrated, and the
+evaluation-substrate problem remains unsolved until the benchmark exists
+anyway.
+
+**Plan C — Regime-sweep paper on stock EB.** Executor capability × fault
+density crossover matrix (4B/8B × S0/partial-rule starts), arguing WHEN
+skill evolution matters at all. Uses only existing harnesses; but T4 just
+showed both axes' rescue attempts fail the pre-registered bars, so the
+matrix's informative cells are exactly the ones stock EB cannot populate —
+this plan effectively converges to Plan A with extra steps.
+
+**Common prerequisite regardless of plan:** (1) subgroup-LCB gate semantics;
+(2) decide the growth-capability scope (repair-only vs repair+growth);
+(3) EB-NAV remaining 4 subsets + EB-ALF adapter for the generality arms.
+
+**Recommendation: Plan A with step 0 (gate semantics) immediately, Plan B's
+growth capability deferred to phase 2 unless the benchmark's fault bank
+makes "missing-rule" unavoidable.**
