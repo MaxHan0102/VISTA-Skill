@@ -550,7 +550,10 @@ def test_non_termination_patch_drops_model_policy_echo() -> None:
             before=TruthValue.TRUE,
             after=TruthValue.TRUE,
             source=DeltaSource.SKILL,
-            source_id="skill:v0:constraint_pick_occupies_gripper",
+            source_id=(
+                f"{faulty.skill_id}:v{faulty.version}:"
+                "constraint_pick_occupies_gripper"
+            ),
             skill_field=SkillField.CONSTRAINT,
         ),
         evidence=_ev(PredicateKey("not_holding"), TruthValue.FALSE, "ev:nh"),
@@ -594,6 +597,8 @@ def test_non_termination_patch_drops_model_policy_echo() -> None:
     # other fields' rules itself, so including them would duplicate rule IDs
     # (E8k crashed the whole experiment this way).
     assert all(r.field is SkillField.CONSTRAINT for r in patch.prediction_rules)
-    rule = next(r for r in patch.prediction_rules if r.predicate == "not_holding")
-    assert rule.after is TruthValue.FALSE
-    assert rule.rule_id == "constraint_pick_occupies_gripper"
+    rules = {rule.rule_id: rule for rule in patch.prediction_rules}
+    assert rules["constraint_pick_occupies_gripper"].after is TruthValue.FALSE
+    # Pick and place share the same predicate name. Evidence sourced from the
+    # pick rule must not corrupt the unrelated place rule in the same field.
+    assert rules["constraint_place_frees_gripper"].after is TruthValue.TRUE

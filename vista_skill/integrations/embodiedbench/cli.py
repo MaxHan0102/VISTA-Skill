@@ -900,6 +900,19 @@ def _make_audit_evaluator(
         cache_key = (skill_digest(skill), coordinate.episode_id, coordinate.seed)
         if cache_key in cache:
             return cache[cache_key]
+        artifact = (
+            output_dir
+            / "update_audit_rollouts"
+            / coordinate.episode_id
+            / f"s{coordinate.seed}_{skill_digest(skill)}.jsonl"
+        )
+        completed = _load_completed_audit_rollout(
+            artifact, expected_episode_id=coordinate.episode_id
+        )
+        if completed is not None:
+            cache[cache_key] = completed
+            return completed
+        artifact = _next_audit_resume_artifact(artifact)
         seed_process_rngs(coordinate.seed)
         env = create_habitat_env(
             "train_validation",
@@ -915,12 +928,6 @@ def _make_audit_evaluator(
         )
         try:
             seed_habitat_env(env, coordinate.seed)
-            artifact = (
-                output_dir
-                / "update_audit_rollouts"
-                / coordinate.episode_id
-                / f"s{coordinate.seed}_{skill_digest(skill)}.jsonl"
-            )
             frozen_skill = replace(skill, frozen=True)
             runtime = VistaSkillEngine(
                 frozen_skill,
@@ -954,6 +961,53 @@ def _make_audit_evaluator(
         return score
 
     return PairedRolloutEvaluator({"audit": coordinates}, rollout)
+
+
+def _load_completed_audit_rollout(
+    artifact: Path, *, expected_episode_id: str
+) -> RolloutScore | None:
+    """Load a complete audit coordinate from disk after an interrupted run."""
+    candidates = (artifact, *sorted(artifact.parent.glob(f"{artifact.stem}.resume*.jsonl")))
+    for candidate in reversed(candidates):
+        if not candidate.is_file():
+            continue
+        episode_result = None
+        try:
+            with candidate.open(encoding="utf-8") as handle:
+                for line in handle:
+                    if not line.strip():
+                        continue
+                    record = json.loads(line)
+                    if record.get("event_type") == "episode_result":
+                        episode_result = record.get("payload")
+        except (OSError, json.JSONDecodeError):
+            continue
+        if episode_result is None:
+            continue
+        if str(episode_result.get("episode_id")) != str(expected_episode_id):
+            raise ValueError(f"cached audit episode mismatch: {candidate}")
+        environment_steps = int(episode_result["environment_steps"])
+        invalid_actions = int(episode_result["invalid_actions"])
+        return RolloutScore(
+            score=composite_task_score(
+                task_success=float(episode_result["task_success"]),
+                task_progress=float(episode_result["task_progress"]),
+                invalid_action_ratio=invalid_actions / max(1, environment_steps),
+            ),
+            success=bool(float(episode_result["task_success"])),
+        )
+    return None
+
+
+def _next_audit_resume_artifact(artifact: Path) -> Path:
+    if not artifact.exists():
+        return artifact
+    index = 1
+    while True:
+        candidate = artifact.with_name(f"{artifact.stem}.resume{index}.jsonl")
+        if not candidate.exists():
+            return candidate
+        index += 1
 
 
 def _paired_selection_coordinates(

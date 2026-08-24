@@ -156,6 +156,23 @@ PYTHONPATH=EmbodiedBench:. python -m vista_skill.integrations.embodiedbench.cli 
 `experiment_manifest.json`. A fresh `--output-dir` is required for every
 invocation.
 
+If an `experiment` process is interrupted after acquisition while
+`update_audit.json` is still absent, resume only the independent audit with:
+
+```bash
+PYTHONPATH=EmbodiedBench:. python scripts/resume_phase2_update_audit.py \
+  --run-dir running/<campaign>/seed_0 \
+  --config configs/<matching-config>.json \
+  --manifest configs/eb_hab_train_validation_manifest.json \
+  --executor-base-url http://127.0.0.1:8000/v1
+```
+
+The command verifies the config/manifest/split digests recorded in lineage and
+loads only rollout JSONL files containing a complete `episode_result` as disk
+cache. An interrupted JSONL is retained; its replacement is written as a new
+`.resumeN.jsonl` artifact. The command refuses to run once `update_audit.json`
+exists and never reruns acquisition or proposal generation.
+
 `evaluate --stage official_test --eval-set <subset>` supports each of the six
 stock EB-Hab test subsets. `configs/methods.json` records implementation status:
 the Full VISTA workflow, the frozen No Skill/Static controls, **and the three

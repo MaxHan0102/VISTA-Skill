@@ -672,12 +672,13 @@ def _evidence_corrected_rules(
 ) -> tuple[SkillPredictionRule, ...] | None:
     """Derive the field's compiled rules with evidence-corrected values.
 
-    For each skill rule whose predicate the cluster's evidence refutes
+    For each skill rule whose provenance the cluster's evidence refutes
     (covered contradiction / missing progress on a skill-sourced
-    expectation), set ``after`` to the observed value. Returns None when the
-    cluster implicates no compiled rule of this field (model output stands).
+    expectation), set ``after`` to the observed value. Provenance is required
+    because distinct rules can predict the same predicate. Returns None when
+    the cluster implicates no compiled rule of this field (model output stands).
     """
-    observed: dict[str, TruthValue] = {}
+    observed_by_source: dict[str, TruthValue] = {}
     for item in cluster.items:
         mismatch = item.mismatch
         if (
@@ -686,8 +687,8 @@ def _evidence_corrected_rules(
             and mismatch.expected.skill_field is field
             and mismatch.evidence is not None
         ):
-            observed[mismatch.key.name] = mismatch.evidence.after
-    if not observed:
+            observed_by_source[mismatch.expected.source_id] = mismatch.evidence.after
+    if not observed_by_source:
         return None
     corrected = []
     touched = False
@@ -696,8 +697,9 @@ def _evidence_corrected_rules(
             # The applier retains other fields' rules itself and appends the
             # patch's rules; returning them here would duplicate them.
             continue
-        if rule.predicate.split("(")[0] in observed:
-            value = observed[rule.predicate.split("(")[0]]
+        source_id = f"{skill.skill_id}:v{skill.version}:{rule.rule_id}"
+        if source_id in observed_by_source:
+            value = observed_by_source[source_id]
             if value is not rule.after:
                 touched = True
             corrected.append(replace(rule, after=value))
