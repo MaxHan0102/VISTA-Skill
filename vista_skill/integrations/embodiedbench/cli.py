@@ -29,7 +29,16 @@ from vista_skill.evaluation import (
     composite_task_score,
 )
 from vista_skill.fault_injection import FaultType, inject_skill_fault
-from vista_skill.evidence import EvidenceExtractor, _nav_feedback_strategy
+from vista_skill.evidence import (
+    EvidenceExtractor,
+    EvidenceExtractorConfig,
+    _nav_feedback_strategy,
+)
+from vista_skill.evidence_guard import (
+    EvidenceGuardConfig,
+    EvidenceReliabilityGuard,
+    GuardMode,
+)
 from vista_skill.integrations.embodiedbench.environment import (
     create_habitat_env,
     create_nav_env,
@@ -46,7 +55,9 @@ from vista_skill.integrations.embodiedbench.runner import (
     EpisodeResult,
     HabitatRolloutRunner,
 )
+from vista_skill.integrations.embodiedbench.state_oracle import HabitatStateOracle
 from vista_skill.lineage import LineageStore
+from vista_skill.meta_skills import EvolutionMetaSkill, frozen_meta_skills
 from vista_skill.models import (
     JsonAttributionTeacher,
     JsonBoundedPatchGenerator,
@@ -144,6 +155,28 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         action="store_true",
         help="Allow reduced episode counts; outputs are not controlled-protocol results.",
     )
+    experiment.add_argument(
+        "--state-oracle-labels",
+        action="store_true",
+        help=(
+            "Write evaluation-only Habitat PDDL predicate labels next to transitions. "
+            "Requires --diagnostic and is never exposed to the executor or method model."
+        ),
+    )
+    experiment.add_argument(
+        "--evidence-guard",
+        choices=("none", "threshold", "strict", "authority_aware"),
+        default="none",
+        help="Phase3A diagnostic evidence fusion arm; requires --diagnostic.",
+    )
+    experiment.add_argument("--guard-min-visual-confidence", type=float, default=0.75)
+    experiment.add_argument("--guard-min-visual-coverage", type=float, default=0.50)
+    experiment.add_argument(
+        "--meta-skills",
+        choices=("none", "frozen_v1"),
+        default="none",
+        help="Phase3C frozen Meta-Skill diagnostic arm; requires --diagnostic and --method full.",
+    )
 
     evaluate = subparsers.add_parser(
         "evaluate", help="Evaluate a digest-checked frozen Skill with evolution disabled."
@@ -170,6 +203,12 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     evaluate.add_argument("--output", default="running/vista_skill/frozen_audit/events.jsonl")
     evaluate.add_argument("--seed", type=int, default=0)
     evaluate.add_argument("--max-episodes", type=int)
+    evaluate.add_argument(
+        "--meta-skills",
+        choices=("none", "frozen_v1"),
+        default="none",
+        help="Add only the frozen observation-and-recovery Skill to the executor prompt.",
+    )
     args = parser.parse_args(argv)
     if args.n_shots is None:
         # Match stock EmbodiedBench per-env defaults (eb-hab.yaml=10, eb-nav.yaml=3)
@@ -229,6 +268,18 @@ def _run_experiment(args: argparse.Namespace) -> None:
         raise ValueError("--initial-skill is a diagnostic deviation and requires --diagnostic")
     if args.initial_skill != "shared" and args.skill_fault:
         raise ValueError("--initial-skill and --skill-fault are exclusive regime knobs")
+    if args.state_oracle_labels and not args.diagnostic:
+        raise ValueError("--state-oracle-labels is evaluation-only and requires --diagnostic")
+    if args.evidence_guard != "none" and not args.diagnostic:
+        raise ValueError("--evidence-guard is a Phase3A deviation and requires --diagnostic")
+    if args.meta_skills != "none" and not args.diagnostic:
+        raise ValueError("--meta-skills is a Phase3C deviation and requires --diagnostic")
+    if args.meta_skills != "none" and args.method != "full":
+        raise ValueError("--meta-skills currently requires --method full")
+    for name in ("guard_min_visual_confidence", "guard_min_visual_coverage"):
+        value = float(getattr(args, name))
+        if not 0.0 <= value <= 1.0:
+            raise ValueError(f"--{name.replace('_', '-')} must be in [0, 1]")
     output_dir = Path(args.output_dir)
     _require_new_output(output_dir, "experiment output directory")
     experiment_id = uuid.uuid4().hex
@@ -254,6 +305,14 @@ def _run_experiment(args: argparse.Namespace) -> None:
             engine_model,
             skill_fault=args.skill_fault,
             initial_skill=args.initial_skill,
+            evidence_guard=args.evidence_guard,
+            guard_min_visual_confidence=args.guard_min_visual_confidence,
+            guard_min_visual_coverage=args.guard_min_visual_coverage,
+            attribution_meta_skill=(
+                None
+                if args.meta_skills == "none"
+                else frozen_meta_skills().attribute_and_scope
+            ),
         )
 
         acquisition = run_manifest.coordinates_for("acquisition")
@@ -286,7 +345,12 @@ def _run_experiment(args: argparse.Namespace) -> None:
                 lineage = LineageStore(run_dir / "lineage.jsonl")
                 workflow = EvolutionWorkflow(
                     engine,
-                    generator=JsonBoundedPatchGenerator(method_model),
+                    generator=JsonBoundedPatchGenerator(
+                        method_model,
+                        None
+                        if args.meta_skills == "none"
+                        else frozen_meta_skills().patch_and_test,
+                    ),
                     paired_evaluator=paired,
                     lineage=lineage,
                     config=config,
@@ -401,6 +465,10 @@ def _run_frozen_evaluation(args: argparse.Namespace) -> None:
     _require_new_output(output, "event artifact")
     _require_new_output(summary_output, "evaluation summary")
     config = load_config(args.config)
+    if args.meta_skills != "none" and not args.diagnostic:
+        raise ValueError("--meta-skills is a Phase3C deviation and requires --diagnostic")
+    if args.meta_skills != "none" and args.mode == "no_skill":
+        raise ValueError("--meta-skills requires a Skill-injected evaluation mode")
     run_id = f"evaluate_{uuid.uuid4().hex}"
     is_nav = args.env == "eb-nav"
     # EB-Nav ships no train_validation split, so there is no controlled manifest to verify.
@@ -498,6 +566,10 @@ def _run_frozen_evaluation(args: argparse.Namespace) -> None:
             "teacher_enabled": False,
             "attribution_enabled": False,
             "patching_enabled": False,
+            "meta_skills": args.meta_skills,
+            "meta_skill_sha256": (
+                None if args.meta_skills == "none" else frozen_meta_skills().sha256
+            ),
             "episodes": len(results),
             "diagnostic": args.diagnostic,
             "diagnostic_subset": args.max_episodes is not None,
@@ -577,6 +649,10 @@ def _make_engine(
     *,
     skill_fault: str | None = None,
     initial_skill: str = "shared",
+    evidence_guard: str = "none",
+    guard_min_visual_confidence: float = 0.75,
+    guard_min_visual_coverage: float = 0.50,
+    attribution_meta_skill: EvolutionMetaSkill | None = None,
 ) -> tuple[VistaSkillEngine, JsonGoalGrounder | None]:
     kwargs = {
         "ledger": BeliefLedger(config.belief),
@@ -585,11 +661,42 @@ def _make_engine(
     }
     grounder = None
     if model is not None:
+        guard = None
+        include_feedback = True
+        evidence_config = None
+        if evidence_guard == "threshold":
+            evidence_config = EvidenceExtractorConfig(
+                min_visual_confidence=guard_min_visual_confidence,
+                min_visual_coverage=guard_min_visual_coverage,
+            )
+        elif evidence_guard in {"strict", "authority_aware"}:
+            # Guard v2 uses the same single feedback-conditioned VLM call as
+            # the current method, then audits it against independently parsed
+            # structured feedback and action-local reliability rules.
+            include_feedback = True
+            guard = EvidenceReliabilityGuard(
+                EvidenceGuardConfig(
+                    mode=(
+                        GuardMode.STRICT
+                        if evidence_guard == "strict"
+                        else GuardMode.AUTHORITY_AWARE
+                    ),
+                    min_visual_confidence=guard_min_visual_confidence,
+                    min_visual_coverage=guard_min_visual_coverage,
+                )
+            )
         kwargs.update(
             {
-                "evidence_extractor": EvidenceExtractor(JsonVisualEvidenceProvider(model)),
+                "evidence_extractor": EvidenceExtractor(
+                    JsonVisualEvidenceProvider(
+                        model, include_feedback=include_feedback
+                    ),
+                    config=evidence_config,
+                    guard=guard,
+                ),
                 "credit_assigner": CreditAssigner(
-                    JsonAttributionTeacher(model), config.attribution
+                    JsonAttributionTeacher(model, attribution_meta_skill),
+                    config.attribution,
                 ),
             }
         )
@@ -714,6 +821,11 @@ def _make_runner(
         goal_predicate_provider=goal_predicate_provider,
         expected_episode_ids=expected_episode_ids,
         task_coordinates=task_coordinates,
+        state_oracle=(
+            HabitatStateOracle()
+            if getattr(args, "state_oracle_labels", False)
+            else None
+        ),
     )
 
 
@@ -786,14 +898,24 @@ def _make_planner(
         configure_planner_inference_seed(planner, rollout_seed)
     if not inject_skill:
         return planner
+    observation_meta_skill = (
+        ""
+        if getattr(args, "meta_skills", "none") == "none"
+        else frozen_meta_skills().observe_and_recover.instruction
+    )
     if engine is None:
         static_ledger = BeliefLedger()
-        planner.configure_vista_prompt(lambda: skill, lambda: static_ledger)
+        planner.configure_vista_prompt(
+            lambda: skill,
+            lambda: static_ledger,
+            observation_meta_skill_provider=lambda: observation_meta_skill,
+        )
     else:
         planner.configure_vista_prompt(
             lambda: engine.skill,
             lambda: engine.ledger,
             lambda: engine.emphasis_buffer.render(engine.current_step),
+            lambda: observation_meta_skill,
         )
     return planner
 
@@ -1127,6 +1249,22 @@ def _protocol_record(
         "frozen": True,
         "evolution_seeds": _parse_seeds(args.evolution_seeds),
         "diagnostic": args.diagnostic,
+        "state_oracle_labels": bool(
+            getattr(args, "state_oracle_labels", False)
+        ),
+        "evidence_guard": getattr(args, "evidence_guard", "none"),
+        "guard_min_visual_confidence": float(
+            getattr(args, "guard_min_visual_confidence", 0.75)
+        ),
+        "guard_min_visual_coverage": float(
+            getattr(args, "guard_min_visual_coverage", 0.50)
+        ),
+        "meta_skills": getattr(args, "meta_skills", "none"),
+        "meta_skill_sha256": (
+            None
+            if getattr(args, "meta_skills", "none") == "none"
+            else frozen_meta_skills().sha256
+        ),
         "env": args.env,
         "rng_seed_policy": (
             "python+numpy+torch+ai2thor+openai_request"

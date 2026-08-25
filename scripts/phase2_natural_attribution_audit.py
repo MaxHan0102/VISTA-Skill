@@ -15,6 +15,7 @@ from typing import Any, Iterable
 
 from vista_skill.attribution import CreditAssigner
 from vista_skill.metrics import macro_f1
+from vista_skill.meta_skills import frozen_meta_skills
 from vista_skill.models import JsonAttributionTeacher, OpenAICompatibleJsonModel
 from vista_skill.schemas import (
     AttributionContext,
@@ -54,6 +55,7 @@ def _args() -> argparse.Namespace:
     )
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--meta-skills", choices=("none", "frozen_v1"), default="none")
     return parser.parse_args()
 
 
@@ -251,13 +253,18 @@ def main() -> int:
         max_tokens=512,
         seed=args.seed,
     )
-    teacher = JsonAttributionTeacher(model)
+    bundle = None if args.meta_skills == "none" else frozen_meta_skills()
+    teacher = JsonAttributionTeacher(
+        model, None if bundle is None else bundle.attribute_and_scope
+    )
     relevant_assigner = CreditAssigner()
+    meta_rule_first_assigner = CreditAssigner(teacher)
     conditions: dict[str, list[dict[str, Any]]] = {
         "recorded_rule_first": [],
         "decisive_skill_partition_rule_first": [],
         "fault_relevant_oracle_filter": [],
         "direct_qwen_teacher": [],
+        "rule_first_with_teacher": [],
     }
     for index, case in enumerate(cases):
         payload = case["payload"]
@@ -270,6 +277,7 @@ def main() -> int:
             relevant_assigner, case["mismatches"], case["context"]
         )
         error = None
+        rule_first_error = None
         try:
             teacher_result = teacher.assign(case["mismatches"], case["context"])
             teacher_target = teacher_result.target.value
@@ -278,6 +286,16 @@ def main() -> int:
             teacher_target = "invalid"
             teacher_field = "invalid"
             error = f"{type(exc).__name__}: {exc}"
+        try:
+            rule_first_result = meta_rule_first_assigner.assign(
+                case["mismatches"], case["context"]
+            )
+            rule_first_target = rule_first_result.target.value
+            rule_first_field = _field(rule_first_result.field)
+        except Exception as exc:
+            rule_first_target = "invalid"
+            rule_first_field = "invalid"
+            rule_first_error = f"{type(exc).__name__}: {exc}"
         common = {
             "case_index": index,
             "episode_id": str(payload["episode_id"]),
@@ -315,6 +333,14 @@ def main() -> int:
                 "error": error,
             }
         )
+        conditions["rule_first_with_teacher"].append(
+            {
+                **common,
+                "predicted_target": rule_first_target,
+                "predicted_field": rule_first_field,
+                "error": rule_first_error,
+            }
+        )
         print(
             f"case={index + 1}/{len(cases)} gold={case['gold_target']} "
             f"recorded={recorded['target']} filtered={filtered_result.target.value} "
@@ -327,6 +353,8 @@ def main() -> int:
         "base_url": args.base_url,
         "model": args.model,
         "seed": args.seed,
+        "meta_skills": args.meta_skills,
+        "meta_skill_sha256": None if bundle is None else bundle.sha256,
         "gold_positive_rule_suffix": FAULT_PROFILES[args.fault]["rule_suffix"],
         "gold_positive_count": sum(case["gold_target"] == "skill_update" for case in cases),
         "conditions": {

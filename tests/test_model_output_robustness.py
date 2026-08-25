@@ -21,9 +21,13 @@ class _FakeJsonModel:
     def __init__(self, payload: dict) -> None:
         self.payload = payload
         self.schemas: list[dict] = []
+        self.requests: list[dict] = []
 
     def complete_json(self, *, system, content, schema, purpose) -> dict:
         self.schemas.append(schema)
+        self.requests.append(
+            {"system": system, "content": content, "purpose": purpose}
+        )
         return dict(self.payload)
 
 
@@ -113,6 +117,21 @@ def test_evidence_schema_forbids_empty_predicate_strings(tmp_path) -> None:
     JsonVisualEvidenceProvider(model).extract(_request(tmp_path))
     observation = model.schemas[0]["properties"]["observations"]["items"]
     assert observation["properties"]["predicate"]["minLength"] == 1
+
+
+def test_images_only_provider_omits_feedback_and_queries_pick_state(tmp_path) -> None:
+    model = _FakeJsonModel({"observations": []})
+    JsonVisualEvidenceProvider(model, include_feedback=False).extract(
+        _request(tmp_path)
+    )
+    request = model.requests[0]
+    prompt = json.loads(request["content"][-1]["text"])
+    assert "public_environment_feedback" not in prompt
+    assert set(prompt["query_predicates"]) >= {
+        "holding(apple_1)",
+        "not_holding",
+    }
+    assert request["purpose"] == "vista_visual_evidence_images_only"
 
 
 def test_patch_generator_payload_exposes_compiled_context() -> None:

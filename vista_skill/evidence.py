@@ -4,6 +4,8 @@ import re
 from dataclasses import dataclass
 from typing import Callable, Protocol, Sequence
 
+from vista_skill.evidence_guard import EvidenceGuardResult, EvidenceReliabilityGuard
+
 from vista_skill.schemas import (
     EvidenceRequest,
     EvidenceSource,
@@ -23,6 +25,7 @@ class EvidenceExtractorConfig:
     rule_confidence: float = 0.98
     visual_action_types: tuple[str, ...] = ("place",)
     min_visual_confidence: float = 0.5
+    min_visual_coverage: float = 0.0
 
 
 # A feedback strategy turns environment feedback into predicate evidence via the
@@ -53,13 +56,17 @@ class EvidenceExtractor:
         visual_provider: VisualEvidenceProvider | None = None,
         config: EvidenceExtractorConfig | None = None,
         feedback_strategy: FeedbackEvidenceStrategy | None = None,
+        guard: EvidenceReliabilityGuard | None = None,
     ) -> None:
         self.visual_provider = visual_provider
         self.config = config or EvidenceExtractorConfig()
         self.feedback_strategy = feedback_strategy or _habitat_feedback_strategy
+        self.guard = guard
+        self.last_guard_result: EvidenceGuardResult | None = None
 
     def extract(self, request: EvidenceRequest) -> tuple[PredicateEvidence, ...]:
-        evidence = list(self._from_feedback(request))
+        feedback = self.extract_feedback(request)
+        evidence = list(feedback)
         covered_keys = {item.key for item in evidence if item.after is not TruthValue.UNKNOWN}
         unresolved_goals = any(key not in covered_keys for key in request.goal_predicates)
         needs_visual = (
@@ -67,16 +74,43 @@ class EvidenceExtractor:
             or unresolved_goals
         )
         if self.visual_provider is not None and needs_visual:
-            visual_items = self.visual_provider.extract(request)
-            evidence.extend(
-                item
-                for item in visual_items
-                if item.confidence >= self.config.min_visual_confidence
+            visual_items = tuple(self.visual_provider.extract(request))
+            if self.guard is not None:
+                self.last_guard_result = self.guard.fuse(
+                    feedback,
+                    visual_items,
+                    request.pre_ledger,
+                    last_action_success=request.last_action_success,
+                    action=request.action,
+                )
+                evidence = list(self.last_guard_result.evidence)
+            else:
+                self.last_guard_result = None
+                evidence.extend(
+                    item
+                    for item in visual_items
+                    if item.confidence >= self.config.min_visual_confidence
+                    and item.coverage >= self.config.min_visual_coverage
+                )
+        elif self.guard is not None:
+            self.last_guard_result = self.guard.fuse(
+                feedback,
+                (),
+                request.pre_ledger,
+                last_action_success=request.last_action_success,
+                action=request.action,
             )
+            evidence = list(self.last_guard_result.evidence)
+        else:
+            self.last_guard_result = None
         completion = self._derive_task_completion(request, evidence)
         if completion is not None:
             evidence.append(completion)
         return self._deduplicate(evidence)
+
+    def extract_feedback(self, request: EvidenceRequest) -> tuple[PredicateEvidence, ...]:
+        """Expose the deterministic branch for controlled source ablations."""
+        return self._from_feedback(request)
 
     @staticmethod
     def _derive_task_completion(

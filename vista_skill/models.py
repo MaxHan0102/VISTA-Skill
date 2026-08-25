@@ -15,6 +15,7 @@ from vista_skill.baselines import (
 )
 from vista_skill.evolution import PatchGenerator, make_patch_id
 from vista_skill.clustering import EvidenceCluster
+from vista_skill.meta_skills import EvolutionMetaSkill
 from vista_skill.schemas import (
     AbstainReason,
     AttributionContext,
@@ -121,8 +122,9 @@ class OpenAICompatibleJsonModel:
 class JsonVisualEvidenceProvider:
     """Pre/post visual evidence provider with a leakage-safe request contract."""
 
-    def __init__(self, model: JsonModel) -> None:
+    def __init__(self, model: JsonModel, *, include_feedback: bool = True) -> None:
         self.model = model
+        self.include_feedback = include_feedback
 
     def extract(self, request: EvidenceRequest) -> Sequence[PredicateEvidence]:
         queries = _evidence_queries(request)
@@ -133,7 +135,6 @@ class JsonVisualEvidenceProvider:
                 "arguments": request.action.arguments,
                 "text": request.action.text,
             },
-            "public_environment_feedback": request.feedback,
             "pre_action_belief": [
                 {"predicate": item.key.render(), "value": item.value.value}
                 for item in request.pre_ledger
@@ -141,11 +142,17 @@ class JsonVisualEvidenceProvider:
             "query_predicates": [key.render() for key in queries],
             "rule": "Not visible means unknown, not false. Preserve numbered instance identities.",
         }
+        if self.include_feedback:
+            prompt["public_environment_feedback"] = request.feedback
         try:
             result = self.model.complete_json(
                 system=(
-                    "Extract only visual evidence supported by the two images and public feedback. "
-                    "Do not infer desired or predicted effects. Return unknown when coverage is insufficient."
+                    (
+                        "Extract only evidence supported by the two images and public feedback. "
+                        if self.include_feedback
+                        else "Extract only evidence directly supported by the two images. "
+                    )
+                    + "Do not infer desired or predicted effects. Return unknown when coverage is insufficient."
                 ),
                 content=[
                     {"type": "image_url", "image_url": {"url": _image_data_url(request.pre_image)}},
@@ -153,7 +160,11 @@ class JsonVisualEvidenceProvider:
                     {"type": "text", "text": json.dumps(prompt, sort_keys=True)},
                 ],
                 schema=_evidence_schema(),
-                purpose="vista_visual_evidence",
+                purpose=(
+                    "vista_visual_evidence"
+                    if self.include_feedback
+                    else "vista_visual_evidence_images_only"
+                ),
             )
         except json.JSONDecodeError:
             # A truncated/malformed evidence response must not abort the rollout;
@@ -283,8 +294,13 @@ class JsonGoalGrounder:
 
 
 class JsonAttributionTeacher:
-    def __init__(self, model: JsonModel) -> None:
+    def __init__(
+        self,
+        model: JsonModel,
+        meta_skill: EvolutionMetaSkill | None = None,
+    ) -> None:
         self.model = model
+        self.meta_skill = meta_skill
 
     def assign(
         self,
@@ -305,14 +321,21 @@ class JsonAttributionTeacher:
             "allowed_fields": [field.value for field in SkillField],
         }
         try:
-            result = self.model.complete_json(
-                system=(
+            system = (
                     "Assign a persistent-memory update target from cited transition evidence. "
                     "Prefer abstention when evidence cannot distinguish causes. A field is legal only for skill_update."
-                ),
+                )
+            if self.meta_skill is not None:
+                system += "\n\n## Frozen evolution procedure\n" + self.meta_skill.instruction
+            result = self.model.complete_json(
+                system=system,
                 content=[{"type": "text", "text": json.dumps(payload, sort_keys=True)}],
                 schema=_attribution_schema(),
-                purpose="vista_attribution",
+                purpose=(
+                    "vista_attribution"
+                    if self.meta_skill is None
+                    else "vista_meta_attribution"
+                ),
             )
         except json.JSONDecodeError:
             # A malformed/truncated teacher response must never abort the rollout;
@@ -407,8 +430,13 @@ class JsonTrajectoryTeacher:
 
 
 class JsonBoundedPatchGenerator(PatchGenerator):
-    def __init__(self, model: JsonModel) -> None:
+    def __init__(
+        self,
+        model: JsonModel,
+        meta_skill: EvolutionMetaSkill | None = None,
+    ) -> None:
         self.model = model
+        self.meta_skill = meta_skill
 
     def propose(self, skill: SkillSpec, cluster: EvidenceCluster) -> SkillPatch:
         field = cluster.key.field
@@ -455,11 +483,18 @@ class JsonBoundedPatchGenerator(PatchGenerator):
                 "do not introduce object instance identifiers or unsupported facts",
             ],
         }
+        system = "Generate one evidence-bound, exact-target field patch. Never rewrite the full skill."
+        if self.meta_skill is not None:
+            system += "\n\n## Frozen evolution procedure\n" + self.meta_skill.instruction
         result = self.model.complete_json(
-            system="Generate one evidence-bound, exact-target field patch. Never rewrite the full skill.",
+            system=system,
             content=[{"type": "text", "text": json.dumps(payload, sort_keys=True)}],
             schema=_patch_schema(),
-            purpose="vista_bounded_patch",
+            purpose=(
+                "vista_bounded_patch"
+                if self.meta_skill is None
+                else "vista_meta_bounded_patch"
+            ),
         )
         if (
             field is SkillField.TERMINATION
@@ -559,7 +594,15 @@ def _evidence_queries(request: EvidenceRequest) -> tuple[PredicateKey, ...]:
     """Build queries only from evidence-side inputs, never from predictions."""
     queries = [*request.goal_predicates, *(item.key for item in request.pre_ledger)]
     action = request.action
-    if action.action_type == "place" and action.arguments:
+    if action.action_type == "pick" and action.arguments:
+        queries.extend(
+            (
+                PredicateKey("holding", (action.arguments[0],)),
+                PredicateKey("not_holding"),
+            )
+        )
+    elif action.action_type == "place" and action.arguments:
+        queries.append(PredicateKey("not_holding"))
         receptacle = action.arguments[0]
         for item in request.pre_ledger:
             if (

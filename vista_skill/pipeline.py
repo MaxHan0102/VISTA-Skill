@@ -189,6 +189,12 @@ class VistaSkillEngine:
             goal_predicates=prepared.goal_predicates,
         )
         evidence = self.evidence_extractor.extract(request)
+        event_metadata = dict(prepared.metadata)
+        guard_result = getattr(self.evidence_extractor, "last_guard_result", None)
+        if guard_result is not None:
+            event_metadata["evidence_guard"] = {
+                "decisions": guard_result.decisions,
+            }
         # Every reliable evidence packet advances belief. Routing happens later.
         self.ledger.merge(evidence)
         mismatches = ()
@@ -244,7 +250,7 @@ class VistaSkillEngine:
             evidence_delta=evidence,
             mismatches=mismatches,
             attribution=attribution,
-            metadata=prepared.metadata,
+            metadata=event_metadata,
         )
         if attribution is not None and attribution.target is UpdateTarget.SKILL_UPDATE:
             eligible = [

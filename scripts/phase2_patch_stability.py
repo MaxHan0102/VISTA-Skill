@@ -3,12 +3,14 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 
 from vista_skill.clustering import ClusterItem, ClusterKey, EvidenceCluster
 from vista_skill.evolution import BoundedPatchApplier
 from vista_skill.fault_injection import FaultType, inject_skill_fault
 from vista_skill.models import JsonBoundedPatchGenerator, OpenAICompatibleJsonModel
+from vista_skill.meta_skills import frozen_meta_skills
 from vista_skill.schemas import (
     AttributionResult,
     DeltaSource,
@@ -35,6 +37,7 @@ def _args() -> argparse.Namespace:
         default="constraint_pick_multihold",
     )
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--meta-skills", choices=("none", "frozen_v1"), default="none")
     return parser.parse_args()
 
 
@@ -121,6 +124,7 @@ def main() -> int:
     parent = inject_skill_fault(initialize_shared_skill(), fault_type)
     cluster, target_rule_id, corrected_value = _cluster(parent, args.fault)
     trials = []
+    bundle = None if args.meta_skills == "none" else frozen_meta_skills()
     for seed in range(args.trials):
         model = OpenAICompatibleJsonModel(
             args.model,
@@ -132,7 +136,9 @@ def main() -> int:
         )
         record = {"seed": seed}
         try:
-            patch = JsonBoundedPatchGenerator(model).propose(parent, cluster)
+            patch = JsonBoundedPatchGenerator(
+                model, None if bundle is None else bundle.patch_and_test
+            ).propose(parent, cluster)
             candidate = BoundedPatchApplier().apply(parent, patch)
             rules = {rule.rule_id: rule for rule in candidate.prediction_rules}
             target_repaired = rules[target_rule_id].after is corrected_value
@@ -141,9 +147,22 @@ def main() -> int:
                 for rule in parent.prediction_rules
                 if rule.field is patch.field and rule.rule_id != target_rule_id
             )
+            authored_text = "\n".join((patch.new, patch.scope, patch.rationale))
+            environment_neutral = not any(
+                value.casefold() in authored_text.casefold()
+                for value in ("EmbodiedBench", "EB-HAB", "EB-NAV")
+            ) and re.search(
+                r"\b[a-z][a-z_]*_[0-9]+\b", authored_text, flags=re.IGNORECASE
+            ) is None
+            has_test_intent = all(
+                value in patch.rationale.casefold()
+                for value in ("replay", "compare")
+            )
             record.update(
                 {
-                    "passed": target_repaired and unrelated_preserved,
+                    "passed": (
+                        target_repaired and unrelated_preserved and environment_neutral
+                    ),
                     "patch_id": patch.patch_id,
                     "operation": patch.operation.value,
                     "old": patch.old,
@@ -151,6 +170,10 @@ def main() -> int:
                     "target_rule_id": target_rule_id,
                     "target_rule_after": rules[target_rule_id].after.value,
                     "unrelated_same_field_rules_preserved": unrelated_preserved,
+                    "environment_neutral": environment_neutral,
+                    "has_test_intent": has_test_intent,
+                    "scope": patch.scope,
+                    "rationale": patch.rationale,
                     "candidate_sha256": skill_digest(candidate),
                     "usage": {
                         purpose: {
@@ -173,6 +196,8 @@ def main() -> int:
         "base_url": args.base_url,
         "model": args.model,
         "fault": args.fault,
+        "meta_skills": args.meta_skills,
+        "meta_skill_sha256": None if bundle is None else bundle.sha256,
         "trials": trials,
         "passed": sum(item["passed"] for item in trials),
         "total": len(trials),

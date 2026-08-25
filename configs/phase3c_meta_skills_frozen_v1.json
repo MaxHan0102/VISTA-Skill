@@ -1,0 +1,36 @@
+{
+  "version": "phase3c_frozen_v1",
+  "sha256": "ec349ec8bbb0a6dced55267fc0d44c0259a4772f384b3adab765fa0faeff43cc",
+  "whitespace_token_proxy": 423,
+  "skills": [
+    {
+      "name": "Observe-and-Recover",
+      "stage": "executor_observation",
+      "allowed_inputs": [
+        "current_action_surface",
+        "legal_observation_capabilities",
+        "unresolved_local_facts",
+        "public_feedback",
+        "local_action_history"
+      ],
+      "instruction": "Observation-and-recovery procedure:\n1. Before an irreversible action, or before repeating a failed action, classify every decision-critical fact as supported, unknown, or conflicted.\n2. If an unknown fact could change the next action and a legal low-cost observation is available, take one targeted observation that can resolve it. Do not treat absence from one view as false.\n3. Treat action feedback as evidence, not as an infallible fact. Compare it with the next observation and the local action history.\n4. When sources conflict, avoid repeating the unchanged action. Change viewpoint, re-observe the affected entity, or verify a prerequisite. Use the cheapest legal recovery that can distinguish the competing explanations.\n5. Proceed when the required facts are supported. If they remain unobservable after the available checks, preserve them as unknown and choose a reversible alternative."
+    },
+    {
+      "name": "Attribute-and-Scope",
+      "stage": "transition_attribution",
+      "allowed_inputs": ["mismatches", "attribution_context"],
+      "instruction": "Causal attribution procedure for persistent memory:\n1. Work only from cited transition evidence. If visibility, coverage, identity, or cause is ambiguous, abstain from a persistent update.\n2. First exclude an execution lapse, an unmet prerequisite, and a suspected stochastic outcome. These do not justify changing a persistent procedure.\n3. Use belief_refresh when the contradiction concerns stale local state, unknown treated as false, object identity, or an expectation that did not originate in a persistent procedure field.\n4. Use skill_update only when the executor followed the relevant procedure, supported evidence contradicts a procedure-sourced expectation, and the cited expectation identifies one field. Prefer recurring or independently supported evidence; otherwise abstain.\n5. For skill_update, map only the implicated contract: activation for when it applies; procedure for action order; effect for predicted results; constraint for prerequisites or prohibitions; termination for completion. Never infer a field from the desired goal alone.\n6. Cite only supplied mismatch and evidence identifiers. A field is legal only with skill_update."
+    },
+    {
+      "name": "Patch-and-Test",
+      "stage": "bounded_patch_proposal",
+      "allowed_inputs": [
+        "attributed_field",
+        "current_field_statements",
+        "recurring_evidence_cluster",
+        "compiled_field_contract"
+      ],
+      "instruction": "Bounded patch-and-test procedure:\n1. Change only the attributed field and the smallest exact statement needed to resolve the cited recurring contradiction. Do not rewrite the whole procedure.\n2. When the field has a compiled contract, repair the compiled value or rule as well as its text. Preserve every unrelated statement and compiled rule exactly.\n3. Generalize over action type, predicate, and role; never encode an episode, scene, numbered object instance, benchmark, or observed outcome as a special case.\n4. Bind the patch to supplied evidence identifiers. Do not add unsupported facts.\n5. In the rationale, state a falsifiable test intent: replay the cited condition, compare parent and candidate on the affected transition, and check unrelated protected behavior for regression. The deterministic gate, not this procedure, makes the acceptance decision."
+    }
+  ]
+}

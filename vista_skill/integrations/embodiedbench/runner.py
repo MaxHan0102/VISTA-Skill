@@ -14,6 +14,13 @@ from vista_skill.schemas import (
     ActionCall,
     AttributionContext,
     PredicateKey,
+    TruthValue,
+)
+from vista_skill.integrations.embodiedbench.state_oracle import (
+    HabitatStateOracle,
+    OraclePredicateObservation,
+    StateOracleTransitionLabel,
+    oracle_query_keys,
 )
 
 
@@ -81,6 +88,7 @@ class HabitatRolloutRunner:
         config: RunnerConfig | None = None,
         expected_episode_ids: tuple[str, ...] | None = None,
         task_coordinates: Sequence[TaskCoordinate] = (),
+        state_oracle: HabitatStateOracle | None = None,
     ) -> None:
         self.env = env
         self.planner = planner
@@ -95,6 +103,7 @@ class HabitatRolloutRunner:
         self.task_coordinates = {
             item.episode_id: item for item in task_coordinates
         }
+        self.state_oracle = state_oracle
 
     def run(self, *, max_episodes: int | None = None) -> tuple[EpisodeResult, ...]:
         available = int(self.env.number_of_episodes) - self.env._current_episode_num
@@ -160,6 +169,8 @@ class HabitatRolloutRunner:
                 action_texts.append(action_text)
                 action_call = parse_action_call(action_id, raw_action, action_text)
                 prepared = None
+                oracle_keys = ()
+                oracle_pre = ()
                 if self.engine is not None:
                     attribution_context, context_audit = _online_attribution_context(
                         self.engine,
@@ -180,6 +191,13 @@ class HabitatRolloutRunner:
                         attribution_context=attribution_context,
                         metadata={"attribution_context": context_audit},
                     )
+                    if self.state_oracle is not None:
+                        oracle_keys = oracle_query_keys(
+                            action_call,
+                            prepared.pre_ledger,
+                            goal_predicates,
+                        )
+                        oracle_pre = self.state_oracle.observe(self.env, oracle_keys)
                 observation, reward, done, info = self.env.step(action_id, reasoning=reasoning)
                 post_image = self.env.save_image(observation)
                 self.planner.update_info(info)
@@ -200,6 +218,39 @@ class HabitatRolloutRunner:
                         last_action_success=bool(info.get("last_action_success", 0)),
                     )
                     self.writer.append("transition", event)
+                    if self.state_oracle is not None:
+                        oracle_keys = tuple(
+                            dict.fromkeys(
+                                (
+                                    *oracle_keys,
+                                    *(item.key for item in event.evidence_delta),
+                                )
+                            )
+                        )
+                        oracle_post = self.state_oracle.observe(self.env, oracle_keys)
+                        pre_by_key = {item.key: item for item in oracle_pre}
+                        oracle_pre = tuple(
+                            pre_by_key.get(key)
+                            or OraclePredicateObservation(
+                                key=key,
+                                value=TruthValue.UNKNOWN,
+                                rationale=(
+                                    "provider emitted a predicate outside the pre-action "
+                                    "evaluation query set"
+                                ),
+                            )
+                            for key in oracle_keys
+                        )
+                        self.writer.append(
+                            "state_oracle_label",
+                            StateOracleTransitionLabel(
+                                episode_id=episode_id,
+                                step_id=int(info.get("env_step", prepared.step_id)),
+                                query_keys=oracle_keys,
+                                pre=oracle_pre,
+                                post=oracle_post,
+                            ),
+                        )
                 self.writer.append(
                     "evaluation_label",
                     {

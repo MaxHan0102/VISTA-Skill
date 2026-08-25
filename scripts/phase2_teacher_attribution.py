@@ -10,6 +10,7 @@ from statistics import mean, pstdev
 from vista_skill.action_schema import FixedActionSchema
 from vista_skill.fault_injection import build_fault_cases
 from vista_skill.metrics import macro_f1
+from vista_skill.meta_skills import frozen_meta_skills
 from vista_skill.models import JsonAttributionTeacher, OpenAICompatibleJsonModel
 from vista_skill.skills import initialize_shared_skill
 
@@ -20,6 +21,7 @@ def _args() -> argparse.Namespace:
     parser.add_argument("--model", default="Qwen/Qwen3-VL-8B-Instruct")
     parser.add_argument("--seeds", type=int, default=5)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--meta-skills", choices=("none", "frozen_v1"), default="none")
     return parser.parse_args()
 
 
@@ -41,7 +43,10 @@ def main() -> int:
             max_tokens=512,
             seed=seed,
         )
-        teacher = JsonAttributionTeacher(model)
+        bundle = None if args.meta_skills == "none" else frozen_meta_skills()
+        teacher = JsonAttributionTeacher(
+            model, None if bundle is None else bundle.attribute_and_scope
+        )
         rows = []
         for index, case in enumerate(cases):
             try:
@@ -106,11 +111,17 @@ def main() -> int:
     target_values = [row["target_macro_f1"] for row in seed_reports]
     field_values = [row["field_macro_f1"] for row in seed_reports]
     result = {
-        "analysis_type": "direct_teacher_attribution_without_rule_first",
+        "analysis_type": (
+            "direct_teacher_attribution_without_rule_first"
+            if args.meta_skills == "none"
+            else "meta_skill_teacher_attribution_without_rule_first"
+        ),
         "base_url": args.base_url,
         "model": args.model,
         "n_cases": len(cases),
         "seeds": args.seeds,
+        "meta_skills": args.meta_skills,
+        "meta_skill_sha256": None if bundle is None else bundle.sha256,
         "target_macro_f1": {
             "mean": mean(target_values),
             "std": pstdev(target_values),

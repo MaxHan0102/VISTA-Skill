@@ -34,6 +34,10 @@ def test_cli_requires_explicit_workflow_and_exposes_control_modes() -> None:
     frozen = parse_args(["evaluate"])
     assert frozen.config == "configs/vista_p0.json"
     assert not frozen.diagnostic
+    phase3c = parse_args(
+        ["experiment", "--method", "full", "--diagnostic", "--meta-skills", "frozen_v1"]
+    )
+    assert phase3c.meta_skills == "frozen_v1"
 
 
 def test_official_final_test_coordinates_are_read_only_and_hashed() -> None:
@@ -481,6 +485,56 @@ def test_skill_fault_requires_diagnostic() -> None:
     )
     with pytest.raises(ValueError, match="skill-fault"):
         cli._run_experiment(args)
+
+
+def test_state_oracle_labels_require_diagnostic() -> None:
+    args = parse_args(
+        [
+            "experiment", "--method", "rule_only", "--state-oracle-labels",
+        ]
+    )
+    with pytest.raises(ValueError, match="state-oracle-labels"):
+        cli._run_experiment(args)
+
+
+def test_protocol_record_marks_state_oracle_labels() -> None:
+    manifest = load_experiment_manifest("configs/eb_hab_train_validation_manifest.json")
+    config = load_config("configs/vista_p0.json")
+    args = parse_args(
+        [
+            "experiment", "--method", "rule_only", "--diagnostic",
+            "--state-oracle-labels",
+        ]
+    )
+    record = cli._protocol_record(args, config, manifest)
+    assert record["state_oracle_labels"] is True
+
+
+def test_evidence_guard_requires_diagnostic() -> None:
+    args = parse_args(
+        [
+            "experiment", "--method", "rule_only", "--evidence-guard", "strict",
+        ]
+    )
+    with pytest.raises(ValueError, match="evidence-guard"):
+        cli._run_experiment(args)
+
+
+def test_make_engine_wires_images_only_authority_guard() -> None:
+    config = load_config("configs/vista_fault_repair_fullsel_p10.json")
+    model = SimpleNamespace()
+    engine, _ = cli._make_engine(
+        config,
+        model,
+        evidence_guard="authority_aware",
+        guard_min_visual_confidence=0.9,
+        guard_min_visual_coverage=0.75,
+    )
+    extractor = engine.evidence_extractor
+    assert extractor.visual_provider.include_feedback is True
+    assert extractor.guard.config.mode.value == "authority_aware"
+    assert extractor.guard.config.min_visual_confidence == 0.9
+    assert extractor.guard.config.min_visual_coverage == 0.75
 
 
 def test_make_engine_injects_requested_skill_fault() -> None:

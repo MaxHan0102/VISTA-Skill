@@ -212,8 +212,66 @@ The core tests exercise model and simulator ports with deterministic fakes. A
 real EB-Hab rollout additionally requires simulator assets, a working headless
 EGL context, and model endpoints; these are not bundled with this package.
 
-The latest local simulator initialization attempt (2026-08-12, `embench`, one
-manifest episode at 64 px) loaded `train_validation.pickle` and reached
-Habitat-Sim construction, then failed before reset because the host windowless
-EGL context could not map CUDA device 0. Therefore no real simulator rollout or
-Qwen endpoint smoke is claimed by this implementation snapshot.
+The earlier 2026-08-12 EGL failure is superseded on this host.  As of
+2026-08-25, real EB-Hab rollouts and frozen Qwen3-VL-8B endpoint probes have
+completed for Phase3A.  The evaluation-only Habitat state oracle now clears
+Habitat's predicate truth cache before every observation; this is required
+because action precondition checks otherwise leave pre-action values cached for
+post-action queries.  A 10-episode non-interference run matched an oracle-off
+reference exactly over 102 transitions and mapped all 624 post queries.
+
+Phase3A then collected 40 natural and 20 fixed-script stress episodes and
+froze a 300-transition, scene-disjoint dev/selection/audit dataset at
+`running/phase3a/phase3a_dataset_v3_cachefix_20260825.json`.  Two 300-call
+Qwen caches cover feedback-conditioned and images-only evidence.  The final
+Guard v2 adds outcome-aware rejection, failed-action temporal persistence,
+action-local visual relevance, conservative negative spatial relations, and
+successful-place grounding without reading Skill predictions or expected
+deltas.  It uses the same one feedback-conditioned VLM call as the current
+method, so live `--evidence-guard strict|authority_aware` does not add a second
+visual call.
+
+The frozen audit result is
+`running/phase3a/phase3a_guard_v2_frozen_audit_v4_20260825.json`.  It is a
+pre-registered **No-Go**: false contradictions fell from 0.00738 to zero and
+Skill-update recall stayed at 1.0, but the paired 95% CI included zero and
+coverage fell by 14.85 percentage points versus the matched threshold arm.
+Consequently the conditional live pilot and Phase3A scale-up were not run.
+The complete chronology, including the oracle-cache failure and the reporting-
+only cost amendment, is in `docs/experiment_log_phase3.md`.
+
+Phase3B then tested feedback dependence and strict no-feedback temporal RGB with
+the same frozen Qwen3-VL-8B executor.  The 30-task four-arm executor pilot found
+that three-frame history recovered the no-feedback mean progress loss
+(`0.5913 -> 0.6347`, versus feedback/current `0.6389`) but failed the frozen
+adjacent-repetition burden gate (`0.0495 > 0.0359`).  A separately isolated
+two-frame/three-frame evidence study removed raw feedback, success flags, and
+the feedback-derived pre-ledger from both prompts.  On dev, temporal evidence
+was precise when asserted (`0.9655`) but had only `0.0544` coverage,
+`0.0157` contradiction recall, and no Skill-update recall; its predicate F1
+fell below the strict pair arm (`0.0966` versus `0.1523`).  Phase3B is therefore
+a pre-registered No-Go: selection metrics, fresh episodes 60--79, fresh audit,
+and late-feedback fusion were not opened.  The immutable decision artifact is
+`running/phase3b/phase3b_final_decision_20260825.json`; full causality and cost
+records are in `docs/experiment_log_phase3.md`.
+
+Phase3C tested whether three short, frozen, environment-neutral Meta-Skills
+could improve safe Skill evolution without training.  The bundle
+(`phase3c_frozen_v1`, 423 whitespace-token proxy, SHA256
+`ec349ec8bbb0a6dced55267fc0d44c0259a4772f384b3adab765fa0faeff43cc`)
+is wired behind diagnostic-only `--meta-skills frozen_v1`; default behavior is
+unchanged.  Full tests passed (235), and the local frozen Qwen3-VL-8B endpoint
+passed the 6/6 protocol probe.
+
+The frozen offline gate is a **No-Go**.  Meta attribution reduced synthetic
+target Macro-F1 from 0.5279 to 0.4321 and field Macro-F1 from 0.9387 to 0.2963;
+natural Skill-update F1 fell from 0.5912 to 0.1538 (multihold) and from 0.5821
+to 0.4286 (effect inversion).  Existing rule-first routing prevented any
+regression but also received no benefit.  Both patch faults passed 10/10 and
+metamorphic agreement was 0.9444, but the current compiled-rule correction was
+already 10/10, so this is non-regression rather than incremental value.  The
+matched core Meta arm used 1.4313x the teacher/patch tokens.  Per the
+pre-registration, EB-Hab executor/live evolution and EB-Nav zero-shot branches
+were cancelled and Phase3C v1 is not enabled in the main method.  The immutable
+decision is `running/phase3c/offline/phase3c_offline_decision.json`; detailed
+causality and limitations are in `docs/experiment_log_phase3.md`.
