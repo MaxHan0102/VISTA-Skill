@@ -1,5 +1,8 @@
 # VISTA-Skill P0 Implementation
 
+For a short, plain-language Chinese summary of the full experimental history
+and current conclusions, see [experiment_log_plain_zh.md](experiment_log_plain_zh.md).
+
 ## Source of truth
 
 The implementation follows the 2026-08-06 execution design. That version
