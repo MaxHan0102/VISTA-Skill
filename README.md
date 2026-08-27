@@ -223,3 +223,9 @@ requirements, and integration details. The first experimental phase
 `docs/experiment_log_phase1.md` (settings, results, artifacts, bug ledger,
 and the phase-closure summary with next-step plans); new campaigns open a
 fresh phase log rather than editing old entries.
+
+The current forward research plan is recorded in
+`docs/research_plan_latest.md` (2026-08-27). It summarizes the EmbodiSkill
+comparison, the evidence boundary of the completed Phase 1–3 results, and the
+next priorities for sample-efficient evolution, selective model calls,
+candidate admission, and long-horizon execution.
