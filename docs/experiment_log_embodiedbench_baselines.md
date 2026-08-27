@@ -45,5 +45,31 @@ Stock episode/image/config/summary 输出：
 
 ### 结果
 
-运行中；完成后在此写入五个 60/60 完整性检查、Task Success、planner error、步数和墙钟时间，
-再更新 LaTeX 表格。禁止用此前 VISTA adapter 的 20-episode diagnostic 代替本结果。
+五个 subset 均通过 60/60 完整性检查；最终采用的 episode 文件编号均连续覆盖 1--60，合计
+300/300。独立汇总器与各 subset 的 stock `results/summary_all.json` 交叉核对一致。
+
+| Eval set | Episodes | Successes | Task Success | Mean reward | Mean env steps | Mean planner steps | Total planner errors | Mean elapsed (s) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Base | 60 | 35 | 0.583333 | 0.051718 | 15.3667 | 6.6500 | 1 | 32.6799 |
+| Common Sense | 60 | 32 | 0.533333 | 0.048818 | 15.5167 | 6.9000 | 0 | 39.1702 |
+| Complex Instruction | 60 | 30 | 0.500000 | 0.044248 | 15.9500 | 6.7333 | 0 | 33.4246 |
+| Visual Appearance | 60 | 29 | 0.483333 | 0.044992 | 15.9500 | 6.5000 | 1 | 32.4181 |
+| Long Horizon | 60 | 21 | 0.350000 | 0.025464 | 17.9833 | 7.7667 | 1 | 38.3116 |
+
+五个 Task Success 的宏平均为 **0.490000**。LaTeX 两位小数口径下，EB-NAV 的填表顺序
+`Avg. / Base / Com. / Comp. / Vis. / Long` 为：
+`0.490 / 0.58 / 0.53 / 0.50 / 0.48 / 0.35`。
+
+机器可读汇总（包含 config、dataset 和 300 个 episode result 的 SHA-256）为
+`running/embodiedbench_native_nav/qwen3vl8b_native_official_full_20260827_r1/analysis.json`。
+其 SHA-256 为 `ee2ca604058741830f788c2cef5a6e95f64159f928a19b7001a2683ba517a1ef`；
+`console_rerun1.log` 与 `console_resume1.log` 的 SHA-256 分别为
+`993f9df746cbf6b51b0cc435901ba1bdd2e235358fbbeaed6908c5b9b364a543` 和
+`77ea30aa03fc2153a84b2df3266f4c95f19b584336ffe52a545e7c1b5c2c2325`。
+该文件的 `claim_scope` 固定为 stock EmbodiedBench baseline；禁止用此前 VISTA adapter 的
+20-episode diagnostic 代替本结果。
+
+需要特别注意：本次 Long Horizon 的 0.35 与主表中历史 `No Skill/Memory` 行的 0.02 差异很大，
+Complex Instruction 也由历史行的 0.62 变为 0.50。由于历史行当前缺少与本次同等级的原始
+run provenance，不能把它当作同口径复现值；本次新填的 `Ours / Qwen3-VL-8B-Instruct`
+EB-NAV 空缺只采用上述冻结 stock protocol 的 300-episode 结果。
