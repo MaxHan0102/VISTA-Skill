@@ -2,6 +2,8 @@
 
 For a short, plain-language Chinese summary of the full experimental history
 and current conclusions, see [experiment_log_plain_zh.md](experiment_log_plain_zh.md).
+The post-hoc human Target-Skill diagnostic and its frozen validation are recorded
+separately in [experiment_log_phase4.md](experiment_log_phase4.md).
 
 ## Source of truth
 
@@ -278,3 +280,15 @@ pre-registration, EB-Hab executor/live evolution and EB-Nav zero-shot branches
 were cancelled and Phase3C v1 is not enabled in the main method.  The immutable
 decision is `running/phase3c/offline/phase3c_offline_decision.json`; detailed
 causality and limitations are in `docs/experiment_log_phase3.md`.
+
+Phase4 P4-O1 added two frozen, five-field, post-hoc human Target Skills for
+EB-Habitat and EB-Navigation.  They were synthesized from historical
+`official_test/base` No-Skill/Static-Skill trajectories and therefore are
+diagnostic references, not controlled evolution results.  On a disjoint
+20-episode `official_test/common_sense` diagnostic, the Target macro-average
+success was 0.425 versus 0.350 No Skill and 0.450 Static S0.  It substantially
+changed the intended local mechanisms (lower aggregate invalid-action ratios;
+NAV maximum open-loop length 1.0 in all 20 episodes) but did not establish a
+primary-metric gain and increased NAV planner calls to 14.25/episode.  The
+artifacts, paired uncertainty analysis, failure provenance, and implications
+for concise/compiled Skill evolution are in `docs/experiment_log_phase4.md`.

@@ -203,5 +203,4 @@ Skill growth 收缩为更诚实的 **reliable Skill repair**。
 - 0 harmful promoted 在 0 promoted 时不等于 gate 已被证明安全。
 - Selection 上变好不等于 independent audit 上仍然变好。
 - No-Go 不是实验失败：它明确告诉我们哪些额外模块不值得继续投入。
-- 当前最强的论文故事仍是 **visual transition credit assignment for reliable Skill repair**，不是已经完成的
-  通用 Skill self-evolution。
+- 当前最强的论文故事仍是 **visual transition credit assignment for reliable Skill repair**，不是已经完成的通用 Skill self-evolution。

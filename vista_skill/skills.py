@@ -150,6 +150,106 @@ def initialize_nav_skill() -> SkillSpec:
     )
 
 
+def target_habitat_skill_v1() -> SkillSpec:
+    """Post-hoc oracle target for the trajectory-synthesis diagnostic.
+
+    This is deliberately *not* a controlled-protocol initialization.  Its text
+    was synthesized after inspecting the historical official-test/base
+    No-Skill and Static-Skill trajectories, so it must never be presented as a
+    held-out or automatically evolved Skill.  It is kept as a normal
+    five-field :class:`SkillSpec` so the frozen executor surface is identical to
+    any Skill that the VISTA evolution loop could eventually produce.
+    """
+    return SkillSpec(
+        skill_id="target_habitat_rearrangement_oracle_v1",
+        version=1,
+        parent_version=0,
+        frozen=True,
+        activation=(
+            "Use for embodied search, delivery, and removal tasks with named movable objects and receptacles.",
+            "Bind exact object categories, quantities, source clues, and destination before acting; keep those bindings unchanged.",
+        ),
+        procedure=(
+            "Translate the instruction into a checklist of exact target objects, remaining quantities, source clues, and the exact destination. For remove or detach from X, the goal is not-at-X: after picking, place the object on a different valid receptacle.",
+            "When not holding, search systematically across untried plausible receptacles. Navigate to one and inspect the new image. Navigation success means only that the robot reached that receptacle; it never proves that the requested object is present or near.",
+            "Pick only when the exact requested object category is visibly present at the current location or feedback explicitly supports nearness. Do not replace the requested noun with a similar object or synonym. If a Pick fails as not near, mark that location tried, navigate to a different untried location, and do not repeat Pick until new location or visibility evidence exists.",
+            "For a possible closed container, navigate to it, open it at most once when closed, then inspect before picking. Do not repeat Open after success or without new state evidence.",
+            "After feedback confirms Pick or holding the target, immediately enter delivery mode: navigate to the exact destination and Place there. Never Pick while holding or place back on the source or at a convenient receptacle.",
+            "After a successful Place, verify the exact object-destination goal. For multiple objects, mark only that object complete and repeat the search-pick-deliver cycle for the remaining checklist. After an uncertain search, Pick, Open, or Place, output only the next evidence-gathering action; chain actions only when every intermediate precondition is already supported.",
+        ),
+        effect=(
+            "A successful Navigation establishes nearness to its receptacle only, not nearness to any movable object guessed to be there.",
+            "A successful Pick of the requested object establishes holding that object; a failed action changes no task predicate. A successful Place at the bound destination establishes the object-destination goal and frees the gripper.",
+            "Progress counts only for the requested category, quantity, and destination; interacting with another object is not progress.",
+        ),
+        termination=(
+            "For delivery, stop only after every requested object instance is evidence-verified at the exact destination and the gripper is free.",
+            "For remove or detach tasks, stop only after every requested object is no longer at the named source and has been placed on a different valid receptacle. Holding, reaching a receptacle, or completing one of several subgoals is not completion.",
+        ),
+        constraint=(
+            "Never repeat the same failed interaction at the same location without an intervening state-changing or evidence-gathering action; switch to a different untried location after not-near feedback.",
+            "Preserve object identity and destination fidelity. Never Pick while already holding, Place while empty, or infer that an unseen object is absent.",
+            "Use only listed action IDs and exact action semantics. Treat explicit environment feedback about success, holding, nearness, open state, and invalid preconditions as stronger evidence than a visual guess.",
+        ),
+        termination_policy=TerminationPolicy.ALL_GOALS_EVIDENCE,
+        prediction_rules=initialize_shared_skill().prediction_rules,
+        metadata={
+            "initialization": "posthoc-human-trajectory-synthesis",
+            "oracle_diagnostic": True,
+            "source_environment": "eb-hab",
+            "source_split": "official_test/base",
+            "source_arms": ["no_skill", "static_shared_skill"],
+        },
+    )
+
+
+def target_navigation_skill_v1() -> SkillSpec:
+    """Post-hoc EB-Navigation oracle target built from historical base traces.
+
+    As with :func:`target_habitat_skill_v1`, this artifact is contaminated by
+    official-test/base observations and is only an upper-bound/reference target
+    for future Skill evolution work.
+    """
+    return SkillSpec(
+        skill_id="target_feedback_navigation_oracle_v1",
+        version=1,
+        parent_version=0,
+        frozen=True,
+        activation=(
+            "Use for egocentric navigation to one named target object when each step reports action success and target distance.",
+            "Bind the exact target category from the instruction and optimize only its reported distance.",
+        ),
+        procedure=(
+            "Maintain the last and best target distance from feedback. On every planner call output exactly ONE primitive action, despite any generic request for a 5-6 action plan, then re-observe the image and new distance before choosing again.",
+            "Probe a plausible forward, left, or right translation. Continue that direction only while the reported distance strictly decreases; a successful motion is not progress when distance stays equal or increases.",
+            "If distance increases, do not continue the stale plan: choose the inverse lateral direction or backtrack once, then re-observe. When already close to the best point, use single-step probes and never execute a long run that can overshoot it.",
+            "If an action fails or distance is unchanged, treat the path as blocked. Do not repeat the same translation; choose a different lateral move, or one 90-degree rotation followed by a separately planned translation. Use rotation or camera tilt only for recovery when the target is lost or translations are blocked.",
+            "Prefer the direction with demonstrated numeric improvement over a visual guess. If two consecutive choices fail to beat the best distance, return toward the last improving direction and test a different single-step alternative.",
+        ),
+        effect=(
+            "A movement makes goal progress only when the numeric target distance decreases. Rotation and camera tilt change viewpoint but do not by themselves reduce distance.",
+            "A failed or zero-displacement action leaves position unchanged and invalidates repeating that same local move.",
+        ),
+        termination=(
+            "The task is complete only when feedback supports near(target), operationally target distance at or below 1.0 meter; otherwise continue single-step closed-loop control.",
+        ),
+        constraint=(
+            "Numeric target-distance feedback overrides claims that the object merely looks visible, close, or reachable.",
+            "Never emit more than one action in executable_plan. Never repeat a blocked action, continue a direction after distance worsens, or rotate while a translation is reliably reducing distance.",
+            "Unknown is not false, action success is not goal success, and the target identity must remain the exact instructed category.",
+        ),
+        termination_policy=TerminationPolicy.ALL_GOALS_EVIDENCE,
+        prediction_rules=(),
+        metadata={
+            "initialization": "posthoc-human-trajectory-synthesis",
+            "oracle_diagnostic": True,
+            "source_environment": "eb-nav",
+            "source_split": "official_test/base",
+            "source_arms": ["no_skill", "static_shared_skill"],
+        },
+    )
+
+
 def minimal_shared_skill() -> SkillSpec:
     """Minimal S0 variant: the weakest reasonable starting point for evolution.
 

@@ -1,0 +1,41 @@
+Use case: scientific-educational
+Asset type: compact square 1:1 single-column CVPR paper motivation / problem-formulation figure, optimized for legibility at 3.3 inches wide.
+Primary request: Create a camera-ready scientific diagram that instantly explains the VISTA-Skill research problem: under partial observability, the same failed interaction can have different causes, and only a reusable Skill defect warrants changing persistent Skill memory.
+
+Use a compact, balanced three-tier layout with no title:
+TOP TIER — one horizontal embodied example:
+- A small procedural checklist card with exact label “Skill-predicted effect” and exact content “holding(mug) = TRUE”.
+- Two small first-person observation cards labeled exactly “Before action” and “After action”; show an attempted mug pickup, but in the after-action view a foreground object occludes the mug/gripper so the visual result is ambiguous.
+- A small evidence card with exact label “Observed evidence” and exact content “ambiguous / no change”.
+- Converge the prediction and evidence with an orange mismatch icon.
+- Use only one small exact action label: “Pick mug”.
+
+MIDDLE TIER — the strongest visual focal point:
+A wide rounded rectangle containing exactly:
+“Should this experience change the Skill?”
+
+BOTTOM TIER — three equal-width cause cards branching from the same mismatch:
+1. blue card with an eye/occlusion icon, exact text:
+“Belief error”
+“Refresh transient belief”
+2. green card with a reusable checklist containing one faulty rule, exact text:
+“Reusable Skill defect”
+“Repair persistent Skill”
+Clearly mark this as the only persistent-write branch with a small green database/check icon.
+3. gray card with a slipped robot gripper and question-mark icon, exact text:
+“Execution lapse or insufficient evidence”
+“No persistent update”
+
+At the very bottom, a thin red-vs-green takeaway strip:
+- left, crossed out in red: exact text “Failure → rewrite Skill → Skill pollution”
+- right, emphasized in green/navy: exact text “Only reusable Skill defects should update persistent Skill memory.”
+
+Style: square 1:1 composition; clean vector-like flat scientific illustration; white background; subtle pale blue panels; dark navy typography; restrained blue, green, orange, gray, and red; consistent rounded rectangles and simple arrows; no gradients; no heavy shadows; no decorative robot mascot; no letters A/B/C; no large empty margins. The figure must feel like a rigorous paper diagram, not a marketing poster. Text must be large and readable. Keep every element inside safe margins.
+
+Research-accuracy constraints:
+- This is a problem formulation, not a solved-results figure.
+- The three causes must look equally plausible from the same failed interaction.
+- The green branch indicates which case should write persistent memory; it must not imply that the current system already identifies it reliably.
+- Do not show benchmark numbers, performance gains, successful candidate promotion, PPO, training, neural networks, scene graphs, action-model updates, RGB-only sufficiency, citations, logos, watermarks, or any text beyond the exact labels supplied above.
+- Render all supplied text exactly, with correct spelling and capitalization.
+- Do not crop any content.

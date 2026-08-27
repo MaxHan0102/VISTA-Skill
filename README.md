@@ -223,3 +223,8 @@ requirements, and integration details. The first experimental phase
 `docs/experiment_log_phase1.md` (settings, results, artifacts, bug ledger,
 and the phase-closure summary with next-step plans); new campaigns open a
 fresh phase log rather than editing old entries.
+
+The 2026-08-27 post-hoc Target-Skill reference experiment is recorded in
+`docs/experiment_log_phase4.md`.  It keeps the human-synthesized, five-field
+EB-HAB/EB-NAV Skills, matched `common_sense` validation logs, and paired
+analysis explicitly separate from controlled automatic evolution claims.
