@@ -228,3 +228,9 @@ The 2026-08-27 post-hoc Target-Skill reference experiment is recorded in
 `docs/experiment_log_phase4.md`.  It keeps the human-synthesized, five-field
 EB-HAB/EB-NAV Skills, matched `common_sense` validation logs, and paired
 analysis explicitly separate from controlled automatic evolution claims.
+
+The current forward research plan is recorded in
+`docs/research_plan_latest.md` (2026-08-27). It summarizes the EmbodiSkill
+comparison, the evidence boundary of the completed Phase 1–3 results, and the
+next priorities for sample-efficient evolution, selective model calls,
+candidate admission, and long-horizon execution.
