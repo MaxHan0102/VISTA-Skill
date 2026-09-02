@@ -1,10 +1,10 @@
 {
-  "protocol": "vista_skill_nav_eval_2026_08_12",
-  "task_manifest": "configs/vista_nav_manifest.json",
+  "protocol": "vista_skill_phase5_nav_2026_09_02",
+  "task_manifest": "configs/vista_nav_development_manifest.json",
   "evolution_seeds": [0, 1, 2],
   "environment": {
     "name": "eb-nav",
-    "note": "EB-Navigation ships no train_validation split; evaluate uses official_test on the subsets below.",
+    "development_split": "newly_generated_non_official_only",
     "final_test_subsets": [
       "base",
       "common_sense",
@@ -45,7 +45,12 @@
     "alpha": 0.05,
     "proxy_lcb_threshold": 0.0,
     "finalist_lcb_threshold": 0.0,
-    "subgroup_regression_tolerance": 0.05
+    "subgroup_regression_tolerance": 0.05,
+    "semantic_affected_enabled": true,
+    "semantic_affected_lcb_threshold": 0.0,
+    "semantic_protected_regression_tolerance": 0.05,
+    "semantic_min_affected_tasks": 2,
+    "semantic_min_protected_tasks": 2
   },
   "final_test": {
     "skill_frozen": true,

@@ -38,7 +38,10 @@ diagnostic ablation. The checked-in task manifest fixes all 100 coordinates and
 the dataset hash. Three independent evolution runs rotate the 60/20/20 roles,
 evolve after each acquisition episode, freeze separately, and run post-hoc
 paired update audits on their own held-out roles. Final evaluation rejects
-non-frozen, tampered, or protocol-incompatible Skill artifacts.
+non-frozen, tampered, protocol-incompatible, or historically contaminated Skill
+artifacts. The prospective official-test boundary and unavoidable historical
+exposure are documented in
+[`docs/evaluation_integrity.md`](docs/evaluation_integrity.md).
 
 ## Model serving (server deployment)
 
@@ -76,7 +79,7 @@ verified recipe:
 | ninja | installed in the serving env | the non-eager compile path shells out to it; the script puts the env `bin/` on PATH itself |
 
 Serving is fixed to the controlled-protocol contract:
-`--max-model-len 16384` (matches `configs/vista_p0.json`; do NOT shrink it —
+`--max-model-len 16384` (matches `configs/vista_phase5_hab.json`; do NOT shrink it —
 the 10-shot executor prompt plus `max_tokens` overflows 8192 and exhausts the
 planner's retries, aborting episodes), fp8 precision, client-side
 temperature 0, and support for the OpenAI `seed` field (deterministic
@@ -188,8 +191,8 @@ PYTHONPATH=. python scripts/probe_vllm_endpoint.py --base-url http://<SERVER_IP>
 Verification ladder, cheapest first:
 
 1. **Unit suite** (no GPU, no network): `python -m pytest` from the repo
-   root — 167 tests exercising the method with deterministic fakes for the
-   model and simulator ports.
+   root; the tests exercise the method with deterministic fakes for the model
+   and simulator ports.
 2. **Simulator smoke** (client-local GPU): from `EmbodiedBench/`, run
    `python -m embodiedbench.envs.eb_habitat.EBHabEnv` (feed `-1` on stdin to
    exit after reset) — exercises EGL context creation and scene load, the
@@ -229,8 +232,10 @@ The 2026-08-27 post-hoc Target-Skill reference experiment is recorded in
 EB-HAB/EB-NAV Skills, matched `common_sense` validation logs, and paired
 analysis explicitly separate from controlled automatic evolution claims.
 
-The current forward research plan is recorded in
-`docs/research_plan_latest.md` (2026-08-27). It summarizes the EmbodiSkill
-comparison, the evidence boundary of the completed Phase 1–3 results, and the
-next priorities for sample-efficient evolution, selective model calls,
-candidate admission, and long-horizon execution.
+The current forward research plan is
+[`docs/research_plan_phase5.md`](docs/research_plan_phase5.md) (2026-09-02).
+It makes the published EmbodiSkill EB-HAB/EB-NAV scores—not the rough local
+`EmbodiSkill*` analogue—the minimum target, and prioritizes semantic candidate
+admission, executable guidance, selective self-evolution, and a complete
+EB-NAV evolution path. Phase-5 evidence is appended to
+[`docs/experiment_log_phase5.md`](docs/experiment_log_phase5.md).

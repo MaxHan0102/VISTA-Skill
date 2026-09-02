@@ -269,6 +269,7 @@ class PairedEpisodeScore:
     subgroup: str
     parent_success: bool | None = None
     candidate_success: bool | None = None
+    semantic_tags: tuple[str, ...] = ()
 
 
 class PairedEvaluator(Protocol):
@@ -291,6 +292,11 @@ class GateConfig:
     proxy_lcb_threshold: float = 0.0
     finalist_lcb_threshold: float = 0.0
     subgroup_regression_tolerance: float = 0.05
+    semantic_affected_enabled: bool = False
+    semantic_affected_lcb_threshold: float = 0.0
+    semantic_protected_regression_tolerance: float = 0.05
+    semantic_min_affected_tasks: int = 2
+    semantic_min_protected_tasks: int = 2
     random_seed: int = 0
 
 
@@ -344,6 +350,7 @@ class CandidateGate:
             return self._reject(parent, patch, stages), None
         candidate = self.applier.apply(parent, patch)
         stages.append(GateStageResult("static", True, "schema, scope, and evidence checks passed"))
+        semantic_scope = _candidate_semantic_scope(cluster)
 
         transition_checks = tuple(self.transition_checker.check(parent, candidate, cluster))
         transition_passed = bool(transition_checks) and all(
@@ -374,6 +381,7 @@ class CandidateGate:
             proxy,
             self.config.proxy_lcb_threshold,
             self.config.proxy_episode_budget,
+            semantic_scope,
         )
         stages.append(proxy_stage)
         if not proxy_stage.passed:
@@ -392,6 +400,7 @@ class CandidateGate:
             finalist,
             self.config.finalist_lcb_threshold,
             self.config.finalist_episode_budget,
+            semantic_scope,
         )
         stages.append(finalist_stage)
         if not finalist_stage.passed:
@@ -414,6 +423,7 @@ class CandidateGate:
         scores: Sequence[PairedEpisodeScore],
         threshold: float,
         required_budget: int,
+        semantic_scope: tuple[str, ...] = (),
     ) -> GateStageResult:
         if not scores:
             return GateStageResult(stage, False, "paired evaluator returned no episodes")
@@ -436,23 +446,91 @@ class CandidateGate:
         )
         subgroup_deltas = _subgroup_deltas(scores)
         worst_group = min(subgroup_deltas.values())
-        passed = lcb > threshold and worst_group >= -self.config.subgroup_regression_tolerance
-        reason = (
-            "paired lower bound and subgroup checks passed"
-            if passed
-            else "paired lower bound is non-positive or a protected subgroup regressed"
+        metrics = {
+            "mean_delta": sum(differences) / len(differences),
+            "lcb": lcb,
+            "worst_subgroup_delta": worst_group,
+            "episodes": float(len(scores)),
+            "independent_tasks": float(len(task_differences)),
+            "semantic_scope_tag_count": float(len(semantic_scope)),
+        }
+        semantic_available = bool(
+            self.config.semantic_affected_enabled and semantic_scope
         )
+        if semantic_available:
+            affected = tuple(
+                item
+                for item in scores
+                if set(item.semantic_tags).intersection(semantic_scope)
+            )
+            protected = tuple(item for item in scores if item not in affected)
+            affected_tasks = _task_mean_differences(affected)
+            protected_tasks = _task_mean_differences(protected)
+            affected_lcb = bootstrap_lcb(
+                affected_tasks,
+                alpha=self.config.alpha,
+                samples=self.config.bootstrap_samples,
+                seed=self.config.random_seed + 1000,
+            )
+            protected_lcb = bootstrap_lcb(
+                protected_tasks,
+                alpha=self.config.alpha,
+                samples=self.config.bootstrap_samples,
+                seed=self.config.random_seed + 2000,
+            )
+            metrics.update(
+                {
+                    "affected_independent_tasks": float(len(affected_tasks)),
+                    "protected_independent_tasks": float(len(protected_tasks)),
+                }
+            )
+            if affected_tasks:
+                metrics.update(
+                    {
+                        "affected_mean_delta": sum(affected_tasks)
+                        / len(affected_tasks),
+                        "affected_lcb": affected_lcb,
+                    }
+                )
+            if protected_tasks:
+                metrics.update(
+                    {
+                        "protected_mean_delta": sum(protected_tasks)
+                        / len(protected_tasks),
+                        "protected_lcb": protected_lcb,
+                    }
+                )
+            coverage_ok = bool(
+                len(affected_tasks) >= self.config.semantic_min_affected_tasks
+                and len(protected_tasks) >= self.config.semantic_min_protected_tasks
+            )
+            passed = bool(
+                coverage_ok
+                and affected_lcb > self.config.semantic_affected_lcb_threshold
+                and protected_lcb
+                >= -self.config.semantic_protected_regression_tolerance
+            )
+            if not coverage_ok:
+                reason = "semantic affected/protected task coverage is incomplete"
+            elif passed:
+                reason = "semantic affected benefit and protected non-inferiority checks passed"
+            else:
+                reason = "affected-task benefit is unproven or protected tasks regressed"
+        else:
+            passed = bool(
+                lcb > threshold
+                and worst_group >= -self.config.subgroup_regression_tolerance
+            )
+            reason = (
+                "paired lower bound and subgroup checks passed"
+                if passed
+                else "paired lower bound is non-positive or a protected subgroup regressed"
+            )
         return GateStageResult(
             stage,
             passed,
             reason,
-            {
-                "mean_delta": sum(differences) / len(differences),
-                "lcb": lcb,
-                "worst_subgroup_delta": worst_group,
-                "episodes": float(len(scores)),
-                "independent_tasks": float(len(task_differences)),
-            },
+            metrics,
         )
 
     @staticmethod
@@ -583,6 +661,29 @@ def _task_mean_differences(scores: Sequence[PairedEpisodeScore]) -> list[float]:
             item.candidate_score - item.parent_score
         )
     return [sum(values) / len(values) for values in tasks.values()]
+
+
+def _candidate_semantic_scope(cluster: EvidenceCluster) -> tuple[str, ...]:
+    """Derive an outcome-independent task scope from structured evidence.
+
+    Action-local procedure/effect/constraint revisions are evaluated on tasks
+    whose precomputed goal semantics require the triggering primitive. Global
+    activation/termination changes retain the conservative global gate.
+    """
+
+    if cluster.key.field not in {
+        SkillField.PROCEDURE,
+        SkillField.EFFECT,
+        SkillField.CONSTRAINT,
+    }:
+        return ()
+    action_types = {
+        item.action.action_type.strip().lower()
+        for item in cluster.items
+        if item.action is not None and item.action.action_type.strip()
+    }
+    action_types.discard("*")
+    return tuple(sorted(f"action:{action_type}" for action_type in action_types))
 
 
 def make_patch_id(

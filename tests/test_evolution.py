@@ -17,6 +17,7 @@ from vista_skill.evolution import (
 from vista_skill.protocol import DataSplit
 from vista_skill.config import load_config
 from vista_skill.schemas import (
+    ActionCall,
     AttributionResult,
     DeltaSource,
     EvidenceSource,
@@ -195,6 +196,45 @@ def empty_cluster(skill) -> EvidenceCluster:
     return cluster
 
 
+def action_local_effect_cluster(skill) -> EvidenceCluster:
+    base = empty_cluster(skill)
+    attribution = replace(base.items[0].attribution, field=SkillField.EFFECT)
+    cluster = EvidenceCluster(
+        ClusterKey(
+            skill.skill_id,
+            SkillField.EFFECT,
+            "covered_contradiction",
+            "all",
+            "objects",
+        )
+    )
+    cluster.items.append(
+        replace(
+            base.items[0],
+            attribution=attribution,
+            action=ActionCall(0, "pick", ("object",), "pick object"),
+        )
+    )
+    return cluster
+
+
+def effect_patch_for(skill) -> SkillPatch:
+    return SkillPatch(
+        patch_id="effect-patch",
+        skill_id=skill.skill_id,
+        parent_version=skill.version,
+        field=SkillField.EFFECT,
+        operation=PatchOperation.REPLACE_EXACT,
+        old=skill.effect[0],
+        new="A verified pick should establish that the target is held.",
+        evidence_ids=("ev1", "ev2"),
+        scope="tasks requiring pick",
+        prediction_rules=tuple(
+            rule for rule in skill.prediction_rules if rule.field is SkillField.EFFECT
+        ),
+    )
+
+
 def test_gate_accepts_positive_paired_candidate() -> None:
     skill = initialize_shared_skill()
     scores = [(0.2, "base"), (0.3, "long"), (0.1, "base"), (0.4, "long")]
@@ -233,6 +273,91 @@ def test_gate_rejects_protected_subgroup_regression() -> None:
     assert decision.stages[-1].metrics["worst_subgroup_delta"] == pytest.approx(-0.2)
 
 
+class SemanticScoreEvaluator:
+    def __init__(self, values):
+        self.values = values
+
+    def evaluate(self, parent, candidate, *, stage, episode_budget):
+        return tuple(
+            PairedEpisodeScore(
+                f"ep{index}",
+                0,
+                0.0,
+                delta,
+                subgroup,
+                semantic_tags=tags,
+            )
+            for index, (delta, subgroup, tags) in enumerate(self.values)
+        )
+
+
+def test_semantic_gate_accepts_affected_benefit_with_global_negative_lcb() -> None:
+    skill = initialize_shared_skill()
+    values = [
+        (0.4, "relocation", ("action:pick",)),
+        (0.4, "relocation", ("action:pick",)),
+        (-0.04, "navigation", ("action:nav",)),
+        (-0.04, "articulation", ("action:close",)),
+    ]
+    gate = CandidateGate(
+        BoundedPatchApplier(),
+        PassingTransitionChecker(),
+        SemanticScoreEvaluator(values),
+        GateConfig(
+            bootstrap_samples=1000,
+            proxy_episode_budget=4,
+            finalist_episode_budget=4,
+            semantic_affected_enabled=True,
+            semantic_min_affected_tasks=2,
+            semantic_min_protected_tasks=2,
+        ),
+    )
+    decision, candidate = gate.evaluate(
+        skill,
+        effect_patch_for(skill),
+        action_local_effect_cluster(skill),
+    )
+
+    assert decision.accepted
+    assert candidate is not None
+    metrics = decision.stages[-1].metrics
+    assert metrics["lcb"] < 0.0
+    assert metrics["affected_lcb"] > 0.0
+    assert metrics["protected_lcb"] >= -0.05
+
+
+def test_semantic_gate_rejects_protected_regression() -> None:
+    skill = initialize_shared_skill()
+    values = [
+        (0.4, "relocation", ("action:pick",)),
+        (0.4, "relocation", ("action:pick",)),
+        (-0.2, "navigation", ("action:nav",)),
+        (-0.2, "articulation", ("action:close",)),
+    ]
+    gate = CandidateGate(
+        BoundedPatchApplier(),
+        PassingTransitionChecker(),
+        SemanticScoreEvaluator(values),
+        GateConfig(
+            bootstrap_samples=200,
+            proxy_episode_budget=4,
+            finalist_episode_budget=4,
+            semantic_affected_enabled=True,
+            semantic_min_affected_tasks=2,
+            semantic_min_protected_tasks=2,
+        ),
+    )
+    decision, candidate = gate.evaluate(
+        skill,
+        effect_patch_for(skill),
+        action_local_effect_cluster(skill),
+    )
+
+    assert not decision.accepted
+    assert candidate is None
+    assert decision.stages[-1].metrics["protected_lcb"] < -0.05
+
+
 def test_gate_fails_closed_when_paired_budget_is_incomplete() -> None:
     skill = initialize_shared_skill()
     one_score = [(0.3, "base")]
@@ -258,10 +383,11 @@ def test_split_integrity_rejects_leakage() -> None:
 
 
 def test_protocol_config_drives_runtime_thresholds() -> None:
-    config = load_config("configs/vista_p0.json")
+    config = load_config("configs/vista_phase5_hab.json")
     assert config.recurrence.min_independent_episodes == 2
     assert config.gate.proxy_episode_budget == 10
     assert config.gate.finalist_episode_budget == 30
+    assert config.gate.semantic_affected_enabled
     assert config.raw["evolution_seeds"] == [0, 1, 2]
     assert len(config.digest) == 64
 

@@ -17,12 +17,39 @@ from vista_skill.integrations.embodiedbench.cli import (
     parse_args,
 )
 from vista_skill.config import load_config
+from vista_skill.integrity import (
+    artifact_contamination_reasons,
+    load_evaluation_data_policy,
+)
 from vista_skill.protocol import TaskCoordinate, load_experiment_manifest
 from vista_skill.skills import (
     initialize_shared_skill,
     load_skill_artifact_record,
     save_skill_artifact,
+    target_habitat_skill_v1,
 )
+
+
+def _controlled_habitat_artifact_protocol(config, manifest, args) -> dict:
+    policy = load_evaluation_data_policy()
+    return {
+        "config_sha256": config.digest,
+        "manifest_sha256": manifest.digest,
+        "executor_model": args.model_name,
+        "executor_model_type": args.model_type,
+        "tensor_parallel": args.tp,
+        "executor_temperature": 0.0,
+        "max_completion_tokens": 4096,
+        "n_shots": args.n_shots,
+        "resolution": args.resolution,
+        "frozen": True,
+        "diagnostic": False,
+        "acquisition_episode_budget": 60,
+        "env": "eb-hab",
+        "evaluation_data_policy": policy.policy_id,
+        "evaluation_data_policy_sha256": policy.digest,
+        "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+    }
 
 
 def test_cli_requires_explicit_workflow_and_exposes_control_modes() -> None:
@@ -32,7 +59,7 @@ def test_cli_requires_explicit_workflow_and_exposes_control_modes() -> None:
     full = parse_args(["experiment", "--method", "full"])
     assert full.method == "full"
     frozen = parse_args(["evaluate"])
-    assert frozen.config == "configs/vista_p0.json"
+    assert frozen.config == "configs/vista_phase5_hab.json"
     assert not frozen.diagnostic
     phase3c = parse_args(
         ["experiment", "--method", "full", "--diagnostic", "--meta-skills", "frozen_v1"]
@@ -101,21 +128,7 @@ def test_controlled_evaluation_rejects_artifact_protocol_mismatch(
     config = load_config("configs/vista_p0.json")
     manifest = load_experiment_manifest("configs/eb_hab_train_validation_manifest.json")
     args = parse_args(["evaluate"])
-    protocol = {
-        "config_sha256": config.digest,
-        "manifest_sha256": manifest.digest,
-        "executor_model": args.model_name,
-        "executor_model_type": args.model_type,
-        "tensor_parallel": args.tp,
-        "executor_temperature": 0.0,
-        "max_completion_tokens": 4096,
-        "n_shots": args.n_shots,
-        "resolution": args.resolution,
-        "frozen": True,
-        "diagnostic": False,
-        "acquisition_episode_budget": 60,
-        "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
-    }
+    protocol = _controlled_habitat_artifact_protocol(config, manifest, args)
     protocol[metadata_key] = "0" * 64
     path = tmp_path / "frozen_skill.json"
     save_skill_artifact(
@@ -184,6 +197,27 @@ def test_controlled_evaluation_rejects_diagnostic_artifact(tmp_path) -> None:
         _audit_evaluation_protocol(args, config, manifest, artifact)
 
 
+def test_controlled_evaluation_quarantines_posthoc_official_test_skill(
+    tmp_path,
+) -> None:
+    config = load_config("configs/vista_p0.json")
+    manifest = load_experiment_manifest("configs/eb_hab_train_validation_manifest.json")
+    args = parse_args(["evaluate"])
+    skill = replace(target_habitat_skill_v1(), frozen=True)
+    reasons = artifact_contamination_reasons(skill, {})
+    assert reasons
+    path = tmp_path / "contaminated_skill.json"
+    save_skill_artifact(
+        path,
+        skill,
+        protocol=_controlled_habitat_artifact_protocol(config, manifest, args),
+    )
+    artifact = load_skill_artifact_record(path, require_frozen=True)
+
+    with pytest.raises(ValueError, match="artifact is quarantined"):
+        _audit_evaluation_protocol(args, config, manifest, artifact)
+
+
 @pytest.mark.parametrize(
     ("argument", "value", "message"),
     [
@@ -205,6 +239,49 @@ def test_controlled_evaluation_rejects_runtime_protocol_drift(
 
     with pytest.raises(ValueError, match=message):
         _audit_evaluation_protocol(args, config, manifest, artifact=None)
+
+
+def test_nav_controlled_evaluation_rejects_runtime_protocol_drift() -> None:
+    config = load_config("configs/vista_nav.json")
+    args = parse_args(
+        [
+            "evaluate",
+            "--env",
+            "eb-nav",
+            "--config",
+            "configs/vista_nav.json",
+            "--n-shots",
+            "10",
+        ]
+    )
+
+    with pytest.raises(ValueError, match="n-shot count differs"):
+        _audit_evaluation_protocol(args, config, manifest=None, artifact=None)
+
+
+def test_nav_controlled_evaluation_rejects_habitat_config() -> None:
+    config = load_config("configs/vista_phase5_hab.json")
+    args = parse_args(
+        [
+            "evaluate",
+            "--env",
+            "eb-nav",
+            "--n-shots",
+            "10",
+        ]
+    )
+
+    with pytest.raises(ValueError, match="environment differs from config"):
+        _audit_evaluation_protocol(args, config, manifest=None, artifact=None)
+
+
+def test_nav_release_config_matches_stock_completion_cap() -> None:
+    assert (
+        load_config("configs/vista_nav.json").raw["executor"][
+            "max_completion_tokens"
+        ]
+        == 4096
+    )
 
 
 def test_frozen_evaluation_audits_before_environment_creation(

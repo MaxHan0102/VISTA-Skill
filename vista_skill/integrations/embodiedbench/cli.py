@@ -56,6 +56,13 @@ from vista_skill.integrations.embodiedbench.runner import (
     HabitatRolloutRunner,
 )
 from vista_skill.integrations.embodiedbench.state_oracle import HabitatStateOracle
+from vista_skill.integrations.embodiedbench.task_semantics import (
+    load_habitat_task_semantic_tags,
+)
+from vista_skill.integrity import (
+    artifact_contamination_reasons,
+    load_evaluation_data_policy,
+)
 from vista_skill.lineage import LineageStore
 from vista_skill.meta_skills import EvolutionMetaSkill, frozen_meta_skills
 from vista_skill.models import (
@@ -122,7 +129,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     experiment.add_argument("--method-base-url", default=os.environ.get("VISTA_METHOD_BASE_URL"))
     experiment.add_argument("--method-api-key", default=os.environ.get("VISTA_METHOD_API_KEY"))
     experiment.add_argument("--manifest", default=DEFAULT_MANIFEST)
-    experiment.add_argument("--config", default="configs/vista_p0.json")
+    experiment.add_argument("--config", default="configs/vista_phase5_hab.json")
     experiment.add_argument("--output-dir", default="running/vista_skill/full")
     experiment.add_argument("--evolution-seeds", default="0,1,2")
     experiment.add_argument("--max-acquisition-episodes", type=int)
@@ -189,7 +196,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     )
     evaluate.add_argument("--skill")
     evaluate.add_argument("--manifest", default=DEFAULT_MANIFEST)
-    evaluate.add_argument("--config", default="configs/vista_p0.json")
+    evaluate.add_argument("--config", default="configs/vista_phase5_hab.json")
     evaluate.add_argument(
         "--diagnostic",
         action="store_true",
@@ -384,6 +391,9 @@ def _run_experiment(args: argparse.Namespace) -> None:
                 expected_episode_ids=acquisition_ids,
                 task_coordinates=acquisition,
                 rollout_seed=evolution_seed,
+                max_completion_tokens=int(
+                    config.raw["executor"]["max_completion_tokens"]
+                ),
             )
             acquisition_results = []
             ready_cluster_counts = []
@@ -423,7 +433,12 @@ def _run_experiment(args: argparse.Namespace) -> None:
                 rollout_seeds=_audit_rollout_seeds(evolution_seed),
             )
             audit_evaluator = _make_audit_evaluator(
-                args, run_manifest, audit_plan.coordinates, run_dir, run_id=run_id
+                args,
+                run_manifest,
+                audit_plan.coordinates,
+                run_dir,
+                config,
+                run_id=run_id,
             )
             update_audit = run_rotated_update_audit(
                 lineage.accepted_snapshots,
@@ -485,6 +500,12 @@ def _run_frozen_evaluation(args: argparse.Namespace) -> None:
         base_skill = initialize_nav_skill() if is_nav else initialize_shared_skill()
         skill = replace(base_skill, frozen=True)
     _audit_evaluation_protocol(args, config, manifest, artifact)
+    contamination_reasons = (
+        ()
+        if artifact is None
+        else artifact_contamination_reasons(artifact.skill, artifact.protocol)
+    )
+    data_policy = load_evaluation_data_policy()
     evaluation_manifest = (
         None if manifest is None else _artifact_evaluation_manifest(manifest, artifact)
     )
@@ -544,6 +565,9 @@ def _run_frozen_evaluation(args: argparse.Namespace) -> None:
             inject_skill=args.mode != "no_skill",
             rollout_seed=args.seed,
             goal_predicate_provider=nav_goal_predicates if is_nav else None,
+            max_completion_tokens=int(
+                config.raw["executor"]["max_completion_tokens"]
+            ),
         )
         # official_test loads the full subset (episode_ids=None) and is capped by
         # --max-episodes; train_validation stages pin a specific id list.
@@ -573,6 +597,15 @@ def _run_frozen_evaluation(args: argparse.Namespace) -> None:
             "episodes": len(results),
             "diagnostic": args.diagnostic,
             "diagnostic_subset": args.max_episodes is not None,
+            "evaluation_data_policy": data_policy.policy_id,
+            "evaluation_data_policy_sha256": data_policy.digest,
+            "artifact_contamination_reasons": contamination_reasons,
+            "claim_eligible": bool(
+                args.stage == "official_test"
+                and not args.diagnostic
+                and args.max_episodes is None
+                and not contamination_reasons
+            ),
             "rollout_seed": args.seed,
             "mean_task_success": _mean(item.task_success for item in results),
             "mean_task_progress": _mean(item.task_progress for item in results),
@@ -790,11 +823,12 @@ def _make_runner(
     *,
     engine: VistaSkillEngine | None,
     goal_grounder: JsonGoalGrounder | None,
-    expected_episode_ids: tuple[str, ...],
+    expected_episode_ids: tuple[str, ...] | None,
     inject_skill: bool = True,
     task_coordinates: Sequence = (),
     rollout_seed: int,
     goal_predicate_provider=None,
+    max_completion_tokens: int = 4096,
 ) -> HabitatRolloutRunner:
     _require_new_output(output, "event artifact")
     planner = _make_planner(
@@ -804,6 +838,7 @@ def _make_runner(
         engine,
         inject_skill=inject_skill,
         rollout_seed=rollout_seed,
+        max_completion_tokens=max_completion_tokens,
     )
     if goal_predicate_provider is None:
         goal_predicate_provider = (
@@ -837,14 +872,16 @@ def _make_planner(
     *,
     inject_skill: bool = True,
     rollout_seed: int,
+    max_completion_tokens: int = 4096,
 ):
     from embodiedbench.planner import remote_model
 
-    # temperature=0 and a 4096-token cap mirror stock EmbodiedBench's RemoteModel
-    # defaults (embodiedbench/planner/remote_model.py), so VISTA rollouts share the
-    # EB executor surface; temperature=0 also pins rollouts for reproducibility.
+    # Temperature 0 and the configured completion cap are part of the frozen
+    # executor surface.  The release configs use stock EmbodiedBench's 4096-token
+    # RemoteModel default; reading the cap from config keeps the recorded protocol
+    # and the actual request from silently diverging.
     remote_model.temperature = 0.0
-    remote_model.max_completion_tokens = 4096
+    remote_model.max_completion_tokens = max_completion_tokens
 
     if args.env == "eb-nav":
         from embodiedbench.evaluator.config.system_prompts import (
@@ -932,11 +969,18 @@ def _make_paired_evaluator(
     selection = manifest.coordinates_for("selection")
     proxy_budget = config.gate.proxy_episode_budget
     finalist_budget = config.gate.finalist_episode_budget
+    dataset = (
+        Path(__file__).parents[3]
+        / "EmbodiedBench/embodiedbench/envs/eb_habitat/datasets"
+        / manifest.dataset
+    )
+    semantic_tags = load_habitat_task_semantic_tags(dataset)
     coordinates = _paired_selection_coordinates(
         selection,
         seeds,
         proxy_budget=proxy_budget,
         finalist_budget=finalist_budget,
+        semantic_tags=semantic_tags,
     )
     cache: dict[tuple[str, str, int, str], RolloutScore] = {}
 
@@ -986,6 +1030,9 @@ def _make_paired_evaluator(
                     if item.episode_id == coordinate.episode_id
                 ),
                 rollout_seed=coordinate.seed,
+                max_completion_tokens=int(
+                    config.raw["executor"]["max_completion_tokens"]
+                ),
             )
             result = runner.run_episode(expected_episode_id=coordinate.episode_id)
         finally:
@@ -1010,6 +1057,7 @@ def _make_audit_evaluator(
     manifest: ExperimentManifest,
     coordinates: tuple[EpisodeCoordinate, ...],
     output_dir: Path,
+    config: VistaConfig,
     *,
     run_id: str,
 ) -> PairedRolloutEvaluator:
@@ -1066,6 +1114,9 @@ def _make_audit_evaluator(
                 expected_episode_ids=(coordinate.episode_id,),
                 task_coordinates=(indexed[coordinate.episode_id],),
                 rollout_seed=coordinate.seed,
+                max_completion_tokens=int(
+                    config.raw["executor"]["max_completion_tokens"]
+                ),
             )
             result = runner.run_episode(expected_episode_id=coordinate.episode_id)
         finally:
@@ -1138,6 +1189,7 @@ def _paired_selection_coordinates(
     *,
     proxy_budget: int,
     finalist_budget: int,
+    semantic_tags: Mapping[str, tuple[str, ...]] | None = None,
 ) -> dict[str, tuple[EpisodeCoordinate, ...]]:
     if not seeds:
         raise ValueError("paired selection requires at least one seed")
@@ -1146,12 +1198,23 @@ def _paired_selection_coordinates(
     proxy_task_count = min(proxy_budget, len(selection) // 2)
     proxy_tasks = selection[:proxy_task_count]
     finalist_tasks = selection[proxy_task_count:]
+    semantic_tags = semantic_tags or {}
     proxy = tuple(
-        EpisodeCoordinate(item.episode_id, seeds[0], item.subgroup)
+        EpisodeCoordinate(
+            item.episode_id,
+            seeds[0],
+            item.subgroup,
+            semantic_tags.get(item.episode_id, ()),
+        )
         for item in proxy_tasks
     )[:proxy_budget]
     finalist = tuple(
-        EpisodeCoordinate(item.episode_id, seed, item.subgroup)
+        EpisodeCoordinate(
+            item.episode_id,
+            seed,
+            item.subgroup,
+            semantic_tags.get(item.episode_id, ()),
+        )
         for item in finalist_tasks
         for seed in seeds
     )[:finalist_budget]
@@ -1229,6 +1292,7 @@ def _protocol_record(
     config: VistaConfig,
     manifest: ExperimentManifest,
 ) -> dict[str, object]:
+    data_policy = load_evaluation_data_policy()
     return {
         "protocol": config.raw["protocol"],
         "config_sha256": config.digest,
@@ -1249,6 +1313,8 @@ def _protocol_record(
         "frozen": True,
         "evolution_seeds": _parse_seeds(args.evolution_seeds),
         "diagnostic": args.diagnostic,
+        "evaluation_data_policy": data_policy.policy_id,
+        "evaluation_data_policy_sha256": data_policy.digest,
         "state_oracle_labels": bool(
             getattr(args, "state_oracle_labels", False)
         ),
@@ -1277,22 +1343,24 @@ def _protocol_record(
 def _audit_evaluation_protocol(
     args: argparse.Namespace,
     config: VistaConfig,
-    manifest: ExperimentManifest,
+    manifest: ExperimentManifest | None,
     artifact: SkillArtifact | None,
 ) -> None:
     """Fail closed when a controlled evaluation drifts from its frozen protocol."""
 
     if args.diagnostic:
         return
-    if args.env == "eb-nav":
-        # EB-Nav has no controlled evolution protocol; only guard artifact frozenness.
-        if artifact is not None and not artifact.skill.frozen:
-            raise ValueError("artifact skill is not frozen")
-        return
     mismatches = []
-    configured_manifest = Path(str(config.raw["task_manifest"])).resolve()
-    if Path(args.manifest).resolve() != configured_manifest:
-        mismatches.append("manifest path differs from config")
+    data_policy = load_evaluation_data_policy()
+    configured_environment = str(config.raw["environment"]["name"])
+    if args.env != configured_environment:
+        mismatches.append("environment differs from config")
+    if args.env == "eb-hab":
+        if manifest is None:
+            mismatches.append("EB-Habitat controlled evaluation requires a manifest")
+        configured_manifest = Path(str(config.raw["task_manifest"])).resolve()
+        if Path(args.manifest).resolve() != configured_manifest:
+            mismatches.append("manifest path differs from config")
     executor = config.raw["executor"]
     expected_model = str(executor["model"])
     if not str(args.model_name).endswith(expected_model):
@@ -1308,7 +1376,6 @@ def _audit_evaluation_protocol(
     if artifact is not None:
         expected_protocol = {
             "config_sha256": config.digest,
-            "manifest_sha256": manifest.digest,
             "executor_model": args.model_name,
             "executor_model_type": args.model_type,
             "tensor_parallel": args.tp,
@@ -1318,16 +1385,32 @@ def _audit_evaluation_protocol(
             "resolution": args.resolution,
             "frozen": True,
             "diagnostic": False,
-            "acquisition_episode_budget": int(
-                config.raw["environment"]["acquisition_tasks"]
+            "env": args.env,
+            "evaluation_data_policy": data_policy.policy_id,
+            "evaluation_data_policy_sha256": data_policy.digest,
+            "rng_seed_policy": (
+                "python+numpy+torch+ai2thor+openai_request"
+                if args.env == "eb-nav"
+                else "python+numpy+torch+habitat+openai_request"
             ),
-            "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
         }
+        if manifest is not None:
+            expected_protocol["manifest_sha256"] = manifest.digest
+        acquisition_budget = config.raw["environment"].get("acquisition_tasks")
+        if acquisition_budget is not None:
+            expected_protocol["acquisition_episode_budget"] = int(acquisition_budget)
         for key, expected in expected_protocol.items():
             if artifact.protocol.get(key) != expected:
                 mismatches.append(f"artifact {key} mismatch")
         if not artifact.skill.frozen:
             mismatches.append("artifact skill is not frozen")
+        contamination = artifact_contamination_reasons(
+            artifact.skill, artifact.protocol
+        )
+        if contamination:
+            mismatches.append(
+                "artifact is quarantined: " + "; ".join(contamination)
+            )
     if mismatches:
         raise ValueError(
             "controlled evaluation protocol mismatch: " + "; ".join(mismatches)
@@ -1352,6 +1435,11 @@ def _artifact_evaluation_manifest(
 
 def _validate_controlled_executor(args: argparse.Namespace, config: VistaConfig) -> None:
     executor = config.raw["executor"]
+    configured_environment = str(config.raw["environment"]["name"])
+    if args.env != configured_environment:
+        raise ValueError(
+            "controlled protocol environment differs from config"
+        )
     expected_model = str(executor["model"])
     if not str(args.model_name).endswith(expected_model):
         raise ValueError(

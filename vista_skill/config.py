@@ -74,6 +74,21 @@ def load_config(path: str | Path) -> VistaConfig:
             subgroup_regression_tolerance=float(
                 gate.get("subgroup_regression_tolerance", 0.05)
             ),
+            semantic_affected_enabled=bool(
+                gate.get("semantic_affected_enabled", False)
+            ),
+            semantic_affected_lcb_threshold=float(
+                gate.get("semantic_affected_lcb_threshold", 0.0)
+            ),
+            semantic_protected_regression_tolerance=float(
+                gate.get("semantic_protected_regression_tolerance", 0.05)
+            ),
+            semantic_min_affected_tasks=int(
+                gate.get("semantic_min_affected_tasks", 2)
+            ),
+            semantic_min_protected_tasks=int(
+                gate.get("semantic_min_protected_tasks", 2)
+            ),
         ),
     )
     if config.recurrence.min_independent_episodes < 1:
@@ -84,6 +99,11 @@ def load_config(path: str | Path) -> VistaConfig:
         raise ValueError("paired gate budgets must be positive")
     if config.gate.proxy_episode_budget > config.gate.finalist_episode_budget:
         raise ValueError("proxy budget cannot exceed finalist budget")
+    if (
+        config.gate.semantic_min_affected_tasks < 1
+        or config.gate.semantic_min_protected_tasks < 1
+    ):
+        raise ValueError("semantic gate task minima must be positive")
     evolution_seeds = tuple(int(item) for item in raw["evolution_seeds"])
     if not evolution_seeds or len(set(evolution_seeds)) != len(evolution_seeds):
         raise ValueError("evolution_seeds must be non-empty and unique")

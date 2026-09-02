@@ -12,6 +12,7 @@ class EpisodeCoordinate:
     episode_id: str
     seed: int
     subgroup: str
+    semantic_tags: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -65,6 +66,7 @@ class PairedRolloutEvaluator:
                     subgroup=coordinate.subgroup,
                     parent_success=parent_result.success,
                     candidate_success=candidate_result.success,
+                    semantic_tags=coordinate.semantic_tags,
                 )
             )
         return tuple(scores)

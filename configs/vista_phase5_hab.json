@@ -1,14 +1,18 @@
 {
-  "protocol": "vista_skill_nav_eval_2026_08_12",
-  "task_manifest": "configs/vista_nav_manifest.json",
+  "protocol": "vista_skill_phase5_hab_2026_09_02",
+  "task_manifest": "configs/eb_hab_train_validation_manifest.json",
   "evolution_seeds": [0, 1, 2],
   "environment": {
-    "name": "eb-nav",
-    "note": "EB-Navigation ships no train_validation split; evaluate uses official_test on the subsets below.",
+    "name": "eb-hab",
+    "acquisition_split": "train_validation",
+    "acquisition_tasks": 60,
+    "selection_tasks": 20,
+    "audit_tasks": 20,
     "final_test_subsets": [
       "base",
       "common_sense",
       "complex_instruction",
+      "spatial_relationship",
       "visual_appearance",
       "long_horizon"
     ],
@@ -22,7 +26,7 @@
     "precision": "fp8",
     "max_model_len": 16384,
     "max_completion_tokens": 4096,
-    "n_shots": 3,
+    "n_shots": 10,
     "temperature": 0.0
   },
   "budgets": {
@@ -45,7 +49,12 @@
     "alpha": 0.05,
     "proxy_lcb_threshold": 0.0,
     "finalist_lcb_threshold": 0.0,
-    "subgroup_regression_tolerance": 0.05
+    "subgroup_regression_tolerance": 0.05,
+    "semantic_affected_enabled": true,
+    "semantic_affected_lcb_threshold": 0.0,
+    "semantic_protected_regression_tolerance": 0.05,
+    "semantic_min_affected_tasks": 2,
+    "semantic_min_protected_tasks": 2
   },
   "final_test": {
     "skill_frozen": true,

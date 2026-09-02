@@ -66,9 +66,14 @@ information-isolation contract, not merely an implementation convention.
 - Skill updates need independent episodes and unique evidence IDs.
 - A patch touches exactly one attributed field. Exact-target operations fail
   closed when the old statement is absent.
-- The candidate gate checks cached transition repair, paired bootstrap lower
-  confidence bounds, and worst protected-subgroup regression. Repeated rollout
-  seeds are averaged within task before bootstrap resampling.
+- The candidate gate checks cached transition repair and paired bootstrap lower
+  confidence bounds. In the active Phase-5 protocol, action-local
+  procedure/effect/constraint patches use an outcome-independent semantic split:
+  symbolic task goals determine affected versus protected tasks before rollout,
+  affected-task benefit must be positive, and protected tasks must pass a
+  non-inferiority margin. Global activation/termination patches retain the
+  conservative global-LCB and subgroup check. Repeated rollout seeds are
+  averaged within task before bootstrap resampling.
 - Acquisition checks recurrent clusters after every episode. An accepted
   version is promoted immediately, so later episodes execute and collect
   evidence against the new Skill rather than batching every event under v0.
@@ -100,8 +105,11 @@ information-isolation contract, not merely an implementation convention.
 
 ## Experiment protocol
 
-`configs/vista_p0.json` records thresholds, budgets, and the three evolution
-seeds. `configs/eb_hab_train_validation_manifest.json` pins all 100 episode
+`configs/vista_phase5_hab.json` is the active clean-boundary protocol and
+records thresholds, semantic affected/protected admission, budgets, and the
+three evolution seeds. `configs/vista_p0.json` is retained for historical
+Phase-0/Phase-1 reproduction. `configs/eb_hab_train_validation_manifest.json`
+pins all 100 episode
 coordinates and the dataset SHA-256. A release-grade run must additionally
 persist exact model revisions, model server settings, prompt/skill/schema
 hashes, teacher usage, candidate-evaluation episodes, wall time, and GPU hours.
@@ -127,8 +135,13 @@ Skill artifact schema v2 hashes the complete `schema_version + skill +
 protocol` envelope. Controlled evaluation restores and validates the artifact's
 split rotation and checks config/manifest hashes, frozen state, executor name
 and type, tensor parallel setting, n-shots, resolution, temperature, and token
-budget before constructing Habitat. Controlled evaluation also rejects
-diagnostic or reduced-acquisition artifacts. `--diagnostic` permits runtime protocol
+budget before constructing Habitat. Both EB-HAB and EB-NAV apply these runtime
+checks; release configs use the stock RemoteModel 4096-token completion cap and
+runtime reads that value from the frozen config. Controlled evaluation also
+requires the current evaluation-data-policy ID/hash and rejects artifacts marked
+as oracle, post-hoc, official-test-derived, or source-contaminated. See
+`docs/evaluation_integrity.md`. Controlled evaluation also rejects diagnostic
+or reduced-acquisition artifacts. `--diagnostic` permits runtime protocol
 deviations but never bypasses artifact-integrity hashing. Existing output paths
 are rejected, and Habitat image namespaces include unique run, task, rollout
 seed, and Skill identifiers. Python, NumPy, Torch, Habitat, and compatible
