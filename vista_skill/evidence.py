@@ -24,6 +24,7 @@ class VisualEvidenceProvider(Protocol):
 class EvidenceExtractorConfig:
     rule_confidence: float = 0.98
     visual_action_types: tuple[str, ...] = ("place",)
+    visual_on_unresolved_goals: bool = True
     min_visual_confidence: float = 0.5
     min_visual_coverage: float = 0.0
 
@@ -71,7 +72,7 @@ class EvidenceExtractor:
         unresolved_goals = any(key not in covered_keys for key in request.goal_predicates)
         needs_visual = (
             request.action.action_type in self.config.visual_action_types
-            or unresolved_goals
+            or (self.config.visual_on_unresolved_goals and unresolved_goals)
         )
         if self.visual_provider is not None and needs_visual:
             visual_items = tuple(self.visual_provider.extract(request))

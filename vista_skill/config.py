@@ -52,6 +52,9 @@ def load_config(path: str | Path) -> VistaConfig:
             action_model_updates_enabled=bool(
                 credit.get("action_model_updates_enabled", False)
             ),
+            skill_discovery_enabled=bool(
+                credit.get("skill_discovery_enabled", False)
+            ),
         ),
         recurrence=RecurrencePolicy(
             min_independent_episodes=int(credit.get("min_independent_episodes", 2)),

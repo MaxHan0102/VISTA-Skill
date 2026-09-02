@@ -168,3 +168,93 @@ cost.
 
 Next: specify the interface-only S0 contract and implement the natural
 discovery path before launching the clean Pingan03 EB-HAB pilot.
+
+## E3 — interface-only S0 and natural effect Discovery smoke — 2026-09-02
+
+Status: mechanism pass on real Pingan03 EB-HAB; candidate task-utility gate
+pending. No official-test data used.
+
+Implementation:
+
+- interface_only_shared_skill() is now the Phase-5 EB-HAB primary S0. It has
+  the five typed fields and persistent identity but zero statements, zero
+  compiled prediction rules, and no active termination prediction.
+- SkillOnlyActionSchema predicts only rules already accumulated in the Skill.
+  Historical fixed primitive knowledge remains available to reproduce earlier
+  repair experiments but cannot pre-explain Phase-5 discoveries.
+- Persistent updates now carry an explicit discovery, repair, or optimization
+  lifecycle label. Reliable action-bound SUPPORTED_UNEXPECTED evidence routes
+  to effect/discovery; derived task_complete is excluded.
+- Grounded predicates are generalized only through action arguments or the
+  pre-action held object. Recurrence therefore joins different object
+  instances while rejecting unbound episode-specific facts.
+- A ready Discovery cluster produces a deterministic one-field append and
+  compiled causal rule. It uses zero patch-teacher calls; Repair/Optimization
+  retain the constrained-model path.
+
+Live sequence:
+
+1. The endpoint 192.168.1.185:8000/v1 again passed all 6/6 serving-contract
+   checks.
+2. Unguarded one-episode diagnostic
+   running/phase5_discovery_smoke_20260902 completed a ball-to-sofa task in four
+   actions with success 1.0 and progress 1.0. All four transitions reached
+   Discovery. It also exposed a blocking evidence defect: after navigation,
+   the VLM assigned near-one confidence to action-irrelevant claims that the
+   ball had already moved and the gripper was free.
+3. The same seed with the authority-aware guard,
+   running/phase5_discovery_guarded_smoke_20260902, again succeeded in four
+   actions. The guard retained only nav-to-near, pick-to-holding/not_holding,
+   and place-to-at/holding/not_holding; the premature placement and gripper
+   claims after navigation were downgraded. Method usage was one goal-grounding
+   call (1938 prompt / 26 completion tokens) plus four visual-evidence calls
+   (3116 / 1399). There were no attribution or patch calls.
+4. A first two-episode recurrence attempt collected two successful natural
+   tasks and 20 transitions, then aborted because Qwen returned truncated
+   patch JSON. This directly motivated the deterministic zero-token Discovery
+   patch.
+5. The v2 two-episode recurrence diagnostic collected two successful tasks
+   (ball-to-sofa: 4 steps, zero invalid; sponge-and-spoon-to-table: 24 steps,
+   eight invalid). Four recurrent candidates were materialized:
+   nav-to-near(arg0)=true, pick-to-holding(arg0)=true,
+   pick-to-not_holding=false, and place-to-not_holding=true. All four passed
+   static and cached-transition consistency checks without a patch-model call.
+   They intentionally failed at the empty paired-proxy stage and were not
+   promoted. The run was manually stopped when the generic post-run audit
+   unexpectedly began simulator rollouts; those audit fragments are invalid
+   and excluded. The diagnostic path now skips update audit by construction.
+6. The completed v3 recurrence run is
+   running/phase5_discovery_recurrence_v3_20260902. Both tasks succeeded
+   (4 and 16 steps; 0 and 4 invalid actions), ready clusters progressed from 0
+   to 4, and the same four candidates passed static and transition checks. The
+   complete manifest records 20 visual-evidence calls and 30,117 visual
+   prompt/completion tokens, making per-action visual extraction the next
+   measured cost bottleneck.
+7. Event-triggered evidence was then enabled in
+   running/phase5_discovery_sparse_visual_smoke_20260902. On the same
+   ball-to-sofa episode, task success, progress, four-step trajectory, and
+   Discovery predicates were unchanged. Method usage fell from 6,479 to 1,964
+   tokens (minus 69.7 percent) and elapsed time fell from about 29.5 to 6.6
+   seconds. The only method-model call was goal grounding; transition evidence
+   came from public structured feedback plus action-local ledger grounding.
+   Visual extraction remains a configurable fallback for environments with
+   incomplete feedback.
+
+Interpretation:
+
+- The former “updates never become candidates” bottleneck is resolved for
+  naturally discovered action effects.
+- Evidence reliability, not transition routing, was the first live bottleneck;
+  authority-aware filtering is therefore part of the controlled Phase-5
+  configuration.
+- Unconditional per-action vision was a measured cost bottleneck. Prediction-
+  blind event triggering removes it on feedback-complete EB-HAB transitions
+  without removing the general visual fallback.
+- This is not yet evidence of task improvement. Primitive-effect candidates
+  are necessary plumbing, but the second task's eight invalid actions show
+  that failure-conditioned procedure/constraint discovery and optimization are
+  the next high-value target.
+
+Next: mine repeated failed-action patterns into procedure/constraint
+Discovery/Optimization candidates, add an executor-adoption check, and run one
+bounded real paired gate before scaling acquisition.

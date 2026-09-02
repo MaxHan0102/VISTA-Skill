@@ -283,6 +283,44 @@ class FixedActionSchema:
             yield _change(ledger, PredicateKey("open", (target,)), opened, source_id)
 
 
+@dataclass(frozen=True)
+class SkillOnlyActionSchema:
+    """Predict only effects already accumulated in the active Skill.
+
+    This schema is the clean discovery regime for an interface-only S0. It
+    deliberately does not bake benchmark primitive effects into the expected
+    transition, so reliable observed changes can become discovery evidence.
+    The fixed schema remains available for historical repair experiments.
+    """
+
+    schema_id: str = "learned_skill_only_v1"
+
+    def compile(
+        self,
+        action: ActionCall,
+        ledger: BeliefLedger,
+        skill: SkillSpec,
+        goal_predicates: tuple[PredicateKey, ...] = (),
+    ) -> tuple[ExpectedChange, ...]:
+        changes = list(_skill_changes(action, ledger, skill.prediction_rules, skill))
+        # An interface-only Skill must not silently inherit a termination rule.
+        # Once a termination statement has been accumulated, its compiled
+        # policy participates in prediction like any other learned rule.
+        if skill.termination:
+            completion = _termination_change(
+                ledger, skill, action, changes, goal_predicates
+            )
+            if completion is not None:
+                changes.append(completion)
+        return _dedupe_changes(changes)
+
+    def precondition_checks(
+        self, action: ActionCall, ledger: BeliefLedger
+    ) -> list[dict[str, Any]]:
+        # Preconditions are not assumed before the Skill discovers them.
+        return []
+
+
 # EB-Navigation action vocabulary: parameterless egocentric motion primitives.
 # Effects are geometric and therefore NOT logically predictable from the action
 # alone (unlike pick -> holding). The schema predicts only structurally

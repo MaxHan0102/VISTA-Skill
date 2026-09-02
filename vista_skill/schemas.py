@@ -61,6 +61,14 @@ class UpdateTarget(StringEnum):
     ACTION_MODEL_UPDATE = "action_model_update"
 
 
+class SkillUpdateKind(StringEnum):
+    """Lifecycle stage of a persistent Skill update."""
+
+    DISCOVERY = "discovery"
+    REPAIR = "repair"
+    OPTIMIZATION = "optimization"
+
+
 class AbstainReason(StringEnum):
     INSUFFICIENT_EVIDENCE = "insufficient_evidence"
     EXECUTION_LAPSE = "execution_lapse"
@@ -286,13 +294,20 @@ class AttributionResult:
     field: SkillField | None = None
     subreason: AbstainReason | None = None
     independent_support_count: int = 1
+    update_kind: SkillUpdateKind | None = None
 
     def __post_init__(self) -> None:
         _require_confidence(self.confidence)
         if self.target is UpdateTarget.SKILL_UPDATE and self.field is None:
             raise ValueError("skill update requires field attribution")
+        if self.target is UpdateTarget.SKILL_UPDATE and self.update_kind is None:
+            # Existing repair paths and constrained teachers predate the
+            # explicit lifecycle label. Keep their semantics stable.
+            object.__setattr__(self, "update_kind", SkillUpdateKind.REPAIR)
         if self.target is not UpdateTarget.SKILL_UPDATE and self.field is not None:
             raise ValueError("only skill updates can cite a skill field")
+        if self.target is not UpdateTarget.SKILL_UPDATE and self.update_kind is not None:
+            raise ValueError("only skill updates can carry an update kind")
         if self.target is UpdateTarget.ABSTAIN and self.subreason is None:
             raise ValueError("abstention requires a reason")
 

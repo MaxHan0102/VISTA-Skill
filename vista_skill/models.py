@@ -15,6 +15,7 @@ from vista_skill.baselines import (
 )
 from vista_skill.evolution import PatchGenerator, make_patch_id
 from vista_skill.clustering import EvidenceCluster
+from vista_skill.discovery import generalize_supported_transition
 from vista_skill.meta_skills import EvolutionMetaSkill
 from vista_skill.schemas import (
     AbstainReason,
@@ -441,10 +442,49 @@ class JsonBoundedPatchGenerator(PatchGenerator):
     def propose(self, skill: SkillSpec, cluster: EvidenceCluster) -> SkillPatch:
         field = cluster.key.field
         evidence_ids = cluster.evidence_ids
+        discovery = _generalized_discovery(cluster)
+        if discovery is not None:
+            # Discovery does not require a language-model judgment: recurrent
+            # grounded transitions uniquely determine the causal rule. This
+            # deterministic path is cheaper and cannot fail on malformed JSON.
+            new = discovery.executor_statement()
+            rules = _discovered_rules(skill, field, cluster)
+            assert rules is not None
+            return SkillPatch(
+                patch_id=make_patch_id(
+                    skill,
+                    field,
+                    PatchOperation.APPEND,
+                    "",
+                    new,
+                    evidence_ids,
+                    None,
+                    rules,
+                ),
+                skill_id=skill.skill_id,
+                parent_version=skill.version,
+                field=field,
+                operation=PatchOperation.APPEND,
+                old="",
+                new=new,
+                evidence_ids=evidence_ids,
+                scope=discovery.signature,
+                rationale=(
+                    "generalized from recurrent reliable transitions in "
+                    f"{cluster.independent_support_count} independent episodes"
+                ),
+                termination_policy=None,
+                prediction_rules=rules,
+            )
         payload = {
             "skill_id": skill.skill_id,
             "parent_version": skill.version,
             "attributed_field": field.value,
+            "update_kind": (
+                None
+                if not cluster.items
+                else cluster.items[0].attribution.update_kind.value
+            ),
             "current_statements": skill.statements(field),
             "cluster": [
                 {
@@ -520,7 +560,26 @@ class JsonBoundedPatchGenerator(PatchGenerator):
             # strip it for non-termination fields before it reaches the gate.
             result = {**result, "termination_policy": None}
             corrected = _evidence_corrected_rules(skill, field, cluster)
-            if corrected is not None:
+            discovered = _discovered_rules(skill, field, cluster)
+            if discovered is not None:
+                # The model authors concise executor-facing prose; the
+                # grounded transition determines the compiled causal rule.
+                result = {
+                    **result,
+                    "operation": PatchOperation.APPEND.value,
+                    "old": "",
+                    "prediction_rules": [
+                        {
+                            "rule_id": rule.rule_id,
+                            "action_type": rule.action_type,
+                            "predicate": rule.predicate,
+                            "before": None if rule.before is None else rule.before.value,
+                            "after": rule.after.value,
+                        }
+                        for rule in discovered
+                    ],
+                }
+            elif corrected is not None:
                 # Same derivation philosophy as the termination policy: the
                 # model restates the exposed (refuted) compiled rules, so for
                 # predicates the cluster's evidence contradicts, the rule's
@@ -749,6 +808,46 @@ def _evidence_corrected_rules(
         else:
             corrected.append(rule)
     return tuple(corrected) if touched else None
+
+
+def _discovered_rules(
+    skill: SkillSpec,
+    field: SkillField,
+    cluster: EvidenceCluster,
+) -> tuple[SkillPredictionRule, ...] | None:
+    if field is not SkillField.EFFECT:
+        return None
+    discovery = _generalized_discovery(cluster)
+    if discovery is None:
+        return None
+    new_rule = discovery.prediction_rule()
+    retained = tuple(rule for rule in skill.prediction_rules if rule.field is field)
+    if any(
+        (rule.action_type, rule.predicate, rule.before, rule.after)
+        == (new_rule.action_type, new_rule.predicate, new_rule.before, new_rule.after)
+        for rule in retained
+    ):
+        return retained
+    return (*retained, new_rule)
+
+
+def _generalized_discovery(cluster: EvidenceCluster):
+    if not cluster.items or any(
+        item.attribution.update_kind is None
+        or item.attribution.update_kind.value != "discovery"
+        for item in cluster.items
+    ):
+        return None
+    generalized = tuple(
+        generalize_supported_transition(item.action, item.mismatch, item.pre_ledger)
+        for item in cluster.items
+    )
+    if any(item is None for item in generalized):
+        return None
+    valid = tuple(item for item in generalized if item is not None)
+    if len({item.signature for item in valid}) != 1:
+        return None
+    return valid[0]
 
 
 def _patch_schema() -> dict[str, Any]:

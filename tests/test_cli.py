@@ -597,6 +597,25 @@ def test_evidence_guard_requires_diagnostic() -> None:
         cli._run_experiment(args)
 
 
+def test_phase5_uses_configured_evidence_guard_when_omitted(monkeypatch) -> None:
+    args = parse_args(
+        [
+            "experiment", "--method", "full", "--method-model", "m",
+            "--diagnostic", "--max-acquisition-episodes", "1",
+            "--evolution-seeds", "0",
+        ]
+    )
+    assert args.evidence_guard is None
+
+    def stop_after_resolution(*_args, **_kwargs):
+        assert args.evidence_guard == "authority_aware"
+        raise RuntimeError("resolved")
+
+    monkeypatch.setattr(cli, "_require_new_output", stop_after_resolution)
+    with pytest.raises(RuntimeError, match="resolved"):
+        cli._run_experiment(args)
+
+
 def test_make_engine_wires_images_only_authority_guard() -> None:
     config = load_config("configs/vista_fault_repair_fullsel_p10.json")
     model = SimpleNamespace()
@@ -649,6 +668,40 @@ def test_initial_skill_requires_diagnostic() -> None:
         ]
     )
     with pytest.raises(ValueError, match="initial-skill"):
+        cli._run_experiment(args)
+
+
+def test_diagnostic_may_select_registered_seed_subset(monkeypatch) -> None:
+    args = parse_args(
+        [
+            "experiment", "--method", "full", "--method-model", "m",
+            "--diagnostic", "--evolution-seeds", "0",
+        ]
+    )
+    config = cli.load_config(args.config)
+    cli._validate_controlled_executor(args, config)
+
+
+def test_diagnostic_rejects_unregistered_seed() -> None:
+    args = parse_args(
+        [
+            "experiment", "--method", "full", "--method-model", "m",
+            "--diagnostic", "--evolution-seeds", "99",
+        ]
+    )
+    config = cli.load_config(args.config)
+    with pytest.raises(ValueError, match="subset"):
+        cli._validate_controlled_executor(args, config)
+
+
+def test_transition_only_gate_requires_diagnostic() -> None:
+    args = parse_args(
+        [
+            "experiment", "--method", "full", "--method-model", "m",
+            "--transition-only-gate",
+        ]
+    )
+    with pytest.raises(ValueError, match="transition-only-gate"):
         cli._run_experiment(args)
 
 

@@ -12,6 +12,7 @@ from typing import Mapping, Sequence
 
 from vista_skill.artifacts import JsonlArtifactWriter
 from vista_skill.attribution import CreditAssigner
+from vista_skill.action_schema import SkillOnlyActionSchema
 from vista_skill.baselines import (
     CommonGateProposalAdapter,
     EmbodiSkillFrontend,
@@ -78,6 +79,7 @@ from vista_skill.protocol import ExperimentManifest, load_experiment_manifest
 from vista_skill.schemas import SkillSpec
 from vista_skill.skills import (
     empty_shared_skill,
+    interface_only_shared_skill,
     minimal_shared_skill,
     SkillArtifact,
     initialize_nav_skill,
@@ -111,6 +113,13 @@ _TRAJECTORY_METHODS = (
 _METHODS_REQUIRING_TEACHER = ("full", *_TRAJECTORY_METHODS)
 
 
+class _NoRolloutPairedEvaluator:
+    """Diagnostic gate stop after static and cached-transition validation."""
+
+    def evaluate(self, parent, candidate, *, stage: str, episode_budget: int):
+        return ()
+
+
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="External VISTA-Skill workflows for stock EB-Habitat."
@@ -135,12 +144,12 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     experiment.add_argument("--max-acquisition-episodes", type=int)
     experiment.add_argument(
         "--initial-skill",
-        choices=("shared", "minimal", "empty"),
-        default="shared",
+        choices=("shared", "minimal", "empty", "interface"),
+        default=None,
         help="Initial Skill variant (diagnostic init-sensitivity regime): "
         "'shared' = S0; 'minimal'/'empty' = degraded starting points for "
-        "testing whether evolution can grow or recover skills. Requires "
-        "--diagnostic.",
+        "testing whether evolution can grow or recover skills. The config's "
+        "declared variant is used when omitted; overrides require --diagnostic.",
     )
     experiment.add_argument(
         "--skill-fault",
@@ -163,6 +172,14 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         help="Allow reduced episode counts; outputs are not controlled-protocol results.",
     )
     experiment.add_argument(
+        "--transition-only-gate",
+        action="store_true",
+        help=(
+            "Diagnostic only: materialize candidates and run static/cached-transition "
+            "checks, but stop before paired rollout selection."
+        ),
+    )
+    experiment.add_argument(
         "--state-oracle-labels",
         action="store_true",
         help=(
@@ -173,8 +190,11 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     experiment.add_argument(
         "--evidence-guard",
         choices=("none", "threshold", "strict", "authority_aware"),
-        default="none",
-        help="Phase3A diagnostic evidence fusion arm; requires --diagnostic.",
+        default=None,
+        help=(
+            "Evidence-fusion regime. Uses the config declaration when omitted; "
+            "a command-line override requires --diagnostic."
+        ),
     )
     experiment.add_argument("--guard-min-visual-confidence", type=float, default=0.75)
     experiment.add_argument("--guard-min-visual-coverage", type=float, default=0.50)
@@ -256,6 +276,18 @@ def _run_experiment(args: argparse.Namespace) -> None:
     if args.env != "eb-hab":
         raise ValueError("evolution/experiment is EB-Habitat-only; EB-Nav supports 'evaluate'")
     config = load_config(args.config)
+    configured_initial = str(
+        config.raw.get("initialization", {}).get("variant", "shared")
+    )
+    if args.initial_skill is None:
+        args.initial_skill = configured_initial
+    elif args.initial_skill != configured_initial and not args.diagnostic:
+        raise ValueError("--initial-skill override differs from the controlled config")
+    configured_guard = str(config.raw.get("evidence", {}).get("guard", "none"))
+    if args.evidence_guard is None:
+        args.evidence_guard = configured_guard
+    elif args.evidence_guard != configured_guard and not args.diagnostic:
+        raise ValueError("--evidence-guard override differs from the controlled config")
     configured_manifest = Path(str(config.raw["task_manifest"])).resolve()
     if Path(args.manifest).resolve() != configured_manifest:
         raise ValueError("controlled protocol manifest differs from config")
@@ -269,16 +301,16 @@ def _run_experiment(args: argparse.Namespace) -> None:
         )
     if args.max_acquisition_episodes is not None and not args.diagnostic:
         raise ValueError("reduced acquisition requires --diagnostic")
+    if args.transition_only_gate and not args.diagnostic:
+        raise ValueError("--transition-only-gate requires --diagnostic")
+    if args.transition_only_gate and args.method != "full":
+        raise ValueError("--transition-only-gate currently requires --method full")
     if args.skill_fault and not args.diagnostic:
         raise ValueError("--skill-fault is a diagnostic deviation and requires --diagnostic")
-    if args.initial_skill != "shared" and not args.diagnostic:
-        raise ValueError("--initial-skill is a diagnostic deviation and requires --diagnostic")
     if args.initial_skill != "shared" and args.skill_fault:
         raise ValueError("--initial-skill and --skill-fault are exclusive regime knobs")
     if args.state_oracle_labels and not args.diagnostic:
         raise ValueError("--state-oracle-labels is evaluation-only and requires --diagnostic")
-    if args.evidence_guard != "none" and not args.diagnostic:
-        raise ValueError("--evidence-guard is a Phase3A deviation and requires --diagnostic")
     if args.meta_skills != "none" and not args.diagnostic:
         raise ValueError("--meta-skills is a Phase3C deviation and requires --diagnostic")
     if args.meta_skills != "none" and args.method != "full":
@@ -346,8 +378,12 @@ def _run_experiment(args: argparse.Namespace) -> None:
                 "acquisition_episode_budget": len(acquisition),
             }
             if args.method == "full":
-                paired = _make_paired_evaluator(
-                    args, run_manifest, gate_seeds, run_dir, config, run_id=run_id
+                paired = (
+                    _NoRolloutPairedEvaluator()
+                    if args.transition_only_gate
+                    else _make_paired_evaluator(
+                        args, run_manifest, gate_seeds, run_dir, config, run_id=run_id
+                    )
                 )
                 lineage = LineageStore(run_dir / "lineage.jsonl")
                 workflow = EvolutionWorkflow(
@@ -426,7 +462,7 @@ def _run_experiment(args: argparse.Namespace) -> None:
             run_dir / "frozen_skill.json", frozen.skill, protocol=protocol
         )
         update_audit = None
-        if workflow is not None:
+        if workflow is not None and not args.transition_only_gate:
             audit_plan = make_rotated_audit_plan(
                 manifest,
                 rotation_index=rotation_index,
@@ -692,16 +728,26 @@ def _make_engine(
         "clusterer": EventClusterer(config.recurrence),
         "credit_assigner": CreditAssigner(config=config.attribution),
     }
+    if initial_skill == "interface":
+        kwargs["action_schema"] = SkillOnlyActionSchema()
     grounder = None
     if model is not None:
         guard = None
         include_feedback = True
-        evidence_config = None
+        evidence_settings = config.raw.get("evidence", {})
+        evidence_config = EvidenceExtractorConfig(
+            visual_action_types=tuple(
+                str(item)
+                for item in evidence_settings.get("visual_action_types", ("place",))
+            ),
+            visual_on_unresolved_goals=bool(
+                evidence_settings.get("visual_on_unresolved_goals", True)
+            ),
+            min_visual_confidence=guard_min_visual_confidence,
+            min_visual_coverage=guard_min_visual_coverage,
+        )
         if evidence_guard == "threshold":
-            evidence_config = EvidenceExtractorConfig(
-                min_visual_confidence=guard_min_visual_confidence,
-                min_visual_coverage=guard_min_visual_coverage,
-            )
+            pass
         elif evidence_guard in {"strict", "authority_aware"}:
             # Guard v2 uses the same single feedback-conditioned VLM call as
             # the current method, then audits it against independently parsed
@@ -734,7 +780,9 @@ def _make_engine(
             }
         )
         grounder = JsonGoalGrounder(model)
-    if initial_skill == "minimal":
+    if initial_skill == "interface":
+        skill = interface_only_shared_skill()
+    elif initial_skill == "minimal":
         # Degraded starting point (§4.2.3): no compiled rules and one-line
         # bodies, so the engine predicts from the fixed action schema only.
         skill = minimal_shared_skill()
@@ -1313,6 +1361,9 @@ def _protocol_record(
         "frozen": True,
         "evolution_seeds": _parse_seeds(args.evolution_seeds),
         "diagnostic": args.diagnostic,
+        "transition_only_gate": bool(
+            getattr(args, "transition_only_gate", False)
+        ),
         "evaluation_data_policy": data_policy.policy_id,
         "evaluation_data_policy_sha256": data_policy.digest,
         "state_oracle_labels": bool(
@@ -1455,7 +1506,13 @@ def _validate_controlled_executor(args: argparse.Namespace, config: VistaConfig)
     if args.tp != int(executor["tensor_parallel"]):
         raise ValueError("controlled protocol tensor parallel setting differs from config")
     configured_seeds = tuple(int(item) for item in config.raw["evolution_seeds"])
-    if _parse_seeds(args.evolution_seeds) != configured_seeds:
+    requested_seeds = _parse_seeds(args.evolution_seeds)
+    if args.diagnostic:
+        if any(seed not in configured_seeds for seed in requested_seeds):
+            raise ValueError(
+                "diagnostic evolution seeds must be a subset of the controlled config"
+            )
+    elif requested_seeds != configured_seeds:
         raise ValueError("controlled protocol evolution seeds differ from config")
 
 

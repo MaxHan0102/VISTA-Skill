@@ -307,6 +307,32 @@ def empty_shared_skill() -> SkillSpec:
     )
 
 
+def interface_only_shared_skill() -> SkillSpec:
+    """Primary Phase-5 S0: structure and action interface, no task rules.
+
+    The benchmark supplies the executor's legal action interface. The Skill
+    supplies only its five typed fields and persistent identity; every field is
+    initially empty and no transition or termination rule is pre-installed.
+    This makes acquired content attributable to the agent's own interactions.
+    """
+    return SkillSpec(
+        skill_id="shared_embodied_execution",
+        version=0,
+        activation=(),
+        procedure=(),
+        effect=(),
+        termination=(),
+        constraint=(),
+        termination_policy=TerminationPolicy.ALL_GOALS_EVIDENCE,
+        prediction_rules=(),
+        metadata={
+            "initialization": "interface-only",
+            "prior_task_rules": 0,
+            "prior_transition_rules": 0,
+        },
+    )
+
+
 def render_skill(skill: SkillSpec, *, max_statements_per_field: int | None = None) -> str:
     parts = [f"Skill: {skill.skill_id} (v{skill.version})"]
     for skill_field in SkillField:

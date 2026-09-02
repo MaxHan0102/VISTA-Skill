@@ -89,6 +89,11 @@ information-isolation contract, not merely an implementation convention.
 
 ## Package boundaries
 
+Phase-5 discovery separates the historical fixed EB-Hab primitive schema from
+the learned-Skill-only schema. The latter predicts only rules already present
+in persistent memory, while discovery.py generalizes reliable transition
+evidence into instance-free causal signatures before recurrence.
+
 - `schemas.py`: strict domain DTOs and enum invariants.
 - `belief.py`: sparse three-valued ledger and provenance-aware merging.
 - `action_schema.py`: deterministic EB-Hab style primitive effects and compiled
@@ -104,6 +109,32 @@ information-isolation contract, not merely an implementation convention.
 - `integrations/embodiedbench/`: optional stock environment/planner adapters.
 
 ## Experiment protocol
+
+The Phase-5 EB-HAB primary S0 is interface-only: the benchmark action API
+remains available, but all five Skill bodies and compiled rules start empty.
+Expected transitions come only from accumulated Skill rules, and the
+authority-aware evidence guard is mandatory before natural observations can
+enter recurrence.
+
+Reliable SUPPORTED_UNEXPECTED changes bind predicate arguments only to action
+arguments or the pre-action held object. Unbound instance facts and derived
+task_complete observations cannot become action-effect rules. After two
+independent episodes, the grounded signature deterministically produces a
+bounded executor-facing statement and compiled rule with zero patch-teacher
+calls. Repair and optimization may still use a constrained model when evidence
+does not uniquely determine the update.
+
+Evidence extraction is also event-triggered. The EB-HAB Phase-5 configuration
+uses structured action feedback and action-local ledger grounding when those
+sources fully determine a transition; it does not call the visual evidence
+model merely because an unrelated goal predicate remains unresolved. The
+visual provider remains a portable fallback that can be enabled per action or
+for unresolved goals in environments whose public feedback is incomplete.
+
+For cheap live validation, experiment --diagnostic --transition-only-gate runs
+acquisition, candidate materialization, static validation, and cached
+transition validation, then skips paired rollouts and post-run update audit. It
+never promotes the candidate and is not a task-performance result.
 
 `configs/vista_phase5_hab.json` is the active clean-boundary protocol and
 records thresholds, semantic affected/protected admission, budgets, and the

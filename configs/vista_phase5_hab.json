@@ -2,6 +2,17 @@
   "protocol": "vista_skill_phase5_hab_2026_09_02",
   "task_manifest": "configs/eb_hab_train_validation_manifest.json",
   "evolution_seeds": [0, 1, 2],
+  "initialization": {
+    "variant": "interface",
+    "action_schema": "learned_skill_only_v1"
+  },
+  "evidence": {
+    "guard": "authority_aware",
+    "min_visual_confidence": 0.75,
+    "min_visual_coverage": 0.5,
+    "visual_action_types": [],
+    "visual_on_unresolved_goals": false
+  },
   "environment": {
     "name": "eb-hab",
     "acquisition_split": "train_validation",
@@ -40,6 +51,7 @@
   "credit": {
     "targets": ["belief_refresh", "skill_update", "abstain"],
     "action_model_updates_enabled": false,
+    "skill_discovery_enabled": true,
     "min_independent_episodes": 2,
     "min_evidence_confidence": 0.75,
     "min_attribution_confidence": 0.7

@@ -1,11 +1,16 @@
 from __future__ import annotations
 
-from vista_skill.action_schema import FixedActionSchema, parse_action_call
+from vista_skill.action_schema import (
+    FixedActionSchema,
+    SkillOnlyActionSchema,
+    parse_action_call,
+)
 from vista_skill.belief import BeliefLedger
 from vista_skill.pipeline import VistaSkillEngine
 from vista_skill.schemas import SkillField, SkillSpec
 from vista_skill.skills import (
     empty_shared_skill,
+    interface_only_shared_skill,
     initialize_shared_skill,
     minimal_shared_skill,
 )
@@ -55,6 +60,24 @@ def test_empty_shared_skill_retains_required_identity() -> None:
     assert skill.skill_id == "shared_embodied_execution"
     assert skill.version == 0
     assert skill.termination_policy is not None
+
+
+def test_interface_only_s0_contains_no_prior_rules_or_statements() -> None:
+    skill = interface_only_shared_skill()
+    assert skill.metadata["initialization"] == "interface-only"
+    assert skill.metadata["prior_task_rules"] == 0
+    assert skill.prediction_rules == ()
+    assert all(skill.statements(field) == () for field in SkillField)
+
+
+def test_interface_only_schema_does_not_preexplain_observed_effects() -> None:
+    changes = SkillOnlyActionSchema().compile(
+        parse_action_call(0, ("pick_apple", ["robot_0"])),
+        BeliefLedger(),
+        interface_only_shared_skill(),
+        (),
+    )
+    assert changes == ()
 
 
 def test_both_variants_share_skill_id_with_spec_init() -> None:

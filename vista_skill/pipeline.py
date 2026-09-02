@@ -253,11 +253,15 @@ class VistaSkillEngine:
             metadata=event_metadata,
         )
         if attribution is not None and attribution.target is UpdateTarget.SKILL_UPDATE:
+            attributed_ids = set(attribution.mismatch_ids)
             eligible = [
                 mismatch
                 for mismatch in mismatches
-                if mismatch.expected is not None
-                and mismatch.expected.skill_field == attribution.field
+                if mismatch.mismatch_id in attributed_ids
+                and (
+                    mismatch.expected is None
+                    or mismatch.expected.skill_field == attribution.field
+                )
             ]
             # The constrained field teacher may locate procedure/constraint faults
             # whose observable symptom originates in a fixed primitive transition.
@@ -269,12 +273,19 @@ class VistaSkillEngine:
                     else item.evidence.confidence,
                 )]
             for mismatch in eligible:
+                item_attribution = attribution
+                if attribution.update_kind is not None and attribution.update_kind.value == "discovery":
+                    item_attribution = replace(
+                        attribution,
+                        mismatch_ids=(mismatch.mismatch_id,),
+                        evidence_ids=mismatch.evidence_ids,
+                    )
                 self.clusterer.add(
                     event_id=event_id,
                     episode_id=prepared.episode_id,
                     skill_id=self.skill.skill_id,
                     skill_version=self.skill.version,
-                    attribution=attribution,
+                    attribution=item_attribution,
                     mismatch=mismatch,
                     action=prepared.action,
                     pre_ledger=prepared.pre_ledger,

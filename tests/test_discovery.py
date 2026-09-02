@@ -1,0 +1,140 @@
+from __future__ import annotations
+
+from vista_skill.action_schema import SkillOnlyActionSchema, parse_action_call
+from vista_skill.attribution import AttributionConfig, CreditAssigner
+from vista_skill.belief import BeliefLedger
+from vista_skill.clustering import EventClusterer, RecurrencePolicy
+from vista_skill.evolution import BoundedPatchApplier, DeterministicTransitionChecker
+from vista_skill.mismatch import compare_transitions
+from vista_skill.models import JsonBoundedPatchGenerator
+from vista_skill.schemas import (
+    AttributionContext,
+    EvidenceSource,
+    PredicateEvidence,
+    PredicateKey,
+    SkillField,
+    SkillUpdateKind,
+    TruthValue,
+    UpdateTarget,
+)
+from vista_skill.skills import interface_only_shared_skill
+
+
+def _observed(
+    predicate: str,
+    *,
+    evidence_id: str,
+    before: TruthValue = TruthValue.UNKNOWN,
+    after: TruthValue = TruthValue.TRUE,
+) -> PredicateEvidence:
+    return PredicateEvidence(
+        key=PredicateKey.parse(predicate),
+        before=before,
+        after=after,
+        confidence=0.95,
+        source=EvidenceSource.ENV_FEEDBACK,
+        evidence_id=evidence_id,
+        timestamp=1,
+        coverage=1.0,
+    )
+
+
+def _discovery_attribution(mismatch, action_type: str = "pick"):
+    return CreditAssigner(
+        config=AttributionConfig(skill_discovery_enabled=True)
+    ).assign(
+        (mismatch,),
+        AttributionContext(action_type=action_type, executor_followed_skill=True),
+    )
+
+
+def test_supported_unexpected_is_discovery_only_when_enabled() -> None:
+    mismatch = compare_transitions(
+        (), (_observed("holding(apple_1)", evidence_id="ev1"),)
+    )[0]
+    legacy = CreditAssigner().assign(
+        (mismatch,), AttributionContext(action_type="pick")
+    )
+    discovered = _discovery_attribution(mismatch)
+    assert legacy.target is UpdateTarget.BELIEF_REFRESH
+    assert discovered.target is UpdateTarget.SKILL_UPDATE
+    assert discovered.field is SkillField.EFFECT
+    assert discovered.update_kind is SkillUpdateKind.DISCOVERY
+
+
+def test_task_completion_is_not_mined_as_an_action_effect() -> None:
+    mismatch = compare_transitions(
+        (), (_observed("task_complete", evidence_id="ev-goal"),)
+    )[0]
+    result = _discovery_attribution(mismatch)
+    assert result.target is UpdateTarget.BELIEF_REFRESH
+
+
+def test_discovery_recurrence_generalizes_across_object_instances() -> None:
+    clusterer = EventClusterer(RecurrencePolicy(min_independent_episodes=2))
+    for index, obj in enumerate(("apple_1", "mug_2"), start=1):
+        action = parse_action_call(index, (f"pick_{obj}", ["robot_0"]))
+        mismatch = compare_transitions(
+            (), (_observed(f"holding({obj})", evidence_id=f"ev{index}"),)
+        )[0]
+        attribution = _discovery_attribution(mismatch)
+        clusterer.add(
+            event_id=f"event{index}",
+            episode_id=f"episode{index}",
+            skill_id="shared_embodied_execution",
+            attribution=attribution,
+            mismatch=mismatch,
+            action=action,
+        )
+    ready = clusterer.ready()
+    assert len(ready) == 1
+    assert ready[0].key.object_context == "pick|holding({arg0})|true"
+
+
+def test_discovery_rejects_unbound_instance_specific_predicate() -> None:
+    action = parse_action_call(1, ("pick_apple_1", ["robot_0"]))
+    mismatch = compare_transitions(
+        (), (_observed("at(apple_1,table_9)", evidence_id="ev1"),)
+    )[0]
+    cluster = EventClusterer().add(
+        event_id="event1",
+        episode_id="episode1",
+        skill_id="shared_embodied_execution",
+        attribution=_discovery_attribution(mismatch),
+        mismatch=mismatch,
+        action=action,
+    )
+    assert cluster is None
+
+
+def test_discovery_patch_adds_grounded_compiled_rule_and_repairs_cache() -> None:
+    skill = interface_only_shared_skill()
+    schema = SkillOnlyActionSchema()
+    clusterer = EventClusterer(RecurrencePolicy(min_independent_episodes=2))
+    for index, obj in enumerate(("apple_1", "mug_2"), start=1):
+        action = parse_action_call(index, (f"pick_{obj}", ["robot_0"]))
+        observed = _observed(f"holding({obj})", evidence_id=f"ev{index}")
+        mismatch = compare_transitions((), (observed,))[0]
+        clusterer.add(
+            event_id=f"event{index}",
+            episode_id=f"episode{index}",
+            skill_id=skill.skill_id,
+            attribution=_discovery_attribution(mismatch),
+            mismatch=mismatch,
+            action=action,
+            evidence_delta=(observed,),
+        )
+    cluster = clusterer.ready()[0]
+
+    class _TextAuthor:
+        def complete_json(self, *, system, content, schema, purpose):
+            raise AssertionError("grounded discovery must not call the teacher")
+
+    patch = JsonBoundedPatchGenerator(_TextAuthor()).propose(skill, cluster)
+    assert patch.operation.value == "append"
+    assert patch.old == ""
+    assert len(patch.prediction_rules or ()) == 1
+    assert patch.prediction_rules[0].predicate == "holding({arg0})"
+    candidate = BoundedPatchApplier().apply(skill, patch)
+    checks = DeterministicTransitionChecker(schema).check(skill, candidate, cluster)
+    assert checks and all(item.repaired for item in checks)

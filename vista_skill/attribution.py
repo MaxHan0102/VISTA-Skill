@@ -11,6 +11,7 @@ from vista_skill.schemas import (
     Mismatch,
     MismatchKind,
     SkillField,
+    SkillUpdateKind,
     TruthValue,
     UpdateTarget,
     unique_strings,
@@ -30,6 +31,7 @@ class AttributionConfig:
     min_evidence_confidence: float = 0.75
     min_teacher_confidence: float = 0.70
     action_model_updates_enabled: bool = False
+    skill_discovery_enabled: bool = False
 
 
 class CreditAssigner:
@@ -157,6 +159,32 @@ class CreditAssigner:
             )
 
         if all(item.kind is MismatchKind.SUPPORTED_UNEXPECTED for item in mismatches):
+            discovery_items = tuple(
+                item for item in mismatches if item.key.name != "task_complete"
+            )
+            if self.config.skill_discovery_enabled and discovery_items and context.action_type:
+                return AttributionResult(
+                    target=UpdateTarget.SKILL_UPDATE,
+                    field=SkillField.EFFECT,
+                    update_kind=SkillUpdateKind.DISCOVERY,
+                    confidence=min(
+                        item.evidence.confidence
+                        for item in discovery_items
+                        if item.evidence is not None
+                    ),
+                    mismatch_ids=tuple(item.mismatch_id for item in discovery_items),
+                    evidence_ids=unique_strings(
+                        tuple(
+                            evidence_id
+                            for item in discovery_items
+                            for evidence_id in item.evidence_ids
+                        )
+                    ),
+                    rationale=(
+                        "reliable action-bound state changes are recurrent Skill "
+                        "discovery candidates"
+                    ),
+                )
             return AttributionResult(
                 target=UpdateTarget.BELIEF_REFRESH,
                 confidence=0.8,

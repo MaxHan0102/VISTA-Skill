@@ -414,6 +414,35 @@ class FixedVisualProvider:
         return (self.item,)
 
 
+def test_visual_fallback_can_be_disabled_when_feedback_is_authoritative() -> None:
+    visual = FixedVisualProvider(
+        evidence("at(apple_1,table_1)", TruthValue.UNKNOWN, TruthValue.TRUE)
+    )
+    extractor = EvidenceExtractor(
+        visual,
+        config=EvidenceExtractorConfig(
+            visual_action_types=(),
+            visual_on_unresolved_goals=False,
+        ),
+    )
+    observed = extractor.extract(
+        EvidenceRequest(
+            episode_id="ep1",
+            step_id=1,
+            instruction="move the apple to the table",
+            action=parse_action_call(0, ("nav", ["table_1"])),
+            pre_image="pre.png",
+            post_image="post.png",
+            feedback="Last action executed successfully.",
+            last_action_success=True,
+            pre_ledger=(),
+            goal_predicates=(PredicateKey.parse("at(apple_1,table_1)"),),
+        )
+    )
+    assert visual.requests == []
+    assert any(item.key == PredicateKey.parse("near(table_1)") for item in observed)
+
+
 def test_engine_advances_belief_and_freeze_disables_attribution_not_local_belief() -> None:
     visual = FixedVisualProvider(
         evidence("visible(apple_1)", TruthValue.UNKNOWN, TruthValue.TRUE)

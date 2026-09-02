@@ -9,6 +9,7 @@ from vista_skill.schemas import (
     SkillField,
     UpdateTarget,
 )
+from vista_skill.discovery import generalize_supported_transition
 from vista_skill.schemas import (
     ActionCall,
     PredicateEvidence,
@@ -119,6 +120,15 @@ class EventClusterer:
             # into per-episode clusters that never reach recurrence.
             task_pattern = "any_task"
             object_context = "policy"
+        elif attribution.update_kind is not None and attribution.update_kind.value == "discovery":
+            generalized = generalize_supported_transition(action, mismatch, pre_ledger)
+            if generalized is None:
+                return None
+            # Discovery recurrence must transfer across episode-specific object
+            # IDs and task wordings. The generalized causal signature is the
+            # cluster identity.
+            task_pattern = f"discover:{generalized.action_type}"
+            object_context = generalized.signature
         unique_marker = (
             event_id,
             mismatch.mismatch_id,
