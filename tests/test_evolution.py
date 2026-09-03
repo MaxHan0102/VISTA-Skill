@@ -30,6 +30,7 @@ from vista_skill.schemas import (
     SkillField,
     SkillPatch,
     SkillPredictionRule,
+    TemporalSkillRule,
     TerminationPolicy,
     TruthValue,
     UpdateTarget,
@@ -377,6 +378,99 @@ def test_gate_fails_closed_when_paired_budget_is_incomplete() -> None:
     assert "required episodes" in decision.reason
 
 
+class PrefixScoreEvaluator:
+    def __init__(self, values):
+        self.values = tuple(values)
+        self.calls = []
+
+    def evaluate(self, parent, candidate, *, stage, episode_budget):
+        self.calls.append((stage, episode_budget))
+        return tuple(
+            PairedEpisodeScore(
+                f"ep{index}",
+                0,
+                0.0,
+                delta,
+                "all",
+            )
+            for index, delta in enumerate(self.values[:episode_budget])
+        )
+
+
+def test_sequential_gate_safely_stops_obviously_harmful_candidate() -> None:
+    skill = initialize_shared_skill()
+    evaluator = PrefixScoreEvaluator([-1.0] * 30)
+    gate = CandidateGate(
+        BoundedPatchApplier(),
+        PassingTransitionChecker(),
+        evaluator,
+        GateConfig(
+            proxy_episode_budget=30,
+            finalist_episode_budget=30,
+            sequential_enabled=True,
+            sequential_min_episodes=20,
+            sequential_batch_size=5,
+            sequential_max_abs_delta=1.0,
+        ),
+    )
+
+    decision, candidate = gate.evaluate(
+        skill,
+        patch_for(
+            skill,
+            old=skill.termination[0],
+            new="Stop only after all targets are verified.",
+        ),
+        empty_cluster(skill),
+    )
+
+    assert not decision.accepted
+    assert candidate is None
+    assert evaluator.calls == [("proxy", 20)]
+    assert decision.stages[-1].metrics["sequential_early_stop"] == 1.0
+    assert "sequential safe gate" in decision.reason
+
+
+def test_sequential_gate_uses_full_budget_when_futility_is_unproven() -> None:
+    skill = initialize_shared_skill()
+    evaluator = PrefixScoreEvaluator([0.3] * 6)
+    gate = CandidateGate(
+        BoundedPatchApplier(),
+        PassingTransitionChecker(),
+        evaluator,
+        GateConfig(
+            bootstrap_samples=100,
+            proxy_episode_budget=6,
+            finalist_episode_budget=6,
+            sequential_enabled=True,
+            sequential_min_episodes=2,
+            sequential_batch_size=2,
+        ),
+    )
+
+    decision, candidate = gate.evaluate(
+        skill,
+        patch_for(
+            skill,
+            old=skill.termination[0],
+            new="Stop only after all targets are verified.",
+        ),
+        empty_cluster(skill),
+    )
+
+    assert decision.accepted
+    assert candidate is not None
+    assert evaluator.calls == [
+        ("proxy", 2),
+        ("proxy", 4),
+        ("proxy", 6),
+        ("finalist", 2),
+        ("finalist", 4),
+        ("finalist", 6),
+    ]
+    assert decision.stages[-1].metrics["sequential_early_stop"] == 0.0
+
+
 def test_split_integrity_rejects_leakage() -> None:
     with pytest.raises(ValueError, match="leakage"):
         DataSplit(("a",), ("b",), ("a",), ("c",))
@@ -388,6 +482,9 @@ def test_protocol_config_drives_runtime_thresholds() -> None:
     assert config.gate.proxy_episode_budget == 10
     assert config.gate.finalist_episode_budget == 30
     assert config.gate.semantic_affected_enabled
+    assert config.attribution.identifiability_required
+    assert config.gate.sequential_enabled
+    assert config.gate.sequential_batch_size == 2
     assert config.raw["evolution_seeds"] == [0, 1, 2]
     assert len(config.digest) == 64
 
@@ -407,6 +504,23 @@ def test_frozen_skill_artifact_round_trip_and_digest(tmp_path) -> None:
     output.write_text(payload, encoding="utf-8")
     with pytest.raises(ValueError, match="digest mismatch"):
         load_skill_artifact(output)
+
+
+def test_skill_artifact_round_trip_preserves_temporal_rules(tmp_path) -> None:
+    rule = TemporalSkillRule(
+        "recover_pick",
+        SkillField.CONSTRAINT,
+        "pick",
+        False,
+        "near({arg0})",
+        TruthValue.FALSE,
+        "pick",
+        ("nav",),
+    )
+    skill = replace(initialize_shared_skill(), frozen=True, temporal_rules=(rule,))
+    output = tmp_path / "temporal-skill.json"
+    save_skill_artifact(output, skill, protocol={"split_hash": "abc"})
+    assert load_skill_artifact(output, require_frozen=True) == skill
 
 
 def test_skill_artifact_digest_covers_protocol_metadata(tmp_path) -> None:

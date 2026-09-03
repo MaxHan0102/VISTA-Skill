@@ -10,6 +10,7 @@ from vista_skill.schemas import (
     SkillField,
     SkillPredictionRule,
     SkillSpec,
+    TemporalSkillRule,
     TerminationPolicy,
     TruthValue,
     dataclass_to_dict,
@@ -345,7 +346,7 @@ def render_skill(skill: SkillSpec, *, max_statements_per_field: int | None = Non
 
 
 def skill_digest(skill: SkillSpec) -> str:
-    payload = json.dumps(dataclass_to_dict(skill), sort_keys=True, separators=(",", ":"))
+    payload = json.dumps(_skill_payload(skill), sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
@@ -357,7 +358,7 @@ def skill_artifact_digest(
     payload = json.dumps(
         {
             "schema_version": str(schema_version),
-            "skill": dataclass_to_dict(skill),
+            "skill": _skill_payload(skill),
             "protocol": dict(protocol),
         },
         sort_keys=True,
@@ -375,6 +376,14 @@ def canonical_protocol(protocol: Mapping[str, Any] | None) -> dict[str, Any]:
     return value
 
 
+def _skill_payload(skill: SkillSpec) -> dict[str, Any]:
+    """Serialize optional compiled extensions without invalidating legacy v2 Skills."""
+    payload = dataclass_to_dict(skill)
+    if not skill.temporal_rules:
+        payload.pop("temporal_rules", None)
+    return payload
+
+
 def skill_from_dict(raw: Mapping[str, Any]) -> SkillSpec:
     rules = tuple(
         SkillPredictionRule(
@@ -389,6 +398,22 @@ def skill_from_dict(raw: Mapping[str, Any]) -> SkillSpec:
         )
         for item in raw.get("prediction_rules", ())
     )
+    temporal_rules = tuple(
+        TemporalSkillRule(
+            rule_id=str(item["rule_id"]),
+            field=SkillField(str(item["field"])),
+            trigger_action_type=str(item["trigger_action_type"]),
+            trigger_success=bool(item["trigger_success"]),
+            trigger_predicate=str(item["trigger_predicate"]),
+            trigger_value=TruthValue(str(item["trigger_value"])),
+            blocked_action_type=str(item["blocked_action_type"]),
+            recovery_action_types=tuple(
+                str(value) for value in item["recovery_action_types"]
+            ),
+            argument_index=int(item.get("argument_index", 0)),
+        )
+        for item in raw.get("temporal_rules", ())
+    )
     return SkillSpec(
         skill_id=str(raw["skill_id"]),
         version=int(raw["version"]),
@@ -399,6 +424,7 @@ def skill_from_dict(raw: Mapping[str, Any]) -> SkillSpec:
         constraint=tuple(str(item) for item in raw["constraint"]),
         termination_policy=TerminationPolicy(str(raw["termination_policy"])),
         prediction_rules=rules,
+        temporal_rules=temporal_rules,
         parent_version=None
         if raw.get("parent_version") is None
         else int(raw["parent_version"]),
@@ -416,7 +442,7 @@ def save_skill_artifact(
     protocol_payload = canonical_protocol(protocol)
     payload = {
         "schema_version": SKILL_ARTIFACT_SCHEMA_VERSION,
-        "skill": dataclass_to_dict(skill),
+        "skill": _skill_payload(skill),
         "skill_sha256": skill_digest(skill),
         "protocol": protocol_payload,
         "artifact_sha256": skill_artifact_digest(

@@ -36,6 +36,7 @@
   "credit": {
     "targets": ["belief_refresh", "skill_update", "abstain"],
     "action_model_updates_enabled": false,
+    "identifiability_required": true,
     "min_independent_episodes": 2,
     "min_evidence_confidence": 0.75,
     "min_attribution_confidence": 0.7
@@ -50,7 +51,12 @@
     "semantic_affected_lcb_threshold": 0.0,
     "semantic_protected_regression_tolerance": 0.05,
     "semantic_min_affected_tasks": 2,
-    "semantic_min_protected_tasks": 2
+    "semantic_min_protected_tasks": 2,
+    "sequential_enabled": true,
+    "sequential_batch_size": 2,
+    "sequential_min_episodes": 4,
+    "sequential_max_abs_delta": 1.1,
+    "random_seed": 0
   },
   "final_test": {
     "skill_frozen": true,

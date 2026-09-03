@@ -169,6 +169,7 @@ class SkillPromptMixin:
     _vista_ledger_provider: Callable[[], BeliefLedger]
     _vista_emphasis_provider: Callable[[], str]
     _vista_observation_meta_skill_provider: Callable[[], str]
+    _vista_temporal_rule_provider: Callable[[], str]
 
     def configure_vista_prompt(
         self,
@@ -176,6 +177,7 @@ class SkillPromptMixin:
         ledger_provider: Callable[[], BeliefLedger],
         emphasis_provider: Callable[[], str] | None = None,
         observation_meta_skill_provider: Callable[[], str] | None = None,
+        temporal_rule_provider: Callable[[], str] | None = None,
     ) -> None:
         self._vista_skill_provider = skill_provider
         self._vista_ledger_provider = ledger_provider
@@ -183,6 +185,7 @@ class SkillPromptMixin:
         self._vista_observation_meta_skill_provider = (
             observation_meta_skill_provider or (lambda: "")
         )
+        self._vista_temporal_rule_provider = temporal_rule_provider or (lambda: "")
 
     def process_prompt(self, user_instruction, prev_act_feedback=()):  # type: ignore[no-untyped-def]
         prompt = super().process_prompt(user_instruction, prev_act_feedback)  # type: ignore[misc]
@@ -192,12 +195,18 @@ class SkillPromptMixin:
         ledger = self._vista_ledger_provider()
         emphasis = self._vista_emphasis_provider()
         observation_meta_skill = self._vista_observation_meta_skill_provider()
+        temporal_rules = self._vista_temporal_rule_provider()
         emphasis_section = (
             "\n\n## Temporary execution emphasis\n" + emphasis if emphasis else ""
         )
         observation_section = (
             "\n\n## Frozen observation-and-recovery skill\n" + observation_meta_skill
             if observation_meta_skill
+            else ""
+        )
+        temporal_section = (
+            "\n\n## Active sequential Skill obligations\n" + temporal_rules
+            if temporal_rules
             else ""
         )
         return (
@@ -208,6 +217,7 @@ class SkillPromptMixin:
             + compact_ledger(ledger)
             + emphasis_section
             + observation_section
+            + temporal_section
             + "\nUse unknown predicates as a reason to observe or replan, never as false facts."
         )
 

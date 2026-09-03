@@ -55,6 +55,9 @@ def load_config(path: str | Path) -> VistaConfig:
             skill_discovery_enabled=bool(
                 credit.get("skill_discovery_enabled", False)
             ),
+            identifiability_required=bool(
+                credit.get("identifiability_required", True)
+            ),
         ),
         recurrence=RecurrencePolicy(
             min_independent_episodes=int(credit.get("min_independent_episodes", 2)),
@@ -92,6 +95,13 @@ def load_config(path: str | Path) -> VistaConfig:
             semantic_min_protected_tasks=int(
                 gate.get("semantic_min_protected_tasks", 2)
             ),
+            sequential_enabled=bool(gate.get("sequential_enabled", False)),
+            sequential_batch_size=int(gate.get("sequential_batch_size", 2)),
+            sequential_min_episodes=int(gate.get("sequential_min_episodes", 4)),
+            sequential_max_abs_delta=float(
+                gate.get("sequential_max_abs_delta", 1.1)
+            ),
+            random_seed=int(gate.get("random_seed", 0)),
         ),
     )
     if config.recurrence.min_independent_episodes < 1:
@@ -107,6 +117,12 @@ def load_config(path: str | Path) -> VistaConfig:
         or config.gate.semantic_min_protected_tasks < 1
     ):
         raise ValueError("semantic gate task minima must be positive")
+    if (
+        config.gate.sequential_batch_size < 1
+        or config.gate.sequential_min_episodes < 1
+        or config.gate.sequential_max_abs_delta <= 0.0
+    ):
+        raise ValueError("sequential gate batch, minimum, and bound must be positive")
     evolution_seeds = tuple(int(item) for item in raw["evolution_seeds"])
     if not evolution_seeds or len(set(evolution_seeds)) != len(evolution_seeds):
         raise ValueError("evolution_seeds must be non-empty and unique")

@@ -450,6 +450,14 @@ class JsonBoundedPatchGenerator(PatchGenerator):
             new = discovery.executor_statement()
             rules = _discovered_rules(skill, field, cluster)
             assert rules is not None
+            temporal_rule = discovery.temporal_rule()
+            temporal_rules = tuple(
+                rule for rule in skill.temporal_rules if rule.field is field
+            )
+            if temporal_rule is not None and all(
+                rule.rule_id != temporal_rule.rule_id for rule in temporal_rules
+            ):
+                temporal_rules = (*temporal_rules, temporal_rule)
             return SkillPatch(
                 patch_id=make_patch_id(
                     skill,
@@ -460,6 +468,7 @@ class JsonBoundedPatchGenerator(PatchGenerator):
                     evidence_ids,
                     None,
                     rules,
+                    temporal_rules,
                 ),
                 skill_id=skill.skill_id,
                 parent_version=skill.version,
@@ -475,6 +484,7 @@ class JsonBoundedPatchGenerator(PatchGenerator):
                 ),
                 termination_policy=None,
                 prediction_rules=rules,
+                temporal_rules=temporal_rules,
             )
         payload = {
             "skill_id": skill.skill_id,

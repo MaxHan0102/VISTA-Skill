@@ -76,6 +76,8 @@ def test_supported_unexpected_is_discovery_only_when_enabled() -> None:
     assert discovered.target is UpdateTarget.SKILL_UPDATE
     assert discovered.field is SkillField.EFFECT
     assert discovered.update_kind is SkillUpdateKind.DISCOVERY
+    assert discovered.identifiability is not None
+    assert discovered.identifiability.identified
 
 
 def test_task_completion_is_not_mined_as_an_action_effect() -> None:
@@ -228,7 +230,12 @@ def test_failed_pick_constraint_generalizes_and_explains_cached_failures() -> No
     assert "require evidence" in patch.new
     assert patch.prediction_rules[0].before is TruthValue.FALSE
     assert patch.prediction_rules[0].after is TruthValue.FALSE
+    assert patch.temporal_rules is not None
+    assert len(patch.temporal_rules) == 1
+    assert patch.temporal_rules[0].blocked_action_type == "pick"
+    assert patch.temporal_rules[0].recovery_action_types == ("nav",)
     candidate = BoundedPatchApplier().apply(skill, patch)
+    assert candidate.temporal_rules == patch.temporal_rules
     checks = DeterministicTransitionChecker(schema).check(skill, candidate, cluster)
     assert checks and all(item.repaired for item in checks)
     preconditions = schema.precondition_checks(

@@ -190,6 +190,26 @@ class SkillPredictionRule:
     after: TruthValue
     before: TruthValue | None = None
 
+
+@dataclass(frozen=True)
+class TemporalSkillRule:
+    """Episode-local response rule compiled from a persistent Skill statement.
+
+    The current executable fragment represents
+    ``trigger -> block(target action) until recovery``. Predicate templates use
+    the same action-bound placeholders as :class:`SkillPredictionRule`.
+    """
+
+    rule_id: str
+    field: SkillField
+    trigger_action_type: str
+    trigger_success: bool
+    trigger_predicate: str
+    trigger_value: TruthValue
+    blocked_action_type: str
+    recovery_action_types: tuple[str, ...]
+    argument_index: int = 0
+
 @dataclass(frozen=True)
 class SkillSpec:
     skill_id: str
@@ -201,6 +221,7 @@ class SkillSpec:
     constraint: tuple[str, ...]
     termination_policy: TerminationPolicy = TerminationPolicy.ALL_GOALS_EVIDENCE
     prediction_rules: tuple[SkillPredictionRule, ...] = ()
+    temporal_rules: tuple[TemporalSkillRule, ...] = ()
     parent_version: int | None = None
     frozen: bool = False
     metadata: Mapping[str, Any] = field(default_factory=dict)
@@ -286,6 +307,37 @@ class AttributionContext:
 
 
 @dataclass(frozen=True)
+class IdentifiabilityAudit:
+    """Observable conditions required to identify a persistent Skill target."""
+
+    evidence_sufficient: bool
+    provenance_complete: bool
+    executor_compliance_not_refuted: bool
+    stochasticity_ruled_out: bool
+    identity_resolved: bool
+    unique_update_target: bool
+    action_bound: bool
+    identified: bool = field(init=False)
+
+    def __post_init__(self) -> None:
+        object.__setattr__(
+            self,
+            "identified",
+            all(
+                (
+                    self.evidence_sufficient,
+                    self.provenance_complete,
+                    self.executor_compliance_not_refuted,
+                    self.stochasticity_ruled_out,
+                    self.identity_resolved,
+                    self.unique_update_target,
+                    self.action_bound,
+                )
+            ),
+        )
+
+
+@dataclass(frozen=True)
 class AttributionResult:
     target: UpdateTarget
     confidence: float
@@ -296,6 +348,7 @@ class AttributionResult:
     subreason: AbstainReason | None = None
     independent_support_count: int = 1
     update_kind: SkillUpdateKind | None = None
+    identifiability: IdentifiabilityAudit | None = None
 
     def __post_init__(self) -> None:
         _require_confidence(self.confidence)
@@ -350,6 +403,7 @@ class SkillPatch:
     rationale: str = ""
     termination_policy: TerminationPolicy | None = None
     prediction_rules: tuple[SkillPredictionRule, ...] | None = None
+    temporal_rules: tuple[TemporalSkillRule, ...] | None = None
 
 
 def dataclass_to_dict(value: Any) -> Any:

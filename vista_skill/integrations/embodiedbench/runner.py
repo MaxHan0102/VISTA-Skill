@@ -22,6 +22,7 @@ from vista_skill.integrations.embodiedbench.state_oracle import (
     StateOracleTransitionLabel,
     oracle_query_keys,
 )
+from vista_skill.temporal import TemporalRuleMonitor
 
 
 class HabitatEnvironment(Protocol):
@@ -52,6 +53,7 @@ class HabitatPlanner(Protocol):
 class RunnerConfig:
     max_planner_retries: int = 2
     stop_on_planner_error: bool = True
+    max_temporal_guard_replans: int = 3
 
 
 @dataclass(frozen=True)
@@ -66,6 +68,7 @@ class EpisodeResult:
     invalid_actions: int
     planner_output_errors: int
     elapsed_seconds: float
+    temporal_guard_blocks: int = 0
     trajectory: tuple[str, ...] = ()
     failure_reason: str = ""
 
@@ -89,6 +92,7 @@ class HabitatRolloutRunner:
         expected_episode_ids: tuple[str, ...] | None = None,
         task_coordinates: Sequence[TaskCoordinate] = (),
         state_oracle: HabitatStateOracle | None = None,
+        temporal_monitor: TemporalRuleMonitor | None = None,
     ) -> None:
         self.env = env
         self.planner = planner
@@ -104,6 +108,9 @@ class HabitatRolloutRunner:
             item.episode_id: item for item in task_coordinates
         }
         self.state_oracle = state_oracle
+        self.temporal_monitor = temporal_monitor or getattr(
+            planner, "_vista_temporal_monitor", None
+        )
 
     def run(self, *, max_episodes: int | None = None) -> tuple[EpisodeResult, ...]:
         available = int(self.env.number_of_episodes) - self.env._current_episode_num
@@ -141,8 +148,12 @@ class HabitatRolloutRunner:
         self.planner.reset()
         if self.engine is not None:
             self.engine.start_episode()
+            if self.temporal_monitor is not None:
+                self.temporal_monitor.start_episode(self.engine.skill)
         rewards: list[float] = []
         invalid_actions = 0
+        temporal_guard_blocks = 0
+        temporal_guard_exhausted = False
         done = False
         action_texts: list[str] = []
         last_info: dict[str, Any] = {
@@ -152,7 +163,7 @@ class HabitatRolloutRunner:
             "env_feedback": "",
         }
 
-        while not done:
+        while not done and not temporal_guard_exhausted:
             plan, reasoning = self._act_with_retry(pre_image, instruction)
             if plan == -1 or plan == -2:
                 self.writer.append(
@@ -167,8 +178,33 @@ class HabitatRolloutRunner:
             for action_id in actions[:remaining]:
                 raw_action = self.env.skill_set[action_id]
                 action_text = self.env.language_skill_set[action_id]
-                action_texts.append(action_text)
                 action_call = parse_action_call(action_id, raw_action, action_text)
+                if self.temporal_monitor is not None:
+                    admission = self.temporal_monitor.admit(action_call)
+                    if not admission.allowed:
+                        temporal_guard_blocks += 1
+                        feedback = admission.reason
+                        self.writer.append(
+                            "temporal_guard",
+                            {
+                                "episode_id": episode_id,
+                                "step_id": self.env._current_step + 1,
+                                "action": action_call,
+                                "allowed": False,
+                                "rule_ids": admission.rule_ids,
+                                "reason": feedback,
+                            },
+                        )
+                        self.planner.update_info(
+                            {"action_id": action_id, "env_feedback": feedback}
+                        )
+                        last_info = {**last_info, "env_feedback": feedback}
+                        temporal_guard_exhausted = bool(
+                            temporal_guard_blocks
+                            >= self.config.max_temporal_guard_replans
+                        )
+                        break
+                action_texts.append(action_text)
                 prepared = None
                 oracle_keys = ()
                 oracle_pre = ()
@@ -218,6 +254,8 @@ class HabitatRolloutRunner:
                         feedback=str(info.get("env_feedback", "")),
                         last_action_success=bool(info.get("last_action_success", 0)),
                     )
+                    if self.temporal_monitor is not None:
+                        self.temporal_monitor.observe(event)
                     self.writer.append("transition", event)
                     if self.state_oracle is not None:
                         oracle_keys = tuple(
@@ -278,6 +316,7 @@ class HabitatRolloutRunner:
             invalid_actions=invalid_actions,
             planner_output_errors=self.planner.output_json_error,
             elapsed_seconds=time.monotonic() - started,
+            temporal_guard_blocks=temporal_guard_blocks,
             trajectory=tuple(action_texts),
             failure_reason="" if task_success > 0.0 else str(last_info.get("env_feedback", "")),
         )

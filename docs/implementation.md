@@ -45,6 +45,46 @@ The expected branch is explicitly materialized by `engine.prepare(...)` before
 runner call `engine.process_prepared(...)`. This order is part of the
 information-isolation contract, not merely an implementation convention.
 
+### Operational VTCA identifiability
+
+The implementation now records a sufficient, auditable identifiability
+criterion on every `skill_update`. For mismatch set `M`, field `f`, action
+context `a`, and evidence provenance `P`, VISTA permits a persistent update only
+when
+
+```text
+I_VTCA(M, f, a, P) = C_evidence ∧ C_provenance ∧ C_compliance
+                      ∧ ¬C_stochastic ∧ C_identity ∧ C_unique(f) ∧ C_action(a).
+```
+
+Concretely, evidence must be covered and above the registered confidence
+threshold; every cited mismatch/evidence ID must resolve to the current event;
+an execution lapse must be ruled out (except when the executed rule is itself
+refuted); stochastic and identity/temporal alternatives must be absent; exactly
+one Skill field must remain; and the diagnosis must bind either to the current
+action or to a compiled Skill prediction. `IdentifiabilityAudit` persists all
+seven booleans plus the conjunction in transition JSONL. Failure routes to
+`abstain`, not a patch. This is an operational sufficient condition under the
+system's observation model, not a claim of unrestricted causal identifiability.
+
+### Compiled temporal recovery rules
+
+`TemporalSkillRule` extends the persistent artifact with an executable fragment
+of temporal logic:
+
+```text
+G(trigger(a_t, x) -> (not repeat(blocked_action, x) U recovery_success)).
+```
+
+The first supported fragment is learned from recurrent failed `pick` events
+with `near({arg0})=false`. It blocks another `pick` of that same target from the
+unchanged episode state until successful navigation or contrary predicate
+evidence releases the obligation. `TemporalRuleMonitor` is reset per episode,
+adds active obligations to the executor prompt, checks action admission before
+`env.step`, writes every block as `temporal_guard`, and reports the block count
+in `EpisodeResult`. Thus the rule changes execution rather than only making the
+natural-language Skill more formal.
+
 ## Enforced invariants
 
 - `EvidenceRequest` has no Skill, expected transition, mismatch, attribution,
@@ -57,9 +97,12 @@ information-isolation contract, not merely an implementation convention.
 - Predicate normalization preserves instance digits such as `apple_1`.
 - Every predicted change cites a fixed action-rule ID or a Skill version/rule
   and field.
+- Every persistent VTCA update carries a passing `IdentifiabilityAudit`; an
+  unresolved alternative cause fails closed to abstention.
 - The five-field Skill includes compiled field prediction rules and a typed
-  termination policy. A bounded patch updates textual and compiled views in
-  one version so execution and attribution cannot silently diverge.
+  termination policy, plus bounded procedure/constraint temporal rules. A
+  bounded patch updates textual and compiled views in one version so execution
+  and attribution cannot silently diverge.
 - S0 compiles observable procedure/effect/constraint obligations for the fixed
   nav/pick/place/open/close schema. Activation remains a trajectory-level
   diagnostic field because applicability is not a primitive state effect.
@@ -74,6 +117,13 @@ information-isolation contract, not merely an implementation convention.
   non-inferiority margin. Global activation/termination patches retain the
   conservative global-LCB and subgroup check. Repeated rollout seeds are
   averaged within task before bootstrap resampling.
+- Phase-5 configs enable a futility-only sequential safe gate. At registered
+  prefix looks it uses task-level differences bounded in `[-B, B]` and a
+  Hoeffding interval with `alpha/(looks * decision_streams)`. It may reject only
+  when an upper bound proves affected/global benefit futile or protected
+  regression; it never promotes early. Surviving candidates still require the
+  unchanged full-budget bootstrap gate, so optional interim inspection cannot
+  increase the promotion false-positive rate.
 - Acquisition checks recurrent clusters after every episode. An accepted
   version is promoted immediately, so later episodes execute and collect
   evidence against the new Skill rather than batching every event under v0.
@@ -104,6 +154,8 @@ evidence into instance-free causal signatures before recurrence.
   hierarchical credit assignment, and recurrence.
 - `evolution.py` / `lineage.py`: bounded patches, paired gate, and append-only
   accepted/rejected provenance.
+- `temporal.py`: episode-local monitoring and action admission for compiled
+  sequential recovery obligations.
 - `baselines.py`: controlled EmbodiSkill trajectory routing and no-VTCA
   frontends that can share the same update backend.
 - `integrations/embodiedbench/`: optional stock environment/planner adapters.

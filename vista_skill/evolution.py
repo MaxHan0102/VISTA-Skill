@@ -17,6 +17,7 @@ from vista_skill.schemas import (
     SkillPatch,
     SkillPredictionRule,
     SkillSpec,
+    TemporalSkillRule,
     TerminationPolicy,
     TruthValue,
     SkillUpdateKind,
@@ -86,6 +87,10 @@ class BoundedPatchApplier:
             if any(rule.field is not patch.field for rule in patch.prediction_rules):
                 errors.append("compiled prediction crosses the attributed field")
             errors.extend(_validate_prediction_rules(patch.prediction_rules))
+        if patch.temporal_rules is not None:
+            if any(rule.field is not patch.field for rule in patch.temporal_rules):
+                errors.append("compiled temporal rule crosses the attributed field")
+            errors.extend(_validate_temporal_rules(patch.temporal_rules))
         return tuple(errors)
 
     def apply(self, skill: SkillSpec, patch: SkillPatch) -> SkillSpec:
@@ -115,7 +120,16 @@ class BoundedPatchApplier:
                 rule for rule in candidate.prediction_rules if rule.field is not patch.field
             )
             candidate = replace(candidate, prediction_rules=(*retained, *patch.prediction_rules))
+        if patch.temporal_rules is not None:
+            retained_temporal = tuple(
+                rule for rule in candidate.temporal_rules if rule.field is not patch.field
+            )
+            candidate = replace(
+                candidate,
+                temporal_rules=(*retained_temporal, *patch.temporal_rules),
+            )
         rule_errors = _validate_prediction_rules(candidate.prediction_rules)
+        rule_errors = (*rule_errors, *_validate_temporal_rules(candidate.temporal_rules))
         if rule_errors:
             raise PatchValidationError("; ".join(rule_errors))
         word_count = sum(
@@ -170,6 +184,57 @@ def _validate_prediction_rules(
             else:
                 errors.append("compiled prediction contains conflicting rules")
         signatures[signature] = rule.after
+    return tuple(dict.fromkeys(errors))
+
+
+def _validate_temporal_rules(
+    rules: Sequence[TemporalSkillRule],
+) -> tuple[str, ...]:
+    errors: list[str] = []
+    rule_ids: set[str] = set()
+    signatures: set[tuple[str, bool, str, TruthValue, str, int]] = set()
+    for rule in rules:
+        if not rule.rule_id.strip() or rule.rule_id in rule_ids:
+            errors.append("compiled temporal rule IDs must be non-empty and unique")
+        rule_ids.add(rule.rule_id)
+        if rule.field not in {SkillField.PROCEDURE, SkillField.CONSTRAINT}:
+            errors.append("compiled temporal rules require a procedure or constraint field")
+        if rule.trigger_action_type not in _ALLOWED_ACTION_TYPES - {"*"}:
+            errors.append(f"unsupported temporal trigger action: {rule.trigger_action_type}")
+        if rule.blocked_action_type not in _ALLOWED_ACTION_TYPES - {"*"}:
+            errors.append(f"unsupported temporal blocked action: {rule.blocked_action_type}")
+        if not rule.recovery_action_types or any(
+            action not in _ALLOWED_ACTION_TYPES - {"*"}
+            for action in rule.recovery_action_types
+        ):
+            errors.append("temporal rule requires supported recovery actions")
+        if rule.argument_index < 0:
+            errors.append("temporal rule argument index cannot be negative")
+        placeholders = set(_PLACEHOLDER.findall(rule.trigger_predicate))
+        if placeholders - _ALLOWED_PLACEHOLDERS:
+            errors.append("temporal predicate contains an unsupported placeholder")
+        elif placeholders - _ACTION_PLACEHOLDERS.get(rule.trigger_action_type, set()):
+            errors.append("temporal predicate placeholder is unavailable for its trigger")
+        parseable = _PLACEHOLDER.sub("placeholder", rule.trigger_predicate)
+        try:
+            from vista_skill.schemas import PredicateKey
+
+            PredicateKey.parse(parseable)
+        except (TypeError, ValueError):
+            errors.append(f"compiled temporal predicate is invalid: {rule.trigger_predicate}")
+        if _contains_instance_identifier(_PLACEHOLDER.sub("", rule.trigger_predicate)):
+            errors.append("compiled temporal rule contains an instance-specific identifier")
+        signature = (
+            rule.trigger_action_type,
+            rule.trigger_success,
+            rule.trigger_predicate,
+            rule.trigger_value,
+            rule.blocked_action_type,
+            rule.argument_index,
+        )
+        if signature in signatures:
+            errors.append("compiled temporal rule contains a duplicate signature")
+        signatures.add(signature)
     return tuple(dict.fromkeys(errors))
 
 
@@ -323,6 +388,10 @@ class GateConfig:
     semantic_protected_regression_tolerance: float = 0.05
     semantic_min_affected_tasks: int = 2
     semantic_min_protected_tasks: int = 2
+    sequential_enabled: bool = False
+    sequential_batch_size: int = 2
+    sequential_min_episodes: int = 4
+    sequential_max_abs_delta: float = 1.1
     random_seed: int = 0
 
 
@@ -394,17 +463,11 @@ class CandidateGate:
         if not transition_passed:
             return self._reject(parent, patch, stages), None
 
-        proxy = tuple(
-            self.paired_evaluator.evaluate(
-                parent,
-                candidate,
-                stage="proxy",
-                episode_budget=self.config.proxy_episode_budget,
-            )
-        )
-        proxy_stage = self._paired_stage(
+        proxy_stage = self._evaluate_paired_stage(
+            parent,
+            candidate,
             "paired_proxy",
-            proxy,
+            "proxy",
             self.config.proxy_lcb_threshold,
             self.config.proxy_episode_budget,
             semantic_scope,
@@ -413,17 +476,11 @@ class CandidateGate:
         if not proxy_stage.passed:
             return self._reject(parent, patch, stages), None
 
-        finalist = tuple(
-            self.paired_evaluator.evaluate(
-                parent,
-                candidate,
-                stage="finalist",
-                episode_budget=self.config.finalist_episode_budget,
-            )
-        )
-        finalist_stage = self._paired_stage(
+        finalist_stage = self._evaluate_paired_stage(
+            parent,
+            candidate,
             "paired_finalist",
-            finalist,
+            "finalist",
             self.config.finalist_lcb_threshold,
             self.config.finalist_episode_budget,
             semantic_scope,
@@ -442,6 +499,192 @@ class CandidateGate:
             ),
             candidate,
         )
+
+    def _evaluate_paired_stage(
+        self,
+        parent: SkillSpec,
+        candidate: SkillSpec,
+        result_stage: str,
+        evaluator_stage: str,
+        threshold: float,
+        required_budget: int,
+        semantic_scope: tuple[str, ...],
+    ) -> GateStageResult:
+        if not self.config.sequential_enabled:
+            scores = tuple(
+                self.paired_evaluator.evaluate(
+                    parent,
+                    candidate,
+                    stage=evaluator_stage,
+                    episode_budget=required_budget,
+                )
+            )
+            return self._paired_stage(
+                result_stage, scores, threshold, required_budget, semantic_scope
+            )
+
+        first = min(required_budget, self.config.sequential_min_episodes)
+        budgets = list(range(first, required_budget + 1, self.config.sequential_batch_size))
+        if not budgets or budgets[-1] != required_budget:
+            budgets.append(required_budget)
+        max_looks = len(budgets)
+        for look, budget in enumerate(budgets, start=1):
+            scores = tuple(
+                self.paired_evaluator.evaluate(
+                    parent,
+                    candidate,
+                    stage=evaluator_stage,
+                    episode_budget=budget,
+                )
+            )
+            if budget < required_budget:
+                stopped = self._sequential_futility_stage(
+                    result_stage,
+                    scores,
+                    threshold,
+                    required_budget,
+                    semantic_scope,
+                    look=look,
+                    max_looks=max_looks,
+                )
+                if stopped is not None:
+                    return stopped
+                continue
+            result = self._paired_stage(
+                result_stage, scores, threshold, required_budget, semantic_scope
+            )
+            metrics = dict(result.metrics)
+            metrics.update(
+                {
+                    "sequential_looks": float(look),
+                    "sequential_stop_budget": float(len(scores)),
+                    "sequential_early_stop": 0.0,
+                }
+            )
+            return GateStageResult(result.stage, result.passed, result.reason, metrics)
+        raise RuntimeError("sequential gate produced no analysis look")
+
+    def _sequential_futility_stage(
+        self,
+        stage: str,
+        scores: Sequence[PairedEpisodeScore],
+        threshold: float,
+        required_budget: int,
+        semantic_scope: tuple[str, ...],
+        *,
+        look: int,
+        max_looks: int,
+    ) -> GateStageResult | None:
+        if len(scores) < self.config.sequential_min_episodes:
+            return None
+        pairs = {(item.episode_id, item.seed) for item in scores}
+        if len(pairs) != len(scores):
+            return GateStageResult(stage, False, "paired episode/seed keys are not unique")
+        differences = [item.candidate_score - item.parent_score for item in scores]
+        bound = self.config.sequential_max_abs_delta
+        if any(not math.isfinite(value) or abs(value) > bound for value in differences):
+            return GateStageResult(
+                stage,
+                False,
+                "paired score difference violates the registered sequential bound",
+            )
+        task_differences = _task_mean_differences(scores)
+        # Interim confidence sequences require independent task units. The
+        # finalist pool repeats each task across seeds, so it remains a fixed-
+        # budget task-first bootstrap unless/until complete task blocks are
+        # exposed by the evaluator.
+        if len(task_differences) != len(scores):
+            return None
+        semantic_available = bool(
+            self.config.semantic_affected_enabled and semantic_scope
+        )
+        stream_count = 2 if semantic_available else 1
+        spent_alpha = self.config.alpha / (max_looks * stream_count)
+        global_lcb, global_ucb = bounded_mean_interval(
+            task_differences,
+            alpha=spent_alpha,
+            max_abs_value=bound,
+        )
+        metrics = {
+            "mean_delta": sum(differences) / len(differences),
+            "episodes": float(len(scores)),
+            "independent_tasks": float(len(task_differences)),
+            "sequential_look": float(look),
+            "sequential_looks": float(look),
+            "sequential_stop_budget": float(len(scores)),
+            "sequential_early_stop": 1.0,
+            "sequential_alpha_per_bound": spent_alpha,
+            "sequential_global_lcb": global_lcb,
+            "sequential_global_ucb": global_ucb,
+        }
+        if semantic_available:
+            affected = tuple(
+                item
+                for item in scores
+                if set(item.semantic_tags).intersection(semantic_scope)
+            )
+            protected = tuple(item for item in scores if item not in affected)
+            affected_tasks = _task_mean_differences(affected)
+            protected_tasks = _task_mean_differences(protected)
+            metrics.update(
+                {
+                    "affected_independent_tasks": float(len(affected_tasks)),
+                    "protected_independent_tasks": float(len(protected_tasks)),
+                }
+            )
+            if len(affected_tasks) >= self.config.semantic_min_affected_tasks:
+                affected_lcb, affected_ucb = bounded_mean_interval(
+                    affected_tasks,
+                    alpha=spent_alpha,
+                    max_abs_value=bound,
+                )
+                metrics.update(
+                    {
+                        "sequential_affected_lcb": affected_lcb,
+                        "sequential_affected_ucb": affected_ucb,
+                    }
+                )
+                if affected_ucb <= self.config.semantic_affected_lcb_threshold:
+                    return GateStageResult(
+                        stage,
+                        False,
+                        "sequential safe gate stopped: affected benefit is futile",
+                        metrics,
+                    )
+            if len(protected_tasks) >= self.config.semantic_min_protected_tasks:
+                protected_lcb, protected_ucb = bounded_mean_interval(
+                    protected_tasks,
+                    alpha=spent_alpha,
+                    max_abs_value=bound,
+                )
+                metrics.update(
+                    {
+                        "sequential_protected_lcb": protected_lcb,
+                        "sequential_protected_ucb": protected_ucb,
+                    }
+                )
+                if protected_ucb < -self.config.semantic_protected_regression_tolerance:
+                    return GateStageResult(
+                        stage,
+                        False,
+                        "sequential safe gate stopped: protected regression is identified",
+                        metrics,
+                    )
+            return None
+
+        remaining = required_budget - len(scores)
+        deterministic_best_final = (
+            sum(differences) + remaining * bound
+        ) / required_budget
+        metrics["sequential_best_possible_final_mean"] = deterministic_best_final
+        if global_ucb <= threshold or deterministic_best_final <= threshold:
+            return GateStageResult(
+                stage,
+                False,
+                "sequential safe gate stopped: global benefit is futile",
+                metrics,
+            )
+        return None
 
     def _paired_stage(
         self,
@@ -683,6 +926,33 @@ def bootstrap_lcb(
     return means[index]
 
 
+def bounded_mean_interval(
+    values: Sequence[float],
+    *,
+    alpha: float,
+    max_abs_value: float,
+) -> tuple[float, float]:
+    """Finite-look Hoeffding interval for bounded paired task differences.
+
+    ``CandidateGate`` divides alpha across all registered looks/streams before
+    calling this helper. The resulting union bound remains valid when an
+    interim futility decision stops rollout collection early.
+    """
+    if not values:
+        return -math.inf, math.inf
+    if not 0.0 < alpha < 1.0:
+        raise ValueError("sequential alpha must be in (0, 1)")
+    if max_abs_value <= 0.0:
+        raise ValueError("sequential paired-difference bound must be positive")
+    if any(not math.isfinite(value) or abs(value) > max_abs_value for value in values):
+        raise ValueError("value violates the registered paired-difference bound")
+    mean = sum(values) / len(values)
+    radius = max_abs_value * math.sqrt(
+        2.0 * math.log(2.0 / alpha) / len(values)
+    )
+    return max(-max_abs_value, mean - radius), min(max_abs_value, mean + radius)
+
+
 def _subgroup_deltas(scores: Sequence[PairedEpisodeScore]) -> dict[str, float]:
     groups: dict[str, list[float]] = {}
     for item in scores:
@@ -732,6 +1002,7 @@ def make_patch_id(
     evidence_ids: Sequence[str],
     termination_policy: TerminationPolicy | None = None,
     prediction_rules: Sequence[SkillPredictionRule] = (),
+    temporal_rules: Sequence[TemporalSkillRule] = (),
 ) -> str:
     raw = "|".join(
         (
@@ -743,6 +1014,12 @@ def make_patch_id(
             new,
             "" if termination_policy is None else termination_policy.value,
             *(f"{rule.rule_id}:{rule.predicate}:{rule.after.value}" for rule in prediction_rules),
+            *(
+                f"{rule.rule_id}:{rule.trigger_action_type}:{rule.trigger_success}:"
+                f"{rule.trigger_predicate}:{rule.trigger_value.value}:"
+                f"{rule.blocked_action_type}:{','.join(rule.recovery_action_types)}"
+                for rule in temporal_rules
+            ),
             *evidence_ids,
         )
     )

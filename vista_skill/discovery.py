@@ -10,6 +10,7 @@ from vista_skill.schemas import (
     PredicateState,
     SkillField,
     SkillPredictionRule,
+    TemporalSkillRule,
     TruthValue,
 )
 
@@ -38,6 +39,30 @@ class GeneralizedDiscovery:
             predicate=self.predicate,
             before=self.after if self.field is SkillField.CONSTRAINT else None,
             after=self.after,
+        )
+
+    def temporal_rule(self) -> TemporalSkillRule | None:
+        """Compile supported recovery semantics for discoveries that imply order."""
+        if (
+            self.field is not SkillField.CONSTRAINT
+            or self.action_type != "pick"
+            or self.predicate != "near({arg0})"
+            or self.after is not TruthValue.FALSE
+        ):
+            return None
+        suffix = hashlib.sha256(
+            f"temporal|{self.field.value}|{self.signature}".encode("utf-8")
+        ).hexdigest()[:10]
+        return TemporalSkillRule(
+            rule_id=f"recover_pick_{suffix}",
+            field=self.field,
+            trigger_action_type="pick",
+            trigger_success=False,
+            trigger_predicate="near({arg0})",
+            trigger_value=TruthValue.FALSE,
+            blocked_action_type="pick",
+            recovery_action_types=("nav",),
+            argument_index=0,
         )
 
     def executor_statement(self) -> str:
@@ -75,7 +100,8 @@ class GeneralizedDiscovery:
         constraint_known = {
             ("pick", "near({arg0})", TruthValue.FALSE): (
                 "Before picking, require evidence that the selected object is near; "
-                "after a not-near failure, navigate or gather new evidence before retrying."
+                "after a not-near failure, do not repeat the same pick from an "
+                "unchanged state: navigate successfully and re-evaluate before retrying."
             ),
             ("pick", "not_holding", TruthValue.FALSE): (
                 "Before picking, require evidence that the gripper is free."

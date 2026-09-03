@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from typing import Protocol, Sequence
 
 from vista_skill.schemas import (
@@ -8,6 +8,7 @@ from vista_skill.schemas import (
     AttributionContext,
     AttributionResult,
     DeltaSource,
+    IdentifiabilityAudit,
     Mismatch,
     MismatchKind,
     SkillField,
@@ -32,6 +33,7 @@ class AttributionConfig:
     min_teacher_confidence: float = 0.70
     action_model_updates_enabled: bool = False
     skill_discovery_enabled: bool = False
+    identifiability_required: bool = True
 
 
 class CreditAssigner:
@@ -149,7 +151,7 @@ class CreditAssigner:
         ]
         fields = {item.skill_field for item in skill_predictions if item.skill_field is not None}
         if len(fields) == 1:
-            return AttributionResult(
+            result = AttributionResult(
                 target=UpdateTarget.SKILL_UPDATE,
                 field=next(iter(fields)),
                 confidence=min(item.evidence.confidence for item in mismatches if item.evidence),
@@ -157,6 +159,7 @@ class CreditAssigner:
                 evidence_ids=evidence_ids,
                 rationale="independent evidence contradicts a skill-sourced prediction",
             )
+            return self._identified_update(result, mismatches, context)
 
         if all(item.kind is MismatchKind.SUPPORTED_UNEXPECTED for item in mismatches):
             discovery_items = tuple(
@@ -168,7 +171,7 @@ class CreditAssigner:
                     if context.last_action_success is False
                     else SkillField.EFFECT
                 )
-                return AttributionResult(
+                result = AttributionResult(
                     target=UpdateTarget.SKILL_UPDATE,
                     field=field,
                     update_kind=SkillUpdateKind.DISCOVERY,
@@ -190,6 +193,7 @@ class CreditAssigner:
                         "effect or precondition discovery candidates"
                     ),
                 )
+                return self._identified_update(result, discovery_items, context)
             return AttributionResult(
                 target=UpdateTarget.BELIEF_REFRESH,
                 confidence=0.8,
@@ -209,6 +213,8 @@ class CreditAssigner:
                     mismatches=mismatches,
                 )
             ):
+                if result.target is UpdateTarget.SKILL_UPDATE:
+                    return self._identified_update(result, mismatches, context)
                 return result
         return self._abstain(
             mismatch_ids,
@@ -216,6 +222,92 @@ class CreditAssigner:
             AbstainReason.AMBIGUOUS,
             "rules and constrained teacher did not establish a unique update target",
         )
+
+    def _identified_update(
+        self,
+        result: AttributionResult,
+        mismatches: Sequence[Mismatch],
+        context: AttributionContext,
+    ) -> AttributionResult:
+        """Attach and enforce the operational VTCA identifiability criterion.
+
+        A persistent update is identifiable only when covered evidence has
+        complete provenance, execution/stochastic/identity alternatives are
+        ruled out, and the cited observations select one action-bound field.
+        This turns the paper definition into an artifact-level invariant rather
+        than a post-hoc description.
+        """
+        cited_mismatches = set(result.mismatch_ids)
+        cited_evidence = set(result.evidence_ids)
+        selected = tuple(
+            item for item in mismatches if item.mismatch_id in cited_mismatches
+        )
+        evidence_sufficient = bool(selected) and all(
+            item.evidence is not None
+            and item.evidence.confidence >= self.config.min_evidence_confidence
+            for item in selected
+        )
+        selected_evidence = {
+            evidence_id for item in selected for evidence_id in item.evidence_ids
+        }
+        provenance_complete = bool(
+            cited_mismatches
+            and cited_evidence
+            and {item.mismatch_id for item in selected} == cited_mismatches
+            and cited_evidence.issubset(selected_evidence)
+        )
+        skill_refutation = any(
+            item.expected is not None
+            and item.expected.source is DeltaSource.SKILL
+            and item.kind in {MismatchKind.CONTRADICTION, MismatchKind.MISSING_PROGRESS}
+            for item in selected
+        )
+        fields = {
+            item.expected.skill_field
+            for item in selected
+            if item.expected is not None
+            and item.expected.source is DeltaSource.SKILL
+            and item.expected.skill_field is not None
+        }
+        unique_update_target = bool(
+            result.field is not None
+            and (not fields or fields == {result.field})
+        )
+        action_bound = bool(
+            context.action_type
+            or any(
+                item.expected is not None
+                and item.expected.source is DeltaSource.SKILL
+                for item in selected
+            )
+        )
+        audit = IdentifiabilityAudit(
+            evidence_sufficient=evidence_sufficient,
+            provenance_complete=provenance_complete,
+            executor_compliance_not_refuted=(
+                context.executor_followed_skill is not False or skill_refutation
+            ),
+            stochasticity_ruled_out=not context.stochastic_suspected,
+            identity_resolved=(
+                not context.identity_conflict
+                and not any(
+                    item.kind
+                    in {MismatchKind.IDENTITY_CONFLICT, MismatchKind.TEMPORAL_CONFLICT}
+                    for item in selected
+                )
+            ),
+            unique_update_target=unique_update_target,
+            action_bound=action_bound,
+        )
+        if self.config.identifiability_required and not audit.identified:
+            return self._abstain(
+                tuple(result.mismatch_ids),
+                tuple(result.evidence_ids),
+                AbstainReason.AMBIGUOUS,
+                "VTCA identifiability conditions did not isolate one persistent Skill update",
+                confidence=result.confidence,
+            )
+        return replace(result, identifiability=audit)
 
     @staticmethod
     def _completion_supported_by_evidence(

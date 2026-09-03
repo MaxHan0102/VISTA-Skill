@@ -91,6 +91,7 @@ from vista_skill.skills import (
     save_content_addressed_skill,
     skill_digest,
 )
+from vista_skill.temporal import TemporalRuleMonitor
 from vista_skill.update_audit import (
     make_rotated_audit_plan,
     run_rotated_update_audit,
@@ -1053,12 +1054,16 @@ def _make_planner(
         if getattr(args, "meta_skills", "none") == "none"
         else frozen_meta_skills().observe_and_recover.instruction
     )
+    temporal_monitor = TemporalRuleMonitor()
+    temporal_monitor.start_episode(skill if engine is None else engine.skill)
+    planner._vista_temporal_monitor = temporal_monitor
     if engine is None:
         static_ledger = BeliefLedger()
         planner.configure_vista_prompt(
             lambda: skill,
             lambda: static_ledger,
             observation_meta_skill_provider=lambda: observation_meta_skill,
+            temporal_rule_provider=temporal_monitor.render,
         )
     else:
         planner.configure_vista_prompt(
@@ -1066,6 +1071,7 @@ def _make_planner(
             lambda: engine.ledger,
             lambda: engine.emphasis_buffer.render(engine.current_step),
             lambda: observation_meta_skill,
+            temporal_monitor.render,
         )
     return planner
 
