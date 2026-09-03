@@ -705,6 +705,41 @@ def test_transition_only_gate_requires_diagnostic() -> None:
         cli._run_experiment(args)
 
 
+def test_candidate_field_requires_diagnostic() -> None:
+    args = parse_args(
+        [
+            "experiment", "--method", "full", "--method-model", "m",
+            "--candidate-field", "constraint",
+        ]
+    )
+    with pytest.raises(ValueError, match="candidate-field"):
+        cli._run_experiment(args)
+
+
+def test_skip_update_audit_requires_diagnostic() -> None:
+    args = parse_args(
+        [
+            "experiment", "--method", "full", "--method-model", "m",
+            "--skip-update-audit",
+        ]
+    )
+    with pytest.raises(ValueError, match="skip-update-audit"):
+        cli._run_experiment(args)
+
+
+def test_protocol_record_marks_skipped_update_audit() -> None:
+    manifest = load_experiment_manifest("configs/eb_hab_train_validation_manifest.json")
+    config = load_config("configs/vista_phase5_hab.json")
+    args = parse_args(
+        [
+            "experiment", "--method", "full", "--method-model", "m",
+            "--diagnostic", "--skip-update-audit",
+        ]
+    )
+    record = cli._protocol_record(args, config, manifest)
+    assert record["skip_update_audit"] is True
+
+
 def test_initial_skill_exclusive_with_fault() -> None:
     args = parse_args(
         [

@@ -124,6 +124,25 @@ bounded executor-facing statement and compiled rule with zero patch-teacher
 calls. Repair and optimization may still use a constrained model when evidence
 does not uniquely determine the update.
 
+A deterministic failed primitive with reliable public-feedback evidence is not
+treated as stochastic merely because the executor attempted it. Recurrent
+failure states are generalized as constraint/precondition discoveries. The
+compiled representation stores the observed failure state as a constraint
+marker; at execution time the Skill requires its inverse as the precondition
+and keeps the marker out of the ordinary action-effect compiler. This makes a
+rule such as `pick | near({arg0})=false` reusable across object instances while
+preserving the distinction between an action effect and a missing precondition.
+Cached transition validation for such candidates checks whether the new rule,
+and not its parent, explains the triggering failed actions.
+
+Candidate work is bounded independently from patch size. The controlled
+Phase-5 config proposes at most one previously unseen candidate per acquisition
+round, prioritizes constraint/procedure candidates over primitive effects, and
+fingerprints deterministic Discovery by generalized causal identity. Additional
+evidence strengthens an existing Discovery cluster without repeatedly spending
+paired rollouts on the same candidate. `--candidate-field` remains a diagnostic
+isolation knob and cannot be used in controlled claims.
+
 Evidence extraction is also event-triggered. The EB-HAB Phase-5 configuration
 uses structured action feedback and action-local ledger grounding when those
 sources fully determine a transition; it does not call the visual evidence
@@ -135,6 +154,12 @@ For cheap live validation, experiment --diagnostic --transition-only-gate runs
 acquisition, candidate materialization, static validation, and cached
 transition validation, then skips paired rollouts and post-run update audit. It
 never promotes the candidate and is not a task-performance result.
+
+For a bounded real paired-gate pilot, `--diagnostic --skip-update-audit` keeps
+the proxy/finalist admission test but omits the independent 20-task, three-seed
+post-hoc update audit. The omission is written into the protocol record and the
+flag is rejected outside diagnostic mode. Such a run can test admission logic
+and executor adoption, but it cannot report update-reliability metrics.
 
 `configs/vista_phase5_hab.json` is the active clean-boundary protocol and
 records thresholds, semantic affected/protected admission, budgets, and the
@@ -243,11 +268,17 @@ lineage.jsonl, update_proposals/, update_audit.json, gate_rollouts/ for the
 common-gate variants, frozen_skill.json, run_manifest.json,
 experiment_manifest.json).
 
-`run_manifest.json` additionally records `executor_usage` (acquisition-phase
-executor calls and prompt/completion tokens), captured by the seed wrapper in
-`planner.py` without modifying EmbodiedBench; it is `null` for non-remote
-(`local`/`custom`) executors, which cannot be seed-controlled in a controlled
-run.
+`run_manifest.json` additionally records complete run-scoped `executor_usage`:
+top-level calls and prompt/completion tokens are the sum of acquisition, paired
+proxy/finalist selection, and update-audit rollouts, while `by_phase` preserves
+the corresponding breakdown. The shared tracker is captured by the seed wrapper
+in `planner.py` without modifying EmbodiedBench, and every completed rollout
+also writes its episode-level `executor_usage` delta into its JSONL artifact.
+This prevents short-lived gate/audit runners from disappearing from the cost
+accounting and makes the manifest total independently checkable against rollout
+artifacts. Usage is `null` for non-remote (`local`/`custom`) executors, which
+cannot be seed-controlled in a controlled run. Frozen evaluation summaries use
+the same accounting path.
 
 Supplementary diagnostics for RQ2 and the Phase-2 evidence Go/No-Go are provided
 as library drivers: `vista_skill/fault_injection.py::run_fault_injection_evaluation`

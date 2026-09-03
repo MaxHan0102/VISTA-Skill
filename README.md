@@ -216,7 +216,10 @@ PYTHONPATH=EmbodiedBench:. python -m vista_skill.integrations.embodiedbench.cli 
 ```
 
 Outputs land under `running/`; every invocation requires a fresh
-`--output-dir`. A six-method pilot harness is available as
+`--output-dir`. Experiment manifests report executor calls and tokens for the
+complete acquisition → paired gate → update-audit path, with a phase breakdown;
+each completed rollout JSONL carries its own usage delta for independent cost
+verification. A six-method pilot harness is available as
 `PYTHONPATH=. python scripts/pilot_6methods.py` (it honours
 `VISTA_METHOD_BASE_URL` and `VISTA_EMBENCH_PY`).
 

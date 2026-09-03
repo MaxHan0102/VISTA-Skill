@@ -815,7 +815,7 @@ def _discovered_rules(
     field: SkillField,
     cluster: EvidenceCluster,
 ) -> tuple[SkillPredictionRule, ...] | None:
-    if field is not SkillField.EFFECT:
+    if field not in {SkillField.EFFECT, SkillField.CONSTRAINT}:
         return None
     discovery = _generalized_discovery(cluster)
     if discovery is None:
@@ -839,7 +839,12 @@ def _generalized_discovery(cluster: EvidenceCluster):
     ):
         return None
     generalized = tuple(
-        generalize_supported_transition(item.action, item.mismatch, item.pre_ledger)
+        generalize_supported_transition(
+            item.action,
+            item.mismatch,
+            item.pre_ledger,
+            cluster.key.field,
+        )
         for item in cluster.items
     )
     if any(item is None for item in generalized):

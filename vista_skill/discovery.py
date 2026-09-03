@@ -22,19 +22,21 @@ class GeneralizedDiscovery:
     action_type: str
     predicate: str
     after: TruthValue
+    field: SkillField = SkillField.EFFECT
 
     @property
     def signature(self) -> str:
         return f"{self.action_type}|{self.predicate}|{self.after.value}"
 
     def prediction_rule(self) -> SkillPredictionRule:
-        suffix = hashlib.sha256(self.signature.encode("utf-8")).hexdigest()[:10]
+        rule_identity = f"{self.field.value}|{self.signature}"
+        suffix = hashlib.sha256(rule_identity.encode("utf-8")).hexdigest()[:10]
         return SkillPredictionRule(
             rule_id=f"discovered_{self.action_type}_{suffix}",
-            field=SkillField.EFFECT,
+            field=self.field,
             action_type=self.action_type,
             predicate=self.predicate,
-            before=None,
+            before=self.after if self.field is SkillField.CONSTRAINT else None,
             after=self.after,
         )
 
@@ -70,6 +72,34 @@ class GeneralizedDiscovery:
                 "After a successful close action, verify that the selected object is closed."
             ),
         }
+        constraint_known = {
+            ("pick", "near({arg0})", TruthValue.FALSE): (
+                "Before picking, require evidence that the selected object is near; "
+                "after a not-near failure, navigate or gather new evidence before retrying."
+            ),
+            ("pick", "not_holding", TruthValue.FALSE): (
+                "Before picking, require evidence that the gripper is free."
+            ),
+            ("place", "not_holding", TruthValue.TRUE): (
+                "Before placing, require evidence that an object is held."
+            ),
+            ("open", "near({arg0})", TruthValue.FALSE): (
+                "Before opening, require evidence that the selected object is near."
+            ),
+            ("close", "near({arg0})", TruthValue.FALSE): (
+                "Before closing, require evidence that the selected object is near."
+            ),
+        }
+        if self.field is SkillField.CONSTRAINT:
+            statement = constraint_known.get(
+                (self.action_type, self.predicate, self.after)
+            )
+            if statement is not None:
+                return statement
+            return (
+                f"Avoid {self.action_type} when {self.predicate}="
+                f"{self.after.value}; first satisfy its missing precondition."
+            )
         statement = known.get((self.action_type, self.predicate, self.after))
         if statement is not None:
             return statement
@@ -83,6 +113,7 @@ def generalize_supported_transition(
     action: ActionCall | None,
     mismatch: Mismatch,
     pre_ledger: tuple[PredicateState, ...] = (),
+    field: SkillField = SkillField.EFFECT,
 ) -> GeneralizedDiscovery | None:
     """Turn one grounded observed change into an instance-free rule.
 
@@ -129,4 +160,5 @@ def generalize_supported_transition(
         action_type=action.action_type,
         predicate=predicate,
         after=mismatch.evidence.after,
+        field=field,
     )

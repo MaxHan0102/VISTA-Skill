@@ -63,16 +63,21 @@ class EvolutionWorkflow:
         lineage: LineageStore,
         config: VistaConfig,
         protocol: Mapping[str, object],
+        allowed_fields: tuple[SkillField, ...] | None = None,
     ) -> None:
         if engine.frozen:
             raise RuntimeError("cannot evolve an already frozen engine")
         self.engine = engine
+        self.allowed_fields = allowed_fields
         gate = build_candidate_gate(engine, paired_evaluator, config)
         self.coordinator = EvolutionCoordinator(
             generator,
             gate,
             lineage,
             protocol=protocol,
+            max_proposals_per_round=int(
+                config.raw["budgets"].get("candidate_proposals_per_round", 1)
+            ),
         )
 
     def consume_episode(self, summary: EpisodeSummary) -> None:
@@ -85,6 +90,12 @@ class EvolutionWorkflow:
         if self.engine.frozen:
             raise RuntimeError("cannot evolve an already frozen engine")
         ready = self.engine.clusterer.ready()
+        if self.allowed_fields is not None:
+            ready = tuple(
+                cluster
+                for cluster in ready
+                if cluster.key.field in self.allowed_fields
+            )
         active, results = self.coordinator.evolve(self.engine.skill, ready)
         if active.version != self.engine.skill.version:
             self.engine.promote(active)

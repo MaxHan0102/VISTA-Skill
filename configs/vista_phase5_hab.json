@@ -45,6 +45,7 @@
     "ledger_predicates": 24,
     "history_actions": 12,
     "patch_operations_per_round": 1,
+    "candidate_proposals_per_round": 1,
     "proxy_episodes": 10,
     "finalist_episodes": 30
   },

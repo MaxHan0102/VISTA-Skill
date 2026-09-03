@@ -278,6 +278,7 @@ class AttributionContext:
     object_context: str = "general"
     instruction: str = ""
     action_type: str = ""
+    last_action_success: bool | None = None
     skill_obligations: Mapping[str, tuple[str, ...]] = field(default_factory=dict)
     # Episode-level grounded goals (not predictions): attribution-side routing
     # context only, never part of the evidence request.

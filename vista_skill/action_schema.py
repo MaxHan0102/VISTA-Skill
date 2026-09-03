@@ -97,7 +97,10 @@ class ActionSchema(Protocol):
     ) -> tuple[ExpectedChange, ...]: ...
 
     def precondition_checks(
-        self, action: ActionCall, ledger: BeliefLedger
+        self,
+        action: ActionCall,
+        ledger: BeliefLedger,
+        skill: SkillSpec | None = None,
     ) -> list[dict[str, Any]]: ...
 
 
@@ -139,6 +142,14 @@ def _skill_changes(
     bindings["held"] = held
 
     for rule in rules:
+        if (
+            rule.field is SkillField.CONSTRAINT
+            and rule.before is not None
+            and rule.after is rule.before
+        ):
+            # This is a learned failure-state/precondition marker, consumed by
+            # precondition_checks rather than asserted as an action effect.
+            continue
         normalized_rule_action = (
             "*" if rule.action_type == "*" else normalize_action_type(rule.action_type)
         )
@@ -157,6 +168,68 @@ def _skill_changes(
             source_id=f"{skill.skill_id}:v{skill.version}:{rule.rule_id}",
             skill_field=rule.field,
         )
+
+
+def _render_rule_predicate(
+    action: ActionCall,
+    ledger: BeliefLedger,
+    rule: SkillPredictionRule,
+) -> PredicateKey:
+    bindings = {f"arg{index}": value for index, value in enumerate(action.arguments)}
+    held = next(
+        (
+            state.key.arguments[0]
+            for state in ledger.snapshot()
+            if state.key.name == "holding"
+            and state.key.arguments
+            and state.value is TruthValue.TRUE
+        ),
+        "held_object",
+    )
+    bindings["held"] = held
+    rendered = rule.predicate
+    for key, value in bindings.items():
+        rendered = rendered.replace("{" + key + "}", value)
+    return PredicateKey.parse(rendered)
+
+
+def _skill_precondition_checks(
+    action: ActionCall,
+    ledger: BeliefLedger,
+    skill: SkillSpec | None,
+) -> list[dict[str, Any]]:
+    if skill is None:
+        return []
+    checks = []
+    for rule in skill.prediction_rules:
+        if (
+            rule.field is not SkillField.CONSTRAINT
+            or rule.before is None
+            or rule.after is not rule.before
+        ):
+            continue
+        normalized_rule_action = (
+            "*" if rule.action_type == "*" else normalize_action_type(rule.action_type)
+        )
+        if normalized_rule_action not in {"*", action.action_type}:
+            continue
+        predicate = _render_rule_predicate(action, ledger, rule)
+        required = (
+            TruthValue.TRUE
+            if rule.before is TruthValue.FALSE
+            else TruthValue.FALSE
+        )
+        observed = ledger.value(predicate)
+        checks.append(
+            {
+                "predicate": predicate.render(),
+                "required": required.value,
+                "observed": observed.value,
+                "satisfied": observed is required,
+                "source": f"{skill.skill_id}:v{skill.version}:{rule.rule_id}",
+            }
+        )
+    return checks
 
 
 def _termination_change(
@@ -216,7 +289,10 @@ class FixedActionSchema:
         return _dedupe_changes(changes)
 
     def precondition_checks(
-        self, action: ActionCall, ledger: BeliefLedger
+        self,
+        action: ActionCall,
+        ledger: BeliefLedger,
+        skill: SkillSpec | None = None,
     ) -> list[dict[str, Any]]:
         """Object-precondition checks for the EB-Habitat PDDL action vocabulary."""
         required: list[tuple[PredicateKey, TruthValue]] = []
@@ -242,6 +318,7 @@ class FixedActionSchema:
                     "satisfied": observed is expected,
                 }
             )
+        checks.extend(_skill_precondition_checks(action, ledger, skill))
         return checks
 
     def _primitive_changes(
@@ -315,10 +392,13 @@ class SkillOnlyActionSchema:
         return _dedupe_changes(changes)
 
     def precondition_checks(
-        self, action: ActionCall, ledger: BeliefLedger
+        self,
+        action: ActionCall,
+        ledger: BeliefLedger,
+        skill: SkillSpec | None = None,
     ) -> list[dict[str, Any]]:
         # Preconditions are not assumed before the Skill discovers them.
-        return []
+        return _skill_precondition_checks(action, ledger, skill)
 
 
 # EB-Navigation action vocabulary: parameterless egocentric motion primitives.
@@ -350,7 +430,10 @@ class NavActionSchema:
         return _dedupe_changes(changes)
 
     def precondition_checks(
-        self, action: ActionCall, ledger: BeliefLedger
+        self,
+        action: ActionCall,
+        ledger: BeliefLedger,
+        skill: SkillSpec | None = None,
     ) -> list[dict[str, Any]]:
         # Navigation primitives carry no object preconditions.
         return []

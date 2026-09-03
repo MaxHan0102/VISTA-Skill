@@ -163,9 +163,14 @@ class CreditAssigner:
                 item for item in mismatches if item.key.name != "task_complete"
             )
             if self.config.skill_discovery_enabled and discovery_items and context.action_type:
+                field = (
+                    SkillField.CONSTRAINT
+                    if context.last_action_success is False
+                    else SkillField.EFFECT
+                )
                 return AttributionResult(
                     target=UpdateTarget.SKILL_UPDATE,
-                    field=SkillField.EFFECT,
+                    field=field,
                     update_kind=SkillUpdateKind.DISCOVERY,
                     confidence=min(
                         item.evidence.confidence
@@ -181,8 +186,8 @@ class CreditAssigner:
                         )
                     ),
                     rationale=(
-                        "reliable action-bound state changes are recurrent Skill "
-                        "discovery candidates"
+                        "reliable action-bound outcomes are recurrent Skill "
+                        "effect or precondition discovery candidates"
                     ),
                 )
             return AttributionResult(

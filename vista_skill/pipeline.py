@@ -21,6 +21,7 @@ from vista_skill.schemas import (
     PredicateKey,
     SkillField,
     SkillSpec,
+    EvidenceSource,
     TransitionEvent,
     UpdateTarget,
 )
@@ -201,6 +202,16 @@ class VistaSkillEngine:
         attribution = None
         if not self._frozen:
             mismatches = compare_transitions(expected, evidence)
+            deterministic_failure = bool(
+                last_action_success is False
+                and any(
+                    item.source is EvidenceSource.ENV_FEEDBACK
+                    and item.after.value != "unknown"
+                    and item.confidence
+                    >= self.credit_assigner.config.min_evidence_confidence
+                    for item in evidence
+                )
+            )
             context = replace(
                 prepared.attribution_context,
                 stochastic_suspected=(
@@ -208,10 +219,12 @@ class VistaSkillEngine:
                     or (
                         last_action_success is False
                         and prepared.attribution_context.executor_followed_skill is not False
+                        and not deterministic_failure
                     )
                 ),
                 instruction=prepared.instruction,
                 action_type=prepared.action.action_type,
+                last_action_success=last_action_success,
                 skill_obligations={
                     field.value: self.skill.statements(field)
                     for field in SkillField

@@ -19,6 +19,7 @@ from vista_skill.schemas import (
     SkillSpec,
     TerminationPolicy,
     TruthValue,
+    SkillUpdateKind,
 )
 from vista_skill.skills import with_field
 
@@ -226,6 +227,31 @@ class DeterministicTransitionChecker:
                 )
                 continue
             ledger = BeliefLedger.from_snapshot(item.pre_ledger)
+            if cluster.key.field is SkillField.CONSTRAINT:
+                parent_checks = self.action_schema.precondition_checks(
+                    item.action, ledger, parent
+                )
+                candidate_checks = self.action_schema.precondition_checks(
+                    item.action, ledger, candidate
+                )
+                target = item.mismatch.key.render()
+                parent_explains = any(
+                    check["predicate"] == target and not check["satisfied"]
+                    for check in parent_checks
+                )
+                candidate_explains = any(
+                    check["predicate"] == target and not check["satisfied"]
+                    for check in candidate_checks
+                )
+                checks.append(
+                    CachedTransitionCheck(
+                        event_id=item.event_id,
+                        repaired=candidate_explains and not parent_explains,
+                        introduced_conflict=False,
+                        executable=bool(candidate.statements(cluster.key.field)),
+                    )
+                )
+                continue
             parent_expected = self.action_schema.compile(
                 item.action, ledger, parent, item.goal_predicates
             )
@@ -580,11 +606,15 @@ class EvolutionCoordinator:
         lineage: LineageWriter,
         *,
         protocol: Mapping[str, object] | None = None,
+        max_proposals_per_round: int | None = None,
     ) -> None:
         self.generator = generator
         self.gate = gate
         self.lineage = lineage
         self.protocol = protocol or {}
+        if max_proposals_per_round is not None and max_proposals_per_round < 1:
+            raise ValueError("max_proposals_per_round must be positive")
+        self.max_proposals_per_round = max_proposals_per_round
         self._processed: set[str] = set()
 
     def evolve(
@@ -594,7 +624,13 @@ class EvolutionCoordinator:
     ) -> tuple[SkillSpec, tuple[EvolutionResult, ...]]:
         active = parent
         results: list[EvolutionResult] = []
-        for cluster in clusters:
+        proposed = 0
+        for cluster in sorted(clusters, key=_cluster_priority):
+            if (
+                self.max_proposals_per_round is not None
+                and proposed >= self.max_proposals_per_round
+            ):
+                break
             if (
                 cluster.key.skill_id != active.skill_id
                 or cluster.key.skill_version != active.version
@@ -604,6 +640,7 @@ class EvolutionCoordinator:
             if fingerprint in self._processed:
                 continue
             self._processed.add(fingerprint)
+            proposed += 1
             patch = self.generator.propose(active, cluster)
             proposed_candidate = None
             if not self.gate.applier.validate(active, patch):
@@ -713,5 +750,31 @@ def make_patch_id(
 
 
 def _cluster_fingerprint(cluster: EvidenceCluster) -> str:
-    raw = "|".join((str(cluster.key), *sorted(cluster.evidence_ids)))
+    is_discovery = bool(
+        cluster.items
+        and all(
+            item.attribution.update_kind is SkillUpdateKind.DISCOVERY
+            for item in cluster.items
+        )
+    )
+    # A deterministic Discovery patch is uniquely determined by its
+    # generalized cluster key and parent Skill version. Additional supporting
+    # evidence strengthens the same candidate but must not re-spend a paired
+    # gate on every acquisition episode.
+    raw = (
+        str(cluster.key)
+        if is_discovery
+        else "|".join((str(cluster.key), *sorted(cluster.evidence_ids)))
+    )
     return hashlib.sha256(raw.encode("utf-8")).hexdigest()
+
+
+def _cluster_priority(cluster: EvidenceCluster) -> tuple[int, str]:
+    priority = {
+        SkillField.CONSTRAINT: 0,
+        SkillField.PROCEDURE: 1,
+        SkillField.TERMINATION: 2,
+        SkillField.ACTIVATION: 3,
+        SkillField.EFFECT: 4,
+    }
+    return priority[cluster.key.field], str(cluster.key)

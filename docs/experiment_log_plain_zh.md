@@ -8,9 +8,9 @@
 
 ## 一句话现状
 
-VISTA-Skill 已经可以在部分结构化故障中**发现错误的 Skill 字段并生成正确修复**，也发现过经
-独立审计确实有益的候选 Skill；但在线 Candidate Gate 仍会错杀有益候选，因此尚未完成
-“自动接受修复 → 升级 frozen Skill → 稳定提高最终任务性能”的完整闭环。
+VISTA-Skill 已经可以从 interface-only S0 的自然交互中自主发现动作 effect 和可复用的
+precondition/constraint，也能在部分结构化故障中生成正确修复；但尚无候选通过可靠的任务效用
+验证，因此还没有完成“自主发现/改进 → 接受更新 → 稳定提高最终任务性能”的完整闭环。
 
 ## 我们到底在研究什么
 
@@ -23,8 +23,12 @@ VISTA-Skill 已经可以在部分结构化故障中**发现错误的 Skill 字�
 
 如果把所有失败都写回长期 Skill，Skill 很快会被偶然错误污染。VISTA-Skill 要解决的问题是：
 
-> 在部分可观测环境里，判断一次失败是否真的应该归咎于 Skill；如果是，只做最小修复，并且只有
-> 在独立任务上确认“目标问题变好、其他能力不退化”后才接受更新。
+> VISTA-Skill 能否从自身的视觉具身交互中，低成本地发现、验证并积累真正提升任务成功率的
+> 可执行规则？
+
+这包含四种长期变化：发现原 Skill 不包含的规则、修复错误规则、优化正确但低效/脆弱的规则，以及
+处理 executor 没有遵循正确规则的执行失误。无论哪一种，都只有在独立任务上确认“相关任务变好、
+其他能力不退化”后才能接受。
 
 当前方法不训练模型权重。executor、teacher 和 patch author 都使用冻结的
 Qwen3-VL-8B-Instruct。
@@ -75,7 +79,7 @@ Skill 分为 activation、procedure、effect、constraint、termination 五个�
 - Stock EB-HAB 小样本里没有任何持久更新被接受，所有方法最后仍是初始 S0 Skill。
 - 小样本中 Static Skill 和 No Skill 的胜负方向会反转，不能声称最终性能提高。
 - Full VISTA 的 action-level teacher 成本约为 trajectory baseline 的 20–26 倍。
-- 当前方法依赖已有 expectation，只会 repair；empty/minimal Skill 无法自动长出新规则。
+- 当时的方法依赖已有 expectation，只会 repair；这个限制已在 Phase 5 的自然 Discovery 实现中解除。
 
 ### 这意味着什么
 
@@ -160,6 +164,26 @@ Skill growth 收缩为更诚实的 **reliable Skill repair**。
 含义：给同一个 8B 增加更长的通用文字检查表，不会自动带来更好的归因；本版本只是稳定地更加
 保守。Phase3C v1 不接入主方法。
 
+## Phase 5：从自然交互自主发现规则
+
+- 主实验从只有公开动作接口、五个字段都为空的 interface-only S0 开始，不再手工注入错误 Skill。
+- 两个独立 episode 中自然出现的相同 action-bound 状态变化会被泛化成跨物体规则。已真实发现
+  nav/pick/place 的 effect，也发现了“pick 前应确认目标物体 near”的 constraint。
+- Discovery 补丁由证据唯一决定，不调用 patch teacher。EB-HAB 结构化 feedback 足够时采用
+  event-triggered evidence，一次四步任务的方法 token 从 `6479` 降至 `1964`（下降 `69.7%`）。
+- 第一次真实 10-task 配对 gate 中，constraint candidate 改善了两个任务、退化了一个任务；总体
+  均值只增加 `0.00838`，affected-task bootstrap LCB 为 `-0.26973`，因此被正确拒绝，Skill 保持 S0。
+- 这说明“初始 Skill 无法自主长出候选”的瓶颈已解决，但“候选被 executor 稳定采用并可靠提升成功
+  率”仍未解决。当前不能把候选出现或局部轨迹改善写成最终性能提升。
+- 已限制每轮最多评估一个新候选，优先 constraint/procedure，并避免同一 Discovery 随证据增长反复
+  花费 paired rollout。诊断运行还可显式跳过 120-episode 独立 audit；正式 controlled run 不能跳过。
+- 同一 constraint gate 已重复两次；三轮共 60 个 proxy rollout 的逐任务结果与完整动作轨迹完全一致，
+  候选每次都因 affected-task LCB `-0.26973` 被拒绝。这确认 task 62/66 的改善和 task 69 的退化均可
+  复现，但也确认这条规则没有继续进入 finalist/audit 的价值。
+- 已修复成本日志只统计 acquisition、遗漏 gate/audit 的问题。首个完整成本诊断记录 executor 91 次
+  调用、440,371 tokens，其中 paired proxy 占约 82%；另有 5 次 goal grounding、9,876 method tokens。
+  每个 episode 的 usage 都写入 JSONL，求和与 manifest 完全一致。旧 E4/v2 的成本字段不能用于比较。
+
 ## 截至目前，哪些 idea 真正 Work
 
 1. 动作前 expected 与动作后 evidence 分离，避免模型拿预期反向“证明”自己。
@@ -169,33 +193,34 @@ Skill growth 收缩为更诚实的 **reliable Skill repair**。
 5. 单字段、exact-target、同时修改文本与 compiled rule 的 bounded patch。
 6. 独立 repair/regression audit：能发现“目标变好但其他任务变差”。
 7. Append-only lineage、digest、固定 split/seed、冻结评测和中断恢复等实验基础设施。
+8. Interface-only S0 的自然 effect/constraint Discovery，以及零 patch-teacher 的确定性候选生成。
+9. Event-triggered evidence 在 feedback 完整的 EB-HAB 上显著降低方法 token，不移除跨环境视觉 fallback。
 
 ## 哪些 idea 当前不 Work
 
-1. 从 empty/minimal Skill 自动长出新规则。
-2. 仅靠 RGB 代替 simulator feedback，尤其用于 persistent Skill update。
-3. 用更严格 Evidence Guard 过滤出可靠提升：目前只换来低 coverage。
-4. Direct Qwen 独立决定 attribution：误更新过多。
-5. Episode-level trajectory reflection 定位具体 compiled Skill field。
-6. 当前 Candidate Gate 稳定接受稀疏但真正有益的修复。
-7. 三条通用文字 Meta-Skill 提高 8B 的 Skill 演化性能。
-8. 已证明 VISTA-Skill 提升 EB-HAB/EB-NAV 最终性能——目前不能这样声称。
+1. 仅靠 RGB 代替 simulator feedback，尤其用于 persistent Skill update。
+2. 用更严格 Evidence Guard 过滤出可靠提升：目前只换来低 coverage。
+3. Direct Qwen 独立决定 attribution：误更新过多。
+4. Episode-level trajectory reflection 定位具体 compiled Skill field。
+5. 当前 Candidate Gate 稳定接受并积累真正有益的自然发现或修复。
+6. 三条通用文字 Meta-Skill 提高 8B 的 Skill 演化性能。
+7. 已证明 VISTA-Skill 提升 EB-HAB/EB-NAV 最终性能——目前不能这样声称。
 
 ## 当前最准确的项目结论
 
 ```text
-已经打通：发现部分 Skill 错误 → 定位字段 → 生成正确修复 → 独立验证候选是否有益
+已经打通：自然发现 effect/constraint 或发现已有 Skill 错误 → 定位字段 → 生成候选 → 可靠拒绝未证实更新
 
-尚未打通：在线正确接受有益候选 → 升级 frozen Skill → 在正式任务上稳定提高性能
+尚未打通：稳定发现更高价值规则 → 在线接受有益候选 → 升级 frozen Skill → 正式任务稳定提高性能
 ```
 
 因此现在不应继续堆新的 Guard 或通用 prompt。下一步应回到原始 VISTA-Skill 主线，重点解决：
 
-1. 在新 held-out fault 上预注册验证 provenance-aware attribution，提高真错误召回率而不增加误更新；
-2. 重新设计 fault-aware affected/protected gate，让真正相关的任务信号不被通用任务池稀释；
-3. 用多 fault、多 evolution seed 证明至少一个候选能够被在线接受，并在独立 audit 和 frozen evaluation
-   中保持收益；
-4. 只有上述闭环成立后，再做 EB-HAB/NAV 主性能表和更大模型扩展。
+1. 重复真实 constraint paired pilot，检查单次 parent/candidate 差异的符号是否稳定；
+2. 从自然失败中发现更直接影响执行的 procedure/optimization，而不只总结 primitive effect；
+3. 用多 evolution seed 证明至少一个候选能够被在线接受，并在独立 audit 和 frozen evaluation 中保持
+   收益；
+4. 闭环成立后扩展完整 EB-HAB 主实验，再推进 EB-NAV 与更大模型的受控比较。
 
 ## 阅读实验结果时必须记住
 
@@ -203,4 +228,5 @@ Skill growth 收缩为更诚实的 **reliable Skill repair**。
 - 0 harmful promoted 在 0 promoted 时不等于 gate 已被证明安全。
 - Selection 上变好不等于 independent audit 上仍然变好。
 - No-Go 不是实验失败：它明确告诉我们哪些额外模块不值得继续投入。
-- 当前最强的论文故事仍是 **visual transition credit assignment for reliable Skill repair**，不是已经完成的通用 Skill self-evolution。
+- 当前论文主线已转为 **visual transition credit assignment for low-cost reliable Skill evolution**；自然
+  Discovery 已有机制证据，但通用 self-evolution 的最终性能证据仍未完成。

@@ -49,6 +49,7 @@ from vista_skill.integrations.embodiedbench.environment import (
     seed_process_rngs,
 )
 from vista_skill.integrations.embodiedbench.planner import (
+    ExecutorUsageTracker,
     configure_planner_inference_seed,
     make_skill_aware_planner,
 )
@@ -76,7 +77,7 @@ from vista_skill.models import (
 )
 from vista_skill.pipeline import VistaSkillEngine
 from vista_skill.protocol import ExperimentManifest, load_experiment_manifest
-from vista_skill.schemas import SkillSpec
+from vista_skill.schemas import SkillField, SkillSpec
 from vista_skill.skills import (
     empty_shared_skill,
     interface_only_shared_skill,
@@ -177,6 +178,22 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         help=(
             "Diagnostic only: materialize candidates and run static/cached-transition "
             "checks, but stop before paired rollout selection."
+        ),
+    )
+    experiment.add_argument(
+        "--candidate-field",
+        choices=tuple(item.value for item in SkillField),
+        help=(
+            "Diagnostic only: materialize/evaluate ready candidates from one "
+            "attributed field."
+        ),
+    )
+    experiment.add_argument(
+        "--skip-update-audit",
+        action="store_true",
+        help=(
+            "Diagnostic only: stop after acquisition and candidate selection "
+            "without the independent post-hoc update audit."
         ),
     )
     experiment.add_argument(
@@ -305,6 +322,12 @@ def _run_experiment(args: argparse.Namespace) -> None:
         raise ValueError("--transition-only-gate requires --diagnostic")
     if args.transition_only_gate and args.method != "full":
         raise ValueError("--transition-only-gate currently requires --method full")
+    if args.candidate_field is not None and not args.diagnostic:
+        raise ValueError("--candidate-field requires --diagnostic")
+    if args.candidate_field is not None and args.method != "full":
+        raise ValueError("--candidate-field currently requires --method full")
+    if args.skip_update_audit and not args.diagnostic:
+        raise ValueError("--skip-update-audit requires --diagnostic")
     if args.skill_fault and not args.diagnostic:
         raise ValueError("--skill-fault is a diagnostic deviation and requires --diagnostic")
     if args.initial_skill != "shared" and args.skill_fault:
@@ -328,6 +351,7 @@ def _run_experiment(args: argparse.Namespace) -> None:
         run_manifest = manifest.rotate_split(rotation_index)
         run_dir = output_dir / f"seed_{evolution_seed}"
         run_id = f"{experiment_id}_seed_{evolution_seed}"
+        executor_usage = ExecutorUsageTracker()
         method_model = (
             _make_method_model(args, seed=evolution_seed)
             if args.method in _METHODS_REQUIRING_TEACHER
@@ -382,7 +406,13 @@ def _run_experiment(args: argparse.Namespace) -> None:
                     _NoRolloutPairedEvaluator()
                     if args.transition_only_gate
                     else _make_paired_evaluator(
-                        args, run_manifest, gate_seeds, run_dir, config, run_id=run_id
+                        args,
+                        run_manifest,
+                        gate_seeds,
+                        run_dir,
+                        config,
+                        run_id=run_id,
+                        usage_tracker=executor_usage,
                     )
                 )
                 lineage = LineageStore(run_dir / "lineage.jsonl")
@@ -398,6 +428,11 @@ def _run_experiment(args: argparse.Namespace) -> None:
                     lineage=lineage,
                     config=config,
                     protocol=protocol,
+                    allowed_fields=(
+                        None
+                        if args.candidate_field is None
+                        else (SkillField(args.candidate_field),)
+                    ),
                 )
             elif args.method in _TRAJECTORY_METHODS:
                 lineage = LineageStore(run_dir / "lineage.jsonl")
@@ -412,6 +447,7 @@ def _run_experiment(args: argparse.Namespace) -> None:
                     lineage=lineage,
                     config=config,
                     protocol=protocol,
+                    usage_tracker=executor_usage,
                 )
             else:
                 lineage = None
@@ -430,6 +466,8 @@ def _run_experiment(args: argparse.Namespace) -> None:
                 max_completion_tokens=int(
                     config.raw["executor"]["max_completion_tokens"]
                 ),
+                usage_tracker=executor_usage,
+                usage_phase="acquisition",
             )
             acquisition_results = []
             ready_cluster_counts = []
@@ -462,7 +500,11 @@ def _run_experiment(args: argparse.Namespace) -> None:
             run_dir / "frozen_skill.json", frozen.skill, protocol=protocol
         )
         update_audit = None
-        if workflow is not None and not args.transition_only_gate:
+        if (
+            workflow is not None
+            and not args.transition_only_gate
+            and not args.skip_update_audit
+        ):
             audit_plan = make_rotated_audit_plan(
                 manifest,
                 rotation_index=rotation_index,
@@ -475,6 +517,7 @@ def _run_experiment(args: argparse.Namespace) -> None:
                 run_dir,
                 config,
                 run_id=run_id,
+                usage_tracker=executor_usage,
             )
             update_audit = run_rotated_update_audit(
                 lineage.accepted_snapshots,
@@ -491,7 +534,7 @@ def _run_experiment(args: argparse.Namespace) -> None:
             ],
             "frozen_skill_sha256": skill_digest(engine.skill),
             "method_usage": _usage_payload(method_model),
-            "executor_usage": _executor_usage_payload(runner),
+            "executor_usage": executor_usage.payload(),
             "update_reliability": None
             if update_audit is None
             else dict(update_audit.reliability),
@@ -521,6 +564,7 @@ def _run_frozen_evaluation(args: argparse.Namespace) -> None:
     if args.meta_skills != "none" and args.mode == "no_skill":
         raise ValueError("--meta-skills requires a Skill-injected evaluation mode")
     run_id = f"evaluate_{uuid.uuid4().hex}"
+    executor_usage = ExecutorUsageTracker()
     is_nav = args.env == "eb-nav"
     # EB-Nav ships no train_validation split, so there is no controlled manifest to verify.
     manifest = None if is_nav else _load_verified_manifest(args.manifest)
@@ -604,6 +648,8 @@ def _run_frozen_evaluation(args: argparse.Namespace) -> None:
             max_completion_tokens=int(
                 config.raw["executor"]["max_completion_tokens"]
             ),
+            usage_tracker=executor_usage,
+            usage_phase="frozen_evaluation",
         )
         # official_test loads the full subset (episode_ids=None) and is capped by
         # --max-episodes; train_validation stages pin a specific id list.
@@ -645,6 +691,7 @@ def _run_frozen_evaluation(args: argparse.Namespace) -> None:
             "rollout_seed": args.seed,
             "mean_task_success": _mean(item.task_success for item in results),
             "mean_task_progress": _mean(item.task_progress for item in results),
+            "executor_usage": executor_usage.payload(),
         },
     )
 
@@ -809,6 +856,7 @@ def _make_trajectory_workflow(
     lineage: LineageStore,
     config: VistaConfig,
     protocol: Mapping[str, object],
+    usage_tracker: ExecutorUsageTracker,
 ) -> TrajectoryEvolutionWorkflow:
     """Build the episode-driven evolution driver for a controlled trajectory baseline.
 
@@ -833,7 +881,13 @@ def _make_trajectory_workflow(
         )
     else:
         paired = _make_paired_evaluator(
-            args, run_manifest, gate_seeds, run_dir, config, run_id=run_id
+            args,
+            run_manifest,
+            gate_seeds,
+            run_dir,
+            config,
+            run_id=run_id,
+            usage_tracker=usage_tracker,
         )
         gate = build_candidate_gate(engine, paired, config)
         updater = CommonGateProposalAdapter(
@@ -877,6 +931,8 @@ def _make_runner(
     rollout_seed: int,
     goal_predicate_provider=None,
     max_completion_tokens: int = 4096,
+    usage_tracker: ExecutorUsageTracker | None = None,
+    usage_phase: str = "executor",
 ) -> HabitatRolloutRunner:
     _require_new_output(output, "event artifact")
     planner = _make_planner(
@@ -887,6 +943,8 @@ def _make_runner(
         inject_skill=inject_skill,
         rollout_seed=rollout_seed,
         max_completion_tokens=max_completion_tokens,
+        usage_tracker=usage_tracker,
+        usage_phase=usage_phase,
     )
     if goal_predicate_provider is None:
         goal_predicate_provider = (
@@ -921,6 +979,8 @@ def _make_planner(
     inject_skill: bool = True,
     rollout_seed: int,
     max_completion_tokens: int = 4096,
+    usage_tracker: ExecutorUsageTracker | None = None,
+    usage_phase: str = "executor",
 ):
     from embodiedbench.planner import remote_model
 
@@ -980,7 +1040,12 @@ def _make_planner(
             tp=args.tp,
         )
     if args.model_type == "remote":
-        configure_planner_inference_seed(planner, rollout_seed)
+        configure_planner_inference_seed(
+            planner,
+            rollout_seed,
+            usage_tracker=usage_tracker,
+            usage_phase=usage_phase,
+        )
     if not inject_skill:
         return planner
     observation_meta_skill = (
@@ -1013,6 +1078,7 @@ def _make_paired_evaluator(
     config: VistaConfig,
     *,
     run_id: str,
+    usage_tracker: ExecutorUsageTracker,
 ) -> PairedRolloutEvaluator:
     selection = manifest.coordinates_for("selection")
     proxy_budget = config.gate.proxy_episode_budget
@@ -1081,6 +1147,8 @@ def _make_paired_evaluator(
                 max_completion_tokens=int(
                     config.raw["executor"]["max_completion_tokens"]
                 ),
+                usage_tracker=usage_tracker,
+                usage_phase=f"gate_{stage}",
             )
             result = runner.run_episode(expected_episode_id=coordinate.episode_id)
         finally:
@@ -1108,6 +1176,7 @@ def _make_audit_evaluator(
     config: VistaConfig,
     *,
     run_id: str,
+    usage_tracker: ExecutorUsageTracker,
 ) -> PairedRolloutEvaluator:
     indexed = {item.episode_id: item for item in manifest.tasks}
     cache: dict[tuple[str, str, int], RolloutScore] = {}
@@ -1165,6 +1234,8 @@ def _make_audit_evaluator(
                 max_completion_tokens=int(
                     config.raw["executor"]["max_completion_tokens"]
                 ),
+                usage_tracker=usage_tracker,
+                usage_phase="update_audit",
             )
             result = runner.run_episode(expected_episode_id=coordinate.episode_id)
         finally:
@@ -1364,6 +1435,10 @@ def _protocol_record(
         "transition_only_gate": bool(
             getattr(args, "transition_only_gate", False)
         ),
+        "candidate_field": getattr(args, "candidate_field", None),
+        "skip_update_audit": bool(
+            getattr(args, "skip_update_audit", False)
+        ),
         "evaluation_data_policy": data_policy.policy_id,
         "evaluation_data_policy_sha256": data_policy.digest,
         "state_oracle_labels": bool(
@@ -1520,18 +1595,6 @@ def _usage_payload(model: OpenAICompatibleJsonModel | None):
     if model is None:
         return None
     return {purpose: vars(counter) for purpose, counter in model.usage.items()}
-
-
-def _executor_usage_payload(runner) -> dict[str, int] | None:
-    """Acquisition-phase executor calls/tokens, captured by the seed wrapper.
-
-    Returns ``None`` for non-remote executors (``local``/``custom``), which do
-    not route through the OpenAI-compatible seed wrapper; those backends cannot
-    be seed-controlled in a controlled run either (see docs/implementation.md).
-    """
-    planner = getattr(runner, "planner", None)
-    usage = getattr(planner, "_vista_executor_usage", None)
-    return None if usage is None else dict(usage)
 
 
 def _parse_seeds(raw: str) -> tuple[int, ...]:

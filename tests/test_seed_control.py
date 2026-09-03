@@ -4,6 +4,7 @@ from types import SimpleNamespace
 
 from vista_skill.integrations.embodiedbench import environment
 from vista_skill.integrations.embodiedbench.planner import (
+    ExecutorUsageTracker,
     configure_planner_inference_seed,
 )
 from vista_skill.models import OpenAICompatibleJsonModel
@@ -29,6 +30,39 @@ def test_planner_proxy_injects_paired_seed_into_executor_request() -> None:
 
     planner.model.model.chat.completions.create(model="executor", messages=[])
     assert completions.requests[0]["seed"] == 17
+
+
+def test_executor_usage_aggregates_across_rollout_phases() -> None:
+    tracker = ExecutorUsageTracker()
+    for seed, phase in ((17, "acquisition"), (18, "gate_proxy")):
+        completions = RecordingCompletions()
+        client = SimpleNamespace(chat=SimpleNamespace(completions=completions))
+        planner = SimpleNamespace(model=SimpleNamespace(model=client))
+        configure_planner_inference_seed(
+            planner,
+            seed,
+            usage_tracker=tracker,
+            usage_phase=phase,
+        )
+        planner.model.model.chat.completions.create(model="executor", messages=[])
+
+    assert tracker.payload() == {
+        "calls": 2,
+        "prompt_tokens": 4,
+        "completion_tokens": 2,
+        "by_phase": {
+            "acquisition": {
+                "calls": 1,
+                "prompt_tokens": 2,
+                "completion_tokens": 1,
+            },
+            "gate_proxy": {
+                "calls": 1,
+                "prompt_tokens": 2,
+                "completion_tokens": 1,
+            },
+        },
+    }
 
 
 def test_method_model_injects_evolution_seed() -> None:

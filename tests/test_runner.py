@@ -1,8 +1,10 @@
 from __future__ import annotations
 
 import json
+from types import SimpleNamespace
 
 from vista_skill.artifacts import JsonlArtifactWriter
+from vista_skill.integrations.embodiedbench.planner import ExecutorUsageTracker
 from vista_skill.integrations.embodiedbench.runner import HabitatRolloutRunner
 from vista_skill.protocol import TaskCoordinate
 from vista_skill.schemas import EvidenceSource, PredicateEvidence, PredicateKey, TruthValue
@@ -93,6 +95,46 @@ def test_multi_action_plan_writes_one_transition_per_primitive(tmp_path) -> None
     assert transitions[1]["payload"]["pre_image"] == "step_1.png"
     assert "task_progress" not in transitions[0]["payload"]
     assert result.task_success == 1.0
+
+
+def test_runner_writes_episode_executor_usage_delta(tmp_path) -> None:
+    class UsagePlanner(FakePlanner):
+        def __init__(self) -> None:
+            self.planner_steps = 0
+            self.output_json_error = 0
+            self._vista_executor_usage_tracker = ExecutorUsageTracker()
+            self._vista_executor_usage_tracker.activate("gate_proxy")
+            self._vista_executor_usage_phase = "gate_proxy"
+
+        def act(self, image, instruction):
+            self.planner_steps += 1
+            self._vista_executor_usage_tracker.record(
+                "gate_proxy",
+                SimpleNamespace(prompt_tokens=7, completion_tokens=3),
+            )
+            return [0, 1], "{}"
+
+    output = tmp_path / "events.jsonl"
+    runner = HabitatRolloutRunner(
+        FakeEnvironment(),
+        UsagePlanner(),
+        VistaSkillEngine(initialize_shared_skill()),
+        JsonlArtifactWriter(output),
+    )
+    runner.run_episode()
+    records = [json.loads(line) for line in output.read_text().splitlines()]
+    usage = next(
+        item["payload"]
+        for item in records
+        if item["event_type"] == "executor_usage"
+    )
+    assert usage == {
+        "episode_id": "0",
+        "phase": "gate_proxy",
+        "calls": 1,
+        "prompt_tokens": 7,
+        "completion_tokens": 3,
+    }
 
 
 def test_runner_resets_belief_between_episodes(tmp_path) -> None:

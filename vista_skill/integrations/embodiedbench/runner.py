@@ -118,6 +118,7 @@ class HabitatRolloutRunner:
 
     def run_episode(self, *, expected_episode_id: str | None = None) -> EpisodeResult:
         started = time.monotonic()
+        executor_usage_start = _executor_usage_snapshot(self.planner)
         observation = self.env.reset()
         pre_image = self.env.save_image(observation)
         instruction = self.env.episode_language_instruction
@@ -280,6 +281,21 @@ class HabitatRolloutRunner:
             trajectory=tuple(action_texts),
             failure_reason="" if task_success > 0.0 else str(last_info.get("env_feedback", "")),
         )
+        executor_usage_end = _executor_usage_snapshot(self.planner)
+        if executor_usage_start is not None and executor_usage_end is not None:
+            self.writer.append(
+                "executor_usage",
+                {
+                    "episode_id": episode_id,
+                    "phase": getattr(
+                        self.planner, "_vista_executor_usage_phase", "executor"
+                    ),
+                    **{
+                        key: executor_usage_end[key] - executor_usage_start[key]
+                        for key in executor_usage_end
+                    },
+                },
+            )
         self.writer.append("episode_result", result)
         return result
 
@@ -316,6 +332,14 @@ def _default_task_id(env: HabitatEnvironment) -> str:
     return f"episode_{env._current_episode_num}"
 
 
+def _executor_usage_snapshot(planner: HabitatPlanner) -> dict[str, int] | None:
+    tracker = getattr(planner, "_vista_executor_usage_tracker", None)
+    phase = getattr(planner, "_vista_executor_usage_phase", None)
+    if tracker is None or phase is None:
+        return None
+    return tracker.phase_payload(phase)
+
+
 def _default_task_pattern(env: HabitatEnvironment) -> str:
     current_episode = getattr(env, "current_episode", None)
     if callable(current_episode):
@@ -340,7 +364,9 @@ def _online_attribution_context(
     goal_predicates: tuple[PredicateKey, ...],
 ) -> tuple[AttributionContext, dict[str, Any]]:
     """Build attribution inputs only from the active Skill and online state."""
-    checks = engine.action_schema.precondition_checks(action, engine.ledger)
+    checks = engine.action_schema.precondition_checks(
+        action, engine.ledger, engine.skill
+    )
     followed = all(item["satisfied"] for item in checks) if checks else True
     object_context = _object_context(action, goal_predicates)
     context = AttributionContext(
