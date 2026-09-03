@@ -119,6 +119,21 @@ class PositivePairedEvaluator:
         )
 
 
+class UnderpoweredPairedEvaluator:
+    def evaluate(self, parent, candidate, *, stage, episode_budget):
+        deltas = (0.2, 0.2, -0.1, -0.1)
+        return tuple(
+            PairedEpisodeScore(
+                f"ep{index}",
+                index,
+                0.0,
+                delta,
+                "base" if index % 2 == 0 else "long",
+            )
+            for index, delta in enumerate(deltas[:episode_budget])
+        )
+
+
 def test_common_gate_adapter_can_reach_paired_gate() -> None:
     skill = initialize_shared_skill()
     proposal = CommonUpdateProposal(
@@ -144,3 +159,36 @@ def test_common_gate_adapter_can_reach_paired_gate() -> None:
     )
     assert result.accepted
     assert result.skill.version == 1
+
+
+def test_common_gate_adapter_keeps_shadow_candidate_inactive() -> None:
+    skill = initialize_shared_skill()
+    proposal = CommonUpdateProposal(
+        UpdateTarget.SKILL_UPDATE,
+        SkillField.PROCEDURE,
+        "Repeated trajectories omit target verification.",
+        ("ev1", "ev2"),
+        "embodiskill_common_gate",
+        True,
+    )
+    gate = CandidateGate(
+        BoundedPatchApplier(),
+        DeterministicTransitionChecker(),
+        UnderpoweredPairedEvaluator(),
+        GateConfig(
+            bootstrap_samples=500,
+            proxy_episode_budget=4,
+            finalist_episode_budget=4,
+            shadow_candidates_enabled=True,
+        ),
+    )
+
+    result = CommonGateProposalAdapter(ProcedurePatchGenerator(), gate).update(
+        skill, proposal, ("ep1", "ep2")
+    )
+
+    assert not result.accepted
+    assert result.decision is not None
+    assert result.decision.disposition == "shadow"
+    assert result.candidate is not None
+    assert result.skill == skill

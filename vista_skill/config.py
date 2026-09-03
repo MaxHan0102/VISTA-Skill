@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import math
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Mapping
@@ -75,6 +76,7 @@ def load_config(path: str | Path) -> VistaConfig:
             alpha=float(gate.get("alpha", 0.05)),
             proxy_episode_budget=int(budgets.get("proxy_episodes", 10)),
             finalist_episode_budget=int(budgets.get("finalist_episodes", 30)),
+            proxy_rollout_repeats=int(gate.get("proxy_rollout_repeats", 1)),
             proxy_lcb_threshold=float(gate.get("proxy_lcb_threshold", 0.0)),
             finalist_lcb_threshold=float(gate.get("finalist_lcb_threshold", 0.0)),
             subgroup_regression_tolerance=float(
@@ -101,6 +103,10 @@ def load_config(path: str | Path) -> VistaConfig:
             sequential_max_abs_delta=float(
                 gate.get("sequential_max_abs_delta", 1.1)
             ),
+            shadow_candidates_enabled=bool(
+                gate.get("shadow_candidates_enabled", False)
+            ),
+            shadow_min_mean_delta=float(gate.get("shadow_min_mean_delta", 0.0)),
             random_seed=int(gate.get("random_seed", 0)),
         ),
     )
@@ -112,6 +118,8 @@ def load_config(path: str | Path) -> VistaConfig:
         raise ValueError("paired gate budgets must be positive")
     if config.gate.proxy_episode_budget > config.gate.finalist_episode_budget:
         raise ValueError("proxy budget cannot exceed finalist budget")
+    if config.gate.proxy_rollout_repeats < 1:
+        raise ValueError("proxy rollout repeats must be positive")
     if (
         config.gate.semantic_min_affected_tasks < 1
         or config.gate.semantic_min_protected_tasks < 1
@@ -121,8 +129,11 @@ def load_config(path: str | Path) -> VistaConfig:
         config.gate.sequential_batch_size < 1
         or config.gate.sequential_min_episodes < 1
         or config.gate.sequential_max_abs_delta <= 0.0
+        or not math.isfinite(config.gate.shadow_min_mean_delta)
     ):
-        raise ValueError("sequential gate batch, minimum, and bound must be positive")
+        raise ValueError(
+            "sequential gate values must be positive and the shadow threshold finite"
+        )
     evolution_seeds = tuple(int(item) for item in raw["evolution_seeds"])
     if not evolution_seeds or len(set(evolution_seeds)) != len(evolution_seeds):
         raise ValueError("evolution_seeds must be non-empty and unique")

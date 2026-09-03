@@ -158,6 +158,36 @@ def test_lineage_persists_auditable_accepted_and_rejected_proposals(tmp_path) ->
     assert not snapshots[1].promoted
 
 
+def test_lineage_persists_shadow_without_marking_it_accepted(tmp_path) -> None:
+    parent, candidate, patch = _accepted_update()
+    lineage = LineageStore(tmp_path / "lineage.jsonl")
+    decision = GateDecision(
+        accepted=False,
+        reason="positive point estimate but underpowered",
+        parent_version=parent.version,
+        candidate_version=candidate.version,
+        patch_id=patch.patch_id,
+        stages=(),
+        disposition="shadow",
+    )
+
+    record = lineage.append(
+        parent=parent,
+        candidate=candidate,
+        patch=patch,
+        decision=decision,
+    )
+
+    assert not record.accepted
+    assert record.disposition == "shadow"
+    assert record.accepted_snapshot_id is None
+    assert record.proposal_snapshot_id is not None
+    assert not lineage.accepted_snapshots.load_all()[0].promoted
+    persisted = lineage.records()[0]
+    assert persisted["disposition"] == "shadow"
+    assert persisted["decision"]["disposition"] == "shadow"
+
+
 def test_rotated_audit_runs_exact_pairs_and_aggregates_task_first(tmp_path) -> None:
     manifest = _manifest()
     plan = make_rotated_audit_plan(

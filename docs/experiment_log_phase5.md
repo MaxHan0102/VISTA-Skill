@@ -640,3 +640,256 @@ After the Gate and information boundary are frozen, repeat the same core method
 on newly generated non-official EB-NAV development tasks. Official evaluation
 remains closed until code, prompts, schemas, Skill states, arms, thresholds,
 seeds, baselines, and cost accounting are frozen.
+
+## E7 — P5.6 paired-3 rollout-variance allocation diagnostic — 2026-09-03
+
+Status: variance-allocation Go for repeated rollouts; candidate-promotion
+decision remains No-Go. This diagnostic reused the selection-contaminated E6
+candidate/tasks only to decide how future Gate budget should be allocated. It
+did not access official-test data or change the frozen interface-only S0.
+
+Pre-registration and integrity:
+
+- `configs/phase5_p56_variance_audit.json` froze tasks 60--69, rollout seeds
+  0/1/2, the E6 parent/candidate digests, the composite score, and the decision
+  rule before new outcomes. Seed 0 was reused read-only from E6; seeds 1/2
+  added 40 parent/candidate rollouts.
+- Repeated-rollout allocation required both within-task paired-delta variance
+  share `>=0.20` and non-identical deltas on at least two of ten tasks.
+  pass@3 remained diagnostic-only and could not promote the candidate.
+- All 40 new JSONL artifacts contain one terminal `episode_result`; there were
+  no planner-output errors. Together with reused seed 0 the analysis contains
+  60 arm records / 30 paired coordinates. A fresh disk-only recomputation
+  matched the saved analysis exactly. The run lasted about 13 minutes 25
+  seconds.
+- Preregistration SHA is `0638956987ab17daa96ca58651fc8a742683ce07b3f21398b02dd22e6879c8d3`;
+  records SHA is `a7113f5d320c3a26f0757d4544c023714fa8b6eb65b6d7c43d3185763c60f248`;
+  analysis SHA is `42de5009d1efee45e76199d232ce0fc5cd6b1116b3b652f4447357349da440af`.
+
+Result:
+
+| Metric | Parent | Candidate |
+|---|---:|---:|
+| coordinate success (30 rollouts) | 0.8000 | 0.8333 |
+| coordinate mean progress | 0.8000 | 0.8333 |
+| coordinate mean composite | 0.78299 | 0.81935 |
+| pass@3 across ten tasks | 0.8000 | 0.9000 |
+
+- Paired/task-first mean delta was `+0.036366`. Mean within-task delta variance
+  was `0.069068`, between-task mean-delta variance was `0.062997`, and the
+  registered within-task share was therefore `0.52299`, above `0.20`.
+- Five of ten tasks changed paired delta across seeds. Parent and candidate
+  full trajectories varied on seven tasks each. Because the audit changes the
+  registered process, environment, and request seed together, it establishes
+  rollout-level variability but does not attribute that variability to only
+  one RNG source.
+- Task 66 improved by about `+1.02263` on seeds 0/1 but was unchanged and failed
+  under both arms on seed 2. Task 69 regressed by `-1.01429` on seed 0, was
+  nearly unchanged on seed 1, and tied successfully on seed 2. The mean gains
+  were `+0.68175` and `-0.33926`, respectively. Task 62 had three small but
+  distinct deltas; task 63 and 68 also varied slightly.
+
+Interpretation and adaptive continuation:
+
+- Exact reruns of seed 0 in E4/E5 were not sufficient to conclude that the
+  Gate is deterministic across registered rollout seeds. The pre-registered
+  result is `repeated_rollout_path`: future stochastic Gate screens should use
+  paired-3 rather than treating one rollout as task truth.
+- pass@3 alone gives an overly favorable summary: it raises candidate coverage
+  from 0.8 to 0.9 while hiding the seed-0 task-69 regression and seed-2 task-66
+  failure. It remains a capability-tail diagnostic, not an acceptance rule.
+- The E6 candidate has positive paired-3 mean and no observed protected-task
+  change, but large affected-task sign instability. It therefore meets the
+  pre-defined `shadow-borderline` condition for a paired-5 variance extension,
+  not for promotion. `configs/phase5_p56_variance_audit_paired5.json` freezes
+  seeds 3/4 as the only new coordinates and explicitly prohibits revising the
+  E6 Gate decision from this reused diagnostic.
+
+## E8 — P5.6 adaptive paired-5 shadow-borderline extension — 2026-09-03
+
+Status: repeated-rollout allocation confirmed; candidate-promotion decision
+remains No-Go. This adaptive extension reused the selection-contaminated E6/E7
+tasks only for variance calibration. It did not access official-test data,
+change the frozen S0, or inject the candidate into the executor.
+
+Pre-registration and integrity:
+
+- `configs/phase5_p56_variance_audit_paired5.json` was written before seeds 3/4
+  were observed. It froze the E7 shadow-borderline criterion, reused registered
+  seeds 0--2 read-only, and added exactly 40 new parent/candidate rollouts.
+- All 40 new JSONL artifacts contain one terminal `episode_result`. One task-67
+  candidate rollout emitted an empty executable plan because the executor
+  visually judged the task already complete; the evaluator recorded this as a
+  candidate failure rather than losing or repairing the observation.
+- The combined analysis contains 100 arm records / 50 paired coordinates. A
+  fresh disk-only recomputation matched `analysis.json` exactly. Runtime was
+  about 14 minutes 3 seconds; the 40 new rollouts used 144 executor calls,
+  647,067 prompt tokens, and 53,109 completion tokens (700,176 total).
+- Preregistration SHA is
+  `9bd1f9f300e5153593979b1e49e0f270cad1450d788ae5108bd782b382ef2f44`;
+  records SHA is
+  `c9ca7278bb714a2f7beda41ac5c1978b24d96cfa0ceb56df15c81a98f05ab097`;
+  analysis SHA is
+  `beced34d540e81e64d84e6a5d91a286a5b38dfbfd63de844114ffee677e1b34c`.
+
+Result:
+
+| Metric | Parent | Candidate |
+|---|---:|---:|
+| coordinate success (50 rollouts) | 0.7800 | 0.8000 |
+| coordinate mean progress | 0.7800 | 0.8050 |
+| coordinate mean composite | 0.76388 | 0.78682 |
+| pass@5 across ten tasks | 0.8000 | 0.9000 |
+
+- The task-first paired mean delta shrank from paired-3 `+0.036366` to paired-5
+  `+0.022940`. Mean within-task delta variance rose to `0.120450`, between-task
+  mean-delta variance was `0.049717`, and the registered within-task share was
+  `0.70783`. Six of ten tasks changed paired delta across seeds; parent and
+  candidate trajectories each varied on seven tasks.
+- Task 66 retained a large but unstable mean benefit (`+0.61358`): the candidate
+  succeeded on three seeds and both arms failed on two. Task 69 remained an
+  unstable regression (`-0.19026`): two large candidate regressions, one large
+  candidate recovery, and two near ties. Paired-5 also exposed a previously
+  unseen task-67 candidate failure, moving that task's mean delta to `-0.20`.
+- pass@5 stayed at 0.9 versus 0.8 even though tasks 67 and 69 contained severe
+  candidate failures. It is therefore useful as capability-tail context but is
+  empirically unsafe as a standalone promotion rule.
+
+Decision and consequence:
+
+- The paired-3 allocation result is not a small-sample artifact: the within-task
+  variance share increased from `0.523` to `0.708`. Future stochastic screens
+  should default to paired-3, with paired-5 reserved for pre-classified shadow
+  borderline candidates.
+- Repeats do not replace independent tasks. Promotion still needs task-first
+  inference over more clean affected/protected tasks because the positive mean
+  is concentrated in task 66 while harmful tails occur on tasks 67 and 69.
+- The E6 rule remains rejected for executor use. The next implementation step
+  is an explicit three-state Gate that can retain such non-promoted candidates
+  for fresh evidence accumulation without weakening the promotion threshold.
+
+## E9 — P5.6 three-state Gate and paired-3 integration verification — 2026-09-03
+
+Status: implementation verification passed; no new performance claim. This
+step made the E7/E8 allocation decision executable, added retention-only shadow
+state, and replayed one frozen E6 lineage decision. It made no model call,
+simulator call, official-test access, or historical artifact mutation.
+
+Implementation:
+
+- Phase-5 proxy selection is now 30 paired coordinates arranged as ten
+  independent tasks with three registered rollout seeds each. The paired Gate
+  continues to average within task before bootstrapping, and records
+  `independent_tasks`, repeated-task counts, maximum rollouts per task, and
+  parent/candidate pass@k. pass@k is diagnostic and is absent from every
+  promotion condition.
+- `GateDecision.disposition` is one of `rejected`, `shadow`, or `promoted`, with
+  runtime invariants enforcing that only `promoted` may set `accepted=true`.
+  Static/transition failures, incomplete rollout data, sequential early-futility
+  stops, non-positive target-stream point estimates, and observed protected or
+  subgroup violations cannot enter shadow.
+- A full-budget, positive but confidence-bound-underpowered candidate may enter
+  shadow only when observed protected and subgroup deltas remain within the
+  frozen margins. It returns a materialized candidate for proposal-snapshot
+  persistence, but both the VISTA coordinator and Common Gate adapter retain
+  the parent as active because `accepted=false`. Lineage and run manifests now
+  expose disposition explicitly.
+
+Frozen replay:
+
+- `scripts/phase5_shadow_replay.py` replayed the unmodified E6 lineage using the
+  new Phase-5 retention predicate. The one E6 candidate changed from binary
+  `rejected` to `shadow`; `promotion_change_count` was exactly zero. Its proxy
+  affected mean was `+0.003666`, protected mean `0.0`, worst subgroup delta
+  `-0.002381`, and affected LCB `-0.290476`, matching “positive but
+  underpowered” rather than executor-safe promotion.
+- This replay result is consistent with, but does not reuse as Gate evidence,
+  the later paired-5 diagnostic: the candidate's overall mean stayed positive
+  while severe failures appeared on tasks 67 and 69. Retention for clean
+  evidence accumulation is therefore justified; promotion is not.
+- Replay artifact SHA is
+  `6d85ddb8c9dd0de1d7cb256c7b82480a473c70d0f7aaf6cb035fc1dbc3bfeedc`;
+  its source E6 lineage SHA is
+  `f7f374538ac00bac105bc9980c640f4418d538c9c52e8f7fb7b12963a1f8bed2`.
+
+Verification:
+
+- The complete repository suite passed: 283 tests, including new checks for
+  paired-3 coordinate balance, task-first/pass@k reporting, beneficial
+  underpowered shadow retention, harmful-candidate rejection, shadow snapshot
+  persistence, Common Gate non-activation, and deterministic lineage replay.
+- `git diff --check` passed. The next outcome-bearing step must use new clean
+  development tasks to measure shadow-candidate recall and harmful-promotion
+  rate; the contaminated E6/E7/E8 tasks cannot support that paper claim.
+
+## E10 — P5.6 untouched-finalist shadow confirmation — 2026-09-03
+
+Status: candidate contradiction confirmed; shadow-to-rejected No-Go. The E6
+temporal candidate was evaluated on selection tasks 70--79, which were reserved
+as the disjoint finalist pool and had no prior Phase-5 rollout artifacts because
+all earlier candidates stopped at proxy. This is clean evidence for this
+candidate, but remains a diagnostic rather than a paper-level multi-candidate
+recall estimate. No official-test task was accessed and the candidate was never
+promoted.
+
+Pre-registration and integrity:
+
+- `configs/phase5_p56_shadow_confirmation.json` froze the ten tasks, seeds
+  0/1/2, candidate/parent artifacts, score, semantic scope `action:pick`, and
+  three outcomes before any new rollout: `supportive` only if the unchanged
+  semantic finalist Gate passed; `contradictory` if affected mean was
+  non-positive or a protected/subgroup margin was violated; otherwise
+  `inconclusive`. Every outcome explicitly left promotion false.
+- The run produced all 60 parent/candidate terminal records. One task-72
+  candidate rollout emitted an empty plan after visually judging that the ball
+  was already on the target table; it was retained as a candidate failure, not
+  discarded. No artifact was missing. Both the variance analysis and semantic
+  confirmation reproduced exactly from disk.
+- Runtime was about 21 minutes 40 seconds. The run used 222 executor calls,
+  1,005,245 prompt tokens, and 82,924 completion tokens (1,088,169 total).
+- Preregistration SHA is
+  `10dcb78194426decf1589413e2faf51dfdf1038c6f52585f1e1fe3536cd36722`;
+  records SHA is
+  `a083fadec6c7f87aa1ab73916143bfdafa4c18fdfb836130249f591a12690a63`;
+  variance-analysis SHA is
+  `b431728391bf710058a13ed40365ad3954f836a8cf6e642a82529d631e45aac4`;
+  semantic-confirmation SHA is
+  `e617156cd13b0d1e78a149f4d66e4ae1d37e41cc9d80013d43e831446a72d8b7`.
+
+Result:
+
+| Metric | Parent | Candidate |
+|---|---:|---:|
+| coordinate success (30 rollouts) | 0.8333 | 0.7000 |
+| coordinate mean progress | 0.8500 | 0.7042 |
+| coordinate mean composite | 0.82390 | 0.68513 |
+| pass@3 across ten tasks | 0.9000 | 0.8000 |
+
+- The paired/task-first mean delta was `-0.138766`. On the seven pre-declared
+  affected tasks it was `-0.198237` with bootstrap LCB `-0.354947`; the three
+  protected tasks were unchanged. Worst scene-subgroup delta was `-0.331199`.
+  The registered verdict is therefore `contradictory`, not merely
+  underpowered.
+- The main regressions were task 70 (`-0.39946`, candidate pass@3 0 versus
+  parent 1), task 72 (`-0.33333`), and task 76 (`-0.67619`). Small positive
+  score deltas on tasks 73 and 77 did not produce a success advantage; both
+  arms failed all task-77 seeds.
+- Within-task variance share remained material at `0.61783`, with seven tasks
+  showing seed-dependent deltas. This independently supports paired repeats,
+  but here the negative affected mean and subgroup violation are already
+  sufficient for rejection.
+
+Conclusion and implementation consequence:
+
+- The old binary Gate did not false-reject this particular rule: fresh evidence
+  shows that the stronger temporal constraint is harmful on the untouched
+  pool. E7's positive proxy mean was driven by unstable task-specific effects.
+- pass@k does not rescue the candidate; it also declines on fresh tasks. More
+  generally, E8 already showed why pass@k cannot certify safety even when it
+  looks favorable.
+- The three-state policy remains useful as an evidence-allocation mechanism,
+  not as a permissive acceptance rule. The runtime Gate now sends a
+  proxy-shadow candidate through the disjoint finalist pool; contradictory
+  evidence yields final `rejected`, while only supportive or still-consistent
+  evidence may remain `shadow`. A failed proxy can never be promoted through
+  this path.

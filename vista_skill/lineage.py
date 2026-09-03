@@ -16,6 +16,7 @@ from vista_skill.skills import skill_digest
 class LineageRecord:
     timestamp: str
     accepted: bool
+    disposition: str
     parent_version: int
     candidate_version: int | None
     parent_hash: str
@@ -55,6 +56,8 @@ class LineageStore:
     ) -> LineageRecord:
         if decision.accepted and candidate is None:
             raise ValueError("accepted lineage decisions require a candidate snapshot")
+        if decision.disposition == "shadow" and candidate is None:
+            raise ValueError("shadow lineage decisions require a candidate snapshot")
         snapshot_id = None
         if candidate is not None:
             snapshot = self.accepted_snapshots.save(
@@ -68,6 +71,7 @@ class LineageStore:
         record = LineageRecord(
             timestamp=datetime.now(timezone.utc).isoformat(),
             accepted=decision.accepted,
+            disposition=str(decision.disposition),
             parent_version=parent.version,
             candidate_version=None if candidate is None else candidate.version,
             parent_hash=skill_digest(parent),

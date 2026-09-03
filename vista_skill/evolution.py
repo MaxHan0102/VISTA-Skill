@@ -380,6 +380,7 @@ class GateConfig:
     alpha: float = 0.05
     proxy_episode_budget: int = 10
     finalist_episode_budget: int = 30
+    proxy_rollout_repeats: int = 1
     proxy_lcb_threshold: float = 0.0
     finalist_lcb_threshold: float = 0.0
     subgroup_regression_tolerance: float = 0.05
@@ -392,6 +393,8 @@ class GateConfig:
     sequential_batch_size: int = 2
     sequential_min_episodes: int = 4
     sequential_max_abs_delta: float = 1.1
+    shadow_candidates_enabled: bool = False
+    shadow_min_mean_delta: float = 0.0
     random_seed: int = 0
 
 
@@ -411,6 +414,55 @@ class GateDecision:
     candidate_version: int | None
     patch_id: str
     stages: tuple[GateStageResult, ...]
+    disposition: str | None = None
+
+    def __post_init__(self) -> None:
+        disposition = self.disposition or (
+            "promoted" if self.accepted else "rejected"
+        )
+        if disposition not in {"rejected", "shadow", "promoted"}:
+            raise ValueError(f"unsupported gate disposition: {disposition}")
+        if self.accepted != (disposition == "promoted"):
+            raise ValueError("only promoted Gate decisions may be accepted")
+        if disposition in {"shadow", "promoted"} and self.candidate_version is None:
+            raise ValueError(
+                "shadow and promoted Gate decisions require a candidate version"
+            )
+        object.__setattr__(self, "disposition", disposition)
+
+
+def shadow_candidate_eligible(
+    failed: GateStageResult,
+    config: GateConfig,
+) -> bool:
+    """Return whether a non-promoted result is safe to retain for more evidence.
+
+    The predicate changes retention only. It never changes the full promotion
+    checks in :class:`CandidateGate`.
+    """
+
+    if failed.stage not in {"paired_proxy", "paired_finalist"}:
+        return False
+    metrics = failed.metrics
+    if float(metrics.get("sequential_early_stop", 0.0)) != 0.0:
+        return False
+    if float(metrics.get("episodes", 0.0)) <= 0.0:
+        return False
+    if config.semantic_affected_enabled and "affected_mean_delta" in metrics:
+        if "protected_mean_delta" not in metrics:
+            return False
+        return bool(
+            float(metrics["affected_mean_delta"]) > config.shadow_min_mean_delta
+            and float(metrics["protected_mean_delta"])
+            >= -config.semantic_protected_regression_tolerance
+            and float(metrics.get("worst_subgroup_delta", -math.inf))
+            >= -config.subgroup_regression_tolerance
+        )
+    return bool(
+        float(metrics.get("mean_delta", -math.inf)) > config.shadow_min_mean_delta
+        and float(metrics.get("worst_subgroup_delta", -math.inf))
+        >= -config.subgroup_regression_tolerance
+    )
 
 
 class CandidateGate:
@@ -474,6 +526,23 @@ class CandidateGate:
         )
         stages.append(proxy_stage)
         if not proxy_stage.passed:
+            decision = self._nonpromoted(parent, candidate, patch, stages)
+            if decision.disposition != "shadow":
+                return decision, None
+            shadow_finalist = self._evaluate_paired_stage(
+                parent,
+                candidate,
+                "paired_finalist",
+                "finalist",
+                self.config.finalist_lcb_threshold,
+                self.config.finalist_episode_budget,
+                semantic_scope,
+            )
+            stages.append(shadow_finalist)
+            if shadow_finalist.passed or shadow_candidate_eligible(
+                shadow_finalist, self.config
+            ):
+                return self._shadow(parent, candidate, patch, stages), candidate
             return self._reject(parent, patch, stages), None
 
         finalist_stage = self._evaluate_paired_stage(
@@ -487,7 +556,8 @@ class CandidateGate:
         )
         stages.append(finalist_stage)
         if not finalist_stage.passed:
-            return self._reject(parent, patch, stages), None
+            decision = self._nonpromoted(parent, candidate, patch, stages)
+            return decision, candidate if decision.disposition == "shadow" else None
         return (
             GateDecision(
                 accepted=True,
@@ -715,14 +785,50 @@ class CandidateGate:
         )
         subgroup_deltas = _subgroup_deltas(scores)
         worst_group = min(subgroup_deltas.values())
+        task_rollout_counts: dict[str, int] = {}
+        for item in scores:
+            task_rollout_counts[item.episode_id] = (
+                task_rollout_counts.get(item.episode_id, 0) + 1
+            )
         metrics = {
             "mean_delta": sum(differences) / len(differences),
             "lcb": lcb,
             "worst_subgroup_delta": worst_group,
             "episodes": float(len(scores)),
             "independent_tasks": float(len(task_differences)),
+            "repeated_tasks": float(
+                sum(count > 1 for count in task_rollout_counts.values())
+            ),
+            "max_rollouts_per_task": float(max(task_rollout_counts.values())),
             "semantic_scope_tag_count": float(len(semantic_scope)),
         }
+        if all(
+            item.parent_success is not None and item.candidate_success is not None
+            for item in scores
+        ):
+            task_ids = tuple(task_rollout_counts)
+            metrics.update(
+                {
+                    "parent_pass_at_k": sum(
+                        any(
+                            bool(item.parent_success)
+                            for item in scores
+                            if item.episode_id == task_id
+                        )
+                        for task_id in task_ids
+                    )
+                    / len(task_ids),
+                    "candidate_pass_at_k": sum(
+                        any(
+                            bool(item.candidate_success)
+                            for item in scores
+                            if item.episode_id == task_id
+                        )
+                        for task_id in task_ids
+                    )
+                    / len(task_ids),
+                }
+            )
         semantic_available = bool(
             self.config.semantic_affected_enabled and semantic_scope
         )
@@ -815,6 +921,38 @@ class CandidateGate:
             candidate_version=None,
             patch_id=patch.patch_id,
             stages=tuple(stages),
+        )
+
+    def _nonpromoted(
+        self,
+        parent: SkillSpec,
+        candidate: SkillSpec,
+        patch: SkillPatch,
+        stages: list[GateStageResult],
+    ) -> GateDecision:
+        failed = stages[-1]
+        if self.config.shadow_candidates_enabled and shadow_candidate_eligible(
+            failed, self.config
+        ):
+            return self._shadow(parent, candidate, patch, stages)
+        return self._reject(parent, patch, stages)
+
+    @staticmethod
+    def _shadow(
+        parent: SkillSpec,
+        candidate: SkillSpec,
+        patch: SkillPatch,
+        stages: list[GateStageResult],
+    ) -> GateDecision:
+        latest = stages[-1]
+        return GateDecision(
+            accepted=False,
+            reason=f"candidate retained in shadow: {latest.reason}",
+            parent_version=parent.version,
+            candidate_version=candidate.version,
+            patch_id=patch.patch_id,
+            stages=tuple(stages),
+            disposition="shadow",
         )
 
 

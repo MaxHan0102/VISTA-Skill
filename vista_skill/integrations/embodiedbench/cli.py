@@ -533,6 +533,9 @@ def _run_experiment(args: argparse.Namespace) -> None:
             "evolution_decisions": [
                 item.decision.accepted for item in evolution_results
             ],
+            "evolution_dispositions": [
+                item.decision.disposition for item in evolution_results
+            ],
             "frozen_skill_sha256": skill_digest(engine.skill),
             "method_usage": _usage_payload(method_model),
             "executor_usage": executor_usage.payload(),
@@ -1100,6 +1103,7 @@ def _make_paired_evaluator(
         seeds,
         proxy_budget=proxy_budget,
         finalist_budget=finalist_budget,
+        proxy_rollout_repeats=config.gate.proxy_rollout_repeats,
         semantic_tags=semantic_tags,
     )
     cache: dict[tuple[str, str, int, str], RolloutScore] = {}
@@ -1314,24 +1318,33 @@ def _paired_selection_coordinates(
     *,
     proxy_budget: int,
     finalist_budget: int,
+    proxy_rollout_repeats: int = 1,
     semantic_tags: Mapping[str, tuple[str, ...]] | None = None,
 ) -> dict[str, tuple[EpisodeCoordinate, ...]]:
     if not seeds:
         raise ValueError("paired selection requires at least one seed")
     if len(selection) < 2:
         raise ValueError("paired selection requires disjoint proxy/finalist task pools")
-    proxy_task_count = min(proxy_budget, len(selection) // 2)
+    if proxy_rollout_repeats < 1 or proxy_rollout_repeats > len(seeds):
+        raise ValueError("proxy rollout repeats must be covered by registered seeds")
+    if proxy_budget % proxy_rollout_repeats:
+        raise ValueError("proxy budget must contain complete repeated-task blocks")
+    proxy_task_count = min(
+        proxy_budget // proxy_rollout_repeats,
+        len(selection) // 2,
+    )
     proxy_tasks = selection[:proxy_task_count]
     finalist_tasks = selection[proxy_task_count:]
     semantic_tags = semantic_tags or {}
     proxy = tuple(
         EpisodeCoordinate(
             item.episode_id,
-            seeds[0],
+            seed,
             item.subgroup,
             semantic_tags.get(item.episode_id, ()),
         )
         for item in proxy_tasks
+        for seed in seeds[:proxy_rollout_repeats]
     )[:proxy_budget]
     finalist = tuple(
         EpisodeCoordinate(

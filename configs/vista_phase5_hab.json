@@ -46,7 +46,7 @@
     "history_actions": 12,
     "patch_operations_per_round": 1,
     "candidate_proposals_per_round": 1,
-    "proxy_episodes": 10,
+    "proxy_episodes": 30,
     "finalist_episodes": 30
   },
   "credit": {
@@ -64,6 +64,7 @@
     "proxy_lcb_threshold": 0.0,
     "finalist_lcb_threshold": 0.0,
     "subgroup_regression_tolerance": 0.05,
+    "proxy_rollout_repeats": 3,
     "semantic_affected_enabled": true,
     "semantic_affected_lcb_threshold": 0.0,
     "semantic_protected_regression_tolerance": 0.05,
@@ -73,6 +74,8 @@
     "sequential_batch_size": 2,
     "sequential_min_episodes": 4,
     "sequential_max_abs_delta": 1.1,
+    "shadow_candidates_enabled": true,
+    "shadow_min_mean_delta": 0.0,
     "random_seed": 0
   },
   "final_test": {

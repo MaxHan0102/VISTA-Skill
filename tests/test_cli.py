@@ -93,6 +93,29 @@ def test_proxy_and_finalist_use_disjoint_task_pools() -> None:
     assert {item.seed for item in stages["finalist"]} == {0, 1, 2}
 
 
+def test_proxy_can_use_complete_paired_three_task_blocks() -> None:
+    tasks = tuple(
+        TaskCoordinate(str(index), str(index), "all", index)
+        for index in range(20)
+    )
+
+    stages = _paired_selection_coordinates(
+        tasks,
+        (0, 1, 2),
+        proxy_budget=30,
+        finalist_budget=30,
+        proxy_rollout_repeats=3,
+    )
+
+    assert len(stages["proxy"]) == 30
+    assert len({item.episode_id for item in stages["proxy"]}) == 10
+    assert all(
+        {item.seed for item in stages["proxy"] if item.episode_id == episode_id}
+        == {0, 1, 2}
+        for episode_id in {item.episode_id for item in stages["proxy"]}
+    )
+
+
 def test_experiment_wiring_reaches_environment_without_evaluate_only_args(
     monkeypatch,
 ) -> None:

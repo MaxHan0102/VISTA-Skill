@@ -117,6 +117,23 @@ natural-language Skill more formal.
   non-inferiority margin. Global activation/termination patches retain the
   conservative global-LCB and subgroup check. Repeated rollout seeds are
   averaged within task before bootstrap resampling.
+- The Phase-5 proxy screen now allocates three registered rollout seeds to each
+  of ten independent tasks (30 paired coordinates total), following the E7/E8
+  variance audit. The Gate reports parent/candidate pass@k as a capability-tail
+  diagnostic, but pass@k is not referenced by the promotion predicate. Both
+  proxy and finalist uncertainty remain task-first, so repeats do not inflate
+  the number of independent statistical units.
+- Gate decisions have three explicit dispositions. `rejected` covers invalid,
+  incomplete, sequentially futile, or observably harmful candidates;
+  `shadow` retains a full-budget candidate with a positive target-stream point
+  estimate and no observed protected/subgroup violation; `promoted` alone may
+  become active. A proxy-shadow candidate is evaluated on the disjoint
+  finalist pool before it is persisted: contradictory fresh evidence converts
+  it to `rejected`, while supportive or still-underpowered evidence leaves it
+  in `shadow`. A surviving shadow candidate and its proposal snapshot are
+  written to lineage, but `accepted` remains false and workflow promotion still
+  checks that boolean. This changes retention and evidence allocation, not the
+  frozen promotion threshold.
 - Phase-5 configs enable a futility-only sequential safe gate. At registered
   prefix looks it uses task-level differences bounded in `[-B, B]` and a
   Hoeffding interval with `alpha/(looks * decision_streams)`. It may reject only

@@ -274,6 +274,112 @@ def test_gate_rejects_protected_subgroup_regression() -> None:
     assert decision.stages[-1].metrics["worst_subgroup_delta"] == pytest.approx(-0.2)
 
 
+def test_gate_retains_positive_underpowered_candidate_in_shadow() -> None:
+    skill = initialize_shared_skill()
+    uncertain = [
+        (0.2, "base"),
+        (0.2, "long"),
+        (-0.1, "base"),
+        (-0.1, "long"),
+    ]
+    gate = CandidateGate(
+        BoundedPatchApplier(),
+        PassingTransitionChecker(),
+        ScoreEvaluator(uncertain, uncertain),
+        GateConfig(
+            bootstrap_samples=500,
+            proxy_episode_budget=4,
+            finalist_episode_budget=4,
+            subgroup_regression_tolerance=0.05,
+            shadow_candidates_enabled=True,
+        ),
+    )
+
+    decision, candidate = gate.evaluate(
+        skill,
+        patch_for(
+            skill,
+            old=skill.termination[0],
+            new="Stop only after all targets are verified.",
+        ),
+        empty_cluster(skill),
+    )
+
+    assert not decision.accepted
+    assert decision.disposition == "shadow"
+    assert decision.candidate_version == skill.version + 1
+    assert candidate is not None
+    assert decision.stages[-1].metrics["mean_delta"] > 0.0
+    assert decision.stages[-1].metrics["lcb"] <= 0.0
+
+
+def test_shadow_gate_still_rejects_observed_harm() -> None:
+    skill = initialize_shared_skill()
+    harmful = [(0.2, "base"), (-0.2, "long")] * 2
+    gate = CandidateGate(
+        BoundedPatchApplier(),
+        PassingTransitionChecker(),
+        ScoreEvaluator(harmful, harmful),
+        GateConfig(
+            bootstrap_samples=200,
+            proxy_episode_budget=4,
+            finalist_episode_budget=4,
+            shadow_candidates_enabled=True,
+        ),
+    )
+
+    decision, candidate = gate.evaluate(
+        skill,
+        patch_for(
+            skill,
+            old=skill.termination[0],
+            new="Stop only after all targets are verified.",
+        ),
+        empty_cluster(skill),
+    )
+
+    assert not decision.accepted
+    assert decision.disposition == "rejected"
+    assert candidate is None
+
+
+def test_shadow_proxy_is_rejected_by_contradictory_fresh_finalist() -> None:
+    skill = initialize_shared_skill()
+    uncertain = [(0.2, "base"), (0.2, "long"), (-0.1, "base"), (-0.1, "long")]
+    harmful = [(-0.2, "base"), (-0.2, "long")] * 2
+    evaluator = ScoreEvaluator(uncertain, harmful)
+    gate = CandidateGate(
+        BoundedPatchApplier(),
+        PassingTransitionChecker(),
+        evaluator,
+        GateConfig(
+            bootstrap_samples=500,
+            proxy_episode_budget=4,
+            finalist_episode_budget=4,
+            shadow_candidates_enabled=True,
+        ),
+    )
+
+    decision, candidate = gate.evaluate(
+        skill,
+        patch_for(
+            skill,
+            old=skill.termination[0],
+            new="Stop only after all targets are verified.",
+        ),
+        empty_cluster(skill),
+    )
+
+    assert not decision.accepted
+    assert decision.disposition == "rejected"
+    assert candidate is None
+    assert [stage.stage for stage in decision.stages[-2:]] == [
+        "paired_proxy",
+        "paired_finalist",
+    ]
+    assert decision.stages[-1].metrics["mean_delta"] < 0.0
+
+
 class SemanticScoreEvaluator:
     def __init__(self, values):
         self.values = values
@@ -378,6 +484,49 @@ def test_gate_fails_closed_when_paired_budget_is_incomplete() -> None:
     assert "required episodes" in decision.reason
 
 
+def test_paired_stage_reports_pass_at_k_without_using_it_for_promotion() -> None:
+    skill = initialize_shared_skill()
+
+    class RepeatedSuccessEvaluator:
+        def evaluate(self, parent, candidate, *, stage, episode_budget):
+            return (
+                PairedEpisodeScore("ep0", 0, 0.0, 0.0, "all", False, True),
+                PairedEpisodeScore("ep0", 1, 0.0, 0.0, "all", False, False),
+                PairedEpisodeScore("ep1", 0, 0.0, 0.0, "all", True, True),
+                PairedEpisodeScore("ep1", 1, 0.0, 0.0, "all", False, False),
+            )
+
+    gate = CandidateGate(
+        BoundedPatchApplier(),
+        PassingTransitionChecker(),
+        RepeatedSuccessEvaluator(),
+        GateConfig(
+            bootstrap_samples=20,
+            proxy_episode_budget=4,
+            finalist_episode_budget=4,
+        ),
+    )
+
+    decision, candidate = gate.evaluate(
+        skill,
+        patch_for(
+            skill,
+            old=skill.termination[0],
+            new="Stop only after all targets are verified.",
+        ),
+        empty_cluster(skill),
+    )
+
+    assert not decision.accepted
+    assert candidate is None
+    metrics = decision.stages[-1].metrics
+    assert metrics["independent_tasks"] == 2.0
+    assert metrics["repeated_tasks"] == 2.0
+    assert metrics["max_rollouts_per_task"] == 2.0
+    assert metrics["parent_pass_at_k"] == 0.5
+    assert metrics["candidate_pass_at_k"] == 1.0
+
+
 class PrefixScoreEvaluator:
     def __init__(self, values):
         self.values = tuple(values)
@@ -479,12 +628,15 @@ def test_split_integrity_rejects_leakage() -> None:
 def test_protocol_config_drives_runtime_thresholds() -> None:
     config = load_config("configs/vista_phase5_hab.json")
     assert config.recurrence.min_independent_episodes == 2
-    assert config.gate.proxy_episode_budget == 10
+    assert config.gate.proxy_episode_budget == 30
     assert config.gate.finalist_episode_budget == 30
+    assert config.gate.proxy_rollout_repeats == 3
     assert config.gate.semantic_affected_enabled
     assert config.attribution.identifiability_required
     assert config.gate.sequential_enabled
     assert config.gate.sequential_batch_size == 2
+    assert config.gate.shadow_candidates_enabled
+    assert config.gate.shadow_min_mean_delta == 0.0
     assert config.raw["evolution_seeds"] == [0, 1, 2]
     assert len(config.digest) == 64
 
