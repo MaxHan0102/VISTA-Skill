@@ -421,3 +421,104 @@ Next: mine the repeated not-near failure trajectories for a bounded executable
 procedure/optimization candidate, test executor adoption cheaply before paired
 rollouts, and only launch another proxy if the new candidate changes the
 targeted behavior in cached or minimal live checks.
+
+## E6 — identifiable temporal rule and sequential safe-gate diagnostic — 2026-09-03
+
+Status: implementation/mechanism pass, task-utility No-Go. The stronger
+candidate was rejected and the frozen Skill remained interface-only S0. This
+run reused the E4/E5 selection tasks 60--69 intentionally as a direct mechanism
+comparison, so it is selection-contaminated and is not a new unbiased paper
+result. No official-test data was accessed.
+
+Implementation and validation:
+
+- Commit `d138bef` implements the requested changes as runtime mechanisms, not
+  only paper terminology. Every CreditAssigner `skill_update` now requires and
+  persists a seven-condition `IdentifiabilityAudit`; failure of evidence,
+  provenance, compliance, stochasticity, identity, unique-field, or action
+  binding routes to abstention.
+- Natural `pick | near({arg0})=false` Discovery now writes both a compiled
+  precondition and a compiled temporal rule. Its episode-local monitor enforces
+  `failed pick -> no same-target pick until successful navigation/evidence
+  change`, injects active obligations into the prompt, checks admission before
+  `env.step`, and logs guard blocks separately from environment invalid actions.
+- The paired gate now evaluates registered prefixes and allocates alpha across
+  finite Hoeffding-bound looks. Interim checks can only reject for futility or
+  protected regression; they cannot promote early. A survivor still requires
+  the unchanged full-budget task-first bootstrap gate. Repeated-seed finalist
+  pools remain fixed-budget because incomplete task blocks are not independent.
+- The complete unit suite passed 273/273, including temporal state-machine,
+  runner admission, sequential stopping/full-budget fallback, artifact
+  round-trip, and legacy v2 artifact compatibility tests. The renamed historical
+  plan is now `docs/research_plan_phase4.md`.
+
+Run and integrity:
+
+- Successful run:
+  `running/phase5_temporal_sequential_paired_e6_20260903_rerun1` with one
+  evolution seed, five acquisition episodes, one constraint candidate, ten
+  paired proxy tasks, and diagnostic audit omission. Config hash is
+  `a5c39710014bc34e5694d34b9f1ba56c22e82444e8d256a33906992167ec8d94`.
+- Two launch-only failures preceded it. The first lacked a method-client API-key
+  placeholder and stopped before creating the simulator/output directory. The
+  second proved EGL/RTX-4090 initialization but lacked the stock executor's
+  `OPENAI_API_KEY`; it stopped before any task or model request and left no
+  artifact. `rerun1` set both placeholders and exited normally. Neither launch
+  is counted as an experiment attempt.
+- Acquisition completed 5/5 episodes (4 successes), 38 primitive transitions,
+  and the same generalized candidate from two independent episodes. It produced
+  20 `skill_update` events (17 effect, three constraint); all 20 include a
+  passing identifiability conjunction and complete provenance.
+- All 20 proxy JSONL files contain a complete episode result. Both content-
+  addressed parent/candidate artifacts and the rejected frozen envelope pass
+  digest loading. The candidate (`4e90990d...`) contains one temporal rule; the
+  final frozen S0 contains none because promotion was rejected.
+
+Paired result:
+
+| Task | Parent -> candidate outcome | Composite delta | Temporal observation |
+|---|---|---:|---|
+| 62 | success 11/4 -> success 6/1 steps/invalid | +0.01970 | no block needed |
+| 63 | failure 21/10 -> failure 20/10 | -0.00238 | no block |
+| 66 | failure 19/10 -> success 10/3 | +1.02263 | one repeated pick blocked; recovery succeeded |
+| 69 | success 12/4 -> failure 21/10 | -1.01429 | no block: every failed pick followed a successful but unhelpful navigation |
+
+The other six tasks were unchanged. Parent/candidate composite means were
+`0.78301` and `0.78557`, for only `+0.002566`. The affected-task mean was
+`+0.003666`, affected bootstrap LCB `-0.290476`, global LCB `-0.203095`,
+protected mean/LCB zero, and worst subgroup delta `-0.002381`. The gate therefore
+rejected at proxy. Compared with E5, the stronger executable form reduced mean
+delta (`+0.008384 -> +0.002566`) and made the affected LCB more negative
+(`-0.269728 -> -0.290476`); it did not repair the task-69 regression.
+
+Sequential/cost result:
+
+- The sequential gate performed four registered looks at 4/6/8/10 tasks. No
+  confidence upper bound established early futility, so all ten pairs ran and
+  `sequential_early_stop=0`. This validates the fail-closed fallback but provides
+  no sequential rollout saving on this borderline candidate.
+- Executor acquisition used 16 calls and 77,547 tokens; proxy used 71 calls and
+  344,501 tokens; total executor use was 87 calls / 422,048 tokens. The method
+  used five goal-grounding calls / 9,876 tokens and no visual-evidence or patch
+  calls. End-to-end use was 92 calls / 431,924 tokens. This is 18,323 tokens
+  below E5, but because both runs executed all 20 proxy rollouts, the reduction
+  comes from changed trajectory/request lengths and cannot be attributed to
+  sequential stopping. Proxy validation still consumed 81.6% of executor
+  tokens.
+
+Interpretation:
+
+- The theoretical additions are now operational and auditable. VTCA
+  identifiability is present on every live update, and the temporal monitor can
+  alter a real trajectory (task 66) rather than merely decorate prose.
+- They did not improve the registered performance/reliability conclusion. The
+  task-66 gain is almost cancelled by task-69 harm, uncertainty remains large,
+  and reliable promotion correctly stays at zero. This directly confirms that
+  these tools improve rigor and can improve selected failure modes, but do not
+  by themselves guarantee higher benchmark performance.
+- The temporal fragment is too weak for task 69: “perform any successful nav”
+  releases the obligation even if the new view does not increase evidence for
+  the target. The next candidate should require observation-grounded search
+  progress (new target evidence or a changed candidate location), not another
+  generic retry prohibition. That rule must be acquired/evaluated on a fresh
+  development rotation before any further paper-level utility claim.

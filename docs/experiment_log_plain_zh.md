@@ -183,6 +183,14 @@ Skill growth 收缩为更诚实的 **reliable Skill repair**。
 - 已修复成本日志只统计 acquisition、遗漏 gate/audit 的问题。首个完整成本诊断记录 executor 91 次
   调用、440,371 tokens，其中 paired proxy 占约 82%；另有 5 次 goal grounding、9,876 method tokens。
   每个 episode 的 usage 都写入 JSONL，求和与 manifest 完全一致。旧 E4/v2 的成本字段不能用于比较。
+- E6 把 VTCA 可识别性、时序恢复规则和 sequential safe gate 真正接入执行。5 个 acquisition episode
+  中 20/20 个 Skill update 都带通过的可识别性审计；时序 monitor 在 task 66 拦截一次原地重复 pick，
+  之后轨迹恢复并成功；候选整体将该任务从失败变成功，但不能把收益单独归因于这一次拦截。task 69
+  的每次失败之间已有一次“成功但无用”的导航，所以规则没有触发拦截，候选仍从成功退化为失败。
+  10-task 均值增益仅 `+0.00257`，affected LCB 为 `-0.29048`，
+  因此继续被拒绝。
+- Sequential gate 按 4/6/8/10 task 查看，但这个正负收益近乎抵消的候选没有达到安全提前停止条件，
+  仍完成全部 20 个 rollout。它验证了“不能确定就回退到原完整 gate”，本轮没有产生 sequential 节省。
 
 ## 截至目前，哪些 idea 真正 Work
 
@@ -195,6 +203,7 @@ Skill growth 收缩为更诚实的 **reliable Skill repair**。
 7. Append-only lineage、digest、固定 split/seed、冻结评测和中断恢复等实验基础设施。
 8. Interface-only S0 的自然 effect/constraint Discovery，以及零 patch-teacher 的确定性候选生成。
 9. Event-triggered evidence 在 feedback 完整的 EB-HAB 上显著降低方法 token，不移除跨环境视觉 fallback。
+10. 可审计的 VTCA 可识别性条件，以及能在真实轨迹中拦截动作的 episode-local 时序规则状态机。
 
 ## 哪些 idea 当前不 Work
 
@@ -205,6 +214,7 @@ Skill growth 收缩为更诚实的 **reliable Skill repair**。
 5. 当前 Candidate Gate 稳定接受并积累真正有益的自然发现或修复。
 6. 三条通用文字 Meta-Skill 提高 8B 的 Skill 演化性能。
 7. 已证明 VISTA-Skill 提升 EB-HAB/EB-NAV 最终性能——目前不能这样声称。
+8. 仅要求失败后“做任意一次成功导航”就能消除错误重试；task 69 证明还必须约束导航带来新的目标证据。
 
 ## 当前最准确的项目结论
 
@@ -216,8 +226,8 @@ Skill growth 收缩为更诚实的 **reliable Skill repair**。
 
 因此现在不应继续堆新的 Guard 或通用 prompt。下一步应回到原始 VISTA-Skill 主线，重点解决：
 
-1. 重复真实 constraint paired pilot，检查单次 parent/candidate 差异的符号是否稳定；
-2. 从自然失败中发现更直接影响执行的 procedure/optimization，而不只总结 primitive effect；
+1. 在新的 development rotation 上发现“导航必须增加目标证据”的 observation-grounded search/procedure 规则；
+2. 从自然失败中发现更直接影响执行的 procedure/optimization，而不只总结 primitive effect 或禁止原地重试；
 3. 用多 evolution seed 证明至少一个候选能够被在线接受，并在独立 audit 和 frozen evaluation 中保持
    收益；
 4. 闭环成立后扩展完整 EB-HAB 主实验，再推进 EB-NAV 与更大模型的受控比较。
