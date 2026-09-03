@@ -522,3 +522,121 @@ Interpretation:
   progress (new target evidence or a changed candidate location), not another
   generic retry prohibition. That rule must be acquired/evaluated on a fresh
   development rotation before any further paper-level utility claim.
+
+## Follow-up plan — statistical power, compositional Gate, and dual-feedback validation — 2026-09-03
+
+Status: planning record only. No implementation, configuration change, model
+call, simulator episode, or official-test access was performed for this entry.
+All thresholds, information arms, task pools, and stopping rules below must be
+pre-registered before outcome-bearing runs.
+
+### Motivation and correction
+
+- The current proxy stage evaluates ten distinct tasks at only the first
+  registered executor seed; the 30-coordinate finalist repeats later tasks
+  across registered seeds. With `temperature=0`, exact-seeded E4/E5 repeats
+  produced identical gate trajectories, so blindly repeating the same
+  task/seed as pass@3 or pass@5 may add no information. E6 also showed that the
+  dominant uncertainty can be between tasks: task 66 improved by `+1.02263`
+  while task 69 regressed by `-1.01429`.
+- The public EmbodiSkill v2 paper and inspected source do not define pass@3 or
+  pass@5 as an update gate. Paper `K=1` is the maximum reflections per
+  trajectory, and source `successful_topk` is the number of successful
+  trajectories retrieved. Repeated paired evaluation is therefore retained as
+  a VISTA-Skill design proposal rather than attributed to the published method.
+- Phase3B already supports a dual-feedback investigation. Three-frame
+  no-feedback execution recovered mean progress from C1 `0.5913` to C2
+  `0.6347`, nearly matching one-frame feedback C0 `0.6389`, but failed the
+  repetition screen (`0.0495 > 0.03587`). More importantly, strict temporal
+  no-feedback evidence had predicate F1 `0.0966` and coverage `0.0544`, versus
+  feedback-conditioned E0 at `0.7061` and `0.7711`. Temporal RGB can help
+  episode control before it is reliable enough to authorize persistent Skill
+  writes.
+
+### P5.6 — variance-aware and three-state candidate Gate
+
+1. First estimate a paired variance decomposition
+   `delta(task, seed) = global effect + task effect + rollout effect` on clean
+   development tasks under the exact evaluation setting. Same-task repeats
+   must use distinct registered rollout seeds/processes and be checked for
+   duplicate trajectories.
+2. If within-task rollout variance is material, use paired `k=3` for the
+   affected-task screen and expand only pre-defined borderline candidates to
+   `k=5`. If it is negligible, spend the same budget on more independent
+   affected/protected tasks instead of duplicate deterministic rollouts.
+3. Report pass@3/pass@5 only as a capability-tail diagnostic. “At least one
+   success” must not independently promote a candidate because it can reward
+   unstable behavior. Promotion continues to require paired expected utility,
+   task-first uncertainty, affected benefit, and protected non-inferiority.
+4. Replace the irreversible binary outcome with three states: `rejected` for
+   contradicted or harmful rules, `shadow/provisional` for evidence-consistent
+   but underpowered rules, and `promoted` for executor-facing rules that pass
+   held-out utility and safety checks. Shadow rules do not alter executor
+   prompts or block actions, but remain available for independent evidence
+   accumulation and pre-registered bundle construction.
+5. Compare the new policy with the current Gate on beneficial-candidate recall,
+   harmful-promotion rate, subgroup regression, effective independent tasks,
+   and rollout/token cost. Reduced false rejection is acceptable only without
+   increasing harmful promotion beyond a frozen tolerance.
+
+### P5.7 — rule-local utility and bounded Skill composition
+
+- Separate epistemic rules from behavioral rules. A compiled effect,
+  precondition, or transition claim may enter the shadow store after
+  consistency, recurrence, provenance, and identifiability checks; it need not
+  individually produce a statistically significant full-task gain. Only rules
+  injected into execution must pass behavioral utility and regression gates.
+- Add rule-local endpoints tied to an outcome-independent trigger scope:
+  adoption/compliance, target-transition repair, invalid-action reduction,
+  repeated-loop reduction, recovery latency, and local subgoal progress. Final
+  task success/progress remains the global safety endpoint rather than the only
+  source of credit.
+- Construct bundles only from evidence-linked rules in the same causal failure
+  chain, with a maximum frozen size of two or three. Evaluate `parent`, each
+  component, the full bundle, and leave-one-out variants to estimate conditional
+  marginal effects and synergy. Do not search an unrestricted powerset or use
+  evaluation outcomes to invent bundles.
+- Apply family-aware sequential inference and a fresh held-out finalist pool so
+  that component screening, bundle selection, and promotion do not share the
+  same outcome data.
+
+### P5.8 — benchmark-aligned and real-world-aligned information tracks
+
+Run every method and controlled baseline with the same executor, teacher,
+initial Skill, evolution budget, tasks, and seeds within each information arm:
+
+1. `F-full`: RGB plus stock public simulator feedback. This is the
+   benchmark-aligned primary comparison with EmbodiSkill*, EmbodiSkill* +
+   Common Gate, and S0.
+2. `V0-rgb`: instruction, temporal RGB, and public action history only.
+3. `V1-ack`: V0 plus a generic binary low-level action acknowledgement or
+   timeout, without a semantic explanation of why an action failed.
+4. `V2-onboard`: V1 plus only pre-declared signals available to a plausible
+   physical platform, such as gripper/contact state or odometry. Inclusion is
+   determined by sensor availability before experiments, not selected
+   post-hoc from performance.
+
+Semantic simulator failure messages, exact target distance, task progress,
+subgoal reward, oracle predicates, and hidden goal state are evaluation-only in
+the real-world-aligned arms. The executor prompt, compact ledger, VTCA evidence,
+teacher input, candidate proposal, and Gate features must all pass an explicit
+no-leakage audit; unsanitized simulator state may be retained only in a sealed
+evaluation-label channel.
+
+Measure task success/progress, invalid and repetition rates, transition-credit
+accuracy, evidence precision/recall/coverage, persistent false-update rate,
+beneficial-update precision/recall, protected regression, and teacher/token
+cost. Within each arm, the main question is whether VISTA-Skill improves over
+matched baselines; the project must not claim that no-feedback performance
+matches full feedback unless the paired uncertainty supports that separate
+claim.
+
+### P5.9 — ordered verification and freeze
+
+Run P5.6 calibration first, then P5.7 compositional pilots, followed by the
+P5.8 information-track matrix on clean EB-HAB development tasks. Scale only
+designs that retain update safety and show a credible local mechanism effect.
+After the Gate and information boundary are frozen, repeat the same core method
+on newly generated non-official EB-NAV development tasks. Official evaluation
+remains closed until code, prompts, schemas, Skill states, arms, thresholds,
+seeds, baselines, and cost accounting are frozen.
