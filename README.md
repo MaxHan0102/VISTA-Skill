@@ -1,5 +1,9 @@
 # VISTA-Skill
 
+项目概览（目标、研究问题、方法闭环与当前证据边界）见
+[`docs/overview.md`](docs/overview.md)。项目远程地址为
+<https://github.com/MaxHan0102/VISTA-Skill>。
+
 VISTA-Skill implements evidence-decoupled visual transition credit assignment
 for reliable evolution of procedural skills under partial observability. The
 implementation lives in the standalone `vista_skill/` package. It reuses
