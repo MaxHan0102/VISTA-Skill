@@ -4,6 +4,8 @@ import importlib
 import random
 import re
 import threading
+import pickle
+from pathlib import Path
 from types import SimpleNamespace
 from typing import Any, Sequence
 
@@ -68,6 +70,32 @@ def _select_ordered_episodes(env: Any, episode_ids: Sequence[str]) -> None:
     # Re-point that Env's dataset + iterator at the selected list so reset()
     # serves the requested episodes in the requested, non-cycling order.
     _repoint_habitat_episode_iterator(env.env, selected)
+
+
+def create_habitat_development_env(
+    dataset_path: str | Path, *, episode_ids: Sequence[str], **kwargs: Any,
+):
+    """Install a trusted local generated development dataset via the adapter.
+
+    Decode a private copy: stock from_binary mutates its input and renumbers IDs.
+    No dataset or simulator source inside EmbodiedBench is written.
+    """
+    raw = pickle.loads(Path(dataset_path).read_bytes())
+    ids = [str(item["episode_id"]) for item in raw["all_eps"]]
+    if len(set(ids)) != len(ids) or not all(eid.startswith("p57_") for eid in ids):
+        raise ValueError("expected unique generated p57 development coordinates")
+    env = create_habitat_env("train_validation", **kwargs)
+    try:
+        dataset = type(env.dataset)(config=None)
+        dataset.from_binary(raw)
+        for episode, episode_id in zip(dataset.episodes, ids):
+            episode.episode_id = episode_id
+        env.dataset = dataset
+        _select_ordered_episodes(env, episode_ids)
+        return env
+    except BaseException:
+        env.close()
+        raise
 
 
 def _repoint_habitat_episode_iterator(root: Any, selected: Sequence[Any]) -> None:

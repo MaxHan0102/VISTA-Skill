@@ -246,3 +246,10 @@ It makes the published EmbodiSkill EB-HAB/EB-NAV scores—not the rough local
 admission, executable guidance, selective self-evolution, and a complete
 EB-NAV evolution path. Phase-5 evidence is appended to
 [`docs/experiment_log_phase5.md`](docs/experiment_log_phase5.md).
+
+The bounded target-evidence recovery pilot added on 2026-09-07 is documented in
+[Phase 5 E11](docs/experiment_log_phase5.md#e11--p57-bounded-target-evidence-recovery-pilot--2026-09-07).
+Live acquisition and paired evaluation completed on both vLLM endpoints.
+The natural candidate failed the first mechanism screen; no promotion or
+held-out evaluation followed. See E11 for the evidence-trigger correction and
+separate bounded recheck. A reliable natural-evolution positive remains unproven.

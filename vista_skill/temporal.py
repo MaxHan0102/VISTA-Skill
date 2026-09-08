@@ -74,7 +74,8 @@ class TemporalRuleMonitor:
         for key, obligation in tuple(self._active.items()):
             rule = obligation.rule
             recovered = bool(
-                event.last_action_success
+                rule.recovery_release == "action_or_evidence"
+                and event.last_action_success
                 and event.action.action_type in rule.recovery_action_types
             )
             predicate = _bind_predicate(
@@ -86,6 +87,15 @@ class TemporalRuleMonitor:
             evidence_released = predicate is not None and any(
                 item.key == predicate
                 and item.after not in {TruthValue.UNKNOWN, rule.trigger_value}
+                and (
+                    rule.recovery_release == "action_or_evidence"
+                    or (
+                        item.timestamp == event.step_id
+                        and item.timestamp > obligation.trigger_step
+                        and item.confidence >= rule.min_evidence_confidence
+                        and item.coverage >= 0.5
+                    )
+                )
                 for item in event.evidence_delta
             )
             if recovered or evidence_released:
@@ -105,6 +115,14 @@ class TemporalRuleMonitor:
             )
             if predicate is None or not any(
                 item.key == predicate and item.after is rule.trigger_value
+                and (
+                    rule.recovery_release == "action_or_evidence"
+                    or (
+                        item.timestamp == event.step_id
+                        and item.confidence >= rule.min_evidence_confidence
+                        and item.coverage >= 0.5
+                    )
+                )
                 for item in event.evidence_delta
             ):
                 continue
@@ -123,6 +141,16 @@ class TemporalRuleMonitor:
         lines = []
         for obligation in self.active:
             recovery = "/".join(obligation.rule.recovery_action_types)
+            if obligation.rule.recovery_release == "target_evidence":
+                lines.append(
+                    f"- Rule {obligation.rule.rule_id}: do not repeat "
+                    f"{obligation.rule.blocked_action_type} on {obligation.target} "
+                    "until new evidence resolves its failed precondition. "
+                    f"Use {recovery} to obtain a useful new view; navigation success "
+                    "alone does not establish that this target is reachable. "
+                    "If the target is still unconfirmed, search another location."
+                )
+                continue
             lines.append(
                 f"- Rule {obligation.rule.rule_id}: do not repeat "
                 f"{obligation.rule.blocked_action_type} on {obligation.target}; "

@@ -1,0 +1,55 @@
+{
+  "protocol_id": "phase5_p57_target_evidence_recovery_20260907_v1",
+  "config": "configs/vista_phase5_hab.json",
+  "output_dir": "running/phase5_p57_recovery_20260907",
+  "dataset_manifest": "running/phase5_p57_recovery_20260907/development_manifest.json",
+  "dataset": "running/phase5_p57_recovery_20260907/development.pickle",
+  "initial_skill": "interface_only",
+  "acquisition_seed": 570907,
+  "rollout_seeds": [0, 1, 2],
+  "candidate_budget": 1,
+  "minimum_independent_chains": 2,
+  "evidence": {
+    "visual_on_failed_preconditions": true,
+    "max_visual_calls_per_episode": 4,
+    "visual_max_completion_tokens": 1024,
+    "min_confidence": 0.75,
+    "min_coverage": 0.5
+  },
+  "executor": {
+    "model": "Qwen/Qwen3-VL-8B-Instruct",
+    "temperature": 0.0,
+    "n_shots": 10,
+    "resolution": 500,
+    "max_completion_tokens": 4096,
+    "tensor_parallel": 1
+  },
+  "budget": {
+    "acquisition_episodes": 12,
+    "mechanism_rollouts": 4,
+    "proxy_rollouts": 48,
+    "finalist_rollouts_if_proxy_consistent": 48,
+    "audit_rollouts_if_both_gates_pass": 48,
+    "maximum_episode_total": 160
+  },
+  "decision": {
+    "discovery": "At least two independent natural acquisition episodes contain identified not-near failure, successful navigation without resolving target evidence, and another same-target not-near failure.",
+    "mechanism": "Replay both arms on the first two supporting acquisition tasks, once each. Require fewer retries without new target evidence, with no reduction in summed success or progress. This outcome-selected acquisition screen is not held-out evidence.",
+    "proxy_and_finalist": "Unchanged Phase-5 semantic task-first Gate, plus paired task-success non-inferiority LCB >= -0.05.",
+    "shadow": "Positive but underpowered candidates may be tested on finalist, but cannot be promoted through a failed proxy.",
+    "audit": "Open audit only after proxy and finalist pass. Preserve audit failures and do not tune against them.",
+    "no_candidate": "Stop after the registered acquisition budget; do not insert a human candidate.",
+    "local_endpoints": "Mechanism diagnostics only: failed-target retry without new evidence, evidence recovery, invalid actions, guard blocks, steps, and per-purpose cost. No local endpoint substitutes for the task gate."
+  },
+  "parallelism": {
+    "maximum_client_workers": 2,
+    "assignment": "Fixed task-level endpoint index in dataset manifest; both arms and all seeds of each task stay on the same endpoint.",
+    "arm_order": "Counterbalance by numeric task index plus rollout seed.",
+    "report_endpoint_strata": true,
+    "deviation": "This bounded diagnostic registers two endpoint blocks, unlike the single-host controlled main protocol; do not treat it as an official controlled artifact."
+  },
+  "claim_eligible": false,
+  "official_test_access": false,
+  "historical_development_layout_exposure": true,
+  "new_goal_combinations_only": true
+}

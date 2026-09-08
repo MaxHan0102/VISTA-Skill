@@ -210,6 +210,10 @@ def _validate_temporal_rules(
             errors.append("temporal rule requires supported recovery actions")
         if rule.argument_index < 0:
             errors.append("temporal rule argument index cannot be negative")
+        if rule.recovery_release not in {"action_or_evidence", "target_evidence"}:
+            errors.append("unsupported temporal recovery release policy")
+        if not 0.0 <= rule.min_evidence_confidence <= 1.0:
+            errors.append("temporal evidence confidence must be within [0, 1]")
         placeholders = set(_PLACEHOLDER.findall(rule.trigger_predicate))
         if placeholders - _ALLOWED_PLACEHOLDERS:
             errors.append("temporal predicate contains an unsupported placeholder")

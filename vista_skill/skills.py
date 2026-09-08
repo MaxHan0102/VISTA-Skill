@@ -381,6 +381,13 @@ def _skill_payload(skill: SkillSpec) -> dict[str, Any]:
     payload = dataclass_to_dict(skill)
     if not skill.temporal_rules:
         payload.pop("temporal_rules", None)
+    else:
+        for rule in payload["temporal_rules"]:
+            # Keep the content addresses of historical temporal artifacts stable.
+            if rule["recovery_release"] == "action_or_evidence":
+                rule.pop("recovery_release")
+            if rule["min_evidence_confidence"] == 0.75:
+                rule.pop("min_evidence_confidence")
     return payload
 
 
@@ -411,6 +418,8 @@ def skill_from_dict(raw: Mapping[str, Any]) -> SkillSpec:
                 str(value) for value in item["recovery_action_types"]
             ),
             argument_index=int(item.get("argument_index", 0)),
+            recovery_release=str(item.get("recovery_release", "action_or_evidence")),
+            min_evidence_confidence=float(item.get("min_evidence_confidence", 0.75)),
         )
         for item in raw.get("temporal_rules", ())
     )

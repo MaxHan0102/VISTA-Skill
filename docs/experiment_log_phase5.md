@@ -893,3 +893,285 @@ Conclusion and implementation consequence:
   evidence yields final `rejected`, while only supportive or still-consistent
   evidence may remain `shadow`. A failed proxy can never be promoted through
   this path.
+
+## E11 — P5.7 bounded target-evidence recovery pilot — 2026-09-07
+
+Status: **live acquisition and paired mechanism evaluation completed; V1 No-Go**.
+A natural candidate was discovered but reduced task success. A separately
+registered four-rollout evidence-trigger bug-fix recheck is recorded below.
+No candidate has been promoted; held-out stages remain unopened.
+
+### Question and frozen experimental specification
+
+Can recurrent natural `failed pick -> successful navigation -> same-target
+failed pick` chains justify a bounded procedure whose retry release requires
+fresh evidence about the failed target, and does this improve independent task
+utility? The hypothesis is deliberately narrower than general procedure learning.
+
+`configs/phase5_p57_recovery_pilot.json` specifies:
+
+- Interface-only S0; frozen Qwen3-VL-8B-Instruct; temperature 0; 10 examples;
+  500-pixel observations; 4096 executor completion tokens. There is no stronger
+  teacher or manually injected faulty initial Skill.
+- Twelve natural acquisition episodes, one candidate maximum, and at least two
+  independent episodes supporting the temporal failure chain. The initial
+  not-near event must have a passing existing VTCA identifiability audit.
+  A fixed, declared rule grammar compiles the candidate without a patch-model
+  call; this is constrained discovery, not free-form model invention of a
+  search algorithm. No recurring candidate means stop, not insert a human rule.
+- A cheap four-rollout mechanism screen replays both arms on the first two
+  supporting acquisition tasks. It requires fewer retries without new evidence
+  and no decrease in summed task success/progress. This is explicitly an
+  outcome-selected, in-sample screen and cannot provide held-out evidence.
+- Proxy, finalist, and audit each contain eight distinct tasks, six affected
+  transfer tasks and two protected navigation tasks, with seeds 0/1/2 and two
+  arms: 48 rollouts per stage. Maximum budget is **160 model-backed episodes**
+  (12 + 4 + 48 + 48 + 48); failed stages stop subsequent spending. No adaptive
+  extra seeds, candidate revision, or post-hoc threshold changes are allowed.
+- The paired analysis uses the unchanged Phase-5 semantic task-first Gate,
+  plus task-first success non-inferiority LCB >= -0.05. Proxy-shadow can receive
+  finalist evidence but cannot bypass failed proxy promotion. Audit opens only
+  after both selection stages pass. Local metrics never substitute for the Gate.
+- Both arms have the same prediction-blind visual fallback: after successful
+  navigation with unresolved negative `near` evidence in the ledger, query the
+  existing visual evidence provider, at most four calls per episode. This
+  supplies a possible target-evidence release channel; without it, a strict
+  object-near guard plus receptacle-only navigation feedback could deadlock.
+  Goal-grounding calls are disabled in both arms of this bounded diagnostic;
+  the instruction and stock examples remain available to the executor.
+- Two client processes may run in parallel. A task and all its paired seeds
+  stay on its preassigned endpoint; parent/candidate order is counterbalanced.
+  Endpoints are reported as blocks. This is an explicit departure from the
+  single-host controlled main protocol and is not a main-table artifact.
+
+### Development-data exposure audit and prospective boundary
+
+A conservative coordinate-only scan indexed 2,588 historical JSONL artifacts
+containing Habitat-like numeric episode coordinates. All 100 stock development
+coordinates have prior artifacts, including historical audit coordinates. The
+scan reads IDs rather than selecting on outcomes; its complete source paths,
+file hashes, and coordinate lists are saved in
+`running/phase5_p57_recovery_20260907/exposure_audit.json`.
+
+Consequently, no new seed or role rotation can be described as entirely unseen
+development data. E10's "untouched finalist" description is specific to the
+preceding Phase-5 candidate screens, not absence of all earlier-phase exposure.
+
+`scripts/phase5_recovery_dataset.py` deterministically generates 36 new goal
+combinations using **only stock train_validation layouts**, with generator seed
+570907. Different original layouts are used for all 36 tasks, so layout sources
+do not cross this campaign's acquisition/proxy/finalist/audit roles. Transfer
+destinations change; protected tasks have navigation goals. No official-test
+file is read. The benchmark source, data files, and reference LaTeX are unchanged.
+
+These are new goal combinations on historically exposed development layouts,
+**not new scenes, a new benchmark, or restored global test independence**. The
+protected scope is also narrow (navigation), so a future positive diagnostic
+would still require broader matched-method and subgroup validation.
+
+Artifacts:
+
+- `running/phase5_p57_recovery_20260907/development.pickle`
+- `running/phase5_p57_recovery_20260907/development_manifest.json`
+- generated dataset SHA256:
+  `e1e5696b98dd743a35c99ccbad87506178ccbb8d82dae22016848d1ee338b43d`
+
+### Implementation and checks actually completed
+
+- Added opt-in `target_evidence` temporal release with target identity, fresh
+  timestamp, confidence >= 0.75 and coverage >= 0.5. An unrelated successful
+  navigation, unknown state, stale evidence, or weak evidence cannot release it.
+  Historical `action_or_evidence` rules preserve their semantics and digests.
+- Added evidence-grounded temporal-chain discovery, bounded one-field procedure
+  patches, and a generated-development adapter that does not edit EmbodiedBench.
+- Added a two-process pilot driver, endpoint preflight, source/config/dataset/
+  endpoint preregistration, complete-coordinate resume checks, per-coordinate
+  executor and visual cost records, and disk-only paired analysis. This remains
+  an opt-in diagnostic; the default Phase-5 CLI is not silently switched.
+- New tests cover independent recurrence, absent/ambiguous support, release
+  evidence, legacy artifacts, prediction-blind bounded visual calls, deterministic
+  data generation and role separation, preregistration drift, local telemetry,
+  and disk-reproducible paired analysis with missing-coordinate rejection.
+- Final repository validation: **294 tests passed in 1.05 seconds** using
+  `max_embench`; `git diff --check` passed. The original E6 frozen and temporal
+  candidate artifacts still pass digest loading. The test log is
+  `running/phase5_p57_recovery_20260907/unit_tests.log`.
+- The generated acquisition task `p57_acquisition_00` loaded and rendered on the
+  client's RTX 4090 D at resolution 500. The environment smoke contains no model
+  call and does not open selection or audit tasks.
+
+Real-simulator scripted admission check (seed 570907, same acquisition task,
+predeclared `nav fridge -> pick ball -> nav fridge -> pick ball` sequence):
+
+| Release policy | Environment steps | Invalid actions | Guard blocks | Task success |
+|---|---:|---:|---:|---:|
+| Historical action-or-evidence | 4 | 2 | 0 | 0 |
+| Target-evidence | 3 | 1 | 1 | 0 |
+
+The new guard blocks the second pick despite successful navigation. Both arms
+fail the task, and the rule is supplied manually for this scripted smoke, so
+this is **runtime mechanism verification only**, not discovery, adoption by a
+VLM, or task-performance evidence. Artifacts are under
+`running/phase5_p57_recovery_20260907/scripted_smoke/`.
+
+### Initial live-model launch blocker (historical; resolved below)
+
+Host-level checks found the client at `192.168.31.33` with an available
+RTX 4090 D. SSH to both user-provided addresses `192.168.1.185:22` and
+`192.168.1.192:22` returned `No route to host`. Direct HTTP model-list probes
+to port 8000 on both hosts returned the same error. Port 8000 on the second
+host is provisional until its serving configuration can be inspected.
+
+This is a routing failure from the client, not an automatic-approval rejection
+and not evidence that vLLM itself failed. No remote rollout was launched. The
+driver records `blocked_endpoint_preflight`; there is no frozen evolved Skill
+or completed model-dependent preregistration. The registered specification and
+generated data are ready, but reachable endpoint addresses and serving parity
+must be established before freezing their endpoint binding.
+
+Network records: `endpoint_preflight.json`, `launch.log`, `run_status.json` in
+`running/phase5_p57_recovery_20260907/`.
+
+Resume after obtaining reachable vLLM URLs (22 is SSH, not the model API):
+
+```bash
+PYTHONPATH=EmbodiedBench:. /root/miniconda3/envs/max_embench/bin/python \
+  scripts/phase5_recovery_pilot.py \
+  --base-urls http://<REACHABLE_A>:<VLLM_PORT>/v1 http://<REACHABLE_B>:<VLLM_PORT>/v1
+```
+
+Use the GPU-visible host execution layer. The driver probes both servers,
+freezes endpoint/code/data identity before acquisition, and stops without
+inventing a candidate if natural recurrence is absent. Do not describe E11 as
+a natural-evolution positive until those actual outcomes exist.
+
+### Live execution after network recovery (2026-09-07)
+
+The supplied server IPs were correct. The client also had a stale
+`192.168.31.33/24` address and unreachable default gateway, beyond sandbox
+restrictions. Host-level ARP confirmed both targets on the physical LAN. A
+DHCP-acknowledged temporary client address (`192.168.1.182/32`) and two
+host-specific routes restored access without replacing the original address or
+default route. Actual APIs: `http://192.168.1.185:8000/v1` and
+`http://192.168.1.192:8001/v1`. Both passed 6/6 serving probes and report
+`Qwen/Qwen3-VL-8B-Instruct`, 16384 context, vLLM 0.27.1. SSH authentication was
+unavailable; remote GPU, precision and tensor-parallel parity are **not verified**.
+These remain endpoint-blocked diagnostics, not official controlled comparisons.
+
+The frozen V1 run completed 12 acquisition episodes and four paired mechanism
+rollouts. Acquisition achieved 6/12 successes, 171 environment steps and 74
+invalid actions. Mining found 25 qualifying chains across eight independent
+episodes (37 evidence IDs), producing one bounded procedure candidate with no
+patch-teacher calls. This is natural evidence driving a fixed rule grammar,
+not unrestricted procedure synthesis or a trained executor.
+
+| V1 mechanism (two tasks, one seed per arm) | Parent | Candidate |
+|---|---:|---:|
+| Successful tasks | 1/2 | 0/2 |
+| Mean task progress | 0.5 | 0.0 |
+| Environment steps | 25 | 13 |
+| Invalid actions | 10 | 4 |
+| Retries without new target evidence | 7 | 0 |
+| Temporal guard blocks | 0 | 6 |
+
+**V1 verdict: No-Go.** Both candidate episodes terminated after three blocks.
+Fewer steps/invalid actions therefore do not establish improved efficiency.
+The candidate exhibits enforcement, but loses useful task completion. No proxy,
+finalist or audit task was opened; frozen Skill remains the parent (v0).
+The mechanism tasks were selected from acquisition failures, so even a positive
+result here would not establish generalization. Identical seeds do not guarantee
+identical trajectories: acquisition and frozen-parent reruns differ, and no
+claim of exact deterministic replay is made.
+
+V1 cost: executor 101 calls / 496,506 tokens; method 43 calls / 46,522 tokens;
+combined **144 calls / 543,028 tokens**, excluding endpoint probes. This includes
+all 16 completed rollout coordinates, including failures. Coordinate runtimes
+are summed in `cost_summary.json`; remote GPU-hours were not measured.
+
+V1 artifacts live in `running/phase5_p57_recovery_20260907/`:
+`preregistration.json`, `discovery.json`, `candidate_skill.json`,
+`mechanism_analysis.json`, `analysis_review.json`, `cost_summary.json`, and
+per-coordinate trajectories/metadata. Initial blocked preflight/status were
+preserved with `_initial_blocked` suffixes. Before the subsequent source fix,
+all preregistered source hashes were checked and archived in
+`source_snapshot_v1.tar.gz` (SHA256
+`8cf49a4831a04dbdf64473eb69e236ac8071919d5c9724a0af65ba59a3b2964b`).
+V1 analysis was reproduced from disk before changing the source. The current
+source intentionally fails V1's immutable-code resume check; use the archived
+source to reproduce that version, never rewrite its preregistration.
+
+### Separately registered UNKNOWN evidence-trigger recheck
+
+Trajectory review identified visual-query starvation: a failed-target `near`
+state could change from FALSE to UNKNOWN, after which subsequent successful
+navigation no longer triggered visual evidence extraction, although the temporal
+rule still required fresh TRUE evidence. `EvidenceExtractor` now remembers
+unresolved near preconditions until fresh reliable resolution or successful
+pickup, and resets this memory per episode. UNKNOWN does not erase the pending
+query. The four-call visual budget, rule text, candidate, confidence/coverage
+thresholds, task assignments and seed remain unchanged. Tracking uses observed
+feedback/evidence, not the Skill's predicted outcome.
+
+`configs/phase5_p57_recovery_unknown_recheck.json` binds the original candidate,
+parent and discovery hashes, and the recheck driver hash. The dedicated
+`scripts/phase5_recovery_recheck.py` runs only the original two mechanism tasks
+with both arms across the two endpoints. It cannot promote a candidate or open
+held-out stages. This is an outcome-informed implementation recheck, not an
+independent confirmation; V1 No-Go is retained. Artifacts are separate under
+`running/phase5_p57_recovery_unknown_recheck_20260907/`.
+
+The recheck completed all four coordinates and again returned **No-Go**:
+
+| Recheck mechanism | Parent | Candidate |
+|---|---:|---:|
+| Successful tasks | 1/2 | 0/2 |
+| Mean task progress | 0.5 | 0.0 |
+| Environment steps | 27 | 17 |
+| Invalid actions | 10 | 3 |
+| Retries without new target evidence | 7 | 0 |
+| Guard blocks | 0 | 6 |
+| Visual evidence calls | 4 | 7 |
+
+The fix is visible in real trajectories: task 00 queried again at steps 6–8
+after UNKNOWN at step 5; task 01 queried at steps 4–5 after UNKNOWN at step 3.
+Neither obtained fresh TRUE for the failed object. Task 00 exhausted its four
+visual calls; task 01 reached the three-block termination limit first. This
+removes query starvation as the sole explanation, while leaving the core
+bottleneck: navigation/search does not reliably yield usable target evidence,
+and a hard retry prohibition can prevent task recovery. Candidate prompting
+also changes behavior before the first block, so this experiment does not
+isolate the causal effect of the guard from the procedure text.
+
+Recheck cost: executor 20 calls / 98,737 tokens; method 11 calls / 11,841 tokens;
+**31 calls / 110,578 tokens**. Across both versions: **20 episodes, 175 calls,
+653,606 tokens**, excluding serving probes. Disk reanalysis reproduced the exact
+recheck analysis hash, validating all four terminal records, artifact digests,
+local metrics and usage against metadata. The full unit suite passed **295 tests**
+(`python -m pytest -q` in `max_embench`), including FALSE→UNKNOWN→TRUE query
+continuation, episode reset, bounded visual calls and legacy hash compatibility.
+
+Temporary network configuration has been removed: the task's DHCP process was
+stopped, a DHCPRELEASE packet sent, the two host routes and temporary address
+removed, and original address/default preserved. DHCPRELEASE has no server
+acknowledgment; only packet transmission is asserted. Readback is recorded in
+V1 `network_recovery.json`. A future launch needs a usable client LAN route again.
+
+### Interpretation and next bounded step
+
+The campaign achieves natural recurrence detection, candidate generation,
+observable enforcement, cost accounting and a conservative rejection. It does
+**not** achieve a credible beneficial natural evolution example. Eight discovery
+episodes and two mechanism tasks are insufficient for broad performance claims.
+
+Before another candidate campaign, measure the evidence supply itself: on a
+newly registered development panel, record whether a target is visible, whether
+search changes the view, and whether the evidence model can establish the
+required predicate. Separate “object visible” from “within grasp distance”;
+image-based visibility alone must not release a proximity constraint. Compare a
+bounded target-directed search/reobservation procedure with the current generic
+navigation, using the same observation and model budget. Any redesign of
+fallback/termination or limited retry probing needs a new protocol and new
+selection tasks; do not tune it repeatedly on these two outcomes. Only proceed
+to role-fixed paired proxy/finalist/audit evaluation after local evidence recovery
+improves without a task-success regression. Preserve the current held-out roles
+and both No-Go records.

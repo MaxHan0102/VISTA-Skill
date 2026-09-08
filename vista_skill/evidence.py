@@ -27,6 +27,8 @@ class EvidenceExtractorConfig:
     visual_on_unresolved_goals: bool = True
     min_visual_confidence: float = 0.5
     min_visual_coverage: float = 0.0
+    visual_on_failed_preconditions: bool = False
+    max_visual_calls_per_episode: int | None = None
 
 
 # A feedback strategy turns environment feedback into predicate evidence via the
@@ -64,17 +66,45 @@ class EvidenceExtractor:
         self.feedback_strategy = feedback_strategy or _habitat_feedback_strategy
         self.guard = guard
         self.last_guard_result: EvidenceGuardResult | None = None
+        self._visual_episode: str | None = None
+        self._visual_calls = 0
+        self._unresolved_preconditions: set[PredicateKey] = set()
 
     def extract(self, request: EvidenceRequest) -> tuple[PredicateEvidence, ...]:
+        if request.episode_id != self._visual_episode:
+            self._visual_episode = request.episode_id
+            self._visual_calls = 0
+            self._unresolved_preconditions.clear()
         feedback = self.extract_feedback(request)
+        # This evidence-side memory uses public observations only. UNKNOWN must
+        # not erase the need to observe a previously failed precondition again.
+        self._unresolved_preconditions.update(
+            item.key for item in request.pre_ledger
+            if item.key.name == "near" and item.value is TruthValue.FALSE
+        )
+        self._unresolved_preconditions.update(
+            item.key for item in feedback
+            if item.key.name == "near" and item.after is TruthValue.FALSE
+        )
         evidence = list(feedback)
         covered_keys = {item.key for item in evidence if item.after is not TruthValue.UNKNOWN}
         unresolved_goals = any(key not in covered_keys for key in request.goal_predicates)
         needs_visual = (
             request.action.action_type in self.config.visual_action_types
             or (self.config.visual_on_unresolved_goals and unresolved_goals)
+            or (
+                self.config.visual_on_failed_preconditions
+                and request.action.action_type == "nav"
+                and request.last_action_success is True
+                and bool(self._unresolved_preconditions)
+            )
         )
+        if self.config.max_visual_calls_per_episode is not None:
+            needs_visual = needs_visual and (
+                self._visual_calls < self.config.max_visual_calls_per_episode
+            )
         if self.visual_provider is not None and needs_visual:
+            self._visual_calls += 1
             visual_items = tuple(self.visual_provider.extract(request))
             if self.guard is not None:
                 self.last_guard_result = self.guard.fuse(
@@ -107,7 +137,18 @@ class EvidenceExtractor:
         completion = self._derive_task_completion(request, evidence)
         if completion is not None:
             evidence.append(completion)
-        return self._deduplicate(evidence)
+        result = self._deduplicate(evidence)
+        self._unresolved_preconditions.difference_update(
+            item.key for item in result
+            if item.after is TruthValue.TRUE
+            and item.timestamp == request.step_id
+            and item.confidence >= 0.75 and item.coverage >= 0.5
+        )
+        if request.last_action_success is True and request.action.action_type == "pick":
+            self._unresolved_preconditions.difference_update(
+                PredicateKey("near", (argument,)) for argument in request.action.arguments
+            )
+        return result
 
     def extract_feedback(self, request: EvidenceRequest) -> tuple[PredicateEvidence, ...]:
         """Expose the deterministic branch for controlled source ablations."""

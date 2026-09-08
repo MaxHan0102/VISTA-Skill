@@ -1,5 +1,18 @@
 # VISTA-Skill P0 Implementation
 
+The opt-in 2026-09-07 P5.7 bounded recovery diagnostic is implemented in
+`scripts/phase5_recovery_pilot.py`, with its protocol in
+`configs/phase5_p57_recovery_pilot.json`. It discovers a constrained temporal
+procedure from independent natural failure chains, supports fresh target-evidence
+release and prediction-blind bounded visual fallback, and uses new development
+goal combinations with disjoint source layouts. It does not replace the default
+CLI or change legacy temporal-rule semantics/digests. Two endpoint workers keep
+every task's parent/candidate pairs together; official claim eligibility remains
+false. Live acquisition found a natural candidate, but the paired mechanism
+screen returned No-Go. An UNKNOWN-state visual-query starvation bug was fixed
+and separately rechecked without changing the candidate. Results and limits are
+recorded in [Phase 5 E11](experiment_log_phase5.md#e11--p57-bounded-target-evidence-recovery-pilot--2026-09-07).
+
 For a short, plain-language Chinese summary of the full experimental history
 and current conclusions, see [experiment_log_plain_zh.md](experiment_log_plain_zh.md).
 The post-hoc human Target-Skill diagnostic and its frozen validation are recorded

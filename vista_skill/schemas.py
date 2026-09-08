@@ -209,6 +209,8 @@ class TemporalSkillRule:
     blocked_action_type: str
     recovery_action_types: tuple[str, ...]
     argument_index: int = 0
+    recovery_release: str = "action_or_evidence"
+    min_evidence_confidence: float = 0.75
 
 @dataclass(frozen=True)
 class SkillSpec:
