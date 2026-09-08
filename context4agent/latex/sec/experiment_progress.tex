@@ -1,0 +1,81 @@
+% ======================================================================
+% Experiment Progress Log -- internal reporting only (English)
+% ======================================================================
+% 使用约定（本注释块不渲染，请保留；后续进度继续追加在本文件内）：
+% 1. 本文件内容专门用于汇报展示实验进度，与论文正文和附录完全隔离；
+% 2. 导出正式稿件时，删除 main.tex 末尾的 \input{sec/experiment_progress}
+%    一行即可，其余文件无需改动；
+% 3. 数据来源：实验仓库 VISTA-Skill 的 docs/experiment_log_phase5.md
+%    （E0--E10，截至 2026-09-03）。
+% ======================================================================
+
+\onecolumn
+\raggedbottom
+
+\section*{Experiment Progress Log (Phase 5) --- Internal Reporting Only, Not for Submission}
+
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{%
+\small\textbf{Isolation note.} This page and everything after it form a dedicated experiment-progress area for internal reporting. It is not part of the paper body or appendix and contains no cross-references into them; delete the \texttt{\textbackslash input\{sec/experiment\_progress\}} line in \texttt{main.tex} to remove it. Data source: \texttt{docs/experiment\_log\_phase5.md} in the VISTA-Skill repository (E0--E10, as of 2026-09-03).}}
+
+\vspace{0.6em}
+
+\subsection*{A. Strategic Adjustments in Phase 5 (vs.\ Phases 1--4)}
+
+\begin{itemize}\itemsep2pt
+    \item \textbf{Hard success target:} with a frozen Qwen3-VL-8B executor and the stock protocol, exceed published EmbodiSkill-GPT on both co-primary benchmarks --- EB-HAB ($45.33\%$) and EB-NAV ($50.33\%$) --- at lower evolution cost.
+    \item \textbf{Evaluation integrity:} all legacy artifacts exposed to official-test data quarantined (0/251 eligible); pre-registered freeze of code, prompts, skills, configs, and seeds before any official evaluation.
+    \item \textbf{Interface-only S0:} the primary condition starts from an empty five-field skill; the hand-authored pool is demoted to a warm-start ablation.
+    \item \textbf{Full skill lifecycle, not repair only:} discovery / repair / optimization / execution-lapse handling, driven by clean natural interaction from S0.
+    \item \textbf{Event-triggered evidence:} public structured feedback and ledger grounding first; visual extraction only as a fallback (replacing per-action visual calls at ${\sim}20$--$26\times$ control cost).
+    \item \textbf{Upgraded candidate gate:} outcome-independent semantic affected/protected split, variance-aware paired-3/paired-5 rollouts, three-state disposition (rejected / shadow / promoted), sequential safety checks, disjoint finalist confirmation.
+    \item \textbf{Executable skills:} compiled temporal rules and an action-admission guard checked before \texttt{env.step}, logged separately from environment invalid actions.
+    \item \textbf{IdentifiabilityAudit:} every persistent update must pass a seven-condition audit (evidence, provenance, compliance, non-stochasticity, identity, unique field, action binding); failure fail-closes to abstain.
+\end{itemize}
+
+\vspace{0.6em}
+
+\subsection*{B. Phase-5 Preliminary Experiment Data (E0--E10)}
+
+\begin{table}[h]
+\centering
+\small
+\caption{Mechanism and cost evidence.}
+\begin{tabular}{@{}p{0.50\textwidth}p{0.45\textwidth}@{}}
+\toprule
+\textbf{Item} & \textbf{Result} \\
+\midrule
+Action-level VTCA field attribution on controlled faults & \red{4/4 hits} (trajectory-reflection control: \red{0/26}) \\
+Structural validity of bounded exact-field patches & 10/10 \\
+Natural discovery from empty S0 (E3/E4) & \red{20 reusable rules} from 41 transitions (17 effect + 3 constraint, 21 abstentions); reusable ``pick requires nearness evidence'' constraint from two independent failures \\
+Method-token cost of event-triggered evidence (E3) & \red{6{,}479 $\rightarrow$ 1{,}964 tokens per episode ($-69.7\%$)}; 29.5\,s $\rightarrow$ 6.6\,s \\
+Complete paired-pilot cost accounting (E5) & 96 model calls / 450{,}247 tokens end-to-end; paired gate ${\sim}82\%$ of executor tokens \\
+Within-task rollout variance share (E7/E8) & $0.523 \rightarrow 0.708$ from paired-3 to paired-5 $\Rightarrow$ paired-3 is the default \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\small
+\caption{Paired candidate-gate results on EB-HAB development tasks. The frozen skill remains interface-only S0 throughout.}
+\begin{tabular}{@{}llccccc@{}}
+\toprule
+\textbf{Exp.} & \textbf{Pool} & \textbf{Parent} & \textbf{Cand.} & \textbf{Affected $\Delta$} & \textbf{LCB} & \textbf{Gate decision} \\
+\midrule
+E4/E5 & proxy: tasks 60--69 & --- & --- & $+0.0120$ & \red{$-0.2697$} & \red{rejected (underpowered)} \\
+E6 & proxy: tasks 60--69 & 0.783$^{a}$ & 0.786$^{a}$ & $+0.0037$ & \red{$-0.2905$} & \red{rejected} \\
+E7 & paired-3: 10 tasks $\times$ 3 seeds & 0.800$^{b}$ & 0.833$^{b}$ & $+0.0364$ & --- & shadow-borderline \\
+E8 & paired-5: 10 tasks $\times$ 5 seeds & 0.780$^{b}$ & 0.800$^{b}$ & $+0.0229$ & --- & shadow (underpowered) \\
+E10 & finalist: tasks 70--79 (fresh) & \red{0.833$^{b}$} & \red{0.700$^{b}$} & \red{$-0.1982$} & \red{$-0.3549$} & \red{contradictory $\rightarrow$ final reject} \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\begin{minipage}{0.92\linewidth}
+\footnotesize $^{a}$Composite mean; $^{b}$task-coordinate success. E4/E5: first natural near-object precondition constraint; E6: its stronger executable temporal form; E7/E8: the E6 candidate re-scored under registered rollout seeds (pass@3/pass@5: parent 0.8 vs.\ candidate 0.9, diagnostic only); E7/E8 deltas are task-first paired means over all ten tasks (no affected split reported). Per-task effects (E4--E6): task 62 improved (11 steps / 4 invalid $\rightarrow$ 6 / 1), task 66 failure $\rightarrow$ success, task 69 success $\rightarrow$ failure.
+\end{minipage}
+\end{table}
+
+\vspace{0.4em}
+
+\noindent\textbf{Status.} Zero promotions so far are the designed reliability-first behavior: the first natural constraint candidate was positive but underpowered at proxy (shadow), then contradicted on the fresh finalist pool (rejected). Next: failure-conditioned procedure/optimization candidates, cheap executor-adoption checks, shadow recall and harmful-promotion rates on clean new tasks, then the EB-NAV evolution path; official evaluation opens only after a full freeze.

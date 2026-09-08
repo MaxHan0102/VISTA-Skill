@@ -43,7 +43,7 @@ After deterministic checks, parent and candidate are evaluated with identical se
 
 \begin{table*}[t]
     \centering
-    \caption{Closed-Source VLM Baseline Performance on EmbodiedBench (EB-HAB \& EB-NAV). This table establishes the upper-bound performance benchmarks of state-of-the-art closed-source models across diverse evaluation categories.}
+    \caption{Closed-Source VLM Baseline Performance on EmbodiedBench (EB-HAB \& EB-ALF). This table establishes the upper-bound performance benchmarks of state-of-the-art closed-source models across diverse evaluation categories.}
     \label{tab:closed_source_baselines}
     \small
     \begin{tabular}{lcccccccc}
@@ -54,9 +54,9 @@ After deterministic checks, parent and candidate are evaluated with identical se
         Gemini-3.5-Flash & EB-HAB & 0.580 & 0.82 & 0.48 & 0.64 & 0.32 & 0.70 & 0.52 \\
         GPT-5.4-mini & EB-HAB & 0.397 & 0.76 & 0.34 & 0.30 & 0.36 & 0.36 & 0.26 \\
         \midrule
-        Gemini-3-Flash & EB-NAV & 0.730 & 0.78 & 0.74 & 0.80 & 0.70 & 0.70 & 0.66 \\
-        Gemini-3.5-Flash & EB-NAV & \textbf{0.843} & 0.90 & 0.92 & 0.88 & 0.80 & 0.76 & 0.80 \\
-        GPT-5.4-mini & EB-NAV & 0.403 & 0.44 & 0.42 & 0.50 & 0.34 & 0.44 & 0.28 \\
+        Gemini-3-Flash & EB-ALF & 0.730 & 0.78 & 0.74 & 0.80 & 0.70 & 0.70 & 0.66 \\
+        Gemini-3.5-Flash & EB-ALF & \textbf{0.843} & 0.90 & 0.92 & 0.88 & 0.80 & 0.76 & 0.80 \\
+        GPT-5.4-mini & EB-ALF & 0.403 & 0.44 & 0.42 & 0.50 & 0.34 & 0.44 & 0.28 \\
         \bottomrule
     \end{tabular}
 \end{table*}
@@ -64,7 +64,7 @@ After deterministic checks, parent and candidate are evaluated with identical se
 
 \begin{table}[htb]
     \centering
-    \caption{Fine-Tuned Open-Source Model Performance on EB-NAV (Appendix). Alignment tuning paradigms (SFT vs. RFT) reveal that while RFT improves structural compliance, it remains highly vulnerable to long-horizon degradations.}
+    \caption{Fine-Tuned Open-Source Model Performance on EB-ALF (Appendix). Alignment tuning paradigms (SFT vs. RFT) reveal that while RFT improves structural compliance, it remains highly vulnerable to long-horizon degradations.}
     \label{tab:open_source_reproduction}
     % \small
     \newcolumntype{Y}{>{\centering\arraybackslash}X}
