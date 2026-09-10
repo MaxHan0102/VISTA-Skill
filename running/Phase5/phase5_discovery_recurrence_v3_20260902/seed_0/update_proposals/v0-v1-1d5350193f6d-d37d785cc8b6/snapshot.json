@@ -1,0 +1,61 @@
+{
+  "candidate_artifact_sha256": "b4c0a37215d332682f66ed82cf505919c0f70b0080118baa332475b3a139670f",
+  "candidate_skill_sha256": "d37d785cc8b6164e6a7b6bde6e3664c949c3b92f2feb34552eab9e034ba10cb5",
+  "candidate_version": 1,
+  "evidence_ids": [
+    "0:s2:feedback:holding(ball)|0:s2:visual:3:holding(ball)",
+    "1:s10:feedback:holding(sponge)|1:s10:visual:2:holding(sponge)",
+    "1:s14:feedback:holding(spoon)|1:s14:visual:10:holding(spoon)"
+  ],
+  "field": "effect",
+  "parent_artifact_sha256": "6d37f6f544a982a1364d93dfd3a0076f174a8fac47e2557ee6e0be0a606c4b55",
+  "parent_skill_sha256": "052b4e954e04a6d3ae64888d15feb09285bd3dec72061a29210a94d57f8c792e",
+  "parent_version": 0,
+  "patch_id": "97d62f30ec594165f4ec",
+  "promoted": false,
+  "protocol": {
+    "acquisition_episode_budget": 2,
+    "config_sha256": "1eba1c1bb656e56aa755c15ee1db723f96cf93aff8030eabd174dc79489e3eb0",
+    "diagnostic": true,
+    "env": "eb-hab",
+    "evaluation_data_policy": "vista_skill_embodiedbench_integrity_v1_2026_09_02",
+    "evaluation_data_policy_sha256": "69e8f15c928ed9a06a178c87aedca97b6730e425e47e42862d6b1e6fff3bbbe3",
+    "evidence_guard": "authority_aware",
+    "evolution_seed": 0,
+    "evolution_seeds": [
+      0
+    ],
+    "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "executor_model_type": "remote",
+    "executor_temperature": 0.0,
+    "frozen": true,
+    "gate_rollout_seeds": [
+      0,
+      1,
+      2
+    ],
+    "guard_min_visual_confidence": 0.75,
+    "guard_min_visual_coverage": 0.5,
+    "initial_skill": "interface",
+    "manifest_sha256": "b08ee365b22302899084e209f09002e96242d3ce3eb4bad410d0523b4a163bec",
+    "max_completion_tokens": 4096,
+    "meta_skill_sha256": null,
+    "meta_skills": "none",
+    "method": "full",
+    "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "n_shots": 10,
+    "protocol": "vista_skill_phase5_hab_2026_09_02",
+    "resolution": 500,
+    "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+    "run_id": "1e1f65ac58b54924b5d136e619087318_seed_0",
+    "skill_fault": null,
+    "split_rotation_index": 0,
+    "split_sha256": "e6558c0c6b1e2a99603aeee7350104c888a130cef043c188ca90cdd99372fbeb",
+    "state_oracle_labels": false,
+    "tensor_parallel": 1,
+    "transition_only_gate": true
+  },
+  "schema_version": "1",
+  "snapshot_id": "v0-v1-1d5350193f6d-d37d785cc8b6",
+  "snapshot_sha256": "c1daf37565eef332a7b495ca383db53d34dfa76bb2221de4f48c236f42da8fda"
+}

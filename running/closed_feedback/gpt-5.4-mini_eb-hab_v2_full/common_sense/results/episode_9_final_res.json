@@ -1,0 +1,1 @@
+{"reward": 0.0, "num_invalid_actions": 10, "empty_plan": 0, "instruction": "A screw is loose in the sofa, bring something to fix it.", "task_success": false, "task_progress": 0.0, "subgoal_reward": 0.0, "num_steps": 19, "planner_steps": 8, "planner_output_error": 0, "num_invalid_action_ratio": 0.5263157894736842, "episode_elapsed_seconds": [42.83868956565857]}

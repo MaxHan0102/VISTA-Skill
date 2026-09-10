@@ -1,0 +1,50 @@
+{"split": "long_horizon", "episode_number": 1, "episode_id": "39", "instruction": "Transport all plate and put them on the right counter.", "api_call_start": 1}
+{"split": "long_horizon", "episode_number": 2, "episode_id": "33", "instruction": "Move all the hammer to the right counter.", "api_call_start": 6}
+{"split": "long_horizon", "episode_number": 3, "episode_id": "13", "instruction": "Deposit all apple onto the TV stand.", "api_call_start": 11}
+{"split": "long_horizon", "episode_number": 4, "episode_id": "25", "instruction": "Securely position all hammer on the brown table.", "api_call_start": 15}
+{"split": "long_horizon", "episode_number": 5, "episode_id": "30", "instruction": "Move the ball to the brown table, the block to the brown table, and the hammer to the black table.", "api_call_start": 21}
+{"split": "long_horizon", "episode_number": 6, "episode_id": "38", "instruction": "Move the rubriks cube to the left counter, the wrench to the left counter, and the bowl to the brown table.", "api_call_start": 25}
+{"split": "long_horizon", "episode_number": 7, "episode_id": "43", "instruction": "Move the hammer to the black table, the screwdriver to the left counter, and the bowl to the black table.", "api_call_start": 31}
+{"split": "long_horizon", "episode_number": 8, "episode_id": "0", "instruction": "Move the screwdriver to the brown table, the book to the black table, and the cleanser to the brown table.", "api_call_start": 40}
+{"split": "long_horizon", "episode_number": 9, "episode_id": "17", "instruction": "Move the plate to the black table, the bowl to the black table, and the hammer to the black table.", "api_call_start": 44}
+{"split": "long_horizon", "episode_number": 10, "episode_id": "15", "instruction": "Move the rubriks cube to the black table, the hammer to the left counter, and the lemon to the brown table.", "api_call_start": 54}
+{"split": "long_horizon", "episode_number": 11, "episode_id": "10", "instruction": "Move the ball to the left counter, the spoon to the black table, and the bowl to the left counter.", "api_call_start": 63}
+{"split": "long_horizon", "episode_number": 12, "episode_id": "2", "instruction": "Move the wrench to the black table, the book to the left counter, and the cleanser to the left counter.", "api_call_start": 67}
+{"split": "long_horizon", "episode_number": 13, "episode_id": "8", "instruction": "Move the spoon to the brown table, the sponge to the brown table, and the cleanser to the black table.", "api_call_start": 81}
+{"split": "long_horizon", "episode_number": 14, "episode_id": "31", "instruction": "Move the cleanser to the brown table, the sponge to the left counter, and the screwdriver to the left counter.", "api_call_start": 99}
+{"split": "long_horizon", "episode_number": 15, "episode_id": "12", "instruction": "Move the rubriks cube to the brown table, the drill to the black table, and the lemon to the black table.", "api_call_start": 102}
+{"split": "long_horizon", "episode_number": 16, "episode_id": "46", "instruction": "Move the lemon to the left counter, the block to the brown table, and the bowl to the brown table.", "api_call_start": 106}
+{"split": "long_horizon", "episode_number": 17, "episode_id": "37", "instruction": "Move the drill to the left counter, the bowl to the black table, and the screwdriver to the left counter.", "api_call_start": 108}
+{"split": "long_horizon", "episode_number": 18, "episode_id": "6", "instruction": "Move the wrench to the black table, the sponge to the black table, and the hammer to the brown table.", "api_call_start": 114}
+{"split": "long_horizon", "episode_number": 19, "episode_id": "21", "instruction": "Move the ball to the brown table, the cleanser to the black table, and the lemon to the brown table.", "api_call_start": 121}
+{"split": "long_horizon", "episode_number": 20, "episode_id": "3", "instruction": "Move the lemon to the left counter, the plate to the brown table, and the bowl to the black table.", "api_call_start": 126}
+{"split": "long_horizon", "episode_number": 21, "episode_id": "47", "instruction": "Set down all the spoon onto the right counter.", "api_call_start": 130}
+{"split": "long_horizon", "episode_number": 22, "episode_id": "5", "instruction": "Move the lemon to the black table, the book to the left counter, and the hammer to the brown table.", "api_call_start": 133}
+{"split": "long_horizon", "episode_number": 23, "episode_id": "40", "instruction": "Move the plate to the brown table, the bowl to the black table, and the hammer to the black table.", "api_call_start": 145}
+{"split": "long_horizon", "episode_number": 24, "episode_id": "27", "instruction": "Move the plate to the black table, the screwdriver to the black table, and the cleanser to the black table.", "api_call_start": 149}
+{"split": "long_horizon", "episode_number": 25, "episode_id": "22", "instruction": "Move the spoon to the black table, the hammer to the left counter, and the cleanser to the brown table.", "api_call_start": 153}
+{"split": "long_horizon", "episode_number": 26, "episode_id": "11", "instruction": "Move the screwdriver to the left counter, the strawberry to the black table, and the hammer to the left counter.", "api_call_start": 157}
+{"split": "long_horizon", "episode_number": 27, "episode_id": "29", "instruction": "Move the rubriks cube to the black table, the cleanser to the left counter, and the lemon to the left counter.", "api_call_start": 161}
+{"split": "long_horizon", "episode_number": 28, "episode_id": "9", "instruction": "Move the lemon to the brown table, the cleanser to the black table, and the hammer to the brown table.", "api_call_start": 165}
+{"split": "long_horizon", "episode_number": 29, "episode_id": "35", "instruction": "Arrange all toy airplane on the TV stand.", "api_call_start": 167}
+{"split": "long_horizon", "episode_number": 30, "episode_id": "23", "instruction": "Relocate every ball from left counter onto the black table.", "api_call_start": 172}
+{"split": "long_horizon", "episode_number": 31, "episode_id": "45", "instruction": "Shift all the pear over to black table.", "api_call_start": 177}
+{"split": "long_horizon", "episode_number": 32, "episode_id": "36", "instruction": "Arrange all banana on the right counter.", "api_call_start": 182}
+{"split": "long_horizon", "episode_number": 33, "episode_id": "20", "instruction": "Relocate every cleanser from sink onto the sofa.", "api_call_start": 183}
+{"split": "long_horizon", "episode_number": 34, "episode_id": "7", "instruction": "Place all the drill onto the TV stand.", "api_call_start": 188}
+{"split": "long_horizon", "episode_number": 35, "episode_id": "44", "instruction": "Shift all the mug over to TV stand.", "api_call_start": 192}
+{"split": "long_horizon", "episode_number": 36, "episode_id": "19", "instruction": "Carefully load all orange onto the brown table.", "api_call_start": 197}
+{"split": "long_horizon", "episode_number": 37, "episode_id": "14", "instruction": "Transfer all ball to the brown table.", "api_call_start": 198}
+{"split": "long_horizon", "episode_number": 38, "episode_id": "1", "instruction": "Put all the spoon on the brown table.", "api_call_start": 203}
+{"split": "long_horizon", "episode_number": 39, "episode_id": "41", "instruction": "Deposit all pear onto the left counter.", "api_call_start": 205}
+{"split": "long_horizon", "episode_number": 40, "episode_id": "18", "instruction": "Transfer all lego to the sofa.", "api_call_start": 211}
+{"split": "long_horizon", "episode_number": 41, "episode_id": "28", "instruction": "Shift all the padlock over to black table.", "api_call_start": 216}
+{"split": "long_horizon", "episode_number": 42, "episode_id": "42", "instruction": "Deposit all the cleanser onto sofa.", "api_call_start": 218}
+{"split": "long_horizon", "episode_number": 43, "episode_id": "4", "instruction": "Shift all the box over to right counter.", "api_call_start": 224}
+{"split": "long_horizon", "episode_number": 44, "episode_id": "24", "instruction": "Gather up all clamp and set them on the TV stand.", "api_call_start": 229}
+{"split": "long_horizon", "episode_number": 45, "episode_id": "26", "instruction": "Set down all the bowl onto the brown table.", "api_call_start": 231}
+{"split": "long_horizon", "episode_number": 46, "episode_id": "49", "instruction": "Place all the cleanser onto the black table.", "api_call_start": 238}
+{"split": "long_horizon", "episode_number": 47, "episode_id": "48", "instruction": "Shift all the strawberry over to sink.", "api_call_start": 239}
+{"split": "long_horizon", "episode_number": 48, "episode_id": "16", "instruction": "Carefully load all can onto the black table.", "api_call_start": 243}
+{"split": "long_horizon", "episode_number": 49, "episode_id": "34", "instruction": "Position all scissors on the right counter.", "api_call_start": 248}
+{"split": "long_horizon", "episode_number": 50, "episode_id": "32", "instruction": "Put all the bowl on the right counter.", "api_call_start": 250}

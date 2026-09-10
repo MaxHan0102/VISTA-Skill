@@ -1,0 +1,65 @@
+[2026-08-24T21:49:01+08:00] START stage=p3a0_oracle_smoke_run3
+[2026-08-24T21:49:01+08:00] COMMAND ["env", "PYTHONPATH=EmbodiedBench:.", "CUDA_VISIBLE_DEVICES=0", "OPENAI_API_KEY=EMPTY", "/root/miniconda3/envs/max_embench/bin/python", "-m", "vista_skill.integrations.embodiedbench.cli", "experiment", "--method", "rule_only", "--config", "configs/vista_fault_repair_fullsel_p10.json", "--manifest", "configs/eb_hab_train_validation_manifest.json", "--diagnostic", "--state-oracle-labels", "--max-acquisition-episodes", "10", "--evolution-seeds", "0", "--executor-base-url", "http://192.168.1.185:8000/v1", "--output-dir", "running/Phase3/phase3a/p3a0_oracle_smoke_run3_20260824_run"]
+2026-08-24 21:49:03,278 Initializing dataset LangRearrangeDataset-v0
+2026-08-24 21:49:03,278 Loading from /root/max/VISTA-Skill/EmbodiedBench/embodiedbench/envs/eb_habitat/datasets/train_validation.pickle
+2026-08-24 21:49:03,283 initializing sim RearrangeSim-v0
+[21:49:03:292369]:[Warning]:[Metadata] AttributesManagerBase.h(398)::buildAttrSrcPathsFromJSONAndLoad : <Articulated Object> : No Glob path result found for `data/hab_fetch_1.0/robots/fetch_no_base.urdf` so unable to load templates from that path.
+[21:49:03:304776]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_00.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304788]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_01.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304792]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_02.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304798]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_03.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304805]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_04.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304812]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_05.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304819]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_06.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304827]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_07.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304834]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_08.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304841]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_09.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304849]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_10.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304857]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_11.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304866]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_12.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304873]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_13.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304878]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_14.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304883]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_15.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304891]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_16.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304899]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_17.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304906]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_18.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304914]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_19.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+[21:49:03:304922]:[Warning]:[Metadata] SceneDatasetAttributesManager.cpp(124)::loadAndValidateMap : `navmesh_instances` Value : `navmeshes/v3_sc4_staging_20.navmesh` not found on disk as absolute path or relative to `data/replica_cad`
+Renderer: NVIDIA GeForce RTX 4090 D/PCIe/SSE2 by NVIDIA Corporation
+OpenGL version: 4.6.0 NVIDIA 575.64.03
+Using optional features:
+    GL_ARB_vertex_array_object
+    GL_ARB_separate_shader_objects
+    GL_ARB_robustness
+    GL_ARB_texture_storage
+    GL_ARB_texture_view
+    GL_ARB_framebuffer_no_attachments
+    GL_ARB_invalidate_subdata
+    GL_ARB_texture_storage_multisample
+    GL_ARB_multi_bind
+    GL_ARB_direct_state_access
+    GL_ARB_get_texture_sub_image
+    GL_ARB_texture_filter_anisotropic
+    GL_KHR_debug
+    GL_KHR_parallel_shader_compile
+    GL_NV_depth_buffer_float
+Using driver workarounds:
+    no-forward-compatible-core-context
+    nv-egl-incorrect-gl11-function-pointers
+    no-layout-qualifiers-on-old-glsl
+    nv-zero-context-profile-mask
+    nv-implementation-color-read-format-dsa-broken
+    nv-cubemap-inconsistent-compressed-image-size
+    nv-cubemap-broken-full-compressed-image-query
+    nv-compressed-block-size-in-bits
+MeshTools::compile(): ignoring Trade::MeshAttribute::TextureCoordinates 1 as its biding slot is already occupied by Trade::MeshAttribute::TextureCoordinates 0
+MeshTools::compile(): ignoring Trade::MeshAttribute::TextureCoordinates 1 as its biding slot is already occupied by Trade::MeshAttribute::TextureCoordinates 0
+MeshTools::compile(): ignoring Trade::MeshAttribute::TextureCoordinates 1 as its biding slot is already occupied by Trade::MeshAttribute::TextureCoordinates 0
+MeshTools::compile(): ignoring Trade::MeshAttribute::TextureCoordinates 1 as its biding slot is already occupied by Trade::MeshAttribute::TextureCoordinates 0
+[21:49:03:647462]:[Warning]:[Sim] Simulator.cpp(533)::instanceStageForSceneAttributes : The active scene does not contain semantic annotations : activeSemanticSceneID_ = 0
+2026-08-24 21:49:04,688 Initializing task RearrangePredicateTask-v0
+[21:49:05:415572]:[Warning]:[Sim] Simulator.cpp(533)::instanceStageForSceneAttributes : The active scene does not contain semantic annotations : activeSemanticSceneID_ = 1
+[21:51:07:931999]:[Warning]:[Sim] Simulator.cpp(533)::instanceStageForSceneAttributes : The active scene does not contain semantic annotations : activeSemanticSceneID_ = 2
+Num episodes 100
+empty plan, stop here
+[2026-08-24T21:53:02+08:00] END stage=p3a0_oracle_smoke_run3 exit_code=0

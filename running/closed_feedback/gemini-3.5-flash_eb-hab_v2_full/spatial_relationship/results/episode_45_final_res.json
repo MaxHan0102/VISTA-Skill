@@ -1,0 +1,1 @@
+{"reward": 1.0714285714285714, "num_invalid_actions": 5, "empty_plan": 0, "instruction": "Move a rubriks cube to the right of the sink.", "task_success": true, "task_progress": 1.0, "subgoal_reward": 0.0, "num_steps": 14, "planner_steps": 4, "planner_output_error": 0, "num_invalid_action_ratio": 0.35714285714285715, "episode_elapsed_seconds": [47.089359998703]}

@@ -1,0 +1,2500 @@
+{
+  "analysis_type": "natural_fault_injection_attribution_weak_audit",
+  "base_url": "http://127.0.0.1:8000/v1",
+  "conditions": {
+    "decisive_skill_partition_rule_first": {
+      "metrics": {
+        "cases": 46,
+        "confusion": {
+          "abstain->abstain": 35,
+          "skill_update->belief_refresh": 2,
+          "skill_update->skill_update": 9
+        },
+        "field_macro_f1": 0.9361111111111111,
+        "skill_update_f1": 0.9,
+        "skill_update_precision": 1.0,
+        "skill_update_recall": 0.8181818181818182,
+        "target_macro_f1": 0.6333333333333333
+      },
+      "rows": [
+        {
+          "action_type": "nav",
+          "case_index": 0,
+          "episode_id": "0",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 1,
+          "episode_id": "0",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 2,
+          "episode_id": "1",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 3,
+          "episode_id": "1",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 4,
+          "episode_id": "1",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 16
+        },
+        {
+          "action_type": "nav",
+          "case_index": 5,
+          "episode_id": "1",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 19
+        },
+        {
+          "action_type": "pick",
+          "case_index": 6,
+          "episode_id": "1",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 20
+        },
+        {
+          "action_type": "nav",
+          "case_index": 7,
+          "episode_id": "1",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 21
+        },
+        {
+          "action_type": "pick",
+          "case_index": 8,
+          "episode_id": "1",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 22
+        },
+        {
+          "action_type": "nav",
+          "case_index": 9,
+          "episode_id": "2",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "close",
+          "case_index": 10,
+          "episode_id": "2",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 11,
+          "episode_id": "3",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 12,
+          "episode_id": "3",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 4
+        },
+        {
+          "action_type": "pick",
+          "case_index": 13,
+          "episode_id": "4",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 14,
+          "episode_id": "4",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 7
+        },
+        {
+          "action_type": "pick",
+          "case_index": 15,
+          "episode_id": "4",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 14
+        },
+        {
+          "action_type": "nav",
+          "case_index": 16,
+          "episode_id": "4",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 15
+        },
+        {
+          "action_type": "nav",
+          "case_index": 17,
+          "episode_id": "6",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 18,
+          "episode_id": "6",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "belief_refresh",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 19,
+          "episode_id": "7",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 20,
+          "episode_id": "7",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 21,
+          "episode_id": "7",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 8
+        },
+        {
+          "action_type": "pick",
+          "case_index": 22,
+          "episode_id": "7",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 20
+        },
+        {
+          "action_type": "pick",
+          "case_index": 23,
+          "episode_id": "8",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 24,
+          "episode_id": "8",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 5
+        },
+        {
+          "action_type": "pick",
+          "case_index": 25,
+          "episode_id": "8",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 6
+        },
+        {
+          "action_type": "nav",
+          "case_index": 26,
+          "episode_id": "8",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 13
+        },
+        {
+          "action_type": "pick",
+          "case_index": 27,
+          "episode_id": "10",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 28,
+          "episode_id": "11",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 29,
+          "episode_id": "11",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 5
+        },
+        {
+          "action_type": "pick",
+          "case_index": 30,
+          "episode_id": "11",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 10
+        },
+        {
+          "action_type": "nav",
+          "case_index": 31,
+          "episode_id": "13",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 32,
+          "episode_id": "13",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "belief_refresh",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 33,
+          "episode_id": "14",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 34,
+          "episode_id": "14",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 35,
+          "episode_id": "14",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 4
+        },
+        {
+          "action_type": "pick",
+          "case_index": 36,
+          "episode_id": "14",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 6
+        },
+        {
+          "action_type": "nav",
+          "case_index": 37,
+          "episode_id": "15",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 38,
+          "episode_id": "15",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 39,
+          "episode_id": "15",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 6
+        },
+        {
+          "action_type": "pick",
+          "case_index": 40,
+          "episode_id": "15",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 14
+        },
+        {
+          "action_type": "nav",
+          "case_index": 41,
+          "episode_id": "16",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "close",
+          "case_index": 42,
+          "episode_id": "16",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 43,
+          "episode_id": "17",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 44,
+          "episode_id": "17",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 45,
+          "episode_id": "18",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        }
+      ]
+    },
+    "direct_qwen_teacher": {
+      "metrics": {
+        "cases": 46,
+        "confusion": {
+          "abstain->abstain": 35,
+          "skill_update->abstain": 8,
+          "skill_update->skill_update": 3
+        },
+        "field_macro_f1": 0.663003663003663,
+        "skill_update_f1": 0.42857142857142855,
+        "skill_update_precision": 1.0,
+        "skill_update_recall": 0.2727272727272727,
+        "target_macro_f1": 0.663003663003663
+      },
+      "rows": [
+        {
+          "action_type": "nav",
+          "case_index": 0,
+          "episode_id": "0",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 1,
+          "episode_id": "0",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 2,
+          "episode_id": "1",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 3,
+          "episode_id": "1",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 4,
+          "episode_id": "1",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 16
+        },
+        {
+          "action_type": "nav",
+          "case_index": 5,
+          "episode_id": "1",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 19
+        },
+        {
+          "action_type": "pick",
+          "case_index": 6,
+          "episode_id": "1",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 20
+        },
+        {
+          "action_type": "nav",
+          "case_index": 7,
+          "episode_id": "1",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 21
+        },
+        {
+          "action_type": "pick",
+          "case_index": 8,
+          "episode_id": "1",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 22
+        },
+        {
+          "action_type": "nav",
+          "case_index": 9,
+          "episode_id": "2",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "close",
+          "case_index": 10,
+          "episode_id": "2",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 11,
+          "episode_id": "3",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 12,
+          "episode_id": "3",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 4
+        },
+        {
+          "action_type": "pick",
+          "case_index": 13,
+          "episode_id": "4",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 14,
+          "episode_id": "4",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 7
+        },
+        {
+          "action_type": "pick",
+          "case_index": 15,
+          "episode_id": "4",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 14
+        },
+        {
+          "action_type": "nav",
+          "case_index": 16,
+          "episode_id": "4",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 15
+        },
+        {
+          "action_type": "nav",
+          "case_index": 17,
+          "episode_id": "6",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 18,
+          "episode_id": "6",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 19,
+          "episode_id": "7",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 20,
+          "episode_id": "7",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 21,
+          "episode_id": "7",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 8
+        },
+        {
+          "action_type": "pick",
+          "case_index": 22,
+          "episode_id": "7",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 20
+        },
+        {
+          "action_type": "pick",
+          "case_index": 23,
+          "episode_id": "8",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 24,
+          "episode_id": "8",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 5
+        },
+        {
+          "action_type": "pick",
+          "case_index": 25,
+          "episode_id": "8",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 6
+        },
+        {
+          "action_type": "nav",
+          "case_index": 26,
+          "episode_id": "8",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 13
+        },
+        {
+          "action_type": "pick",
+          "case_index": 27,
+          "episode_id": "10",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 28,
+          "episode_id": "11",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 29,
+          "episode_id": "11",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 5
+        },
+        {
+          "action_type": "pick",
+          "case_index": 30,
+          "episode_id": "11",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 10
+        },
+        {
+          "action_type": "nav",
+          "case_index": 31,
+          "episode_id": "13",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 32,
+          "episode_id": "13",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 33,
+          "episode_id": "14",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 34,
+          "episode_id": "14",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 35,
+          "episode_id": "14",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 4
+        },
+        {
+          "action_type": "pick",
+          "case_index": 36,
+          "episode_id": "14",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 6
+        },
+        {
+          "action_type": "nav",
+          "case_index": 37,
+          "episode_id": "15",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 38,
+          "episode_id": "15",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 39,
+          "episode_id": "15",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 6
+        },
+        {
+          "action_type": "pick",
+          "case_index": 40,
+          "episode_id": "15",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 14
+        },
+        {
+          "action_type": "nav",
+          "case_index": 41,
+          "episode_id": "16",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "close",
+          "case_index": 42,
+          "episode_id": "16",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 43,
+          "episode_id": "17",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 44,
+          "episode_id": "17",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 45,
+          "episode_id": "18",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        }
+      ]
+    },
+    "fault_relevant_oracle_filter": {
+      "metrics": {
+        "cases": 46,
+        "confusion": {
+          "abstain->abstain": 35,
+          "skill_update->skill_update": 11
+        },
+        "field_macro_f1": 1.0,
+        "skill_update_f1": 1.0,
+        "skill_update_precision": 1.0,
+        "skill_update_recall": 1.0,
+        "target_macro_f1": 1.0
+      },
+      "rows": [
+        {
+          "action_type": "nav",
+          "case_index": 0,
+          "episode_id": "0",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 1,
+          "episode_id": "0",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 2,
+          "episode_id": "1",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 3,
+          "episode_id": "1",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 4,
+          "episode_id": "1",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 16
+        },
+        {
+          "action_type": "nav",
+          "case_index": 5,
+          "episode_id": "1",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 19
+        },
+        {
+          "action_type": "pick",
+          "case_index": 6,
+          "episode_id": "1",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 20
+        },
+        {
+          "action_type": "nav",
+          "case_index": 7,
+          "episode_id": "1",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 21
+        },
+        {
+          "action_type": "pick",
+          "case_index": 8,
+          "episode_id": "1",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 22
+        },
+        {
+          "action_type": "nav",
+          "case_index": 9,
+          "episode_id": "2",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "close",
+          "case_index": 10,
+          "episode_id": "2",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 11,
+          "episode_id": "3",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 12,
+          "episode_id": "3",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 4
+        },
+        {
+          "action_type": "pick",
+          "case_index": 13,
+          "episode_id": "4",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 14,
+          "episode_id": "4",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 7
+        },
+        {
+          "action_type": "pick",
+          "case_index": 15,
+          "episode_id": "4",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 14
+        },
+        {
+          "action_type": "nav",
+          "case_index": 16,
+          "episode_id": "4",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 15
+        },
+        {
+          "action_type": "nav",
+          "case_index": 17,
+          "episode_id": "6",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 18,
+          "episode_id": "6",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 19,
+          "episode_id": "7",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 20,
+          "episode_id": "7",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 21,
+          "episode_id": "7",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 8
+        },
+        {
+          "action_type": "pick",
+          "case_index": 22,
+          "episode_id": "7",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 20
+        },
+        {
+          "action_type": "pick",
+          "case_index": 23,
+          "episode_id": "8",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 24,
+          "episode_id": "8",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 5
+        },
+        {
+          "action_type": "pick",
+          "case_index": 25,
+          "episode_id": "8",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 6
+        },
+        {
+          "action_type": "nav",
+          "case_index": 26,
+          "episode_id": "8",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 13
+        },
+        {
+          "action_type": "pick",
+          "case_index": 27,
+          "episode_id": "10",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 28,
+          "episode_id": "11",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 29,
+          "episode_id": "11",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 5
+        },
+        {
+          "action_type": "pick",
+          "case_index": 30,
+          "episode_id": "11",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 10
+        },
+        {
+          "action_type": "nav",
+          "case_index": 31,
+          "episode_id": "13",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 32,
+          "episode_id": "13",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 33,
+          "episode_id": "14",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 34,
+          "episode_id": "14",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 35,
+          "episode_id": "14",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 4
+        },
+        {
+          "action_type": "pick",
+          "case_index": 36,
+          "episode_id": "14",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 6
+        },
+        {
+          "action_type": "nav",
+          "case_index": 37,
+          "episode_id": "15",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 38,
+          "episode_id": "15",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 39,
+          "episode_id": "15",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 6
+        },
+        {
+          "action_type": "pick",
+          "case_index": 40,
+          "episode_id": "15",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 14
+        },
+        {
+          "action_type": "nav",
+          "case_index": 41,
+          "episode_id": "16",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "close",
+          "case_index": 42,
+          "episode_id": "16",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 43,
+          "episode_id": "17",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 44,
+          "episode_id": "17",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 45,
+          "episode_id": "18",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        }
+      ]
+    },
+    "recorded_rule_first": {
+      "metrics": {
+        "cases": 46,
+        "confusion": {
+          "abstain->abstain": 35,
+          "skill_update->abstain": 4,
+          "skill_update->belief_refresh": 2,
+          "skill_update->skill_update": 5
+        },
+        "field_macro_f1": 0.7730263157894737,
+        "skill_update_f1": 0.625,
+        "skill_update_precision": 1.0,
+        "skill_update_recall": 0.45454545454545453,
+        "target_macro_f1": 0.5236486486486487
+      },
+      "rows": [
+        {
+          "action_type": "nav",
+          "case_index": 0,
+          "episode_id": "0",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 1,
+          "episode_id": "0",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 2,
+          "episode_id": "1",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 3,
+          "episode_id": "1",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 4,
+          "episode_id": "1",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 16
+        },
+        {
+          "action_type": "nav",
+          "case_index": 5,
+          "episode_id": "1",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 19
+        },
+        {
+          "action_type": "pick",
+          "case_index": 6,
+          "episode_id": "1",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 20
+        },
+        {
+          "action_type": "nav",
+          "case_index": 7,
+          "episode_id": "1",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 21
+        },
+        {
+          "action_type": "pick",
+          "case_index": 8,
+          "episode_id": "1",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 22
+        },
+        {
+          "action_type": "nav",
+          "case_index": 9,
+          "episode_id": "2",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "close",
+          "case_index": 10,
+          "episode_id": "2",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 11,
+          "episode_id": "3",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 12,
+          "episode_id": "3",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 4
+        },
+        {
+          "action_type": "pick",
+          "case_index": 13,
+          "episode_id": "4",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 14,
+          "episode_id": "4",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 7
+        },
+        {
+          "action_type": "pick",
+          "case_index": 15,
+          "episode_id": "4",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 14
+        },
+        {
+          "action_type": "nav",
+          "case_index": 16,
+          "episode_id": "4",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 15
+        },
+        {
+          "action_type": "nav",
+          "case_index": 17,
+          "episode_id": "6",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 18,
+          "episode_id": "6",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "belief_refresh",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 19,
+          "episode_id": "7",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 20,
+          "episode_id": "7",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 21,
+          "episode_id": "7",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 8
+        },
+        {
+          "action_type": "pick",
+          "case_index": 22,
+          "episode_id": "7",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 20
+        },
+        {
+          "action_type": "pick",
+          "case_index": 23,
+          "episode_id": "8",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 24,
+          "episode_id": "8",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 5
+        },
+        {
+          "action_type": "pick",
+          "case_index": 25,
+          "episode_id": "8",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 6
+        },
+        {
+          "action_type": "nav",
+          "case_index": 26,
+          "episode_id": "8",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 13
+        },
+        {
+          "action_type": "pick",
+          "case_index": 27,
+          "episode_id": "10",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 28,
+          "episode_id": "11",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 29,
+          "episode_id": "11",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 5
+        },
+        {
+          "action_type": "pick",
+          "case_index": 30,
+          "episode_id": "11",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 10
+        },
+        {
+          "action_type": "nav",
+          "case_index": 31,
+          "episode_id": "13",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 32,
+          "episode_id": "13",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "belief_refresh",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 33,
+          "episode_id": "14",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 34,
+          "episode_id": "14",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 35,
+          "episode_id": "14",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 4
+        },
+        {
+          "action_type": "pick",
+          "case_index": 36,
+          "episode_id": "14",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 6
+        },
+        {
+          "action_type": "nav",
+          "case_index": 37,
+          "episode_id": "15",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 38,
+          "episode_id": "15",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 39,
+          "episode_id": "15",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 6
+        },
+        {
+          "action_type": "pick",
+          "case_index": 40,
+          "episode_id": "15",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 14
+        },
+        {
+          "action_type": "nav",
+          "case_index": 41,
+          "episode_id": "16",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "close",
+          "case_index": 42,
+          "episode_id": "16",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 43,
+          "episode_id": "17",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 44,
+          "episode_id": "17",
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 45,
+          "episode_id": "18",
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        }
+      ]
+    },
+    "rule_first_with_teacher": {
+      "metrics": {
+        "cases": 46,
+        "confusion": {
+          "abstain->abstain": 35,
+          "skill_update->abstain": 4,
+          "skill_update->belief_refresh": 2,
+          "skill_update->skill_update": 5
+        },
+        "field_macro_f1": 0.7730263157894737,
+        "skill_update_f1": 0.625,
+        "skill_update_precision": 1.0,
+        "skill_update_recall": 0.45454545454545453,
+        "target_macro_f1": 0.5236486486486487
+      },
+      "rows": [
+        {
+          "action_type": "nav",
+          "case_index": 0,
+          "episode_id": "0",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 1,
+          "episode_id": "0",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 2,
+          "episode_id": "1",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 3,
+          "episode_id": "1",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 4,
+          "episode_id": "1",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 16
+        },
+        {
+          "action_type": "nav",
+          "case_index": 5,
+          "episode_id": "1",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 19
+        },
+        {
+          "action_type": "pick",
+          "case_index": 6,
+          "episode_id": "1",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 20
+        },
+        {
+          "action_type": "nav",
+          "case_index": 7,
+          "episode_id": "1",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 21
+        },
+        {
+          "action_type": "pick",
+          "case_index": 8,
+          "episode_id": "1",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 22
+        },
+        {
+          "action_type": "nav",
+          "case_index": 9,
+          "episode_id": "2",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "close",
+          "case_index": 10,
+          "episode_id": "2",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 11,
+          "episode_id": "3",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 12,
+          "episode_id": "3",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 4
+        },
+        {
+          "action_type": "pick",
+          "case_index": 13,
+          "episode_id": "4",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 14,
+          "episode_id": "4",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 7
+        },
+        {
+          "action_type": "pick",
+          "case_index": 15,
+          "episode_id": "4",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 14
+        },
+        {
+          "action_type": "nav",
+          "case_index": 16,
+          "episode_id": "4",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 15
+        },
+        {
+          "action_type": "nav",
+          "case_index": 17,
+          "episode_id": "6",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 18,
+          "episode_id": "6",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "belief_refresh",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 19,
+          "episode_id": "7",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 20,
+          "episode_id": "7",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 21,
+          "episode_id": "7",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 8
+        },
+        {
+          "action_type": "pick",
+          "case_index": 22,
+          "episode_id": "7",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 20
+        },
+        {
+          "action_type": "pick",
+          "case_index": 23,
+          "episode_id": "8",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 24,
+          "episode_id": "8",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 5
+        },
+        {
+          "action_type": "pick",
+          "case_index": 25,
+          "episode_id": "8",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 6
+        },
+        {
+          "action_type": "nav",
+          "case_index": 26,
+          "episode_id": "8",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 13
+        },
+        {
+          "action_type": "pick",
+          "case_index": 27,
+          "episode_id": "10",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 28,
+          "episode_id": "11",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 29,
+          "episode_id": "11",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 5
+        },
+        {
+          "action_type": "pick",
+          "case_index": 30,
+          "episode_id": "11",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 10
+        },
+        {
+          "action_type": "nav",
+          "case_index": 31,
+          "episode_id": "13",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 32,
+          "episode_id": "13",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "belief_refresh",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 33,
+          "episode_id": "14",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 34,
+          "episode_id": "14",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 35,
+          "episode_id": "14",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 4
+        },
+        {
+          "action_type": "pick",
+          "case_index": 36,
+          "episode_id": "14",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 6
+        },
+        {
+          "action_type": "nav",
+          "case_index": 37,
+          "episode_id": "15",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 38,
+          "episode_id": "15",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 39,
+          "episode_id": "15",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 6
+        },
+        {
+          "action_type": "pick",
+          "case_index": 40,
+          "episode_id": "15",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "effect",
+          "predicted_target": "skill_update",
+          "step_id": 14
+        },
+        {
+          "action_type": "nav",
+          "case_index": 41,
+          "episode_id": "16",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "close",
+          "case_index": 42,
+          "episode_id": "16",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "nav",
+          "case_index": 43,
+          "episode_id": "17",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 1
+        },
+        {
+          "action_type": "pick",
+          "case_index": 44,
+          "episode_id": "17",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        },
+        {
+          "action_type": "pick",
+          "case_index": 45,
+          "episode_id": "18",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "step_id": 2
+        }
+      ]
+    }
+  },
+  "fault": "effect_pick_inversion",
+  "gold_positive_count": 11,
+  "gold_positive_rule_suffix": ":effect_pick_holds_target_category",
+  "limitation": "The injected fault rule defines positive weak gold before outcomes. Controls are not independently annotated for unrelated natural Skill defects; the oracle filter is a mechanism upper bound, not a deployable method.",
+  "meta_skill_sha256": "ec349ec8bbb0a6dced55267fc0d44c0259a4772f384b3adab765fa0faeff43cc",
+  "meta_skills": "frozen_v1",
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "seed": 1,
+  "source_events": "running/Phase2/phase2_effect_pick_inversion/full/seed_0/acquisition.jsonl",
+  "teacher_usage": {
+    "vista_meta_attribution": {
+      "calls": 46,
+      "completion_tokens": 10078,
+      "prompt_tokens": 32794
+    }
+  }
+}

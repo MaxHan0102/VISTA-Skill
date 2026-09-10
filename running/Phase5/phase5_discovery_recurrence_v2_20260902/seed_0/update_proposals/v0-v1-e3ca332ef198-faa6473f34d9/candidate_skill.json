@@ -1,0 +1,80 @@
+{
+  "artifact_sha256": "7ef74fc952c66bb700f5c512278b53ad24844a69213ca3a5bd96375668b218e8",
+  "protocol": {
+    "snapshot_id": "v0-v1-e3ca332ef198-faa6473f34d9",
+    "snapshot_role": "candidate",
+    "source_protocol": {
+      "acquisition_episode_budget": 2,
+      "config_sha256": "1eba1c1bb656e56aa755c15ee1db723f96cf93aff8030eabd174dc79489e3eb0",
+      "diagnostic": true,
+      "env": "eb-hab",
+      "evaluation_data_policy": "vista_skill_embodiedbench_integrity_v1_2026_09_02",
+      "evaluation_data_policy_sha256": "69e8f15c928ed9a06a178c87aedca97b6730e425e47e42862d6b1e6fff3bbbe3",
+      "evidence_guard": "authority_aware",
+      "evolution_seed": 0,
+      "evolution_seeds": [
+        0
+      ],
+      "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+      "executor_model_type": "remote",
+      "executor_temperature": 0.0,
+      "frozen": true,
+      "gate_rollout_seeds": [
+        0,
+        1,
+        2
+      ],
+      "guard_min_visual_confidence": 0.75,
+      "guard_min_visual_coverage": 0.5,
+      "initial_skill": "interface",
+      "manifest_sha256": "b08ee365b22302899084e209f09002e96242d3ce3eb4bad410d0523b4a163bec",
+      "max_completion_tokens": 4096,
+      "meta_skill_sha256": null,
+      "meta_skills": "none",
+      "method": "full",
+      "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+      "n_shots": 10,
+      "protocol": "vista_skill_phase5_hab_2026_09_02",
+      "resolution": 500,
+      "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+      "run_id": "d77ca2508b7646aeba3553a98665ac03_seed_0",
+      "skill_fault": null,
+      "split_rotation_index": 0,
+      "split_sha256": "e6558c0c6b1e2a99603aeee7350104c888a130cef043c188ca90cdd99372fbeb",
+      "state_oracle_labels": false,
+      "tensor_parallel": 1,
+      "transition_only_gate": true
+    }
+  },
+  "schema_version": "2",
+  "skill": {
+    "activation": [],
+    "constraint": [],
+    "effect": [
+      "After a successful place, verify that the gripper is free."
+    ],
+    "frozen": false,
+    "metadata": {
+      "initialization": "interface-only",
+      "prior_task_rules": 0,
+      "prior_transition_rules": 0
+    },
+    "parent_version": 0,
+    "prediction_rules": [
+      {
+        "action_type": "place",
+        "after": "true",
+        "before": null,
+        "field": "effect",
+        "predicate": "not_holding",
+        "rule_id": "discovered_place_211ffbcbe1"
+      }
+    ],
+    "procedure": [],
+    "skill_id": "shared_embodied_execution",
+    "termination": [],
+    "termination_policy": "all_goals_evidence",
+    "version": 1
+  },
+  "skill_sha256": "faa6473f34d9185c24858ecdf86fd43d79b989a9bc0a071c3bb081a207a2872d"
+}

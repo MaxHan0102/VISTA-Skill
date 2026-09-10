@@ -1,0 +1,48 @@
+{
+  "claim_eligible": false,
+  "config": "configs/vista_phase5_hab.json",
+  "config_sha256": "cdf7e45681e6200df09f5f154f0403325c53e4b0747286d61300ae0d02ce0b2b",
+  "current_counts": {
+    "promoted": 0,
+    "rejected": 1,
+    "shadow": 0
+  },
+  "decision_count": 1,
+  "decisions": [
+    {
+      "current_disposition": "rejected",
+      "failed_stage": "paired_proxy",
+      "failed_stage_metrics": {
+        "affected_independent_tasks": 7.0,
+        "affected_lcb": -0.29047619047619044,
+        "affected_mean_delta": 0.003665983139667325,
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": -0.20309523809523808,
+        "mean_delta": 0.0025661881977671274,
+        "protected_independent_tasks": 3.0,
+        "protected_lcb": 0.0,
+        "protected_mean_delta": 0.0,
+        "semantic_scope_tag_count": 1.0,
+        "sequential_early_stop": 0.0,
+        "sequential_looks": 4.0,
+        "sequential_stop_budget": 10.0,
+        "worst_subgroup_delta": -0.0023809523809523864
+      },
+      "lineage": "running/Phase5/phase5_temporal_sequential_paired_e6_20260903_rerun1/seed_0/lineage.jsonl",
+      "lineage_sha256": "f7f374538ac00bac105bc9980c640f4418d538c9c52e8f7fb7b12963a1f8bed2",
+      "patch_id": "11dcf7f10cba47348066",
+      "promotion_changed": false,
+      "record_index": 0,
+      "replayed_disposition": "shadow"
+    }
+  ],
+  "diagnostic": true,
+  "promotion_change_count": 0,
+  "replayed_counts": {
+    "promoted": 0,
+    "rejected": 0,
+    "shadow": 1
+  },
+  "retention_only": true
+}

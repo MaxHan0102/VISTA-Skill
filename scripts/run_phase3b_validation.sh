@@ -4,10 +4,10 @@ set -euo pipefail
 cd /root/max/VISTA-Skill
 
 PY=/root/miniconda3/envs/max_embench/bin/python
-OUT=running/phase3b
-DATASET=running/phase3a/phase3a_dataset_v3_cachefix_20260825.json
-FB_CACHE=running/phase3a/cache_images_feedback_20260824.jsonl
-IMAGE_CACHE=running/phase3a/cache_images_only_20260824.jsonl
+OUT=running/Phase3/phase3b
+DATASET=running/Phase3/phase3a/phase3a_dataset_v3_cachefix_20260825.json
+FB_CACHE=running/Phase3/phase3a/cache_images_feedback_20260824.jsonl
+IMAGE_CACHE=running/Phase3/phase3a/cache_images_only_20260824.jsonl
 EXECUTOR_ENDPOINT=http://192.168.1.185:8000/v1
 EVIDENCE_ENDPOINT_A=http://192.168.1.185:8000/v1
 EVIDENCE_ENDPOINT_B=http://192.168.1.173:8001/v1

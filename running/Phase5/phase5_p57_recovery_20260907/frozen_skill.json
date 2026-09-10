@@ -1,0 +1,29 @@
+{
+  "artifact_sha256": "7e057d8b51dc304dd8c213961f7fe1cf76bb4fb13007ebe776362e76d62af1ca",
+  "protocol": {
+    "claim_eligible": false,
+    "diagnostic": true,
+    "diagnostic_promotion": false,
+    "preregistration_sha256": "e17d2c3fb5d97f96c750203b3de5483e71300514fa4508140e1e69dd194bc01d"
+  },
+  "schema_version": "2",
+  "skill": {
+    "activation": [],
+    "constraint": [],
+    "effect": [],
+    "frozen": true,
+    "metadata": {
+      "initialization": "interface-only",
+      "prior_task_rules": 0,
+      "prior_transition_rules": 0
+    },
+    "parent_version": null,
+    "prediction_rules": [],
+    "procedure": [],
+    "skill_id": "shared_embodied_execution",
+    "termination": [],
+    "termination_policy": "all_goals_evidence",
+    "version": 0
+  },
+  "skill_sha256": "4fef6d3c4ccac5315b45f0ba7e83fad99ba768fec7a8485bd016801f6b1d5659"
+}

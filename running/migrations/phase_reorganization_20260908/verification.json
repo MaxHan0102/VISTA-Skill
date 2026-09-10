@@ -1,0 +1,24 @@
+{
+  "status": "verified",
+  "move_units": 217,
+  "file_count": 48514,
+  "bytes": 6271919219,
+  "sha256_verified_files": 48514,
+  "compatibility_links_verified": 217,
+  "phase_move_units": {
+    "1": 107,
+    "2": 45,
+    "3": 16,
+    "5": 41,
+    "4": 8
+  },
+  "protected_directory": "running/closed_feedback",
+  "protected_directory_inode_unchanged": true,
+  "excluded": [
+    "running/embodiedbench_native_nav",
+    "running/stock_v2_*",
+    "EmbodiedBench/running/eb_nav",
+    "EmbodiedBench/running/eb_habitat/images"
+  ],
+  "original_artifact_contents_modified": false
+}

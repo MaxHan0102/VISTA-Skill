@@ -1,0 +1,20 @@
+{
+  "artifact_sha256": null,
+  "attribution_enabled": false,
+  "dataset_sha256": "6b575621a6b15e90e1040dd86d661a5e1ee70134f42fd7f3d61706347449c55a",
+  "diagnostic": false,
+  "diagnostic_subset": false,
+  "env": "eb-nav",
+  "episodes": 60,
+  "evaluation_mode": "no_skill",
+  "manifest_sha256": null,
+  "mean_task_progress": 0.0,
+  "mean_task_success": 0.6333333333333333,
+  "mode": "frozen_evaluation",
+  "patching_enabled": false,
+  "rollout_seed": 0,
+  "run_id": "evaluate_5c1d770e3c274ddc8671b9a32e2426cb",
+  "skill_sha256": null,
+  "stage": "official_test",
+  "teacher_enabled": false
+}

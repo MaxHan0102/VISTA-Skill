@@ -1,0 +1,16 @@
+[
+  {
+    "endpoint": "http://192.168.1.185:8000",
+    "version": {
+      "version": "0.27.1"
+    },
+    "/server_info?config_format=json": "HTTP Error 404: Not Found"
+  },
+  {
+    "endpoint": "http://192.168.1.192:8001",
+    "version": {
+      "version": "0.27.1"
+    },
+    "/server_info?config_format=json": "HTTP Error 404: Not Found"
+  }
+]

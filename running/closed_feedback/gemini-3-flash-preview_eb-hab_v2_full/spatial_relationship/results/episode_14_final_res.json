@@ -1,0 +1,1 @@
+{"reward": 0.15625, "num_invalid_actions": 0, "empty_plan": 1, "instruction": "Move a sponge from the brown table to the right receptacle of the left counter.", "task_success": 0, "task_progress": 0, "subgoal_reward": 0, "num_steps": 8, "planner_steps": 3, "planner_output_error": 0, "num_invalid_action_ratio": 0.0, "episode_elapsed_seconds": 12.159275531768799}

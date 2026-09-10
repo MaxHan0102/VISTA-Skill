@@ -1,0 +1,1 @@
+{"reward": 6.666666666666666, "num_invalid_actions": 0, "empty_plan": 0, "instruction": "Displace the strawberry from the sink.", "task_success": true, "task_progress": 1.0, "subgoal_reward": 1.6666666666666665, "num_steps": 2, "planner_steps": 1, "planner_output_error": 0, "num_invalid_action_ratio": 0.0, "episode_elapsed_seconds": [3.237445831298828]}

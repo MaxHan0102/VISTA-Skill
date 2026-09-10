@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "protocol": "stock_feedback_v2",
+  "smoke_policy": false,
+  "api_calls": 107,
+  "all_categories": false,
+  "categories": {
+    "base": {
+      "episodes": 50,
+      "task_success": 0.5
+    }
+  },
+  "category_mean_success": 0.5
+}

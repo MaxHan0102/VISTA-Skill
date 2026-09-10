@@ -1,0 +1,26 @@
+{
+  "artifact_sha256": "d1de69cbbd2ca6520f05fc74386ad104d83faa84411e882dce8ada40bbbe24cd",
+  "protocol": {
+    "diagnostic": true
+  },
+  "schema_version": "2",
+  "skill": {
+    "activation": [],
+    "constraint": [],
+    "effect": [],
+    "frozen": false,
+    "metadata": {
+      "initialization": "interface-only",
+      "prior_task_rules": 0,
+      "prior_transition_rules": 0
+    },
+    "parent_version": null,
+    "prediction_rules": [],
+    "procedure": [],
+    "skill_id": "shared_embodied_execution",
+    "termination": [],
+    "termination_policy": "all_goals_evidence",
+    "version": 0
+  },
+  "skill_sha256": "052b4e954e04a6d3ae64888d15feb09285bd3dec72061a29210a94d57f8c792e"
+}

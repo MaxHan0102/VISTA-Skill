@@ -1,0 +1,38 @@
+{
+  "phase": "Phase3C",
+  "stage": "frozen_offline_gate",
+  "launched_local_time": "2026-08-25T15:22:00+08:00",
+  "workspace": "/root/max/VISTA-Skill",
+  "git_head": "439aab7",
+  "python": "/root/miniconda3/envs/max_embench/bin/python",
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "model_endpoint": "http://127.0.0.1:8000/v1",
+  "serving": {
+    "tmux_session": "phase3c_vllm",
+    "precision": "fp8",
+    "tensor_parallel": 1,
+    "max_model_len": 16384,
+    "gpu": "NVIDIA GeForce RTX 4090 D",
+    "probe": "6/6 passed"
+  },
+  "experiment": {
+    "tmux_session": "phase3c_offline",
+    "driver": "scripts/run_phase3c_offline.sh",
+    "log": "running/Phase3/phase3c/runtime/offline.log",
+    "resume_policy": "skip only non-empty immutable outputs",
+    "temperature": 0.0,
+    "seeds": [0, 1, 2, 3, 4]
+  },
+  "frozen_meta_skill": {
+    "version": "phase3c_frozen_v1",
+    "content_sha256": "ec349ec8bbb0a6dced55267fc0d44c0259a4772f384b3adab765fa0faeff43cc",
+    "snapshot_file_sha256": "15f9241b3ad2e08670412ff9e127723b11b0ec73a091106b1be11a34c80856f8",
+    "whitespace_token_proxy": 423
+  },
+  "prelaunch_validation": {
+    "pytest": "235 passed",
+    "meta_skill_module_sha256": "4cb16bb89a009c0daaab415c77c3722b04e46dd7c342d2fb5fa154652e63174e",
+    "offline_driver_sha256": "6fd04086129c2378956f8cb7e7cc2831602653fb9f3bf80622662e9fae0ceb4a",
+    "offline_finalizer_sha256": "611b98606049eeb1583719a727793b977c812211a9c8d05299fddb2941809c57"
+  }
+}

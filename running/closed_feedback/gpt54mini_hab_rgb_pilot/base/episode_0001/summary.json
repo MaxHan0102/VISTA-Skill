@@ -1,0 +1,14 @@
+{
+  "task_success": 1.0,
+  "task_progress": 1.0,
+  "environment_steps": 2,
+  "policy_calls": 2,
+  "api_calls": 2,
+  "format_errors": 0,
+  "prompt_tokens": 7754,
+  "completion_tokens": 313,
+  "elapsed_seconds": 10.951776592992246,
+  "invalid_actions": 0,
+  "adjacent_repeats": 0,
+  "stop_reason": "environment_done"
+}

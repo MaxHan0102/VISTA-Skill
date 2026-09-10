@@ -1,0 +1,55 @@
+{
+  "candidate_artifact_sha256": "28c4f4fd4ae0f2a69c9ec352ccea901ddb1b6daffd9b6d85b0f61a8e6d811fd3",
+  "candidate_skill_sha256": "e818019fea3abef49cd487fc888cbcbd0616a89b1354060ddfb1b1c8b369e634",
+  "candidate_version": 1,
+  "evidence_ids": [
+    "15:s5:feedback:not_holding",
+    "15:s5:visual:0:at(wrench,receptacle_aabb_sink_kitchen_counter)",
+    "15:s5:visual:4:near(wrench)",
+    "15:s17:visual:9:not_holding",
+    "15:s17:visual:0:at(wrench,receptacle_aabb_sink_kitchen_counter)",
+    "15:s17:visual:8:near(wrench)"
+  ],
+  "field": "constraint",
+  "parent_artifact_sha256": "5d62493f9ed7d0ce5960a692b2c2b333021327d34f28a208b824d56dd7ae6485",
+  "parent_skill_sha256": "bf7ff08f9026c1f9aa0fc981c32204bf4d4cf74324d9f413e0ee04c128153e1c",
+  "parent_version": 0,
+  "patch_id": "7aec04e1e763432fb20e",
+  "promoted": false,
+  "protocol": {
+    "acquisition_episode_budget": 20,
+    "config_sha256": "b4e00516096fb9156f610e165ab89b04b1ab82f02c7d07ef76fb862e7c22434c",
+    "diagnostic": true,
+    "env": "eb-hab",
+    "evolution_seed": 0,
+    "evolution_seeds": [
+      0
+    ],
+    "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "executor_model_type": "remote",
+    "executor_temperature": 0.0,
+    "frozen": true,
+    "gate_rollout_seeds": [
+      0,
+      1,
+      2
+    ],
+    "initial_skill": "shared",
+    "manifest_sha256": "b08ee365b22302899084e209f09002e96242d3ce3eb4bad410d0523b4a163bec",
+    "max_completion_tokens": 4096,
+    "method": "full",
+    "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "n_shots": 10,
+    "protocol": "vista_skill_fault_repair_fullsel_p10f30_2026_08_20",
+    "resolution": 500,
+    "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+    "run_id": "7d09ee85e56640a6abdcf34a0dd4bfa4_seed_0",
+    "skill_fault": "constraint_pick_multihold",
+    "split_rotation_index": 0,
+    "split_sha256": "e6558c0c6b1e2a99603aeee7350104c888a130cef043c188ca90cdd99372fbeb",
+    "tensor_parallel": 1
+  },
+  "schema_version": "1",
+  "snapshot_id": "v0-v1-3b3338c01b7b-e818019fea3a",
+  "snapshot_sha256": "7389e6712b3be1c72e51b690054042cd4145f15611ea8083b254a5de07080e5b"
+}

@@ -1,0 +1,27 @@
+COMMAND ["/root/miniconda3/envs/max_embench/bin/python", "-m", "vista_skill.integrations.embodiedbench.cli", "evaluate", "--env", "eb-nav", "--eval-set", "common_sense", "--stage", "official_test", "--mode", "no_skill", "--config", "configs/vista_nav.json", "--model-name", "Qwen/Qwen3-VL-8B-Instruct", "--model-type", "remote", "--executor-base-url", "http://192.168.1.185:8000/v1", "--resolution", "500", "--tp", "1", "--seed", "0", "--diagnostic", "--max-episodes", "20", "--output", "running/Phase4/target_skill_oracle_v1/validation_common_sense_seed0/eb_nav/common_sense/no_skill/events.jsonl"]
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/max_embench/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/root/miniconda3/envs/max_embench/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/root/max/VISTA-Skill/vista_skill/integrations/embodiedbench/cli.py", line 1431, in <module>
+    main()
+  File "/root/max/VISTA-Skill/vista_skill/integrations/embodiedbench/cli.py", line 245, in main
+    _run_frozen_evaluation(args)
+  File "/root/max/VISTA-Skill/vista_skill/integrations/embodiedbench/cli.py", line 517, in _run_frozen_evaluation
+    env = _create_env(
+  File "/root/max/VISTA-Skill/vista_skill/integrations/embodiedbench/cli.py", line 592, in _create_env
+    return create_nav_env(
+  File "/root/max/VISTA-Skill/vista_skill/integrations/embodiedbench/environment.py", line 227, in create_nav_env
+    module = importlib.import_module("embodiedbench.envs.eb_navigation.EBNavEnv")
+  File "/root/miniconda3/envs/max_embench/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/root/max/VISTA-Skill/EmbodiedBench/embodiedbench/envs/eb_navigation/EBNavEnv.py", line 10, in <module>
+    from ai2thor.platform import CloudRendering
+ModuleNotFoundError: No module named 'ai2thor.platform'

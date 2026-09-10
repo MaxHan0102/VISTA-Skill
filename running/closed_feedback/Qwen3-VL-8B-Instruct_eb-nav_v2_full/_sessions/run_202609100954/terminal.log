@@ -1,0 +1,1660 @@
+Output directory: /root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954
+[2026-09-10 09:54:54,517][INFO] - Current eval set: base
+Episodes:   0%|                                                                                                                                                                                                                            | 0/60 [00:00<?, ?it/s][2026-09-10 09:54:55,899][INFO] - Evaluating episode 0 ...
+INFO:EB_logger:Evaluating episode 0 ...
+[2026-09-10 09:54:55,899][INFO] - Restoring scene FloorPlan11...
+INFO:EB_logger:Restoring scene FloorPlan11...
+Instruction: navigate to the Bread in the room and be as close as possible to it
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Failed to decode JSON: Unterminated string starting at: line 3 column 31 (char 451)
+random action
+Planner Output Action: 4
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 0, 5, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 5, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:   2%|███▌                                                                                                                                                                                                              | 1/60 [01:13<1:12:01, 73.24s/it][2026-09-10 09:56:09,144][INFO] - Evaluating episode 1 ...
+INFO:EB_logger:Evaluating episode 1 ...
+[2026-09-10 09:56:09,144][INFO] - Restoring scene FloorPlan12...
+INFO:EB_logger:Restoring scene FloorPlan12...
+Instruction: navigate to the Pot in the room and be as close as possible to it
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 0, 2, 0, 2, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:   3%|███████                                                                                                                                                                                                             | 2/60 [01:27<37:24, 38.69s/it][2026-09-10 09:56:23,653][INFO] - Evaluating episode 2 ...
+INFO:EB_logger:Evaluating episode 2 ...
+[2026-09-10 09:56:23,653][INFO] - Restoring scene FloorPlan13...
+INFO:EB_logger:Restoring scene FloorPlan13...
+Instruction: navigate to the Toaster in the room and be as close as possible to it
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [5]
+Executed action: 5, Task success: 0.0
+Planner Output Action: [0, 3, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:   5%|██████████▌                                                                                                                                                                                                         | 3/60 [01:54<31:27, 33.11s/it][2026-09-10 09:56:50,125][INFO] - Evaluating episode 3 ...
+INFO:EB_logger:Evaluating episode 3 ...
+[2026-09-10 09:56:50,126][INFO] - Restoring scene FloorPlan14...
+INFO:EB_logger:Restoring scene FloorPlan14...
+Instruction: navigate to the Pot in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:   7%|██████████████▏                                                                                                                                                                                                     | 4/60 [02:20<28:17, 30.32s/it][2026-09-10 09:57:16,158][INFO] - Evaluating episode 4 ...
+INFO:EB_logger:Evaluating episode 4 ...
+[2026-09-10 09:57:16,158][INFO] - Restoring scene FloorPlan15...
+INFO:EB_logger:Restoring scene FloorPlan15...
+Instruction: navigate to the Pot in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:   8%|█████████████████▋                                                                                                                                                                                                  | 5/60 [02:34<22:23, 24.43s/it][2026-09-10 09:57:30,145][INFO] - Evaluating episode 5 ...
+INFO:EB_logger:Evaluating episode 5 ...
+[2026-09-10 09:57:30,145][INFO] - Restoring scene FloorPlan16...
+INFO:EB_logger:Restoring scene FloorPlan16...
+Instruction: navigate to the Cup in the room and be as close as possible to it
+Planner Output Action: [2]
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 1.0
+Episodes:  10%|█████████████████████▏                                                                                                                                                                                              | 6/60 [02:49<19:15, 21.41s/it][2026-09-10 09:57:45,681][INFO] - Evaluating episode 6 ...
+INFO:EB_logger:Evaluating episode 6 ...
+[2026-09-10 09:57:45,681][INFO] - Restoring scene FloorPlan17...
+INFO:EB_logger:Restoring scene FloorPlan17...
+Instruction: navigate to the Tomato in the room and be as close as possible to it
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 2, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  12%|████████████████████████▋                                                                                                                                                                                           | 7/60 [03:03<16:34, 18.76s/it][2026-09-10 09:57:58,981][INFO] - Evaluating episode 7 ...
+INFO:EB_logger:Evaluating episode 7 ...
+[2026-09-10 09:57:58,981][INFO] - Restoring scene FloorPlan18...
+INFO:EB_logger:Restoring scene FloorPlan18...
+Instruction: navigate to the Toaster in the room and be as close as possible to it
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 3]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 3, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  13%|████████████████████████████▎                                                                                                                                                                                       | 8/60 [03:21<16:03, 18.53s/it][2026-09-10 09:58:17,018][INFO] - Evaluating episode 8 ...
+INFO:EB_logger:Evaluating episode 8 ...
+[2026-09-10 09:58:17,018][INFO] - Restoring scene FloorPlan19...
+INFO:EB_logger:Restoring scene FloorPlan19...
+Instruction: navigate to the Lettuce in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  15%|███████████████████████████████▊                                                                                                                                                                                    | 9/60 [03:32<13:52, 16.33s/it][2026-09-10 09:58:28,516][INFO] - Evaluating episode 9 ...
+INFO:EB_logger:Evaluating episode 9 ...
+[2026-09-10 09:58:28,516][INFO] - Restoring scene FloorPlan20...
+INFO:EB_logger:Restoring scene FloorPlan20...
+Instruction: navigate to the Toaster in the room and be as close as possible to it
+Planner Output Action: [3]
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 3, 0, 3, 0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 2, 4]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Planner Output Action: [5, 0, 0, 0, 0]
+Executed action: 5, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  17%|███████████████████████████████████▏                                                                                                                                                                               | 10/60 [03:54<15:07, 18.15s/it][2026-09-10 09:58:50,727][INFO] - Evaluating episode 10 ...
+INFO:EB_logger:Evaluating episode 10 ...
+[2026-09-10 09:58:50,728][INFO] - Restoring scene FloorPlan21...
+INFO:EB_logger:Restoring scene FloorPlan21...
+Instruction: navigate to the GarbageCan in the room and be as close as possible to it
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 2, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 1.0
+Episodes:  18%|██████████████████████████████████████▋                                                                                                                                                                            | 11/60 [04:06<13:13, 16.19s/it][2026-09-10 09:59:02,474][INFO] - Evaluating episode 11 ...
+INFO:EB_logger:Evaluating episode 11 ...
+[2026-09-10 09:59:02,474][INFO] - Restoring scene FloorPlan22...
+INFO:EB_logger:Restoring scene FloorPlan22...
+Instruction: navigate to the Kettle in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 3, 3, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 0, 0, 0, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  20%|██████████████████████████████████████████▏                                                                                                                                                                        | 12/60 [04:28<14:24, 18.01s/it][2026-09-10 09:59:24,637][INFO] - Evaluating episode 12 ...
+INFO:EB_logger:Evaluating episode 12 ...
+[2026-09-10 09:59:24,637][INFO] - Restoring scene FloorPlan23...
+INFO:EB_logger:Restoring scene FloorPlan23...
+Instruction: navigate to the StoveBurner in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0]
+Executed action: 0, Task success: 1.0
+Episodes:  22%|█████████████████████████████████████████████▋                                                                                                                                                                     | 13/60 [04:41<12:56, 16.51s/it][2026-09-10 09:59:37,713][INFO] - Evaluating episode 13 ...
+INFO:EB_logger:Evaluating episode 13 ...
+[2026-09-10 09:59:37,713][INFO] - Restoring scene FloorPlan24...
+INFO:EB_logger:Restoring scene FloorPlan24...
+Instruction: navigate to the Pot in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 5, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 5, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Episodes:  23%|█████████████████████████████████████████████████▏                                                                                                                                                                 | 14/60 [05:08<15:04, 19.67s/it][2026-09-10 10:00:04,675][INFO] - Evaluating episode 14 ...
+INFO:EB_logger:Evaluating episode 14 ...
+[2026-09-10 10:00:04,675][INFO] - Restoring scene FloorPlan25...
+INFO:EB_logger:Restoring scene FloorPlan25...
+Instruction: navigate to the Cup in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 1.0
+Episodes:  25%|████████████████████████████████████████████████████▊                                                                                                                                                              | 15/60 [05:30<15:11, 20.26s/it][2026-09-10 10:00:26,303][INFO] - Evaluating episode 15 ...
+INFO:EB_logger:Evaluating episode 15 ...
+[2026-09-10 10:00:26,303][INFO] - Restoring scene FloorPlan26...
+INFO:EB_logger:Restoring scene FloorPlan26...
+Instruction: navigate to the Pot in the room and be as close as possible to it
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 4, 5, 4]
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 5, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  27%|████████████████████████████████████████████████████████▎                                                                                                                                                          | 16/60 [05:56<16:08, 22.02s/it][2026-09-10 10:00:52,408][INFO] - Evaluating episode 16 ...
+INFO:EB_logger:Evaluating episode 16 ...
+[2026-09-10 10:00:52,409][INFO] - Restoring scene FloorPlan27...
+INFO:EB_logger:Restoring scene FloorPlan27...
+Instruction: navigate to the Pot in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0]
+Executed action: 2, Task success: 1.0
+Episodes:  28%|███████████████████████████████████████████████████████████▊                                                                                                                                                       | 17/60 [06:12<14:34, 20.34s/it][2026-09-10 10:01:08,860][INFO] - Evaluating episode 17 ...
+INFO:EB_logger:Evaluating episode 17 ...
+[2026-09-10 10:01:08,860][INFO] - Restoring scene FloorPlan28...
+INFO:EB_logger:Restoring scene FloorPlan28...
+Instruction: navigate to the Lettuce in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 0, 3, 0, 3]
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 3, 0, 4, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 3, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  30%|███████████████████████████████████████████████████████████████▎                                                                                                                                                   | 18/60 [06:36<14:53, 21.27s/it][2026-09-10 10:01:32,300][INFO] - Evaluating episode 18 ...
+INFO:EB_logger:Evaluating episode 18 ...
+[2026-09-10 10:01:32,300][INFO] - Restoring scene FloorPlan29...
+INFO:EB_logger:Restoring scene FloorPlan29...
+Instruction: navigate to the Kettle in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  32%|██████████████████████████████████████████████████████████████████▊                                                                                                                                                | 19/60 [07:10<17:08, 25.08s/it][2026-09-10 10:02:06,248][INFO] - Evaluating episode 19 ...
+INFO:EB_logger:Evaluating episode 19 ...
+[2026-09-10 10:02:06,248][INFO] - Restoring scene FloorPlan30...
+INFO:EB_logger:Restoring scene FloorPlan30...
+Instruction: navigate to the CoffeeMachine in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 2, 2]
+Executed action: 2, Task success: 1.0
+Episodes:  33%|██████████████████████████████████████████████████████████████████████▎                                                                                                                                            | 20/60 [07:22<14:06, 21.17s/it][2026-09-10 10:02:18,317][INFO] - Evaluating episode 20 ...
+INFO:EB_logger:Evaluating episode 20 ...
+[2026-09-10 10:02:18,317][INFO] - Restoring scene FloorPlan211...
+INFO:EB_logger:Restoring scene FloorPlan211...
+Instruction: navigate to the GarbageCan in the room and be as close as possible to it
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 3, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 3, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [5, 0, 3, 0, 3, 0]
+Executed action: 5, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 3, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  35%|█████████████████████████████████████████████████████████████████████████▊                                                                                                                                         | 21/60 [07:47<14:31, 22.35s/it][2026-09-10 10:02:43,392][INFO] - Evaluating episode 21 ...
+INFO:EB_logger:Evaluating episode 21 ...
+[2026-09-10 10:02:43,392][INFO] - Restoring scene FloorPlan212...
+INFO:EB_logger:Restoring scene FloorPlan212...
+Instruction: navigate to the TissueBox in the room and be as close as possible to it
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 3, 2, 0, 3, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 3, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  37%|█████████████████████████████████████████████████████████████████████████████▎                                                                                                                                     | 22/60 [08:16<15:24, 24.33s/it][2026-09-10 10:03:12,366][INFO] - Evaluating episode 22 ...
+INFO:EB_logger:Evaluating episode 22 ...
+[2026-09-10 10:03:12,366][INFO] - Restoring scene FloorPlan213...
+INFO:EB_logger:Restoring scene FloorPlan213...
+Instruction: navigate to the Laptop in the room and be as close as possible to it
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [5]
+Executed action: 5, Task success: 0.0
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 4, 5, 4]
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 5, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  38%|████████████████████████████████████████████████████████████████████████████████▉                                                                                                                                  | 23/60 [08:50<16:42, 27.10s/it][2026-09-10 10:03:45,905][INFO] - Evaluating episode 23 ...
+INFO:EB_logger:Evaluating episode 23 ...
+[2026-09-10 10:03:45,905][INFO] - Restoring scene FloorPlan214...
+INFO:EB_logger:Restoring scene FloorPlan214...
+Instruction: navigate to the DeskLamp in the room and be as close as possible to it
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 3, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 1.0
+Episodes:  40%|████████████████████████████████████████████████████████████████████████████████████▍                                                                                                                              | 24/60 [09:07<14:29, 24.17s/it][2026-09-10 10:04:03,236][INFO] - Evaluating episode 24 ...
+INFO:EB_logger:Evaluating episode 24 ...
+[2026-09-10 10:04:03,236][INFO] - Restoring scene FloorPlan215...
+INFO:EB_logger:Restoring scene FloorPlan215...
+Instruction: navigate to the Pillow in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 3, 0]
+Executed action: 0, Task success: 1.0
+Episodes:  42%|███████████████████████████████████████████████████████████████████████████████████████▉                                                                                                                           | 25/60 [09:22<12:31, 21.46s/it][2026-09-10 10:04:18,391][INFO] - Evaluating episode 25 ...
+INFO:EB_logger:Evaluating episode 25 ...
+[2026-09-10 10:04:18,391][INFO] - Restoring scene FloorPlan216...
+INFO:EB_logger:Restoring scene FloorPlan216...
+Instruction: navigate to the FloorLamp in the room and be as close as possible to it
+Planner Output Action: [2]
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [1, 1, 1, 1, 1, 1]
+Executed action: 1, Task success: 0.0
+Executed action: 1, Task success: 0.0
+Executed action: 1, Task success: 0.0
+Executed action: 1, Task success: 0.0
+Executed action: 1, Task success: 0.0
+Executed action: 1, Task success: 0.0
+Planner Output Action: [0, 2, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  43%|███████████████████████████████████████████████████████████████████████████████████████████▍                                                                                                                       | 26/60 [09:46<12:36, 22.25s/it][2026-09-10 10:04:42,468][INFO] - Evaluating episode 26 ...
+INFO:EB_logger:Evaluating episode 26 ...
+[2026-09-10 10:04:42,468][INFO] - Restoring scene FloorPlan217...
+INFO:EB_logger:Restoring scene FloorPlan217...
+Instruction: navigate to the DeskLamp in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 0, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  45%|██████████████████████████████████████████████████████████████████████████████████████████████▉                                                                                                                    | 27/60 [10:14<13:05, 23.81s/it][2026-09-10 10:05:09,915][INFO] - Evaluating episode 27 ...
+INFO:EB_logger:Evaluating episode 27 ...
+[2026-09-10 10:05:09,915][INFO] - Restoring scene FloorPlan218...
+INFO:EB_logger:Restoring scene FloorPlan218...
+Instruction: navigate to the GarbageCan in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 3, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 3, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  47%|██████████████████████████████████████████████████████████████████████████████████████████████████▍                                                                                                                | 28/60 [10:27<11:02, 20.72s/it][2026-09-10 10:05:23,427][INFO] - Evaluating episode 28 ...
+INFO:EB_logger:Evaluating episode 28 ...
+[2026-09-10 10:05:23,427][INFO] - Restoring scene FloorPlan219...
+INFO:EB_logger:Restoring scene FloorPlan219...
+Instruction: navigate to the Box in the room and be as close as possible to it
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 3, 0, 3, 0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  48%|█████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                                                                             | 29/60 [10:41<09:40, 18.72s/it][2026-09-10 10:05:37,472][INFO] - Evaluating episode 29 ...
+INFO:EB_logger:Evaluating episode 29 ...
+[2026-09-10 10:05:37,472][INFO] - Restoring scene FloorPlan220...
+INFO:EB_logger:Restoring scene FloorPlan220...
+Instruction: navigate to the GarbageCan in the room and be as close as possible to it
+Planner Output Action: [0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 0, 0, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 4, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Failed to decode JSON: Unterminated string starting at: line 4 column 20 (char 714)
+random action
+Planner Output Action: 7
+Executed action: 7, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Episodes:  50%|█████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                                         | 30/60 [12:00<18:20, 36.69s/it][2026-09-10 10:06:56,105][INFO] - Evaluating episode 30 ...
+INFO:EB_logger:Evaluating episode 30 ...
+[2026-09-10 10:06:56,105][INFO] - Restoring scene FloorPlan221...
+INFO:EB_logger:Restoring scene FloorPlan221...
+Instruction: navigate to the Pillow in the room and be as close as possible to it
+Planner Output Action: [2]
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  52%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                      | 31/60 [12:24<15:52, 32.84s/it][2026-09-10 10:07:19,952][INFO] - Evaluating episode 31 ...
+INFO:EB_logger:Evaluating episode 31 ...
+[2026-09-10 10:07:19,952][INFO] - Restoring scene FloorPlan222...
+INFO:EB_logger:Restoring scene FloorPlan222...
+Instruction: navigate to the GarbageCan in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  53%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                                  | 32/60 [12:38<12:41, 27.21s/it][2026-09-10 10:07:34,034][INFO] - Evaluating episode 32 ...
+INFO:EB_logger:Evaluating episode 32 ...
+[2026-09-10 10:07:34,034][INFO] - Restoring scene FloorPlan223...
+INFO:EB_logger:Restoring scene FloorPlan223...
+Instruction: navigate to the Plate in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  55%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                               | 33/60 [13:01<11:41, 25.98s/it][2026-09-10 10:07:57,130][INFO] - Evaluating episode 33 ...
+INFO:EB_logger:Evaluating episode 33 ...
+[2026-09-10 10:07:57,130][INFO] - Restoring scene FloorPlan224...
+INFO:EB_logger:Restoring scene FloorPlan224...
+Instruction: navigate to the DeskLamp in the room and be as close as possible to it
+Planner Output Action: [2]
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 2, 2, 2, 2, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 2, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Episodes:  57%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                           | 34/60 [13:25<11:02, 25.49s/it][2026-09-10 10:08:21,477][INFO] - Evaluating episode 34 ...
+INFO:EB_logger:Evaluating episode 34 ...
+[2026-09-10 10:08:21,477][INFO] - Restoring scene FloorPlan225...
+INFO:EB_logger:Restoring scene FloorPlan225...
+Instruction: navigate to the Vase in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2, 0, 2, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 1.0
+Episodes:  58%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                        | 35/60 [13:44<09:48, 23.55s/it][2026-09-10 10:08:40,490][INFO] - Evaluating episode 35 ...
+INFO:EB_logger:Evaluating episode 35 ...
+[2026-09-10 10:08:40,490][INFO] - Restoring scene FloorPlan226...
+INFO:EB_logger:Restoring scene FloorPlan226...
+Instruction: navigate to the Pillow in the room and be as close as possible to it
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  60%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                    | 36/60 [13:57<08:05, 20.24s/it][2026-09-10 10:08:53,009][INFO] - Evaluating episode 36 ...
+INFO:EB_logger:Evaluating episode 36 ...
+[2026-09-10 10:08:53,009][INFO] - Restoring scene FloorPlan227...
+INFO:EB_logger:Restoring scene FloorPlan227...
+Instruction: navigate to the Box in the room and be as close as possible to it
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 2, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 0, 2, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 0, 0, 0, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 0, 0, 0, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  62%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                 | 37/60 [14:21<08:15, 21.56s/it][2026-09-10 10:09:17,648][INFO] - Evaluating episode 37 ...
+INFO:EB_logger:Evaluating episode 37 ...
+[2026-09-10 10:09:17,648][INFO] - Restoring scene FloorPlan228...
+INFO:EB_logger:Restoring scene FloorPlan228...
+Instruction: navigate to the GarbageCan in the room and be as close as possible to it
+Planner Output Action: [2]
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [5, 5, 5, 5]
+Executed action: 5, Task success: 0.0
+Executed action: 5, Task success: 0.0
+Executed action: 5, Task success: 0.0
+Executed action: 5, Task success: 0.0
+Planner Output Action: [7, 0, 0, 0, 0]
+Executed action: 7, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  63%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                                             | 38/60 [14:46<08:12, 22.38s/it][2026-09-10 10:09:41,947][INFO] - Evaluating episode 38 ...
+INFO:EB_logger:Evaluating episode 38 ...
+[2026-09-10 10:09:41,947][INFO] - Restoring scene FloorPlan229...
+INFO:EB_logger:Restoring scene FloorPlan229...
+Instruction: navigate to the Statue in the room and be as close as possible to it
+Planner Output Action: [5]
+Executed action: 5, Task success: 0.0
+Planner Output Action: [0, 2, 0, 2, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 2, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  65%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                                         | 39/60 [15:11<08:12, 23.45s/it][2026-09-10 10:10:07,890][INFO] - Evaluating episode 39 ...
+INFO:EB_logger:Evaluating episode 39 ...
+[2026-09-10 10:10:07,890][INFO] - Restoring scene FloorPlan230...
+INFO:EB_logger:Restoring scene FloorPlan230...
+Instruction: navigate to the GarbageCan in the room and be as close as possible to it
+Planner Output Action: [2]
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  67%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                                      | 40/60 [15:26<06:54, 20.71s/it][2026-09-10 10:10:22,202][INFO] - Evaluating episode 40 ...
+INFO:EB_logger:Evaluating episode 40 ...
+[2026-09-10 10:10:22,202][INFO] - Restoring scene FloorPlan311...
+INFO:EB_logger:Restoring scene FloorPlan311...
+Instruction: navigate to the Laptop in the room and be as close as possible to it
+Planner Output Action: [3]
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 5, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 5, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 1.0
+Episodes:  68%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                                  | 41/60 [15:49<06:46, 21.40s/it][2026-09-10 10:10:45,212][INFO] - Evaluating episode 41 ...
+INFO:EB_logger:Evaluating episode 41 ...
+[2026-09-10 10:10:45,212][INFO] - Restoring scene FloorPlan312...
+INFO:EB_logger:Restoring scene FloorPlan312...
+Instruction: navigate to the AlarmClock in the room and be as close as possible to it
+Planner Output Action: [2, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2, 0, 2, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  70%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                               | 42/60 [16:03<05:44, 19.16s/it][2026-09-10 10:10:59,138][INFO] - Evaluating episode 42 ...
+INFO:EB_logger:Evaluating episode 42 ...
+[2026-09-10 10:10:59,138][INFO] - Restoring scene FloorPlan313...
+INFO:EB_logger:Restoring scene FloorPlan313...
+Instruction: navigate to the Box in the room and be as close as possible to it
+Planner Output Action: [5]
+Executed action: 5, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 0, 0, 0, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  72%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                           | 43/60 [16:27<05:51, 20.67s/it][2026-09-10 10:11:23,355][INFO] - Evaluating episode 43 ...
+INFO:EB_logger:Evaluating episode 43 ...
+[2026-09-10 10:11:23,355][INFO] - Restoring scene FloorPlan314...
+INFO:EB_logger:Restoring scene FloorPlan314...
+Instruction: navigate to the AlarmClock in the room and be as close as possible to it
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Episodes:  73%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                        | 44/60 [16:55<06:04, 22.77s/it][2026-09-10 10:11:51,000][INFO] - Evaluating episode 44 ...
+INFO:EB_logger:Evaluating episode 44 ...
+[2026-09-10 10:11:51,000][INFO] - Restoring scene FloorPlan315...
+INFO:EB_logger:Restoring scene FloorPlan315...
+Instruction: navigate to the Mug in the room and be as close as possible to it
+Planner Output Action: [2, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  75%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                    | 45/60 [17:08<04:59, 19.95s/it][2026-09-10 10:12:04,387][INFO] - Evaluating episode 45 ...
+INFO:EB_logger:Evaluating episode 45 ...
+[2026-09-10 10:12:04,387][INFO] - Restoring scene FloorPlan316...
+INFO:EB_logger:Restoring scene FloorPlan316...
+Instruction: navigate to the Book in the room and be as close as possible to it
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [2, 2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [5, 0, 0, 0]
+Executed action: 5, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 4, 4, 0, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  77%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                 | 46/60 [17:35<05:09, 22.12s/it][2026-09-10 10:12:31,554][INFO] - Evaluating episode 46 ...
+INFO:EB_logger:Evaluating episode 46 ...
+[2026-09-10 10:12:31,554][INFO] - Restoring scene FloorPlan317...
+INFO:EB_logger:Restoring scene FloorPlan317...
+Instruction: navigate to the LaundryHamper in the room and be as close as possible to it
+Planner Output Action: [2]
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 0, 2, 0, 2, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2, 0, 2, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 3, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 1.0
+Episodes:  78%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                             | 47/60 [17:56<04:42, 21.73s/it][2026-09-10 10:12:52,376][INFO] - Evaluating episode 47 ...
+INFO:EB_logger:Evaluating episode 47 ...
+[2026-09-10 10:12:52,376][INFO] - Restoring scene FloorPlan318...
+INFO:EB_logger:Restoring scene FloorPlan318...
+Instruction: navigate to the Laptop in the room and be as close as possible to it
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 0, 3, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  80%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                          | 48/60 [18:21<04:31, 22.61s/it][2026-09-10 10:13:17,048][INFO] - Evaluating episode 48 ...
+INFO:EB_logger:Evaluating episode 48 ...
+[2026-09-10 10:13:17,048][INFO] - Restoring scene FloorPlan319...
+INFO:EB_logger:Restoring scene FloorPlan319...
+Instruction: navigate to the DeskLamp in the room and be as close as possible to it
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 0, 0, 0, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 0, 0, 0, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  82%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                      | 49/60 [18:46<04:18, 23.53s/it][2026-09-10 10:13:42,710][INFO] - Evaluating episode 49 ...
+INFO:EB_logger:Evaluating episode 49 ...
+[2026-09-10 10:13:42,710][INFO] - Restoring scene FloorPlan320...
+INFO:EB_logger:Restoring scene FloorPlan320...
+Instruction: navigate to the GarbageCan in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 3, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 1.0
+Episodes:  83%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                   | 50/60 [19:07<03:47, 22.73s/it][2026-09-10 10:14:03,570][INFO] - Evaluating episode 50 ...
+INFO:EB_logger:Evaluating episode 50 ...
+[2026-09-10 10:14:03,570][INFO] - Restoring scene FloorPlan321...
+INFO:EB_logger:Restoring scene FloorPlan321...
+Instruction: navigate to the CellPhone in the room and be as close as possible to it
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 3, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Episodes:  85%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                               | 51/60 [19:38<03:46, 25.21s/it][2026-09-10 10:14:34,560][INFO] - Evaluating episode 51 ...
+INFO:EB_logger:Evaluating episode 51 ...
+[2026-09-10 10:14:34,560][INFO] - Restoring scene FloorPlan322...
+INFO:EB_logger:Restoring scene FloorPlan322...
+Instruction: navigate to the Laptop in the room and be as close as possible to it
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 3, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 3, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [5]
+Executed action: 5, Task success: 0.0
+Failed to decode JSON: Unterminated string starting at: line 4 column 20 (char 979)
+random action
+Planner Output Action: 5
+Executed action: 5, Task success: 0.0
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Episodes:  87%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                            | 52/60 [21:03<05:43, 43.00s/it][2026-09-10 10:15:59,074][INFO] - Evaluating episode 52 ...
+INFO:EB_logger:Evaluating episode 52 ...
+[2026-09-10 10:15:59,074][INFO] - Restoring scene FloorPlan323...
+INFO:EB_logger:Restoring scene FloorPlan323...
+Instruction: navigate to the Safe in the room and be as close as possible to it
+Planner Output Action: [2]
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  88%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                        | 53/60 [21:28<04:23, 37.62s/it][2026-09-10 10:16:24,141][INFO] - Evaluating episode 53 ...
+INFO:EB_logger:Evaluating episode 53 ...
+[2026-09-10 10:16:24,142][INFO] - Restoring scene FloorPlan324...
+INFO:EB_logger:Restoring scene FloorPlan324...
+Instruction: navigate to the AlarmClock in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  90%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                     | 54/60 [21:41<03:01, 30.18s/it][2026-09-10 10:16:36,976][INFO] - Evaluating episode 54 ...
+INFO:EB_logger:Evaluating episode 54 ...
+[2026-09-10 10:16:36,976][INFO] - Restoring scene FloorPlan325...
+INFO:EB_logger:Restoring scene FloorPlan325...
+Instruction: navigate to the Laptop in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Episodes:  92%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                 | 55/60 [22:11<02:31, 30.38s/it][2026-09-10 10:17:07,814][INFO] - Evaluating episode 55 ...
+INFO:EB_logger:Evaluating episode 55 ...
+[2026-09-10 10:17:07,814][INFO] - Restoring scene FloorPlan326...
+INFO:EB_logger:Restoring scene FloorPlan326...
+Instruction: navigate to the Laptop in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 3, 3]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 2, 0, 2, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [4, 0, 2, 0, 3]
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [4, 0, 2, 0, 2, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  93%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉              | 56/60 [22:38<01:56, 29.20s/it][2026-09-10 10:17:34,252][INFO] - Evaluating episode 56 ...
+INFO:EB_logger:Evaluating episode 56 ...
+[2026-09-10 10:17:34,252][INFO] - Restoring scene FloorPlan327...
+INFO:EB_logger:Restoring scene FloorPlan327...
+Instruction: navigate to the DeskLamp in the room and be as close as possible to it
+Planner Output Action: [2]
+Executed action: 2, Task success: 0.0
+Planner Output Action: [5, 0, 0, 0, 0]
+Executed action: 5, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 4, 4, 4]
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Episodes:  95%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍          | 57/60 [23:04<01:24, 28.26s/it][2026-09-10 10:18:00,308][INFO] - Evaluating episode 57 ...
+INFO:EB_logger:Evaluating episode 57 ...
+[2026-09-10 10:18:00,308][INFO] - Restoring scene FloorPlan328...
+INFO:EB_logger:Restoring scene FloorPlan328...
+Instruction: navigate to the Book in the room and be as close as possible to it
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 0, 3, 0, 3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  97%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉       | 58/60 [23:18<00:48, 24.09s/it][2026-09-10 10:18:14,695][INFO] - Evaluating episode 58 ...
+INFO:EB_logger:Evaluating episode 58 ...
+[2026-09-10 10:18:14,695][INFO] - Restoring scene FloorPlan329...
+INFO:EB_logger:Restoring scene FloorPlan329...
+Instruction: navigate to the Laptop in the room and be as close as possible to it
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 2, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2, 0, 2, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  98%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍   | 59/60 [23:43<00:24, 24.34s/it][2026-09-10 10:18:39,591][INFO] - Evaluating episode 59 ...
+INFO:EB_logger:Evaluating episode 59 ...
+[2026-09-10 10:18:39,591][INFO] - Restoring scene FloorPlan330...
+INFO:EB_logger:Restoring scene FloorPlan330...
+Instruction: navigate to the Bowl in the room and be as close as possible to it
+Planner Output Action: [2, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0, 0]
+Executed action: 2, Task success: 1.0
+Episodes: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 60/60 [24:01<00:00, 22.49s/it]Episodes: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 60/60 [24:01<00:00, 24.03s/it]
+['/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_33_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_21_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_17_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_41_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_55_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_6_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_54_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_22_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_25_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_46_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_34_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_9_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_16_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_51_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_26_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_4_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_27_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_44_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_39_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_18_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_5_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_56_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_31_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_47_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_40_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_35_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_49_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_58_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_37_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_28_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_29_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_12_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_24_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_45_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_60_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_32_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_57_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_19_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_52_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_36_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_13_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_10_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_38_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_15_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_11_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_7_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_2_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_14_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_48_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_53_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_43_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_42_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_3_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_1_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_8_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_20_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_30_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_23_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_59_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_50_final_res.json'] 60
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_33_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Plate in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 22.716240882873535}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_21_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the GarbageCan in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 24.609474420547485}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_17_final_res.json
+{'reward': 0.08333333333333333, 'instruction': 'navigate to the Pot in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 12, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 16.101766109466553}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_41_final_res.json
+{'reward': 0.058823529411764705, 'instruction': 'navigate to the Laptop in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 17, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 22.43211531639099}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_55_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Laptop in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 7, 'planner_output_error': 0, 'episode_elapsed_seconds': 30.26585865020752}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_6_final_res.json
+{'reward': 0.1111111111111111, 'instruction': 'navigate to the Cup in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 9, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 15.151173830032349}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_54_final_res.json
+{'reward': 0.1111111111111111, 'instruction': 'navigate to the AlarmClock in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 9, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 12.465965270996094}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_22_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the TissueBox in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 28.592968702316284}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_25_final_res.json
+{'reward': 0.14285714285714285, 'instruction': 'navigate to the Pillow in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 7, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 14.316454410552979}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_46_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Book in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 26.90724229812622}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_34_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the DeskLamp in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 23.890319108963013}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_9_final_res.json
+{'reward': 0.1111111111111111, 'instruction': 'navigate to the Lettuce in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 9, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 11.13887071609497}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_16_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Pot in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 25.818326234817505}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_51_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the CellPhone in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 7, 'planner_output_error': 0, 'episode_elapsed_seconds': 30.73484182357788}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_26_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the FloorLamp in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 23.728434324264526}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_4_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Pot in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 25.68293309211731}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_27_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the DeskLamp in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 27.129812002182007}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_44_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the AlarmClock in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 27.315831661224365}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_39_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Statue in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 25.51217484474182}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_18_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Lettuce in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 23.080857038497925}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_5_final_res.json
+{'reward': 0.1111111111111111, 'instruction': 'navigate to the Pot in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 9, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 13.444404602050781}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_56_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Laptop in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 26.22490906715393}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_31_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Pillow in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 23.623944759368896}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_47_final_res.json
+{'reward': 0.06666666666666667, 'instruction': 'navigate to the LaundryHamper in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 15, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 20.504531860351562}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_40_final_res.json
+{'reward': 0.1111111111111111, 'instruction': 'navigate to the GarbageCan in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 9, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 13.954365015029907}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_35_final_res.json
+{'reward': 0.07692307692307693, 'instruction': 'navigate to the Vase in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 13, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 18.608866214752197}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_49_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the DeskLamp in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 25.10417938232422}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_58_final_res.json
+{'reward': 0.1, 'instruction': 'navigate to the Book in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 10, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 14.113935232162476}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_37_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Box in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 23.989150762557983}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_28_final_res.json
+{'reward': 0.1, 'instruction': 'navigate to the GarbageCan in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 10, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 13.166680335998535}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_29_final_res.json
+{'reward': 0.09090909090909091, 'instruction': 'navigate to the Box in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 11, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 13.670623302459717}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_12_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Kettle in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 21.804927110671997}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_24_final_res.json
+{'reward': 0.08333333333333333, 'instruction': 'navigate to the DeskLamp in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 12, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 16.935953378677368}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_45_final_res.json
+{'reward': 0.1111111111111111, 'instruction': 'navigate to the Mug in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 9, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 13.006584167480469}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_60_final_res.json
+{'reward': 0.09090909090909091, 'instruction': 'navigate to the Bowl in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 11, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 17.73053240776062}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_32_final_res.json
+{'reward': 0.1, 'instruction': 'navigate to the GarbageCan in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 10, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 13.808413743972778}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_57_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the DeskLamp in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 25.647571325302124}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_19_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Kettle in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 8, 'planner_output_error': 0, 'episode_elapsed_seconds': 33.39202404022217}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_52_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Laptop in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 8, 'planner_output_error': 1, 'episode_elapsed_seconds': 84.24702167510986}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_36_final_res.json
+{'reward': 0.1, 'instruction': 'navigate to the Pillow in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 10, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 12.141449689865112}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_13_final_res.json
+{'reward': 0.125, 'instruction': 'navigate to the StoveBurner in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 8, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 12.789954662322998}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_10_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Toaster in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 21.779075622558594}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_38_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the GarbageCan in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 23.801565885543823}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_15_final_res.json
+{'reward': 0.05555555555555555, 'instruction': 'navigate to the Cup in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 18, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 21.27868127822876}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_11_final_res.json
+{'reward': 0.125, 'instruction': 'navigate to the GarbageCan in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 8, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 11.468218088150024}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_7_final_res.json
+{'reward': 0.1, 'instruction': 'navigate to the Tomato in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 10, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 12.927346229553223}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_2_final_res.json
+{'reward': 0.09090909090909091, 'instruction': 'navigate to the Pot in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 11, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 14.161005020141602}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_14_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Pot in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 26.589886903762817}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_48_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Laptop in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 24.07971215248108}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_53_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Safe in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 24.45318341255188}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_43_final_res.json
+{'reward': 0.05, 'instruction': 'navigate to the Box in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 23.74968409538269}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_42_final_res.json
+{'reward': 0.08333333333333333, 'instruction': 'navigate to the AlarmClock in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 12, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 13.547199964523315}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_3_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Toaster in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 25.939183235168457}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_1_final_res.json
+{'reward': 0.06666666666666667, 'instruction': 'navigate to the Bread in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 15, 'planner_steps': 5, 'planner_output_error': 1, 'episode_elapsed_seconds': 72.95077848434448}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_8_final_res.json
+{'reward': 0.07142857142857142, 'instruction': 'navigate to the Toaster in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 14, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 17.68768286705017}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_20_final_res.json
+{'reward': 0.14285714285714285, 'instruction': 'navigate to the CoffeeMachine in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 7, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 11.701907634735107}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_30_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the GarbageCan in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 1, 'episode_elapsed_seconds': 78.21696043014526}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_23_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Laptop in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 8, 'planner_output_error': 0, 'episode_elapsed_seconds': 33.12301564216614}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_59_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Laptop in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 24.721888303756714}
+closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_50_final_res.json
+{'reward': 0.08333333333333333, 'instruction': 'navigate to the GarbageCan in the room and be as close as possible to it', 'task_success': 1.0, 'num_steps': 12, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 20.563780546188354}
+final results: 
+{'reward': 0.04590842708489769, 'task_success': 0.48333333333333334, 'num_steps': 15.783333333333333, 'planner_steps': 4.683333333333334, 'planner_output_error': 0.05, 'episode_elapsed_seconds': 23.63737398783366}

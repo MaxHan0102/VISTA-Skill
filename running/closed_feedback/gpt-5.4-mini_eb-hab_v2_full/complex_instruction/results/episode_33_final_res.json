@@ -1,0 +1,1 @@
+{"reward": -0.6666666666666666, "num_invalid_actions": 10, "empty_plan": 0, "instruction": "Instead of finding an apple, I need a peach on the right counter. Can you help?", "task_success": 0, "task_progress": 0, "subgoal_reward": 0, "num_steps": 4, "planner_steps": 9, "planner_output_error": 8, "num_invalid_action_ratio": 2.5, "episode_elapsed_seconds": 212.41459250450134}

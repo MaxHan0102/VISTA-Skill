@@ -1,0 +1,1 @@
+{"reward": 0.06666666666666667, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "task_success": 1.0, "num_steps": 15, "planner_steps": 5, "planner_output_error": 0, "episode_elapsed_seconds": 62.81274127960205}

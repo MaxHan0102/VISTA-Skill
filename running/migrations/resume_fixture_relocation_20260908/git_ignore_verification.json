@@ -1,0 +1,14 @@
+{
+  "running": {
+    "trackable_records": 4047,
+    "trackable_MiB": 219.7,
+    "ignored_images": 46045,
+    "ignored_archives_and_locks": 7
+  },
+  "EmbodiedBench/running": {
+    "trackable_records": 618,
+    "trackable_MiB": 8.3,
+    "ignored_images": 5221,
+    "ignored_archives_and_locks": 0
+  }
+}

@@ -1,0 +1,1 @@
+{"reward": 0.0, "instruction": "I need to use my portable device that has a screen and a keyboard. Please navigate to that object and stay near it.", "task_success": 0.0, "num_steps": 20, "planner_steps": 6, "planner_output_error": 0, "episode_elapsed_seconds": 43.96562647819519}

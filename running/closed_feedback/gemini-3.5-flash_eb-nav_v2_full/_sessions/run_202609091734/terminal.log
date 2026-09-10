@@ -1,0 +1,1542 @@
+Output directory: /root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/_sessions/run_202609091734
+[2026-09-09 17:34:35,792][INFO] - Current eval set: common_sense
+Episodes:   0%|                                                                                                                                                                                                                            | 0/60 [00:00<?, ?it/s][2026-09-09 17:34:37,133][INFO] - Evaluating episode 0 ...
+INFO:EB_logger:Evaluating episode 0 ...
+[2026-09-09 17:34:37,134][INFO] - Restoring scene FloorPlan11...
+INFO:EB_logger:Restoring scene FloorPlan11...
+Instruction: I'm looking for freshly baked loaves that can be sliced for sandwiches or toast. Can you navigate to that object and stay close?
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 0, 0, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:   2%|███▌                                                                                                                                                                                                                | 1/60 [00:37<36:34, 37.20s/it][2026-09-09 17:35:14,330][INFO] - Evaluating episode 1 ...
+INFO:EB_logger:Evaluating episode 1 ...
+[2026-09-09 17:35:14,330][INFO] - Restoring scene FloorPlan12...
+INFO:EB_logger:Restoring scene FloorPlan12...
+Instruction: I need a large cooking vessel to prepare a hearty soup. Please navigate to that object and stay near it.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [5]
+Executed action: 5, Task success: 0.0
+Planner Output Action: [5]
+Executed action: 5, Task success: 0.0
+Planner Output Action: [5]
+Executed action: 5, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:   3%|███████                                                                                                                                                                                                             | 2/60 [01:47<54:57, 56.85s/it][2026-09-09 17:36:24,930][INFO] - Evaluating episode 2 ...
+INFO:EB_logger:Evaluating episode 2 ...
+[2026-09-09 17:36:24,930][INFO] - Restoring scene FloorPlan13...
+INFO:EB_logger:Restoring scene FloorPlan13...
+Instruction: I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 3]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 3, 3]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [3, 3, 3, 3]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Episodes:   5%|██████████▌                                                                                                                                                                                                         | 3/60 [02:31<48:29, 51.05s/it][2026-09-09 17:37:09,089][INFO] - Evaluating episode 3 ...
+INFO:EB_logger:Evaluating episode 3 ...
+[2026-09-09 17:37:09,089][INFO] - Restoring scene FloorPlan14...
+INFO:EB_logger:Restoring scene FloorPlan14...
+Instruction: I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.
+Planner Output Action: [2, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [5]
+Executed action: 5, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0, 0]
+Executed action: 0, Task success: 0.0
+Episodes:   7%|██████████████▏                                                                                                                                                                                                     | 4/60 [03:36<52:29, 56.24s/it][2026-09-09 17:38:13,292][INFO] - Evaluating episode 4 ...
+INFO:EB_logger:Evaluating episode 4 ...
+[2026-09-09 17:38:13,292][INFO] - Restoring scene FloorPlan15...
+INFO:EB_logger:Restoring scene FloorPlan15...
+Instruction: I need a vessel to boil pasta for dinner. Can you navigate to that object and stay close?
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 1.0
+Episodes:   8%|█████████████████▋                                                                                                                                                                                                  | 5/60 [04:06<43:01, 46.94s/it][2026-09-09 17:38:43,741][INFO] - Evaluating episode 5 ...
+INFO:EB_logger:Evaluating episode 5 ...
+[2026-09-09 17:38:43,741][INFO] - Restoring scene FloorPlan16...
+INFO:EB_logger:Restoring scene FloorPlan16...
+Instruction: I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.
+Planner Output Action: [2, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  10%|█████████████████████▏                                                                                                                                                                                              | 6/60 [04:30<35:04, 38.98s/it][2026-09-09 17:39:07,252][INFO] - Evaluating episode 6 ...
+INFO:EB_logger:Evaluating episode 6 ...
+[2026-09-09 17:39:07,252][INFO] - Restoring scene FloorPlan17...
+INFO:EB_logger:Restoring scene FloorPlan17...
+Instruction: I need a red, juicy fruit that's often used in salads or cooking. Can you navigate to that object and stay close?
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 2, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  12%|████████████████████████▋                                                                                                                                                                                           | 7/60 [04:58<31:29, 35.65s/it][2026-09-09 17:39:36,042][INFO] - Evaluating episode 7 ...
+INFO:EB_logger:Evaluating episode 7 ...
+[2026-09-09 17:39:36,042][INFO] - Restoring scene FloorPlan18...
+INFO:EB_logger:Restoring scene FloorPlan18...
+Instruction: I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 3, 0]
+Executed action: 0, Task success: 1.0
+Episodes:  13%|████████████████████████████▎                                                                                                                                                                                       | 8/60 [06:17<42:45, 49.34s/it][2026-09-09 17:40:54,697][INFO] - Evaluating episode 8 ...
+INFO:EB_logger:Evaluating episode 8 ...
+[2026-09-09 17:40:54,697][INFO] - Restoring scene FloorPlan19...
+INFO:EB_logger:Restoring scene FloorPlan19...
+Instruction: I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 3, 3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  15%|███████████████████████████████▊                                                                                                                                                                                    | 9/60 [07:03<41:09, 48.43s/it][2026-09-09 17:41:41,118][INFO] - Evaluating episode 9 ...
+INFO:EB_logger:Evaluating episode 9 ...
+[2026-09-09 17:41:41,119][INFO] - Restoring scene FloorPlan20...
+INFO:EB_logger:Restoring scene FloorPlan20...
+Instruction: I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.
+Planner Output Action: [3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 3, 3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  17%|███████████████████████████████████▏                                                                                                                                                                               | 10/60 [07:33<35:28, 42.57s/it][2026-09-09 17:42:10,581][INFO] - Evaluating episode 10 ...
+INFO:EB_logger:Evaluating episode 10 ...
+[2026-09-09 17:42:10,581][INFO] - Restoring scene FloorPlan21...
+INFO:EB_logger:Restoring scene FloorPlan21...
+Instruction: I have some rubbish that needs to be properly disposed of. Can you navigate to that object and stay close?
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0]
+Executed action: 0, Task success: 1.0
+Episodes:  18%|██████████████████████████████████████▋                                                                                                                                                                            | 11/60 [07:55<29:38, 36.30s/it][2026-09-09 17:42:32,674][INFO] - Evaluating episode 11 ...
+INFO:EB_logger:Evaluating episode 11 ...
+[2026-09-09 17:42:32,674][INFO] - Restoring scene FloorPlan22...
+INFO:EB_logger:Restoring scene FloorPlan22...
+Instruction: I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  20%|██████████████████████████████████████████▏                                                                                                                                                                        | 12/60 [08:19<26:07, 32.66s/it][2026-09-09 17:42:56,994][INFO] - Evaluating episode 12 ...
+INFO:EB_logger:Evaluating episode 12 ...
+[2026-09-09 17:42:56,994][INFO] - Restoring scene FloorPlan23...
+INFO:EB_logger:Restoring scene FloorPlan23...
+Instruction: I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 7]
+Executed action: 0, Task success: 0.0
+Executed action: 7, Task success: 0.0
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 1.0
+Episodes:  22%|█████████████████████████████████████████████▋                                                                                                                                                                     | 13/60 [08:46<24:06, 30.77s/it][2026-09-09 17:43:23,406][INFO] - Evaluating episode 13 ...
+INFO:EB_logger:Evaluating episode 13 ...
+[2026-09-09 17:43:23,407][INFO] - Restoring scene FloorPlan24...
+INFO:EB_logger:Restoring scene FloorPlan24...
+Instruction: I need a vessel to cook rice on the stove. Please navigate to that object and stay near it.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  23%|█████████████████████████████████████████████████▏                                                                                                                                                                 | 14/60 [09:16<23:30, 30.67s/it][2026-09-09 17:43:53,862][INFO] - Evaluating episode 14 ...
+INFO:EB_logger:Evaluating episode 14 ...
+[2026-09-09 17:43:53,862][INFO] - Restoring scene FloorPlan25...
+INFO:EB_logger:Restoring scene FloorPlan25...
+Instruction: I'd like a container to drink my morning coffee. Can you navigate to that object and stay close?
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [5]
+Executed action: 5, Task success: 0.0
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  25%|████████████████████████████████████████████████████▊                                                                                                                                                              | 15/60 [10:34<33:45, 45.00s/it][2026-09-09 17:45:12,069][INFO] - Evaluating episode 15 ...
+INFO:EB_logger:Evaluating episode 15 ...
+[2026-09-09 17:45:12,069][INFO] - Restoring scene FloorPlan26...
+INFO:EB_logger:Restoring scene FloorPlan26...
+Instruction: I'm looking to braise some meat and need a deep cooking vessel. Please navigate to that object and stay near it.
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 1.0
+Episodes:  27%|████████████████████████████████████████████████████████▎                                                                                                                                                          | 16/60 [10:56<27:44, 37.82s/it][2026-09-09 17:45:33,209][INFO] - Evaluating episode 16 ...
+INFO:EB_logger:Evaluating episode 16 ...
+[2026-09-09 17:45:33,209][INFO] - Restoring scene FloorPlan27...
+INFO:EB_logger:Restoring scene FloorPlan27...
+Instruction: I need a large container for making soup. Can you navigate to that object and stay close?
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [5]
+Executed action: 5, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 2, 0]
+Executed action: 0, Task success: 1.0
+Episodes:  28%|███████████████████████████████████████████████████████████▊                                                                                                                                                       | 17/60 [11:34<27:13, 37.98s/it][2026-09-09 17:46:11,563][INFO] - Evaluating episode 17 ...
+INFO:EB_logger:Evaluating episode 17 ...
+[2026-09-09 17:46:11,563][INFO] - Restoring scene FloorPlan28...
+INFO:EB_logger:Restoring scene FloorPlan28...
+Instruction: I need some fresh greens for my salad. Please navigate to that object and stay near it.
+Planner Output Action: [3, 3]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  30%|███████████████████████████████████████████████████████████████▎                                                                                                                                                   | 18/60 [11:55<23:00, 32.88s/it][2026-09-09 17:46:32,556][INFO] - Evaluating episode 18 ...
+INFO:EB_logger:Evaluating episode 18 ...
+[2026-09-09 17:46:32,556][INFO] - Restoring scene FloorPlan29...
+INFO:EB_logger:Restoring scene FloorPlan29...
+Instruction: I need to heat water for my tea. Can you navigate to that object and stay close?
+Planner Output Action: [2, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 3]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  32%|██████████████████████████████████████████████████████████████████▊                                                                                                                                                | 19/60 [12:28<22:29, 32.91s/it][2026-09-09 17:47:05,551][INFO] - Evaluating episode 19 ...
+INFO:EB_logger:Evaluating episode 19 ...
+[2026-09-09 17:47:05,551][INFO] - Restoring scene FloorPlan30...
+INFO:EB_logger:Restoring scene FloorPlan30...
+Instruction: I need a device to brew my morning coffee. Please navigate to that object and stay near it.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  33%|██████████████████████████████████████████████████████████████████████▎                                                                                                                                            | 20/60 [12:49<19:38, 29.46s/it][2026-09-09 17:47:26,959][INFO] - Evaluating episode 20 ...
+INFO:EB_logger:Evaluating episode 20 ...
+[2026-09-09 17:47:26,959][INFO] - Restoring scene FloorPlan211...
+INFO:EB_logger:Restoring scene FloorPlan211...
+Instruction: I have some rubbish that needs to be thrown away. Can you navigate to that object and stay close?
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  35%|█████████████████████████████████████████████████████████████████████████▊                                                                                                                                         | 21/60 [13:25<20:23, 31.38s/it][2026-09-09 17:48:02,805][INFO] - Evaluating episode 21 ...
+INFO:EB_logger:Evaluating episode 21 ...
+[2026-09-09 17:48:02,806][INFO] - Restoring scene FloorPlan212...
+INFO:EB_logger:Restoring scene FloorPlan212...
+Instruction: I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  37%|█████████████████████████████████████████████████████████████████████████████▎                                                                                                                                     | 22/60 [13:47<18:06, 28.59s/it][2026-09-09 17:48:24,889][INFO] - Evaluating episode 22 ...
+INFO:EB_logger:Evaluating episode 22 ...
+[2026-09-09 17:48:24,889][INFO] - Restoring scene FloorPlan213...
+INFO:EB_logger:Restoring scene FloorPlan213...
+Instruction: I need to use that device that comes with a screen and a keyboard for some work tasks. Can you navigate to that object and stay close?
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 3, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4081, prompt_tokens=4600, total_tokens=8681, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3933, rejected_prediction_tokens=None, text_tokens=148), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3511, image_tokens=0))
+local variable 'out' referenced before assignment
+retrying...
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  38%|████████████████████████████████████████████████████████████████████████████████▉                                                                                                                                  | 23/60 [15:36<32:29, 52.70s/it][2026-09-09 17:50:13,835][INFO] - Evaluating episode 23 ...
+INFO:EB_logger:Evaluating episode 23 ...
+[2026-09-09 17:50:13,835][INFO] - Restoring scene FloorPlan214...
+INFO:EB_logger:Restoring scene FloorPlan214...
+Instruction: I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 3, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 0, 3]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  40%|████████████████████████████████████████████████████████████████████████████████████▍                                                                                                                              | 24/60 [16:17<29:31, 49.20s/it][2026-09-09 17:50:54,861][INFO] - Evaluating episode 24 ...
+INFO:EB_logger:Evaluating episode 24 ...
+[2026-09-09 17:50:54,861][INFO] - Restoring scene FloorPlan215...
+INFO:EB_logger:Restoring scene FloorPlan215...
+Instruction: I need a soft cushion to support my head while sleeping. Can you navigate to that object and stay close?
+Planner Output Action: [2, 2, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 3, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 3]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [1, 1, 3, 3]
+Executed action: 1, Task success: 0.0
+Executed action: 1, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Episodes:  42%|███████████████████████████████████████████████████████████████████████████████████████▉                                                                                                                           | 25/60 [17:07<28:45, 49.29s/it][2026-09-09 17:51:44,356][INFO] - Evaluating episode 25 ...
+INFO:EB_logger:Evaluating episode 25 ...
+[2026-09-09 17:51:44,356][INFO] - Restoring scene FloorPlan216...
+INFO:EB_logger:Restoring scene FloorPlan216...
+Instruction: I need a standing luminous device that light up a corner of the room. Please navigate to that object and stay near it.
+Planner Output Action: [2, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 2, 2, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 2, 2, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 2, 2]
+Executed action: 2, Task success: 0.0
+Episodes:  43%|███████████████████████████████████████████████████████████████████████████████████████████▍                                                                                                                       | 26/60 [17:49<26:47, 47.27s/it][2026-09-09 17:52:26,917][INFO] - Evaluating episode 26 ...
+INFO:EB_logger:Evaluating episode 26 ...
+[2026-09-09 17:52:26,917][INFO] - Restoring scene FloorPlan217...
+INFO:EB_logger:Restoring scene FloorPlan217...
+Instruction: I need a glowing device on my desk that can provide lighting to help me read. Can you navigate to that object and stay close?
+Planner Output Action: [3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  45%|██████████████████████████████████████████████████████████████████████████████████████████████▉                                                                                                                    | 27/60 [18:11<21:49, 39.67s/it][2026-09-09 17:52:48,873][INFO] - Evaluating episode 27 ...
+INFO:EB_logger:Evaluating episode 27 ...
+[2026-09-09 17:52:48,873][INFO] - Restoring scene FloorPlan218...
+INFO:EB_logger:Restoring scene FloorPlan218...
+Instruction: I have some waste that needs to be disposed of properly. Please navigate to that object and stay near it.
+Planner Output Action: [3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  47%|██████████████████████████████████████████████████████████████████████████████████████████████████▍                                                                                                                | 28/60 [18:35<18:39, 34.98s/it][2026-09-09 17:53:12,899][INFO] - Evaluating episode 28 ...
+INFO:EB_logger:Evaluating episode 28 ...
+[2026-09-09 17:53:12,899][INFO] - Restoring scene FloorPlan219...
+INFO:EB_logger:Restoring scene FloorPlan219...
+Instruction: I need a container to store some items. Can you navigate to that object and stay close?
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  48%|█████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                                                                             | 29/60 [18:56<15:54, 30.79s/it][2026-09-09 17:53:33,913][INFO] - Evaluating episode 29 ...
+INFO:EB_logger:Evaluating episode 29 ...
+[2026-09-09 17:53:33,913][INFO] - Restoring scene FloorPlan220...
+INFO:EB_logger:Restoring scene FloorPlan220...
+Instruction: I need to dispose of some trash. Please navigate to that object and stay near it.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 1.0
+Episodes:  50%|█████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                                         | 30/60 [19:27<15:19, 30.65s/it][2026-09-09 17:54:04,238][INFO] - Evaluating episode 30 ...
+INFO:EB_logger:Evaluating episode 30 ...
+[2026-09-09 17:54:04,238][INFO] - Restoring scene FloorPlan221...
+INFO:EB_logger:Restoring scene FloorPlan221...
+Instruction: I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?
+Planner Output Action: [2, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Episodes:  52%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                      | 31/60 [20:04<15:43, 32.54s/it][2026-09-09 17:54:41,171][INFO] - Evaluating episode 31 ...
+INFO:EB_logger:Evaluating episode 31 ...
+[2026-09-09 17:54:41,171][INFO] - Restoring scene FloorPlan222...
+INFO:EB_logger:Restoring scene FloorPlan222...
+Instruction: I have some rubbish that needs to be thrown away. Can you navigate to that object and stay close?
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  53%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                                  | 32/60 [20:23<13:19, 28.56s/it][2026-09-09 17:55:00,464][INFO] - Evaluating episode 32 ...
+INFO:EB_logger:Evaluating episode 32 ...
+[2026-09-09 17:55:00,464][INFO] - Restoring scene FloorPlan223...
+INFO:EB_logger:Restoring scene FloorPlan223...
+Instruction: I need a flat dish to hold my food. Can you navigate to that object and stay close?
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  55%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                               | 33/60 [20:43<11:46, 26.18s/it][2026-09-09 17:55:21,085][INFO] - Evaluating episode 33 ...
+INFO:EB_logger:Evaluating episode 33 ...
+[2026-09-09 17:55:21,085][INFO] - Restoring scene FloorPlan224...
+INFO:EB_logger:Restoring scene FloorPlan224...
+Instruction: I need a device on my desk to illuminate my workspace. Please navigate to that object and stay near it.
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 2, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0]
+Executed action: 2, Task success: 1.0
+Episodes:  57%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                           | 34/60 [21:17<12:19, 28.43s/it][2026-09-09 17:55:54,749][INFO] - Evaluating episode 34 ...
+INFO:EB_logger:Evaluating episode 34 ...
+[2026-09-09 17:55:54,749][INFO] - Restoring scene FloorPlan225...
+INFO:EB_logger:Restoring scene FloorPlan225...
+Instruction: I need a container to hold fresh flowers for decoration. Can you navigate to that object and stay close?
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  58%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                        | 35/60 [21:59<13:28, 32.36s/it][2026-09-09 17:56:36,274][INFO] - Evaluating episode 35 ...
+INFO:EB_logger:Evaluating episode 35 ...
+[2026-09-09 17:56:36,274][INFO] - Restoring scene FloorPlan226...
+INFO:EB_logger:Restoring scene FloorPlan226...
+Instruction: I need a soft cushion to support my head while resting. Please navigate to that object and stay near it.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 7]
+Executed action: 2, Task success: 0.0
+Episodes:  60%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                    | 36/60 [22:50<15:15, 38.13s/it][2026-09-09 17:57:27,877][INFO] - Evaluating episode 36 ...
+INFO:EB_logger:Evaluating episode 36 ...
+[2026-09-09 17:57:27,877][INFO] - Restoring scene FloorPlan227...
+INFO:EB_logger:Restoring scene FloorPlan227...
+Instruction: I need a storage container to keep some of my belongings. Can you navigate to that object and stay close?
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 0, 0, 3, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Episodes:  62%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                 | 37/60 [23:35<15:19, 39.98s/it][2026-09-09 17:58:12,185][INFO] - Evaluating episode 37 ...
+INFO:EB_logger:Evaluating episode 37 ...
+[2026-09-09 17:58:12,185][INFO] - Restoring scene FloorPlan228...
+INFO:EB_logger:Restoring scene FloorPlan228...
+Instruction: I need to throw away some waste materials. Please navigate to that object and stay near it.
+Planner Output Action: [2, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0]
+Executed action: 2, Task success: 1.0
+Episodes:  63%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                                             | 38/60 [23:55<12:32, 34.20s/it][2026-09-09 17:58:32,885][INFO] - Evaluating episode 38 ...
+INFO:EB_logger:Evaluating episode 38 ...
+[2026-09-09 17:58:32,885][INFO] - Restoring scene FloorPlan229...
+INFO:EB_logger:Restoring scene FloorPlan229...
+Instruction: I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 0, 3, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 3, 0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 3, 3, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Episodes:  65%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                                         | 39/60 [24:47<13:48, 39.47s/it][2026-09-09 17:59:24,670][INFO] - Evaluating episode 39 ...
+INFO:EB_logger:Evaluating episode 39 ...
+[2026-09-09 17:59:24,670][INFO] - Restoring scene FloorPlan230...
+INFO:EB_logger:Restoring scene FloorPlan230...
+Instruction: I need to dispose of some trash properly. Please navigate to that object and stay near it.
+Planner Output Action: [2, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  67%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                                      | 40/60 [25:09<11:21, 34.07s/it][2026-09-09 17:59:46,139][INFO] - Evaluating episode 40 ...
+INFO:EB_logger:Evaluating episode 40 ...
+[2026-09-09 17:59:46,139][INFO] - Restoring scene FloorPlan311...
+INFO:EB_logger:Restoring scene FloorPlan311...
+Instruction: I need to access that digital device which people use to do their work such as attending online meeting. Can you navigate to that object and stay close?
+Planner Output Action: [3, 3]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 3, 3, 1]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 1, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 3, 3, 0]
+Executed action: 3, Task success: 1.0
+Episodes:  68%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                  | 41/60 [31:11<42:02, 132.74s/it][2026-09-09 18:05:49,102][INFO] - Evaluating episode 41 ...
+INFO:EB_logger:Evaluating episode 41 ...
+[2026-09-09 18:05:49,102][INFO] - Restoring scene FloorPlan312...
+INFO:EB_logger:Restoring scene FloorPlan312...
+Instruction: I need a device to set an alarm for waking up at a specific time. Please navigate to that object and stay near it.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 0, 0, 7]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  70%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                              | 42/60 [37:25<1:01:29, 204.99s/it][2026-09-09 18:12:02,682][INFO] - Evaluating episode 42 ...
+INFO:EB_logger:Evaluating episode 42 ...
+[2026-09-09 18:12:02,682][INFO] - Restoring scene FloorPlan313...
+INFO:EB_logger:Restoring scene FloorPlan313...
+Instruction: I need a storage container to keep some of my belongings organized. Can you navigate to that object and stay close?
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 3, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 3]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [3, 0, 0, 3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 3]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  72%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                           | 43/60 [38:04<43:59, 155.26s/it][2026-09-09 18:12:41,901][INFO] - Evaluating episode 43 ...
+INFO:EB_logger:Evaluating episode 43 ...
+[2026-09-09 18:12:41,901][INFO] - Restoring scene FloorPlan314...
+INFO:EB_logger:Restoring scene FloorPlan314...
+Instruction: I need to set a time-based alert to wake me up. Please navigate to that object and stay near it.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  73%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                        | 44/60 [38:58<33:15, 124.71s/it][2026-09-09 18:13:35,343][INFO] - Evaluating episode 44 ...
+INFO:EB_logger:Evaluating episode 44 ...
+[2026-09-09 18:13:35,343][INFO] - Restoring scene FloorPlan315...
+INFO:EB_logger:Restoring scene FloorPlan315...
+Instruction: I need a large cup with a handle to hold hot beverages like coffee or tea. Can you navigate to that object and stay close?
+Planner Output Action: [2, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 2, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  75%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                    | 45/60 [39:29<24:11, 96.79s/it][2026-09-09 18:14:06,969][INFO] - Evaluating episode 45 ...
+INFO:EB_logger:Evaluating episode 45 ...
+[2026-09-09 18:14:06,969][INFO] - Restoring scene FloorPlan316...
+INFO:EB_logger:Restoring scene FloorPlan316...
+Instruction: I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.
+Planner Output Action: [2, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 3, 0]
+Executed action: 0, Task success: 1.0
+Episodes:  77%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                 | 46/60 [41:43<25:11, 107.94s/it][2026-09-09 18:16:20,914][INFO] - Evaluating episode 46 ...
+INFO:EB_logger:Evaluating episode 46 ...
+[2026-09-09 18:16:20,914][INFO] - Restoring scene FloorPlan317...
+INFO:EB_logger:Restoring scene FloorPlan317...
+Instruction: I need a basket to gather my dirty laundry. Can you navigate to that object and stay close?
+Planner Output Action: [2, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  78%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                             | 47/60 [42:18<18:37, 85.98s/it][2026-09-09 18:16:55,657][INFO] - Evaluating episode 47 ...
+INFO:EB_logger:Evaluating episode 47 ...
+[2026-09-09 18:16:55,657][INFO] - Restoring scene FloorPlan318...
+INFO:EB_logger:Restoring scene FloorPlan318...
+Instruction: I need to use my portable device that has a screen and a keyboard. Please navigate to that object and stay near it.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0]
+Executed action: 3, Task success: 0.0
+Episodes:  80%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                          | 48/60 [43:03<14:42, 73.56s/it][2026-09-09 18:17:40,242][INFO] - Evaluating episode 48 ...
+INFO:EB_logger:Evaluating episode 48 ...
+[2026-09-09 18:17:40,242][INFO] - Restoring scene FloorPlan319...
+INFO:EB_logger:Restoring scene FloorPlan319...
+Instruction: I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?
+Planner Output Action: [3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 3, 3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  82%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                      | 49/60 [43:40<11:30, 62.82s/it][2026-09-09 18:18:17,995][INFO] - Evaluating episode 49 ...
+INFO:EB_logger:Evaluating episode 49 ...
+[2026-09-09 18:18:17,995][INFO] - Restoring scene FloorPlan320...
+INFO:EB_logger:Restoring scene FloorPlan320...
+Instruction: I have some waste that needs to be disposed of properly. Please navigate to that object and stay near it.
+Planner Output Action: [3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  83%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                   | 50/60 [44:37<10:09, 60.92s/it][2026-09-09 18:19:14,487][INFO] - Evaluating episode 50 ...
+INFO:EB_logger:Evaluating episode 50 ...
+[2026-09-09 18:19:14,487][INFO] - Restoring scene FloorPlan321...
+INFO:EB_logger:Restoring scene FloorPlan321...
+Instruction: I need a mobile device to communicate with others. Can you navigate to that object and stay close?
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  85%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                               | 51/60 [45:35<09:00, 60.02s/it][2026-09-09 18:20:12,392][INFO] - Evaluating episode 51 ...
+INFO:EB_logger:Evaluating episode 51 ...
+[2026-09-09 18:20:12,392][INFO] - Restoring scene FloorPlan322...
+INFO:EB_logger:Restoring scene FloorPlan322...
+Instruction: I need to use that portable device to access the internet for some information. Please navigate to that object and stay near it.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 3, 0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 3, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  87%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                            | 52/60 [46:04<06:45, 50.64s/it][2026-09-09 18:20:41,172][INFO] - Evaluating episode 52 ...
+INFO:EB_logger:Evaluating episode 52 ...
+[2026-09-09 18:20:41,172][INFO] - Restoring scene FloorPlan323...
+INFO:EB_logger:Restoring scene FloorPlan323...
+Instruction: I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?
+Planner Output Action: [2, 2, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  88%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                        | 53/60 [46:52<05:49, 50.00s/it][2026-09-09 18:21:29,665][INFO] - Evaluating episode 53 ...
+INFO:EB_logger:Evaluating episode 53 ...
+[2026-09-09 18:21:29,665][INFO] - Restoring scene FloorPlan324...
+INFO:EB_logger:Restoring scene FloorPlan324...
+Instruction: I need to set a time to wake up in the morning. Please navigate to that object and stay near it.
+Planner Output Action: [2, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  90%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                     | 54/60 [47:20<04:20, 43.47s/it][2026-09-09 18:21:57,897][INFO] - Evaluating episode 54 ...
+INFO:EB_logger:Evaluating episode 54 ...
+[2026-09-09 18:21:57,897][INFO] - Restoring scene FloorPlan325...
+INFO:EB_logger:Restoring scene FloorPlan325...
+Instruction: I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 2, 2, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  92%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                 | 55/60 [48:50<04:47, 57.44s/it][2026-09-09 18:23:27,950][INFO] - Evaluating episode 55 ...
+INFO:EB_logger:Evaluating episode 55 ...
+[2026-09-09 18:23:27,950][INFO] - Restoring scene FloorPlan326...
+INFO:EB_logger:Restoring scene FloorPlan326...
+Instruction: I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.
+Planner Output Action: [3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [5]
+Executed action: 5, Task success: 0.0
+Planner Output Action: [2, 2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  93%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉              | 56/60 [49:25<03:22, 50.57s/it][2026-09-09 18:24:02,493][INFO] - Evaluating episode 56 ...
+INFO:EB_logger:Evaluating episode 56 ...
+[2026-09-09 18:24:02,493][INFO] - Restoring scene FloorPlan327...
+INFO:EB_logger:Restoring scene FloorPlan327...
+Instruction: I am looking for a luminous device on my desk to read books at night. Can you navigate to that object and stay close?
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 2, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 0, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [7, 3, 3, 1, 1]
+Executed action: 7, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 1, Task success: 0.0
+Episodes:  95%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍          | 57/60 [50:11<02:27, 49.29s/it][2026-09-09 18:24:48,797][INFO] - Evaluating episode 57 ...
+INFO:EB_logger:Evaluating episode 57 ...
+[2026-09-09 18:24:48,797][INFO] - Restoring scene FloorPlan328...
+INFO:EB_logger:Restoring scene FloorPlan328...
+Instruction: I want to take a bound collection of pages to read. Please navigate to that object and stay near it.
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 3, 3, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  97%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉       | 58/60 [50:54<01:34, 47.38s/it][2026-09-09 18:25:31,718][INFO] - Evaluating episode 58 ...
+INFO:EB_logger:Evaluating episode 58 ...
+[2026-09-09 18:25:31,719][INFO] - Restoring scene FloorPlan329...
+INFO:EB_logger:Restoring scene FloorPlan329...
+Instruction: I need to use a digital device that comes with a keyboard to join a video conference. Can you navigate to that object and stay close?
+Planner Output Action: [2, 2, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  98%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍   | 59/60 [51:34<00:45, 45.21s/it][2026-09-09 18:26:11,846][INFO] - Evaluating episode 59 ...
+INFO:EB_logger:Evaluating episode 59 ...
+[2026-09-09 18:26:11,846][INFO] - Restoring scene FloorPlan330...
+INFO:EB_logger:Restoring scene FloorPlan330...
+Instruction: I need a round container to hold my breakfast cereal. Please navigate to that object and stay close.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 2, 2, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 2, 2, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 60/60 [52:23<00:00, 46.22s/it]Episodes: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 60/60 [52:23<00:00, 52.39s/it]
+['/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_33_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_21_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_17_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_41_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_55_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_6_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_54_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_22_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_25_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_46_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_34_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_9_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_16_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_51_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_26_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_4_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_27_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_44_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_39_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_18_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_5_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_56_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_31_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_47_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_40_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_35_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_49_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_58_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_37_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_28_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_29_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_12_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_24_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_45_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_60_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_32_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_57_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_19_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_52_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_36_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_13_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_10_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_38_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_15_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_11_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_7_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_2_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_14_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_48_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_53_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_43_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_42_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_3_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_1_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_8_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_20_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_30_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_23_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_59_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_50_final_res.json'] 60
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_33_final_res.json
+{'reward': 0.09090909090909091, 'instruction': 'I need a flat dish to hold my food. Can you navigate to that object and stay close?', 'task_success': 1.0, 'num_steps': 11, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 20.292752742767334}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_21_final_res.json
+{'reward': 0.07142857142857142, 'instruction': 'I have some rubbish that needs to be thrown away. Can you navigate to that object and stay close?', 'task_success': 1.0, 'num_steps': 14, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 35.3561315536499}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_17_final_res.json
+{'reward': 0.07142857142857142, 'instruction': 'I need a large container for making soup. Can you navigate to that object and stay close?', 'task_success': 1.0, 'num_steps': 14, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 38.02143454551697}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_41_final_res.json
+{'reward': 0.058823529411764705, 'instruction': 'I need to access that digital device which people use to do their work such as attending online meeting. Can you navigate to that object and stay close?', 'task_success': 1.0, 'num_steps': 17, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 362.4278407096863}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_55_final_res.json
+{'reward': 0.0, 'instruction': 'I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 89.44289183616638}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_6_final_res.json
+{'reward': 0.1, 'instruction': "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", 'task_success': 1.0, 'num_steps': 10, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 23.103816509246826}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_54_final_res.json
+{'reward': 0.1111111111111111, 'instruction': 'I need to set a time to wake up in the morning. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 9, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 27.879796504974365}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_22_final_res.json
+{'reward': 0.1111111111111111, 'instruction': 'I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 9, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 21.754932403564453}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_25_final_res.json
+{'reward': 0.0, 'instruction': 'I need a soft cushion to support my head while sleeping. Can you navigate to that object and stay close?', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 48.7434504032135}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_46_final_res.json
+{'reward': 0.08333333333333333, 'instruction': 'I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 12, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 133.58668875694275}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_34_final_res.json
+{'reward': 0.07692307692307693, 'instruction': 'I need a device on my desk to illuminate my workspace. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 13, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 33.17485547065735}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_9_final_res.json
+{'reward': 0.05, 'instruction': 'I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?', 'task_success': 1.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 46.05706524848938}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_16_final_res.json
+{'reward': 0.1, 'instruction': "I'm looking to braise some meat and need a deep cooking vessel. Please navigate to that object and stay near it.", 'task_success': 1.0, 'num_steps': 10, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 20.82197666168213}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_51_final_res.json
+{'reward': 0.1111111111111111, 'instruction': 'I need a mobile device to communicate with others. Can you navigate to that object and stay close?', 'task_success': 1.0, 'num_steps': 9, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 57.6768114566803}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_26_final_res.json
+{'reward': 0.0, 'instruction': 'I need a standing luminous device that light up a corner of the room. Please navigate to that object and stay near it.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 42.20297837257385}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_4_final_res.json
+{'reward': 0.0, 'instruction': "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 63.84440755844116}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_27_final_res.json
+{'reward': 0.09090909090909091, 'instruction': 'I need a glowing device on my desk that can provide lighting to help me read. Can you navigate to that object and stay close?', 'task_success': 1.0, 'num_steps': 11, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 21.537837743759155}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_44_final_res.json
+{'reward': 0.0, 'instruction': 'I need to set a time-based alert to wake me up. Please navigate to that object and stay near it.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 53.16358923912048}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_39_final_res.json
+{'reward': 0.0, 'instruction': "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 51.36422872543335}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_18_final_res.json
+{'reward': 0.09090909090909091, 'instruction': 'I need some fresh greens for my salad. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 11, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 20.64077353477478}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_5_final_res.json
+{'reward': 0.07692307692307693, 'instruction': 'I need a vessel to boil pasta for dinner. Can you navigate to that object and stay close?', 'task_success': 1.0, 'num_steps': 13, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 30.015321493148804}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_56_final_res.json
+{'reward': 0.07692307692307693, 'instruction': 'I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 13, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 34.167566537857056}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_31_final_res.json
+{'reward': 0.0, 'instruction': 'I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 36.6559042930603}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_47_final_res.json
+{'reward': 0.08333333333333333, 'instruction': 'I need a basket to gather my dirty laundry. Can you navigate to that object and stay close?', 'task_success': 1.0, 'num_steps': 12, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 34.41280937194824}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_40_final_res.json
+{'reward': 0.1111111111111111, 'instruction': 'I need to dispose of some trash properly. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 9, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 21.110891342163086}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_35_final_res.json
+{'reward': 0.09090909090909091, 'instruction': 'I need a container to hold fresh flowers for decoration. Can you navigate to that object and stay close?', 'task_success': 1.0, 'num_steps': 11, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 41.15111041069031}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_49_final_res.json
+{'reward': 0.08333333333333333, 'instruction': 'I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?', 'task_success': 1.0, 'num_steps': 12, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 37.20287752151489}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_58_final_res.json
+{'reward': 0.0, 'instruction': 'I want to take a bound collection of pages to read. Please navigate to that object and stay near it.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 42.642330169677734}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_37_final_res.json
+{'reward': 0.0, 'instruction': 'I need a storage container to keep some of my belongings. Can you navigate to that object and stay close?', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 43.61319947242737}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_28_final_res.json
+{'reward': 0.09090909090909091, 'instruction': 'I have some waste that needs to be disposed of properly. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 11, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 23.481316804885864}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_29_final_res.json
+{'reward': 0.09090909090909091, 'instruction': 'I need a container to store some items. Can you navigate to that object and stay close?', 'task_success': 1.0, 'num_steps': 11, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 20.587810039520264}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_12_final_res.json
+{'reward': 0.1, 'instruction': 'I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 10, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 23.955337047576904}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_24_final_res.json
+{'reward': 0.07142857142857142, 'instruction': 'I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 14, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 40.59031057357788}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_45_final_res.json
+{'reward': 0.07692307692307693, 'instruction': 'I need a large cup with a handle to hold hot beverages like coffee or tea. Can you navigate to that object and stay close?', 'task_success': 1.0, 'num_steps': 13, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 31.228765726089478}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_60_final_res.json
+{'reward': 0.05263157894736842, 'instruction': 'I need a round container to hold my breakfast cereal. Please navigate to that object and stay close.', 'task_success': 1.0, 'num_steps': 19, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 48.11349272727966}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_32_final_res.json
+{'reward': 0.08333333333333333, 'instruction': 'I have some rubbish that needs to be thrown away. Can you navigate to that object and stay close?', 'task_success': 1.0, 'num_steps': 12, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 19.032352924346924}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_57_final_res.json
+{'reward': 0.0, 'instruction': 'I am looking for a luminous device on my desk to read books at night. Can you navigate to that object and stay close?', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 45.93120098114014}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_19_final_res.json
+{'reward': 0.07142857142857142, 'instruction': 'I need to heat water for my tea. Can you navigate to that object and stay close?', 'task_success': 1.0, 'num_steps': 14, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 32.436365604400635}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_52_final_res.json
+{'reward': 0.1, 'instruction': 'I need to use that portable device to access the internet for some information. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 10, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 28.498387813568115}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_36_final_res.json
+{'reward': 0.0, 'instruction': 'I need a soft cushion to support my head while resting. Please navigate to that object and stay near it.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 51.241775035858154}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_13_final_res.json
+{'reward': 0.1, 'instruction': 'I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?', 'task_success': 1.0, 'num_steps': 10, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 26.07321000099182}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_10_final_res.json
+{'reward': 0.06666666666666667, 'instruction': 'I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 15, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 29.00556445121765}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_38_final_res.json
+{'reward': 0.1111111111111111, 'instruction': 'I need to throw away some waste materials. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 9, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 20.227137804031372}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_15_final_res.json
+{'reward': 0.0, 'instruction': "I'd like a container to drink my morning coffee. Can you navigate to that object and stay close?", 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 9, 'planner_output_error': 0, 'episode_elapsed_seconds': 77.89808750152588}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_11_final_res.json
+{'reward': 0.125, 'instruction': 'I have some rubbish that needs to be properly disposed of. Can you navigate to that object and stay close?', 'task_success': 1.0, 'num_steps': 8, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 21.796212434768677}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_7_final_res.json
+{'reward': 0.1, 'instruction': "I need a red, juicy fruit that's often used in salads or cooking. Can you navigate to that object and stay close?", 'task_success': 1.0, 'num_steps': 10, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 28.467313051223755}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_2_final_res.json
+{'reward': 0.07142857142857142, 'instruction': 'I need a large cooking vessel to prepare a hearty soup. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 14, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 70.23892164230347}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_14_final_res.json
+{'reward': 0.09090909090909091, 'instruction': 'I need a vessel to cook rice on the stove. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 11, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 30.059032201766968}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_48_final_res.json
+{'reward': 0.0, 'instruction': 'I need to use my portable device that has a screen and a keyboard. Please navigate to that object and stay near it.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 43.96562647819519}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_53_final_res.json
+{'reward': 0.0, 'instruction': 'I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 47.87737679481506}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_43_final_res.json
+{'reward': 0.0, 'instruction': 'I need a storage container to keep some of my belongings organized. Can you navigate to that object and stay close?', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 38.72621250152588}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_42_final_res.json
+{'reward': 0.07142857142857142, 'instruction': 'I need a device to set an alarm for waking up at a specific time. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 14, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 373.19622325897217}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_3_final_res.json
+{'reward': 0.0, 'instruction': "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 43.62063264846802}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_1_final_res.json
+{'reward': 0.1, 'instruction': "I'm looking for freshly baked loaves that can be sliced for sandwiches or toast. Can you navigate to that object and stay close?", 'task_success': 1.0, 'num_steps': 10, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 36.88546180725098}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_8_final_res.json
+{'reward': 0.09090909090909091, 'instruction': 'I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 11, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 78.27573537826538}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_20_final_res.json
+{'reward': 0.1, 'instruction': 'I need a device to brew my morning coffee. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 10, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 21.008139610290527}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_30_final_res.json
+{'reward': 0.07692307692307693, 'instruction': 'I need to dispose of some trash. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 13, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 29.87934899330139}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_23_final_res.json
+{'reward': 0.0, 'instruction': 'I need to use that device that comes with a screen and a keyboard for some work tasks. Can you navigate to that object and stay close?', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 108.56449770927429}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_59_final_res.json
+{'reward': 0.0, 'instruction': 'I need to use a digital device that comes with a keyboard to join a video conference. Can you navigate to that object and stay close?', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 39.859272718429565}
+closed_feedback/gemini-3.5-flash_eb-nav_v2_full/common_sense/results/episode_50_final_res.json
+{'reward': 0.1, 'instruction': 'I have some waste that needs to be disposed of properly. Please navigate to that object and stay near it.', 'task_success': 1.0, 'num_steps': 10, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 56.19689750671387}
+final results: 
+{'reward': 0.06137450340623718, 'task_success': 0.7, 'num_steps': 14.316666666666666, 'planner_steps': 4.233333333333333, 'planner_output_error': 0.0, 'episode_elapsed_seconds': 51.98307150602341}

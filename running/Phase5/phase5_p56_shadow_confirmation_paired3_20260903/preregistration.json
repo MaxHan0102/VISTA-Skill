@@ -1,0 +1,75 @@
+{
+  "candidate_artifact": "running/Phase5/phase5_temporal_sequential_paired_e6_20260903_rerun1/seed_0/update_proposals/v0-v1-001436ce4072-4e90990d463b/candidate_skill.json",
+  "candidate_artifact_sha256": "a194b9adc5e867c0fc7da20614e085a5f71eefd2b451c76b9d20cc105e783c30",
+  "driver": "scripts/phase5_variance_audit.py",
+  "driver_sha256": "22b837c35383c9304177c71fd15c1144ff7dcb570e8338730b1f59be2bfa0b45",
+  "outcomes_observed_when_written": false,
+  "parent_artifact": "running/Phase5/phase5_temporal_sequential_paired_e6_20260903_rerun1/seed_0/update_proposals/v0-v1-001436ce4072-4e90990d463b/parent_skill.json",
+  "parent_artifact_sha256": "b275569e411915befe300830dcb6cd457def7a80ccc9b3819ecd5ca0d99af757",
+  "protocol": {
+    "all_rollout_seeds": [
+      0,
+      1,
+      2
+    ],
+    "config": "configs/vista_phase5_hab.json",
+    "constraints": {
+      "candidate_must_not_be_promoted": true,
+      "official_test_access": false,
+      "outcome_cannot_change_e6_decision": true,
+      "paired_three_is_task_first": true,
+      "pass_at_k_is_diagnostic_only": true,
+      "tasks_70_79_were_untouched_by_prior_failed_proxy_gates": true
+    },
+    "decision_rule": {
+      "contradictory": "Affected mean is non-positive, protected mean is below -0.05, or worst subgroup mean is below -0.05.",
+      "inconclusive": "The point estimates remain evidence-consistent but the unchanged confidence bounds do not pass.",
+      "minimum_delta_divergent_tasks": 2,
+      "supportive": "The unchanged full-budget semantic Gate passes on the untouched finalist pool.",
+      "within_task_variance_share_threshold": 0.2
+    },
+    "episode_ids": [
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "77",
+      "78",
+      "79"
+    ],
+    "executor": {
+      "max_completion_tokens": 4096,
+      "model": "Qwen/Qwen3-VL-8B-Instruct",
+      "n_shots": 10,
+      "resolution": 500,
+      "temperature": 0.0,
+      "tensor_parallel": 1
+    },
+    "manifest": "configs/eb_hab_train_validation_manifest.json",
+    "metric": {
+      "invalid_action_penalty": 0.1,
+      "name": "paired_composite_task_score_delta",
+      "progress_weight": 0.3,
+      "success_weight": 0.7
+    },
+    "new_rollout_seeds": [
+      0,
+      1,
+      2
+    ],
+    "output_dir": "running/Phase5/phase5_p56_shadow_confirmation_paired3_20260903",
+    "protocol_id": "vista_skill_phase5_p56_shadow_confirmation_2026_09_03",
+    "purpose": "Test whether the retained E6 temporal candidate has supportive, inconclusive, or contradictory evidence on the untouched finalist task pool.",
+    "reused_rollout_seeds": [],
+    "semantic_scope": [
+      "action:pick"
+    ],
+    "source_proposal": "running/Phase5/phase5_temporal_sequential_paired_e6_20260903_rerun1/seed_0/update_proposals/v0-v1-001436ce4072-4e90990d463b",
+    "status": "diagnostic_not_claim_eligible"
+  },
+  "protocol_file": "configs/phase5_p56_shadow_confirmation.json",
+  "protocol_sha256": "307e30eba9feb49228056b7e8dee587775f1531dfa91e82f09034504fb8f12eb"
+}

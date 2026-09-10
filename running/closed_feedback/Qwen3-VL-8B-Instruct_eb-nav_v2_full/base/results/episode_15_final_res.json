@@ -1,0 +1,1 @@
+{"reward": 0.05555555555555555, "instruction": "navigate to the Cup in the room and be as close as possible to it", "task_success": 1.0, "num_steps": 18, "planner_steps": 5, "planner_output_error": 0, "episode_elapsed_seconds": 21.27868127822876}

@@ -1,5 +1,7 @@
 # VISTA-Skill Experiment Log
 
+> 2026-09-08 目录整理：本阶段实验实体已归档至 `running/Phase1/`，路径引用已改写且兼容软链接已删除，原版已备份。详见[实验输出目录说明](experiment_output_layout.md)。
+
 Long-term maintenance log for every experiment campaign on this project.
 One entry per campaign: what was tested, exact settings, results,
 interpretation, artifact location, and follow-ups. Append new entries at the
@@ -190,7 +192,7 @@ real faults to recur (ACQ=60 controlled protocol), a harder task distribution
 Skill-vs-no-Skill effect and the 21× teacher-cost multiple are the two numbers
 worth carrying into the next campaign.
 
-**Artifacts:** `running/pilot/<method>/` + `running/pilot/eval/*.summary.json`
+**Artifacts:** `running/Phase1/pilot/<method>/` + `running/Phase1/pilot/eval/*.summary.json`
 (local, gitignored); `/tmp/pilot_6methods.log` (volatile).
 
 ---
@@ -282,7 +284,7 @@ untouched):**
 | 13 | `full` died on episode 1 `invalid predicate name: ''` | model junk strings reach `PredicateKey.parse` in grounder/evidence paths | per-entry drop (degrade-not-abort) + `minLength`/`minItems` in schemas |
 | 14 | `vista_without_vtca` died `common-gate proposals require independent episodes` | `proposal_cluster` hardcoded ≥2 vs pilot config `min_independent_episodes=1` | configurable floor (`min_episodes`, default 2) wired from config |
 
-**Artifacts:** `running/pilot/` (6 methods + eval), `running/vista_skill/
+**Artifacts:** `running/Phase1/pilot/` (6 methods + eval), `running/Phase1/vista_skill/
 nav_official/base/{no_skill,static_shared_skill}/` (local, gitignored).
 
 **Follow-up:** open items 1–4 above remain; EB-NAV has 4 more subsets
@@ -366,8 +368,8 @@ each a real P0 design conservatism, were isolated:
 3. Re-run this fault-repair campaign after 1–2 land; the harness
    (`scripts/fault_repair_effectiveness.py`, `--skill-fault`) is reusable as-is.
 
-**Artifacts:** `running/fault_repair/` (termination, incl. `full_v1_textonly`
-and `arm_b_v2_solo_rerun`), `running/fault_repair_pick/` (local, gitignored).
+**Artifacts:** `running/Phase1/fault_repair/` (termination, incl. `full_v1_textonly`
+and `arm_b_v2_solo_rerun`), `running/Phase1/fault_repair_pick/` (local, gitignored).
 
 ---
 
@@ -415,7 +417,7 @@ behavioral effect is large enough for the paired gate to certify (see E9,
 the `constraint_pick_multihold` campaign). The gate's rejection here is the
 designed conservatism working, not a defect.
 
-**Artifacts:** `running/fault_repair_e8*_termination*/` (each iteration kept:
+**Artifacts:** `running/Phase1/fault_repair_e8*_termination*/` (each iteration kept:
 `_fragmented`, `_casebug`, `_falsepos`, `_mind2`, `_echo`, `_echo2`, final
 `e8g_termination`) — a complete root-cause ladder for the paper's
 reliability-mechanism section.
@@ -441,7 +443,7 @@ termination fault (~0.05 behavioral effect, E8g). Diagnostic config chain:
 proxy=10/finalist=10→30, bootstrap=2000); driver gained
 `VISTA_FAULT_CONFIG`/`VISTA_FAULT_MANIFEST` env overrides.
 
-**Iteration ladder (each run kept under `running/fault_repair_e8*`):**
+**Iteration ladder (each run kept under `running/Phase1/fault_repair_e8*`):**
 
 | run | blocker found | fix |
 |---|---|---|
@@ -473,7 +475,7 @@ failure. Baselines for contrast: trajectory reflection misattributed the
 field in every campaign to date (0/14 cumulative before E9; the E8-series C
 arms add more).
 
-**Artifacts:** `running/fault_repair_e8{h..p}_*` (lapsemask → parityecho →
+**Artifacts:** `running/Phase1/fault_repair_e8{h..p}_*` (lapsemask → parityecho →
 ruleecho → duprules → p2power → f4task → e8p), each stage's gate_rollouts
 preserved.
 
@@ -619,7 +621,7 @@ side (guaranteed fault presence) rather than the executor.
 **Follow-up (T4-②, 2026-08-21 17:49): Regime C also fails — benchmark is now
 mandatory.** Minimal initial skill (§4.2.3: one-line bodies, zero compiled
 rules), 8B executor+teacher, min_ind=1, 20 acq + base 20 eval
-(`running/t4c_minimal/`):
+(`running/Phase1/t4c_minimal/`):
 
 - **B (full) cannot evolve from minimal**: 0 skill_update attributions across
   20 episodes (abstain 133 / belief_refresh 21), 0 proposals — with no

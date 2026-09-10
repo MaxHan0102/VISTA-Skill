@@ -1,5 +1,7 @@
 # VISTA-Skill Phase 2 Experiment Log
 
+> 2026-09-08 目录整理：本阶段实验实体已归档至 `running/Phase2/`，路径引用已改写且兼容软链接已删除，原版已备份。引用的 Phase1 源数据仍归 Phase1，详见[实验输出目录说明](experiment_output_layout.md)。
+
 本文件记录 2026-08-24 开始的 Phase 2 验证。所有结果均使用
 `Qwen/Qwen3-VL-8B-Instruct`，历史 `running/` artifact 未被覆盖。
 
@@ -33,7 +35,7 @@ tests 和完整 pytest suite 均通过。
 ```bash
 PYTHONPATH=. /root/miniconda3/envs/max_embench/bin/python \
   scripts/phase2_gate_reanalysis.py \
-  --output running/phase2_gate_reanalysis_20260824.json
+  --output running/Phase2/phase2_gate_reanalysis_20260824.json
 ```
 
 affected group 在查看 outcome 前按 fault semantics 定义为
@@ -61,7 +63,7 @@ bootstrap 10,000 次，alpha=0.05，protected non-inferiority margin=-0.05。
 ```bash
 PYTHONPATH=. /root/miniconda3/envs/max_embench/bin/python \
   scripts/phase2_evidence_noise_sweep.py \
-  --output running/phase2_evidence_noise_20260824.json
+  --output running/Phase2/phase2_evidence_noise_20260824.json
 ```
 
 设置：300 synthetic oracle requests，20 noise replicates，12 fault families x
@@ -89,9 +91,9 @@ synthetic noise 不是自然 Habitat accuracy 的估计。
 PYTHONPATH=. OPENAI_API_KEY=EMPTY \
   /root/miniconda3/envs/max_embench/bin/python \
   scripts/phase2_natural_evidence_weak_audit.py \
-  --events running/fault_repair_e8p_constraint/full/seed_0/acquisition.jsonl \
+  --events running/Phase1/fault_repair_e8p_constraint/full/seed_0/acquisition.jsonl \
   --base-url http://192.168.1.173:8001/v1 \
-  --output running/phase2_natural_evidence_weak_audit_173_20260824.json
+  --output running/Phase2/phase2_natural_evidence_weak_audit_173_20260824.json
 ```
 
 设置：45 个真实 Habitat transitions，50 个 simulator-feedback definite
@@ -116,7 +118,7 @@ predicate 作为 weak gold，feedback-enabled arm 还把同一 feedback 文本�
 
 为区分视觉输入相对 public feedback 的增量价值，在相同 45 transitions / 50
 targets 上补充 feedback-only arm；三臂重新独立调用 Qwen，共 135 calls。Artifact：
-`running/phase2_natural_evidence_three_arm_173_20260824.json`。
+`running/Phase2/phase2_natural_evidence_three_arm_173_20260824.json`。
 
 | 条件 | Coverage | Precision | Recall | F1 | Prompt + completion tokens |
 |---|---:|---:|---:|---:|---:|
@@ -141,9 +143,9 @@ feedback-only 的增量稳定在 `+0.058` 至 `+0.070`。
 targets，三臂 F1 为 `0.866 / 0.795 / 0.500`，视觉增量 `+0.071`。绝对值略降，
 但信息源排序和差距跨 campaign 一致。Artifacts：
 
-- `running/phase2_natural_evidence_three_arm_seed1_retry_173_20260824.json`；
-- `running/phase2_natural_evidence_three_arm_seed2_173_20260824.json`；
-- `running/phase2_multihold_natural_evidence_three_arm_seed0_173_20260824.json`。
+- `running/Phase2/phase2_natural_evidence_three_arm_seed1_retry_173_20260824.json`；
+- `running/Phase2/phase2_natural_evidence_three_arm_seed2_173_20260824.json`；
+- `running/Phase2/phase2_multihold_natural_evidence_three_arm_seed0_173_20260824.json`。
 
 另有一个首次 seed-1 artifact 的 135 calls 全部为本地网络沙箱
 `APIConnectionError`，其零 coverage 不纳入任何指标；该失败 artifact 被保留为
@@ -165,7 +167,7 @@ PYTHONPATH=. OPENAI_API_KEY=EMPTY \
   /root/miniconda3/envs/max_embench/bin/python \
   scripts/phase2_teacher_attribution.py \
   --base-url http://192.168.1.173:8001/v1 --seeds 5 \
-  --output running/phase2_teacher_attribution_173_20260824.json
+  --output running/Phase2/phase2_teacher_attribution_173_20260824.json
 ```
 
 在同一个 24-case synthetic fault set 上跳过 rule-first，直接调用 Qwen teacher。
@@ -187,9 +189,9 @@ belief refresh 与 abstention。仍需自然事件 gold 才能外推到真实 at
 PYTHONPATH=. OPENAI_API_KEY=EMPTY \
   /root/miniconda3/envs/max_embench/bin/python \
   scripts/phase2_natural_attribution_audit.py \
-  --events running/phase2_multihold_provenance_fix/full/seed_0/acquisition.jsonl \
+  --events running/Phase2/phase2_multihold_provenance_fix/full/seed_0/acquisition.jsonl \
   --base-url http://192.168.1.173:8001/v1 \
-  --output running/phase2_natural_attribution_weak_audit_173_20260824.json
+  --output running/Phase2/phase2_natural_attribution_weak_audit_173_20260824.json
 ```
 
 从自然 Habitat acquisition 中预先按 injected fault provenance 定义正例：
@@ -235,9 +237,9 @@ campaign 上后验结果也是 `1.0/1.0`。这支持把 partition/dominance 作�
 预注册算法假设，但当前 gold 只标记 injected fault，且规则经过一次 post-hoc
 修订，不能当作独立方法主结果。Artifacts：
 
-- `running/phase2_natural_attribution_partition_audit_seed0_173_20260824.json`；
-- `running/phase2_e8p_natural_attribution_partition_audit_seed1_173_20260824.json`；
-- `running/phase2_natural_attribution_partition_refined_audit_seed1_173_20260824.json`。
+- `running/Phase2/phase2_natural_attribution_partition_audit_seed0_173_20260824.json`；
+- `running/Phase2/phase2_e8p_natural_attribution_partition_audit_seed1_173_20260824.json`；
+- `running/Phase2/phase2_natural_attribution_partition_refined_audit_seed1_173_20260824.json`。
 
 ### 自然 episode-level Trajectory Reflection 对照
 
@@ -247,9 +249,9 @@ campaign 上后验结果也是 `1.0/1.0`。这支持把 partition/dominance 作�
 PYTHONPATH=. OPENAI_API_KEY=EMPTY \
   /root/miniconda3/envs/max_embench/bin/python \
   scripts/phase2_natural_trajectory_attribution.py \
-  --events running/phase2_multihold_provenance_fix/full/seed_0/acquisition.jsonl \
+  --events running/Phase2/phase2_multihold_provenance_fix/full/seed_0/acquisition.jsonl \
   --base-url http://192.168.1.173:8001/v1 --seeds 2 \
-  --output running/phase2_natural_trajectory_attribution_173_20260824.json
+  --output running/Phase2/phase2_natural_trajectory_attribution_173_20260824.json
 ```
 
 把同一 20 个自然 episodes 压成 EmbodiSkill-style trajectory summary；只要 episode
@@ -265,7 +267,7 @@ multihold rule。它预示 EmbodiSkill*+Common Gate 即使生成候选也难以�
 
 补充到 5 个 request seeds 后，五次输出逐 episode 完全一致，所有指标不变，且
 仍为 `0/11` 命中真正的 `constraint` 字段。Artifact：
-`running/phase2_natural_trajectory_attribution_5seeds_173_20260824.json`。因此该
+`running/Phase2/phase2_natural_trajectory_attribution_5seeds_173_20260824.json`。因此该
 失败不是 decoding seed 偶然性；端到端 Common Gate baseline 的前置风险明确位于
 trajectory proposal attribution，gate 本身不能恢复错误字段。
 
@@ -278,7 +280,7 @@ PYTHONPATH=. OPENAI_API_KEY=EMPTY \
   /root/miniconda3/envs/max_embench/bin/python \
   scripts/phase2_patch_stability.py \
   --base-url http://192.168.1.173:8001/v1 --trials 10 \
-  --output running/phase2_patch_stability_173_20260824.json
+  --output running/Phase2/phase2_patch_stability_173_20260824.json
 ```
 
 结果：10/10 seeds 通过；10 次均产生同一个 patch/candidate/text，bounded apply
@@ -288,7 +290,7 @@ PYTHONPATH=. OPENAI_API_KEY=EMPTY \
 同一脚本的 `--fault effect_pick_inversion` 前置筛查也是 10/10 seeds 通过；
 10 次均产生文本 `Picking up an object results in holding the object.`，目标
 `effect_pick_holds_target_category=true`，其他 effect compiled rules 保持不变。
-Artifact：`running/phase2_patch_stability_effect_173_20260824.json`。
+Artifact：`running/Phase2/phase2_patch_stability_effect_173_20260824.json`。
 
 ## P2-3：修复后的 Habitat Fault-Repair Campaign
 
@@ -308,7 +310,7 @@ PYTHONPATH=EmbodiedBench:. CUDA_VISIBLE_DEVICES=0 OPENAI_API_KEY=EMPTY \
   --method-model Qwen/Qwen3-VL-8B-Instruct \
   --method-base-url http://192.168.1.185:8000/v1 \
   --skill-fault constraint_pick_multihold \
-  --output-dir running/phase2_multihold_provenance_fix/full
+  --output-dir running/Phase2/phase2_multihold_provenance_fix/full
 ```
 
 ### Multihold Full VISTA 最终结果
@@ -349,7 +351,7 @@ provenance 修复后 12/12 patches 均未发生 unrelated place-rule corruption�
 成本：executor 76 calls，354,448 prompt + 27,291 completion tokens；method
 204 calls，191,110 prompt + 82,169 completion tokens。其中 visual evidence
 167 calls，占 method completion tokens 的绝大多数。正式重分析使用校正后的
-artifact `running/phase2_multihold_provenance_fix_reanalysis_corrected_v2_20260824.json`。
+artifact `running/Phase2/phase2_multihold_provenance_fix_reanalysis_corrected_v2_20260824.json`。
 早期未校正版本把未包含 place rule 的 termination patch 误算为 corruption，已保留
 但不得用于结论。
 
@@ -365,7 +367,7 @@ rollout，最终 frozen Skill 与 Full 相同，仍是故障 v0。
 的失败发生在上游 episode-level attribution/recurrence，而不是 Common Gate 拒绝。
 它也没有实现 Skill evolution。executor 成本为 81 calls、371,681 prompt +
 30,212 completion tokens。Artifact 目录：
-`running/phase2_multihold_provenance_fix/embodiskill_star_common_gate/`。
+`running/Phase2/phase2_multihold_provenance_fix/embodiskill_star_common_gate/`。
 
 ## P2-4：Effect Pick Inversion 自然事件诊断
 
@@ -389,7 +391,7 @@ targets。三个条件均为 0 API failures：
 和 multihold acquisition 的 `+0.058--+0.071`；images-only 仍弱。这说明视觉层
 不是完全无效，但目前多数 weak-gold facts 已被 public feedback 覆盖，且视觉自身
 不足以支撑可靠 credit assignment。Artifacts：
-`running/phase2_effect_natural_evidence_weak_audit_seed{0,1,2}_173_20260824.json`。
+`running/Phase2/phase2_effect_natural_evidence_weak_audit_seed{0,1,2}_173_20260824.json`。
 
 ### Transition-level attribution、五 request seeds
 
@@ -412,7 +414,7 @@ identity/belief veto 路由成 belief refresh。与 multihold 的 post-hoc 结�
 这暴露了下一版 dominance 规则不能简单压过所有 identity signals，需区分真实
 instance ambiguity 和与 decisive Skill contradiction 同时出现的旁路 identity
 evidence。partition 和 oracle 均为机制诊断，不是独立方法主结果。Artifacts：
-`running/phase2_effect_natural_attribution_audit_seed{0,1,2,3,4}_173_20260824.json`。
+`running/Phase2/phase2_effect_natural_attribution_audit_seed{0,1,2,3,4}_173_20260824.json`。
 
 ### Episode-level trajectory reflection、五 request seeds
 
@@ -420,7 +422,7 @@ evidence。partition 和 oracle 均为机制诊断，不是独立方法主结果
 一致：target Macro-F1=`0.549`，update precision/recall=`0.556/0.500`，field
 Macro-F1=`0.190`。所有预测为持久更新的 positives 都落到 `procedure`，没有一次
 命中真实 `effect` field。Artifact：
-`running/phase2_effect_natural_trajectory_attribution_5seeds_173_20260824.json`。
+`running/Phase2/phase2_effect_natural_trajectory_attribution_5seeds_173_20260824.json`。
 
 这与 multihold trajectory 的 `0/11 constraint` 命中形成跨 fault 复现：
 episode-level baseline 能识别部分失败需要经验更新，却缺少 transition predicate
@@ -487,10 +489,10 @@ post-hoc hypothesis，必须在新 fault、seed 和预注册阈值上独立验�
 
 Artifacts：
 
-- `running/phase2_effect_pick_inversion/full/seed_0/update_audit.json`；
-- `running/phase2_effect_pick_inversion_gate_reanalysis_20260824.json`；
-- `running/phase2_effect_pick_inversion/full/seed_0/run_manifest.json`；
-- `running/phase2_effect_pick_inversion/full/experiment_manifest.json`。
+- `running/Phase2/phase2_effect_pick_inversion/full/seed_0/update_audit.json`；
+- `running/Phase2/phase2_effect_pick_inversion_gate_reanalysis_20260824.json`；
+- `running/Phase2/phase2_effect_pick_inversion/full/seed_0/run_manifest.json`；
+- `running/Phase2/phase2_effect_pick_inversion/full/experiment_manifest.json`。
 
 由于原进程在 manifest 写出前中断，acquisition 的 executor/method token counters
 不可恢复，manifests 已明确记录为 unavailable；不得据此与 multihold 做精确成本比。
@@ -516,7 +518,7 @@ Common Gate 的 0 proposal 跨 fault 一致。严格结论是：EmbodiSkill-styl
 episode-level reflection 在当前 structured fault 下无法把失败聚合到正确 compiled
 Skill field，Common Gate 根本没有机会评价候选；它没有实现 Skill evolution。
 Artifact 目录：
-`running/phase2_effect_pick_inversion/embodiskill_star_common_gate/`。
+`running/Phase2/phase2_effect_pick_inversion/embodiskill_star_common_gate/`。
 
 ## P2-7：当前验证覆盖与阶段性结论
 

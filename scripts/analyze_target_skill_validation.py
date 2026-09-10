@@ -248,7 +248,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--run-dir",
-        default="running/target_skill_oracle_v1/validation_common_sense_seed0",
+        default="running/Phase4/target_skill_oracle_v1/validation_common_sense_seed0",
     )
     parser.add_argument(
         "--hab-run-dir",

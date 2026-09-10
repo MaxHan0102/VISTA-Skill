@@ -1,0 +1,1 @@
+{"reward": 0.09090909090909091, "instruction": "navigate to the Bread in the room and be as close as possible to it", "task_success": 1.0, "num_steps": 11, "planner_steps": 3, "planner_output_error": 0, "episode_elapsed_seconds": 12.713291645050049}

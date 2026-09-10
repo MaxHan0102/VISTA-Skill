@@ -1,0 +1,1 @@
+{"reward": 0.078125, "num_invalid_actions": 8, "empty_plan": 1, "instruction": "On the TV stand I need you to put a plate.", "task_success": 0, "task_progress": 0, "subgoal_reward": 0, "num_steps": 16, "planner_steps": 7, "planner_output_error": 0, "num_invalid_action_ratio": 0.5, "episode_elapsed_seconds": 27.90329909324646}

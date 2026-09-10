@@ -1,0 +1,1 @@
+{"reward": 0.0, "num_invalid_actions": 10, "empty_plan": 0, "instruction": "Retrieve a apple and place it into the predetermined sofa.", "task_success": false, "task_progress": 0.0, "subgoal_reward": 0.0, "num_steps": 21, "planner_steps": 5, "planner_output_error": 0, "num_invalid_action_ratio": 0.47619047619047616, "episode_elapsed_seconds": [73.6368362903595]}

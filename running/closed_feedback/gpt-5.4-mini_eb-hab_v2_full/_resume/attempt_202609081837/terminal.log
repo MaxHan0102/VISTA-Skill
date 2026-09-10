@@ -1,0 +1,29 @@
+Output directory: /root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081837
+[2026-09-08 18:37:42,790][INFO] - Current eval set: complex_instruction
+2026-09-08 18:37:42,896 Initializing dataset LangRearrangeDataset-v0
+2026-09-08 18:37:42,896 Loading from /root/max/VISTA-Skill/EmbodiedBench/embodiedbench/envs/eb_habitat/datasets/complex_instruction.pickle
+2026-09-08 18:37:42,899 initializing sim RearrangeSim-v0
+2026-09-08 18:37:44,298 Initializing task RearrangePredicateTask-v0
+Num episodes 50
+Episodes:   0%|                                                                                                                                                                                                                            | 0/50 [00:00<?, ?it/s][2026-09-08 18:37:46,640][INFO] - Evaluating episode 24 ...
+[2026-09-08 18:37:46,647][INFO] - Episode 24: BaseEpisode(episode_id='2', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_13.scene_instance.json')
+Instruction: There's an apple on the sofa, but on the right counter I need you to put a book.
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [8, 41, 10, 54]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the book, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False

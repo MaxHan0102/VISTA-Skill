@@ -1,5 +1,7 @@
 # VISTA-Skill Phase 3 Experiment Log
 
+> 2026-09-08 目录整理：本阶段实验实体已归档至 `running/Phase3/`，路径引用已改写且兼容软链接已删除，原版已备份。详见[实验输出目录说明](experiment_output_layout.md)。
+
 本文件记录 2026-08-24 开始的 Phase 3。Phase 1/2 的 artifact 和结论保持只读；
 任何算法、阈值、样本或运行策略调整必须在新结果用于下一轮决策前记录在本文件中。
 
@@ -186,7 +188,7 @@ Decision：
    每臂 20 acquisition episodes，相同 executor/teacher/gate/audit budget。
 6. P3A-5：effect pilot 通过后才复现 multihold 和 clean control；仍不直接扩到三 evolution seeds。
 
-所有长任务必须在命名的 detached `tmux` 会话中运行，stdout/stderr 同时写入 `running/phase3a/`
+所有长任务必须在命名的 detached `tmux` 会话中运行，stdout/stderr 同时写入 `running/Phase3/phase3a/`
 下的时间戳日志；命令、PID/tmux session、endpoint、config/manifest hash、开始/结束时间和退出码
 写入 run manifest。已有输出禁止覆盖，中断恢复必须复用完整坐标并保留损坏/不完整 artifact。
 
@@ -232,7 +234,7 @@ Decision：
 - 调整：重试改用已经冻结为单 seed `[0]`、同一 executor/resolution/n-shots/manifest 的
   `configs/vista_fault_repair.json`，不注入 Skill fault。该配置差异只涉及 evolution/gate 参数；
   P3A-0 为 rule-only 数据采集，不执行 proposal/gate，因而不会改变 oracle feasibility 问题。
-- 失败 artifact 保留在 `running/phase3a/p3a0_oracle_smoke_20260824/`，不覆盖；重试使用新路径和
+- 失败 artifact 保留在 `running/Phase3/phase3a/p3a0_oracle_smoke_20260824/`，不覆盖；重试使用新路径和
   新 tmux session。
 
 ### P3A-0 第二次启动失败与调整（2026-08-24 21:48 CST）
@@ -273,7 +275,7 @@ Decision：
 - 新增真实格式/type 回归测试后 oracle/runner 10 条测试通过。已启动
   `vista_p3a0_fixed_20260824` 做全 10 episodes 修复复验；未查看任何 Evidence Guard 指标。
 - 原始分析 artifact：
-  `running/phase3a/p3a0_oracle_smoke_run3_20260824/oracle_feasibility_old_parser.json`。
+  `running/Phase3/phase3a/p3a0_oracle_smoke_run3_20260824/oracle_feasibility_old_parser.json`。
 
 ### P3A-1 数据构造细化（冻结于 Guard outcome 之前，2026-08-24 22:10 CST）
 
@@ -364,7 +366,7 @@ Decision：
   closed-world 标 false；无法解析仍为 unknown。新增 missing-permutation 回归测试；随后加入
   live Guard wiring 测试后总测试 226 条通过。
 - 已在 `vista_p3a0_final_20260824` 中启动最终 10-episode smoke。中间 artifact 保留为
-  `running/phase3a/p3a0_oracle_fixed_20260824/oracle_feasibility_type_fallback.json`。
+  `running/Phase3/phase3a/p3a0_oracle_fixed_20260824/oracle_feasibility_type_fallback.json`。
 
 ### P3A-0 最终 mapping 结果（2026-08-24 22:13 CST）
 
@@ -373,7 +375,7 @@ Decision：
 - 分谓词 coverage：holding/not_holding/at/near/open/task_complete 全为 `1.000`；分 action 的
   nav/pick/place/close 也全为 `1.000`（本批没有 open action，但 open predicate 4/4 已映射）。
 - transition payload 扫描确认不包含 `state_oracle` 或 evaluation-only source，信息隔离通过。
-- Artifact：`running/phase3a/p3a0_oracle_final_20260824/oracle_feasibility_mapping.json`。
+- Artifact：`running/Phase3/phase3a/p3a0_oracle_final_20260824/oracle_feasibility_mapping.json`。
 - 已启动同 seed、同 10 episodes、关闭 oracle 的 `vista_p3a0_reference_20260824`；待比较 action、
   feedback、success、pre/post image SHA 和 episode outcome 的 exact signature。
 
@@ -384,7 +386,7 @@ Decision：
   trajectory、task success/progress、environment steps 和 invalid-action count exact match=`true`。
 - 因此 P3A-0 同时通过 mapping coverage、artifact isolation 和 rollout non-interference 三项门槛，
   允许进入 P3A-1。最终 artifact：
-  `running/phase3a/p3a0_oracle_final_20260824/oracle_feasibility_with_reference.json`。
+  `running/Phase3/phase3a/p3a0_oracle_final_20260824/oracle_feasibility_with_reference.json`。
 - 两个远端冻结 Qwen3-VL-8B endpoints（`192.168.1.185:8000`、
   `192.168.1.173:8001`）均通过仓库规定的 6/6 serving-contract probe。
 
@@ -412,9 +414,9 @@ Decision：
 - 753 个 post oracle queries 中 definite=`691`、unknown=`62`。unknown 仍全部是 feedback
   parser 的 lossy alias `open(cabinet_push)`，具体 action-local `cab_push_point_i` 查询仍为
   definite；冻结 audit 规则忽略 unknown，不伪造负标签。
-- Artifact：`running/phase3a/p3a1_scripted_stress_20260824/events.jsonl`、
-  `running/phase3a/p3a1_scripted_stress_20260824/runtime_manifest.json` 和
-  `running/phase3a/p3a1_scripted_stress_20260824/collection_manifest.json`。
+- Artifact：`running/Phase3/phase3a/p3a1_scripted_stress_20260824/events.jsonl`、
+  `running/Phase3/phase3a/p3a1_scripted_stress_20260824/runtime_manifest.json` 和
+  `running/Phase3/phase3a/p3a1_scripted_stress_20260824/collection_manifest.json`。
 
 ### P3A-1 首次 dataset freeze 失败与预注册修复（任何 VLM outcome 之前）
 
@@ -431,7 +433,7 @@ Decision：
 - 修正后 builder 成功冻结 `vista_phase3a_evidence_state_oracle_v2`：300 条，
   dev/selection/audit=`120/80/100`，natural/stress=`200/100`，动作计数为
   nav=`87`、pick=`86`、place=`35`、open=`53`、close=`39`，三个 split 之间无 scene
-  overlap。Artifact：`running/phase3a/phase3a_dataset_v2_20260824.json`。
+  overlap。Artifact：`running/Phase3/phase3a/phase3a_dataset_v2_20260824.json`。
 
 ### P3A-2 VLM cache 启动前的数据外发安全门（2026-08-24）
 
@@ -457,10 +459,10 @@ Decision：
   是模型的有效覆盖结果，不重跑、不删样本。
 - Cache SHA256：images+feedback=`80babf32b4bee8b2d5ef9db9a70ce7b7102ece3684402c3a1b74d0145639e70c`；
   images-only=`86f53ef238e6ef6e873c5a8445b1a58782907b70158911ff09f392209b22ae09`。
-- Artifacts：`running/phase3a/cache_images_feedback_20260824.jsonl`、
-  `running/phase3a/cache_images_only_20260824.jsonl` 及各自 `.summary.json`；运行记录在
-  `running/phase3a/p3a2_cache_images_feedback_20260824/` 和
-  `running/phase3a/p3a2_cache_images_only_20260824/`。
+- Artifacts：`running/Phase3/phase3a/cache_images_feedback_20260824.jsonl`、
+  `running/Phase3/phase3a/cache_images_only_20260824.jsonl` 及各自 `.summary.json`；运行记录在
+  `running/Phase3/phase3a/p3a2_cache_images_feedback_20260824/` 和
+  `running/Phase3/phase3a/p3a2_cache_images_only_20260824/`。
 
 ### 首次 frozen audit 中止与 Oracle cache 缺陷（2026-08-25）
 
@@ -476,7 +478,7 @@ Decision：
 - 修复为：每次 evaluation-only `observe` 前调用 `sim_info.reset_pred_truth_cache()`，只清除
   谓词求值缓存，不修改 simulator state。新增 regression test 确保 reset 先于
   `get_true_predicates()`。由于旧 label 不再可作 truth，接下来必须重收 Oracle labels。
-- 第一次输出保留为 `running/phase3a/phase3a_guard_frozen_audit_20260825.json`，用作
+- 第一次输出保留为 `running/Phase3/phase3a/phase3a_guard_frozen_audit_20260825.json`，用作
   failure-analysis artifact，不作为 Phase3A 方法结论。因 `audit_opened_once=false`，修正 label 后仍可
   严格执行一次有效 frozen audit。
 
@@ -489,7 +491,7 @@ Decision：
   成功 close 后 open 查询全为 false，violation=`0`。
 - 与原 oracle-off reference 的 action、feedback、success、image hash、trajectory/outcome 对比
   仍为 102/102 exact match，证明清理 evaluation cache 不干扰 rollout。Artifact：
-  `running/phase3a/p3a0_oracle_cachefix_20260825/oracle_feasibility_with_reference.json`。
+  `running/Phase3/phase3a/p3a0_oracle_cachefix_20260825/oracle_feasibility_with_reference.json`。
 - 据此 cache-fix 通过 P3A-0，允许重收 P3A-1 labels；为避免两个 Habitat 实例资源干扰，
   先收 20 stress episodes，再收 40 natural episodes，不并行。
 
@@ -549,7 +551,7 @@ Decision：
 - 成本实际相同：E0 和 Guard 都是 100 calls、prompt=`75703`、completion=`43590`。
   审计 JSON 的 serializer 初版误把 images-only cache 数字写入 `audit_cost.guard`，但 Go 计算时
   已正确使用 fb cache，两个 cost checks 原本就是 true。原 artifact 不修改，报告性更正保存在
-  `running/phase3a/phase3a_guard_v2_frozen_audit_v4_20260825.cost_amendment.json`，对决策无影响。
+  `running/Phase3/phase3a/phase3a_guard_v2_frozen_audit_v4_20260825.cost_amendment.json`，对决策无影响。
 - Frozen noise audit：visual flip 10%、visual drop 20% 和 false-positive 10% 下 Guard 仍为
   false-contradiction=`0`、false Skill update=`0`、Skill recall=`1.0`；但 feedback flip 10%
   时 false-contradiction=`0.1107`、contradiction precision=`0.40`、Skill recall=`0.7143`。说明 v2
@@ -557,7 +559,7 @@ Decision：
 - 最终 `decision=no_go`：11 个 Go checks 中只有 `paired_ci_excludes_zero` 和
   `guard_gain_not_explained_by_matched_threshold` 失败。依预注册规则，不启动 P3A-4 live pilot，
   也不执行条件性 P3A-5 扩展；这两项是“被门槛取消”而不是未完成。
-- 最终 artifact：`running/phase3a/phase3a_guard_v2_frozen_audit_v4_20260825.json`；
+- 最终 artifact：`running/Phase3/phase3a/phase3a_guard_v2_frozen_audit_v4_20260825.json`；
   第一次无效 No-Go 和 Guard v1 No-Go 仍保留作 failure-analysis，不用于最终方法声称。
 
 ## 2. Phase 3B：Feedback 依赖与短时视觉历史（预注册于 2026-08-25，任何 Phase3B outcome 之前）
@@ -759,10 +761,10 @@ endpoint、exit code、artifact hash、异常与因果调整均追加记录，�
   短时历史改善 executor 的均值，但仅凭 RGB history 还不足以形成可写长期 Skill 的证据。
   因而近期系统应保留 feedback 作为 episode-control 信号，同时禁止 feedback-only 或
   action-prior-only claim 单独触发 persistent update；不要把本轮 temporal provider 接入 VTCA v2。
-- Final artifact：`running/phase3b/phase3b_final_decision_20260825.json`，SHA256=
-  `bd3e91fd5a0d9c09fc080087af267172eb6bce5161b5ce62ef5a84598e51042e`。
+- Final artifact：`running/Phase3/phase3b/phase3b_final_decision_20260825.json`，SHA256=
+  `98a8d1425513d61599a88c7fe605e1c37418fdd365b7272600eb5697ae968774`。
   Executor analysis SHA=`110e010d68a126081ede1379852125f6fba941711993db0aace55991f65f6a2a`；
-  evidence analysis SHA=`b2cb8ffe1e9b26667cb046300b08a90ec33eba26b717d01e7e5e6a9665505afb`；
+  evidence analysis SHA=`a1c4a9701da549930eb470d33517d6642166c422432e40af533f1f0ac85b09d8`；
   T0/T1 cache SHA 分别为 `f5ebce67157f4590df25b1d4f1d41c6af4dcf31251ef1e1d23fa8254b1aea84d`、
   `ba088edfa48b36c5c871a74cafd9fe3e57f22fc3f0f48f2e6bca7b587a6968bc`。
 - Finalizer 检查通过：四臂 episode exact pairing、executor event hash、strict cache id/order/hash、
@@ -880,7 +882,7 @@ adapter 只有在零样本 pilot 通过后才实现，不因缺少 train-validat
 - `no_go`：离线能力或 live beneficial-update yield 不通过，停止 Meta-Skill 扩展；
 - 被前置 gate 取消的分支明确记录 `canceled_by_preregistered_no_go`，不记为未完成。
 
-所有新 artifact 写入 `running/phase3c/`，existing artifact 只读且禁止覆盖。长任务使用 detached
+所有新 artifact 写入 `running/Phase3/phase3c/`，existing artifact 只读且禁止覆盖。长任务使用 detached
 `tmux`，记录命令、session、PID、endpoint、开始/结束时间、exit code、代码/Meta-Skill/artifact
 digest、calls/tokens 和因果调整。
 
@@ -908,7 +910,7 @@ digest、calls/tokens 和因果调整。
   `Qwen/Qwen3-VL-8B-Instruct`，FP8、TP=1、max model len=16384；项目 endpoint probe 6/6 通过
   （models/plain/seed/schema/trajectory/multimodal）。离线 driver 在 `phase3c_offline` detached tmux
   中运行，SSH 断开不影响；runtime/start/completion manifest 和完整 stdout 分别位于
-  `running/phase3c/runtime/`。运行过程中没有 endpoint error 或 malformed JSON。
+  `running/Phase3/phase3c/runtime/`。运行过程中没有 endpoint error 或 malformed JSON。
 
 ### 3.9 P3C-2 frozen offline gate 结果
 
@@ -967,10 +969,10 @@ digest、calls/tokens 和因果调整。
   correction 和 candidate gate；不继续用更长的通用文字 checklist 堆叠同一个 8B。若另开新阶段，
   必须作为新假设重新预注册，例如只研究 executor-side observation Skill，或把正反例/决策表编译为
   可执行的结构化 Meta-Skill；不得修改 v1 prompt 后覆盖本轮 No-Go。
-- 决策 artifact=`running/phase3c/offline/phase3c_offline_decision.json`，SHA256=
-  `2b901063f09551e306ef4096bf6e1735e022390d7f715727a3d83686a4ca532e`；final analysis=
-  `running/phase3c/phase3c_final_analysis_20260825.json`，SHA256=
-  `5b7b8f3b4a531ef81a32f508773e090a3b763392288248adacabe9bcca38424d`。synthetic/meta-metamorphic
+- 决策 artifact=`running/Phase3/phase3c/offline/phase3c_offline_decision.json`，SHA256=
+  `c0d580e28639ffff29470b6a9b579769487993455a20cdc1617461d3a04c80d8`；final analysis=
+  `running/Phase3/phase3c/phase3c_final_analysis_20260825.json`，SHA256=
+  `762080671728e2d8a43a505a325c21a42fe4e96d15a2d9a2ebc42dd7f21352e2`。synthetic/meta-metamorphic
   SHA256 分别为
   `9b1ad4fc8b678d4641bd01a21ec520e0e1d93b49318c1942555f5d200a0b4f92`、
   `1c578c39fb0b657689ee088d4489ea133b7ededfb9aae342dc6365a32a0ce430`。

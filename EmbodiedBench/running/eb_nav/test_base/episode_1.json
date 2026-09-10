@@ -1,0 +1,21 @@
+
+
+{"action_description": "Move backward by 0.25", "distance": 3.1637905539462774, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": "", "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 71.20460915565491, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.1637905539462774, "env_feedback": "Last action MoveRight is invalid. Fridge_f66e636e is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": "", "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 71.50251054763794, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 3.2371526201564405, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": "", "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 71.84132432937622, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.2371526201564405, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": "", "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 72.18438148498535, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.2371526201564405, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": "", "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 72.44233918190002, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Tilt the camera upward by 30 degrees.", "distance": 3.2371526201564405, "env_feedback": "Last action LookUp executed successfully.", "reasoning": "", "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 72.76708793640137, "task_success": 0.0, "last_action_success": true, "action_id": 6}
+
+
+{"action_description": "Tilt the camera downward by 30 degrees.", "distance": 3.2371526201564405, "env_feedback": "Last action LookDown executed successfully.", "reasoning": "", "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 73.07963681221008, "task_success": 0.0, "last_action_success": true, "action_id": 7}

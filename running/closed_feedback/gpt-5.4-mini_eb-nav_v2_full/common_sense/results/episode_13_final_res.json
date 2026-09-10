@@ -1,0 +1,1 @@
+{"reward": 0.125, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "task_success": 1.0, "num_steps": 8, "planner_steps": 3, "planner_output_error": 0, "episode_elapsed_seconds": 24.571256160736084}

@@ -1,0 +1,118 @@
+{
+  "config_sha256": "2eeb3f151a121c5ab1c55483cbcb1d4fad2677c8c992071a9d9afd80a824261e",
+  "diagnostic": true,
+  "env": "eb-hab",
+  "evolution_seeds": [
+    0
+  ],
+  "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+  "executor_model_type": "remote",
+  "executor_temperature": 0.0,
+  "experiment_id": "e84d8862ffa049799e0cd29624b5db8c",
+  "frozen": true,
+  "manifest_sha256": "7f283eff39e85b4eb29a896da134bcaa736175823aaa04448cc3775e566b6c4c",
+  "max_completion_tokens": 4096,
+  "method": "full",
+  "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+  "n_shots": 10,
+  "protocol": "vista_skill_fault_repair_2026_08_19",
+  "resolution": 500,
+  "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+  "run_count": 1,
+  "runs": [
+    {
+      "acquisition_episode_budget": 20,
+      "acquisition_episode_count": 20,
+      "config_sha256": "2eeb3f151a121c5ab1c55483cbcb1d4fad2677c8c992071a9d9afd80a824261e",
+      "diagnostic": true,
+      "env": "eb-hab",
+      "evolution_decisions": [
+        false
+      ],
+      "evolution_seed": 0,
+      "evolution_seeds": [
+        0
+      ],
+      "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+      "executor_model_type": "remote",
+      "executor_temperature": 0.0,
+      "executor_usage": {
+        "calls": 76,
+        "completion_tokens": 28983,
+        "prompt_tokens": 356325
+      },
+      "frozen": true,
+      "frozen_skill_sha256": "89887d877c4fd10b1c449cf05204ca832b575f6526102762f979132ad5b52629",
+      "gate_rollout_seeds": [
+        0,
+        1,
+        2
+      ],
+      "manifest_sha256": "7f283eff39e85b4eb29a896da134bcaa736175823aaa04448cc3775e566b6c4c",
+      "max_completion_tokens": 4096,
+      "method": "full",
+      "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+      "method_usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 169,
+          "prompt_tokens": 340
+        },
+        "vista_goal_grounding": {
+          "calls": 20,
+          "completion_tokens": 564,
+          "prompt_tokens": 36261
+        },
+        "vista_visual_evidence": {
+          "calls": 149,
+          "completion_tokens": 75847,
+          "prompt_tokens": 131635
+        }
+      },
+      "n_shots": 10,
+      "protocol": "vista_skill_fault_repair_2026_08_19",
+      "ready_clusters_by_episode": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "resolution": 500,
+      "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+      "run_id": "e84d8862ffa049799e0cd29624b5db8c_seed_0",
+      "skill_fault": "termination",
+      "split_rotation_index": 0,
+      "split_sha256": "a0a76a7e727f8fcffb9f9dcbe8642083bed657dde37d36aaabc9b352176973d2",
+      "tensor_parallel": 1,
+      "update_reliability": {
+        "beneficial_update_precision": 0.0,
+        "beneficial_updates": 0.0,
+        "harmful_update_rate": 0.0,
+        "harmful_updates": 0.0,
+        "missed_beneficial_update_rate": 0.0,
+        "neutral_update_rate": 0.0,
+        "neutral_updates": 0.0,
+        "promoted_updates": 0.0,
+        "update_coverage": 0.0
+      }
+    }
+  ],
+  "skill_fault": "termination",
+  "tensor_parallel": 1
+}

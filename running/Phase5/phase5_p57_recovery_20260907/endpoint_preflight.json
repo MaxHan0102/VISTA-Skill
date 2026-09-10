@@ -1,0 +1,72 @@
+{
+  "checks": [
+    {
+      "endpoint": "http://192.168.1.185:8000/v1",
+      "models": {
+        "data": [
+          {
+            "created": 1788769410,
+            "id": "Qwen/Qwen3-VL-8B-Instruct",
+            "max_model_len": 16384,
+            "object": "model",
+            "owned_by": "vllm",
+            "parent": null,
+            "permission": [
+              {
+                "allow_create_engine": false,
+                "allow_fine_tuning": false,
+                "allow_logprobs": true,
+                "allow_sampling": true,
+                "allow_search_indices": false,
+                "allow_view": true,
+                "created": 1788769410,
+                "group": null,
+                "id": "modelperm-9fe86be7495b2a11",
+                "is_blocking": false,
+                "object": "model_permission",
+                "organization": "*"
+              }
+            ],
+            "root": "Qwen/Qwen3-VL-8B-Instruct"
+          }
+        ],
+        "object": "list"
+      },
+      "passed": true
+    },
+    {
+      "endpoint": "http://192.168.1.192:8001/v1",
+      "models": {
+        "data": [
+          {
+            "created": 1788769414,
+            "id": "Qwen/Qwen3-VL-8B-Instruct",
+            "max_model_len": 16384,
+            "object": "model",
+            "owned_by": "vllm",
+            "parent": null,
+            "permission": [
+              {
+                "allow_create_engine": false,
+                "allow_fine_tuning": false,
+                "allow_logprobs": true,
+                "allow_sampling": true,
+                "allow_search_indices": false,
+                "allow_view": true,
+                "created": 1788769414,
+                "group": null,
+                "id": "modelperm-97687a31ca4c0516",
+                "is_blocking": false,
+                "object": "model_permission",
+                "organization": "*"
+              }
+            ],
+            "root": "Qwen/Qwen3-VL-8B-Instruct"
+          }
+        ],
+        "object": "list"
+      },
+      "passed": true
+    }
+  ]
+}

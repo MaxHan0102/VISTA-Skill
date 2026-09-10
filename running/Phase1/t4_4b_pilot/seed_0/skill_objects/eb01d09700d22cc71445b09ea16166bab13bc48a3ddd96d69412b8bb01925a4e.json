@@ -1,0 +1,147 @@
+{
+  "artifact_sha256": "43ac4c4f91250220dde1dd4a7280cb1aecd3a8cafc75e2a47d9a72861894a5ee",
+  "protocol": {
+    "acquisition_episode_budget": 20,
+    "config_sha256": "01390149bf71b473fd551eb017ca885d411ea645af67db8c14f1b7c43e586620",
+    "diagnostic": true,
+    "env": "eb-hab",
+    "evolution_seed": 0,
+    "evolution_seeds": [
+      0
+    ],
+    "executor_model": "Qwen/Qwen3-VL-4B-Instruct",
+    "executor_model_type": "remote",
+    "executor_temperature": 0.0,
+    "frozen": true,
+    "gate_rollout_seeds": [
+      0,
+      1,
+      2
+    ],
+    "manifest_sha256": "7f283eff39e85b4eb29a896da134bcaa736175823aaa04448cc3775e566b6c4c",
+    "max_completion_tokens": 4096,
+    "method": "full",
+    "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "n_shots": 10,
+    "protocol": "vista_t4_4b_executor_2026_08_21",
+    "resolution": 500,
+    "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+    "run_id": "6fe877eb0d8a467f88308114afec48e8_seed_0",
+    "skill_fault": null,
+    "split_rotation_index": 0,
+    "split_sha256": "a0a76a7e727f8fcffb9f9dcbe8642083bed657dde37d36aaabc9b352176973d2",
+    "tensor_parallel": 1
+  },
+  "schema_version": "2",
+  "skill": {
+    "activation": [
+      "Use for multi-step embodied tasks that require state verification."
+    ],
+    "constraint": [
+      "Unknown is not false.",
+      "Success of one subgoal is not evidence that the full task is complete."
+    ],
+    "effect": [
+      "Each step should make progress toward one or more unsatisfied goal predicates."
+    ],
+    "frozen": false,
+    "metadata": {
+      "initialization": "benchmark-aware-task-agnostic"
+    },
+    "parent_version": 0,
+    "prediction_rules": [
+      {
+        "action_type": "nav",
+        "after": "true",
+        "before": null,
+        "field": "procedure",
+        "predicate": "near({arg0})",
+        "rule_id": "procedure_navigation_reaches_target"
+      },
+      {
+        "action_type": "pick",
+        "after": "true",
+        "before": null,
+        "field": "effect",
+        "predicate": "holding({arg0})",
+        "rule_id": "effect_pick_holds_target_category"
+      },
+      {
+        "action_type": "pick",
+        "after": "false",
+        "before": null,
+        "field": "constraint",
+        "predicate": "not_holding",
+        "rule_id": "constraint_pick_occupies_gripper"
+      },
+      {
+        "action_type": "place",
+        "after": "true",
+        "before": null,
+        "field": "effect",
+        "predicate": "at({held},{arg0})",
+        "rule_id": "effect_place_relates_held_object"
+      },
+      {
+        "action_type": "place",
+        "after": "true",
+        "before": null,
+        "field": "constraint",
+        "predicate": "not_holding",
+        "rule_id": "constraint_place_frees_gripper"
+      },
+      {
+        "action_type": "open",
+        "after": "true",
+        "before": null,
+        "field": "effect",
+        "predicate": "open({arg0})",
+        "rule_id": "effect_open_changes_articulation"
+      },
+      {
+        "action_type": "close",
+        "after": "false",
+        "before": null,
+        "field": "effect",
+        "predicate": "open({arg0})",
+        "rule_id": "effect_close_changes_articulation"
+      },
+      {
+        "action_type": "pick",
+        "after": "false",
+        "before": "true",
+        "field": "termination",
+        "predicate": "task_complete",
+        "rule_id": "task_complete_trigger"
+      },
+      {
+        "action_type": "pick",
+        "after": "true",
+        "before": "true",
+        "field": "termination",
+        "predicate": "goal_satisfied",
+        "rule_id": "goal_satisfaction_check"
+      },
+      {
+        "action_type": "pick",
+        "after": "false",
+        "before": "true",
+        "field": "termination",
+        "predicate": "termination_conflict",
+        "rule_id": "conflict_resolution"
+      }
+    ],
+    "procedure": [
+      "Decompose the instruction into goal predicates and track pending and completed targets.",
+      "Check action preconditions and update the checklist only from new evidence.",
+      "Re-observe or replan when the evidence needed for the next step is insufficient."
+    ],
+    "skill_id": "shared_embodied_execution",
+    "termination": [
+      "Stop only when every required goal predicate is supported by current evidence. Termination is triggered by task_complete if all goals are satisfied and no conflicting evidence exists."
+    ],
+    "termination_policy": "all_goals_evidence",
+    "version": 1
+  },
+  "skill_sha256": "eb01d09700d22cc71445b09ea16166bab13bc48a3ddd96d69412b8bb01925a4e"
+}

@@ -1,0 +1,45 @@
+{
+  "status": "complete",
+  "smoke_policy": false,
+  "categories": {
+    "base": {
+      "episodes": [
+        {
+          "episode_id": "39",
+          "seed": 0,
+          "task_success": 0.0,
+          "task_progress": 0.25,
+          "environment_steps": 16,
+          "policy_calls": 17,
+          "api_calls": 17,
+          "format_errors": 1,
+          "prompt_tokens": 73733,
+          "completion_tokens": 4839,
+          "elapsed_seconds": 125.6869886360364,
+          "invalid_actions": 10,
+          "adjacent_repeats": 6,
+          "stop_reason": "environment_done"
+        },
+        {
+          "episode_id": "30",
+          "seed": 1,
+          "task_success": 1.0,
+          "task_progress": 1.0,
+          "environment_steps": 2,
+          "policy_calls": 2,
+          "api_calls": 2,
+          "format_errors": 0,
+          "prompt_tokens": 7754,
+          "completion_tokens": 313,
+          "elapsed_seconds": 10.951776592992246,
+          "invalid_actions": 0,
+          "adjacent_repeats": 0,
+          "stop_reason": "environment_done"
+        }
+      ],
+      "task_success": 0.5
+    }
+  },
+  "category_mean_success": 0.5,
+  "all_categories": false
+}

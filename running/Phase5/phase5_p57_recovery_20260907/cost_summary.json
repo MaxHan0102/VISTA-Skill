@@ -1,0 +1,35 @@
+{
+  "by_stage": {
+    "acquisition": {
+      "episodes": 12,
+      "executor": {
+        "calls": 80,
+        "completion_tokens": 29249,
+        "prompt_tokens": 364346
+      },
+      "method": {
+        "calls": 36,
+        "completion_tokens": 11031,
+        "prompt_tokens": 28278
+      },
+      "summed_coordinate_seconds": 601.803787217068
+    },
+    "mechanism": {
+      "episodes": 4,
+      "executor": {
+        "calls": 21,
+        "completion_tokens": 7519,
+        "prompt_tokens": 95392
+      },
+      "method": {
+        "calls": 7,
+        "completion_tokens": 1926,
+        "prompt_tokens": 5287
+      },
+      "summed_coordinate_seconds": 146.74812349892454
+    }
+  },
+  "includes_acquisition_and_every_completed_paired_stage": true,
+  "remote_gpu_hours": null,
+  "remote_gpu_hours_reason": "requires serving-host telemetry"
+}

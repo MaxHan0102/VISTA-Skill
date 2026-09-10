@@ -1,0 +1,1 @@
+{'model_name': 'Qwen/Qwen3-VL-8B-Instruct', 'down_sample_ratio': 1, 'model_type': 'remote', 'language_only': False, 'eval_sets': ['long_horizon'], 'chat_history': False, 'n_shots': 10, 'multistep': False, 'resolution': 500, 'exp_name': 'feedback_comparison', 'env_feedback': False, 'tp': 1, 'start_epi_index': 0}

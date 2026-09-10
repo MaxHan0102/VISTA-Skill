@@ -1,0 +1,1 @@
+{"reward": 1.3636363636363635, "num_invalid_actions": 4, "empty_plan": 0, "instruction": "Place all the cleanser onto the black table.", "task_success": true, "task_progress": 1.0, "subgoal_reward": 1.25, "num_steps": 11, "planner_steps": 3, "planner_output_error": 0, "num_invalid_action_ratio": 0.36363636363636365, "episode_elapsed_seconds": [15.490122318267822]}

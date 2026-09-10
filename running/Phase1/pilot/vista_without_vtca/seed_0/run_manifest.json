@@ -1,0 +1,85 @@
+{
+  "acquisition_episode_budget": 15,
+  "acquisition_episode_count": 15,
+  "config_sha256": "c79bdf2f904af2bbd1caf2b371907df32556d64c46ef890461323125903b1ab2",
+  "diagnostic": true,
+  "env": "eb-hab",
+  "evolution_decisions": [
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "evolution_seed": 0,
+  "evolution_seeds": [
+    0
+  ],
+  "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+  "executor_model_type": "remote",
+  "executor_temperature": 0.0,
+  "executor_usage": {
+    "calls": 59,
+    "completion_tokens": 21934,
+    "prompt_tokens": 273563
+  },
+  "frozen": true,
+  "frozen_skill_sha256": "54b60a62f571c7f4e475a30e67d58072f37b60481854d49c19b1a38a4124deb4",
+  "gate_rollout_seeds": [
+    0,
+    1,
+    2
+  ],
+  "manifest_sha256": "7f283eff39e85b4eb29a896da134bcaa736175823aaa04448cc3775e566b6c4c",
+  "max_completion_tokens": 4096,
+  "method": "vista_without_vtca",
+  "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+  "method_usage": {
+    "trajectory_reflection": {
+      "calls": 5,
+      "completion_tokens": 4831,
+      "prompt_tokens": 2293
+    },
+    "vista_bounded_patch": {
+      "calls": 5,
+      "completion_tokens": 718,
+      "prompt_tokens": 1556
+    }
+  },
+  "n_shots": 10,
+  "protocol": "vista_skill_pilot_2026_08_13",
+  "ready_clusters_by_episode": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+  ],
+  "resolution": 500,
+  "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+  "run_id": "388ef95328ab4b8a9d0e35061af8b03a_seed_0",
+  "split_rotation_index": 0,
+  "split_sha256": "a0a76a7e727f8fcffb9f9dcbe8642083bed657dde37d36aaabc9b352176973d2",
+  "tensor_parallel": 1,
+  "update_reliability": {
+    "beneficial_update_precision": 0.0,
+    "beneficial_updates": 0.0,
+    "harmful_update_rate": 0.0,
+    "harmful_updates": 0.0,
+    "missed_beneficial_update_rate": 0.0,
+    "neutral_update_rate": 0.0,
+    "neutral_updates": 0.0,
+    "promoted_updates": 0.0,
+    "update_coverage": 0.0
+  }
+}

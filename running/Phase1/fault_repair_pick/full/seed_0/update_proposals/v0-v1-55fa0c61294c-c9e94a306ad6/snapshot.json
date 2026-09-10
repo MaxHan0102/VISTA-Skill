@@ -1,0 +1,52 @@
+{
+  "candidate_artifact_sha256": "b5f628e438e719e126ef49a7a732d5ce439e655cf2106c557731bc34f56b9e81",
+  "candidate_skill_sha256": "c9e94a306ad649060f9e1b9e81a0c6dfe43c13af752fbe756fad278af22f1d2a",
+  "candidate_version": 1,
+  "evidence_ids": [
+    "5:s1:goal:5:s1:visual:0:at(robot_0,receptacle_aabb_Tbl1_Top1_frl_apartment_table_01)",
+    "5:s1:visual:0:at(robot_0,receptacle_aabb_Tbl1_Top1_frl_apartment_table_01)",
+    "12:s1:goal:12:s1:visual:0:at(robot_0,receptacle_aabb_Tbl1_Top1_frl_apartment_table_01)",
+    "12:s1:visual:0:at(robot_0,receptacle_aabb_Tbl1_Top1_frl_apartment_table_01)"
+  ],
+  "field": "termination",
+  "parent_artifact_sha256": "18288858ad1391af6c7f861326b9fbc079b3d90136395cb4093185c9408c19af",
+  "parent_skill_sha256": "ddb867071fb9347bafc2c350b6f77a8672b43bbbb6fba15730ca0fa29cffb1f6",
+  "parent_version": 0,
+  "patch_id": "8f7daeb6c8227f62960d",
+  "promoted": false,
+  "protocol": {
+    "acquisition_episode_budget": 20,
+    "config_sha256": "2eeb3f151a121c5ab1c55483cbcb1d4fad2677c8c992071a9d9afd80a824261e",
+    "diagnostic": true,
+    "env": "eb-hab",
+    "evolution_seed": 0,
+    "evolution_seeds": [
+      0
+    ],
+    "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "executor_model_type": "remote",
+    "executor_temperature": 0.0,
+    "frozen": true,
+    "gate_rollout_seeds": [
+      0,
+      1,
+      2
+    ],
+    "manifest_sha256": "7f283eff39e85b4eb29a896da134bcaa736175823aaa04448cc3775e566b6c4c",
+    "max_completion_tokens": 4096,
+    "method": "full",
+    "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "n_shots": 10,
+    "protocol": "vista_skill_fault_repair_2026_08_19",
+    "resolution": 500,
+    "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+    "run_id": "71f17888e8bc4f768c9e052bbf477fc8_seed_0",
+    "skill_fault": "effect_pick_inversion",
+    "split_rotation_index": 0,
+    "split_sha256": "a0a76a7e727f8fcffb9f9dcbe8642083bed657dde37d36aaabc9b352176973d2",
+    "tensor_parallel": 1
+  },
+  "schema_version": "1",
+  "snapshot_id": "v0-v1-55fa0c61294c-c9e94a306ad6",
+  "snapshot_sha256": "b071aa28bbf41024045a8779015357a51bafedc2efe4d509c22617bfe72b1ffd"
+}

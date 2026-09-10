@@ -1,0 +1,139 @@
+{
+  "config_sha256": "b4e00516096fb9156f610e165ab89b04b1ab82f02c7d07ef76fb862e7c22434c",
+  "diagnostic": true,
+  "env": "eb-hab",
+  "evolution_seeds": [
+    0
+  ],
+  "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+  "executor_model_type": "remote",
+  "executor_temperature": 0.0,
+  "experiment_id": "7d09ee85e56640a6abdcf34a0dd4bfa4",
+  "frozen": true,
+  "initial_skill": "shared",
+  "manifest_sha256": "b08ee365b22302899084e209f09002e96242d3ce3eb4bad410d0523b4a163bec",
+  "max_completion_tokens": 4096,
+  "method": "full",
+  "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+  "n_shots": 10,
+  "protocol": "vista_skill_fault_repair_fullsel_p10f30_2026_08_20",
+  "resolution": 500,
+  "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+  "run_count": 1,
+  "runs": [
+    {
+      "acquisition_episode_budget": 20,
+      "acquisition_episode_count": 20,
+      "config_sha256": "b4e00516096fb9156f610e165ab89b04b1ab82f02c7d07ef76fb862e7c22434c",
+      "diagnostic": true,
+      "env": "eb-hab",
+      "evolution_decisions": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "evolution_seed": 0,
+      "evolution_seeds": [
+        0
+      ],
+      "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+      "executor_model_type": "remote",
+      "executor_temperature": 0.0,
+      "executor_usage": {
+        "calls": 76,
+        "completion_tokens": 27291,
+        "prompt_tokens": 354448
+      },
+      "frozen": true,
+      "frozen_skill_sha256": "f3bd8ab91c0d504a26484794177da0ff1a71fe95a3a9b844bfa47018ac08129e",
+      "gate_rollout_seeds": [
+        0,
+        1,
+        2
+      ],
+      "initial_skill": "shared",
+      "manifest_sha256": "b08ee365b22302899084e209f09002e96242d3ce3eb4bad410d0523b4a163bec",
+      "max_completion_tokens": 4096,
+      "method": "full",
+      "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+      "method_usage": {
+        "vista_attribution": {
+          "calls": 2,
+          "completion_tokens": 278,
+          "prompt_tokens": 1343
+        },
+        "vista_bounded_patch": {
+          "calls": 15,
+          "completion_tokens": 3200,
+          "prompt_tokens": 6321
+        },
+        "vista_goal_grounding": {
+          "calls": 20,
+          "completion_tokens": 560,
+          "prompt_tokens": 38861
+        },
+        "vista_visual_evidence": {
+          "calls": 167,
+          "completion_tokens": 78131,
+          "prompt_tokens": 144585
+        }
+      },
+      "n_shots": 10,
+      "protocol": "vista_skill_fault_repair_fullsel_p10f30_2026_08_20",
+      "ready_clusters_by_episode": [
+        0,
+        3,
+        3,
+        4,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        8,
+        8,
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "resolution": 500,
+      "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+      "run_id": "7d09ee85e56640a6abdcf34a0dd4bfa4_seed_0",
+      "skill_fault": "constraint_pick_multihold",
+      "split_rotation_index": 0,
+      "split_sha256": "e6558c0c6b1e2a99603aeee7350104c888a130cef043c188ca90cdd99372fbeb",
+      "tensor_parallel": 1,
+      "update_reliability": {
+        "beneficial_update_precision": 0.0,
+        "beneficial_updates": 0.0,
+        "harmful_update_rate": 0.0,
+        "harmful_updates": 0.0,
+        "missed_beneficial_update_rate": 0.0,
+        "neutral_update_rate": 0.0,
+        "neutral_updates": 0.0,
+        "promoted_updates": 0.0,
+        "update_coverage": 0.0
+      }
+    }
+  ],
+  "skill_fault": "constraint_pick_multihold",
+  "tensor_parallel": 1
+}

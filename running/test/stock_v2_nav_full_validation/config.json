@@ -1,0 +1,63 @@
+{
+  "env": "eb-nav",
+  "provider": "gemini",
+  "model": "gemini-3.5-flash",
+  "track": "full",
+  "eval_sets": [
+    "base"
+  ],
+  "episodes": 1,
+  "start_index": 0,
+  "seed": 0,
+  "frames": 1,
+  "n_shots": null,
+  "resolution": null,
+  "max_steps": 4,
+  "max_tokens": null,
+  "temperature": null,
+  "api_key_env": "GEMINI_API_KEY",
+  "base_url": "https://api.openlux.ai/v1",
+  "output": "/root/max/VISTA-Skill/running/test/stock_v2_nav_full_validation",
+  "log_level": "INFO",
+  "dry_run": false,
+  "smoke_policy": true,
+  "requested_output": "/root/max/VISTA-Skill/running/test/stock_v2_nav_full_validation",
+  "started_at": "2026-09-08T16:40:05.473656+08:00",
+  "protocol": "stock_feedback_v2",
+  "official_config": {
+    "model_name": "gemini-3.5-flash",
+    "down_sample_ratio": 1,
+    "model_type": "remote",
+    "language_only": false,
+    "eval_sets": [
+      "base"
+    ],
+    "chat_history": false,
+    "n_shots": 3,
+    "multiview": false,
+    "detection_box": false,
+    "multistep": false,
+    "resolution": 500,
+    "exp_name": "feedback_comparison",
+    "visual_icl": false,
+    "tp": 1,
+    "truncate": true
+  },
+  "script_sha256": "61a92d12591c066067a8c8f1d2fbea233a477e45c9bf7c6791e2549efe557b46",
+  "skill_or_memory": false,
+  "git_revision": "c1ae2e312b8054da3708f7ab877c5fce22ddc696",
+  "git_dirty": true,
+  "source_hashes": {
+    "EmbodiedBench/embodiedbench/envs/eb_navigation/EBNavEnv.py": "2e127bcc69d5716239afd763f7d0db705a581674d949e558a34d8bb49ee977c2",
+    "EmbodiedBench/embodiedbench/planner/nav_planner.py": "dc10c7923588899548ddbb75515e9693f89f19d720eaace6bff93e5d3b0fdb79",
+    "EmbodiedBench/embodiedbench/evaluator/eb_navigation_evaluator.py": "213864889a8675242de8528bd06c8c74d2825850cf654c2ead456d90ebc0eeeb",
+    "EmbodiedBench/embodiedbench/planner/remote_model.py": "8c50923997c9e937e96c07fee2087737a52b9052f41c3254737c43f2499e928e",
+    "EmbodiedBench/embodiedbench/configs/eb-nav.yaml": "b5c4bcbc3dc61c62563a7fbc8d19c8bc00073f94831d7dfbfea9c5a41d52823e"
+  },
+  "runtime_changes": [],
+  "remote_defaults": {
+    "temperature": 0,
+    "max_completion_tokens": 4096,
+    "gpt5_temperature": "omitted by stock RemoteModel"
+  }
+}

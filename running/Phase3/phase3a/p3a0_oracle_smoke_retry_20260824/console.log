@@ -1,0 +1,15 @@
+[2026-08-24T21:48:15+08:00] START stage=p3a0_oracle_smoke_retry
+[2026-08-24T21:48:15+08:00] COMMAND ["env", "PYTHONPATH=EmbodiedBench:.", "CUDA_VISIBLE_DEVICES=0", "OPENAI_API_KEY=EMPTY", "/root/miniconda3/envs/max_embench/bin/python", "-m", "vista_skill.integrations.embodiedbench.cli", "experiment", "--method", "rule_only", "--config", "configs/vista_fault_repair.json", "--manifest", "configs/eb_hab_train_validation_manifest.json", "--diagnostic", "--state-oracle-labels", "--max-acquisition-episodes", "10", "--evolution-seeds", "0", "--executor-base-url", "http://192.168.1.185:8000/v1", "--output-dir", "running/Phase3/phase3a/p3a0_oracle_smoke_retry_20260824_run"]
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/max_embench/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/root/miniconda3/envs/max_embench/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/root/max/VISTA-Skill/vista_skill/integrations/embodiedbench/cli.py", line 1312, in <module>
+    main()
+  File "/root/max/VISTA-Skill/vista_skill/integrations/embodiedbench/cli.py", line 213, in main
+    _run_experiment(args)
+  File "/root/max/VISTA-Skill/vista_skill/integrations/embodiedbench/cli.py", line 224, in _run_experiment
+    raise ValueError("controlled protocol manifest differs from config")
+ValueError: controlled protocol manifest differs from config
+[2026-08-24T21:48:15+08:00] END stage=p3a0_oracle_smoke_retry exit_code=1

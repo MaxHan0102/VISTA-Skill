@@ -1,0 +1,4 @@
+{"split": "base", "episode_number": 1, "episode_id": "39", "instruction": "Move one of the pear items to the indicated sofa.", "api_call_start": 1}
+{"split": "base", "episode_number": 2, "episode_id": "3", "instruction": "Find a orange on the TV stand and move it to the sink.", "api_call_start": 3}
+{"split": "base", "episode_number": 3, "episode_id": "47", "instruction": "Take an pear and transfer it to the allocated left counter.", "api_call_start": 5}
+{"split": "base", "episode_number": 4, "episode_id": "5", "instruction": "Find a orange and move it to the right counter.", "api_call_start": 6}

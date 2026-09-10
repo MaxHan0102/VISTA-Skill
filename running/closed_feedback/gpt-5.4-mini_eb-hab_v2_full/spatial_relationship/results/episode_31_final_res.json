@@ -1,0 +1,1 @@
+{"reward": -0.038461538461538464, "num_invalid_actions": 10, "empty_plan": 0, "instruction": "Place a block and a pear on the left receptacle of the right counter.", "task_success": 0, "task_progress": 0, "subgoal_reward": 0, "num_steps": 25, "planner_steps": 6, "planner_output_error": 1, "num_invalid_action_ratio": 0.4, "episode_elapsed_seconds": 75.42405438423157}

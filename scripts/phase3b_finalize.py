@@ -18,7 +18,7 @@ ARMS = (
 
 def _args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--root", type=Path, default=Path("running/phase3b"))
+    parser.add_argument("--root", type=Path, default=Path("running/Phase3/phase3b"))
     parser.add_argument("--output", type=Path, required=True)
     return parser.parse_args()
 

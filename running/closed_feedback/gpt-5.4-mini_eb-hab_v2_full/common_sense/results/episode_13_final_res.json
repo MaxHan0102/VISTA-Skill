@@ -1,0 +1,1 @@
+{"reward": 0.0, "num_invalid_actions": 2, "empty_plan": 1, "instruction": "Please arrange for a sports object to be placed in the right counter for my amusement.", "task_success": 0, "task_progress": 0, "subgoal_reward": 0, "num_steps": 4, "planner_steps": 2, "planner_output_error": 0, "num_invalid_action_ratio": 0.5, "episode_elapsed_seconds": 12.584486722946167}

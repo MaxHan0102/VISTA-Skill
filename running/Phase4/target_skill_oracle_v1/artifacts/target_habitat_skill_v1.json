@@ -1,0 +1,137 @@
+{
+  "artifact_sha256": "190515a2bfd635fafa413b4107423cb72afba3475d2dd3905e378d1a64a8b56e",
+  "protocol": {
+    "automatic_evolution_calls": 0,
+    "claim_scope": "post-hoc target/reference only; not a controlled or held-out evolution result",
+    "diagnostic": true,
+    "env": "eb-hab",
+    "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "executor_model_type": "remote",
+    "executor_temperature": 0.0,
+    "frozen": true,
+    "method": "human_trajectory_synthesis_skip_8b_evolution",
+    "protocol": "vista_target_skill_posthoc_oracle_v1_2026_08_27",
+    "resolution": 500,
+    "source_arms": [
+      "no_skill",
+      "static_shared_skill"
+    ],
+    "source_split": "official_test/base",
+    "source_trajectory_contamination": true,
+    "teacher_calls": 0,
+    "tensor_parallel": 1,
+    "trajectory_sources": [
+      {
+        "path": "running/Phase1/pilot/eval/no_skill.jsonl",
+        "sha256": "4a61c0cff9e677b9bb88e5991b7a5d0080562d0f53f03885f367e6bbdd192095"
+      },
+      {
+        "path": "running/Phase1/pilot/eval/static_shared_skill.jsonl",
+        "sha256": "b2b7f534abb91f1bd4b94fe16cf0bdfd41b18cbb3a3f7f591b3c7528c8ef22db"
+      }
+    ]
+  },
+  "schema_version": "2",
+  "skill": {
+    "activation": [
+      "Use for embodied search, delivery, and removal tasks with named movable objects and receptacles.",
+      "Bind exact object categories, quantities, source clues, and destination before acting; keep those bindings unchanged."
+    ],
+    "constraint": [
+      "Never repeat the same failed interaction at the same location without an intervening state-changing or evidence-gathering action; switch to a different untried location after not-near feedback.",
+      "Preserve object identity and destination fidelity. Never Pick while already holding, Place while empty, or infer that an unseen object is absent.",
+      "Use only listed action IDs and exact action semantics. Treat explicit environment feedback about success, holding, nearness, open state, and invalid preconditions as stronger evidence than a visual guess."
+    ],
+    "effect": [
+      "A successful Navigation establishes nearness to its receptacle only, not nearness to any movable object guessed to be there.",
+      "A successful Pick of the requested object establishes holding that object; a failed action changes no task predicate. A successful Place at the bound destination establishes the object-destination goal and frees the gripper.",
+      "Progress counts only for the requested category, quantity, and destination; interacting with another object is not progress."
+    ],
+    "frozen": true,
+    "metadata": {
+      "initialization": "posthoc-human-trajectory-synthesis",
+      "oracle_diagnostic": true,
+      "source_arms": [
+        "no_skill",
+        "static_shared_skill"
+      ],
+      "source_environment": "eb-hab",
+      "source_split": "official_test/base"
+    },
+    "parent_version": 0,
+    "prediction_rules": [
+      {
+        "action_type": "nav",
+        "after": "true",
+        "before": null,
+        "field": "procedure",
+        "predicate": "near({arg0})",
+        "rule_id": "procedure_navigation_reaches_target"
+      },
+      {
+        "action_type": "pick",
+        "after": "true",
+        "before": null,
+        "field": "effect",
+        "predicate": "holding({arg0})",
+        "rule_id": "effect_pick_holds_target_category"
+      },
+      {
+        "action_type": "pick",
+        "after": "false",
+        "before": null,
+        "field": "constraint",
+        "predicate": "not_holding",
+        "rule_id": "constraint_pick_occupies_gripper"
+      },
+      {
+        "action_type": "place",
+        "after": "true",
+        "before": null,
+        "field": "effect",
+        "predicate": "at({held},{arg0})",
+        "rule_id": "effect_place_relates_held_object"
+      },
+      {
+        "action_type": "place",
+        "after": "true",
+        "before": null,
+        "field": "constraint",
+        "predicate": "not_holding",
+        "rule_id": "constraint_place_frees_gripper"
+      },
+      {
+        "action_type": "open",
+        "after": "true",
+        "before": null,
+        "field": "effect",
+        "predicate": "open({arg0})",
+        "rule_id": "effect_open_changes_articulation"
+      },
+      {
+        "action_type": "close",
+        "after": "false",
+        "before": null,
+        "field": "effect",
+        "predicate": "open({arg0})",
+        "rule_id": "effect_close_changes_articulation"
+      }
+    ],
+    "procedure": [
+      "Translate the instruction into a checklist of exact target objects, remaining quantities, source clues, and the exact destination. For remove or detach from X, the goal is not-at-X: after picking, place the object on a different valid receptacle.",
+      "When not holding, search systematically across untried plausible receptacles. Navigate to one and inspect the new image. Navigation success means only that the robot reached that receptacle; it never proves that the requested object is present or near.",
+      "Pick only when the exact requested object category is visibly present at the current location or feedback explicitly supports nearness. Do not replace the requested noun with a similar object or synonym. If a Pick fails as not near, mark that location tried, navigate to a different untried location, and do not repeat Pick until new location or visibility evidence exists.",
+      "For a possible closed container, navigate to it, open it at most once when closed, then inspect before picking. Do not repeat Open after success or without new state evidence.",
+      "After feedback confirms Pick or holding the target, immediately enter delivery mode: navigate to the exact destination and Place there. Never Pick while holding or place back on the source or at a convenient receptacle.",
+      "After a successful Place, verify the exact object-destination goal. For multiple objects, mark only that object complete and repeat the search-pick-deliver cycle for the remaining checklist. After an uncertain search, Pick, Open, or Place, output only the next evidence-gathering action; chain actions only when every intermediate precondition is already supported."
+    ],
+    "skill_id": "target_habitat_rearrangement_oracle_v1",
+    "termination": [
+      "For delivery, stop only after every requested object instance is evidence-verified at the exact destination and the gripper is free.",
+      "For remove or detach tasks, stop only after every requested object is no longer at the named source and has been placed on a different valid receptacle. Holding, reaching a receptacle, or completing one of several subgoals is not completion."
+    ],
+    "termination_policy": "all_goals_evidence",
+    "version": 1
+  },
+  "skill_sha256": "5e32f5ec1256dbefba26c28bcfb7ee6ce1cdb59131965c261f2704c250cbec88"
+}

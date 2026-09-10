@@ -1,0 +1,1 @@
+{"reward": 0.0, "instruction": "I need to access that digital device which people use to do their work such as attending online meeting. Can you navigate to that object and stay close?", "task_success": 0.0, "num_steps": 20, "planner_steps": 5, "planner_output_error": 0, "episode_elapsed_seconds": 26.007446765899658}

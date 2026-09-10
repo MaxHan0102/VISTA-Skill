@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/root/max/VISTA-Skill/scripts/phase5_recovery_pilot.py", line 351, in <module>
+    main()
+  File "/root/max/VISTA-Skill/scripts/phase5_recovery_pilot.py", line 303, in main
+    preflight(protocol, args.base_urls)
+  File "/root/max/VISTA-Skill/scripts/phase5_recovery_pilot.py", line 143, in preflight
+    raise RuntimeError("endpoint preflight failed; no model rollouts started")
+RuntimeError: endpoint preflight failed; no model rollouts started

@@ -1,0 +1,312 @@
+{
+  "affected_group_rule": "goal_preds.inputs has at least two object variables",
+  "alpha": 0.05,
+  "analysis_type": "posthoc_diagnostic_not_threshold_selection",
+  "audit_affected_task_ids": [
+    "84",
+    "91",
+    "97"
+  ],
+  "bootstrap_samples": 10000,
+  "candidate_count": 7,
+  "candidates": [
+    {
+      "audit_affected": {
+        "bootstrap_lcb": -0.0602896129211919,
+        "definition": "goal has at least two object variables",
+        "mean_delta": -0.02486392749550646,
+        "n_tasks": 3
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.11374654825053601,
+        "mean_delta": -0.047028996376121374,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": -0.12621104156659044,
+        "definition": "all remaining tasks",
+        "mean_delta": -0.050940479119759303,
+        "n_tasks": 17,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "912598a84e72778b6e12007a40b0bb8a5cce0971d77af6406299672e53880158",
+      "compiled_rule_check": {
+        "pick_rule_after": "false",
+        "place_rule_after": "false",
+        "unrelated_place_rule_corrupted": true
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "02521ebdbbad25604b1a",
+      "recorded_gate_accepted": false,
+      "selection_finalist": {
+        "episodes": 30.0,
+        "independent_tasks": 10.0,
+        "lcb": -0.0028368990108120565,
+        "mean_delta": 0.07102744410715425,
+        "passed": false,
+        "worst_subgroup_delta": -0.021666666666666685
+      },
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": 0.0016917293233082663,
+        "mean_delta": 0.19538220551378443,
+        "passed": true,
+        "worst_subgroup_delta": 0.0
+      }
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": -0.267173168466272,
+        "definition": "goal has at least two object variables",
+        "mean_delta": -0.12521410413878656,
+        "n_tasks": 3
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.04994715736420542,
+        "mean_delta": 0.0173806832543188,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": -0.026222098297747774,
+        "definition": "all remaining tasks",
+        "mean_delta": 0.042544469264866804,
+        "n_tasks": 17,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "59975891618b477b451c16ad30746ab386e69f4fd6ae0477a65510ea42d2bb95",
+      "compiled_rule_check": {
+        "pick_rule_after": "false",
+        "place_rule_after": "false",
+        "unrelated_place_rule_corrupted": true
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "4c5ba36e0296939dbf76",
+      "recorded_gate_accepted": false,
+      "selection_finalist": {
+        "episodes": 30.0,
+        "independent_tasks": 10.0,
+        "lcb": -0.011110221205186876,
+        "mean_delta": -0.0016473825281986987,
+        "passed": false,
+        "worst_subgroup_delta": -0.012608605762686622
+      },
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": 0.09476190476190476,
+        "mean_delta": 0.2970250626566416,
+        "passed": true,
+        "worst_subgroup_delta": 0.0
+      }
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": -0.011211832281626337,
+        "definition": "goal has at least two object variables",
+        "mean_delta": 0.07748678624536748,
+        "n_tasks": 3
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.09914519153938994,
+        "mean_delta": -0.02479541605334669,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": -0.12359159760528007,
+        "definition": "all remaining tasks",
+        "mean_delta": -0.042845216459002126,
+        "n_tasks": 17,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "3f99209f287d741e18cb8b9f7ea14b5d715b39e07b7ae768fbc05f8b6c6a86c0",
+      "compiled_rule_check": {
+        "pick_rule_after": null,
+        "place_rule_after": null,
+        "unrelated_place_rule_corrupted": true
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "51b169839cfe238b0f33",
+      "recorded_gate_accepted": false,
+      "selection_finalist": null,
+      "selection_proxy": null
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": 0.03310849312565559,
+        "definition": "goal has at least two object variables",
+        "mean_delta": 0.20542773820805857,
+        "n_tasks": 3
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.060530746857882636,
+        "mean_delta": -0.005390012115889305,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": -0.08454248926732887,
+        "definition": "all remaining tasks",
+        "mean_delta": -0.04259314452599776,
+        "n_tasks": 17,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "def6e2e2a8a24294e689d915a3b54ea0bbdb238d8b5facac9dcf96dd68bebedb",
+      "compiled_rule_check": {
+        "pick_rule_after": "false",
+        "place_rule_after": "false",
+        "unrelated_place_rule_corrupted": true
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "89666436228ef69a1d03",
+      "recorded_gate_accepted": false,
+      "selection_finalist": null,
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": -0.0075000000000000015,
+        "mean_delta": 0.19645363408521305,
+        "passed": false,
+        "worst_subgroup_delta": 0.0
+      }
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": -0.20525179329527157,
+        "definition": "goal has at least two object variables",
+        "mean_delta": -0.07966699797363415,
+        "n_tasks": 3
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.06406984875974646,
+        "mean_delta": -0.028065640985656014,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": -0.05685342541470751,
+        "definition": "all remaining tasks",
+        "mean_delta": -0.018959519164248113,
+        "n_tasks": 17,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "6411981039fe52b1c48a719e6a595fb8e52f0384d7eee2363a71b3cd7f5c8ee0",
+      "compiled_rule_check": {
+        "pick_rule_after": "false",
+        "place_rule_after": "false",
+        "unrelated_place_rule_corrupted": true
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "0be25f39fce2f602571e",
+      "recorded_gate_accepted": false,
+      "selection_finalist": null,
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": 0.0,
+        "mean_delta": 0.19392857142857142,
+        "passed": false,
+        "worst_subgroup_delta": 0.0
+      }
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": -0.10226352919335378,
+        "definition": "goal has at least two object variables",
+        "mean_delta": -0.05181579791228915,
+        "n_tasks": 3
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.1093220361509835,
+        "mean_delta": -0.04501588182095877,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": -0.11970870552093053,
+        "definition": "all remaining tasks",
+        "mean_delta": -0.04381589662837105,
+        "n_tasks": 17,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "b18385197efad9c2b831312e3f0be4a3289767879c57b8ee0e1c087cc8039d87",
+      "compiled_rule_check": {
+        "pick_rule_after": "false",
+        "place_rule_after": "false",
+        "unrelated_place_rule_corrupted": true
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "9a2b051d4686788655b6",
+      "recorded_gate_accepted": false,
+      "selection_finalist": {
+        "episodes": 30.0,
+        "independent_tasks": 10.0,
+        "lcb": -0.13775770688051395,
+        "mean_delta": -0.03365056402337104,
+        "passed": false,
+        "worst_subgroup_delta": -0.17500000000000002
+      },
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": 0.0008333333333333332,
+        "mean_delta": 0.10202380952380952,
+        "passed": true,
+        "worst_subgroup_delta": 0.0
+      }
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": -0.11063524825134735,
+        "definition": "goal has at least two object variables",
+        "mean_delta": -0.05176963129749509,
+        "n_tasks": 3
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.1076667216035121,
+        "mean_delta": -0.061790018155601235,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": -0.11720389546240939,
+        "definition": "all remaining tasks",
+        "mean_delta": -0.06355832171879643,
+        "n_tasks": 17,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "24977d58506d1f5cc10cd0a698ef262c0b8f2e667f4ffcc5139a0f245be8b464",
+      "compiled_rule_check": {
+        "pick_rule_after": "false",
+        "place_rule_after": "false",
+        "unrelated_place_rule_corrupted": true
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "558e38d9852e9c7d6ae0",
+      "recorded_gate_accepted": false,
+      "selection_finalist": {
+        "episodes": 30.0,
+        "independent_tasks": 10.0,
+        "lcb": -0.093845518678852,
+        "mean_delta": -0.030060264480554336,
+        "passed": false,
+        "worst_subgroup_delta": -0.1708333333333333
+      },
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": 0.0014536340852130277,
+        "mean_delta": 0.1945050125313283,
+        "passed": true,
+        "worst_subgroup_delta": 0.0
+      }
+    }
+  ],
+  "interpretation_guardrail": "Audit outcomes were already observed. Use this result to formulate and power a preregistered policy, never to select its final threshold.",
+  "semantic_policy_pass_count": 0,
+  "source_run": "running/Phase1/fault_repair_e8p_constraint/full/seed_0",
+  "unrelated_rule_corruption_count": 7
+}

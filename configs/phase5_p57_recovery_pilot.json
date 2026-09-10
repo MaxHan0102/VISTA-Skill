@@ -1,9 +1,9 @@
 {
   "protocol_id": "phase5_p57_target_evidence_recovery_20260907_v1",
   "config": "configs/vista_phase5_hab.json",
-  "output_dir": "running/phase5_p57_recovery_20260907",
-  "dataset_manifest": "running/phase5_p57_recovery_20260907/development_manifest.json",
-  "dataset": "running/phase5_p57_recovery_20260907/development.pickle",
+  "output_dir": "running/Phase5/phase5_p57_recovery_20260907",
+  "dataset_manifest": "running/Phase5/phase5_p57_recovery_20260907/development_manifest.json",
+  "dataset": "running/Phase5/phase5_p57_recovery_20260907/development.pickle",
   "initial_skill": "interface_only",
   "acquisition_seed": 570907,
   "rollout_seeds": [0, 1, 2],

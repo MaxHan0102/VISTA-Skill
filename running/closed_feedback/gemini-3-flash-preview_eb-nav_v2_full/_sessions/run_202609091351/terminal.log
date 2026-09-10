@@ -1,0 +1,905 @@
+Output directory: /root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351
+[2026-09-09 13:51:52,589][INFO] - Current eval set: visual_appearance
+Episodes:   0%|                                                                                                                                                                                                                            | 0/60 [00:00<?, ?it/s][2026-09-09 13:51:53,947][INFO] - Evaluating episode 0 ...
+INFO:EB_logger:Evaluating episode 0 ...
+[2026-09-09 13:51:53,947][INFO] - Restoring scene FloorPlan11...
+INFO:EB_logger:Restoring scene FloorPlan11...
+Instruction: Find the rectangular yellowish object with a soft and smooth surface.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:   2%|███▌                                                                                                                                                                                                                | 1/60 [00:17<17:21, 17.65s/it][2026-09-09 13:52:11,594][INFO] - Evaluating episode 1 ...
+INFO:EB_logger:Evaluating episode 1 ...
+[2026-09-09 13:52:11,594][INFO] - Restoring scene FloorPlan12...
+INFO:EB_logger:Restoring scene FloorPlan12...
+Instruction: Approach the circular dark container with a smooth black surface.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 1.0
+Episodes:   3%|███████                                                                                                                                                                                                             | 2/60 [00:31<14:44, 15.25s/it][2026-09-09 13:52:25,169][INFO] - Evaluating episode 2 ...
+INFO:EB_logger:Evaluating episode 2 ...
+[2026-09-09 13:52:25,169][INFO] - Restoring scene FloorPlan13...
+INFO:EB_logger:Restoring scene FloorPlan13...
+Instruction: Approach the red rectangular item with black edges around the sides.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 3, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:   5%|██████████▌                                                                                                                                                                                                         | 3/60 [00:53<17:33, 18.49s/it][2026-09-09 13:52:47,505][INFO] - Evaluating episode 3 ...
+INFO:EB_logger:Evaluating episode 3 ...
+[2026-09-09 13:52:47,506][INFO] - Restoring scene FloorPlan14...
+INFO:EB_logger:Restoring scene FloorPlan14...
+Instruction: Move towards the shiny silver object with a rounded base and smooth texture.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:   7%|██████████████▏                                                                                                                                                                                                     | 4/60 [01:16<18:46, 20.12s/it][2026-09-09 13:53:10,120][INFO] - Evaluating episode 4 ...
+INFO:EB_logger:Evaluating episode 4 ...
+[2026-09-09 13:53:10,120][INFO] - Restoring scene FloorPlan15...
+INFO:EB_logger:Restoring scene FloorPlan15...
+Instruction: Locate the metallic container with a polished golden surface.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:   8%|█████████████████▋                                                                                                                                                                                                  | 5/60 [01:27<15:34, 16.99s/it][2026-09-09 13:53:21,555][INFO] - Evaluating episode 5 ...
+INFO:EB_logger:Evaluating episode 5 ...
+[2026-09-09 13:53:21,555][INFO] - Restoring scene FloorPlan16...
+INFO:EB_logger:Restoring scene FloorPlan16...
+Instruction: Head closer to the small cylindrical object with a light gray and white finish.
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 2, 2, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  10%|█████████████████████▏                                                                                                                                                                                              | 6/60 [01:40<13:57, 15.51s/it][2026-09-09 13:53:34,193][INFO] - Evaluating episode 6 ...
+INFO:EB_logger:Evaluating episode 6 ...
+[2026-09-09 13:53:34,193][INFO] - Restoring scene FloorPlan17...
+INFO:EB_logger:Restoring scene FloorPlan17...
+Instruction: Move to the round, smooth object with a bright red surface.
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 1.0
+Episodes:  12%|████████████████████████▋                                                                                                                                                                                           | 7/60 [01:54<13:12, 14.95s/it][2026-09-09 13:53:48,003][INFO] - Evaluating episode 7 ...
+INFO:EB_logger:Evaluating episode 7 ...
+[2026-09-09 13:53:48,004][INFO] - Restoring scene FloorPlan18...
+INFO:EB_logger:Restoring scene FloorPlan18...
+Instruction: Get near the rectangular device with a black center and deep red sides.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 3, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 1.0
+Episodes:  13%|████████████████████████████▎                                                                                                                                                                                       | 8/60 [02:07<12:28, 14.39s/it][2026-09-09 13:54:01,196][INFO] - Evaluating episode 8 ...
+INFO:EB_logger:Evaluating episode 8 ...
+[2026-09-09 13:54:01,196][INFO] - Restoring scene FloorPlan19...
+INFO:EB_logger:Restoring scene FloorPlan19...
+Instruction: Find the crumpled green object with a leafy texture and uneven edges.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 3, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 1.0
+Episodes:  15%|███████████████████████████████▊                                                                                                                                                                                    | 9/60 [02:21<12:18, 14.47s/it][2026-09-09 13:54:15,847][INFO] - Evaluating episode 9 ...
+INFO:EB_logger:Evaluating episode 9 ...
+[2026-09-09 13:54:15,847][INFO] - Restoring scene FloorPlan20...
+INFO:EB_logger:Restoring scene FloorPlan20...
+Instruction: Move towards the shiny rectangular object with a metallic silver finish.
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 3, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 3, 0, 0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  17%|███████████████████████████████████▏                                                                                                                                                                               | 10/60 [02:46<14:41, 17.62s/it][2026-09-09 13:54:40,520][INFO] - Evaluating episode 10 ...
+INFO:EB_logger:Evaluating episode 10 ...
+[2026-09-09 13:54:40,520][INFO] - Restoring scene FloorPlan21...
+INFO:EB_logger:Restoring scene FloorPlan21...
+Instruction: Approach the tall cylindrical container with a brushed silver surface.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  18%|██████████████████████████████████████▋                                                                                                                                                                            | 11/60 [02:53<11:48, 14.47s/it][2026-09-09 13:54:47,840][INFO] - Evaluating episode 11 ...
+INFO:EB_logger:Evaluating episode 11 ...
+[2026-09-09 13:54:47,840][INFO] - Restoring scene FloorPlan22...
+INFO:EB_logger:Restoring scene FloorPlan22...
+Instruction: Locate the rounded metallic object with a shiny silver surface and a handle on top.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 3, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 4, 4]
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 1.0
+Episodes:  20%|██████████████████████████████████████████▏                                                                                                                                                                        | 12/60 [03:10<12:02, 15.04s/it][2026-09-09 13:55:04,198][INFO] - Evaluating episode 12 ...
+INFO:EB_logger:Evaluating episode 12 ...
+[2026-09-09 13:55:04,198][INFO] - Restoring scene FloorPlan23...
+INFO:EB_logger:Restoring scene FloorPlan23...
+Instruction: Get near the circular black metal structure with a smooth finish.
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  22%|█████████████████████████████████████████████▋                                                                                                                                                                     | 13/60 [03:22<11:09, 14.25s/it][2026-09-09 13:55:16,621][INFO] - Evaluating episode 13 ...
+INFO:EB_logger:Evaluating episode 13 ...
+[2026-09-09 13:55:16,621][INFO] - Restoring scene FloorPlan24...
+INFO:EB_logger:Restoring scene FloorPlan24...
+Instruction: Move towards the shiny silver object with a rounded base and smooth texture.
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 3, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Episodes:  23%|█████████████████████████████████████████████████▏                                                                                                                                                                 | 14/60 [03:40<11:46, 15.36s/it][2026-09-09 13:55:34,544][INFO] - Evaluating episode 14 ...
+INFO:EB_logger:Evaluating episode 14 ...
+[2026-09-09 13:55:34,544][INFO] - Restoring scene FloorPlan25...
+INFO:EB_logger:Restoring scene FloorPlan25...
+Instruction: Move closer to the small round object with a green surface and a cylindrical shape.
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 2, 0, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  25%|████████████████████████████████████████████████████▊                                                                                                                                                              | 15/60 [03:56<11:33, 15.42s/it][2026-09-09 13:55:50,096][INFO] - Evaluating episode 15 ...
+INFO:EB_logger:Evaluating episode 15 ...
+[2026-09-09 13:55:50,096][INFO] - Restoring scene FloorPlan26...
+INFO:EB_logger:Restoring scene FloorPlan26...
+Instruction: Move towards the shiny silver object with a rounded base and smooth texture.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 2, 2, 0]
+Executed action: 0, Task success: 1.0
+Episodes:  27%|████████████████████████████████████████████████████████▎                                                                                                                                                          | 16/60 [04:09<10:53, 14.85s/it][2026-09-09 13:56:03,614][INFO] - Evaluating episode 16 ...
+INFO:EB_logger:Evaluating episode 16 ...
+[2026-09-09 13:56:03,614][INFO] - Restoring scene FloorPlan27...
+INFO:EB_logger:Restoring scene FloorPlan27...
+Instruction: Approach the circular dark container with a smooth black surface.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 2, 2, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  28%|███████████████████████████████████████████████████████████▊                                                                                                                                                       | 17/60 [04:37<13:30, 18.86s/it][2026-09-09 13:56:31,810][INFO] - Evaluating episode 17 ...
+INFO:EB_logger:Evaluating episode 17 ...
+[2026-09-09 13:56:31,810][INFO] - Restoring scene FloorPlan28...
+INFO:EB_logger:Restoring scene FloorPlan28...
+Instruction: Find the crumpled green object with a leafy texture and uneven edges.
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 4, 4, 4]
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [4, 4, 4, 4, 4]
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Planner Output Action: [4, 4, 4, 4, 4]
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Episodes:  30%|███████████████████████████████████████████████████████████████▎                                                                                                                                                   | 18/60 [05:02<14:25, 20.60s/it][2026-09-09 13:56:56,470][INFO] - Evaluating episode 18 ...
+INFO:EB_logger:Evaluating episode 18 ...
+[2026-09-09 13:56:56,470][INFO] - Restoring scene FloorPlan29...
+INFO:EB_logger:Restoring scene FloorPlan29...
+Instruction: Locate the rounded metallic object with a shiny silver surface and a handle on top.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  32%|██████████████████████████████████████████████████████████████████▊                                                                                                                                                | 19/60 [05:26<14:42, 21.53s/it][2026-09-09 13:57:20,151][INFO] - Evaluating episode 19 ...
+INFO:EB_logger:Evaluating episode 19 ...
+[2026-09-09 13:57:20,151][INFO] - Restoring scene FloorPlan30...
+INFO:EB_logger:Restoring scene FloorPlan30...
+Instruction: Move to the tall, compact black device with a smooth finish.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 1.0
+Episodes:  33%|██████████████████████████████████████████████████████████████████████▎                                                                                                                                            | 20/60 [05:46<14:02, 21.07s/it][2026-09-09 13:57:40,142][INFO] - Evaluating episode 20 ...
+INFO:EB_logger:Evaluating episode 20 ...
+[2026-09-09 13:57:40,142][INFO] - Restoring scene FloorPlan211...
+INFO:EB_logger:Restoring scene FloorPlan211...
+Instruction: Approach the tall green container with a smooth texture.
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  35%|█████████████████████████████████████████████████████████████████████████▊                                                                                                                                         | 21/60 [05:59<12:11, 18.74s/it][2026-09-09 13:57:53,472][INFO] - Evaluating episode 21 ...
+INFO:EB_logger:Evaluating episode 21 ...
+[2026-09-09 13:57:53,472][INFO] - Restoring scene FloorPlan212...
+INFO:EB_logger:Restoring scene FloorPlan212...
+Instruction: Move towards the rectangular object with a shiny golden color and a small opening on the top.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  37%|█████████████████████████████████████████████████████████████████████████████▎                                                                                                                                     | 22/60 [06:11<10:31, 16.61s/it][2026-09-09 13:58:05,105][INFO] - Evaluating episode 22 ...
+INFO:EB_logger:Evaluating episode 22 ...
+[2026-09-09 13:58:05,105][INFO] - Restoring scene FloorPlan213...
+INFO:EB_logger:Restoring scene FloorPlan213...
+Instruction: Move towards the slim metallic object with a shiny silver finish.
+Planner Output Action: [0, 4]
+Executed action: 0, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 0, 0, 0, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Episodes:  38%|████████████████████████████████████████████████████████████████████████████████▉                                                                                                                                  | 23/60 [06:50<14:21, 23.29s/it][2026-09-09 13:58:43,983][INFO] - Evaluating episode 23 ...
+INFO:EB_logger:Evaluating episode 23 ...
+[2026-09-09 13:58:43,983][INFO] - Restoring scene FloorPlan214...
+INFO:EB_logger:Restoring scene FloorPlan214...
+Instruction: Locate the short metallic item with a golden surface and a round light source.
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 3, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 3, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  40%|████████████████████████████████████████████████████████████████████████████████████▍                                                                                                                              | 24/60 [07:05<12:36, 21.02s/it][2026-09-09 13:58:59,689][INFO] - Evaluating episode 24 ...
+INFO:EB_logger:Evaluating episode 24 ...
+[2026-09-09 13:58:59,689][INFO] - Restoring scene FloorPlan215...
+INFO:EB_logger:Restoring scene FloorPlan215...
+Instruction: Head closer to the soft, square object with a bright yellow cover.
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  42%|███████████████████████████████████████████████████████████████████████████████████████▉                                                                                                                           | 25/60 [07:27<12:21, 21.20s/it][2026-09-09 13:59:21,316][INFO] - Evaluating episode 25 ...
+INFO:EB_logger:Evaluating episode 25 ...
+[2026-09-09 13:59:21,316][INFO] - Restoring scene FloorPlan216...
+INFO:EB_logger:Restoring scene FloorPlan216...
+Instruction: Get near the tall upright object with a slim stand and a rounded shade.
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 2, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 1.0
+Episodes:  43%|███████████████████████████████████████████████████████████████████████████████████████████▍                                                                                                                       | 26/60 [07:39<10:28, 18.47s/it][2026-09-09 13:59:33,425][INFO] - Evaluating episode 26 ...
+INFO:EB_logger:Evaluating episode 26 ...
+[2026-09-09 13:59:33,425][INFO] - Restoring scene FloorPlan217...
+INFO:EB_logger:Restoring scene FloorPlan217...
+Instruction: Locate the short metallic item with a golden surface and a round light source.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 3, 3]
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Episodes:  45%|██████████████████████████████████████████████████████████████████████████████████████████████▉                                                                                                                    | 27/60 [08:03<11:06, 20.21s/it][2026-09-09 13:59:57,685][INFO] - Evaluating episode 27 ...
+INFO:EB_logger:Evaluating episode 27 ...
+[2026-09-09 13:59:57,685][INFO] - Restoring scene FloorPlan218...
+INFO:EB_logger:Restoring scene FloorPlan218...
+Instruction: Move towards the tall, cylindrical container with a clean white finish.
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4082, prompt_tokens=4287, total_tokens=8369, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3928, rejected_prediction_tokens=None, text_tokens=154), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3198, image_tokens=0))
+local variable 'out' referenced before assignment
+retrying...
+Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4081, prompt_tokens=4287, total_tokens=8368, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3928, rejected_prediction_tokens=None, text_tokens=153), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3198, image_tokens=0))
+local variable 'out' referenced before assignment
+retrying...
+Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4082, prompt_tokens=4287, total_tokens=8369, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3928, rejected_prediction_tokens=None, text_tokens=154), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3198, image_tokens=0))
+local variable 'out' referenced before assignment
+retrying...
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4082, prompt_tokens=4307, total_tokens=8389, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3928, rejected_prediction_tokens=None, text_tokens=154), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3218, image_tokens=0))
+local variable 'out' referenced before assignment
+retrying...
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4082, prompt_tokens=4327, total_tokens=8409, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3931, rejected_prediction_tokens=None, text_tokens=151), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3238, image_tokens=0))
+local variable 'out' referenced before assignment
+retrying...
+Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4082, prompt_tokens=4327, total_tokens=8409, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3931, rejected_prediction_tokens=None, text_tokens=151), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3238, image_tokens=0))
+local variable 'out' referenced before assignment
+retrying...
+Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4082, prompt_tokens=4327, total_tokens=8409, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3929, rejected_prediction_tokens=None, text_tokens=153), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3238, image_tokens=0))
+local variable 'out' referenced before assignment
+retrying...
+Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4082, prompt_tokens=4327, total_tokens=8409, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3929, rejected_prediction_tokens=None, text_tokens=153), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3238, image_tokens=0))
+local variable 'out' referenced before assignment
+retrying...
+Planner Output Action: [0, 0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4081, prompt_tokens=4435, total_tokens=8516, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3928, rejected_prediction_tokens=None, text_tokens=153), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3346, image_tokens=0))
+local variable 'out' referenced before assignment
+retrying...
+Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4080, prompt_tokens=4226, total_tokens=8306, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3932, rejected_prediction_tokens=None, text_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3137, image_tokens=0))
+local variable 'out' referenced before assignment
+retrying...
+Planner Output Action: [0, 3, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 4]
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  47%|██████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                                | 28/60 [12:59<54:56, 103.02s/it][2026-09-09 14:04:53,910][INFO] - Evaluating episode 28 ...
+INFO:EB_logger:Evaluating episode 28 ...
+[2026-09-09 14:04:53,910][INFO] - Restoring scene FloorPlan219...
+INFO:EB_logger:Restoring scene FloorPlan219...
+Instruction: Approach the rectangular metallic object with a smooth silver surface.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 2, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Episodes:  48%|█████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                                                                             | 29/60 [13:26<41:23, 80.10s/it][2026-09-09 14:05:20,532][INFO] - Evaluating episode 29 ...
+INFO:EB_logger:Evaluating episode 29 ...
+[2026-09-09 14:05:20,532][INFO] - Restoring scene FloorPlan220...
+INFO:EB_logger:Restoring scene FloorPlan220...
+Instruction: Approach the tall green container with a smooth texture.
+Planner Output Action: [3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4082, prompt_tokens=4092, total_tokens=8174, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3932, rejected_prediction_tokens=None, text_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3003, image_tokens=0))
+local variable 'out' referenced before assignment
+retrying...
+Planner Output Action: [0, 3, 0, 3, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 3, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  50%|█████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                                         | 30/60 [13:58<32:45, 65.53s/it][2026-09-09 14:05:52,060][INFO] - Evaluating episode 30 ...
+INFO:EB_logger:Evaluating episode 30 ...
+[2026-09-09 14:05:52,060][INFO] - Restoring scene FloorPlan221...
+INFO:EB_logger:Restoring scene FloorPlan221...
+Instruction: Locate the soft, cushion-like object with a vibrant purple cover.
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 2, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Episodes:  52%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                      | 31/60 [14:16<24:50, 51.40s/it][2026-09-09 14:06:10,503][INFO] - Evaluating episode 31 ...
+INFO:EB_logger:Evaluating episode 31 ...
+[2026-09-09 14:06:10,503][INFO] - Restoring scene FloorPlan222...
+INFO:EB_logger:Restoring scene FloorPlan222...
+Instruction: Head closer to the cylindrical container with a bright blue surface.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  53%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                                  | 32/60 [14:27<18:19, 39.26s/it][2026-09-09 14:06:21,425][INFO] - Evaluating episode 32 ...
+INFO:EB_logger:Evaluating episode 32 ...
+[2026-09-09 14:06:21,425][INFO] - Restoring scene FloorPlan223...
+INFO:EB_logger:Restoring scene FloorPlan223...
+Instruction: Get near the flat, round item with a shiny golden surface.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 3, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  55%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                               | 33/60 [15:05<17:31, 38.94s/it][2026-09-09 14:06:59,637][INFO] - Evaluating episode 33 ...
+INFO:EB_logger:Evaluating episode 33 ...
+[2026-09-09 14:06:59,638][INFO] - Restoring scene FloorPlan224...
+INFO:EB_logger:Restoring scene FloorPlan224...
+Instruction: Move near to that object who has a conical cover supported by a rod on a rectangular base, where warm light emits
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 0, 2, 0, 2]
+Executed action: 2, Task success: 1.0
+Episodes:  57%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                           | 34/60 [18:04<35:03, 80.89s/it][2026-09-09 14:09:58,400][INFO] - Evaluating episode 34 ...
+INFO:EB_logger:Evaluating episode 34 ...
+[2026-09-09 14:09:58,400][INFO] - Restoring scene FloorPlan225...
+INFO:EB_logger:Restoring scene FloorPlan225...
+Instruction: Find the tall, narrow object with a reflective silver surface and a rounded top opening.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4081, prompt_tokens=4188, total_tokens=8269, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3929, rejected_prediction_tokens=None, text_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3099, image_tokens=0))
+local variable 'out' referenced before assignment
+retrying...
+Planner Output Action: [4, 4, 4, 4]
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  58%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                        | 35/60 [19:14<32:21, 77.66s/it][2026-09-09 14:11:08,538][INFO] - Evaluating episode 35 ...
+INFO:EB_logger:Evaluating episode 35 ...
+[2026-09-09 14:11:08,538][INFO] - Restoring scene FloorPlan226...
+INFO:EB_logger:Restoring scene FloorPlan226...
+Instruction: Move towards the soft rectangular item with a yellow cover and floral patterns.
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [2, 2, 0, 0, 0, 0]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Episodes:  60%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                    | 36/60 [19:34<24:09, 60.41s/it][2026-09-09 14:11:28,699][INFO] - Evaluating episode 36 ...
+INFO:EB_logger:Evaluating episode 36 ...
+[2026-09-09 14:11:28,699][INFO] - Restoring scene FloorPlan227...
+INFO:EB_logger:Restoring scene FloorPlan227...
+Instruction: Move to the rectangular object with a brown cardboard-like appearance.
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 3, 0, 0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 3, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 1.0
+Episodes:  62%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                 | 37/60 [19:48<17:46, 46.35s/it][2026-09-09 14:11:42,238][INFO] - Evaluating episode 37 ...
+INFO:EB_logger:Evaluating episode 37 ...
+[2026-09-09 14:11:42,239][INFO] - Restoring scene FloorPlan228...
+INFO:EB_logger:Restoring scene FloorPlan228...

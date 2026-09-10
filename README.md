@@ -23,6 +23,14 @@ The P0 method follows the latest design in
 
 ## Quick validation
 
+Closed-source RGB-only/full-feedback executor tests use the stock EmbodiedBench
+evaluator/planner and native logs (GPT/Gemini/Qwen, EB-Habitat and EB-Navigation).
+API-key setup, minimal feedback adapters and paired launch commands are documented
+in [`docs/closed_source_feedback_baselines.md`](docs/closed_source_feedback_baselines.md).
+All eight w/o feedback baselines (2,400 tasks) are complete; see the
+[final experiment log](docs/experiment_log_wo_feedback_baselines.md) for results,
+protocol qualifications and recorded retry costs.
+
 ```bash
 python -m pytest
 ```
@@ -216,7 +224,7 @@ PYTHONPATH=EmbodiedBench:. python -m vista_skill.integrations.embodiedbench.cli 
 
 PYTHONPATH=EmbodiedBench:. python -m vista_skill.integrations.embodiedbench.cli \
   evaluate --mode frozen_skill \
-  --skill running/vista_skill/full/seed_0/frozen_skill.json --stage audit
+  --skill running/Phase1/vista_skill/full/seed_0/frozen_skill.json --stage audit
 ```
 
 Outputs land under `running/`; every invocation requires a fresh

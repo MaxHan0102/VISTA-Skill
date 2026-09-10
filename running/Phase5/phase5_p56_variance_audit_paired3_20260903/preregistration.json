@@ -1,0 +1,72 @@
+{
+  "candidate_artifact": "running/Phase5/phase5_temporal_sequential_paired_e6_20260903_rerun1/seed_0/update_proposals/v0-v1-001436ce4072-4e90990d463b/candidate_skill.json",
+  "candidate_artifact_sha256": "a194b9adc5e867c0fc7da20614e085a5f71eefd2b451c76b9d20cc105e783c30",
+  "driver": "scripts/phase5_variance_audit.py",
+  "driver_sha256": "c3fa1ef9a756d11303b7913ea3037fee658c451152b46d9f399545109016a802",
+  "outcomes_observed_when_written": false,
+  "parent_artifact": "running/Phase5/phase5_temporal_sequential_paired_e6_20260903_rerun1/seed_0/update_proposals/v0-v1-001436ce4072-4e90990d463b/parent_skill.json",
+  "parent_artifact_sha256": "b275569e411915befe300830dcb6cd457def7a80ccc9b3819ecd5ca0d99af757",
+  "protocol": {
+    "all_rollout_seeds": [
+      0,
+      1,
+      2
+    ],
+    "config": "configs/vista_phase5_hab.json",
+    "constraints": {
+      "candidate_must_not_be_promoted": true,
+      "duplicate_trajectory_audit_required": true,
+      "official_test_access": false,
+      "pass_at_k_is_diagnostic_only": true,
+      "selection_tasks_are_reused_for_variance_diagnostic_only": true
+    },
+    "decision_rule": {
+      "independent_task_path": "Either threshold fails: do not use pass@k for promotion; allocate Gate budget to more independent affected/protected tasks.",
+      "minimum_delta_divergent_tasks": 2,
+      "repeated_rollout_path": "Both thresholds pass: retain paired-3 and pre-register paired-5 only for borderline candidates.",
+      "within_task_variance_share_threshold": 0.2
+    },
+    "episode_ids": [
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69"
+    ],
+    "executor": {
+      "max_completion_tokens": 4096,
+      "model": "Qwen/Qwen3-VL-8B-Instruct",
+      "n_shots": 10,
+      "resolution": 500,
+      "temperature": 0.0,
+      "tensor_parallel": 1
+    },
+    "manifest": "configs/eb_hab_train_validation_manifest.json",
+    "metric": {
+      "invalid_action_penalty": 0.1,
+      "name": "paired_composite_task_score_delta",
+      "progress_weight": 0.3,
+      "success_weight": 0.7
+    },
+    "new_rollout_seeds": [
+      1,
+      2
+    ],
+    "output_dir": "running/Phase5/phase5_p56_variance_audit_paired3_20260903",
+    "protocol_id": "vista_skill_phase5_p56_variance_audit_2026_09_03",
+    "purpose": "Determine whether Gate validation budget should fund repeated same-task rollouts or additional independent tasks.",
+    "reused_rollout_seeds": [
+      0
+    ],
+    "source_proposal": "running/Phase5/phase5_temporal_sequential_paired_e6_20260903_rerun1/seed_0/update_proposals/v0-v1-001436ce4072-4e90990d463b",
+    "source_seed0_rollouts": "running/Phase5/phase5_temporal_sequential_paired_e6_20260903_rerun1/seed_0/gate_rollouts/proxy",
+    "status": "diagnostic_not_claim_eligible"
+  },
+  "protocol_file": "configs/phase5_p56_variance_audit.json",
+  "protocol_sha256": "39f4fd42ee084f30405c5d114a7302ff4d489331d4c12ea7282a722a53b5ece7"
+}

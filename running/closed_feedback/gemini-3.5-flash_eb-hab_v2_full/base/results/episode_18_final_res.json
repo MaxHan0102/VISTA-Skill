@@ -1,0 +1,1 @@
+{"reward": 0.6, "num_invalid_actions": 9, "empty_plan": 0, "instruction": "Put both an rubriks cube and a lid onto the left counter.", "task_success": true, "task_progress": 1.0, "subgoal_reward": 0.0, "num_steps": 25, "planner_steps": 7, "planner_output_error": 0, "num_invalid_action_ratio": 0.36, "episode_elapsed_seconds": [149.5229845046997]}

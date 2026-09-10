@@ -1,0 +1,1 @@
+{"call": 1, "smoke_policy": true, "response": {"visual_state_description": "smoke", "reasoning_and_reflection": "fixed policy", "language_plan": "execute action 0 twice", "executable_plan": [{"action_id": 0, "action_name": "smoke"}, {"action_id": 0, "action_name": "smoke"}]}}

@@ -1,0 +1,113 @@
+{
+  "analysis_type": "phase3a_state_oracle_feasibility",
+  "coordinate_linkage_complete": true,
+  "labelled_events": "running/Phase3/phase3a/p3a0_oracle_smoke_run3_20260824_run/seed_0/acquisition.jsonl",
+  "mapping": {
+    "action:close": {
+      "coverage": 0.75,
+      "mapped": 6,
+      "total": 8,
+      "values": {
+        "true": 6,
+        "unknown": 2
+      }
+    },
+    "action:nav": {
+      "coverage": 0.9425287356321839,
+      "mapped": 246,
+      "total": 261,
+      "values": {
+        "false": 175,
+        "true": 71,
+        "unknown": 15
+      }
+    },
+    "action:pick": {
+      "coverage": 0.8566666666666667,
+      "mapped": 257,
+      "total": 300,
+      "values": {
+        "false": 195,
+        "true": 62,
+        "unknown": 43
+      }
+    },
+    "action:place": {
+      "coverage": 0.7454545454545455,
+      "mapped": 41,
+      "total": 55,
+      "values": {
+        "false": 18,
+        "true": 23,
+        "unknown": 14
+      }
+    },
+    "all_post": {
+      "coverage": 0.8814102564102564,
+      "mapped": 550,
+      "total": 624,
+      "values": {
+        "false": 388,
+        "true": 162,
+        "unknown": 74
+      }
+    },
+    "predicate:at": {
+      "coverage": 0.0,
+      "mapped": 0,
+      "total": 7,
+      "values": {
+        "unknown": 7
+      }
+    },
+    "predicate:holding": {
+      "coverage": 1.0,
+      "mapped": 81,
+      "total": 81,
+      "values": {
+        "false": 61,
+        "true": 20
+      }
+    },
+    "predicate:near": {
+      "coverage": 1.0,
+      "mapped": 365,
+      "total": 365,
+      "values": {
+        "false": 231,
+        "true": 134
+      }
+    },
+    "predicate:not_holding": {
+      "coverage": 0.0,
+      "mapped": 0,
+      "total": 65,
+      "values": {
+        "unknown": 65
+      }
+    },
+    "predicate:open": {
+      "coverage": 0.5,
+      "mapped": 2,
+      "total": 4,
+      "values": {
+        "true": 2,
+        "unknown": 2
+      }
+    },
+    "predicate:task_complete": {
+      "coverage": 1.0,
+      "mapped": 102,
+      "total": 102,
+      "values": {
+        "false": 96,
+        "true": 6
+      }
+    }
+  },
+  "oracle_absent_from_transition_payloads": true,
+  "oracle_label_count": 102,
+  "reference_events": null,
+  "rollout_non_interference": null,
+  "transition_count": 102
+}

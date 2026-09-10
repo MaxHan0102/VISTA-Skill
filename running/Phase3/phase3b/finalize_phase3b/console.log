@@ -1,0 +1,23 @@
+[2026-08-25T12:37:43+08:00] START stage=finalize_phase3b
+[2026-08-25T12:37:43+08:00] COMMAND ["env", "PYTHONPATH=.", "/root/miniconda3/envs/max_embench/bin/python", "scripts/phase3b_finalize.py", "--output", "running/Phase3/phase3b/phase3b_final_decision_20260825.json"]
+{
+  "artifact_validation": {
+    "T0_error_count": 0,
+    "T1_error_count": 1,
+    "executor_episode_ids_exactly_paired": true,
+    "executor_event_hashes_match": true,
+    "phase3a_audit_samples_read": 0,
+    "strict_cache_hashes_match": true,
+    "strict_cache_ids_exactly_paired": true,
+    "strict_information_isolation": true
+  },
+  "conditional_stages": {
+    "fresh_episode_60_79_collection": "canceled_by_preregistered_no_go",
+    "fresh_temporal_audit": "canceled_by_preregistered_no_go",
+    "late_feedback_fusion": "canceled_by_preregistered_no_go"
+  },
+  "decision": "no_go",
+  "phase3b_1": "no_go",
+  "phase3b_2": "no_go_dev"
+}
+[2026-08-25T12:37:43+08:00] END stage=finalize_phase3b exit_code=0

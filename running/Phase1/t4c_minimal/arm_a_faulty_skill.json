@@ -1,0 +1,33 @@
+{
+  "artifact_sha256": "7d6e8856cf423b3a68dffdb7f43a92bb6dc5aa701c83106a4492f281aed1e63b",
+  "protocol": {
+    "diagnostic": true,
+    "initial_skill": "minimal",
+    "note": "degraded-initial-skill lower bound; evaluate with --diagnostic",
+    "purpose": "degraded_initial_arm_a"
+  },
+  "schema_version": "2",
+  "skill": {
+    "activation": [
+      "Use for embodied tasks that require step-wise execution."
+    ],
+    "constraint": [],
+    "effect": [],
+    "frozen": true,
+    "metadata": {
+      "initialization": "minimal"
+    },
+    "parent_version": null,
+    "prediction_rules": [],
+    "procedure": [
+      "Execute the instructed primitive action and observe its result."
+    ],
+    "skill_id": "shared_embodied_execution",
+    "termination": [
+      "Stop when the instructed goal is reached."
+    ],
+    "termination_policy": "all_goals_evidence",
+    "version": 0
+  },
+  "skill_sha256": "fb14a11a29a5fd4f36828c7697609e34525c5f6486f6ab5a0f9894d0d4ef9693"
+}

@@ -1,0 +1,52 @@
+{
+  "candidate_artifact_sha256": "97632361de4c7f3778e60b378e85c6c7401d8b2f5223a91c26d1aac358872b59",
+  "candidate_skill_sha256": "1cfd1e5cae810aa059042ac55ea464cd792dcbc08f4e72ebd88a4a6b91a8c783",
+  "candidate_version": 1,
+  "evidence_ids": [
+    "3:s4:feedback:not_holding",
+    "14:s2:feedback:not_holding",
+    "14:s2:visual:1:at(plate,receptacle_aabb_counter_right_kitchen_counter)"
+  ],
+  "field": "constraint",
+  "parent_artifact_sha256": "9c86697bb0c2b02312daf370811f164399d08a9b8fcc0e4ca8c27b17de6ef4e4",
+  "parent_skill_sha256": "bf7ff08f9026c1f9aa0fc981c32204bf4d4cf74324d9f413e0ee04c128153e1c",
+  "parent_version": 0,
+  "patch_id": "b50e44bae8f377d67476",
+  "promoted": false,
+  "protocol": {
+    "acquisition_episode_budget": 20,
+    "config_sha256": "b4e00516096fb9156f610e165ab89b04b1ab82f02c7d07ef76fb862e7c22434c",
+    "diagnostic": true,
+    "env": "eb-hab",
+    "evolution_seed": 0,
+    "evolution_seeds": [
+      0
+    ],
+    "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "executor_model_type": "remote",
+    "executor_temperature": 0.0,
+    "frozen": true,
+    "gate_rollout_seeds": [
+      0,
+      1,
+      2
+    ],
+    "initial_skill": "shared",
+    "manifest_sha256": "b08ee365b22302899084e209f09002e96242d3ce3eb4bad410d0523b4a163bec",
+    "max_completion_tokens": 4096,
+    "method": "full",
+    "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "n_shots": 10,
+    "protocol": "vista_skill_fault_repair_fullsel_p10f30_2026_08_20",
+    "resolution": 500,
+    "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+    "run_id": "7d09ee85e56640a6abdcf34a0dd4bfa4_seed_0",
+    "skill_fault": "constraint_pick_multihold",
+    "split_rotation_index": 0,
+    "split_sha256": "e6558c0c6b1e2a99603aeee7350104c888a130cef043c188ca90cdd99372fbeb",
+    "tensor_parallel": 1
+  },
+  "schema_version": "1",
+  "snapshot_id": "v0-v1-aa3ce1c7124e-1cfd1e5cae81",
+  "snapshot_sha256": "7cc96e14deb04e9d6f3af1352c44806bcc86fc85db72ca8a075d03886d91de99"
+}

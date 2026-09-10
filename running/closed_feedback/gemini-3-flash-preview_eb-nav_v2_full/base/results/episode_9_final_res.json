@@ -1,0 +1,1 @@
+{"reward": 0.05555555555555555, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "task_success": 1.0, "num_steps": 18, "planner_steps": 4, "planner_output_error": 0, "episode_elapsed_seconds": 13.073434591293335}

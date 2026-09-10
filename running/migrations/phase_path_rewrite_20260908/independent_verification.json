@@ -1,0 +1,25 @@
+{
+  "status": "verified",
+  "removed_aliases": 217,
+  "image_references_verified": 41394,
+  "structured_records_checked": {
+    "json": 133,
+    "jsonl": 2600,
+    "skill_artifacts": 5
+  },
+  "phase5_disk_reanalysis": {
+    "phase5_p57_recovery_pilot.json": {
+      "verdict": "no_go",
+      "reproduced_reports": 2
+    },
+    "phase5_p57_recovery_unknown_recheck.json": {
+      "verdict": "no_go",
+      "reproduced_reports": 2
+    }
+  },
+  "remaining_mapped_old_paths": 0,
+  "closed_feedback_is_original_directory": true,
+  "targeted_tests_passed": 73,
+  "final_dry_run_changed_files": 0,
+  "post_migration_documentation_and_fixture_edits": "post_migration_edits.json"
+}

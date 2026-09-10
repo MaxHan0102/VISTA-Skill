@@ -21,12 +21,12 @@ from vista_skill.skills import (
 
 SOURCE_PATHS = {
     "eb-hab": (
-        "running/pilot/eval/no_skill.jsonl",
-        "running/pilot/eval/static_shared_skill.jsonl",
+        "running/Phase1/pilot/eval/no_skill.jsonl",
+        "running/Phase1/pilot/eval/static_shared_skill.jsonl",
     ),
     "eb-nav": (
-        "running/vista_skill/nav_official/base/no_skill/events.jsonl",
-        "running/vista_skill/nav_official/base/static_shared_skill/events.jsonl",
+        "running/Phase1/vista_skill/nav_official/base/no_skill/events.jsonl",
+        "running/Phase1/vista_skill/nav_official/base/static_shared_skill/events.jsonl",
     ),
 }
 
@@ -43,7 +43,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--output-dir",
-        default="running/target_skill_oracle_v1/artifacts",
+        default="running/Phase4/target_skill_oracle_v1/artifacts",
     )
     return parser.parse_args(argv)
 

@@ -1,0 +1,86 @@
+{
+  "env": "eb-nav",
+  "provider": "qwen",
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "track": "rgb_only",
+  "eval_sets": [
+    "base"
+  ],
+  "episodes": 2,
+  "start_index": 0,
+  "seed": 0,
+  "frames": 1,
+  "n_shots": null,
+  "resolution": null,
+  "max_steps": null,
+  "max_tokens": null,
+  "temperature": null,
+  "api_retries": 3,
+  "retry_delay": 5,
+  "expected_episodes": "/root/max/VISTA-Skill/running/test/Qwen3-VL-8B-Instruct_eb-nav_feedback_pilot/resume_expected_episodes.json",
+  "artifact_root": "/root/max/VISTA-Skill/running/test/Qwen3-VL-8B-Instruct_eb-nav_feedback_pilot",
+  "resume_existing": false,
+  "api_key_env": "QWEN_API_KEY",
+  "base_url": "http://192.168.1.173:8001/v1",
+  "output": "/root/max/VISTA-Skill/running/test/Qwen3-VL-8B-Instruct_eb-nav_feedback_pilot/_sessions/run_202609100954",
+  "log_level": "INFO",
+  "dry_run": false,
+  "smoke_policy": false,
+  "requested_output": "/root/max/VISTA-Skill/running/test/Qwen3-VL-8B-Instruct_eb-nav_feedback_pilot/_sessions/run_202609100954",
+  "started_at": "2026-09-10T09:54:06.319173+08:00",
+  "protocol": "stock_feedback_v2",
+  "official_config": {
+    "model_name": "Qwen/Qwen3-VL-8B-Instruct",
+    "down_sample_ratio": 1,
+    "model_type": "remote",
+    "language_only": false,
+    "eval_sets": [
+      "base"
+    ],
+    "chat_history": false,
+    "n_shots": 3,
+    "multiview": false,
+    "detection_box": false,
+    "multistep": false,
+    "resolution": 500,
+    "exp_name": "feedback_comparison",
+    "visual_icl": false,
+    "tp": 1,
+    "truncate": true
+  },
+  "schema_compatibility": "closed_objects_v1",
+  "script_sha256": "593c52f7c47eb1e3fb2e4d434e3804c1ce087a65c75526fe274e3c927a3e8126",
+  "skill_or_memory": false,
+  "git_revision": "c1ae2e312b8054da3708f7ab877c5fce22ddc696",
+  "git_dirty": true,
+  "source_hashes": {
+    "EmbodiedBench/embodiedbench/envs/eb_navigation/EBNavEnv.py": "2e127bcc69d5716239afd763f7d0db705a581674d949e558a34d8bb49ee977c2",
+    "EmbodiedBench/embodiedbench/planner/nav_planner.py": "dc10c7923588899548ddbb75515e9693f89f19d720eaace6bff93e5d3b0fdb79",
+    "EmbodiedBench/embodiedbench/evaluator/eb_navigation_evaluator.py": "213864889a8675242de8528bd06c8c74d2825850cf654c2ead456d90ebc0eeeb",
+    "EmbodiedBench/embodiedbench/planner/remote_model.py": "8c50923997c9e937e96c07fee2087737a52b9052f41c3254737c43f2499e928e",
+    "EmbodiedBench/embodiedbench/configs/eb-nav.yaml": "b5c4bcbc3dc61c62563a7fbc8d19c8bc00073f94831d7dfbfea9c5a41d52823e"
+  },
+  "runtime_changes": [
+    [
+      "if info['last_action_success'] == 0:",
+      "if False:  # outcome hidden from policy control flow",
+      1
+    ]
+  ],
+  "storage_runtime_changes": [
+    [
+      "os.path.join(self.env.log_path, 'config.txt')",
+      "os.path.join('/root/max/VISTA-Skill/running/test/Qwen3-VL-8B-Instruct_eb-nav_feedback_pilot/_sessions/run_202609100954', self.eval_set, 'config.txt')",
+      1
+    ],
+    [
+      "result open mode",
+      "exclusive creation"
+    ]
+  ],
+  "remote_defaults": {
+    "temperature": 0,
+    "max_completion_tokens": 4096,
+    "gpt5_temperature": "omitted by stock RemoteModel"
+  }
+}

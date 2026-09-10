@@ -1,0 +1,21 @@
+{
+  "amendment_type": "reporting_only_audit_cost_correction",
+  "audit_artifact": "running/Phase3/phase3a/phase3a_guard_v2_frozen_audit_v4_20260825.json",
+  "audit_artifact_sha256": "b0f582c01840f62f22e163a438cc7cc7771686b9daa1144eaae8cffd98e0ef",
+  "cause": "The Go/No-Go calculation used fb_cache for both E0 and Guard v2, but the result serializer still displayed image_cache for the Guard audit_cost field.",
+  "corrected_audit_cost": {
+    "E0_current": {
+      "calls": 100,
+      "completion_tokens": 43590,
+      "prompt_tokens": 75703
+    },
+    "guard": {
+      "calls": 100,
+      "completion_tokens": 43590,
+      "prompt_tokens": 75703
+    }
+  },
+  "decision_impact": "none; the tokens_le_1_2x_e0 and visual_calls_not_above_e0 checks already used the corrected in-memory cost variables and were true",
+  "metrics_recomputed": false,
+  "original_artifact_modified": false
+}

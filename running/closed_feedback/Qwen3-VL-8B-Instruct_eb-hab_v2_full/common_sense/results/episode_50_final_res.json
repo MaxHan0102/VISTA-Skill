@@ -1,0 +1,1 @@
+{"reward": 0.0, "num_invalid_actions": 10, "empty_plan": 0, "instruction": "Grab an item for securing the loose screw within the left counter.", "task_success": false, "task_progress": 0.0, "subgoal_reward": 0.0, "num_steps": 30, "planner_steps": 9, "planner_output_error": 0, "num_invalid_action_ratio": 0.3333333333333333, "episode_elapsed_seconds": [46.723506689071655]}

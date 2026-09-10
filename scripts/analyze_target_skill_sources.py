@@ -13,12 +13,12 @@ from typing import Any, Iterable, Mapping, Sequence
 
 
 DEFAULTS = {
-    "hab_no": "running/pilot/eval/no_skill.jsonl",
-    "hab_static": "running/pilot/eval/static_shared_skill.jsonl",
-    "nav_no": "running/vista_skill/nav_official/base/no_skill/events.jsonl",
-    "nav_static": "running/vista_skill/nav_official/base/static_shared_skill/events.jsonl",
-    "nav_no_raw": "running/eb_nav/vista_skill/evaluate/evaluate_5c1d770e3c274ddc8671b9a32e2426cb/official_test/base/s0/no_skill",
-    "nav_static_raw": "running/eb_nav/vista_skill/evaluate/evaluate_7d147751609a4bd79c79d0230c7e043e/official_test/base/s0/57086f2f1f66",
+    "hab_no": "running/Phase1/pilot/eval/no_skill.jsonl",
+    "hab_static": "running/Phase1/pilot/eval/static_shared_skill.jsonl",
+    "nav_no": "running/Phase1/vista_skill/nav_official/base/no_skill/events.jsonl",
+    "nav_static": "running/Phase1/vista_skill/nav_official/base/static_shared_skill/events.jsonl",
+    "nav_no_raw": "running/Phase4/simulator/running/eb_nav/vista_skill/evaluate/evaluate_5c1d770e3c274ddc8671b9a32e2426cb/official_test/base/s0/no_skill",
+    "nav_static_raw": "running/Phase1/simulator/running/eb_nav/vista_skill/evaluate/evaluate_7d147751609a4bd79c79d0230c7e043e/official_test/base/s0/57086f2f1f66",
 }
 
 
@@ -234,7 +234,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         parser.add_argument(f"--{name.replace('_', '-')}", default=default)
     parser.add_argument(
         "--output",
-        default="running/target_skill_oracle_v1/source_analysis.json",
+        default="running/Phase4/target_skill_oracle_v1/source_analysis.json",
     )
     return parser.parse_args(argv)
 

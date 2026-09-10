@@ -1,0 +1,46 @@
+{
+  "status": "incomplete",
+  "protocol": "stock_feedback_v2",
+  "smoke_policy": false,
+  "categories": {
+    "base": {
+      "completed": 50,
+      "expected": 50,
+      "task_success": 0.58
+    },
+    "common_sense": {
+      "completed": 50,
+      "expected": 50,
+      "task_success": 0.04
+    },
+    "complex_instruction": {
+      "completed": 24,
+      "expected": 50,
+      "task_success": 0.20833333333333334
+    },
+    "spatial_relationship": {
+      "completed": 0,
+      "expected": 50,
+      "task_success": null
+    },
+    "visual_appearance": {
+      "completed": 0,
+      "expected": 50,
+      "task_success": null
+    },
+    "long_horizon": {
+      "completed": 0,
+      "expected": 50,
+      "task_success": null
+    }
+  },
+  "completed": 124,
+  "expected": 300,
+  "category_mean_success": null,
+  "result_index": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/resume_state.json",
+  "schema_compatibility_counts": {
+    "stock": 124
+  },
+  "mixed_schema_compatibility": false,
+  "cost_note": "All original/attempt API audits, including abandoned partial episodes, contribute to cost."
+}

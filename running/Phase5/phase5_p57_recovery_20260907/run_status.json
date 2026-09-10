@@ -1,0 +1,8 @@
+{
+  "claim_eligible": false,
+  "credible_positive_diagnostic": false,
+  "decisions": {
+    "mechanism": "no_go"
+  },
+  "status": "completed"
+}

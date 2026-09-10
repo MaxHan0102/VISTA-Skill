@@ -1,0 +1,115 @@
+{
+  "config_sha256": "b4e00516096fb9156f610e165ab89b04b1ab82f02c7d07ef76fb862e7c22434c",
+  "diagnostic": true,
+  "env": "eb-hab",
+  "evolution_seeds": [
+    0
+  ],
+  "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+  "executor_model_type": "remote",
+  "executor_temperature": 0.0,
+  "experiment_id": "c7d2c9e7ec8845be910cf54352b01c6a",
+  "frozen": true,
+  "initial_skill": "shared",
+  "manifest_sha256": "b08ee365b22302899084e209f09002e96242d3ce3eb4bad410d0523b4a163bec",
+  "max_completion_tokens": 4096,
+  "method": "full",
+  "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+  "n_shots": 10,
+  "protocol": "vista_skill_fault_repair_fullsel_p10f30_2026_08_20",
+  "recovery": {
+    "executor_usage_unavailable": true,
+    "method_usage_unavailable": true,
+    "ready_clusters_by_episode_unavailable": true,
+    "reason": "The original process ended after acquisition and during independent audit, before in-memory usage counters were flushed to run_manifest.json.",
+    "recovered_after_process_interruption": true,
+    "scientific_rollout_coordinates_reused_from_complete_jsonl": true
+  },
+  "resolution": 500,
+  "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+  "run_count": 1,
+  "runs": [
+    {
+      "acquisition_episode_budget": 20,
+      "acquisition_episode_count": 20,
+      "config_sha256": "b4e00516096fb9156f610e165ab89b04b1ab82f02c7d07ef76fb862e7c22434c",
+      "diagnostic": true,
+      "env": "eb-hab",
+      "evolution_decisions": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "evolution_seed": 0,
+      "evolution_seeds": [
+        0
+      ],
+      "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+      "executor_model_type": "remote",
+      "executor_temperature": 0.0,
+      "executor_usage": null,
+      "frozen": true,
+      "frozen_skill_sha256": "3d5e3c1fe8a6d690d8e0a468d52bc2d6c431d65852557234256b304f5a7afd07",
+      "gate_rollout_seeds": [
+        0,
+        1,
+        2
+      ],
+      "initial_skill": "shared",
+      "manifest_sha256": "b08ee365b22302899084e209f09002e96242d3ce3eb4bad410d0523b4a163bec",
+      "max_completion_tokens": 4096,
+      "method": "full",
+      "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+      "method_usage": null,
+      "n_shots": 10,
+      "protocol": "vista_skill_fault_repair_fullsel_p10f30_2026_08_20",
+      "ready_clusters_by_episode": null,
+      "reconstructed_summary": {
+        "accepted_proposal_count": 0,
+        "attribution_target_counts": {
+          "abstain": 148,
+          "belief_refresh": 20,
+          "skill_update": 8
+        },
+        "episode_count": 20,
+        "mean_environment_steps": 8.8,
+        "mean_task_progress": 0.725,
+        "proposal_attempt_count": 7,
+        "success_count": 14,
+        "transition_count": 176
+      },
+      "recovery": {
+        "executor_usage_unavailable": true,
+        "method_usage_unavailable": true,
+        "ready_clusters_by_episode_unavailable": true,
+        "reason": "The original process ended after acquisition and during independent audit, before in-memory usage counters were flushed to run_manifest.json.",
+        "recovered_after_process_interruption": true,
+        "scientific_rollout_coordinates_reused_from_complete_jsonl": true
+      },
+      "resolution": 500,
+      "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+      "run_id": "c7d2c9e7ec8845be910cf54352b01c6a_seed_0",
+      "skill_fault": "effect_pick_inversion",
+      "split_rotation_index": 0,
+      "split_sha256": "e6558c0c6b1e2a99603aeee7350104c888a130cef043c188ca90cdd99372fbeb",
+      "tensor_parallel": 1,
+      "update_reliability": {
+        "beneficial_update_precision": 0.0,
+        "beneficial_updates": 0.0,
+        "harmful_update_rate": 0.0,
+        "harmful_updates": 0.0,
+        "missed_beneficial_update_rate": 0.5714285714285714,
+        "neutral_update_rate": 0.0,
+        "neutral_updates": 0.0,
+        "promoted_updates": 0.0,
+        "update_coverage": 0.0
+      }
+    }
+  ],
+  "skill_fault": "effect_pick_inversion",
+  "tensor_parallel": 1
+}

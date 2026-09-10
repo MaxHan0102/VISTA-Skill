@@ -1,0 +1,2102 @@
+{
+  "base/10": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_10_final_res.json",
+    "sha256": "98e4a27bf2ae057bb25629cc80e93022f7a69d5d3d391663ac83f1dea159d821",
+    "episode_id": "nav_9",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/11": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_11_final_res.json",
+    "sha256": "21dc287dc818b28333f278c4edd27e08cac72af6fcea2c03f42125e486445c49",
+    "episode_id": "nav_10",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/12": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_12_final_res.json",
+    "sha256": "59ad1ec388fbbb229d20f7fbd041a74590a7324531c1dc01693982067c7e9026",
+    "episode_id": "nav_11",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/13": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_13_final_res.json",
+    "sha256": "07c620f2deec3e5d5e2d09435cf36ff51b2c0ebbb1f56b59075e7e922126e805",
+    "episode_id": "nav_12",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/14": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_14_final_res.json",
+    "sha256": "274c35b24d3f777bce128b35f81ff69672be04c071da6106db564ed47dfc975f",
+    "episode_id": "nav_13",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/15": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_15_final_res.json",
+    "sha256": "7faa567a6524ec0e1bf0f43110c655aac20dd4b4c5b9a9b9e0e77cbc354907f8",
+    "episode_id": "nav_14",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/16": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_16_final_res.json",
+    "sha256": "1c430dbdefd5d361e7c2941052eab138c00cf55297ae397a8266eb11ad7a1790",
+    "episode_id": "nav_15",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/17": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_17_final_res.json",
+    "sha256": "c4e8f3fe70cee037117c3bc3f872cccac8d37948ceabc8f88cab5a7887ff44ae",
+    "episode_id": "nav_16",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/18": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_18_final_res.json",
+    "sha256": "4f4b4cbc6f4d124cf1d16ed2864bf9936a58ec87d3b0afeeeb798c93a3bcb3b8",
+    "episode_id": "nav_17",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/19": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_19_final_res.json",
+    "sha256": "ba03db1564ace08f68e756e5690a6112cc8d186b204098e270bbd514fead6f09",
+    "episode_id": "nav_18",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/1": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_1_final_res.json",
+    "sha256": "61797cc4a2ca936d371fcf5b39168b9892aad40e7cb333e5b8f37016fa65cfc4",
+    "episode_id": "nav_0",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/20": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_20_final_res.json",
+    "sha256": "d883508df692069541677e37ea21bd330734abd83155b49f7837efb28878e13d",
+    "episode_id": "nav_19",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/21": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_21_final_res.json",
+    "sha256": "12ba42590b72fc95f39a1c55dac79fac4fd7a1627e3663bc163ebcdc225a672b",
+    "episode_id": "nav_20",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/22": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_22_final_res.json",
+    "sha256": "d06e4f73cca5dc6c1bcd6d167277ef0c4cc2067b3b6ae83c6eed2f146fd5d210",
+    "episode_id": "nav_21",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/23": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_23_final_res.json",
+    "sha256": "962341b0013f7dc780ae4b75c230289c4f524a56308cadd3aa86bd68fa8636f9",
+    "episode_id": "nav_22",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/24": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_24_final_res.json",
+    "sha256": "8a57c33d4b252e3511ff9830c5b0d9dfd44a0494dd45805899b041d4d5bc7659",
+    "episode_id": "nav_23",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/25": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_25_final_res.json",
+    "sha256": "7c3df265b0697bd87b32aedd597433e21164aa9be79914e8e647b6778f48d300",
+    "episode_id": "nav_24",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/26": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_26_final_res.json",
+    "sha256": "42972eccc95afba91a296935180bd6955243a2a9771c774e0a7fdea6adef330e",
+    "episode_id": "nav_25",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/27": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_27_final_res.json",
+    "sha256": "0556e1c6cae7da33cfa8b3f8558d1383bec7ff3410d77df34d1b62aa82e7164b",
+    "episode_id": "nav_26",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/28": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_28_final_res.json",
+    "sha256": "f8d619317538b119476a643cd68cf5ea7cd94b00fb351f97fafacdfe61517ffc",
+    "episode_id": "nav_27",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/29": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_29_final_res.json",
+    "sha256": "8479386eac15ca413a3c4736b68e6777652f258c07b676c351259ed1e78da804",
+    "episode_id": "nav_28",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/2": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_2_final_res.json",
+    "sha256": "37e6cd6f90c3d6123bc21a0f126223c87e732bdbd6a30cec5e70f74828dd134b",
+    "episode_id": "nav_1",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/30": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_30_final_res.json",
+    "sha256": "bf641c31728ccc410b07f361c56c3503f22623a5871f12f17ee28d613d5c4117",
+    "episode_id": "nav_29",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/31": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_31_final_res.json",
+    "sha256": "cd11225181578c49e2ea2e6e8e29168d68c18626713ea297203f9890534785d1",
+    "episode_id": "nav_30",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/32": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_32_final_res.json",
+    "sha256": "e679ece7353c997f961a807c81a8a48e1b6b3b799c4d5c5e49a73ee6dd526d34",
+    "episode_id": "nav_31",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/33": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_33_final_res.json",
+    "sha256": "3b88810a780e6fe7beefce5b8ef34646a6fd9e579cdbc0a76dcc5235727acfff",
+    "episode_id": "nav_32",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/34": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_34_final_res.json",
+    "sha256": "d85cd544e9938c4f9c8e313ad302cbb53101f875a17354024270ddb6eec8f65b",
+    "episode_id": "nav_33",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/35": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_35_final_res.json",
+    "sha256": "ed9ce958ee23f126498ebc9fb6177253a2862ecbcb78a185526d79478d99222a",
+    "episode_id": "nav_34",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/36": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_36_final_res.json",
+    "sha256": "e41de96d13517677b2ef81d72d1da41fb1c1fb28ffede94ac44a0a54dd0852ce",
+    "episode_id": "nav_35",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/37": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_37_final_res.json",
+    "sha256": "2843d3275ded82ace7558792a23a79ca5cb05e5456b155e49c8abee30c36247b",
+    "episode_id": "nav_36",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/38": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_38_final_res.json",
+    "sha256": "4a987ed3fabd44f40043fd93d281a4fa6d5e6d0a51b46dcb818e1a083acb0aac",
+    "episode_id": "nav_37",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/39": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_39_final_res.json",
+    "sha256": "cbbacd946f873d08d08c6224def9c4b4aefacdcf2158154cbe35c9d0ee1e633a",
+    "episode_id": "nav_38",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/3": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_3_final_res.json",
+    "sha256": "634890cdbcc9e395c1147382e8ead8c14025c1a060e7fcfd5bd3d415e78cccd4",
+    "episode_id": "nav_2",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/40": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_40_final_res.json",
+    "sha256": "75768aeb7666fe1d1cfc2409f8ecfff276979aa1dc31e2eac08c2442bc5206b0",
+    "episode_id": "nav_39",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/41": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_41_final_res.json",
+    "sha256": "cc85109024ceebf07a916688730d8fb42b07b43d416eeafb24666d17e5d57172",
+    "episode_id": "nav_40",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/42": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_42_final_res.json",
+    "sha256": "28a195061e0b5ba814f2dfb5e3f45c73e36aa3bc220535b8837cad6f4ba8a8d2",
+    "episode_id": "nav_41",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/43": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_43_final_res.json",
+    "sha256": "2b5c1628bba6e9d8c4f2b7cf522f39d6d1042c7d0ee34e5d4e5aa9d371c42ee7",
+    "episode_id": "nav_42",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/44": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_44_final_res.json",
+    "sha256": "b598be727c9f6767bf94fcab82b7a4999e0e219c310a4a37f8e3784ffec22054",
+    "episode_id": "nav_43",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/45": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_45_final_res.json",
+    "sha256": "3c09b66c875286267387eb06a87fba83a8c9a06d18974eed915ad8fdecd2cb26",
+    "episode_id": "nav_44",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/46": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_46_final_res.json",
+    "sha256": "411730e4d860f0715ef514c60082b61c4c3d1f61937c83d0cf95a10451374d15",
+    "episode_id": "nav_45",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/47": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_47_final_res.json",
+    "sha256": "5890c59ac9b7ba19f0acd66c1b460d0f47609a2af66394d2c1b3bf11803532a7",
+    "episode_id": "nav_46",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/48": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_48_final_res.json",
+    "sha256": "dd4522a417fbf06ff141e6bdd71e9488876c3fb1d9fc8e739697f3564c1238f5",
+    "episode_id": "nav_47",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/49": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_49_final_res.json",
+    "sha256": "78890e1e19a49416a249b514a6b88635c58807d6214f204bbc0529e6ce2f9ddb",
+    "episode_id": "nav_48",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/4": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_4_final_res.json",
+    "sha256": "17189b960fed9dc0e00e72bb2c6fc79f30520ee28421646507096227eff3285d",
+    "episode_id": "nav_3",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/50": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_50_final_res.json",
+    "sha256": "90464f4160213ad7b46acadaf5067c6a9487d273555f29a0bfcd184d6bf9ee84",
+    "episode_id": "nav_49",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/51": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_51_final_res.json",
+    "sha256": "55dd5d91310d48a92775074a70f742edd0acd010f9290dd0ac72678465923f5e",
+    "episode_id": "nav_50",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/52": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_52_final_res.json",
+    "sha256": "cb59aecd7987b6dc953b4450ad3753f137fcbace7f2875adb1d17cf85f5f14ed",
+    "episode_id": "nav_51",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/53": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_53_final_res.json",
+    "sha256": "8bd291a2ac6aa982b1af81bf52e72a02864d2d1b6ea62d37f63582377aad6b5d",
+    "episode_id": "nav_52",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/54": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_54_final_res.json",
+    "sha256": "d33ec05cff3840cd525aa7198db8288725de498577ebda6794f45ac0280bc8fd",
+    "episode_id": "nav_53",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/55": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_55_final_res.json",
+    "sha256": "9e43f8259b9d0e5d09d22a721369b4d700b8f7ef18e4791313598e7791bea2c3",
+    "episode_id": "nav_54",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/56": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_56_final_res.json",
+    "sha256": "ac89b43bfb552c0ead145404a147068e2cf5fed18e11f294313108d1d2c705cd",
+    "episode_id": "nav_55",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/57": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_57_final_res.json",
+    "sha256": "61ac0a83b08f5090ecc987f6fd59c9579b21eb13bbb4fccc1708d764d0bc625a",
+    "episode_id": "nav_56",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/58": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_58_final_res.json",
+    "sha256": "b536929f347824196a0ea5e309fac17375810b8cc8a87a13439e2951b86105a2",
+    "episode_id": "nav_57",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/59": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_59_final_res.json",
+    "sha256": "42c60133578d8ada48598454a464904ed72e177657dbbb89f1b989c0191e2ca7",
+    "episode_id": "nav_58",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/5": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_5_final_res.json",
+    "sha256": "56f30b48df11b6931fe386f318de387c5e2431cbec8587f7199c4c7d54d50063",
+    "episode_id": "nav_4",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/60": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_60_final_res.json",
+    "sha256": "101873491c2416f58e5b973c989673a5a4a8be8d35019a696f81a3169731010a",
+    "episode_id": "nav_59",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/6": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_6_final_res.json",
+    "sha256": "1837948732377f52b5ca8c19f1f7d3468dbacbdcbb7225dc85c9172e3214c3e0",
+    "episode_id": "nav_5",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/7": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_7_final_res.json",
+    "sha256": "e6de33b556ec3732bee267b8df27199a36c2046728e4715a17a40233cafb0b77",
+    "episode_id": "nav_6",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/8": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_8_final_res.json",
+    "sha256": "3a6618cc166fa48d9cea2917bc2f58bcd867f058355b2f332e359186318c18c8",
+    "episode_id": "nav_7",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "base/9": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/base/results/episode_9_final_res.json",
+    "sha256": "a4ef00d2fcfbfc4959adfe42ed44b86a263fe4e0f33b4519bd3a8bcbfff9b1d9",
+    "episode_id": "nav_8",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609100954"
+  },
+  "common_sense/10": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_10_final_res.json",
+    "sha256": "1aef48d6442d058137a606b5955c92e15b1ccca769cb621a1ec668ed4728a888",
+    "episode_id": "nav_9",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/11": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_11_final_res.json",
+    "sha256": "1ac25e3b2fbe56783090683b290a7b0c475bfb042e42cef7ea132988c5e0f727",
+    "episode_id": "nav_10",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/12": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_12_final_res.json",
+    "sha256": "bd7265859aedee8ba5cd6f300e9d0124065db1b9bee25c86c89beaef74f5064f",
+    "episode_id": "nav_11",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/13": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_13_final_res.json",
+    "sha256": "d94f6c5833dbbf807ca77878d8af288967e6ed9e6688d855a98999ce69efa6fe",
+    "episode_id": "nav_12",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/14": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_14_final_res.json",
+    "sha256": "35c1ad363f8ea48fb843bbd32f543d2c40e64eee2612373d609239d3faa42aa2",
+    "episode_id": "nav_13",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/15": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_15_final_res.json",
+    "sha256": "0970c3ecc5ba96f98bb0fdf929e3508714d7c7948f161ecd36c15ddfa29b831a",
+    "episode_id": "nav_14",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/16": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_16_final_res.json",
+    "sha256": "327aafe0b93095078aeb32f933df268cbf97f3ec35bbd8fbd1b92c8b49cde4fa",
+    "episode_id": "nav_15",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/17": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_17_final_res.json",
+    "sha256": "95cca350b52a0d494dbcae010887afc5c916afed0e73af103d9837fb349c76fb",
+    "episode_id": "nav_16",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/18": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_18_final_res.json",
+    "sha256": "2e5210085a28ae94bd3e2cc3925408100bc2cb8b8200b6096c0865ce4f2bdc5d",
+    "episode_id": "nav_17",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/19": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_19_final_res.json",
+    "sha256": "b2e544c031b2db76289d8f65df1b745f949771018aa2aa15154e8f0e32374181",
+    "episode_id": "nav_18",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/1": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_1_final_res.json",
+    "sha256": "e1d397d92722301d1daa38e90f97c27c97262a76b1097e650765649df853b602",
+    "episode_id": "nav_0",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/20": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_20_final_res.json",
+    "sha256": "b2c3a72d51a884045a7f72e665b6f482fcb01663e6b0ec352b42a66e230774f9",
+    "episode_id": "nav_19",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/21": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_21_final_res.json",
+    "sha256": "6c32fd7841a0561bd84c8b06910bf04f7b0e76b87dc1bce81f79e63f63fff16e",
+    "episode_id": "nav_20",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/22": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_22_final_res.json",
+    "sha256": "96f7850daaca8a18fe85fe217f5b9519554237ba508c4ed31f5d7c42d4a606e1",
+    "episode_id": "nav_21",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/23": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_23_final_res.json",
+    "sha256": "edca3c887e77d8813741f9381c980465c9cbd03b7a961dbaa45e691876442ca0",
+    "episode_id": "nav_22",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/24": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_24_final_res.json",
+    "sha256": "c0f754a680611f04e7ecca505e0e90da93c41a2c4071f7cdf374e70abdc943f4",
+    "episode_id": "nav_23",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/25": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_25_final_res.json",
+    "sha256": "ee185d40cad1f0a07dddc3885b55668fa8a1e429f4efe047ca932d917a8fda0a",
+    "episode_id": "nav_24",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/26": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_26_final_res.json",
+    "sha256": "e1f293b5464da44bea0ba8d3cb41175360b1f03568c73c9bef0a24058e464ad0",
+    "episode_id": "nav_25",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/27": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_27_final_res.json",
+    "sha256": "bdb9c8e5a7387cb61556a071124fc7cce3847daf4265e9b577d694cbc3b57c46",
+    "episode_id": "nav_26",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/28": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_28_final_res.json",
+    "sha256": "65da2251b6835ac5ceeadadc8ec65565caa702b99812792fd64aa0be354ad6c4",
+    "episode_id": "nav_27",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/29": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_29_final_res.json",
+    "sha256": "74f13dd0f597e99a4a5ea9d876278172570ae3686f9dd05b4500a4c1b9b255a6",
+    "episode_id": "nav_28",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/2": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_2_final_res.json",
+    "sha256": "7a64b754bc54ea3f662e97ee6874ab99b5f8c061e59571224a62ab610e5029fb",
+    "episode_id": "nav_1",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/30": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_30_final_res.json",
+    "sha256": "db2161a9f886bed01ba38f9850ea5c969978de9537b466571b5060c4430a2721",
+    "episode_id": "nav_29",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/31": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_31_final_res.json",
+    "sha256": "069bf894a6d27f312ad3a121f3f39a2d516fa0ecac66e3620fe82978673bfa03",
+    "episode_id": "nav_30",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/32": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_32_final_res.json",
+    "sha256": "84dd207bd5984414afe1f8ada31422e7a6f40c92dd0ee58d981fede546511dfd",
+    "episode_id": "nav_31",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/33": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_33_final_res.json",
+    "sha256": "9f02905682086cee46efabc0aacff2536a363c1e323d757b662650365af2c488",
+    "episode_id": "nav_32",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/34": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_34_final_res.json",
+    "sha256": "c49d5d6d20d02d110ef8017f9827a7a9d267201e3c3cc8599d3d02f08a6a6a5b",
+    "episode_id": "nav_33",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/35": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_35_final_res.json",
+    "sha256": "1b11ddd4fdff28d8a2dc8e3f6cc380c5fca190691a9cf7accb02e2e70f93b7aa",
+    "episode_id": "nav_34",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/36": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_36_final_res.json",
+    "sha256": "75121f4e6af72f73901a544d7da675aaa4de1a6c1bf0157ea857ce108a841d02",
+    "episode_id": "nav_35",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/37": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_37_final_res.json",
+    "sha256": "dd153524bd4f95e97a1cce0dca26d302c854943d447c611b7deeb0644d83238f",
+    "episode_id": "nav_36",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/38": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_38_final_res.json",
+    "sha256": "40ed043bd78383bb2c0af2087369254b78b06fa45d6d1ffa8015718f6e47cf86",
+    "episode_id": "nav_37",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/39": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_39_final_res.json",
+    "sha256": "3a06c514feb6ec2047c5030a0832eb0c026f68a91f66022a8466163ff6ef1f91",
+    "episode_id": "nav_38",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/3": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_3_final_res.json",
+    "sha256": "0baf53f5eeca21e7b4b9915176b05e8531aa1a755ab5625dbb6a46bdc4ef07f7",
+    "episode_id": "nav_2",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/40": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_40_final_res.json",
+    "sha256": "2307be2104cd4a18967cf6bda0ea31ef80c25957d6c7b54db1cf39659ce86e76",
+    "episode_id": "nav_39",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/41": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_41_final_res.json",
+    "sha256": "4216c88c050207cfb7d5fb866b279c3d52ee84b70f92670ee0910079537b1c85",
+    "episode_id": "nav_40",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/42": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_42_final_res.json",
+    "sha256": "92573d2d0963bcdea3a65a4a61cb282a6194de759965f80db3bfe468e42139f4",
+    "episode_id": "nav_41",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/43": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_43_final_res.json",
+    "sha256": "0b2be76641de61b959867bc2ca12842cd8ef56e01432b4c27bd2b11559f3c226",
+    "episode_id": "nav_42",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/44": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_44_final_res.json",
+    "sha256": "400d241c8f03c9400656a5d90a12fc99a8a0a69b749a8bc4c8133fa4b84ea66e",
+    "episode_id": "nav_43",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/45": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_45_final_res.json",
+    "sha256": "e741730632a7b84d1f9590c3d881a37823a728a49fc9a8bceb016349eba3a8e8",
+    "episode_id": "nav_44",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/46": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_46_final_res.json",
+    "sha256": "6fa0e776f155efee0fd1430b90604d84e0fd519ae826614b20a03c4eb0d78a11",
+    "episode_id": "nav_45",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/47": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_47_final_res.json",
+    "sha256": "c8f2d3facdd14445bff76a934b0f4240cfc80c00ed4546f73c40920e7f9317a7",
+    "episode_id": "nav_46",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/48": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_48_final_res.json",
+    "sha256": "7419ce45783e3a6b33ca06e9a0788e82f4a35b3d687cc839d9b56eb848461fd2",
+    "episode_id": "nav_47",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/49": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_49_final_res.json",
+    "sha256": "ac47f6bf62b793af8d47ca7228ffec75fdc6f0ceee1abc9c72d593a6d6441eb8",
+    "episode_id": "nav_48",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/4": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_4_final_res.json",
+    "sha256": "0ae9d1c016806dd04ac38854cb289e0691220b40357ffadde9065bf1f0bf3adb",
+    "episode_id": "nav_3",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/50": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_50_final_res.json",
+    "sha256": "7c5dd5109214295e8c62f7632f39d0f9815dc7e781baec0df1aaee5fd2bd70e6",
+    "episode_id": "nav_49",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/51": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_51_final_res.json",
+    "sha256": "b57fa2df24ee30a392b8e1097daa9bfcdd628a5c10f01e1dcbbc6dd18d0b6731",
+    "episode_id": "nav_50",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/52": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_52_final_res.json",
+    "sha256": "98a8980521d424d755c1c597af5df79e40afcbbce364646b20af2553349ea42f",
+    "episode_id": "nav_51",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/53": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_53_final_res.json",
+    "sha256": "d496a70265ae6b6767ad2b7285c214e9d09c0f51a58605e470ff209cf831c5e4",
+    "episode_id": "nav_52",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/54": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_54_final_res.json",
+    "sha256": "71c51471161e5645c245fc135ee1b670e82603cdabd877b6a0b0b74be709cedf",
+    "episode_id": "nav_53",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/55": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_55_final_res.json",
+    "sha256": "5e3da31606d5cd4207fbec49e8f388e001cfc706a6f9fe2d9308367f1fae46d2",
+    "episode_id": "nav_54",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/56": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_56_final_res.json",
+    "sha256": "15a9ba597845c1ecbccdae2ce49f4da8c2336454879f66b7fd1d03efb4da6f92",
+    "episode_id": "nav_55",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/57": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_57_final_res.json",
+    "sha256": "490d3f83d81cf3f5b5d333d035d50667ec316b7844d4e09e2ef5f8f88ea4c4e7",
+    "episode_id": "nav_56",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/58": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_58_final_res.json",
+    "sha256": "97d4e762abc03f9901de84c387293c10e97d0ec9a4ec2d6df88eb32f25b7f26e",
+    "episode_id": "nav_57",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/59": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_59_final_res.json",
+    "sha256": "c54152a3afb6dee6edf3363d4b3876d01689903eb0ebcfe698509d64be3eb2f0",
+    "episode_id": "nav_58",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/5": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_5_final_res.json",
+    "sha256": "1ae77b3fbdf1e2ac32351875cc366de7302959fad8aa4acfda5641188274a340",
+    "episode_id": "nav_4",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/60": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_60_final_res.json",
+    "sha256": "b206ab7587f2f602277e19b15e0a6c4434b1464552c420a9ff4d36495156b228",
+    "episode_id": "nav_59",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/6": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_6_final_res.json",
+    "sha256": "b133298b9b2c62129aaa7eab618cfc62c7e99f0c1f9e5d620e7f57606b5c791f",
+    "episode_id": "nav_5",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/7": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_7_final_res.json",
+    "sha256": "f5ad875703785062d844f29632408865091f7b76bb94f6379c55642be92243bf",
+    "episode_id": "nav_6",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/8": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_8_final_res.json",
+    "sha256": "d687704049f6c4679e518c29a6d708173eca3d8458b07934cc5db98b5e3a4626",
+    "episode_id": "nav_7",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "common_sense/9": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/common_sense/results/episode_9_final_res.json",
+    "sha256": "3bdebf5b877692c9bac05e560c4f36c779c626b7a22c8b14cc7a29e0bf033b98",
+    "episode_id": "nav_8",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101018"
+  },
+  "complex_instruction/10": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_10_final_res.json",
+    "sha256": "b408aa7cd39031a980b14b6ee92b0d7e54383d2da5c775e1a03b916e457861c5",
+    "episode_id": "nav_9",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/11": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_11_final_res.json",
+    "sha256": "1ed5f1ac49224e2633a0754212418b0ca6f61894a7a11ea98bfec83702781fc8",
+    "episode_id": "nav_10",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/12": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_12_final_res.json",
+    "sha256": "394ac151c1b89e92e6aae71e6ea0e54649dccd785b86786daf9dbe385d4db075",
+    "episode_id": "nav_11",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/13": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_13_final_res.json",
+    "sha256": "fb1875069f6732fbca59d0a0f84808e0eedef17051d20111cfa1d0233faa01bc",
+    "episode_id": "nav_12",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/14": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_14_final_res.json",
+    "sha256": "7e78074fd709ead39544664945eb4c988875d3ddddc9b471bba4c62861569435",
+    "episode_id": "nav_13",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/15": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_15_final_res.json",
+    "sha256": "12312b528eab4b4b195fc48d8458ef38b750616e411a0e25bd253e8b6193f9df",
+    "episode_id": "nav_14",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/16": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_16_final_res.json",
+    "sha256": "430cc7b281111843cde5e914ca8cb5e5f33f9747a2a06fb52abaf1beaf4915c9",
+    "episode_id": "nav_15",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/17": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_17_final_res.json",
+    "sha256": "792a2b336af11e6ac82ef6e4eaaf1ef46d3a4e1852d45af21f0a1f713e8ee601",
+    "episode_id": "nav_16",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/18": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_18_final_res.json",
+    "sha256": "d8dc5ff979c31f572d8f2b1f0d04e6670f4a59613d80ab0fd86ac205424f2608",
+    "episode_id": "nav_17",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/19": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_19_final_res.json",
+    "sha256": "211e88fc5a045de62c0c7048284eec9b650bad96758cfc3c181a71dfee115736",
+    "episode_id": "nav_18",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/1": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_1_final_res.json",
+    "sha256": "35239366eb192868c4a6cdfc9bb8e6c36a510eef74cf5e5e8575ccb76c2f11f5",
+    "episode_id": "nav_0",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/20": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_20_final_res.json",
+    "sha256": "e2697e7be1dc8ce5aed9382c857f74e1f570593d7af16ebdfe76ec0c35cada07",
+    "episode_id": "nav_19",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/21": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_21_final_res.json",
+    "sha256": "8fba17f21420095214cdaa04ffd5121048a9e827e120816a0336605b4d3d7b06",
+    "episode_id": "nav_20",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/22": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_22_final_res.json",
+    "sha256": "01f4dc82eb4b55da7c1bde712d630c15c74babbb8442195e69705b57eb3db46a",
+    "episode_id": "nav_21",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/23": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_23_final_res.json",
+    "sha256": "7918996791b2970874ac47c6117056330aa8f74e0d7948b702178461acdb1e5a",
+    "episode_id": "nav_22",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/24": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_24_final_res.json",
+    "sha256": "bb2bf6d360f2339d03ce7457c6718e00abd7f08290ad7b9e3f872b5d7ed5030b",
+    "episode_id": "nav_23",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/25": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_25_final_res.json",
+    "sha256": "2d5627c9d230add3703aab7c9847acaa9820bcf683b9a73a10294f5c28de06ee",
+    "episode_id": "nav_24",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/26": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_26_final_res.json",
+    "sha256": "cfdc3e973ed01f88d977040e7f330693633026c2876e37938fdd4a186f08d3e7",
+    "episode_id": "nav_25",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/27": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_27_final_res.json",
+    "sha256": "d83c1ab443fb52e45dccbc9172fd577393764a4c1161683f01b88590138044b4",
+    "episode_id": "nav_26",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/28": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_28_final_res.json",
+    "sha256": "9158949ff6dd62251cf3fd3746d06ed6c8e5192f6d8e253c098b18939c119614",
+    "episode_id": "nav_27",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/29": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_29_final_res.json",
+    "sha256": "b165b8621fc2cab5fce9d2b0a5eea13f2780c938b9451b7422c36ba15d6254db",
+    "episode_id": "nav_28",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/2": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_2_final_res.json",
+    "sha256": "94823f6a1b310e2fb7eee13766524481a44c366bbad03c0f0b0cd492710881a1",
+    "episode_id": "nav_1",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/30": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_30_final_res.json",
+    "sha256": "25c023a8dc7ebf5ae1829113159ddeb103985227c1f8f6be2eacc7e57af73a60",
+    "episode_id": "nav_29",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/31": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_31_final_res.json",
+    "sha256": "d7a1ebc6a1b4bb3829bcfbf355fe27f4bbb47dc390a855ed9489c81639bf753e",
+    "episode_id": "nav_30",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/32": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_32_final_res.json",
+    "sha256": "1dc3548704af23bccdf9287da66d5de72d9790318325a363e499faaa5186a57f",
+    "episode_id": "nav_31",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/33": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_33_final_res.json",
+    "sha256": "15a91930a458f02da742de27001bbc86ee630d2e56e6a8eddd2bca29ba26e321",
+    "episode_id": "nav_32",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/34": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_34_final_res.json",
+    "sha256": "23b85297a0d8bec33d3cfe46883057c0b4d411121aa0c5e5530f756fe8ae4f59",
+    "episode_id": "nav_33",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/35": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_35_final_res.json",
+    "sha256": "d5f98a63859b48c5ee2c640dd0ac207225c88552e65432412c82b72dd5f32e25",
+    "episode_id": "nav_34",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/36": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_36_final_res.json",
+    "sha256": "ab2aed5e138efdbf8da1cd38e53ba83e4ee0017f5caffc8afabfc4ff2e332bcd",
+    "episode_id": "nav_35",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/37": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_37_final_res.json",
+    "sha256": "9c6747e9689dd25c0e07933c10060354bbb5aa496cb1a4d5de4b551a42ece115",
+    "episode_id": "nav_36",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/38": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_38_final_res.json",
+    "sha256": "a40983c82203ffa1441ca9db01f6857b601f7456fb0102088e80421bf7c9dcb9",
+    "episode_id": "nav_37",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/39": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_39_final_res.json",
+    "sha256": "96f4b42cbe20e5c6fa2eab2f4adbc2f3fa3775ae01a36d2b424b1555cff48b2d",
+    "episode_id": "nav_38",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/3": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_3_final_res.json",
+    "sha256": "e93b0d09334fb4a37cd91ef4b3ea7e5f28cc5d2ea85e5f67dd4c20d3628d4da5",
+    "episode_id": "nav_2",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/40": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_40_final_res.json",
+    "sha256": "cc86071f993d0d2b3509ca30cd5f0ca435ba508b28a7c5667ee3146696d02f75",
+    "episode_id": "nav_39",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/41": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_41_final_res.json",
+    "sha256": "c103fc6333e6c67e4d642e7d35ba2edf9d05072b032f3f4a6f2ab838c4898b5b",
+    "episode_id": "nav_40",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/42": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_42_final_res.json",
+    "sha256": "8a161fa7bf87d93bac6af5510e0d370fe9c8e604146578b1f9e0a0a1fea21212",
+    "episode_id": "nav_41",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/43": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_43_final_res.json",
+    "sha256": "a4916f596f59e25ce63ae2bc7fb9b061f5d53fbfebb17ef8adf8afeb85935afa",
+    "episode_id": "nav_42",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/44": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_44_final_res.json",
+    "sha256": "9869ed722c7d5c227972a74758b68acb2cf0e4ccdaa66186a0d74a3121a8a0b0",
+    "episode_id": "nav_43",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/45": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_45_final_res.json",
+    "sha256": "e07e83abc8542cbc259bca0bd73c30639032abfecac10f474f62c5be32f8ec70",
+    "episode_id": "nav_44",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/46": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_46_final_res.json",
+    "sha256": "bcc234477270886abf76b596fd7da0cb4cd057787664e87065c066812aed4b82",
+    "episode_id": "nav_45",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/47": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_47_final_res.json",
+    "sha256": "2ff129b5045733f5a7791c26660ef091be76d4d01e9daf1b38c1cd21bcba2208",
+    "episode_id": "nav_46",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/48": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_48_final_res.json",
+    "sha256": "aa84c88ec1a531dfc097f12830448c2d0907e2e1bd687ea983fbbd46d01fef53",
+    "episode_id": "nav_47",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/49": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_49_final_res.json",
+    "sha256": "a0dbda83b8b6738f17ebcb650989278f3ca8ce9ecba1f72c1a9da390a28de8bd",
+    "episode_id": "nav_48",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/4": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_4_final_res.json",
+    "sha256": "1bade0b517d202a20ac64dacead89a5ec7e786f5795bfe1a63fcaf69716b5f8a",
+    "episode_id": "nav_3",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/50": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_50_final_res.json",
+    "sha256": "cca0643c0c3b9b9edef2e61d9faa140b41c9df60535b6cb374271e2d699e3f00",
+    "episode_id": "nav_49",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/51": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_51_final_res.json",
+    "sha256": "4d25bd25f3e02e50149ec5a31857f6b6c511e354f1b815abaa74f344a7fd1b16",
+    "episode_id": "nav_50",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/52": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_52_final_res.json",
+    "sha256": "79ee9efc5742b05bd3321dfd0fc78d6ffa98a2ba9b6cfc398af85b20d9975d3e",
+    "episode_id": "nav_51",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/53": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_53_final_res.json",
+    "sha256": "19478a7aed88011e3444bc29ec99d46de0b12a28efabd3b86a1f789dc1082a15",
+    "episode_id": "nav_52",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/54": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_54_final_res.json",
+    "sha256": "50092f37b46bc51653699c9b8945ef2863d91314cad8114669466f191b4ef05f",
+    "episode_id": "nav_53",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/55": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_55_final_res.json",
+    "sha256": "6d95e5567e9afbcb8449291b5de44f5350dc38e631b6c7701e1d9b59f5375294",
+    "episode_id": "nav_54",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/56": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_56_final_res.json",
+    "sha256": "8aa6180806e9b9133e1b72e8227b633a3f294282794f494a8e3653fe8055b893",
+    "episode_id": "nav_55",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/57": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_57_final_res.json",
+    "sha256": "1862ded4b01ec66f6004e422a2b2ce638d3f6aac323e2a3e407fd719d77f1563",
+    "episode_id": "nav_56",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/58": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_58_final_res.json",
+    "sha256": "3d21734a05a71cb652bf501ffaf10857e86fdcdca2dbcfe4da615b42ad66c2d9",
+    "episode_id": "nav_57",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/59": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_59_final_res.json",
+    "sha256": "6e5ac4b0c947f7ca34c2d7098631220c3edff73ce368b346f324222f3351b214",
+    "episode_id": "nav_58",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/5": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_5_final_res.json",
+    "sha256": "c895c18823b1cd754d84172d08647ba780531991f95574656854bbec3c813379",
+    "episode_id": "nav_4",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/60": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_60_final_res.json",
+    "sha256": "e2f29c29a9692929d979b1e4f049f7553c6f246a9ad00c73d8411b4315d0a9ca",
+    "episode_id": "nav_59",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/6": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_6_final_res.json",
+    "sha256": "33d85d9d12863f16bc879bdec2ca437e2adff25c0de462406bf486927c147fc9",
+    "episode_id": "nav_5",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/7": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_7_final_res.json",
+    "sha256": "30acd4b3b482721861a8efbe25c3f42f03253523c3beaa52062ea69fd5b10740",
+    "episode_id": "nav_6",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/8": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_8_final_res.json",
+    "sha256": "22deef67ba0f5facf99273915ce7cbabbd624b60c77d9bc3cb52526668e390c7",
+    "episode_id": "nav_7",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "complex_instruction/9": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/complex_instruction/results/episode_9_final_res.json",
+    "sha256": "8cfcda8c3dfd09a2432ef027dd339a88e16fb0704a66dcc21072ee8427f22f97",
+    "episode_id": "nav_8",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101041"
+  },
+  "visual_appearance/10": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_10_final_res.json",
+    "sha256": "fe22cb0a64938ce2af7684632834c990da3c2016e5dc4e0feb09e6de8eed983b",
+    "episode_id": "nav_9",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/11": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_11_final_res.json",
+    "sha256": "e2f8207d5fc47fbbc620e5d31db4d2a52cb16241bf4633b902efb5738eef3050",
+    "episode_id": "nav_10",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/12": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_12_final_res.json",
+    "sha256": "ff424574a20b9d65927b87b60a7deac1eb96e6d3a2c1fc8a2c18cc2708446a08",
+    "episode_id": "nav_11",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/13": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_13_final_res.json",
+    "sha256": "abf3aae05df948e891847d794f2c3065a15864741b5fb2112dd759d9534b2076",
+    "episode_id": "nav_12",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/14": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_14_final_res.json",
+    "sha256": "0062ebd2f98040581ea74dc76b5b36019b1bcdda4dd523a61e7ec6d110e58c1c",
+    "episode_id": "nav_13",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/15": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_15_final_res.json",
+    "sha256": "cb406a68b0651992a378b35ad1994c89b85645587433067f027276e0b6d65630",
+    "episode_id": "nav_14",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/16": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_16_final_res.json",
+    "sha256": "d01872432b06fb430180941be33fe787695b254de0f185212c38f3036e564043",
+    "episode_id": "nav_15",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/17": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_17_final_res.json",
+    "sha256": "b1d216c5ca72343c255cb1fd8382006b15538ac01fa8d0da22d9fa5eab6b9d83",
+    "episode_id": "nav_16",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/18": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_18_final_res.json",
+    "sha256": "98a8c90f44e54abaab929a67cb8bfb012b4b593730a998834b85d2bbb7bdc40a",
+    "episode_id": "nav_17",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/19": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_19_final_res.json",
+    "sha256": "25b98e6fca46e793d4a3a9e0a625524c01733e844e4332bc0202d25a29e39a80",
+    "episode_id": "nav_18",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/1": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_1_final_res.json",
+    "sha256": "d7517e2c4e6dc948af18337cdc999188ca0cce1b4d146a389b7a284aca60f305",
+    "episode_id": "nav_0",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/20": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_20_final_res.json",
+    "sha256": "64d1880ae4bdd3ded3e6ef6c9b38ecad966684674d3c3130b07d4f6120837a02",
+    "episode_id": "nav_19",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/21": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_21_final_res.json",
+    "sha256": "072a4951e58c9a48eeac17c2410915d36fc3885f23c732fe0534c4c5b0dc73d6",
+    "episode_id": "nav_20",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/22": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_22_final_res.json",
+    "sha256": "a695a7685ec400d095ad0296c6b7944f4e5f82bb8d4dd34739fac9949032879a",
+    "episode_id": "nav_21",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/23": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_23_final_res.json",
+    "sha256": "e8858a11969f1b8bc7af6b2b446f85c6a25f08bc4a8974cdc5d10b75914e09f6",
+    "episode_id": "nav_22",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/24": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_24_final_res.json",
+    "sha256": "c29dd025e3c70ba18dac306dc0e458d3560842513d66a24b8eabe0c90c871c66",
+    "episode_id": "nav_23",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/25": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_25_final_res.json",
+    "sha256": "627576e91edf20c9ca87ab2d3a5a664c877462a8aa7cf049371fa55ca4591baa",
+    "episode_id": "nav_24",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/26": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_26_final_res.json",
+    "sha256": "e1a1ddd75050da0069e4e293a71310decef3fcea9ebf25c1de14aafff300ea11",
+    "episode_id": "nav_25",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/27": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_27_final_res.json",
+    "sha256": "92568a5e92681eaea4c82f734b4ca3518b2fad54b060937cfe615aaaf3728945",
+    "episode_id": "nav_26",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/28": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_28_final_res.json",
+    "sha256": "055ad7a85b8d3425d47c8aee5edf11a96c9a1853854786b038e5de34eab40271",
+    "episode_id": "nav_27",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/29": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_29_final_res.json",
+    "sha256": "0825a58430a80f63d46b3da25f9e46bd968c2800b5e6784d64affd4813155485",
+    "episode_id": "nav_28",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/2": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_2_final_res.json",
+    "sha256": "01bbb46e508f86db6cc7be745800739cdde0de526366a3440bfc325a6889beb2",
+    "episode_id": "nav_1",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/30": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_30_final_res.json",
+    "sha256": "de73fa88f2067d3bcd50791b4e9928086a3993c9b5e15c8d08df0eac6863fd41",
+    "episode_id": "nav_29",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/31": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_31_final_res.json",
+    "sha256": "bc494dbe103b5a4fee53499f1d3c96c4a601b2692a3132e1f8f46fb8333dde19",
+    "episode_id": "nav_30",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/32": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_32_final_res.json",
+    "sha256": "022be5ceb9c2182051fe12aa29cfbe9db4baa8804d7ffb7836499b5e0408d0bb",
+    "episode_id": "nav_31",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/33": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_33_final_res.json",
+    "sha256": "ef15fbeff84e31b4ebbe7e62bd7bf7be16100f9aea2600df57089e8156c4c5fc",
+    "episode_id": "nav_32",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/34": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_34_final_res.json",
+    "sha256": "a8080c7b7176e7df2a52abfd7d791fed5a8a78367bf191e8715047b7c87de038",
+    "episode_id": "nav_33",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/35": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_35_final_res.json",
+    "sha256": "90796c1a45c5927b53c799007384f1ecc3333518ed34fca97f6062b03aebe4d2",
+    "episode_id": "nav_34",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/36": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_36_final_res.json",
+    "sha256": "d9cb1fc0afd244b20dc5f875704f8967596256e1bd80e0c688707877e1aada6a",
+    "episode_id": "nav_35",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/37": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_37_final_res.json",
+    "sha256": "a87dc9122ae76b270d40942681d8a83b048bc29fb7da4a04d9a6e92d4db74c58",
+    "episode_id": "nav_36",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/38": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_38_final_res.json",
+    "sha256": "aba55d08e72b3dab58ea393a93e8a73d5f616a7c042f3ea5147e363ea807b836",
+    "episode_id": "nav_37",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/39": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_39_final_res.json",
+    "sha256": "ae8e61a45e142b714f219c1ca80feaea098fc53cfd7041f092c92367003f27af",
+    "episode_id": "nav_38",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/3": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_3_final_res.json",
+    "sha256": "63853999ee130bbb5b1d8a3b19f8b704acffbd14c56d03175318a566797a8f0c",
+    "episode_id": "nav_2",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/40": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_40_final_res.json",
+    "sha256": "f163d8526117be31e896eb4a590e7c1464202e0c1a0a50a01cdb60102dca0e3d",
+    "episode_id": "nav_39",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/41": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_41_final_res.json",
+    "sha256": "3e02e53b3c52e71aafc79dae884e7bf885321cbaf48d95fddb11ca35e924989e",
+    "episode_id": "nav_40",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/42": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_42_final_res.json",
+    "sha256": "abf515ed17eba8f1cd7a69bc286e095cb5daf8238f4e85f38e3da1ac74736067",
+    "episode_id": "nav_41",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/43": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_43_final_res.json",
+    "sha256": "10b74a12db6e66d90a5641d80cd8b84172ff039530ff49b9d2bc35ed1192c3f5",
+    "episode_id": "nav_42",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/44": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_44_final_res.json",
+    "sha256": "763d909a0562d33ea805701b45a2ccfa5adbb6e053aecc1b91b0cc7b37ed3429",
+    "episode_id": "nav_43",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/45": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_45_final_res.json",
+    "sha256": "38be8a19e815b2510549f65a7f8fc5533d4365b1fe775ce8ac98222b3fec2d2c",
+    "episode_id": "nav_44",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/46": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_46_final_res.json",
+    "sha256": "a0913ee57ac5cc321fb8e7b089e116ec155c6004202ee31323553ede3aff428b",
+    "episode_id": "nav_45",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/47": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_47_final_res.json",
+    "sha256": "437ea95d02b53c6e370436a85b4450379a2dd754d957813a41dba4b3b42e13d8",
+    "episode_id": "nav_46",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/48": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_48_final_res.json",
+    "sha256": "0a3ee7a28e6f4b097517541c5c4b2b1fe366530c01ccf3d0d8a5a69cd54bac11",
+    "episode_id": "nav_47",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/49": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_49_final_res.json",
+    "sha256": "3b1a0bcb73e86afe9d6ea8eaff9800012f7f487438c3a35c1c159618ee26bf9d",
+    "episode_id": "nav_48",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/4": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_4_final_res.json",
+    "sha256": "cc3609aac50752765a63ba2e5a6a3b6bf7555e9cec3dda95a73c076f5f97ee4f",
+    "episode_id": "nav_3",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/50": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_50_final_res.json",
+    "sha256": "b9e20b13688c44ac5d9da4eeaf31ef526eee38a83b013d4db1a2819e7cbfa373",
+    "episode_id": "nav_49",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/51": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_51_final_res.json",
+    "sha256": "f7c9c01fc2914e69a7299d17f5b2bf2e72ad6ec5d5e002eaf45cda7058092d5d",
+    "episode_id": "nav_50",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/52": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_52_final_res.json",
+    "sha256": "9026b2d3ff29ef8380458c210bef431be61b05240be5f919a57baa56d37adad9",
+    "episode_id": "nav_51",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/53": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_53_final_res.json",
+    "sha256": "47d59f7bc76d1fa49b97715c5c78fbf7d26ce2d8930d7864f1f3d5a7c0ff8ee1",
+    "episode_id": "nav_52",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/54": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_54_final_res.json",
+    "sha256": "4c50d8cacfc00b1811925e45838c004e12e6916d87b9f345faf3f97f9f13d279",
+    "episode_id": "nav_53",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/55": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_55_final_res.json",
+    "sha256": "4b2feb7bc6732d619e149d61e63b35e98681f12e3dbb56072739f8daf56af297",
+    "episode_id": "nav_54",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/56": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_56_final_res.json",
+    "sha256": "80fdb7f1711b107c05508b7a87befa2b3945cf16e31a8743702b34eda4cc5979",
+    "episode_id": "nav_55",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/57": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_57_final_res.json",
+    "sha256": "2735691529f39eb3a0563a9d608c44944486eb21b319b585c7eed4aed065e725",
+    "episode_id": "nav_56",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/58": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_58_final_res.json",
+    "sha256": "b02764f7628534f69e001e5792c50f3849249d1e8a48548177633e8def238827",
+    "episode_id": "nav_57",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/59": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_59_final_res.json",
+    "sha256": "b32c52df317fee14a0398578a8cb81b3657878c9219121165d1168b099561b27",
+    "episode_id": "nav_58",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/5": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_5_final_res.json",
+    "sha256": "be02dbb73411b72a378ec0d718dfd35e2bdc69d319ac46d007e88028c7e1d7de",
+    "episode_id": "nav_4",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/60": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_60_final_res.json",
+    "sha256": "609ae6f6af23976f810b2c9e91acca324fc8158476b41a7188e5bcce6a8f0249",
+    "episode_id": "nav_59",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/6": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_6_final_res.json",
+    "sha256": "91b6176879777d1dd8c217ced23a8f62f6d1efdc4993f46723d90ecc95205c28",
+    "episode_id": "nav_5",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/7": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_7_final_res.json",
+    "sha256": "a8e13d18dc3c4b25f538d4611161672b3fab14b78434158a82eba406cfab9e93",
+    "episode_id": "nav_6",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/8": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_8_final_res.json",
+    "sha256": "73beb6a82eb272f9f02fe0629adebb429bfc6bca1ba491a61b32db3caaa0459a",
+    "episode_id": "nav_7",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "visual_appearance/9": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/visual_appearance/results/episode_9_final_res.json",
+    "sha256": "ce2aafb0a00c5bd6b9dd9016902550cfaa8b5a96c30608a39452622a356cf4fe",
+    "episode_id": "nav_8",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101103"
+  },
+  "long_horizon/10": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_10_final_res.json",
+    "sha256": "20fbb6baf60519174a1e70cfa0c0cbc99056a634b11c62b46181c875247e27b7",
+    "episode_id": "nav_9",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/11": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_11_final_res.json",
+    "sha256": "e48d890d2e069d91df84beae90bc09dca08482949f1e5924c918bf12108accc5",
+    "episode_id": "nav_10",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/12": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_12_final_res.json",
+    "sha256": "e769a73c534d0569521d89b172d0c9c5d43ff958265e717efbff5e4c89756e16",
+    "episode_id": "nav_11",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/13": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_13_final_res.json",
+    "sha256": "32a39611d7f4621746ebb92f69e6e8ec6e4268032b17a073992e37b4234727cf",
+    "episode_id": "nav_12",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/14": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_14_final_res.json",
+    "sha256": "82ed00b5f2136c67cff68f983717ecd234819b799e7eb156136f6351c7d87660",
+    "episode_id": "nav_13",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/15": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_15_final_res.json",
+    "sha256": "f7804e3a1247276f6813133f2feb1eb18c9ab2d436afb1c8b6577138f00adb94",
+    "episode_id": "nav_14",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/16": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_16_final_res.json",
+    "sha256": "d539e37f0bbb1e0dce44ec6c4d822d73daa0dca1dc62581273abe6b020e2c086",
+    "episode_id": "nav_15",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/17": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_17_final_res.json",
+    "sha256": "988b6f67d209d968385244318123e4d3e8ab6a247d4b2d2e017db317673a0153",
+    "episode_id": "nav_16",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/18": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_18_final_res.json",
+    "sha256": "670f2fa51a9fea18bbc475cf6766f301cfe45a9ed04b9a6e84d04f22d221b7ae",
+    "episode_id": "nav_17",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/19": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_19_final_res.json",
+    "sha256": "1780a8170670c5ca04657a5787de0d96bd9d841b6af0a6913b33c90059153512",
+    "episode_id": "nav_18",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/1": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_1_final_res.json",
+    "sha256": "5616567e0a94efd7576e1ccfef6a961f6077c8a5315906a344b63b8caec0c1cb",
+    "episode_id": "nav_0",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/20": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_20_final_res.json",
+    "sha256": "9076aef1f6fe8ebf8fcdfb476b424dd5003b687c7069bddf0f092f69d6faaf20",
+    "episode_id": "nav_19",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/21": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_21_final_res.json",
+    "sha256": "4d75e39fa485230a6c0e98cb14a9d762f817967883a215cdd5ea3a9bdb7480e7",
+    "episode_id": "nav_20",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/22": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_22_final_res.json",
+    "sha256": "66228f61c891733dcbe719e616a04ed85b9798f0698c7f9fbb5c77bb256659ad",
+    "episode_id": "nav_21",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/23": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_23_final_res.json",
+    "sha256": "670c2675edc84b2840aa86896de19f4b1317a5ebd7cf8666674d188dec95f08e",
+    "episode_id": "nav_22",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/24": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_24_final_res.json",
+    "sha256": "0cd050117fe9febf7004f9115e09c24222c5bd7a45a9afa51e360e4b89962ab4",
+    "episode_id": "nav_23",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/25": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_25_final_res.json",
+    "sha256": "8b7868868fa69efaa71e20e75f3ae99ea3ee117332427e62c04702c375ad5f10",
+    "episode_id": "nav_24",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/26": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_26_final_res.json",
+    "sha256": "ab41aba0812146068cfabc4fa99fa471804fd597ca3ecda1cef4889bd1051127",
+    "episode_id": "nav_25",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/27": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_27_final_res.json",
+    "sha256": "514d8243e49d55e6a5314c8cad0b199db3c948f02969867ff32c4df24da22d64",
+    "episode_id": "nav_26",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/28": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_28_final_res.json",
+    "sha256": "d7911ef9a8670425809191d0e49c432cbd2ccb86e6871c9824849b781c4d4107",
+    "episode_id": "nav_27",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/29": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_29_final_res.json",
+    "sha256": "d7c5da42490662b13a80a3115cf53335a7a6162b3898dcbd4b189213133cbaac",
+    "episode_id": "nav_28",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/2": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_2_final_res.json",
+    "sha256": "9471cf0fac6e2878e55d4a57914baa2e4149cab99f8b8fbeb710e964fa646271",
+    "episode_id": "nav_1",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/30": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_30_final_res.json",
+    "sha256": "c257bcb322de86591fb6600a1c21812d09e99704f36a1aa2951e6b6ab4ccb94b",
+    "episode_id": "nav_29",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/31": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_31_final_res.json",
+    "sha256": "35c6877d775a59cd8440e977c62865ffde50252e0147eb953c923261be194630",
+    "episode_id": "nav_30",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/32": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_32_final_res.json",
+    "sha256": "9408c6762daaddd7457a3c5a9a89e2e7371d69b5629bdd8d1e0f04853f824379",
+    "episode_id": "nav_31",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/33": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_33_final_res.json",
+    "sha256": "e36cf2724b9fb0a3bfef05bef9758ca1bb55f561d4b3a4a772643d53bd7f2804",
+    "episode_id": "nav_32",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/34": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_34_final_res.json",
+    "sha256": "3ff13d49288b370dee8485191e8072ea942acee7b864322797f52d55a7eab86c",
+    "episode_id": "nav_33",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/35": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_35_final_res.json",
+    "sha256": "e2052731d4ad048d870d9de74eb9240d9a1d50101123987891a93f7d4d60d501",
+    "episode_id": "nav_34",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/36": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_36_final_res.json",
+    "sha256": "159faf042db8207eff47e1c47936fea1c02e047f01ebcdfb5cefff24f3d6c655",
+    "episode_id": "nav_35",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/37": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_37_final_res.json",
+    "sha256": "ef1efe3b0e2e449d447df7e5901dbbff035ba1feeeb3abeaf74c365fb42db5b7",
+    "episode_id": "nav_36",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/38": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_38_final_res.json",
+    "sha256": "245ac64d49133b8764f5377a4ad302ca1c44f84625b5fbcddd2e5fd16f6a9d91",
+    "episode_id": "nav_37",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/39": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_39_final_res.json",
+    "sha256": "e16a138269191934cb2768aa6d18da5ddbe4a828fd87334a2855c73c88dcc030",
+    "episode_id": "nav_38",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/3": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_3_final_res.json",
+    "sha256": "fbdee4653f8f4c989e4c20ed896eaeb330d3be01f847917f3e1c7189e638efd3",
+    "episode_id": "nav_2",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/40": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_40_final_res.json",
+    "sha256": "78b7d8c6dcc7c0f90c033eaa78aac0e73f921a52b3cbc14823c8b29e4197f605",
+    "episode_id": "nav_39",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/41": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_41_final_res.json",
+    "sha256": "6db84a78eac45f3a0bab3592dea1dfbe9e17faa8e8183335d5046f373b180342",
+    "episode_id": "nav_40",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/42": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_42_final_res.json",
+    "sha256": "0c1c0dd2df874b54fc5b4cdcc2232cda132ff211457d396a3f8ee2d7e0ae6a52",
+    "episode_id": "nav_41",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/43": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_43_final_res.json",
+    "sha256": "b51fce379bb81c37123f940d3e0d92793e1ca4c0f37fd36cd480d6ca879a0921",
+    "episode_id": "nav_42",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/44": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_44_final_res.json",
+    "sha256": "90c9fdb6db92085f0c2a3b39f7636ee2cb332353c9a7b2d7a96e679768b3b8e9",
+    "episode_id": "nav_43",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/45": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_45_final_res.json",
+    "sha256": "84a18c0fd57b3879b52da43bf964083bdc0a9f868abd4daf4663bd3693ae0667",
+    "episode_id": "nav_44",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/46": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_46_final_res.json",
+    "sha256": "8b15d0eed1a897fd114a1b072c0f73ffc1fd6e7c918296797ed8ab52408745f6",
+    "episode_id": "nav_45",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/47": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_47_final_res.json",
+    "sha256": "76c0fed66bf56063024a479e794f7352108daec32f96a64036ac1dc515554f56",
+    "episode_id": "nav_46",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/48": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_48_final_res.json",
+    "sha256": "02d53dbb0a63725cee5cbe6cdffe4a8981096bf4f4e00c31a8ab0f7ad0dbecb9",
+    "episode_id": "nav_47",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/49": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_49_final_res.json",
+    "sha256": "dfa9fe44e089f7f6315ae7a009234f02ceeee3810477f65dbe01c81f7891013c",
+    "episode_id": "nav_48",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/4": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_4_final_res.json",
+    "sha256": "163f9bbacf3e906dd0a698bcc1c6894f2c7232d07e9d8f829d0132959be4fcd6",
+    "episode_id": "nav_3",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/50": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_50_final_res.json",
+    "sha256": "66335a88262fcbfc9f2d5eb0dd7faf35dc4c96f59a2bdca92547b94fc2814719",
+    "episode_id": "nav_49",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/51": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_51_final_res.json",
+    "sha256": "bc49153bc0f308a0507825e7e1d920ad437d208b5a9b3e3d929ee671eceb4f6a",
+    "episode_id": "nav_50",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/52": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_52_final_res.json",
+    "sha256": "6d6c412675cd7802e7d31ba1cddabf663d6611691fc7199391da1a4d4de9554f",
+    "episode_id": "nav_51",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/53": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_53_final_res.json",
+    "sha256": "7f359ea45ae73a1257cd639e5269c7f6bb9c725df3ba6cb2240330d7028bffa4",
+    "episode_id": "nav_52",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/54": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_54_final_res.json",
+    "sha256": "7896047979d86645585e814360192f7337ff7377e1fadd4eb8559e732b93a50b",
+    "episode_id": "nav_53",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/55": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_55_final_res.json",
+    "sha256": "419d953cc7e5aa17cc6967ab86fa8370438eb019de2a42075511369376a5328e",
+    "episode_id": "nav_54",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/56": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_56_final_res.json",
+    "sha256": "ded337a8cd6096c43dd1259201adc433a5b5f139b6d65d83fdfa21474d3dc038",
+    "episode_id": "nav_55",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/57": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_57_final_res.json",
+    "sha256": "d38fd5b4e3968cacf1d143a71af00cea361ae5c95749fc2601bf071d31fe7c08",
+    "episode_id": "nav_56",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/58": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_58_final_res.json",
+    "sha256": "ece1a1278f4d49a781e8c4ab21f7db7b0034de9fc95325616bb99da5b200c490",
+    "episode_id": "nav_57",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/59": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_59_final_res.json",
+    "sha256": "47b32939322f119b80f1d7ff94e626d9cc63eca85d403c17034f706bebac6ed9",
+    "episode_id": "nav_58",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/5": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_5_final_res.json",
+    "sha256": "e9c79daae38577eae978d4551283aa8e67f373735f1021f154fa73453f223680",
+    "episode_id": "nav_4",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/60": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_60_final_res.json",
+    "sha256": "462582cf18a5cb6828322d1abf860f47ef385ba2b20e033c0512ad867a6c8b1d",
+    "episode_id": "nav_59",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/6": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_6_final_res.json",
+    "sha256": "ba6aa0a20a5d30091b3c5ea4cc9cbc6ac7c89bc8d2f21cdf455b560bbcc79d84",
+    "episode_id": "nav_5",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/7": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_7_final_res.json",
+    "sha256": "e1614f5be679a212a37f7178c3aa8faf0c32b6c10a242145f6d25f24cca03f97",
+    "episode_id": "nav_6",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/8": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_8_final_res.json",
+    "sha256": "721888ce1a38d0f7edf8096152e817c08ad4c11aea51057b02930cd779ce4c0e",
+    "episode_id": "nav_7",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  },
+  "long_horizon/9": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/long_horizon/results/episode_9_final_res.json",
+    "sha256": "d28f090cd9ab391798b121061b0ffd45aaed990f7700c3f72bac957bffebd257",
+    "episode_id": "nav_8",
+    "schema_compatibility": "closed_objects_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full/_sessions/run_202609101128"
+  }
+}

@@ -1,0 +1,1 @@
+{"reward": 0.25, "num_invalid_actions": 3, "empty_plan": 1, "instruction": "Move a hammer from the brown table to the right receptacle of the left counter.", "task_success": 0, "task_progress": 0, "subgoal_reward": 0, "num_steps": 10, "planner_steps": 4, "planner_output_error": 0, "num_invalid_action_ratio": 0.3, "episode_elapsed_seconds": 16.310169458389282}

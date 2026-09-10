@@ -1,0 +1,14 @@
+{"split": "common_sense", "episode_number": 16, "episode_id": "4", "instruction": "Fetch an item to assist with cutting a piece of paper at the left counter.", "api_call_start": 1}
+{"split": "common_sense", "episode_number": 17, "episode_id": "37", "instruction": "I'm in need of an implement for cutting paper at the left counter. Please get it for me.", "api_call_start": 8}
+{"split": "common_sense", "episode_number": 18, "episode_id": "16", "instruction": "Acquire a sports object and position it in the brown table.", "api_call_start": 9}
+{"split": "common_sense", "episode_number": 19, "episode_id": "48", "instruction": "It looks like I've spilled something. Would you mind getting the object I need to clean it up in the right counter?", "api_call_start": 14}
+{"split": "common_sense", "episode_number": 20, "episode_id": "35", "instruction": "I spilt something and need to clean it. Can you bring something to the left counter to help?", "api_call_start": 23}
+{"split": "common_sense", "episode_number": 21, "episode_id": "19", "instruction": "Retrieve a suitable implement to address the loose screw problem in the left counter.", "api_call_start": 29}
+{"split": "common_sense", "episode_number": 22, "episode_id": "15", "instruction": "Acquire a sports object and position it in the sink.", "api_call_start": 39}
+{"split": "common_sense", "episode_number": 23, "episode_id": "41", "instruction": "Bring me a suitable object to pour hot coffee into at the left counter.", "api_call_start": 41}
+{"split": "common_sense", "episode_number": 24, "episode_id": "13", "instruction": "Find an item that can be used for cutting at the left counter.", "api_call_start": 52}
+{"split": "common_sense", "episode_number": 25, "episode_id": "3", "instruction": "I need a vessel to pour hot coffee into at the brown table.", "api_call_start": 53}
+{"split": "common_sense", "episode_number": 26, "episode_id": "32", "instruction": "There's been a spill, and I require an object to assist with cleaning it. Can you bring it to the sink?", "api_call_start": 59}
+{"split": "common_sense", "episode_number": 27, "episode_id": "38", "instruction": "I spilt something and need to clean it. Can you bring something to the right counter to help?", "api_call_start": 61}
+{"split": "common_sense", "episode_number": 28, "episode_id": "25", "instruction": "There's been a spill, and I require an object to assist with cleaning it. Can you bring it to the brown table?", "api_call_start": 66}
+{"split": "common_sense", "episode_number": 29, "episode_id": "44", "instruction": "A screw is loose in the brown table, bring something to fix it.", "api_call_start": 72}

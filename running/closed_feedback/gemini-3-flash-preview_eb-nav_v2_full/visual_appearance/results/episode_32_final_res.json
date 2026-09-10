@@ -1,0 +1,1 @@
+{"reward": 0.1, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "task_success": 1.0, "num_steps": 10, "planner_steps": 3, "planner_output_error": 0, "episode_elapsed_seconds": 10.644111633300781}

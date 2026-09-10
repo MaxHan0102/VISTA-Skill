@@ -1,0 +1,50 @@
+{"split": "spatial_relationship", "episode_number": 1, "episode_id": "39", "instruction": "Move a spatula from the right counter to the right receptacle of the left counter.", "api_call_start": 1}
+{"split": "spatial_relationship", "episode_number": 2, "episode_id": "31", "instruction": "Move a screwdriver from the sofa to the right receptacle of the left counter.", "api_call_start": 3}
+{"split": "spatial_relationship", "episode_number": 3, "episode_id": "42", "instruction": "Move a strawberry from the right counter to the right receptacle of the left counter.", "api_call_start": 8}
+{"split": "spatial_relationship", "episode_number": 4, "episode_id": "37", "instruction": "Find a orange and move it to the right of the sink.", "api_call_start": 11}
+{"split": "spatial_relationship", "episode_number": 5, "episode_id": "26", "instruction": "Move a plum from the sofa to the right receptacle of the left counter.", "api_call_start": 16}
+{"split": "spatial_relationship", "episode_number": 6, "episode_id": "3", "instruction": "Move a hammer from the brown table to the right receptacle of the left counter.", "api_call_start": 22}
+{"split": "spatial_relationship", "episode_number": 7, "episode_id": "48", "instruction": "Hey, on the sink, I accidentally left my plate, can you bring it to the right of the sink?", "api_call_start": 26}
+{"split": "spatial_relationship", "episode_number": 8, "episode_id": "30", "instruction": "Place a sponge and a ball on the right of the sink.", "api_call_start": 27}
+{"split": "spatial_relationship", "episode_number": 9, "episode_id": "35", "instruction": "Transport a padlock and carefully position it in the designated left receptacle of the right counter.", "api_call_start": 31}
+{"split": "spatial_relationship", "episode_number": 10, "episode_id": "36", "instruction": "Move a lego from the right counter to the right receptacle of the left counter.", "api_call_start": 33}
+{"split": "spatial_relationship", "episode_number": 11, "episode_id": "38", "instruction": "Move a clamp from the right counter to the right receptacle of the left counter.", "api_call_start": 40}
+{"split": "spatial_relationship", "episode_number": 12, "episode_id": "41", "instruction": "Move a knife from the brown table to the right receptacle of the left counter.", "api_call_start": 48}
+{"split": "spatial_relationship", "episode_number": 13, "episode_id": "23", "instruction": "Find a orange and move it to the right of the sink.", "api_call_start": 51}
+{"split": "spatial_relationship", "episode_number": 14, "episode_id": "21", "instruction": "Move a sponge from the brown table to the right receptacle of the left counter.", "api_call_start": 59}
+{"split": "spatial_relationship", "episode_number": 15, "episode_id": "40", "instruction": "Move a spoon from the right counter to the right receptacle of the left counter.", "api_call_start": 62}
+{"split": "spatial_relationship", "episode_number": 16, "episode_id": "32", "instruction": "Move a block from the brown table to the right receptacle of the left counter.", "api_call_start": 64}
+{"split": "spatial_relationship", "episode_number": 17, "episode_id": "27", "instruction": "Collect a knife from the TV stand and place it in the left receptacle of the right counter.", "api_call_start": 66}
+{"split": "spatial_relationship", "episode_number": 18, "episode_id": "29", "instruction": "Move a spatula from the left counter to the right receptacle of the left counter.", "api_call_start": 69}
+{"split": "spatial_relationship", "episode_number": 19, "episode_id": "44", "instruction": "Hey, on the right of the sink, I accidentally left my knife, can you bring it to the left counter?", "api_call_start": 72}
+{"split": "spatial_relationship", "episode_number": 20, "episode_id": "33", "instruction": "Move a rubriks cube from the left counter to the right receptacle of the left counter.", "api_call_start": 73}
+{"split": "spatial_relationship", "episode_number": 21, "episode_id": "16", "instruction": "Move a drill from the brown table to the right receptacle of the left counter.", "api_call_start": 76}
+{"split": "spatial_relationship", "episode_number": 22, "episode_id": "7", "instruction": "Move a apple from the black table to the right receptacle of the left counter.", "api_call_start": 79}
+{"split": "spatial_relationship", "episode_number": 23, "episode_id": "11", "instruction": "Move a plate from the right counter to the right receptacle of the left counter.", "api_call_start": 83}
+{"split": "spatial_relationship", "episode_number": 24, "episode_id": "43", "instruction": "Transfer an block to the designated left receptacle of the right counter.", "api_call_start": 86}
+{"split": "spatial_relationship", "episode_number": 25, "episode_id": "19", "instruction": "On the right of the sink, I need a spatula and a book.", "api_call_start": 87}
+{"split": "spatial_relationship", "episode_number": 26, "episode_id": "0", "instruction": "Move a peach from the sofa to the right receptacle of the left counter.", "api_call_start": 89}
+{"split": "spatial_relationship", "episode_number": 27, "episode_id": "17", "instruction": "Move a pear from the sofa to the right receptacle of the left counter.", "api_call_start": 95}
+{"split": "spatial_relationship", "episode_number": 28, "episode_id": "15", "instruction": "Move a clamp from the brown table to the right receptacle of the left counter.", "api_call_start": 101}
+{"split": "spatial_relationship", "episode_number": 29, "episode_id": "28", "instruction": "The rubriks cube is on the right of the sink but you should move it to the sink.", "api_call_start": 108}
+{"split": "spatial_relationship", "episode_number": 30, "episode_id": "22", "instruction": "Move a padlock from the left counter to the right receptacle of the left counter.", "api_call_start": 109}
+{"split": "spatial_relationship", "episode_number": 31, "episode_id": "1", "instruction": "Place a block and a pear on the left receptacle of the right counter.", "api_call_start": 117}
+{"split": "spatial_relationship", "episode_number": 32, "episode_id": "46", "instruction": "Find a orange and move it to the right of the sink.", "api_call_start": 121}
+{"split": "spatial_relationship", "episode_number": 33, "episode_id": "6", "instruction": "Pick up an bowl from the left counter and deposit it into the left receptacle of the right counter.", "api_call_start": 122}
+{"split": "spatial_relationship", "episode_number": 34, "episode_id": "10", "instruction": "On the left counter there is a banana, move it to the right of the sink.", "api_call_start": 125}
+{"split": "spatial_relationship", "episode_number": 35, "episode_id": "24", "instruction": "Find a wrench and move it to the right of the sink.", "api_call_start": 127}
+{"split": "spatial_relationship", "episode_number": 36, "episode_id": "14", "instruction": "Move a screwdriver from the black table to the right receptacle of the left counter.", "api_call_start": 129}
+{"split": "spatial_relationship", "episode_number": 37, "episode_id": "13", "instruction": "Move a block from the left counter to the right receptacle of the left counter.", "api_call_start": 132}
+{"split": "spatial_relationship", "episode_number": 38, "episode_id": "2", "instruction": "On the right of the sink I need you to put a drill.", "api_call_start": 135}
+{"split": "spatial_relationship", "episode_number": 39, "episode_id": "18", "instruction": "Find a toy airplane on the right of the sink and move it to the left counter.", "api_call_start": 140}
+{"split": "spatial_relationship", "episode_number": 40, "episode_id": "45", "instruction": "Detach the strawberry from the right of the sink.", "api_call_start": 141}
+{"split": "spatial_relationship", "episode_number": 41, "episode_id": "8", "instruction": "I left my orange on the TV stand, can you bring it to the right of the sink?", "api_call_start": 142}
+{"split": "spatial_relationship", "episode_number": 42, "episode_id": "12", "instruction": "Journey to the left receptacle of the right counter.", "api_call_start": 145}
+{"split": "spatial_relationship", "episode_number": 43, "episode_id": "20", "instruction": "Find a toy airplane and move it to the left receptacle of the right counter.", "api_call_start": 146}
+{"split": "spatial_relationship", "episode_number": 44, "episode_id": "5", "instruction": "Take an strawberry and transfer it to the allocated right of the sink.", "api_call_start": 151}
+{"split": "spatial_relationship", "episode_number": 45, "episode_id": "4", "instruction": "Move a rubriks cube to the right of the sink.", "api_call_start": 157}
+{"split": "spatial_relationship", "episode_number": 46, "episode_id": "49", "instruction": "Take an plate and transfer it to the allocated right of the sink.", "api_call_start": 160}
+{"split": "spatial_relationship", "episode_number": 47, "episode_id": "47", "instruction": "Pick a cleanser from the right of the sink and move it to the left counter.", "api_call_start": 162}
+{"split": "spatial_relationship", "episode_number": 48, "episode_id": "34", "instruction": "Find a mug on the TV stand and move it to the left receptacle of the right counter.", "api_call_start": 163}
+{"split": "spatial_relationship", "episode_number": 49, "episode_id": "9", "instruction": "Find a orange and move it to the left receptacle of the right counter.", "api_call_start": 166}
+{"split": "spatial_relationship", "episode_number": 50, "episode_id": "25", "instruction": "On the right of the sink, remove the scissors.", "api_call_start": 171}

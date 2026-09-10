@@ -1,0 +1,1 @@
+{"reward": 0.0, "num_invalid_actions": 2, "empty_plan": 1, "instruction": "Move a rubriks cube from the left counter to the right receptacle of the left counter.", "task_success": 0, "task_progress": 0, "subgoal_reward": 0, "num_steps": 8, "planner_steps": 3, "planner_output_error": 0, "num_invalid_action_ratio": 0.25, "episode_elapsed_seconds": 9.94889235496521}

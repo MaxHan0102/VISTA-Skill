@@ -1,0 +1,241 @@
+{
+  "base_url": "http://127.0.0.1:8000/v1",
+  "fault": "constraint_pick_multihold",
+  "meta_skill_sha256": "ec349ec8bbb0a6dced55267fc0d44c0259a4772f384b3adab765fa0faeff43cc",
+  "meta_skills": "frozen_v1",
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "passed": 10,
+  "total": 10,
+  "trials": [
+    {
+      "candidate_sha256": "b239a15cde55ab66ad901e71ae58af36a0b5dfe54ca7c3d8bd5d1ba347f6f465",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "The gripper can hold multiple objects; pick freely without releasing. Holding is not required before pick.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "e243ed98fd719f60ff37",
+      "rationale": "Replay the condition: when 'not_holding' is false (i.e., gripper is holding), pick should still be allowed. The current statement implies holding is optional, but the predicate 'not_holding' in the rule requires it to be true after pick \u2014 creating a contradiction. The patch adds explicit permission to pick even when holding, resolving the missing progress. Unrelated behavior (e.g., place freeing gripper) remains unchanged. Test intent: replay 'pick' with gripper holding; verify 'not_holding' becomes true after pick, and confirm place still frees gripper.",
+      "scope": "constraint",
+      "seed": 0,
+      "target_rule_after": "false",
+      "target_rule_id": "constraint_pick_occupies_gripper",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 276,
+          "prompt_tokens": 521
+        }
+      }
+    },
+    {
+      "candidate_sha256": "b239a15cde55ab66ad901e71ae58af36a0b5dfe54ca7c3d8bd5d1ba347f6f465",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "The gripper can hold multiple objects; pick freely without releasing. Holding is not required before pick.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "e243ed98fd719f60ff37",
+      "rationale": "Test intent: Replay phase2:constraint_pick_multihold:not_holding with parent and candidate. Parent expects not_holding to be false (i.e., gripper must be holding) before pick \u2014 contradicting the field\u2019s text. Candidate adds 'Holding is not required before pick' to resolve the contradiction while preserving all other rules and compiled contract. Unrelated behavior (e.g., place frees gripper) remains unchanged. Acceptance is deterministic via gate.",
+      "scope": "constraint",
+      "seed": 1,
+      "target_rule_after": "false",
+      "target_rule_id": "constraint_pick_occupies_gripper",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 248,
+          "prompt_tokens": 521
+        }
+      }
+    },
+    {
+      "candidate_sha256": "b239a15cde55ab66ad901e71ae58af36a0b5dfe54ca7c3d8bd5d1ba347f6f465",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "The gripper can hold multiple objects; pick freely without releasing. Holding is not required before pick.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "e243ed98fd719f60ff37",
+      "rationale": "Test intent: Replay phase2:constraint_pick_multihold:not_holding with parent and candidate. Parent expects not_holding to be false (i.e., gripper must be holding) before pick \u2014 contradicting the field\u2019s text. Candidate adds 'Holding is not required before pick' to resolve the contradiction while preserving all other rules and compiled contract. Unrelated behavior (e.g., place frees gripper) remains unchanged. Acceptance is deterministic via gate.",
+      "scope": "constraint",
+      "seed": 2,
+      "target_rule_after": "false",
+      "target_rule_id": "constraint_pick_occupies_gripper",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 248,
+          "prompt_tokens": 521
+        }
+      }
+    },
+    {
+      "candidate_sha256": "b239a15cde55ab66ad901e71ae58af36a0b5dfe54ca7c3d8bd5d1ba347f6f465",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "The gripper can hold multiple objects; pick freely without releasing. Holding is not required before pick.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "e243ed98fd719f60ff37",
+      "rationale": "Test intent: Replay phase2:constraint_pick_multihold:not_holding with parent and candidate. Parent expects not_holding to be false (i.e., gripper must be holding) before pick \u2014 contradicting the field\u2019s text. Candidate adds 'Holding is not required before pick' to resolve the contradiction while preserving all other rules and compiled contract. Unrelated behavior (e.g., place frees gripper) remains unchanged. Acceptance is deterministic via gate.",
+      "scope": "constraint",
+      "seed": 3,
+      "target_rule_after": "false",
+      "target_rule_id": "constraint_pick_occupies_gripper",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 248,
+          "prompt_tokens": 521
+        }
+      }
+    },
+    {
+      "candidate_sha256": "b239a15cde55ab66ad901e71ae58af36a0b5dfe54ca7c3d8bd5d1ba347f6f465",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "The gripper can hold multiple objects; pick freely without releasing. Holding is not required before pick.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "e243ed98fd719f60ff37",
+      "rationale": "Test intent: Replay phase2:constraint_pick_multihold:not_holding with parent and candidate. Parent expects not_holding to be false (i.e., gripper must be holding) before pick \u2014 contradicting the field\u2019s text. Candidate adds 'Holding is not required before pick' to resolve the contradiction while preserving all other rules and compiled contract. Unrelated behavior (e.g., place frees gripper) remains unchanged. Acceptance is deterministic via gate.",
+      "scope": "constraint",
+      "seed": 4,
+      "target_rule_after": "false",
+      "target_rule_id": "constraint_pick_occupies_gripper",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 248,
+          "prompt_tokens": 521
+        }
+      }
+    },
+    {
+      "candidate_sha256": "b239a15cde55ab66ad901e71ae58af36a0b5dfe54ca7c3d8bd5d1ba347f6f465",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "The gripper can hold multiple objects; pick freely without releasing. Holding is not required before pick.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "e243ed98fd719f60ff37",
+      "rationale": "Test intent: Replay phase2:constraint_pick_multihold:not_holding with parent and candidate. Parent expects not_holding to be false (i.e., gripper must be holding) before pick \u2014 contradicting the field\u2019s text. Candidate adds 'Holding is not required before pick' to resolve the contradiction while preserving all other rules and compiled contract. Unrelated behavior (e.g., place frees gripper) remains unchanged. Acceptance is deterministic via gate.",
+      "scope": "constraint",
+      "seed": 5,
+      "target_rule_after": "false",
+      "target_rule_id": "constraint_pick_occupies_gripper",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 248,
+          "prompt_tokens": 521
+        }
+      }
+    },
+    {
+      "candidate_sha256": "b239a15cde55ab66ad901e71ae58af36a0b5dfe54ca7c3d8bd5d1ba347f6f465",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "The gripper can hold multiple objects; pick freely without releasing. Holding is not required before pick.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "e243ed98fd719f60ff37",
+      "rationale": "Test intent: Replay phase2:constraint_pick_multihold:not_holding with parent and candidate. Parent expects not_holding to be false (i.e., gripper must be holding) before pick \u2014 contradicting the field\u2019s text. Candidate adds 'Holding is not required before pick' to resolve the contradiction while preserving all other rules and compiled contract. Unrelated behavior (e.g., place frees gripper) remains unchanged. Acceptance is deterministic via gate.",
+      "scope": "constraint",
+      "seed": 6,
+      "target_rule_after": "false",
+      "target_rule_id": "constraint_pick_occupies_gripper",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 248,
+          "prompt_tokens": 521
+        }
+      }
+    },
+    {
+      "candidate_sha256": "b239a15cde55ab66ad901e71ae58af36a0b5dfe54ca7c3d8bd5d1ba347f6f465",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "The gripper can hold multiple objects; pick freely without releasing. Holding is not required before pick.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "e243ed98fd719f60ff37",
+      "rationale": "Test intent: Replay phase2:constraint_pick_multihold:not_holding with parent and candidate. Parent expects not_holding to be false (i.e., gripper must be holding) before pick \u2014 contradicting the field\u2019s text. Candidate adds 'Holding is not required before pick' to resolve the contradiction while preserving all other rules and compiled contract. Unrelated behavior (e.g., place frees gripper) remains unchanged. Acceptance is deterministic via gate.",
+      "scope": "constraint",
+      "seed": 7,
+      "target_rule_after": "false",
+      "target_rule_id": "constraint_pick_occupies_gripper",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 248,
+          "prompt_tokens": 521
+        }
+      }
+    },
+    {
+      "candidate_sha256": "b239a15cde55ab66ad901e71ae58af36a0b5dfe54ca7c3d8bd5d1ba347f6f465",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "The gripper can hold multiple objects; pick freely without releasing. Holding is not required before pick.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "e243ed98fd719f60ff37",
+      "rationale": "Test intent: Replay phase2:constraint_pick_multihold:not_holding with parent and candidate. Parent expects not_holding to be false (i.e., gripper must be holding) before pick \u2014 contradicting the field\u2019s text. Candidate adds 'Holding is not required before pick' to resolve the contradiction while preserving all other rules and compiled contract. Unrelated behavior (e.g., place frees gripper) remains unchanged. Acceptance is deterministic via gate.",
+      "scope": "constraint",
+      "seed": 8,
+      "target_rule_after": "false",
+      "target_rule_id": "constraint_pick_occupies_gripper",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 248,
+          "prompt_tokens": 521
+        }
+      }
+    },
+    {
+      "candidate_sha256": "b239a15cde55ab66ad901e71ae58af36a0b5dfe54ca7c3d8bd5d1ba347f6f465",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "The gripper can hold multiple objects; pick freely without releasing. Holding is not required before pick.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "e243ed98fd719f60ff37",
+      "rationale": "Test intent: Replay phase2:constraint_pick_multihold:not_holding with parent and candidate. Parent expects not_holding to be false (i.e., gripper must be holding) before pick \u2014 contradicting the field\u2019s text. Candidate adds 'Holding is not required before pick' to resolve the contradiction while preserving all other rules and compiled contract. Unrelated behavior (e.g., place frees gripper) remains unchanged. Acceptance is deterministic via gate.",
+      "scope": "constraint",
+      "seed": 9,
+      "target_rule_after": "false",
+      "target_rule_id": "constraint_pick_occupies_gripper",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 248,
+          "prompt_tokens": 521
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "protocol": "stock_feedback_v2",
+  "dataset_hashes": {
+    "base": "1e338a8729b89fa8101d1834d25c5a00c95f31296d93253e469679fe83c71c23"
+  },
+  "records": {
+    "base/1": {
+      "path": "/root/max/VISTA-Skill/running/test/resume_v2_hab_fixture/base/results/episode_1_final_res.json",
+      "sha256": "fe60fcc24f1c6248af0adfe2750c167ba41d1fdc520cabc4e954de2a8caf03a6",
+      "episode_id": "39"
+    },
+    "base/2": {
+      "path": "/root/max/VISTA-Skill/running/test/resume_v2_hab_fixture/_resume/attempt_202609081738/base/results/episode_2_final_res.json",
+      "sha256": "194d2a64e4c5ba94374b26c6e1d98ebf92af1c097138262c07eae8873e3e7c10",
+      "episode_id": "3"
+    }
+  },
+  "identities": {
+    "base": {
+      "1": "39",
+      "2": "3"
+    }
+  },
+  "partial_results": []
+}

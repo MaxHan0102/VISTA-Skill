@@ -20,7 +20,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--base-url", required=True)
     parser.add_argument(
         "--output-dir",
-        default="running/target_skill_oracle_v1/validation_common_sense_seed0",
+        default="running/Phase4/target_skill_oracle_v1/validation_common_sense_seed0",
     )
     parser.add_argument("--subset", default="common_sense")
     parser.add_argument("--episodes", type=int, default=20)
@@ -37,11 +37,11 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     )
     parser.add_argument(
         "--hab-skill",
-        default="running/target_skill_oracle_v1/artifacts/target_habitat_skill_v1.json",
+        default="running/Phase4/target_skill_oracle_v1/artifacts/target_habitat_skill_v1.json",
     )
     parser.add_argument(
         "--nav-skill",
-        default="running/target_skill_oracle_v1/artifacts/target_navigation_skill_v1.json",
+        default="running/Phase4/target_skill_oracle_v1/artifacts/target_navigation_skill_v1.json",
     )
     parser.add_argument(
         "--envs",

@@ -1,0 +1,706 @@
+START running/Phase3/phase3c/offline/synthetic_meta.json
+seed=0 case=1/24 gold=abstain pred=abstain
+seed=0 case=2/24 gold=belief_refresh pred=abstain
+seed=0 case=3/24 gold=skill_update pred=abstain
+seed=0 case=4/24 gold=skill_update pred=abstain
+seed=0 case=5/24 gold=skill_update pred=abstain
+seed=0 case=6/24 gold=skill_update pred=abstain
+seed=0 case=7/24 gold=skill_update pred=abstain
+seed=0 case=8/24 gold=skill_update pred=abstain
+seed=0 case=9/24 gold=skill_update pred=abstain
+seed=0 case=10/24 gold=skill_update pred=abstain
+seed=0 case=11/24 gold=skill_update pred=skill_update
+seed=0 case=12/24 gold=skill_update pred=skill_update
+seed=0 case=13/24 gold=belief_refresh pred=belief_refresh
+seed=0 case=14/24 gold=belief_refresh pred=belief_refresh
+seed=0 case=15/24 gold=belief_refresh pred=abstain
+seed=0 case=16/24 gold=belief_refresh pred=abstain
+seed=0 case=17/24 gold=belief_refresh pred=abstain
+seed=0 case=18/24 gold=belief_refresh pred=abstain
+seed=0 case=19/24 gold=abstain pred=abstain
+seed=0 case=20/24 gold=abstain pred=abstain
+seed=0 case=21/24 gold=abstain pred=abstain
+seed=0 case=22/24 gold=abstain pred=abstain
+seed=0 case=23/24 gold=abstain pred=abstain
+seed=0 case=24/24 gold=abstain pred=abstain
+seed=0 target=0.432 field=0.296
+seed=1 case=1/24 gold=abstain pred=abstain
+seed=1 case=2/24 gold=belief_refresh pred=abstain
+seed=1 case=3/24 gold=skill_update pred=abstain
+seed=1 case=4/24 gold=skill_update pred=abstain
+seed=1 case=5/24 gold=skill_update pred=abstain
+seed=1 case=6/24 gold=skill_update pred=abstain
+seed=1 case=7/24 gold=skill_update pred=abstain
+seed=1 case=8/24 gold=skill_update pred=abstain
+seed=1 case=9/24 gold=skill_update pred=abstain
+seed=1 case=10/24 gold=skill_update pred=abstain
+seed=1 case=11/24 gold=skill_update pred=skill_update
+seed=1 case=12/24 gold=skill_update pred=skill_update
+seed=1 case=13/24 gold=belief_refresh pred=belief_refresh
+seed=1 case=14/24 gold=belief_refresh pred=belief_refresh
+seed=1 case=15/24 gold=belief_refresh pred=abstain
+seed=1 case=16/24 gold=belief_refresh pred=abstain
+seed=1 case=17/24 gold=belief_refresh pred=abstain
+seed=1 case=18/24 gold=belief_refresh pred=abstain
+seed=1 case=19/24 gold=abstain pred=abstain
+seed=1 case=20/24 gold=abstain pred=abstain
+seed=1 case=21/24 gold=abstain pred=abstain
+seed=1 case=22/24 gold=abstain pred=abstain
+seed=1 case=23/24 gold=abstain pred=abstain
+seed=1 case=24/24 gold=abstain pred=abstain
+seed=1 target=0.432 field=0.296
+seed=2 case=1/24 gold=abstain pred=abstain
+seed=2 case=2/24 gold=belief_refresh pred=abstain
+seed=2 case=3/24 gold=skill_update pred=abstain
+seed=2 case=4/24 gold=skill_update pred=abstain
+seed=2 case=5/24 gold=skill_update pred=abstain
+seed=2 case=6/24 gold=skill_update pred=abstain
+seed=2 case=7/24 gold=skill_update pred=abstain
+seed=2 case=8/24 gold=skill_update pred=abstain
+seed=2 case=9/24 gold=skill_update pred=abstain
+seed=2 case=10/24 gold=skill_update pred=abstain
+seed=2 case=11/24 gold=skill_update pred=skill_update
+seed=2 case=12/24 gold=skill_update pred=skill_update
+seed=2 case=13/24 gold=belief_refresh pred=belief_refresh
+seed=2 case=14/24 gold=belief_refresh pred=belief_refresh
+seed=2 case=15/24 gold=belief_refresh pred=abstain
+seed=2 case=16/24 gold=belief_refresh pred=abstain
+seed=2 case=17/24 gold=belief_refresh pred=abstain
+seed=2 case=18/24 gold=belief_refresh pred=abstain
+seed=2 case=19/24 gold=abstain pred=abstain
+seed=2 case=20/24 gold=abstain pred=abstain
+seed=2 case=21/24 gold=abstain pred=abstain
+seed=2 case=22/24 gold=abstain pred=abstain
+seed=2 case=23/24 gold=abstain pred=abstain
+seed=2 case=24/24 gold=abstain pred=abstain
+seed=2 target=0.432 field=0.296
+seed=3 case=1/24 gold=abstain pred=abstain
+seed=3 case=2/24 gold=belief_refresh pred=abstain
+seed=3 case=3/24 gold=skill_update pred=abstain
+seed=3 case=4/24 gold=skill_update pred=abstain
+seed=3 case=5/24 gold=skill_update pred=abstain
+seed=3 case=6/24 gold=skill_update pred=abstain
+seed=3 case=7/24 gold=skill_update pred=abstain
+seed=3 case=8/24 gold=skill_update pred=abstain
+seed=3 case=9/24 gold=skill_update pred=abstain
+seed=3 case=10/24 gold=skill_update pred=abstain
+seed=3 case=11/24 gold=skill_update pred=skill_update
+seed=3 case=12/24 gold=skill_update pred=skill_update
+seed=3 case=13/24 gold=belief_refresh pred=belief_refresh
+seed=3 case=14/24 gold=belief_refresh pred=belief_refresh
+seed=3 case=15/24 gold=belief_refresh pred=abstain
+seed=3 case=16/24 gold=belief_refresh pred=abstain
+seed=3 case=17/24 gold=belief_refresh pred=abstain
+seed=3 case=18/24 gold=belief_refresh pred=abstain
+seed=3 case=19/24 gold=abstain pred=abstain
+seed=3 case=20/24 gold=abstain pred=abstain
+seed=3 case=21/24 gold=abstain pred=abstain
+seed=3 case=22/24 gold=abstain pred=abstain
+seed=3 case=23/24 gold=abstain pred=abstain
+seed=3 case=24/24 gold=abstain pred=abstain
+seed=3 target=0.432 field=0.296
+seed=4 case=1/24 gold=abstain pred=abstain
+seed=4 case=2/24 gold=belief_refresh pred=abstain
+seed=4 case=3/24 gold=skill_update pred=abstain
+seed=4 case=4/24 gold=skill_update pred=abstain
+seed=4 case=5/24 gold=skill_update pred=abstain
+seed=4 case=6/24 gold=skill_update pred=abstain
+seed=4 case=7/24 gold=skill_update pred=abstain
+seed=4 case=8/24 gold=skill_update pred=abstain
+seed=4 case=9/24 gold=skill_update pred=abstain
+seed=4 case=10/24 gold=skill_update pred=abstain
+seed=4 case=11/24 gold=skill_update pred=skill_update
+seed=4 case=12/24 gold=skill_update pred=skill_update
+seed=4 case=13/24 gold=belief_refresh pred=belief_refresh
+seed=4 case=14/24 gold=belief_refresh pred=belief_refresh
+seed=4 case=15/24 gold=belief_refresh pred=abstain
+seed=4 case=16/24 gold=belief_refresh pred=abstain
+seed=4 case=17/24 gold=belief_refresh pred=abstain
+seed=4 case=18/24 gold=belief_refresh pred=abstain
+seed=4 case=19/24 gold=abstain pred=abstain
+seed=4 case=20/24 gold=abstain pred=abstain
+seed=4 case=21/24 gold=abstain pred=abstain
+seed=4 case=22/24 gold=abstain pred=abstain
+seed=4 case=23/24 gold=abstain pred=abstain
+seed=4 case=24/24 gold=abstain pred=abstain
+seed=4 target=0.432 field=0.296
+target={'mean': 0.43209876543209874, 'std': 0.0} field={'mean': 0.2962962962962963, 'std': 0.0} wrote running/Phase3/phase3c/offline/synthetic_meta.json
+END status=0 output=running/Phase3/phase3c/offline/synthetic_meta.json
+START running/Phase3/phase3c/offline/natural_constraint_pick_multihold_seed0.json
+case=1/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=2/42 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=3/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=4/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=5/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=6/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=7/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=8/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=9/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=10/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=11/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=12/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=13/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=14/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=15/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=16/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=17/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=18/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=19/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=20/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=21/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=22/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=23/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=24/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=25/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=26/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=27/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=28/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=29/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=30/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=31/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=32/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=33/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=34/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=35/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=36/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=37/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=38/42 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=39/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=40/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=41/42 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=42/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+recorded_rule_first {'cases': 42, 'target_macro_f1': 0.9047619047619047, 'field_macro_f1': 0.9047619047619047, 'skill_update_precision': 1.0, 'skill_update_recall': 0.75, 'skill_update_f1': 0.8571428571428571, 'confusion': {'abstain->abstain': 30, 'skill_update->abstain': 3, 'skill_update->skill_update': 9}}
+decisive_skill_partition_rule_first {'cases': 42, 'target_macro_f1': 1.0, 'field_macro_f1': 1.0, 'skill_update_precision': 1.0, 'skill_update_recall': 1.0, 'skill_update_f1': 1.0, 'confusion': {'abstain->abstain': 30, 'skill_update->skill_update': 12}}
+fault_relevant_oracle_filter {'cases': 42, 'target_macro_f1': 1.0, 'field_macro_f1': 1.0, 'skill_update_precision': 1.0, 'skill_update_recall': 1.0, 'skill_update_f1': 1.0, 'confusion': {'abstain->abstain': 30, 'skill_update->skill_update': 12}}
+direct_qwen_teacher {'cases': 42, 'target_macro_f1': 0.49945828819068255, 'field_macro_f1': 0.49945828819068255, 'skill_update_precision': 1.0, 'skill_update_recall': 0.08333333333333333, 'skill_update_f1': 0.15384615384615385, 'confusion': {'abstain->abstain': 30, 'skill_update->abstain': 11, 'skill_update->skill_update': 1}}
+rule_first_with_teacher {'cases': 42, 'target_macro_f1': 0.9047619047619047, 'field_macro_f1': 0.9047619047619047, 'skill_update_precision': 1.0, 'skill_update_recall': 0.75, 'skill_update_f1': 0.8571428571428571, 'confusion': {'abstain->abstain': 30, 'skill_update->abstain': 3, 'skill_update->skill_update': 9}}
+wrote running/Phase3/phase3c/offline/natural_constraint_pick_multihold_seed0.json
+END status=0 output=running/Phase3/phase3c/offline/natural_constraint_pick_multihold_seed0.json
+START running/Phase3/phase3c/offline/natural_constraint_pick_multihold_seed1.json
+case=1/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=2/42 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=3/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=4/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=5/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=6/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=7/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=8/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=9/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=10/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=11/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=12/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=13/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=14/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=15/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=16/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=17/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=18/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=19/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=20/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=21/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=22/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=23/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=24/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=25/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=26/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=27/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=28/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=29/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=30/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=31/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=32/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=33/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=34/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=35/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=36/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=37/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=38/42 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=39/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=40/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=41/42 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=42/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+recorded_rule_first {'cases': 42, 'target_macro_f1': 0.9047619047619047, 'field_macro_f1': 0.9047619047619047, 'skill_update_precision': 1.0, 'skill_update_recall': 0.75, 'skill_update_f1': 0.8571428571428571, 'confusion': {'abstain->abstain': 30, 'skill_update->abstain': 3, 'skill_update->skill_update': 9}}
+decisive_skill_partition_rule_first {'cases': 42, 'target_macro_f1': 1.0, 'field_macro_f1': 1.0, 'skill_update_precision': 1.0, 'skill_update_recall': 1.0, 'skill_update_f1': 1.0, 'confusion': {'abstain->abstain': 30, 'skill_update->skill_update': 12}}
+fault_relevant_oracle_filter {'cases': 42, 'target_macro_f1': 1.0, 'field_macro_f1': 1.0, 'skill_update_precision': 1.0, 'skill_update_recall': 1.0, 'skill_update_f1': 1.0, 'confusion': {'abstain->abstain': 30, 'skill_update->skill_update': 12}}
+direct_qwen_teacher {'cases': 42, 'target_macro_f1': 0.49945828819068255, 'field_macro_f1': 0.49945828819068255, 'skill_update_precision': 1.0, 'skill_update_recall': 0.08333333333333333, 'skill_update_f1': 0.15384615384615385, 'confusion': {'abstain->abstain': 30, 'skill_update->abstain': 11, 'skill_update->skill_update': 1}}
+rule_first_with_teacher {'cases': 42, 'target_macro_f1': 0.9047619047619047, 'field_macro_f1': 0.9047619047619047, 'skill_update_precision': 1.0, 'skill_update_recall': 0.75, 'skill_update_f1': 0.8571428571428571, 'confusion': {'abstain->abstain': 30, 'skill_update->abstain': 3, 'skill_update->skill_update': 9}}
+wrote running/Phase3/phase3c/offline/natural_constraint_pick_multihold_seed1.json
+END status=0 output=running/Phase3/phase3c/offline/natural_constraint_pick_multihold_seed1.json
+START running/Phase3/phase3c/offline/natural_constraint_pick_multihold_seed2.json
+case=1/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=2/42 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=3/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=4/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=5/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=6/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=7/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=8/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=9/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=10/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=11/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=12/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=13/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=14/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=15/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=16/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=17/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=18/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=19/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=20/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=21/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=22/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=23/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=24/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=25/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=26/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=27/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=28/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=29/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=30/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=31/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=32/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=33/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=34/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=35/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=36/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=37/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=38/42 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=39/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=40/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=41/42 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=42/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+recorded_rule_first {'cases': 42, 'target_macro_f1': 0.9047619047619047, 'field_macro_f1': 0.9047619047619047, 'skill_update_precision': 1.0, 'skill_update_recall': 0.75, 'skill_update_f1': 0.8571428571428571, 'confusion': {'abstain->abstain': 30, 'skill_update->abstain': 3, 'skill_update->skill_update': 9}}
+decisive_skill_partition_rule_first {'cases': 42, 'target_macro_f1': 1.0, 'field_macro_f1': 1.0, 'skill_update_precision': 1.0, 'skill_update_recall': 1.0, 'skill_update_f1': 1.0, 'confusion': {'abstain->abstain': 30, 'skill_update->skill_update': 12}}
+fault_relevant_oracle_filter {'cases': 42, 'target_macro_f1': 1.0, 'field_macro_f1': 1.0, 'skill_update_precision': 1.0, 'skill_update_recall': 1.0, 'skill_update_f1': 1.0, 'confusion': {'abstain->abstain': 30, 'skill_update->skill_update': 12}}
+direct_qwen_teacher {'cases': 42, 'target_macro_f1': 0.49945828819068255, 'field_macro_f1': 0.49945828819068255, 'skill_update_precision': 1.0, 'skill_update_recall': 0.08333333333333333, 'skill_update_f1': 0.15384615384615385, 'confusion': {'abstain->abstain': 30, 'skill_update->abstain': 11, 'skill_update->skill_update': 1}}
+rule_first_with_teacher {'cases': 42, 'target_macro_f1': 0.9047619047619047, 'field_macro_f1': 0.9047619047619047, 'skill_update_precision': 1.0, 'skill_update_recall': 0.75, 'skill_update_f1': 0.8571428571428571, 'confusion': {'abstain->abstain': 30, 'skill_update->abstain': 3, 'skill_update->skill_update': 9}}
+wrote running/Phase3/phase3c/offline/natural_constraint_pick_multihold_seed2.json
+END status=0 output=running/Phase3/phase3c/offline/natural_constraint_pick_multihold_seed2.json
+START running/Phase3/phase3c/offline/natural_constraint_pick_multihold_seed3.json
+case=1/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=2/42 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=3/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=4/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=5/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=6/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=7/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=8/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=9/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=10/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=11/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=12/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=13/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=14/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=15/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=16/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=17/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=18/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=19/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=20/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=21/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=22/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=23/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=24/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=25/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=26/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=27/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=28/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=29/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=30/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=31/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=32/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=33/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=34/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=35/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=36/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=37/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=38/42 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=39/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=40/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=41/42 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=42/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+recorded_rule_first {'cases': 42, 'target_macro_f1': 0.9047619047619047, 'field_macro_f1': 0.9047619047619047, 'skill_update_precision': 1.0, 'skill_update_recall': 0.75, 'skill_update_f1': 0.8571428571428571, 'confusion': {'abstain->abstain': 30, 'skill_update->abstain': 3, 'skill_update->skill_update': 9}}
+decisive_skill_partition_rule_first {'cases': 42, 'target_macro_f1': 1.0, 'field_macro_f1': 1.0, 'skill_update_precision': 1.0, 'skill_update_recall': 1.0, 'skill_update_f1': 1.0, 'confusion': {'abstain->abstain': 30, 'skill_update->skill_update': 12}}
+fault_relevant_oracle_filter {'cases': 42, 'target_macro_f1': 1.0, 'field_macro_f1': 1.0, 'skill_update_precision': 1.0, 'skill_update_recall': 1.0, 'skill_update_f1': 1.0, 'confusion': {'abstain->abstain': 30, 'skill_update->skill_update': 12}}
+direct_qwen_teacher {'cases': 42, 'target_macro_f1': 0.49945828819068255, 'field_macro_f1': 0.49945828819068255, 'skill_update_precision': 1.0, 'skill_update_recall': 0.08333333333333333, 'skill_update_f1': 0.15384615384615385, 'confusion': {'abstain->abstain': 30, 'skill_update->abstain': 11, 'skill_update->skill_update': 1}}
+rule_first_with_teacher {'cases': 42, 'target_macro_f1': 0.9047619047619047, 'field_macro_f1': 0.9047619047619047, 'skill_update_precision': 1.0, 'skill_update_recall': 0.75, 'skill_update_f1': 0.8571428571428571, 'confusion': {'abstain->abstain': 30, 'skill_update->abstain': 3, 'skill_update->skill_update': 9}}
+wrote running/Phase3/phase3c/offline/natural_constraint_pick_multihold_seed3.json
+END status=0 output=running/Phase3/phase3c/offline/natural_constraint_pick_multihold_seed3.json
+START running/Phase3/phase3c/offline/natural_constraint_pick_multihold_seed4.json
+case=1/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=2/42 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=3/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=4/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=5/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=6/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=7/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=8/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=9/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=10/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=11/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=12/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=13/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=14/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=15/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=16/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=17/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=18/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=19/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=20/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=21/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=22/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=23/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=24/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=25/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=26/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=27/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=28/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=29/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=30/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=31/42 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=32/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=33/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=34/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=35/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=36/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=37/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=38/42 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=39/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=40/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=41/42 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=42/42 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+recorded_rule_first {'cases': 42, 'target_macro_f1': 0.9047619047619047, 'field_macro_f1': 0.9047619047619047, 'skill_update_precision': 1.0, 'skill_update_recall': 0.75, 'skill_update_f1': 0.8571428571428571, 'confusion': {'abstain->abstain': 30, 'skill_update->abstain': 3, 'skill_update->skill_update': 9}}
+decisive_skill_partition_rule_first {'cases': 42, 'target_macro_f1': 1.0, 'field_macro_f1': 1.0, 'skill_update_precision': 1.0, 'skill_update_recall': 1.0, 'skill_update_f1': 1.0, 'confusion': {'abstain->abstain': 30, 'skill_update->skill_update': 12}}
+fault_relevant_oracle_filter {'cases': 42, 'target_macro_f1': 1.0, 'field_macro_f1': 1.0, 'skill_update_precision': 1.0, 'skill_update_recall': 1.0, 'skill_update_f1': 1.0, 'confusion': {'abstain->abstain': 30, 'skill_update->skill_update': 12}}
+direct_qwen_teacher {'cases': 42, 'target_macro_f1': 0.49945828819068255, 'field_macro_f1': 0.49945828819068255, 'skill_update_precision': 1.0, 'skill_update_recall': 0.08333333333333333, 'skill_update_f1': 0.15384615384615385, 'confusion': {'abstain->abstain': 30, 'skill_update->abstain': 11, 'skill_update->skill_update': 1}}
+rule_first_with_teacher {'cases': 42, 'target_macro_f1': 0.9047619047619047, 'field_macro_f1': 0.9047619047619047, 'skill_update_precision': 1.0, 'skill_update_recall': 0.75, 'skill_update_f1': 0.8571428571428571, 'confusion': {'abstain->abstain': 30, 'skill_update->abstain': 3, 'skill_update->skill_update': 9}}
+wrote running/Phase3/phase3c/offline/natural_constraint_pick_multihold_seed4.json
+END status=0 output=running/Phase3/phase3c/offline/natural_constraint_pick_multihold_seed4.json
+START running/Phase3/phase3c/offline/natural_effect_pick_inversion_seed0.json
+case=1/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=2/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=3/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=4/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=5/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=6/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=7/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=8/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=9/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=10/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=11/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=12/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=13/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=14/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=15/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=16/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=17/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=18/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=19/46 gold=skill_update recorded=belief_refresh filtered=skill_update partitioned=belief_refresh teacher=abstain
+case=20/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=21/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=22/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=23/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=24/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=25/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=26/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=27/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=28/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=29/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=30/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=31/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=32/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=33/46 gold=skill_update recorded=belief_refresh filtered=skill_update partitioned=belief_refresh teacher=abstain
+case=34/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=35/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=36/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=37/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=38/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=39/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=40/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=41/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=42/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=43/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=44/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=45/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=46/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+recorded_rule_first {'cases': 46, 'target_macro_f1': 0.5236486486486487, 'field_macro_f1': 0.7730263157894737, 'skill_update_precision': 1.0, 'skill_update_recall': 0.45454545454545453, 'skill_update_f1': 0.625, 'confusion': {'abstain->abstain': 35, 'skill_update->abstain': 4, 'skill_update->skill_update': 5, 'skill_update->belief_refresh': 2}}
+decisive_skill_partition_rule_first {'cases': 46, 'target_macro_f1': 0.6333333333333333, 'field_macro_f1': 0.9361111111111111, 'skill_update_precision': 1.0, 'skill_update_recall': 0.8181818181818182, 'skill_update_f1': 0.9, 'confusion': {'abstain->abstain': 35, 'skill_update->skill_update': 9, 'skill_update->belief_refresh': 2}}
+fault_relevant_oracle_filter {'cases': 46, 'target_macro_f1': 1.0, 'field_macro_f1': 1.0, 'skill_update_precision': 1.0, 'skill_update_recall': 1.0, 'skill_update_f1': 1.0, 'confusion': {'abstain->abstain': 35, 'skill_update->skill_update': 11}}
+direct_qwen_teacher {'cases': 46, 'target_macro_f1': 0.663003663003663, 'field_macro_f1': 0.663003663003663, 'skill_update_precision': 1.0, 'skill_update_recall': 0.2727272727272727, 'skill_update_f1': 0.42857142857142855, 'confusion': {'abstain->abstain': 35, 'skill_update->abstain': 8, 'skill_update->skill_update': 3}}
+rule_first_with_teacher {'cases': 46, 'target_macro_f1': 0.5236486486486487, 'field_macro_f1': 0.7730263157894737, 'skill_update_precision': 1.0, 'skill_update_recall': 0.45454545454545453, 'skill_update_f1': 0.625, 'confusion': {'abstain->abstain': 35, 'skill_update->abstain': 4, 'skill_update->skill_update': 5, 'skill_update->belief_refresh': 2}}
+wrote running/Phase3/phase3c/offline/natural_effect_pick_inversion_seed0.json
+END status=0 output=running/Phase3/phase3c/offline/natural_effect_pick_inversion_seed0.json
+START running/Phase3/phase3c/offline/natural_effect_pick_inversion_seed1.json
+case=1/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=2/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=3/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=4/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=5/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=6/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=7/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=8/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=9/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=10/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=11/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=12/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=13/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=14/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=15/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=16/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=17/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=18/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=19/46 gold=skill_update recorded=belief_refresh filtered=skill_update partitioned=belief_refresh teacher=abstain
+case=20/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=21/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=22/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=23/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=24/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=25/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=26/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=27/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=28/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=29/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=30/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=31/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=32/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=33/46 gold=skill_update recorded=belief_refresh filtered=skill_update partitioned=belief_refresh teacher=abstain
+case=34/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=35/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=36/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=37/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=38/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=39/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=40/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=41/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=42/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=43/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=44/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=45/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=46/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+recorded_rule_first {'cases': 46, 'target_macro_f1': 0.5236486486486487, 'field_macro_f1': 0.7730263157894737, 'skill_update_precision': 1.0, 'skill_update_recall': 0.45454545454545453, 'skill_update_f1': 0.625, 'confusion': {'abstain->abstain': 35, 'skill_update->abstain': 4, 'skill_update->skill_update': 5, 'skill_update->belief_refresh': 2}}
+decisive_skill_partition_rule_first {'cases': 46, 'target_macro_f1': 0.6333333333333333, 'field_macro_f1': 0.9361111111111111, 'skill_update_precision': 1.0, 'skill_update_recall': 0.8181818181818182, 'skill_update_f1': 0.9, 'confusion': {'abstain->abstain': 35, 'skill_update->skill_update': 9, 'skill_update->belief_refresh': 2}}
+fault_relevant_oracle_filter {'cases': 46, 'target_macro_f1': 1.0, 'field_macro_f1': 1.0, 'skill_update_precision': 1.0, 'skill_update_recall': 1.0, 'skill_update_f1': 1.0, 'confusion': {'abstain->abstain': 35, 'skill_update->skill_update': 11}}
+direct_qwen_teacher {'cases': 46, 'target_macro_f1': 0.663003663003663, 'field_macro_f1': 0.663003663003663, 'skill_update_precision': 1.0, 'skill_update_recall': 0.2727272727272727, 'skill_update_f1': 0.42857142857142855, 'confusion': {'abstain->abstain': 35, 'skill_update->abstain': 8, 'skill_update->skill_update': 3}}
+rule_first_with_teacher {'cases': 46, 'target_macro_f1': 0.5236486486486487, 'field_macro_f1': 0.7730263157894737, 'skill_update_precision': 1.0, 'skill_update_recall': 0.45454545454545453, 'skill_update_f1': 0.625, 'confusion': {'abstain->abstain': 35, 'skill_update->abstain': 4, 'skill_update->skill_update': 5, 'skill_update->belief_refresh': 2}}
+wrote running/Phase3/phase3c/offline/natural_effect_pick_inversion_seed1.json
+END status=0 output=running/Phase3/phase3c/offline/natural_effect_pick_inversion_seed1.json
+START running/Phase3/phase3c/offline/natural_effect_pick_inversion_seed2.json
+case=1/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=2/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=3/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=4/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=5/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=6/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=7/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=8/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=9/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=10/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=11/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=12/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=13/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=14/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=15/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=16/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=17/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=18/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=19/46 gold=skill_update recorded=belief_refresh filtered=skill_update partitioned=belief_refresh teacher=abstain
+case=20/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=21/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=22/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=23/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=24/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=25/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=26/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=27/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=28/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=29/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=30/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=31/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=32/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=33/46 gold=skill_update recorded=belief_refresh filtered=skill_update partitioned=belief_refresh teacher=abstain
+case=34/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=35/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=36/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=37/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=38/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=39/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=40/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=41/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=42/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=43/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=44/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=45/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=46/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+recorded_rule_first {'cases': 46, 'target_macro_f1': 0.5236486486486487, 'field_macro_f1': 0.7730263157894737, 'skill_update_precision': 1.0, 'skill_update_recall': 0.45454545454545453, 'skill_update_f1': 0.625, 'confusion': {'abstain->abstain': 35, 'skill_update->abstain': 4, 'skill_update->skill_update': 5, 'skill_update->belief_refresh': 2}}
+decisive_skill_partition_rule_first {'cases': 46, 'target_macro_f1': 0.6333333333333333, 'field_macro_f1': 0.9361111111111111, 'skill_update_precision': 1.0, 'skill_update_recall': 0.8181818181818182, 'skill_update_f1': 0.9, 'confusion': {'abstain->abstain': 35, 'skill_update->skill_update': 9, 'skill_update->belief_refresh': 2}}
+fault_relevant_oracle_filter {'cases': 46, 'target_macro_f1': 1.0, 'field_macro_f1': 1.0, 'skill_update_precision': 1.0, 'skill_update_recall': 1.0, 'skill_update_f1': 1.0, 'confusion': {'abstain->abstain': 35, 'skill_update->skill_update': 11}}
+direct_qwen_teacher {'cases': 46, 'target_macro_f1': 0.663003663003663, 'field_macro_f1': 0.663003663003663, 'skill_update_precision': 1.0, 'skill_update_recall': 0.2727272727272727, 'skill_update_f1': 0.42857142857142855, 'confusion': {'abstain->abstain': 35, 'skill_update->abstain': 8, 'skill_update->skill_update': 3}}
+rule_first_with_teacher {'cases': 46, 'target_macro_f1': 0.5236486486486487, 'field_macro_f1': 0.7730263157894737, 'skill_update_precision': 1.0, 'skill_update_recall': 0.45454545454545453, 'skill_update_f1': 0.625, 'confusion': {'abstain->abstain': 35, 'skill_update->abstain': 4, 'skill_update->skill_update': 5, 'skill_update->belief_refresh': 2}}
+wrote running/Phase3/phase3c/offline/natural_effect_pick_inversion_seed2.json
+END status=0 output=running/Phase3/phase3c/offline/natural_effect_pick_inversion_seed2.json
+START running/Phase3/phase3c/offline/natural_effect_pick_inversion_seed3.json
+case=1/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=2/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=3/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=4/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=5/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=6/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=7/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=8/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=9/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=10/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=11/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=12/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=13/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=14/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=15/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=16/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=17/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=18/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=19/46 gold=skill_update recorded=belief_refresh filtered=skill_update partitioned=belief_refresh teacher=abstain
+case=20/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=21/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=22/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=23/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=24/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=25/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=26/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=27/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=28/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=29/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=30/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=31/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=32/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=33/46 gold=skill_update recorded=belief_refresh filtered=skill_update partitioned=belief_refresh teacher=abstain
+case=34/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=35/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=36/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=37/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=38/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=39/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=40/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=41/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=42/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=43/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=44/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=45/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=46/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+recorded_rule_first {'cases': 46, 'target_macro_f1': 0.5236486486486487, 'field_macro_f1': 0.7730263157894737, 'skill_update_precision': 1.0, 'skill_update_recall': 0.45454545454545453, 'skill_update_f1': 0.625, 'confusion': {'abstain->abstain': 35, 'skill_update->abstain': 4, 'skill_update->skill_update': 5, 'skill_update->belief_refresh': 2}}
+decisive_skill_partition_rule_first {'cases': 46, 'target_macro_f1': 0.6333333333333333, 'field_macro_f1': 0.9361111111111111, 'skill_update_precision': 1.0, 'skill_update_recall': 0.8181818181818182, 'skill_update_f1': 0.9, 'confusion': {'abstain->abstain': 35, 'skill_update->skill_update': 9, 'skill_update->belief_refresh': 2}}
+fault_relevant_oracle_filter {'cases': 46, 'target_macro_f1': 1.0, 'field_macro_f1': 1.0, 'skill_update_precision': 1.0, 'skill_update_recall': 1.0, 'skill_update_f1': 1.0, 'confusion': {'abstain->abstain': 35, 'skill_update->skill_update': 11}}
+direct_qwen_teacher {'cases': 46, 'target_macro_f1': 0.663003663003663, 'field_macro_f1': 0.663003663003663, 'skill_update_precision': 1.0, 'skill_update_recall': 0.2727272727272727, 'skill_update_f1': 0.42857142857142855, 'confusion': {'abstain->abstain': 35, 'skill_update->abstain': 8, 'skill_update->skill_update': 3}}
+rule_first_with_teacher {'cases': 46, 'target_macro_f1': 0.5236486486486487, 'field_macro_f1': 0.7730263157894737, 'skill_update_precision': 1.0, 'skill_update_recall': 0.45454545454545453, 'skill_update_f1': 0.625, 'confusion': {'abstain->abstain': 35, 'skill_update->abstain': 4, 'skill_update->skill_update': 5, 'skill_update->belief_refresh': 2}}
+wrote running/Phase3/phase3c/offline/natural_effect_pick_inversion_seed3.json
+END status=0 output=running/Phase3/phase3c/offline/natural_effect_pick_inversion_seed3.json
+START running/Phase3/phase3c/offline/natural_effect_pick_inversion_seed4.json
+case=1/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=2/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=3/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=4/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=5/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=6/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=7/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=8/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=9/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=10/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=11/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=12/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=13/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=14/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=15/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=16/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=17/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=18/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=19/46 gold=skill_update recorded=belief_refresh filtered=skill_update partitioned=belief_refresh teacher=abstain
+case=20/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=21/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=22/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=23/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=24/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=25/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=26/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=27/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=28/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=abstain
+case=29/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=30/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=31/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=32/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=33/46 gold=skill_update recorded=belief_refresh filtered=skill_update partitioned=belief_refresh teacher=abstain
+case=34/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=35/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=36/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=37/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=38/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=39/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=40/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=41/46 gold=skill_update recorded=skill_update filtered=skill_update partitioned=skill_update teacher=skill_update
+case=42/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=43/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=44/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+case=45/46 gold=skill_update recorded=abstain filtered=skill_update partitioned=skill_update teacher=abstain
+case=46/46 gold=abstain recorded=abstain filtered=abstain partitioned=abstain teacher=abstain
+recorded_rule_first {'cases': 46, 'target_macro_f1': 0.5236486486486487, 'field_macro_f1': 0.7730263157894737, 'skill_update_precision': 1.0, 'skill_update_recall': 0.45454545454545453, 'skill_update_f1': 0.625, 'confusion': {'abstain->abstain': 35, 'skill_update->abstain': 4, 'skill_update->skill_update': 5, 'skill_update->belief_refresh': 2}}
+decisive_skill_partition_rule_first {'cases': 46, 'target_macro_f1': 0.6333333333333333, 'field_macro_f1': 0.9361111111111111, 'skill_update_precision': 1.0, 'skill_update_recall': 0.8181818181818182, 'skill_update_f1': 0.9, 'confusion': {'abstain->abstain': 35, 'skill_update->skill_update': 9, 'skill_update->belief_refresh': 2}}
+fault_relevant_oracle_filter {'cases': 46, 'target_macro_f1': 1.0, 'field_macro_f1': 1.0, 'skill_update_precision': 1.0, 'skill_update_recall': 1.0, 'skill_update_f1': 1.0, 'confusion': {'abstain->abstain': 35, 'skill_update->skill_update': 11}}
+direct_qwen_teacher {'cases': 46, 'target_macro_f1': 0.663003663003663, 'field_macro_f1': 0.663003663003663, 'skill_update_precision': 1.0, 'skill_update_recall': 0.2727272727272727, 'skill_update_f1': 0.42857142857142855, 'confusion': {'abstain->abstain': 35, 'skill_update->abstain': 8, 'skill_update->skill_update': 3}}
+rule_first_with_teacher {'cases': 46, 'target_macro_f1': 0.5236486486486487, 'field_macro_f1': 0.7730263157894737, 'skill_update_precision': 1.0, 'skill_update_recall': 0.45454545454545453, 'skill_update_f1': 0.625, 'confusion': {'abstain->abstain': 35, 'skill_update->abstain': 4, 'skill_update->skill_update': 5, 'skill_update->belief_refresh': 2}}
+wrote running/Phase3/phase3c/offline/natural_effect_pick_inversion_seed4.json
+END status=0 output=running/Phase3/phase3c/offline/natural_effect_pick_inversion_seed4.json
+START running/Phase3/phase3c/offline/patch_constraint_pick_multihold_meta.json
+seed=0 passed=True
+seed=1 passed=True
+seed=2 passed=True
+seed=3 passed=True
+seed=4 passed=True
+seed=5 passed=True
+seed=6 passed=True
+seed=7 passed=True
+seed=8 passed=True
+seed=9 passed=True
+passed 10/10; wrote running/Phase3/phase3c/offline/patch_constraint_pick_multihold_meta.json
+END status=0 output=running/Phase3/phase3c/offline/patch_constraint_pick_multihold_meta.json
+START running/Phase3/phase3c/offline/patch_effect_pick_inversion_meta.json
+seed=0 passed=True
+seed=1 passed=True
+seed=2 passed=True
+seed=3 passed=True
+seed=4 passed=True
+seed=5 passed=True
+seed=6 passed=True
+seed=7 passed=True
+seed=8 passed=True
+seed=9 passed=True
+passed 10/10; wrote running/Phase3/phase3c/offline/patch_effect_pick_inversion_meta.json
+END status=0 output=running/Phase3/phase3c/offline/patch_effect_pick_inversion_meta.json
+START running/Phase3/phase3c/offline/metamorphic_meta.json
+case=1/24 agreement=3/3
+case=2/24 agreement=6/6
+case=3/24 agreement=9/9
+case=4/24 agreement=12/12
+case=5/24 agreement=15/15
+case=6/24 agreement=18/18
+case=7/24 agreement=21/21
+case=8/24 agreement=24/24
+case=9/24 agreement=27/27
+case=10/24 agreement=30/30
+case=11/24 agreement=33/33
+case=12/24 agreement=36/36
+case=13/24 agreement=39/39
+case=14/24 agreement=42/42
+case=15/24 agreement=43/45
+case=16/24 agreement=44/48
+case=17/24 agreement=47/51
+case=18/24 agreement=50/54
+case=19/24 agreement=53/57
+case=20/24 agreement=56/60
+case=21/24 agreement=59/63
+case=22/24 agreement=62/66
+case=23/24 agreement=65/69
+case=24/24 agreement=68/72
+agreement=0.944; wrote running/Phase3/phase3c/offline/metamorphic_meta.json
+END status=0 output=running/Phase3/phase3c/offline/metamorphic_meta.json
+START running/Phase3/phase3c/offline/phase3c_offline_decision.json
+{"criteria": {"access_and_freeze": true, "metamorphic": true, "natural": false, "patch": true, "synthetic": false}, "decision": "no_go"}
+wrote running/Phase3/phase3c/offline/phase3c_offline_decision.json
+END status=0 output=running/Phase3/phase3c/offline/phase3c_offline_decision.json
+PHASE3C_OFFLINE_COMPLETE

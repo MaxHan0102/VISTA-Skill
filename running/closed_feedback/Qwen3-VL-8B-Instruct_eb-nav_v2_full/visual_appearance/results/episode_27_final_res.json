@@ -1,0 +1,1 @@
+{"reward": 0.09090909090909091, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "task_success": 1.0, "num_steps": 11, "planner_steps": 5, "planner_output_error": 1, "episode_elapsed_seconds": 70.17277908325195}

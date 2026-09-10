@@ -1,0 +1,54 @@
+{
+  "candidate_artifact_sha256": "a5db07f91bfc7bdbdd7f87ea4345847996e247c01c1af2ac392397c7936d28d5",
+  "candidate_skill_sha256": "b18385197efad9c2b831312e3f0be4a3289767879c57b8ee0e1c087cc8039d87",
+  "candidate_version": 1,
+  "evidence_ids": [
+    "14:s14:feedback:not_holding",
+    "14:s14:visual:1:at(plate,receptacle_aabb_counter_right_kitchen_counter)",
+    "14:s14:visual:4:near(receptacle_aabb_counter_left_kitchen_counter)",
+    "14:s14:visual:5:near(receptacle_aabb_counter_right_kitchen_counter)",
+    "14:s14:visual:6:near(receptacle_aabb_tbl1_top1_frl_apartment_table_01)",
+    "14:s14:visual:7:near(receptacle_aabb_tvstnd1_top1_frl_apartment_tvstand)"
+  ],
+  "field": "constraint",
+  "parent_artifact_sha256": "2e6df94bcbd1edab62640f8ee6d590c148b5aee133cc941e518ae58057f003b6",
+  "parent_skill_sha256": "bf7ff08f9026c1f9aa0fc981c32204bf4d4cf74324d9f413e0ee04c128153e1c",
+  "parent_version": 0,
+  "patch_id": "9a2b051d4686788655b6",
+  "promoted": false,
+  "protocol": {
+    "acquisition_episode_budget": 20,
+    "config_sha256": "b4e00516096fb9156f610e165ab89b04b1ab82f02c7d07ef76fb862e7c22434c",
+    "diagnostic": true,
+    "env": "eb-hab",
+    "evolution_seed": 0,
+    "evolution_seeds": [
+      0
+    ],
+    "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "executor_model_type": "remote",
+    "executor_temperature": 0.0,
+    "frozen": true,
+    "gate_rollout_seeds": [
+      0,
+      1,
+      2
+    ],
+    "manifest_sha256": "b08ee365b22302899084e209f09002e96242d3ce3eb4bad410d0523b4a163bec",
+    "max_completion_tokens": 4096,
+    "method": "full",
+    "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "n_shots": 10,
+    "protocol": "vista_skill_fault_repair_fullsel_p10f30_2026_08_20",
+    "resolution": 500,
+    "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+    "run_id": "a9dc6c97e23f44fe8c8e2765cf4bcc1a_seed_0",
+    "skill_fault": "constraint_pick_multihold",
+    "split_rotation_index": 0,
+    "split_sha256": "e6558c0c6b1e2a99603aeee7350104c888a130cef043c188ca90cdd99372fbeb",
+    "tensor_parallel": 1
+  },
+  "schema_version": "1",
+  "snapshot_id": "v0-v1-5a9bcd218965-b18385197efa",
+  "snapshot_sha256": "bb7ca2a93f2455872573aaa38b1d85cec587d704fc683d275c904c3e76b661af"
+}

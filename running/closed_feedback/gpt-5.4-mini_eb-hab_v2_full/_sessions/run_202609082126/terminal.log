@@ -1,0 +1,1532 @@
+Output directory: /root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126
+[2026-09-08 21:26:48,599][INFO] - Current eval set: visual_appearance
+2026-09-08 21:26:48,707 Initializing dataset LangRearrangeDataset-v0
+2026-09-08 21:26:48,707 Loading from /root/max/VISTA-Skill/EmbodiedBench/embodiedbench/envs/eb_habitat/datasets/visual_appearance.pickle
+2026-09-08 21:26:48,710 initializing sim RearrangeSim-v0
+2026-09-08 21:26:50,096 Initializing task RearrangePredicateTask-v0
+Num episodes 50
+Episodes:   0%|                                                                                                                                                                                                                            | 0/50 [00:00<?, ?it/s][2026-09-08 21:26:50,222][INFO] - Evaluating episode 0 ...
+[2026-09-08 21:26:51,470][INFO] - Episode 0: BaseEpisode(episode_id='39', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_01.scene_instance.json')
+Instruction: Deliver a small red object with green top to the intended a large gray piece of furniture with a backrest by physically moving it there.
+Planner Output Action: [8, 16, 12, 49]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the chair 1, Task success: False
+Planner Output Action: [12, 16, 12, 49]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the chair 1, Task success: False
+Planner Output Action: [12, 16, 12, 49]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the chair 1, Task success: False
+Planner Output Action: [12, 16, 12, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [8, 16, 12, 56]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:   2%|████▏                                                                                                                                                                                                               | 1/50 [00:38<31:37, 38.73s/it][2026-09-08 21:27:28,953][INFO] - Evaluating episode 1 ...
+[2026-09-08 21:27:29,106][INFO] - Episode 1: BaseEpisode(episode_id='30', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_00.scene_instance.json')
+Instruction: Extract a flat red round object from the brown table and move it to the right counter.
+Planner Output Action: [6, 50]
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [6, 16, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 11, 17, 10, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the clamp, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [6, 16, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [6, 16, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [6, 16, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:   4%|████████▍                                                                                                                                                                                                           | 2/50 [01:31<37:49, 47.28s/it][2026-09-08 21:28:22,211][INFO] - Evaluating episode 2 ...
+[2026-09-08 21:28:22,220][INFO] - Episode 2: BaseEpisode(episode_id='20', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_00.scene_instance.json')
+Instruction: Move a ball to a large gray piece of furniture with a backrest.
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [16, 12, 56]
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [12, 16, 12, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [12, 16, 12, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [12, 16, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [16, 56]
+Executed action: pick up the ball, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:   6%|████████████▋                                                                                                                                                                                                       | 3/50 [02:26<39:34, 50.53s/it][2026-09-08 21:29:16,615][INFO] - Evaluating episode 3 ...
+[2026-09-08 21:29:16,685][INFO] - Episode 3: BaseEpisode(episode_id='35', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_13.scene_instance.json')
+Instruction: Move the white cylindrical object with a handle to the TV stand.
+Planner Output Action: [12, 43, 8, 52]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the cup, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [8, 43, 52]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the cup, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [43, 8, 52]
+Executed action: pick up the cup, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [8, 43, 52]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the cup, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [12, 43, 8, 52]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the cup, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:   8%|████████████████▉                                                                                                                                                                                                   | 4/50 [03:00<33:54, 44.22s/it][2026-09-08 21:29:51,168][INFO] - Evaluating episode 4 ...
+[2026-09-08 21:29:51,177][INFO] - Episode 4: BaseEpisode(episode_id='43', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_13.scene_instance.json')
+Instruction: Secure a yellow round object from a large gray piece of furniture with a backrest and transport it to the black table.
+Planner Output Action: [8, 16, 6, 50]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 16, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 16, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 16, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 16, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  10%|█████████████████████▏                                                                                                                                                                                              | 5/50 [03:43<32:38, 43.51s/it][2026-09-08 21:30:33,422][INFO] - Evaluating episode 5 ...
+[2026-09-08 21:30:33,910][INFO] - Episode 5: BaseEpisode(episode_id='36', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Take a yellow curved object and place it in the brown table.
+Planner Output Action: [12, 47, 7, 51]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the toy airplane, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [12, 7, 7]
+Executed action: navigate to the sofa, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Planner Output Action: [7, 16, 7, 51]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [6, 17, 7, 51]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the clamp, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [7, 16, 7, 51]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [6, 17, 7, 51]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the clamp, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  12%|█████████████████████████▍                                                                                                                                                                                          | 6/50 [04:28<32:20, 44.10s/it][2026-09-08 21:31:18,674][INFO] - Evaluating episode 6 ...
+[2026-09-08 21:31:18,683][INFO] - Episode 6: BaseEpisode(episode_id='0', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Procure a yellow round fruit and convey it to the left counter.
+Planner Output Action: [8, 45, 11, 55]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 34, 11, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [8, 45, 11, 55]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [8, 45, 11, 55]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [8, 45, 11, 55]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  14%|█████████████████████████████▋                                                                                                                                                                                      | 7/50 [05:15<32:15, 45.00s/it][2026-09-08 21:32:05,526][INFO] - Evaluating episode 7 ...
+[2026-09-08 21:32:05,534][INFO] - Episode 7: BaseEpisode(episode_id='21', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Retrieve a purple fruit and place it in the sink.
+Planner Output Action: [8, 45, 9, 53]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [8]
+Executed action: navigate to the TV stand, Task success: False
+Planner Output Action: [8, 30, 9, 53]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [8, 30, 9, 53]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [8, 30, 9, 53]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [8, 30, 9, 53]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  16%|█████████████████████████████████▉                                                                                                                                                                                  | 8/50 [06:05<32:38, 46.63s/it][2026-09-08 21:32:55,648][INFO] - Evaluating episode 8 ...
+[2026-09-08 21:32:55,657][INFO] - Episode 8: BaseEpisode(episode_id='13', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Acquire a purple fruit and deposit it in the black table.
+Planner Output Action: [7, 32, 6, 50]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the peach, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [7, 32, 6, 50]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the peach, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [7, 32, 6, 50]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the peach, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [7, 30, 6, 50]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [7, 30, 6, 50]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  18%|██████████████████████████████████████▏                                                                                                                                                                             | 9/50 [06:42<29:44, 43.52s/it][2026-09-08 21:33:32,335][INFO] - Evaluating episode 9 ...
+[2026-09-08 21:33:32,343][INFO] - Episode 9: BaseEpisode(episode_id='34', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Please, carry a purple fruit to a large gray piece of furniture with a backrest.
+Planner Output Action: [8, 45, 12, 56]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [12, 30, 12, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [12, 30, 12, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [12, 30, 12, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [12, 30, 12, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  20%|██████████████████████████████████████████▏                                                                                                                                                                        | 10/50 [07:18<27:33, 41.34s/it][2026-09-08 21:34:08,791][INFO] - Evaluating episode 10 ...
+[2026-09-08 21:34:08,799][INFO] - Episode 10: BaseEpisode(episode_id='7', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Get ahold of a yellow curved object and deliver it to the black table.
+Planner Output Action: [12, 16, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [6, 17, 6, 50]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the clamp, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [6, 17, 6, 50]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the clamp, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [6, 17, 6, 50]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the clamp, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [6, 17, 6, 50]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the clamp, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  22%|██████████████████████████████████████████████▍                                                                                                                                                                    | 11/50 [08:00<26:59, 41.53s/it][2026-09-08 21:34:50,761][INFO] - Evaluating episode 11 ...
+[2026-09-08 21:34:50,770][INFO] - Episode 11: BaseEpisode(episode_id='22', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Obtain a round red fruit and put it in the right counter.
+Planner Output Action: [8, 30, 10, 54]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [6, 33, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [6, 33, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [6, 33, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [6, 33, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [6, 33, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  24%|██████████████████████████████████████████████████▋                                                                                                                                                                | 12/50 [09:11<31:53, 50.36s/it][2026-09-08 21:36:01,320][INFO] - Evaluating episode 12 ...
+[2026-09-08 21:36:01,329][INFO] - Episode 12: BaseEpisode(episode_id='9', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Please, carry a purple fruit to the black table.
+Planner Output Action: [12, 32, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the peach, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [6, 32, 6, 50]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the peach, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 32, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the peach, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 32, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the peach, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 32, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the peach, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 32, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the peach, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  26%|██████████████████████████████████████████████████████▊                                                                                                                                                            | 13/50 [09:55<30:01, 48.69s/it][2026-09-08 21:36:46,173][INFO] - Evaluating episode 13 ...
+[2026-09-08 21:36:46,241][INFO] - Episode 13: BaseEpisode(episode_id='38', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_06.scene_instance.json')
+Instruction: Transport an oval-shaped blue receptacle and carefully position it in the designated TV stand.
+Planner Output Action: [8]
+Executed action: navigate to the TV stand, Task success: False
+Planner Output Action: [8]
+Executed action: navigate to the TV stand, Task success: False
+Planner Output Action: [8]
+Executed action: navigate to the TV stand, Task success: False
+Planner Output Action: [8]
+Executed action: navigate to the TV stand, Task success: False
+Planner Output Action: [8, 42, 8, 52]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [13, 60, 42, 8, 52]
+Executed action: navigate to the refrigerator, Task success: False
+Executed action: open the refrigerator, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [13, 60, 42, 8, 52]
+Executed action: navigate to the refrigerator, Task success: False
+Executed action: open the refrigerator, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [8]
+Executed action: navigate to the TV stand, Task success: False
+Planner Output Action: [8]
+Executed action: navigate to the TV stand, Task success: False
+Planner Output Action: [8]
+Executed action: navigate to the TV stand, Task success: False
+Planner Output Action: [8]
+Executed action: navigate to the TV stand, Task success: False
+Planner Output Action: [8]
+Executed action: navigate to the TV stand, Task success: False
+Planner Output Action: [8]
+Executed action: navigate to the TV stand, Task success: False
+Planner Output Action: [8]
+Executed action: navigate to the TV stand, Task success: False
+Planner Output Action: [0, 52]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [8]
+Executed action: navigate to the TV stand, Task success: False
+Planner Output Action: [8]
+Executed action: navigate to the TV stand, Task success: False
+Planner Output Action: [8, 52]
+Executed action: navigate to the TV stand, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  28%|███████████████████████████████████████████████████████████                                                                                                                                                        | 14/50 [12:34<49:03, 81.77s/it][2026-09-08 21:39:24,374][INFO] - Evaluating episode 14 ...
+[2026-09-08 21:39:24,384][INFO] - Episode 14: BaseEpisode(episode_id='23', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_06.scene_instance.json')
+Instruction: Extract an oval-shaped blue receptacle from the black table.
+Planner Output Action: [6, 47]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the toy airplane, Task success: False
+Planner Output Action: [50, 7, 16]
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the ball, Task success: False
+Planner Output Action: [6, 0]
+Executed action: navigate to the table 1, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [6, 43]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the cup, Task success: False
+Planner Output Action: [16, 42]
+Executed action: pick up the ball, Task success: False
+Executed action: pick up the bowl, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  30%|███████████████████████████████████████████████████████████████▎                                                                                                                                                   | 15/50 [13:17<40:53, 70.11s/it][2026-09-08 21:40:07,469][INFO] - Evaluating episode 15 ...
+[2026-09-08 21:40:07,478][INFO] - Episode 15: BaseEpisode(episode_id='40', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_06.scene_instance.json')
+Instruction: Deposit a small purple cube-shaped object and a flat red round object onto the black table.
+Planner Output Action: [12, 40, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 42, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 40, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 42, 6, 50, 12, 40, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  32%|███████████████████████████████████████████████████████████████████▌                                                                                                                                               | 16/50 [13:58<34:45, 61.33s/it][2026-09-08 21:40:48,397][INFO] - Evaluating episode 16 ...
+[2026-09-08 21:40:48,465][INFO] - Episode 16: BaseEpisode(episode_id='44', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_02.scene_instance.json')
+Instruction: Take a yellow round object away from the TV stand.
+Planner Output Action: [8, 16, 6, 50]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [8, 16, 6, 50]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [8, 16, 6, 50]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [8, 16, 6, 50]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [8, 16, 7, 51]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  34%|███████████████████████████████████████████████████████████████████████▋                                                                                                                                           | 17/50 [14:41<30:49, 56.03s/it][2026-09-08 21:41:32,117][INFO] - Evaluating episode 17 ...
+[2026-09-08 21:41:32,233][INFO] - Episode 17: BaseEpisode(episode_id='41', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_02.scene_instance.json')
+Instruction: Take a flat red round object and transfer it to the allocated right counter.
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [6, 16, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [6, 16, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [6, 16, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [6, 16, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [6, 16, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  36%|███████████████████████████████████████████████████████████████████████████▉                                                                                                                                       | 18/50 [15:47<31:27, 58.99s/it][2026-09-08 21:42:37,998][INFO] - Evaluating episode 18 ...
+[2026-09-08 21:42:38,066][INFO] - Episode 18: BaseEpisode(episode_id='19', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_08.scene_instance.json')
+Instruction: Move a spoon from a large gray piece of furniture with a backrest to the TV stand.
+Planner Output Action: [12, 26, 8, 52]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the spoon, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [12, 26, 8, 52]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the spoon, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [12, 26, 8, 52]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the spoon, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [8, 26, 52]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the spoon, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [12, 26, 8, 52]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the spoon, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  38%|████████████████████████████████████████████████████████████████████████████████▏                                                                                                                                  | 19/50 [16:38<29:08, 56.39s/it][2026-09-08 21:43:28,342][INFO] - Evaluating episode 19 ...
+[2026-09-08 21:43:28,352][INFO] - Episode 19: BaseEpisode(episode_id='6', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_08.scene_instance.json')
+Instruction: Move the white cylindrical object with a handle to the brown table.
+Planner Output Action: [12, 43, 7, 51]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the cup, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [6]
+Executed action: navigate to the table 1, Task success: False
+Planner Output Action: [18, 7, 51]
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [7, 43, 7, 51]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the cup, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [7, 43, 6, 50]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the cup, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 43, 7, 51]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the cup, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  40%|████████████████████████████████████████████████████████████████████████████████████▍                                                                                                                              | 20/50 [18:08<33:14, 66.47s/it][2026-09-08 21:44:58,306][INFO] - Evaluating episode 20 ...
+[2026-09-08 21:44:58,315][INFO] - Episode 20: BaseEpisode(episode_id='26', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_08.scene_instance.json')
+Instruction: Place a flat red round object and a knife on the brown table.
+Planner Output Action: [7, 25, 51]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the knife, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [7, 25, 51]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the knife, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [7, 25, 51]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the knife, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [7, 25, 51, 6, 16, 7, 51]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the knife, Task success: False
+Executed action: place at the table 2, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  42%|████████████████████████████████████████████████████████████████████████████████████████▌                                                                                                                          | 21/50 [18:43<27:33, 57.02s/it][2026-09-08 21:45:33,269][INFO] - Evaluating episode 21 ...
+[2026-09-08 21:45:33,338][INFO] - Episode 21: BaseEpisode(episode_id='17', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_03.scene_instance.json')
+Instruction: Displace a small red object with green top from the sink.
+Planner Output Action: [9, 35, 6, 50]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the can, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [6, 16, 7, 51]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [9, 35, 7, 51]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the can, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [9, 35, 6, 50]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the can, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [9, 35, 7, 51]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the can, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  44%|████████████████████████████████████████████████████████████████████████████████████████████▊                                                                                                                      | 22/50 [20:13<31:18, 67.09s/it][2026-09-08 21:47:03,855][INFO] - Evaluating episode 22 ...
+[2026-09-08 21:47:04,072][INFO] - Episode 22: BaseEpisode(episode_id='1', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Take a yellow curved object and place it in the TV stand.
+Planner Output Action: [8]
+Executed action: navigate to the TV stand, Task success: False
+Planner Output Action: [17, 52]
+Executed action: pick up the clamp, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [8, 17, 52]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the clamp, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [8, 17, 52]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the clamp, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [8, 17, 52]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the clamp, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [8, 17, 52]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the clamp, Task success: False
+Executed action: place at the TV stand, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  46%|█████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                                  | 23/50 [21:58<35:20, 78.55s/it][2026-09-08 21:48:49,147][INFO] - Evaluating episode 23 ...
+[2026-09-08 21:48:49,156][INFO] - Episode 23: BaseEpisode(episode_id='8', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Take a yellow round fruit and position it within the right counter.
+Planner Output Action: [7, 45, 10, 54]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [45, 54]
+Executed action: pick up the orange, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [7, 45, 10, 54]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [7, 45, 10, 54]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [7, 45, 10, 54]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  48%|█████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                                                                             | 24/50 [22:46<30:03, 69.38s/it][2026-09-08 21:49:37,113][INFO] - Evaluating episode 24 ...
+[2026-09-08 21:49:37,130][INFO] - Episode 24: BaseEpisode(episode_id='4', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Collect a round red fruit and position it in the black table.
+Planner Output Action: [6, 33, 6, 50]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [6, 33, 6, 50]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [6, 33, 6, 50]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [6, 33, 6, 50]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [6, 33, 6, 50]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  50%|█████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                                         | 25/50 [24:01<29:30, 70.82s/it][2026-09-08 21:50:51,288][INFO] - Evaluating episode 25 ...
+[2026-09-08 21:50:51,297][INFO] - Episode 25: BaseEpisode(episode_id='37', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Find a round red fruit and bring it to the sink.
+Planner Output Action: [6, 33, 9, 53]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [6, 33, 9, 53]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9, 16, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [6, 33, 9, 53]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [6, 33, 9, 53]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  52%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                                                                     | 26/50 [24:46<25:16, 63.18s/it][2026-09-08 21:51:36,638][INFO] - Evaluating episode 26 ...
+[2026-09-08 21:51:36,647][INFO] - Episode 26: BaseEpisode(episode_id='14', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Retrieve a yellow curved object and ensure it's in the left counter.
+Planner Output Action: [10, 35, 11, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the can, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 30, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [10, 37, 11, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the banana, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Planner Output Action: [16]
+Executed action: pick up the ball, Task success: False
+Planner Output Action: [55]
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [10, 37, 11, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the banana, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  54%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                                                                 | 27/50 [25:55<24:51, 64.83s/it][2026-09-08 21:52:45,341][INFO] - Evaluating episode 27 ...
+[2026-09-08 21:52:45,350][INFO] - Episode 27: BaseEpisode(episode_id='47', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Procure a purple fruit and deliver it to the left counter.
+Planner Output Action: [6, 30, 11, 55]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [6, 30, 11, 55]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [6, 30, 11, 55]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [6, 30, 11, 55]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [6, 30, 11, 55]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  56%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                                                            | 28/50 [27:04<24:18, 66.31s/it][2026-09-08 21:53:55,083][INFO] - Evaluating episode 28 ...
+[2026-09-08 21:53:55,092][INFO] - Episode 28: BaseEpisode(episode_id='5', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Pick up a yellow round fruit and deposit it into a large gray piece of furniture with a backrest.
+Planner Output Action: [12, 45, 12, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [12, 45, 12, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [12, 45, 12, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [12, 45, 12, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [12, 45, 12, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  58%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                                                        | 29/50 [27:38<19:49, 56.64s/it][2026-09-08 21:54:29,169][INFO] - Evaluating episode 29 ...
+[2026-09-08 21:54:29,178][INFO] - Episode 29: BaseEpisode(episode_id='27', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Find a round red fruit and bring it to the sink.
+Planner Output Action: [7, 30, 9, 53]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [7, 30, 9, 53]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [7, 32, 9, 53]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the peach, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [7, 30, 9, 53]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [7, 30, 9, 53]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  60%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                    | 30/50 [28:08<16:10, 48.50s/it][2026-09-08 21:54:58,688][INFO] - Evaluating episode 30 ...
+[2026-09-08 21:54:58,697][INFO] - Episode 30: BaseEpisode(episode_id='45', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Bring a yellow round fruit to a large gray piece of furniture with a backrest.
+Planner Output Action: [12, 30, 12, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [12, 34, 12, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [12, 34, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the lemon, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [34, 12, 56]
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [12, 34, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the lemon, Task success: False
+Executed action: place at the sofa, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  62%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                                                | 31/50 [28:40<13:45, 43.45s/it][2026-09-08 21:55:30,355][INFO] - Evaluating episode 31 ...
+[2026-09-08 21:55:30,423][INFO] - Episode 31: BaseEpisode(episode_id='15', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_11.scene_instance.json')
+Instruction: Transfer a small purple cube-shaped object to the designated black table.
+Planner Output Action: [12, 39, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the lego, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  64%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                            | 32/50 [28:47<09:49, 32.73s/it][2026-09-08 21:55:38,076][INFO] - Evaluating episode 32 ...
+[2026-09-08 21:55:38,085][INFO] - Episode 32: BaseEpisode(episode_id='16', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_11.scene_instance.json')
+Instruction: Deliver a green round fruit to the intended a large gray piece of furniture with a backrest by physically moving it there.
+Planner Output Action: [8]
+Executed action: navigate to the TV stand, Task success: False
+Planner Output Action: [8, 35, 12, 56]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the can, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [6, 33, 12, 56]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [12, 33, 12, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [12, 16, 12, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [12, 33, 12, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  66%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                                       | 33/50 [30:02<12:52, 45.43s/it][2026-09-08 21:56:53,136][INFO] - Evaluating episode 33 ...
+[2026-09-08 21:56:53,394][INFO] - Episode 33: BaseEpisode(episode_id='10', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: Procure a purple fruit and deliver it to the TV stand.
+Planner Output Action: [12, 45, 8, 52]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [6, 30, 8, 52]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  68%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                                   | 34/50 [30:23<10:06, 37.92s/it][2026-09-08 21:57:13,535][INFO] - Evaluating episode 34 ...
+[2026-09-08 21:57:13,552][INFO] - Episode 34: BaseEpisode(episode_id='25', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: Locate a yellow round fruit and deliver it to the black table.
+Planner Output Action: [12, 30, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [13, 60, 34, 6, 50]
+Executed action: navigate to the refrigerator, Task success: False
+Executed action: open the refrigerator, Task success: False
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [13, 60, 45, 6, 50]
+Executed action: navigate to the refrigerator, Task success: False
+Executed action: open the refrigerator, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [13, 60, 34, 6, 50]
+Executed action: navigate to the refrigerator, Task success: False
+Executed action: open the refrigerator, Task success: False
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  70%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                               | 35/50 [31:11<10:15, 41.03s/it][2026-09-08 21:58:01,825][INFO] - Evaluating episode 35 ...
+[2026-09-08 21:58:01,834][INFO] - Episode 35: BaseEpisode(episode_id='29', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: Locate a yellow round fruit and deliver it to the sink.
+Planner Output Action: [6, 31, 9, 53]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [6, 31, 9, 53]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [6, 31, 9, 53]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [6, 31, 9, 53]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [6, 31, 9, 53]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  72%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                           | 36/50 [31:51<09:30, 40.73s/it][2026-09-08 21:58:41,854][INFO] - Evaluating episode 36 ...
+[2026-09-08 21:58:41,923][INFO] - Episode 36: BaseEpisode(episode_id='2', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_14.scene_instance.json')
+Instruction: Retrieve an can from the right counter and transfer it to a large gray piece of furniture with a backrest.
+Planner Output Action: [10, 35, 12, 56]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the can, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  74%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                      | 37/50 [32:00<06:44, 31.10s/it][2026-09-08 21:58:50,486][INFO] - Evaluating episode 37 ...
+[2026-09-08 21:58:50,495][INFO] - Episode 37: BaseEpisode(episode_id='32', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_14.scene_instance.json')
+Instruction: Deposit an oval-shaped blue receptacle and a book onto the sink.
+Planner Output Action: [8, 41, 9, 53, 6, 42, 9, 53]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the book, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Planner Output Action: [9, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Planner Output Action: [9]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Planner Output Action: [9, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Planner Output Action: [5]
+Executed action: navigate to the chair 1, Task success: False
+Planner Output Action: [9, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Planner Output Action: [9, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [8, 16, 9, 53]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  76%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                  | 38/50 [33:21<09:13, 46.16s/it][2026-09-08 22:00:11,799][INFO] - Evaluating episode 38 ...
+[2026-09-08 22:00:11,867][INFO] - Episode 38: BaseEpisode(episode_id='18', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_10.scene_instance.json')
+Instruction: Head to a large gray piece of furniture with a backrest.
+Planner Output Action: [12]
+Executed action: navigate to the sofa, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  78%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                              | 39/50 [33:27<06:14, 34.03s/it][2026-09-08 22:00:17,526][INFO] - Evaluating episode 39 ...
+[2026-09-08 22:00:17,596][INFO] - Episode 39: BaseEpisode(episode_id='31', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_09.scene_instance.json')
+Instruction: Move one of the white cylindrical object with a handle items to the indicated sink.
+Planner Output Action: [9]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Planner Output Action: [29, 53]
+Executed action: pick up the cleanser, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9, 29, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9, 29, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [13, 29, 9, 53]
+Executed action: navigate to the refrigerator, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9, 29, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9, 29, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9, 29, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [6, 29, 9, 53]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [6, 44, 9, 53]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the mug, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  80%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                          | 40/50 [34:23<06:47, 40.76s/it][2026-09-08 22:01:13,992][INFO] - Evaluating episode 40 ...
+[2026-09-08 22:01:14,060][INFO] - Episode 40: BaseEpisode(episode_id='12', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_04.scene_instance.json')
+Instruction: Lift a small purple cube-shaped object off the right counter.
+Planner Output Action: [10, 39]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the lego, Task success: False
+Planner Output Action: [10, 11, 7]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Planner Output Action: [7, 22]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the block, Task success: False
+Planner Output Action: [10, 22]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Planner Output Action: [10, 22]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Planner Output Action: [10, 22]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Planner Output Action: [10, 22]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Planner Output Action: [10, 22]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Planner Output Action: [10, 22]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Planner Output Action: [10, 22]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Planner Output Action: [10, 22]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Planner Output Action: [10, 22]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  82%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                      | 41/50 [35:57<08:29, 56.56s/it][2026-09-08 22:02:47,401][INFO] - Evaluating episode 41 ...
+[2026-09-08 22:02:47,410][INFO] - Episode 41: BaseEpisode(episode_id='11', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_04.scene_instance.json')
+Instruction: Position both a flat red round object and a small purple cube-shaped object on the brown table.
+Planner Output Action: [7, 35, 7, 51, 12, 39, 7, 51]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the can, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the lego, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [6, 22, 7, 51, 7, 35, 6, 50]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the block, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the can, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [7, 16, 7, 51, 12, 39, 7, 51]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  84%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                 | 42/50 [36:17<06:05, 45.74s/it][2026-09-08 22:03:07,892][INFO] - Evaluating episode 42 ...
+[2026-09-08 22:03:08,062][INFO] - Episode 42: BaseEpisode(episode_id='28', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: Acquire a yellow round fruit and leave it in the left counter.
+Planner Output Action: [8, 45, 11, 55]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 37, 11, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the banana, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 37, 11, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the banana, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [8, 45, 11, 55]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Planner Output Action: [45, 55]
+Executed action: pick up the orange, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Planner Output Action: [37, 55]
+Executed action: pick up the banana, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 37, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the banana, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 37, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the banana, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 37, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the banana, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  86%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                             | 43/50 [37:49<06:57, 59.58s/it][2026-09-08 22:04:39,772][INFO] - Evaluating episode 43 ...
+[2026-09-08 22:04:39,789][INFO] - Episode 43: BaseEpisode(episode_id='24', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: Locate a purple fruit and convey it to the sink.
+Planner Output Action: [6, 30, 9, 53]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9, 30, 9, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9, 30, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9, 6, 30, 9, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9, 42, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Planner Output Action: [6, 30, 9, 53]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  88%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                         | 44/50 [38:46<05:52, 58.79s/it][2026-09-08 22:05:36,711][INFO] - Evaluating episode 44 ...
+[2026-09-08 22:05:36,721][INFO] - Episode 44: BaseEpisode(episode_id='3', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: Bring a purple fruit to the black table.
+Planner Output Action: [12, 30, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 30, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 30, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 30, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 30, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  90%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                     | 45/50 [39:24<04:22, 52.55s/it][2026-09-08 22:06:14,706][INFO] - Evaluating episode 45 ...
+[2026-09-08 22:06:14,872][INFO] - Episode 45: BaseEpisode(episode_id='33', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: Find a yellow round fruit and place it in the black table.
+Planner Output Action: [12, 45, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 34, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  92%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                 | 46/50 [39:40<02:45, 41.47s/it][2026-09-08 22:06:30,321][INFO] - Evaluating episode 46 ...
+[2026-09-08 22:06:30,330][INFO] - Episode 46: BaseEpisode(episode_id='48', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: Collect a round red fruit and position it in the right counter.
+Planner Output Action: [12, 30, 10, 54]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [8, 45, 10, 54]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [6, 16, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [8, 45, 10, 54]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [6, 16, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [8, 45, 10, 54]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [8, 45, 10, 54]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  94%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎            | 47/50 [40:44<02:24, 48.32s/it][2026-09-08 22:07:34,620][INFO] - Evaluating episode 47 ...
+[2026-09-08 22:07:34,690][INFO] - Episode 47: BaseEpisode(episode_id='46', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_07.scene_instance.json')
+Instruction: Obtain a flat red round object from a large gray piece of furniture with a backrest and transfer it to the sink.
+Planner Output Action: [12, 16, 9, 53]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [12, 16, 9, 53]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [12, 16, 9, 53]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [12, 16, 9, 53]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [12, 16, 9, 53]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  96%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌        | 48/50 [41:39<01:40, 50.45s/it][2026-09-08 22:08:30,047][INFO] - Evaluating episode 48 ...
+[2026-09-08 22:08:30,116][INFO] - Episode 48: BaseEpisode(episode_id='42', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_12.scene_instance.json')
+Instruction: Set down a small red object with green top and a yellow round object on the right counter.
+Planner Output Action: [9, 43, 10, 54, 9, 42, 10, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cup, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [9, 43, 10, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cup, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [9, 43, 10, 54, 9, 42, 10, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cup, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [9, 43, 10, 54, 9, 42, 10, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cup, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  98%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊    | 49/50 [42:08<00:43, 43.87s/it][2026-09-08 22:08:58,554][INFO] - Evaluating episode 49 ...
+[2026-09-08 22:08:58,624][INFO] - Episode 49: BaseEpisode(episode_id='49', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_05.scene_instance.json')
+Instruction: Walk to a large gray piece of furniture with a backrest area.
+Planner Output Action: [12]
+Executed action: navigate to the sofa, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [42:14<00:00, 32.51s/it]Episodes: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [42:14<00:00, 50.69s/it]
+['/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_33_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_21_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_17_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_41_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_6_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_22_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_25_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_46_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_34_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_9_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_16_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_26_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_4_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_27_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_44_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_39_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_18_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_5_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_31_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_47_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_40_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_35_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_49_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_37_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_28_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_29_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_12_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_24_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_45_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_32_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_19_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_36_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_13_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_10_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_38_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_15_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_11_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_7_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_2_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_14_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_48_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_43_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_42_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_3_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_1_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_8_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_20_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_30_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_23_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_50_final_res.json'] 50
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_33_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Deliver a green round fruit to the intended a large gray piece of furniture with a backrest by physically moving it there.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 21, 'planner_steps': 6, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.47619047619047616, 'episode_elapsed_seconds': [75.01786470413208]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_21_final_res.json
+{'reward': 0.0390625, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Place a flat red round object and a knife on the brown table.', 'task_success': False, 'task_progress': 0.125, 'subgoal_reward': 0.0, 'num_steps': 16, 'planner_steps': 4, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.625, 'episode_elapsed_seconds': [34.92498302459717]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_17_final_res.json
+{'reward': 0.0625, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Take a yellow round object away from the TV stand.', 'task_success': False, 'task_progress': 0.25, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [43.62706255912781]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_41_final_res.json
+{'reward': 0.13333333333333333, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Lift a small purple cube-shaped object off the right counter.', 'task_success': False, 'task_progress': 0.6666666666666666, 'subgoal_reward': 0.0, 'num_steps': 25, 'planner_steps': 12, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4, 'episode_elapsed_seconds': [93.31968283653259]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_6_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Take a yellow curved object and place it in the brown table.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 23, 'planner_steps': 6, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.43478260869565216, 'episode_elapsed_seconds': [44.72674894332886]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_22_final_res.json
+{'reward': 0.08333333333333333, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Displace a small red object with green top from the sink.', 'task_success': False, 'task_progress': 0.3333333333333333, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [90.4816484451294]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_25_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Collect a round red fruit and position it in the black table.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [74.13028740882874]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_46_final_res.json
+{'reward': 1.875, 'num_invalid_actions': 2, 'empty_plan': 0, 'instruction': 'Find a yellow round fruit and place it in the black table.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 1.25, 'num_steps': 8, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.25, 'episode_elapsed_seconds': [15.427143335342407]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_34_final_res.json
+{'reward': 1.875, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Procure a purple fruit and deliver it to the TV stand.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 1.25, 'num_steps': 8, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [20.128771781921387]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_9_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Acquire a purple fruit and deposit it in the black table.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [36.65317487716675]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_16_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Deposit a small purple cube-shaped object and a flat red round object onto the black table.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 4, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [40.89042520523071]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_26_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Find a round red fruit and bring it to the sink.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 19, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5263157894736842, 'episode_elapsed_seconds': [45.31364154815674]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_4_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move the white cylindrical object with a handle to the TV stand.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 17, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5882352941176471, 'episode_elapsed_seconds': [34.471261501312256]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_27_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': "Retrieve a yellow curved object and ensure it's in the left counter.", 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 18, 'planner_steps': 7, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5555555555555556, 'episode_elapsed_seconds': [68.66792750358582]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_44_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Locate a purple fruit and convey it to the sink.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 24, 'planner_steps': 7, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4166666666666667, 'episode_elapsed_seconds': [56.8953161239624]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_39_final_res.json
+{'reward': 15.0, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Head to a large gray piece of furniture with a backrest.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 5.0, 'num_steps': 1, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [5.622309446334839]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_18_final_res.json
+{'reward': 0.013157894736842105, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Take a flat red round object and transfer it to the allocated right counter.', 'task_success': False, 'task_progress': 0.25, 'subgoal_reward': 0.0, 'num_steps': 18, 'planner_steps': 6, 'planner_output_error': 1, 'num_invalid_action_ratio': 0.5555555555555556, 'episode_elapsed_seconds': [65.73515009880066]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_5_final_res.json
+{'reward': 0.0625, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Secure a yellow round object from a large gray piece of furniture with a backrest and transport it to the black table.', 'task_success': False, 'task_progress': 0.25, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [42.21509075164795]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_31_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Bring a yellow round fruit to a large gray piece of furniture with a backrest.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 17, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5882352941176471, 'episode_elapsed_seconds': [31.632097005844116]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_47_final_res.json
+{'reward': 0.044642857142857144, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Collect a round red fruit and position it in the right counter.', 'task_success': False, 'task_progress': 0.25, 'subgoal_reward': 0.0, 'num_steps': 28, 'planner_steps': 7, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.35714285714285715, 'episode_elapsed_seconds': [64.26267886161804]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_40_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 6, 'empty_plan': 0, 'instruction': 'Move one of the white cylindrical object with a handle items to the indicated sink.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 30, 'planner_steps': 10, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.2, 'episode_elapsed_seconds': [56.37463927268982]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_35_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Locate a yellow round fruit and deliver it to the black table.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 19, 'planner_steps': 4, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5263157894736842, 'episode_elapsed_seconds': [48.24536395072937]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_49_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Set down a small red object with green top and a yellow round object on the right counter.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 28, 'planner_steps': 4, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.35714285714285715, 'episode_elapsed_seconds': [28.41578197479248]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_37_final_res.json
+{'reward': 3.75, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Retrieve an can from the right counter and transfer it to a large gray piece of furniture with a backrest.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 1.25, 'num_steps': 4, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [8.534243106842041]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_28_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Procure a purple fruit and deliver it to the left counter.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [69.70670080184937]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_29_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Pick up a yellow round fruit and deposit it into a large gray piece of furniture with a backrest.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [34.05034589767456]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_12_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Obtain a round red fruit and put it in the right counter.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 24, 'planner_steps': 6, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4166666666666667, 'episode_elapsed_seconds': [70.52262806892395]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_24_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Take a yellow round fruit and position it within the right counter.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 18, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5555555555555556, 'episode_elapsed_seconds': [47.9298210144043]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_45_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Bring a purple fruit to the black table.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [37.96706438064575]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_32_final_res.json
+{'reward': 3.75, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Transfer a small purple cube-shaped object to the designated black table.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 1.25, 'num_steps': 4, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [7.629329204559326]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_19_final_res.json
+{'reward': 0.06578947368421052, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a spoon from a large gray piece of furniture with a backrest to the TV stand.', 'task_success': False, 'task_progress': 0.25, 'subgoal_reward': 0.0, 'num_steps': 19, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5263157894736842, 'episode_elapsed_seconds': [50.26461601257324]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_36_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Locate a yellow round fruit and deliver it to the sink.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [39.99240803718567]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_13_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Please, carry a purple fruit to the black table.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 24, 'planner_steps': 6, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4166666666666667, 'episode_elapsed_seconds': [44.82039022445679]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_10_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Please, carry a purple fruit to a large gray piece of furniture with a backrest.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [36.42100787162781]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_38_final_res.json
+{'reward': 0.02403846153846154, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Deposit an oval-shaped blue receptacle and a book onto the sink.', 'task_success': False, 'task_progress': 0.125, 'subgoal_reward': 0.0, 'num_steps': 26, 'planner_steps': 12, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.38461538461538464, 'episode_elapsed_seconds': [81.28177881240845]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_15_final_res.json
+{'reward': 1.0227272727272727, 'num_invalid_actions': 5, 'empty_plan': 0, 'instruction': 'Extract an oval-shaped blue receptacle from the black table.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 1.25, 'num_steps': 11, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.45454545454545453, 'episode_elapsed_seconds': [43.057573080062866]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_11_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Get ahold of a yellow curved object and deliver it to the black table.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [41.937349796295166]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_7_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Procure a yellow round fruit and convey it to the left counter.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [46.816859006881714]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_2_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Extract a flat red round object from the brown table and move it to the right counter.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 21, 'planner_steps': 6, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.47619047619047616, 'episode_elapsed_seconds': [53.06953763961792]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_14_final_res.json
+{'reward': 0.041666666666666664, 'num_invalid_actions': 8, 'empty_plan': 0, 'instruction': 'Transport an oval-shaped blue receptacle and carefully position it in the designated TV stand.', 'task_success': False, 'task_progress': 0.25, 'subgoal_reward': 0.0, 'num_steps': 30, 'planner_steps': 18, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.26666666666666666, 'episode_elapsed_seconds': [158.10929489135742]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_48_final_res.json
+{'reward': 0.013157894736842105, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Obtain a flat red round object from a large gray piece of furniture with a backrest and transfer it to the sink.', 'task_success': False, 'task_progress': 0.25, 'subgoal_reward': 0.0, 'num_steps': 18, 'planner_steps': 6, 'planner_output_error': 1, 'num_invalid_action_ratio': 0.5555555555555556, 'episode_elapsed_seconds': [55.323357582092285]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_43_final_res.json
+{'reward': 0.041666666666666664, 'num_invalid_actions': 4, 'empty_plan': 0, 'instruction': 'Acquire a yellow round fruit and leave it in the left counter.', 'task_success': False, 'task_progress': 0.25, 'subgoal_reward': 0.0, 'num_steps': 30, 'planner_steps': 11, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.13333333333333333, 'episode_elapsed_seconds': [91.68424963951111]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_42_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Position both a flat red round object and a small purple cube-shaped object on the brown table.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 3, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [20.453051805496216]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_3_final_res.json
+{'reward': -0.0625, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a ball to a large gray piece of furniture with a backrest.', 'task_success': False, 'task_progress': 0.25, 'subgoal_reward': 0.0, 'num_steps': 15, 'planner_steps': 6, 'planner_output_error': 1, 'num_invalid_action_ratio': 0.6666666666666666, 'episode_elapsed_seconds': [54.36258506774902]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_1_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Deliver a small red object with green top to the intended a large gray piece of furniture with a backrest by physically moving it there.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [37.44768190383911]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_8_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Retrieve a purple fruit and place it in the sink.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 21, 'planner_steps': 6, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.47619047619047616, 'episode_elapsed_seconds': [50.08616328239441]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_20_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move the white cylindrical object with a handle to the brown table.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [89.92542505264282]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_30_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Find a round red fruit and bring it to the sink.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [29.48208999633789]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_23_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Take a yellow curved object and place it in the TV stand.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 15, 'planner_steps': 6, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.6666666666666666, 'episode_elapsed_seconds': [105.06452703475952]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_50_final_res.json
+{'reward': 15.0, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Walk to a large gray piece of furniture with a backrest area.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 5.0, 'num_steps': 1, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [5.899433612823486]}
+final results: 
+{'reward': 0.8567015270913297, 'num_invalid_actions': 8.5, 'empty_plan': 0.0, 'task_success': 0.14, 'task_progress': 0.21, 'subgoal_reward': 0.325, 'num_steps': 18.82, 'planner_steps': 5.54, 'planner_output_error': 0.06, 'num_invalid_action_ratio': 0.42705548205851074, 'episode_elapsed_seconds': 50.580371279716495}

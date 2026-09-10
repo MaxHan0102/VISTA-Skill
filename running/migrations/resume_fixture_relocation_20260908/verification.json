@@ -1,0 +1,10 @@
+{
+  "status": "verified",
+  "moved_directories": 2,
+  "files_verified": 80,
+  "rewritten_files": 17,
+  "hash_dependency_rounds": 2,
+  "resume_metrics_unchanged": true,
+  "closed_feedback_excluded": true,
+  "symlinks_created": 0
+}

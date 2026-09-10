@@ -1,0 +1,15 @@
+{
+  "phase": "Phase3C",
+  "stage": "frozen_offline_gate",
+  "completed_local_time": "2026-08-25T15:52:00+08:00",
+  "tmux_session": "phase3c_offline",
+  "exit_code": 0,
+  "completion_marker": "PHASE3C_OFFLINE_COMPLETE",
+  "output_artifact_count": 15,
+  "output_bytes": 765376,
+  "model_calls": 676,
+  "decision": "no_go",
+  "decision_artifact": "running/Phase3/phase3c/offline/phase3c_offline_decision.json",
+  "decision_sha256": "c0d580e28639ffff29470b6a9b579769487993455a20cdc1617461d3a04c80d8",
+  "conditional_live_branches": "cancelled_by_preregistered_no_go"
+}

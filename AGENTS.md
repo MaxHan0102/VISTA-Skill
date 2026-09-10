@@ -19,6 +19,52 @@ explicitly revokes this repository policy.
 
 `EmbodiedBench/` contains the stock benchmark's runnable Python code: Hydra configs in `embodiedbench/configs/`, agent logic in `planner/`, episode loops in `evaluator/`, and simulator adapters in `envs/`. `vista_skill/` holds the VISTA-Skill method itself (core VTCA, skill evolution, controlled baselines, experiment protocol, and EmbodiedBench adapters under `vista_skill/integrations/`); `configs/`, `tests/`, `scripts/`, and `docs/` hold its protocol configs, test suite, tooling, and status notes. Outputs belong under `running/`. `context4agent/` holds figures, references, design notes, and a stale reference-only paper copy under `latex/`. `EmbodiedBench/habitat-lab/` is an inlined upstream dependency; avoid unrelated edits there.
 
+## Experiment Output Placement and Version Control
+
+Use repository-root-relative paths below, regardless of the shell's working
+directory. When launching from `EmbodiedBench/`, pass `../running/...` or an
+absolute path for VISTA-owned output. Choose the category before launching;
+do not create loose experiment directories directly under `running/`.
+
+| Category | Canonical location |
+|---|---|
+| VISTA method experiments, including phase-specific diagnostics | `running/PhaseN/<experiment_id>/` (Phase1--Phase5; current method work is Phase5) |
+| General smoke tests, mock/fixed-policy checks, resume fixtures | `running/test/<test_id>/` |
+| Closed-model feedback experiments | `running/closed_feedback/<run_id>/` |
+| Migration manifests, hash maps and local original backups | `running/migrations/<migration_id>/` |
+| Native EmbodiedBench raw evaluator output | `EmbodiedBench/running/<environment>/<experiment_id>/` |
+| Existing native navigation baseline console/analysis records | `running/embodiedbench_native_nav/<experiment_id>/` |
+
+Keep run metadata, trajectories, metrics, API audit records and image references
+under the owning experiment directory when the adapter supports it. Stock
+simulator image output may require an adapter/output-path override; do not
+change benchmark scoring or planner behavior to reorganize files. Record any
+unavoidable separate raw-image location. Phase-owned historical simulator
+images live under `running/PhaseN/simulator/`. See `docs/experiment_output_layout.md`.
+
+Resume within the original run's `_resume/attempt_<id>/` directory. Resume
+fixtures belong in `running/test/`, not alongside live experiments. Do not move,
+rewrite or overwrite a directory another session is using; in particular keep
+live `running/closed_feedback/` data in place. Keep the first complete result
+and its provenance; do not silently replace failed trials with successful ones.
+
+For a requested relocation, update stored paths and active script/documentation
+references rather than leaving compatibility symlinks. Back up changed originals,
+record old/new paths and hashes under `running/migrations/`, validate referenced
+files, and preserve scores, actions and experiment conclusions. New storage
+hashes do not constitute a new preregistration. Never rewrite the reference-only
+`context4agent/latex/` tree.
+
+Non-image experiment records in **both** `running/` and `EmbodiedBench/running/`
+are eligible for Git: JSON/JSONL, configs, logs, summaries, Skill artifacts and
+migration manifests. The previous blanket ban on generated `running/` outputs
+no longer applies. Images (including extensionless `audit/input_images/` caches),
+backup archives and runtime lock files stay ignored by `.gitignore`. Preserve
+image paths/hashes in records even though the image bytes are stored locally.
+Never commit credentials, downloaded datasets or simulator assets; check API
+request/response logs for secrets before staging them. Enabling tracking does
+not itself authorize committing or pushing outputs.
+
 ## Build, Test, and Development Commands
 
 Run benchmark commands from `EmbodiedBench/`.
@@ -41,4 +87,4 @@ There is a VISTA-Skill test suite under `tests/` (run with `pytest`) with no fix
 
 ## Commit & Pull Request Guidelines
 
-Use short imperative commit summaries and keep commits focused. PRs should identify the research question or engineering scope, link the governing design section or issue, list validation commands, and include metrics or visual evidence. Never commit API keys, downloaded datasets, simulator assets, or generated `running/` outputs.
+Use short imperative commit summaries and keep commits focused. PRs should identify the research question or engineering scope, link the governing design section or issue, list validation commands, and include metrics or visual evidence. Non-image experiment records may be committed under the output policy above; never commit API keys, downloaded datasets, simulator assets, ignored images, backup archives or runtime locks.

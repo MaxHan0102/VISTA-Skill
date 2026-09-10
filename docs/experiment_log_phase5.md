@@ -1,5 +1,7 @@
 # Phase 5 experiment log
 
+> 2026-09-08 目录整理：本阶段实验实体已归档至 `running/Phase5/`，路径引用已改写且兼容软链接已删除，原版已备份。详见[实验输出目录说明](experiment_output_layout.md)。
+
 This log starts after the 2026-09-02 requirement reset: VISTA-Skill must exceed
 the published EmbodiSkill result on both EB-HAB and EB-NAV. Earlier phase logs
 remain immutable historical records.
@@ -197,13 +199,13 @@ Live sequence:
 1. The endpoint 192.168.1.185:8000/v1 again passed all 6/6 serving-contract
    checks.
 2. Unguarded one-episode diagnostic
-   running/phase5_discovery_smoke_20260902 completed a ball-to-sofa task in four
+   running/Phase5/phase5_discovery_smoke_20260902 completed a ball-to-sofa task in four
    actions with success 1.0 and progress 1.0. All four transitions reached
    Discovery. It also exposed a blocking evidence defect: after navigation,
    the VLM assigned near-one confidence to action-irrelevant claims that the
    ball had already moved and the gripper was free.
 3. The same seed with the authority-aware guard,
-   running/phase5_discovery_guarded_smoke_20260902, again succeeded in four
+   running/Phase5/phase5_discovery_guarded_smoke_20260902, again succeeded in four
    actions. The guard retained only nav-to-near, pick-to-holding/not_holding,
    and place-to-at/holding/not_holding; the premature placement and gripper
    claims after navigation were downgraded. Method usage was one goal-grounding
@@ -224,14 +226,14 @@ Live sequence:
    unexpectedly began simulator rollouts; those audit fragments are invalid
    and excluded. The diagnostic path now skips update audit by construction.
 6. The completed v3 recurrence run is
-   running/phase5_discovery_recurrence_v3_20260902. Both tasks succeeded
+   running/Phase5/phase5_discovery_recurrence_v3_20260902. Both tasks succeeded
    (4 and 16 steps; 0 and 4 invalid actions), ready clusters progressed from 0
    to 4, and the same four candidates passed static and transition checks. The
    complete manifest records 20 visual-evidence calls and 30,117 visual
    prompt/completion tokens, making per-action visual extraction the next
    measured cost bottleneck.
 7. Event-triggered evidence was then enabled in
-   running/phase5_discovery_sparse_visual_smoke_20260902. On the same
+   running/Phase5/phase5_discovery_sparse_visual_smoke_20260902. On the same
    ball-to-sofa episode, task success, progress, four-step trajectory, and
    Discovery predicates were unchanged. Method usage fell from 6,479 to 1,964
    tokens (minus 69.7 percent) and elapsed time fell from about 29.5 to 6.6
@@ -289,7 +291,7 @@ Implementation:
 
 Natural acquisition smoke:
 
-- `running/phase5_constraint_discovery_smoke_20260902` used five clean
+- `running/Phase5/phase5_constraint_discovery_smoke_20260902` used five clean
   train-validation interactions from interface-only S0. Four of five tasks
   succeeded. Across 41 transitions it produced 17 effect discoveries, three
   constraint discoveries, and 21 abstentions.
@@ -303,7 +305,7 @@ Natural acquisition smoke:
 
 First real paired proxy:
 
-- `running/phase5_constraint_paired_pilot_20260902` acquired five episodes and
+- `running/Phase5/phase5_constraint_paired_pilot_20260902` acquired five episodes and
   evaluated the single constraint candidate against interface-only S0 on the
   ten registered proxy tasks (60--69). Acquisition and proxy completed before
   the generic post-hoc audit was manually stopped.
@@ -357,10 +359,10 @@ remained interface-only S0 and no official-test data was accessed.
 
 Runs:
 
-- `running/phase5_constraint_paired_pilot_v2_20260902` repeated the bounded E4
+- `running/Phase5/phase5_constraint_paired_pilot_v2_20260902` repeated the bounded E4
   protocol: five acquisition episodes, one constraint candidate, ten proxy
   tasks / twenty parent-candidate rollouts, and explicit audit omission.
-- `running/phase5_constraint_paired_pilot_v3_usage_20260902` repeated it once
+- `running/Phase5/phase5_constraint_paired_pilot_v3_usage_20260902` repeated it once
   more after fixing run-scoped executor accounting. This third run exists to
   validate cost artifacts, not to expand the gate or tune on selection results.
 - All 20 proxy rollouts in both repeats were identical to E4 in success,
@@ -455,7 +457,7 @@ Implementation and validation:
 Run and integrity:
 
 - Successful run:
-  `running/phase5_temporal_sequential_paired_e6_20260903_rerun1` with one
+  `running/Phase5/phase5_temporal_sequential_paired_e6_20260903_rerun1` with one
   evolution seed, five acquisition episodes, one constraint candidate, ten
   paired proxy tasks, and diagnostic audit omission. Config hash is
   `a5c39710014bc34e5694d34b9f1ba56c22e82444e8d256a33906992167ec8d94`.
@@ -662,8 +664,8 @@ Pre-registration and integrity:
   60 arm records / 30 paired coordinates. A fresh disk-only recomputation
   matched the saved analysis exactly. The run lasted about 13 minutes 25
   seconds.
-- Preregistration SHA is `0638956987ab17daa96ca58651fc8a742683ce07b3f21398b02dd22e6879c8d3`;
-  records SHA is `a7113f5d320c3a26f0757d4544c023714fa8b6eb65b6d7c43d3185763c60f248`;
+- Preregistration SHA is `31cbb3a25cc1866433204b31be892f08ab6bf9a1a13ac160a19396761b5b1ca0`;
+  records SHA is `022cdaec4f61e148be8cee54b6cf66f89195de7dfa69c5ede4282a0ba35ef710`;
   analysis SHA is `42de5009d1efee45e76199d232ce0fc5cd6b1116b3b652f4447357349da440af`.
 
 Result:
@@ -726,9 +728,9 @@ Pre-registration and integrity:
   about 14 minutes 3 seconds; the 40 new rollouts used 144 executor calls,
   647,067 prompt tokens, and 53,109 completion tokens (700,176 total).
 - Preregistration SHA is
-  `9bd1f9f300e5153593979b1e49e0f270cad1450d788ae5108bd782b382ef2f44`;
+  `b62625bb29f19cbce095f1d0060c2466ada56b5e1c49f760d3dabe7c8eba7c8e`;
   records SHA is
-  `c9ca7278bb714a2f7beda41ac5c1978b24d96cfa0ceb56df15c81a98f05ab097`;
+  `d9f40270921540ae03caf486dd0a17212d38959470ac45ddf1d19e88e1d616f5`;
   analysis SHA is
   `beced34d540e81e64d84e6a5d91a286a5b38dfbfd63de844114ffee677e1b34c`.
 
@@ -808,7 +810,7 @@ Frozen replay:
   while severe failures appeared on tasks 67 and 69. Retention for clean
   evidence accumulation is therefore justified; promotion is not.
 - Replay artifact SHA is
-  `6d85ddb8c9dd0de1d7cb256c7b82480a473c70d0f7aaf6cb035fc1dbc3bfeedc`;
+  `6288b97c3134d94e652798c7c9fc87f62cc5b7961e453228e1b137227cea5c72`;
   its source E6 lineage SHA is
   `f7f374538ac00bac105bc9980c640f4418d538c9c52e8f7fb7b12963a1f8bed2`.
 
@@ -848,13 +850,13 @@ Pre-registration and integrity:
 - Runtime was about 21 minutes 40 seconds. The run used 222 executor calls,
   1,005,245 prompt tokens, and 82,924 completion tokens (1,088,169 total).
 - Preregistration SHA is
-  `10dcb78194426decf1589413e2faf51dfdf1038c6f52585f1e1fe3536cd36722`;
+  `a5c5bd35ee18a187b5eb9edcf96a4c14f65722f6d40a9f4e8f54328edc99b377`;
   records SHA is
-  `a083fadec6c7f87aa1ab73916143bfdafa4c18fdfb836130249f591a12690a63`;
+  `4be608dab162849a009ee3c5778ebd9154d9015f211e393caa7acb77588db092`;
   variance-analysis SHA is
   `b431728391bf710058a13ed40365ad3954f836a8cf6e642a82529d631e45aac4`;
   semantic-confirmation SHA is
-  `e617156cd13b0d1e78a149f4d66e4ae1d37e41cc9d80013d43e831446a72d8b7`.
+  `12019b761b14f9051ea1c7549e56c3ceaba32bccca9af3776015d6c784a1bcb2`.
 
 Result:
 
@@ -951,7 +953,7 @@ containing Habitat-like numeric episode coordinates. All 100 stock development
 coordinates have prior artifacts, including historical audit coordinates. The
 scan reads IDs rather than selecting on outcomes; its complete source paths,
 file hashes, and coordinate lists are saved in
-`running/phase5_p57_recovery_20260907/exposure_audit.json`.
+`running/Phase5/phase5_p57_recovery_20260907/exposure_audit.json`.
 
 Consequently, no new seed or role rotation can be described as entirely unseen
 development data. E10's "untouched finalist" description is specific to the
@@ -971,8 +973,8 @@ would still require broader matched-method and subgroup validation.
 
 Artifacts:
 
-- `running/phase5_p57_recovery_20260907/development.pickle`
-- `running/phase5_p57_recovery_20260907/development_manifest.json`
+- `running/Phase5/phase5_p57_recovery_20260907/development.pickle`
+- `running/Phase5/phase5_p57_recovery_20260907/development_manifest.json`
 - generated dataset SHA256:
   `e1e5696b98dd743a35c99ccbad87506178ccbb8d82dae22016848d1ee338b43d`
 
@@ -995,7 +997,7 @@ Artifacts:
 - Final repository validation: **294 tests passed in 1.05 seconds** using
   `max_embench`; `git diff --check` passed. The original E6 frozen and temporal
   candidate artifacts still pass digest loading. The test log is
-  `running/phase5_p57_recovery_20260907/unit_tests.log`.
+  `running/Phase5/phase5_p57_recovery_20260907/unit_tests.log`.
 - The generated acquisition task `p57_acquisition_00` loaded and rendered on the
   client's RTX 4090 D at resolution 500. The environment smoke contains no model
   call and does not open selection or audit tasks.
@@ -1012,7 +1014,7 @@ The new guard blocks the second pick despite successful navigation. Both arms
 fail the task, and the rule is supplied manually for this scripted smoke, so
 this is **runtime mechanism verification only**, not discovery, adoption by a
 VLM, or task-performance evidence. Artifacts are under
-`running/phase5_p57_recovery_20260907/scripted_smoke/`.
+`running/Phase5/phase5_p57_recovery_20260907/scripted_smoke/`.
 
 ### Initial live-model launch blocker (historical; resolved below)
 
@@ -1030,7 +1032,7 @@ generated data are ready, but reachable endpoint addresses and serving parity
 must be established before freezing their endpoint binding.
 
 Network records: `endpoint_preflight.json`, `launch.log`, `run_status.json` in
-`running/phase5_p57_recovery_20260907/`.
+`running/Phase5/phase5_p57_recovery_20260907/`.
 
 Resume after obtaining reachable vLLM URLs (22 is SSH, not the model API):
 
@@ -1088,7 +1090,7 @@ combined **144 calls / 543,028 tokens**, excluding endpoint probes. This include
 all 16 completed rollout coordinates, including failures. Coordinate runtimes
 are summed in `cost_summary.json`; remote GPU-hours were not measured.
 
-V1 artifacts live in `running/phase5_p57_recovery_20260907/`:
+V1 artifacts live in `running/Phase5/phase5_p57_recovery_20260907/`:
 `preregistration.json`, `discovery.json`, `candidate_skill.json`,
 `mechanism_analysis.json`, `analysis_review.json`, `cost_summary.json`, and
 per-coordinate trajectories/metadata. Initial blocked preflight/status were
@@ -1118,7 +1120,7 @@ parent and discovery hashes, and the recheck driver hash. The dedicated
 with both arms across the two endpoints. It cannot promote a candidate or open
 held-out stages. This is an outcome-informed implementation recheck, not an
 independent confirmation; V1 No-Go is retained. Artifacts are separate under
-`running/phase5_p57_recovery_unknown_recheck_20260907/`.
+`running/Phase5/phase5_p57_recovery_unknown_recheck_20260907/`.
 
 The recheck completed all four coordinates and again returned **No-Go**:
 

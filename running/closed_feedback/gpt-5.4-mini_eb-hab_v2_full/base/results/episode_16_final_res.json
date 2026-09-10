@@ -1,0 +1,1 @@
+{"reward": 0.5, "num_invalid_actions": 2, "empty_plan": 1, "instruction": "The sink needs an hammer and a cup on it.", "task_success": 0, "task_progress": 0, "subgoal_reward": 0, "num_steps": 5, "planner_steps": 2, "planner_output_error": 0, "num_invalid_action_ratio": 0.4, "episode_elapsed_seconds": 9.166204690933228}

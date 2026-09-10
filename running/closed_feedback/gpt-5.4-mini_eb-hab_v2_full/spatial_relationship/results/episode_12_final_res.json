@@ -1,0 +1,1 @@
+{"reward": -0.38235294117647056, "num_invalid_actions": 10, "empty_plan": 0, "instruction": "Move a knife from the brown table to the right receptacle of the left counter.", "task_success": 0, "task_progress": 0, "subgoal_reward": 0, "num_steps": 8, "planner_steps": 12, "planner_output_error": 9, "num_invalid_action_ratio": 1.25, "episode_elapsed_seconds": 209.2190511226654}

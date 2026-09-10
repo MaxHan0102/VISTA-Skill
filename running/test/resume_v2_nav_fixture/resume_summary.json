@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "protocol": "stock_feedback_v2",
+  "smoke_policy": true,
+  "categories": {
+    "base": {
+      "completed": 2,
+      "expected": 2,
+      "task_success": 0.0
+    }
+  },
+  "completed": 2,
+  "expected": 2,
+  "category_mean_success": 0.0,
+  "result_index": "/root/max/VISTA-Skill/running/test/resume_v2_nav_fixture/resume_state.json",
+  "cost_note": "All original/attempt API audits, including abandoned partial episodes, contribute to cost."
+}

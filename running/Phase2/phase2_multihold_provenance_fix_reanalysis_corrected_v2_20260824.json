@@ -1,0 +1,509 @@
+{
+  "affected_group_rule": "goal_preds.inputs has at least two object variables",
+  "alpha": 0.05,
+  "analysis_type": "posthoc_diagnostic_not_threshold_selection",
+  "audit_affected_task_ids": [
+    "84",
+    "91",
+    "97"
+  ],
+  "bootstrap_samples": 10000,
+  "candidates": [
+    {
+      "audit_affected": {
+        "bootstrap_lcb": 0.0013698194762267913,
+        "definition": "goal has at least two object variables",
+        "mean_delta": 0.01663865110979273,
+        "n_tasks": 3
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.06586911682125259,
+        "mean_delta": -0.016371537063739915,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": -0.07939660108648756,
+        "definition": "all remaining tasks",
+        "mean_delta": -0.022196864388480966,
+        "n_tasks": 17,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "48776ddc80ac889125b009ac3d957909f766f3f613fa49dee49cf66391cb26a1",
+      "compiled_rule_check": {
+        "pick_rule_after": "false",
+        "place_rule_after": "true",
+        "unrelated_place_rule_corrupted": false
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "c5f16edfe1e4e3580e7a",
+      "recorded_gate_accepted": false,
+      "selection_finalist": null,
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": 0.0,
+        "mean_delta": 0.10526315789473684,
+        "passed": false,
+        "worst_subgroup_delta": 0.0
+      }
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": -0.10226352919335378,
+        "definition": "goal has at least two object variables",
+        "mean_delta": -0.05181579791228915,
+        "n_tasks": 3
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.10742523441852644,
+        "mean_delta": -0.04501588182095877,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": -0.12108170520404374,
+        "definition": "all remaining tasks",
+        "mean_delta": -0.04381589662837105,
+        "n_tasks": 17,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "580733761480da79cfdf957b574fe8a1dcbf428730d2a92f03c6b57c0d58f4b7",
+      "compiled_rule_check": {
+        "pick_rule_after": "false",
+        "place_rule_after": "true",
+        "unrelated_place_rule_corrupted": false
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "ac00d408e2ee64a5a234",
+      "recorded_gate_accepted": false,
+      "selection_finalist": {
+        "episodes": 30.0,
+        "independent_tasks": 10.0,
+        "lcb": -0.00033337570980592043,
+        "mean_delta": 0.03675672966333439,
+        "passed": false,
+        "worst_subgroup_delta": -0.001230158730158748
+      },
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": 0.0008333333333333332,
+        "mean_delta": 0.10202380952380952,
+        "passed": true,
+        "worst_subgroup_delta": 0.0
+      }
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": -0.011211832281626337,
+        "definition": "goal has at least two object variables",
+        "mean_delta": 0.07748678624536748,
+        "n_tasks": 3
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.09914519153938994,
+        "mean_delta": -0.02479541605334669,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": -0.12359159760528007,
+        "definition": "all remaining tasks",
+        "mean_delta": -0.042845216459002126,
+        "n_tasks": 17,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "39e37ba31d092cd4395f2ce8f90948e40e9f1850fd435bb4591c77f35a92fe25",
+      "compiled_rule_check": {
+        "pick_rule_after": null,
+        "place_rule_after": null,
+        "unrelated_place_rule_corrupted": false
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "5feb6bb8d9288cb16f83",
+      "recorded_gate_accepted": false,
+      "selection_finalist": null,
+      "selection_proxy": null
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": 0.0013698194762267913,
+        "definition": "goal has at least two object variables",
+        "mean_delta": 0.01663865110979273,
+        "n_tasks": 3
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.06585510264095312,
+        "mean_delta": -0.016371537063739915,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": -0.0797162352038513,
+        "definition": "all remaining tasks",
+        "mean_delta": -0.022196864388480966,
+        "n_tasks": 17,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "48776ddc80ac889125b009ac3d957909f766f3f613fa49dee49cf66391cb26a1",
+      "compiled_rule_check": {
+        "pick_rule_after": "false",
+        "place_rule_after": "true",
+        "unrelated_place_rule_corrupted": false
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "c5f16edfe1e4e3580e7a",
+      "recorded_gate_accepted": false,
+      "selection_finalist": null,
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": 0.0,
+        "mean_delta": 0.10526315789473684,
+        "passed": false,
+        "worst_subgroup_delta": 0.0
+      }
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": 0.0013698194762267913,
+        "definition": "goal has at least two object variables",
+        "mean_delta": 0.01663865110979273,
+        "n_tasks": 3
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.0650665072313623,
+        "mean_delta": -0.016371537063739915,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": -0.07936721965875733,
+        "definition": "all remaining tasks",
+        "mean_delta": -0.022196864388480966,
+        "n_tasks": 17,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "48776ddc80ac889125b009ac3d957909f766f3f613fa49dee49cf66391cb26a1",
+      "compiled_rule_check": {
+        "pick_rule_after": "false",
+        "place_rule_after": "true",
+        "unrelated_place_rule_corrupted": false
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "c5f16edfe1e4e3580e7a",
+      "recorded_gate_accepted": false,
+      "selection_finalist": null,
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": 0.0,
+        "mean_delta": 0.10526315789473684,
+        "passed": false,
+        "worst_subgroup_delta": 0.0
+      }
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": -0.267173168466272,
+        "definition": "goal has at least two object variables",
+        "mean_delta": -0.12521410413878656,
+        "n_tasks": 3
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.04996850176054982,
+        "mean_delta": 0.0173806832543188,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": -0.024054604043498913,
+        "definition": "all remaining tasks",
+        "mean_delta": 0.042544469264866804,
+        "n_tasks": 17,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "1cfd1e5cae810aa059042ac55ea464cd792dcbc08f4e72ebd88a4a6b91a8c783",
+      "compiled_rule_check": {
+        "pick_rule_after": "false",
+        "place_rule_after": "true",
+        "unrelated_place_rule_corrupted": false
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "b50e44bae8f377d67476",
+      "recorded_gate_accepted": false,
+      "selection_finalist": {
+        "episodes": 30.0,
+        "independent_tasks": 10.0,
+        "lcb": -0.011110221205186876,
+        "mean_delta": -0.0016473825281986987,
+        "passed": false,
+        "worst_subgroup_delta": -0.012608605762686622
+      },
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": 0.09476190476190476,
+        "mean_delta": 0.2970250626566416,
+        "passed": true,
+        "worst_subgroup_delta": 0.0
+      }
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": 0.03310849312565559,
+        "definition": "goal has at least two object variables",
+        "mean_delta": 0.20542773820805857,
+        "n_tasks": 3
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.05976382119660152,
+        "mean_delta": -0.005390012115889305,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": -0.08563234551153516,
+        "definition": "all remaining tasks",
+        "mean_delta": -0.04259314452599776,
+        "n_tasks": 17,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "e075425df38725c93ad3fc394a0123cfc31774c0cd87da8e8340209bfae44db8",
+      "compiled_rule_check": {
+        "pick_rule_after": "false",
+        "place_rule_after": "true",
+        "unrelated_place_rule_corrupted": false
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "d11f3abe129750336ebb",
+      "recorded_gate_accepted": false,
+      "selection_finalist": null,
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": -0.0075000000000000015,
+        "mean_delta": 0.19645363408521305,
+        "passed": false,
+        "worst_subgroup_delta": 0.0
+      }
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": 0.0013698194762267913,
+        "definition": "goal has at least two object variables",
+        "mean_delta": 0.01663865110979273,
+        "n_tasks": 3
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.06573644110924812,
+        "mean_delta": -0.016371537063739915,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": -0.07940209838164067,
+        "definition": "all remaining tasks",
+        "mean_delta": -0.022196864388480966,
+        "n_tasks": 17,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "48776ddc80ac889125b009ac3d957909f766f3f613fa49dee49cf66391cb26a1",
+      "compiled_rule_check": {
+        "pick_rule_after": "false",
+        "place_rule_after": "true",
+        "unrelated_place_rule_corrupted": false
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "c5f16edfe1e4e3580e7a",
+      "recorded_gate_accepted": false,
+      "selection_finalist": null,
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": 0.0,
+        "mean_delta": 0.10526315789473684,
+        "passed": false,
+        "worst_subgroup_delta": 0.0
+      }
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": -0.267173168466272,
+        "definition": "goal has at least two object variables",
+        "mean_delta": -0.12521410413878656,
+        "n_tasks": 3
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.04919002494177079,
+        "mean_delta": 0.0173806832543188,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": -0.017775950960094176,
+        "definition": "all remaining tasks",
+        "mean_delta": 0.042544469264866804,
+        "n_tasks": 17,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "1cfd1e5cae810aa059042ac55ea464cd792dcbc08f4e72ebd88a4a6b91a8c783",
+      "compiled_rule_check": {
+        "pick_rule_after": "false",
+        "place_rule_after": "true",
+        "unrelated_place_rule_corrupted": false
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "b50e44bae8f377d67476",
+      "recorded_gate_accepted": false,
+      "selection_finalist": {
+        "episodes": 30.0,
+        "independent_tasks": 10.0,
+        "lcb": -0.011110221205186876,
+        "mean_delta": -0.0016473825281986987,
+        "passed": false,
+        "worst_subgroup_delta": -0.012608605762686622
+      },
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": 0.09476190476190476,
+        "mean_delta": 0.2970250626566416,
+        "passed": true,
+        "worst_subgroup_delta": 0.0
+      }
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": -0.043632756132756134,
+        "definition": "goal has at least two object variables",
+        "mean_delta": 0.0772194058378269,
+        "n_tasks": 3
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.015501749793416456,
+        "mean_delta": 0.005355187981284477,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": -0.016553843759726104,
+        "definition": "all remaining tasks",
+        "mean_delta": -0.007326732816928891,
+        "n_tasks": 17,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "e818019fea3abef49cd487fc888cbcbd0616a89b1354060ddfb1b1c8b369e634",
+      "compiled_rule_check": {
+        "pick_rule_after": "false",
+        "place_rule_after": "true",
+        "unrelated_place_rule_corrupted": false
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "7aec04e1e763432fb20e",
+      "recorded_gate_accepted": false,
+      "selection_finalist": null,
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": -0.016002506265664164,
+        "mean_delta": 0.09362554112554111,
+        "passed": false,
+        "worst_subgroup_delta": 0.0
+      }
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": -0.29071150097465887,
+        "definition": "goal has at least two object variables",
+        "mean_delta": -0.13874066540478946,
+        "n_tasks": 3
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.1206730492541896,
+        "mean_delta": -0.059128470615963324,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": -0.1086917293637381,
+        "definition": "all remaining tasks",
+        "mean_delta": -0.04507925977087635,
+        "n_tasks": 17,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "aaf23bb368bca26d54f45ed8ce9db46429c50972e046acf2404b3b42f2bd1e39",
+      "compiled_rule_check": {
+        "pick_rule_after": null,
+        "place_rule_after": null,
+        "unrelated_place_rule_corrupted": false
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "2cb07e583aaec5c8f3ae",
+      "recorded_gate_accepted": false,
+      "selection_finalist": null,
+      "selection_proxy": null
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": -0.25006144588524454,
+        "definition": "goal has at least two object variables",
+        "mean_delta": -0.021544551798174993,
+        "n_tasks": 3
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.07024560534247797,
+        "mean_delta": -0.022712091331275164,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": -0.055783610094755604,
+        "definition": "all remaining tasks",
+        "mean_delta": -0.022918127719469307,
+        "n_tasks": 17,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "b0a1aca419baa366d89d675c3eae932aec1c3d89eec736324ca88a892273b0ab",
+      "compiled_rule_check": {
+        "pick_rule_after": null,
+        "place_rule_after": null,
+        "unrelated_place_rule_corrupted": false
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "8289411a18d65af6d344",
+      "recorded_gate_accepted": false,
+      "selection_finalist": null,
+      "selection_proxy": null
+    }
+  ],
+  "interpretation_guardrail": "Audit outcomes were already observed. Use this result to formulate and power a preregistered policy, never to select its final threshold.",
+  "materialized_candidate_count": 12,
+  "non_materialized_candidate_count": 3,
+  "non_materialized_candidates": [
+    {
+      "field": "termination",
+      "patch_id": "2dc2e2df97b96e907fd1",
+      "reason": "compiled prediction rule IDs must be non-empty and unique",
+      "recorded_gate_accepted": false
+    },
+    {
+      "field": "termination",
+      "patch_id": "54719d7616aba168c21e",
+      "reason": "compiled prediction rule IDs must be non-empty and unique",
+      "recorded_gate_accepted": false
+    },
+    {
+      "field": "termination",
+      "patch_id": "aaf23c6f1ccd67937c56",
+      "reason": "compiled prediction rule IDs must be non-empty and unique",
+      "recorded_gate_accepted": false
+    }
+  ],
+  "proposal_attempt_count": 15,
+  "semantic_policy_pass_count": 0,
+  "source_run": "running/Phase2/phase2_multihold_provenance_fix/full/seed_0",
+  "unique_candidate_hash_count": 8,
+  "unrelated_rule_corruption_count": 0
+}

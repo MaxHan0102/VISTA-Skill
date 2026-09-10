@@ -1,0 +1,380 @@
+{
+  "seed": 570907,
+  "roles": {
+    "acquisition": 12,
+    "proxy": 8,
+    "finalist": 8,
+    "audit": 8
+  },
+  "tasks": [
+    {
+      "episode_id": "p57_acquisition_00",
+      "role": "acquisition",
+      "source_episode_id": "0",
+      "source_layout_sha256": "15f82db0ef1818d33104f9f9aa2facf3458939836658b938b686f4cf54550857",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_00.scene_instance",
+      "endpoint_index": 0,
+      "goal_sha256": "037ffbb6efa606b3099f2484d81fb14a4cfb7e34b0390a8c5b898afad13bb4cc"
+    },
+    {
+      "episode_id": "p57_acquisition_01",
+      "role": "acquisition",
+      "source_episode_id": "86",
+      "source_layout_sha256": "0014d98b1cef395aadb3dc49a9e145fde0266c6fb3af4b7b47e8730cbd99aa7a",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_12.scene_instance",
+      "endpoint_index": 1,
+      "goal_sha256": "5cc9b7462813df6374786573a41db1180ef5cf6a5e1bbf82df13cda6e97f8c32"
+    },
+    {
+      "episode_id": "p57_acquisition_02",
+      "role": "acquisition",
+      "source_episode_id": "17",
+      "source_layout_sha256": "f7d253746def45bee054e554d5ebb8c4285b5e87be49f3a254c9f84d829296c0",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_02.scene_instance",
+      "endpoint_index": 0,
+      "goal_sha256": "f70cf90c4d221c3b6537f8dec01d3db5bd91d546472c4e33f708cc584a13af6d"
+    },
+    {
+      "episode_id": "p57_acquisition_03",
+      "role": "acquisition",
+      "source_episode_id": "52",
+      "source_layout_sha256": "94eae49a56411df755c73b37f0f55e7b607c3e533ee930c45c0fad48e5b889ea",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_07.scene_instance",
+      "endpoint_index": 1,
+      "goal_sha256": "f2681b6954c9395655199e034d7871ef582081a2a91850434a556fef61a41431"
+    },
+    {
+      "episode_id": "p57_acquisition_04",
+      "role": "acquisition",
+      "source_episode_id": "82",
+      "source_layout_sha256": "7055aafe10bf5e147bca74713323b89793c57aa7bdcda592bcc209b53f9d11f6",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_12.scene_instance",
+      "endpoint_index": 0,
+      "goal_sha256": "3ae619fc5256452ba57d66afe8a856701dea3d90f8e0e844f7dcf28b527d9d57"
+    },
+    {
+      "episode_id": "p57_acquisition_05",
+      "role": "acquisition",
+      "source_episode_id": "62",
+      "source_layout_sha256": "8954141ffb94b4e828fc622db4001ec653fdbc878afff2d6f1daf6df3c2c913f",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_09.scene_instance",
+      "endpoint_index": 1,
+      "goal_sha256": "461032f053fd940ea5e072a6c277828fc1c463b666b389f616f8f72c84ca5220"
+    },
+    {
+      "episode_id": "p57_acquisition_06",
+      "role": "acquisition",
+      "source_episode_id": "11",
+      "source_layout_sha256": "36a5f4c0cfc004b64f20d6ddcc0cf7a07a0bb1daed44afea1d720e4fa6ba36ae",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_01.scene_instance",
+      "endpoint_index": 0,
+      "goal_sha256": "5094f217a84b4d80f2d7bb07b24cf4916ab5456a0e60691510b3c1199ff7e7ae"
+    },
+    {
+      "episode_id": "p57_acquisition_07",
+      "role": "acquisition",
+      "source_episode_id": "51",
+      "source_layout_sha256": "1f3b8c112af0da08f7d2553f420fd105154c6aa9b782d811f8486dd2ed3c7cca",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_07.scene_instance",
+      "endpoint_index": 1,
+      "goal_sha256": "6cb53b1dc8cf98bdbf70a055113eae76a030f32e066dbc57db29f3cacf63bb88"
+    },
+    {
+      "episode_id": "p57_acquisition_08",
+      "role": "acquisition",
+      "source_episode_id": "75",
+      "source_layout_sha256": "90cbcbde0999d9f7b9b692b9d82b49ea03ae6609c39e0462502cfb633a2fcdb0",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_11.scene_instance",
+      "endpoint_index": 0,
+      "goal_sha256": "cd868fe5f69f630ee6f62104086ef277c5970e2bd2a9ed4255a64e1fd9922a36"
+    },
+    {
+      "episode_id": "p57_acquisition_09",
+      "role": "acquisition",
+      "source_episode_id": "44",
+      "source_layout_sha256": "c0c38b821514af40de0c4e5835537f121950d68d0beb5bd9dec154a927bca500",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_06.scene_instance",
+      "endpoint_index": 1,
+      "goal_sha256": "6dcc31e83b34e48228b8b23f392807fbbba9b4e419ac52faa30d1aa196086f94"
+    },
+    {
+      "episode_id": "p57_acquisition_10",
+      "role": "acquisition",
+      "source_episode_id": "87",
+      "source_layout_sha256": "637e549e6c4ad123c5f12d1546c773b56b104013566ba61f0bf92fc180d1bb15",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_12.scene_instance",
+      "endpoint_index": 0,
+      "goal_sha256": "836310e2bc95763ac747430bdcdfc780d8537f2fb89ad8bb1903f2a7b980baed"
+    },
+    {
+      "episode_id": "p57_acquisition_11",
+      "role": "acquisition",
+      "source_episode_id": "34",
+      "source_layout_sha256": "3b627f4de231f922c9c6bc6dd36372d89ff33ce631d85cd16a0b0f1ca662b2a5",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_05.scene_instance",
+      "endpoint_index": 1,
+      "goal_sha256": "10557b7a6e6345f9b1dcf7bc3b44f1e4ed3399dbf97ebda35d79574a9fdce2ed"
+    },
+    {
+      "episode_id": "p57_proxy_00",
+      "role": "proxy",
+      "source_episode_id": "47",
+      "source_layout_sha256": "4c683c70de28ac5c759cbd5341676ae74b1c48aede51c318de0b5a5ea08e62b3",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_07.scene_instance",
+      "endpoint_index": 0,
+      "goal_sha256": "66dd0b5b2b13d1ac2cf6c9fb739afb8c0cd721f2f6eddcf6d2f8b6dbfb9e390d"
+    },
+    {
+      "episode_id": "p57_proxy_01",
+      "role": "proxy",
+      "source_episode_id": "80",
+      "source_layout_sha256": "66e678a7799aa987cb0127c7a802cf6439f20dc76630d1bbe9e6afa46209f103",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_11.scene_instance",
+      "endpoint_index": 1,
+      "goal_sha256": "ec92f37bb563440bc9d1cd9d9beea4f3313feacf3dbd15ee8d2579dc7c6e29ea"
+    },
+    {
+      "episode_id": "p57_proxy_02",
+      "role": "proxy",
+      "source_episode_id": "31",
+      "source_layout_sha256": "fbca906ebccc47af1670724f99a02702d2d09eff8f6ff1d855a0a4a5e1f5d488",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_04.scene_instance",
+      "endpoint_index": 0,
+      "goal_sha256": "79ed822e8dae17ca6f13a717148c02033d5493489cb354c61dadc694948297f9"
+    },
+    {
+      "episode_id": "p57_proxy_03",
+      "role": "proxy",
+      "source_episode_id": "40",
+      "source_layout_sha256": "9df2ada102ebd7dadfdf325c13f324829f93a5c3b9edd3d6ab9f23ad6d906627",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_06.scene_instance",
+      "endpoint_index": 1,
+      "goal_sha256": "fea78f444be459398cda29558a893c2efeaecc0d2958add4490d3cf505b0b91b"
+    },
+    {
+      "episode_id": "p57_proxy_04",
+      "role": "proxy",
+      "source_episode_id": "59",
+      "source_layout_sha256": "52e2ee72de7163a9294edd9d7b9579e05b6dfdb6e935d19ff210b18848af05b0",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_08.scene_instance",
+      "endpoint_index": 0,
+      "goal_sha256": "fd815c582702563f814d3f6322e5b3869d1eb55c9bb1b971083040d5ee866e6c"
+    },
+    {
+      "episode_id": "p57_proxy_05",
+      "role": "proxy",
+      "source_episode_id": "4",
+      "source_layout_sha256": "26d5003cbbb1cd8ca5b3ed84c95d35ed92cb83d7e5e5e21f86c6e2c5198299ca",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_00.scene_instance",
+      "endpoint_index": 1,
+      "goal_sha256": "ec9bf4bcea86ea94fa1c3be3d0d5e5919571873e0831d031920b77b2a6d4466b"
+    },
+    {
+      "episode_id": "p57_proxy_06",
+      "role": "proxy",
+      "source_episode_id": "3",
+      "source_layout_sha256": "39fad71c78e3cafb6227cdb96e7fdf4302a7d0b525f9fb1c9122277f5a65c786",
+      "scope": "protected",
+      "subgroup": "scene:v3_sc0_staging_00.scene_instance",
+      "endpoint_index": 0,
+      "goal_sha256": "6e6f3fdb99972a5421d73bf953ef30813824f8bcae9cf1b3831a9ac414339dfb"
+    },
+    {
+      "episode_id": "p57_proxy_07",
+      "role": "proxy",
+      "source_episode_id": "90",
+      "source_layout_sha256": "e66dcf468944de35cd258b3fb962d814f4ca6ffb3c74f65fec6fa6192b84001f",
+      "scope": "protected",
+      "subgroup": "scene:v3_sc0_staging_13.scene_instance",
+      "endpoint_index": 1,
+      "goal_sha256": "33c7336d6934efe8026e6dc99f2ca2b6eb27c6e710dc89160c0a1884e1061dc8"
+    },
+    {
+      "episode_id": "p57_finalist_00",
+      "role": "finalist",
+      "source_episode_id": "89",
+      "source_layout_sha256": "308a24c3f67ce3f0ed0d2312687d7806e4daf0b57b957f94df520f41dfb4a19f",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_13.scene_instance",
+      "endpoint_index": 0,
+      "goal_sha256": "38eae370a5f5ee7dba07e4a6a158e3aa22fab8d0f3f9f68df5883c9b467c67ea"
+    },
+    {
+      "episode_id": "p57_finalist_01",
+      "role": "finalist",
+      "source_episode_id": "7",
+      "source_layout_sha256": "52adf63839cdb630a2e78fe6a8b2324136e905692c8cd83bcb1f482d30dbfcf9",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_01.scene_instance",
+      "endpoint_index": 1,
+      "goal_sha256": "ee882662182748ff57ffcda2d5ea70f61155bf5ce91f17276e11d2a1889f43c2"
+    },
+    {
+      "episode_id": "p57_finalist_02",
+      "role": "finalist",
+      "source_episode_id": "45",
+      "source_layout_sha256": "832166fc744ec9d419e311cbe2ad6156c6c4a9105718d88bbc8174934cbb36a6",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_06.scene_instance",
+      "endpoint_index": 0,
+      "goal_sha256": "33bc341596b61913de5c9fcddbacd44708d5643bf5d3d9db16968b3cb6f74fcf"
+    },
+    {
+      "episode_id": "p57_finalist_03",
+      "role": "finalist",
+      "source_episode_id": "48",
+      "source_layout_sha256": "a29d055b3f485cec45eb40f9399f65a1a68a76146c09404a3e96c6e0361a8db4",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_07.scene_instance",
+      "endpoint_index": 1,
+      "goal_sha256": "57db337ab6a7510e0ba4e93d7e4f91268ae92aea26198589cc39da6fa4ec8e71"
+    },
+    {
+      "episode_id": "p57_finalist_04",
+      "role": "finalist",
+      "source_episode_id": "55",
+      "source_layout_sha256": "8aa95a360a2ab8cefb9310f5fce0b4a408a9fad09d50876bc150a4d2106b202e",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_08.scene_instance",
+      "endpoint_index": 0,
+      "goal_sha256": "569ffbbf9b4ff4ff4cfba471fe5f0a481f289be733f6890daab43998e5f1387a"
+    },
+    {
+      "episode_id": "p57_finalist_05",
+      "role": "finalist",
+      "source_episode_id": "54",
+      "source_layout_sha256": "09bf5aa1b1a542ad221460869dc2312743384cdae4ae03eeba45ebdb3410843c",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_08.scene_instance",
+      "endpoint_index": 1,
+      "goal_sha256": "475cf44b453affc9db026e129c30c6e6d350fbe8b2a681f77bc243f0fbed7e2b"
+    },
+    {
+      "episode_id": "p57_finalist_06",
+      "role": "finalist",
+      "source_episode_id": "27",
+      "source_layout_sha256": "aebf3dbbcbe3cad8240a90e703b9b2cb29609999c08ac3696c2db009e6cc81b3",
+      "scope": "protected",
+      "subgroup": "scene:v3_sc0_staging_04.scene_instance",
+      "endpoint_index": 0,
+      "goal_sha256": "23063586d8424491bace7392fb2dc988fead7579da73922784230543246965d1"
+    },
+    {
+      "episode_id": "p57_finalist_07",
+      "role": "finalist",
+      "source_episode_id": "37",
+      "source_layout_sha256": "bf0beda2511144f6ee0644db1218722a101f8406653f5ef535044def67fa33ed",
+      "scope": "protected",
+      "subgroup": "scene:v3_sc0_staging_05.scene_instance",
+      "endpoint_index": 1,
+      "goal_sha256": "33c7336d6934efe8026e6dc99f2ca2b6eb27c6e710dc89160c0a1884e1061dc8"
+    },
+    {
+      "episode_id": "p57_audit_00",
+      "role": "audit",
+      "source_episode_id": "76",
+      "source_layout_sha256": "93a88ab4d313bdf919ca79f2885f0ec492d0c31535ce8b9a78c3567355c90170",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_11.scene_instance",
+      "endpoint_index": 0,
+      "goal_sha256": "72d91d14dbf88b3e0483f46a0d5a07f92c0f94d1f0e211158aa70fe76fe7af8a"
+    },
+    {
+      "episode_id": "p57_audit_01",
+      "role": "audit",
+      "source_episode_id": "20",
+      "source_layout_sha256": "1ee20e286e85cfc4c0e0fc3b75501cd67497aed58076596b6f67149e9e6b7d35",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_03.scene_instance",
+      "endpoint_index": 1,
+      "goal_sha256": "ee882662182748ff57ffcda2d5ea70f61155bf5ce91f17276e11d2a1889f43c2"
+    },
+    {
+      "episode_id": "p57_audit_02",
+      "role": "audit",
+      "source_episode_id": "99",
+      "source_layout_sha256": "e765779fea1c970639ccdf6f34ae21b595b865a0addbeb676afd3624d68ed767",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_14.scene_instance",
+      "endpoint_index": 0,
+      "goal_sha256": "d90ff3edccde0e45dbd57604a170979644938682bd7b4e7a3d71a85be82cf1f1"
+    },
+    {
+      "episode_id": "p57_audit_03",
+      "role": "audit",
+      "source_episode_id": "41",
+      "source_layout_sha256": "0eec653de2a7c728c88824a76574c64ef11e1336b9fc7ff60db139925283e567",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_06.scene_instance",
+      "endpoint_index": 1,
+      "goal_sha256": "75673965ff8f40538e05ea02cdaf20fb366178de14d998071b09d7c51fe23dfa"
+    },
+    {
+      "episode_id": "p57_audit_04",
+      "role": "audit",
+      "source_episode_id": "93",
+      "source_layout_sha256": "ac3e5746b1ce414466a678b9806fdd1442f4d386a0e361890b5d81af5202895c",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_13.scene_instance",
+      "endpoint_index": 0,
+      "goal_sha256": "137fe4c0db3eaf61d8a7271a83f1aa090ba048294495548267b5c15dab3fd5f6"
+    },
+    {
+      "episode_id": "p57_audit_05",
+      "role": "audit",
+      "source_episode_id": "18",
+      "source_layout_sha256": "feb3d15d942f61edeb438337b2a42b9431dd5024ff0d475e785c01ed460e9c28",
+      "scope": "affected",
+      "subgroup": "scene:v3_sc0_staging_02.scene_instance",
+      "endpoint_index": 1,
+      "goal_sha256": "66dd0b5b2b13d1ac2cf6c9fb739afb8c0cd721f2f6eddcf6d2f8b6dbfb9e390d"
+    },
+    {
+      "episode_id": "p57_audit_06",
+      "role": "audit",
+      "source_episode_id": "58",
+      "source_layout_sha256": "85ddf7e8201716a14b1d0de0ac9df3ad3e67fdfe3b57c3e10dbdf307dc09a005",
+      "scope": "protected",
+      "subgroup": "scene:v3_sc0_staging_08.scene_instance",
+      "endpoint_index": 0,
+      "goal_sha256": "710a38bf842d03a7f8dbcdd2ecf5d2c7f8e2dadee682ed90c301c69006b22839"
+    },
+    {
+      "episode_id": "p57_audit_07",
+      "role": "audit",
+      "source_episode_id": "38",
+      "source_layout_sha256": "212d4c8438b4e3649a694b47466f337209bd2ffec6d44cfecabb13af4c966da0",
+      "scope": "protected",
+      "subgroup": "scene:v3_sc0_staging_05.scene_instance",
+      "endpoint_index": 1,
+      "goal_sha256": "6e6f3fdb99972a5421d73bf953ef30813824f8bcae9cf1b3831a9ac414339dfb"
+    }
+  ],
+  "historical_layout_exposure": true,
+  "new_scenes": false,
+  "official_data_read": false,
+  "claim_eligible": false,
+  "boundary": "prospective goal recombinations on previously exposed development layouts",
+  "source": "EmbodiedBench/embodiedbench/envs/eb_habitat/datasets/train_validation.pickle",
+  "source_sha256": "32fc80038c8c71187889ac6ad98e7fcbbd1e89a146a2ab25c14b963f070fffaa",
+  "dataset_sha256": "e1e5696b98dd743a35c99ccbad87506178ccbb8d82dae22016848d1ee338b43d",
+  "generator_sha256": "038e19f95ea809707aa096af60224e3fc0a900e112c306ba86682ae62e1bd14d"
+}

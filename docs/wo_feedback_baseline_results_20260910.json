@@ -1,0 +1,425 @@
+{
+  "protocol": "stock_feedback_v2",
+  "recorded_date": "2026-09-10",
+  "runs": [
+    {
+      "model": "gpt-5.4-mini",
+      "env": "eb-hab",
+      "root": "running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full",
+      "config_sha256": "1a7136d54cee0fabc801ddf2aeecefed83315a5cd109ad8cb3f5b2414a5d5db7",
+      "result_index_sha256": "1a56c6be751a516b2d6dcb8919e1a223535fd6c922fd3e0db2d6708c6e17c471",
+      "completed": 300,
+      "successes": 59,
+      "category_mean_success": 0.19666666666666668,
+      "subsets": {
+        "base": {
+          "completed": 50,
+          "successes": 29,
+          "success_rate": 0.58
+        },
+        "common_sense": {
+          "completed": 50,
+          "successes": 2,
+          "success_rate": 0.04
+        },
+        "complex_instruction": {
+          "completed": 50,
+          "successes": 8,
+          "success_rate": 0.16
+        },
+        "spatial_relationship": {
+          "completed": 50,
+          "successes": 10,
+          "success_rate": 0.2
+        },
+        "visual_appearance": {
+          "completed": 50,
+          "successes": 7,
+          "success_rate": 0.14
+        },
+        "long_horizon": {
+          "completed": 50,
+          "successes": 3,
+          "success_rate": 0.06
+        }
+      },
+      "schema_versions": {
+        "stock": 124,
+        "closed_objects_v1": 176
+      },
+      "api_requests": 1712,
+      "api_responses": 1650,
+      "api_errors": {
+        "BadRequestError": 45,
+        "APIConnectionError": 16
+      },
+      "recorded_success_response_tokens": {
+        "prompt": 7102651,
+        "completion": 903000
+      },
+      "token_limitations": "Only successful response usage captured; failed/SDK internal retries may have incurred unrecorded tokens. Not total billed cost."
+    },
+    {
+      "model": "gpt-5.4-mini",
+      "env": "eb-nav",
+      "root": "running/closed_feedback/gpt-5.4-mini_eb-nav_v2_full",
+      "config_sha256": "ec1548643686e589c209b9af95d2cdb0f2a65eb3d43b791f1c45830b237f55ca",
+      "result_index_sha256": "d462df52ce8d0d74cf72490e1f2d29d275fe5036acece90d536d4269557c22b3",
+      "completed": 300,
+      "successes": 136,
+      "category_mean_success": 0.4533333333333334,
+      "subsets": {
+        "base": {
+          "completed": 60,
+          "successes": 35,
+          "success_rate": 0.5833333333333334
+        },
+        "common_sense": {
+          "completed": 60,
+          "successes": 32,
+          "success_rate": 0.5333333333333333
+        },
+        "complex_instruction": {
+          "completed": 60,
+          "successes": 30,
+          "success_rate": 0.5
+        },
+        "visual_appearance": {
+          "completed": 60,
+          "successes": 33,
+          "success_rate": 0.55
+        },
+        "long_horizon": {
+          "completed": 60,
+          "successes": 6,
+          "success_rate": 0.1
+        }
+      },
+      "schema_versions": {
+        "closed_objects_v1": 300
+      },
+      "api_requests": 1230,
+      "api_responses": 1230,
+      "api_errors": {},
+      "recorded_success_response_tokens": {
+        "prompt": 4230116,
+        "completion": 406766
+      },
+      "token_limitations": "Only successful response usage captured; failed/SDK internal retries may have incurred unrecorded tokens. Not total billed cost."
+    },
+    {
+      "model": "gemini-3-flash-preview",
+      "env": "eb-hab",
+      "root": "running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full",
+      "config_sha256": "52a91c2f90498a20c8d52dca74caa553badded8fadb0056ca45e09ed95a32930",
+      "result_index_sha256": "df78ae8bb74f6fd1f22639bac80cd164a20c8825e6a3db97ca7fb3f0edfad13e",
+      "completed": 300,
+      "successes": 74,
+      "category_mean_success": 0.24666666666666667,
+      "subsets": {
+        "base": {
+          "completed": 50,
+          "successes": 30,
+          "success_rate": 0.6
+        },
+        "common_sense": {
+          "completed": 50,
+          "successes": 6,
+          "success_rate": 0.12
+        },
+        "complex_instruction": {
+          "completed": 50,
+          "successes": 12,
+          "success_rate": 0.24
+        },
+        "spatial_relationship": {
+          "completed": 50,
+          "successes": 13,
+          "success_rate": 0.26
+        },
+        "visual_appearance": {
+          "completed": 50,
+          "successes": 12,
+          "success_rate": 0.24
+        },
+        "long_horizon": {
+          "completed": 50,
+          "successes": 1,
+          "success_rate": 0.02
+        }
+      },
+      "schema_versions": {
+        "gemini_inline_refs_v1": 300
+      },
+      "api_requests": 732,
+      "api_responses": 689,
+      "api_errors": {
+        "BadRequestError": 12,
+        "LengthFinishReasonError": 31
+      },
+      "recorded_success_response_tokens": {
+        "prompt": 3613546,
+        "completion": 252368
+      },
+      "token_limitations": "Only successful response usage captured; failed/SDK internal retries may have incurred unrecorded tokens. Not total billed cost."
+    },
+    {
+      "model": "gemini-3-flash-preview",
+      "env": "eb-nav",
+      "root": "running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full",
+      "config_sha256": "14d15a54341d42ffebc7216c534431b85e22514190cb892d966cf07752191416",
+      "result_index_sha256": "9db19e4937e033fa3bc534491d3b2b07868239aa8b92645f9f845d7bde11321c",
+      "completed": 300,
+      "successes": 166,
+      "category_mean_success": 0.5533333333333333,
+      "subsets": {
+        "base": {
+          "completed": 60,
+          "successes": 34,
+          "success_rate": 0.5666666666666667
+        },
+        "common_sense": {
+          "completed": 60,
+          "successes": 41,
+          "success_rate": 0.6833333333333333
+        },
+        "complex_instruction": {
+          "completed": 60,
+          "successes": 39,
+          "success_rate": 0.65
+        },
+        "visual_appearance": {
+          "completed": 60,
+          "successes": 36,
+          "success_rate": 0.6
+        },
+        "long_horizon": {
+          "completed": 60,
+          "successes": 16,
+          "success_rate": 0.26666666666666666
+        }
+      },
+      "schema_versions": {
+        "gemini_inline_refs_v1": 300
+      },
+      "api_requests": 1438,
+      "api_responses": 1278,
+      "api_errors": {
+        "LengthFinishReasonError": 160
+      },
+      "recorded_success_response_tokens": {
+        "prompt": 5818257,
+        "completion": 582153
+      },
+      "token_limitations": "Only successful response usage captured; failed/SDK internal retries may have incurred unrecorded tokens. Not total billed cost."
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "env": "eb-hab",
+      "root": "running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full",
+      "config_sha256": "8aabcc274b6ef86652471237d6fb69437e1e490f359ddf98a21e483793622404",
+      "result_index_sha256": "849da58b396ffab3e697b0ab3140a46fa3b467d350c9f271b6f6e2eb2c92d2bb",
+      "completed": 300,
+      "successes": 160,
+      "category_mean_success": 0.5333333333333333,
+      "subsets": {
+        "base": {
+          "completed": 50,
+          "successes": 41,
+          "success_rate": 0.82
+        },
+        "common_sense": {
+          "completed": 50,
+          "successes": 23,
+          "success_rate": 0.46
+        },
+        "complex_instruction": {
+          "completed": 50,
+          "successes": 24,
+          "success_rate": 0.48
+        },
+        "spatial_relationship": {
+          "completed": 50,
+          "successes": 17,
+          "success_rate": 0.34
+        },
+        "visual_appearance": {
+          "completed": 50,
+          "successes": 31,
+          "success_rate": 0.62
+        },
+        "long_horizon": {
+          "completed": 50,
+          "successes": 24,
+          "success_rate": 0.48
+        }
+      },
+      "schema_versions": {
+        "closed_objects_v1": 3,
+        "gemini_inline_refs_v1": 297
+      },
+      "api_requests": 1819,
+      "api_responses": 1364,
+      "api_errors": {
+        "BadRequestError": 17,
+        "LengthFinishReasonError": 438
+      },
+      "recorded_success_response_tokens": {
+        "prompt": 7287537,
+        "completion": 2954587
+      },
+      "token_limitations": "Only successful response usage captured; failed/SDK internal retries may have incurred unrecorded tokens. Not total billed cost."
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "env": "eb-nav",
+      "root": "running/closed_feedback/gemini-3.5-flash_eb-nav_v2_full",
+      "config_sha256": "806f05e25073791879588975d818169bef42539d760dd89dec4b8adb36ca633f",
+      "result_index_sha256": "966d16e8056ea6d43d616af5f6d9aefdf5600e0fbeb37a2f960c44cbbf186819",
+      "completed": 300,
+      "successes": 193,
+      "category_mean_success": 0.6433333333333333,
+      "subsets": {
+        "base": {
+          "completed": 60,
+          "successes": 43,
+          "success_rate": 0.7166666666666667
+        },
+        "common_sense": {
+          "completed": 60,
+          "successes": 42,
+          "success_rate": 0.7
+        },
+        "complex_instruction": {
+          "completed": 60,
+          "successes": 42,
+          "success_rate": 0.7
+        },
+        "visual_appearance": {
+          "completed": 60,
+          "successes": 35,
+          "success_rate": 0.5833333333333334
+        },
+        "long_horizon": {
+          "completed": 60,
+          "successes": 31,
+          "success_rate": 0.5166666666666667
+        }
+      },
+      "schema_versions": {
+        "gemini_inline_refs_v1": 300
+      },
+      "api_requests": 1345,
+      "api_responses": 1344,
+      "api_errors": {
+        "LengthFinishReasonError": 1
+      },
+      "recorded_success_response_tokens": {
+        "prompt": 5871220,
+        "completion": 1507151
+      },
+      "token_limitations": "Only successful response usage captured; failed/SDK internal retries may have incurred unrecorded tokens. Not total billed cost."
+    },
+    {
+      "model": "Qwen3-VL-8B-Instruct",
+      "env": "eb-hab",
+      "root": "running/closed_feedback/Qwen3-VL-8B-Instruct_eb-hab_v2_full",
+      "config_sha256": "1cab474dba166d39b230f3d07c6d8787656aef3195eb0f57c0304de5972c9cab",
+      "result_index_sha256": "bd5cccf87cd80f9c190363ab4fe1f930e72ad48eeb0c5d4b6854798a8ec4b4fe",
+      "completed": 300,
+      "successes": 65,
+      "category_mean_success": 0.2166666666666667,
+      "subsets": {
+        "base": {
+          "completed": 50,
+          "successes": 25,
+          "success_rate": 0.5
+        },
+        "common_sense": {
+          "completed": 50,
+          "successes": 3,
+          "success_rate": 0.06
+        },
+        "complex_instruction": {
+          "completed": 50,
+          "successes": 8,
+          "success_rate": 0.16
+        },
+        "spatial_relationship": {
+          "completed": 50,
+          "successes": 13,
+          "success_rate": 0.26
+        },
+        "visual_appearance": {
+          "completed": 50,
+          "successes": 12,
+          "success_rate": 0.24
+        },
+        "long_horizon": {
+          "completed": 50,
+          "successes": 4,
+          "success_rate": 0.08
+        }
+      },
+      "schema_versions": {
+        "closed_objects_v1": 300
+      },
+      "api_requests": 1084,
+      "api_responses": 1084,
+      "api_errors": {},
+      "recorded_success_response_tokens": {
+        "prompt": 4605473,
+        "completion": 377261
+      },
+      "token_limitations": "Only successful response usage captured; failed/SDK internal retries may have incurred unrecorded tokens. Not total billed cost."
+    },
+    {
+      "model": "Qwen3-VL-8B-Instruct",
+      "env": "eb-nav",
+      "root": "running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full",
+      "config_sha256": "934e577d2ba812c828db9883baebf186de3b220be866e17d039ee7760448216e",
+      "result_index_sha256": "3b4d743892fc5e8fd2b31287cceea247b37a64bbc205d047cd007bfea3fe76d7",
+      "completed": 300,
+      "successes": 123,
+      "category_mean_success": 0.41000000000000003,
+      "subsets": {
+        "base": {
+          "completed": 60,
+          "successes": 29,
+          "success_rate": 0.48333333333333334
+        },
+        "common_sense": {
+          "completed": 60,
+          "successes": 25,
+          "success_rate": 0.4166666666666667
+        },
+        "complex_instruction": {
+          "completed": 60,
+          "successes": 34,
+          "success_rate": 0.5666666666666667
+        },
+        "visual_appearance": {
+          "completed": 60,
+          "successes": 28,
+          "success_rate": 0.4666666666666667
+        },
+        "long_horizon": {
+          "completed": 60,
+          "successes": 7,
+          "success_rate": 0.11666666666666667
+        }
+      },
+      "schema_versions": {
+        "closed_objects_v1": 300
+      },
+      "api_requests": 1426,
+      "api_responses": 1426,
+      "api_errors": {},
+      "recorded_success_response_tokens": {
+        "prompt": 4660824,
+        "completion": 498436
+      },
+      "token_limitations": "Only successful response usage captured; failed/SDK internal retries may have incurred unrecorded tokens. Not total billed cost."
+    }
+  ]
+}

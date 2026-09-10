@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "files": [
+    {
+      "source": "/root/max/VISTA-Skill/running/test/inplace_resume_hab_202609081855/base/episode_2_step_2.json",
+      "destination": "/root/max/VISTA-Skill/running/test/inplace_resume_hab_202609081855/_interrupted/run_202609081854/base/episode_2_step_2.json",
+      "sha256": "59d9a697e4c6f0bc04e984b338e8d447c9a1648eb9962f27ebe8abae59430d5f"
+    },
+    {
+      "source": "/root/max/VISTA-Skill/running/test/inplace_resume_hab_202609081855/base/images/episode_2/episode_2_step_0.png",
+      "destination": "/root/max/VISTA-Skill/running/test/inplace_resume_hab_202609081855/_interrupted/run_202609081854/base/images/episode_2/episode_2_step_0.png",
+      "sha256": "32cff24cf696712533118ef7905c8b31da848bb6a117365f918cdc58f38ea934"
+    },
+    {
+      "source": "/root/max/VISTA-Skill/running/test/inplace_resume_hab_202609081855/base/images/episode_2/episode_2_step_1.png",
+      "destination": "/root/max/VISTA-Skill/running/test/inplace_resume_hab_202609081855/_interrupted/run_202609081854/base/images/episode_2/episode_2_step_1.png",
+      "sha256": "965c6e36eda2e79a086bb05325f003098927b01da89972b922e3bd0553815e2e"
+    },
+    {
+      "source": "/root/max/VISTA-Skill/running/test/inplace_resume_hab_202609081855/base/images/episode_2/episode_2_step_2.png",
+      "destination": "/root/max/VISTA-Skill/running/test/inplace_resume_hab_202609081855/_interrupted/run_202609081854/base/images/episode_2/episode_2_step_2.png",
+      "sha256": "965c6e36eda2e79a086bb05325f003098927b01da89972b922e3bd0553815e2e"
+    },
+    {
+      "source": "/root/max/VISTA-Skill/running/test/inplace_resume_hab_202609081855/base/results/episode_2_final_res.json",
+      "destination": "/root/max/VISTA-Skill/running/test/inplace_resume_hab_202609081855/_interrupted/run_202609081854/base/results/episode_2_final_res.json",
+      "sha256": "021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96"
+    }
+  ]
+}

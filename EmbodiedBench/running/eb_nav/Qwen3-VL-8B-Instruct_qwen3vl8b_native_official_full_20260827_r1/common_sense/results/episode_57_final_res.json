@@ -1,0 +1,1 @@
+{"reward": 0.0, "instruction": "I am looking for a luminous device on my desk to read books at night. Can you navigate to that object and stay close?", "task_success": 0.0, "num_steps": 20, "planner_steps": 8, "planner_output_error": 0, "episode_elapsed_seconds": 39.65427303314209}

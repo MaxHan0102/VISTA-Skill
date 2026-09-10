@@ -1,0 +1,2 @@
+{"step": 1, "action_id": 13, "reward": 2.5, "done": false, "env_feedback": "Last action executed successfully.", "last_action_success": 1.0, "task_success": false, "task_progress": 0.5, "subgoal_reward": 2.5, "distance": null}
+{"step": 2, "action_id": 61, "reward": 12.5, "done": true, "env_feedback": "Last action executed successfully and now refrigerator is closed.", "last_action_success": 1.0, "task_success": true, "task_progress": 1.0, "subgoal_reward": 2.5, "distance": null}

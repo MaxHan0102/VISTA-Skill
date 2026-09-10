@@ -1,0 +1,14 @@
+Output directory: /root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081825
+[2026-09-08 18:25:53,569][INFO] - Current eval set: complex_instruction
+2026-09-08 18:25:53,671 Initializing dataset LangRearrangeDataset-v0
+2026-09-08 18:25:53,671 Loading from /root/max/VISTA-Skill/EmbodiedBench/embodiedbench/envs/eb_habitat/datasets/complex_instruction.pickle
+2026-09-08 18:25:53,674 initializing sim RearrangeSim-v0
+2026-09-08 18:25:55,040 Initializing task RearrangePredicateTask-v0
+Num episodes 50
+Episodes:   0%|                                                                                                                                                                                                                            | 0/50 [00:00<?, ?it/s][2026-09-08 18:25:57,359][INFO] - Evaluating episode 24 ...
+[2026-09-08 18:25:57,366][INFO] - Episode 24: BaseEpisode(episode_id='2', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_13.scene_instance.json')
+Instruction: There's an apple on the sofa, but on the right counter I need you to put a book.
+API retry 1/3 in 5s (HTTP 400); request unchanged
+API retry 2/3 in 10s (HTTP 400); request unchanged
+API retry 3/3 in 20s (HTTP 400); request unchanged
+API retries exhausted (FatalAPIError, HTTP 400)

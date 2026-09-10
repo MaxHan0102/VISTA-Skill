@@ -1,0 +1,633 @@
+Output directory: /root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/_sessions/run_202609091005
+[2026-09-09 10:05:12,782][INFO] - Current eval set: common_sense
+2026-09-09 10:05:12,888 Initializing dataset LangRearrangeDataset-v0
+2026-09-09 10:05:12,888 Loading from /root/max/VISTA-Skill/EmbodiedBench/embodiedbench/envs/eb_habitat/datasets/common_sense.pickle
+2026-09-09 10:05:12,891 initializing sim RearrangeSim-v0
+2026-09-09 10:05:14,273 Initializing task RearrangePredicateTask-v0
+Num episodes 50
+Episodes:   0%|                                                                                                                                                                                                                            | 0/50 [00:00<?, ?it/s][2026-09-09 10:05:14,399][INFO] - Evaluating episode 0 ...
+[2026-09-09 10:05:15,581][INFO] - Episode 0: BaseEpisode(episode_id='39', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Prepare for a game by delivering something to play with to the TV stand.
+Planner Output Action: [6, 40, 8, 52]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:   2%|████▏                                                                                                                                                                                                               | 1/50 [00:10<08:16, 10.14s/it][2026-09-09 10:05:24,538][INFO] - Evaluating episode 1 ...
+[2026-09-09 10:05:24,549][INFO] - Episode 1: BaseEpisode(episode_id='36', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Bring me a suitable object to pour hot coffee into at the sink.
+Planner Output Action: [3, 65, 44, 9, 53]
+Executed action: navigate to the cabinet 4, Task success: False
+Executed action: open the cabinet 4, Task success: False
+Executed action: pick up the mug, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:   4%|████████▍                                                                                                                                                                                                           | 2/50 [00:17<06:57,  8.71s/it][2026-09-09 10:05:32,241][INFO] - Evaluating episode 2 ...
+[2026-09-09 10:05:32,255][INFO] - Episode 2: BaseEpisode(episode_id='28', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Procure an item to rectify the loose screw issue in the right counter.
+Planner Output Action: [3, 65, 19, 10, 54]
+Executed action: navigate to the cabinet 4, Task success: False
+Executed action: open the cabinet 4, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:   6%|████████████▋                                                                                                                                                                                                       | 3/50 [00:23<05:51,  7.48s/it][2026-09-09 10:05:38,263][INFO] - Evaluating episode 3 ...
+[2026-09-09 10:05:38,273][INFO] - Episode 3: BaseEpisode(episode_id='33', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Prepare for a game by delivering something to play with to the sofa.
+Planner Output Action: [6, 40, 12, 56]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:   8%|████████████████▉                                                                                                                                                                                                   | 4/50 [00:30<05:22,  7.01s/it][2026-09-09 10:05:44,560][INFO] - Evaluating episode 4 ...
+[2026-09-09 10:05:44,570][INFO] - Episode 4: BaseEpisode(episode_id='20', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Procure an item for hot coffee pouring at the black table.
+Planner Output Action: [0, 62, 44, 6, 50]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: open the cabinet 7, Task success: False
+Executed action: pick up the mug, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  10%|█████████████████████▏                                                                                                                                                                                              | 5/50 [00:33<04:22,  5.83s/it][2026-09-09 10:05:48,301][INFO] - Evaluating episode 5 ...
+[2026-09-09 10:05:48,310][INFO] - Episode 5: BaseEpisode(episode_id='46', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Bring me a suitable object to pour hot coffee into at the sink.
+Planner Output Action: [11, 44, 9, 53]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the mug, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  12%|█████████████████████████▍                                                                                                                                                                                          | 6/50 [00:40<04:26,  6.06s/it][2026-09-09 10:05:54,805][INFO] - Evaluating episode 6 ...
+[2026-09-09 10:05:54,816][INFO] - Episode 6: BaseEpisode(episode_id='24', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: I spilt something and need to clean it. Can you bring something to the TV stand to help?
+Planner Output Action: [11, 28, 8, 52]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the sponge, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  14%|█████████████████████████████▋                                                                                                                                                                                      | 7/50 [00:46<04:14,  5.91s/it][2026-09-09 10:06:00,400][INFO] - Evaluating episode 7 ...
+[2026-09-09 10:06:00,411][INFO] - Episode 7: BaseEpisode(episode_id='47', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: It looks like I've spilled something. Would you mind getting the object I need to clean it up in the left counter?
+Planner Output Action: [11, 28]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the sponge, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  16%|█████████████████████████████████▉                                                                                                                                                                                  | 8/50 [00:52<04:18,  6.15s/it][2026-09-09 10:06:07,054][INFO] - Evaluating episode 8 ...
+[2026-09-09 10:06:07,064][INFO] - Episode 8: BaseEpisode(episode_id='40', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: A screw is loose in the sofa, bring something to fix it.
+Planner Output Action: [3, 65, 19, 12, 56]
+Executed action: navigate to the cabinet 4, Task success: False
+Executed action: open the cabinet 4, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  18%|██████████████████████████████████████▏                                                                                                                                                                             | 9/50 [01:00<04:37,  6.77s/it][2026-09-09 10:06:15,207][INFO] - Evaluating episode 9 ...
+[2026-09-09 10:06:15,219][INFO] - Episode 9: BaseEpisode(episode_id='29', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Locate an instrument to remedy the loose screw in the sofa.
+Planner Output Action: [0, 62, 19, 12]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: open the cabinet 7, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the sofa, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  20%|██████████████████████████████████████████▏                                                                                                                                                                        | 10/50 [01:06<04:21,  6.53s/it][2026-09-09 10:06:21,204][INFO] - Evaluating episode 10 ...
+[2026-09-09 10:06:21,561][INFO] - Episode 10: BaseEpisode(episode_id='30', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: Please, get something to fasten the loose screw in the sink.
+Planner Output Action: [6, 19, 9, 53]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  22%|██████████████████████████████████████████████▍                                                                                                                                                                    | 11/50 [01:12<04:10,  6.42s/it][2026-09-09 10:06:27,359][INFO] - Evaluating episode 11 ...
+[2026-09-09 10:06:27,369][INFO] - Episode 11: BaseEpisode(episode_id='1', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: Fetch a container for pouring hot coffee into at the brown table.
+Planner Output Action: [6, 44, 50]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the mug, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [6, 44, 7, 51]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the mug, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  24%|██████████████████████████████████████████████████▋                                                                                                                                                                | 12/50 [01:23<04:47,  7.56s/it][2026-09-09 10:06:37,547][INFO] - Evaluating episode 12 ...
+[2026-09-09 10:06:37,559][INFO] - Episode 12: BaseEpisode(episode_id='2', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: Please arrange for a sports object to be placed in the right counter for my amusement.
+Planner Output Action: [6, 40, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [8, 16, 10, 54]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  26%|██████████████████████████████████████████████████████▊                                                                                                                                                            | 13/50 [01:32<05:01,  8.14s/it][2026-09-09 10:06:47,024][INFO] - Evaluating episode 13 ...
+[2026-09-09 10:06:47,034][INFO] - Episode 13: BaseEpisode(episode_id='18', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: I'd like to engage in a sport, so kindly transport an item for play to the black table.
+Planner Output Action: [6, 39, 6, 50]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the lego, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [40, 50]
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: place at the table 1, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  28%|███████████████████████████████████████████████████████████                                                                                                                                                        | 14/50 [01:43<05:17,  8.82s/it][2026-09-09 10:06:57,422][INFO] - Evaluating episode 14 ...
+[2026-09-09 10:06:57,433][INFO] - Episode 14: BaseEpisode(episode_id='42', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: Could you please bring a tool for cutting the paper at the brown table?
+Planner Output Action: [6, 21, 7, 51]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the scissors, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  30%|███████████████████████████████████████████████████████████████▎                                                                                                                                                   | 15/50 [01:49<04:42,  8.06s/it][2026-09-09 10:07:03,706][INFO] - Evaluating episode 15 ...
+[2026-09-09 10:07:03,717][INFO] - Episode 15: BaseEpisode(episode_id='4', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: Fetch an item to assist with cutting a piece of paper at the left counter.
+Planner Output Action: [11, 21]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the scissors, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  32%|███████████████████████████████████████████████████████████████████▌                                                                                                                                               | 16/50 [01:55<04:11,  7.38s/it][2026-09-09 10:07:09,521][INFO] - Evaluating episode 16 ...
+[2026-09-09 10:07:09,533][INFO] - Episode 16: BaseEpisode(episode_id='37', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: I'm in need of an implement for cutting paper at the left counter. Please get it for me.
+Planner Output Action: [11, 21]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the scissors, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  34%|███████████████████████████████████████████████████████████████████████▋                                                                                                                                           | 17/50 [01:57<03:18,  6.01s/it][2026-09-09 10:07:12,329][INFO] - Evaluating episode 17 ...
+[2026-09-09 10:07:12,340][INFO] - Episode 17: BaseEpisode(episode_id='16', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: Acquire a sports object and position it in the brown table.
+Planner Output Action: [6, 16, 7, 51]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  36%|███████████████████████████████████████████████████████████████████████████▉                                                                                                                                       | 18/50 [02:01<02:45,  5.17s/it][2026-09-09 10:07:15,540][INFO] - Evaluating episode 18 ...
+[2026-09-09 10:07:15,549][INFO] - Episode 18: BaseEpisode(episode_id='48', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: It looks like I've spilled something. Would you mind getting the object I need to clean it up in the right counter?
+Planner Output Action: [10, 28]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the sponge, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  38%|████████████████████████████████████████████████████████████████████████████████▏                                                                                                                                  | 19/50 [02:08<02:58,  5.76s/it][2026-09-09 10:07:22,685][INFO] - Evaluating episode 19 ...
+[2026-09-09 10:07:22,902][INFO] - Episode 19: BaseEpisode(episode_id='35', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: I spilt something and need to clean it. Can you bring something to the left counter to help?
+Planner Output Action: [8, 28, 11, 55]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the sponge, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  40%|████████████████████████████████████████████████████████████████████████████████████▍                                                                                                                              | 20/50 [02:15<03:06,  6.22s/it][2026-09-09 10:07:29,972][INFO] - Evaluating episode 20 ...
+[2026-09-09 10:07:29,982][INFO] - Episode 20: BaseEpisode(episode_id='19', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: Retrieve a suitable implement to address the loose screw problem in the left counter.
+Planner Output Action: [3, 65, 19, 11, 55]
+Executed action: navigate to the cabinet 4, Task success: False
+Executed action: open the cabinet 4, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  42%|████████████████████████████████████████████████████████████████████████████████████████▌                                                                                                                          | 21/50 [02:23<03:11,  6.59s/it][2026-09-09 10:07:37,435][INFO] - Evaluating episode 21 ...
+[2026-09-09 10:07:37,446][INFO] - Episode 21: BaseEpisode(episode_id='15', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: Acquire a sports object and position it in the sink.
+Planner Output Action: [62, 0, 16, 9, 53]
+Executed action: open the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  44%|████████████████████████████████████████████████████████████████████████████████████████████▊                                                                                                                      | 22/50 [02:26<02:39,  5.70s/it][2026-09-09 10:07:41,069][INFO] - Evaluating episode 22 ...
+[2026-09-09 10:07:41,078][INFO] - Episode 22: BaseEpisode(episode_id='41', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: Bring me a suitable object to pour hot coffee into at the left counter.
+Planner Output Action: [11, 44]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the mug, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  46%|█████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                                  | 23/50 [02:35<02:59,  6.64s/it][2026-09-09 10:07:49,877][INFO] - Evaluating episode 23 ...
+[2026-09-09 10:07:49,888][INFO] - Episode 23: BaseEpisode(episode_id='13', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: Find an item that can be used for cutting at the left counter.
+Planner Output Action: [11]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Planner Output Action: [25]
+Executed action: pick up the knife, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  48%|█████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                                                                             | 24/50 [02:44<03:09,  7.28s/it][2026-09-09 10:07:58,654][INFO] - Evaluating episode 24 ...
+[2026-09-09 10:07:58,665][INFO] - Episode 24: BaseEpisode(episode_id='3', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: I need a vessel to pour hot coffee into at the brown table.
+Planner Output Action: [3, 65, 44, 7, 51]
+Executed action: navigate to the cabinet 4, Task success: False
+Executed action: open the cabinet 4, Task success: False
+Executed action: pick up the mug, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  50%|█████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                                         | 25/50 [02:50<02:54,  6.99s/it][2026-09-09 10:08:04,955][INFO] - Evaluating episode 25 ...
+[2026-09-09 10:08:04,965][INFO] - Episode 25: BaseEpisode(episode_id='32', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: There's been a spill, and I require an object to assist with cleaning it. Can you bring it to the sink?
+Planner Output Action: [11, 28, 9, 53]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the sponge, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  52%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                                                                     | 26/50 [02:57<02:48,  7.03s/it][2026-09-09 10:08:12,103][INFO] - Evaluating episode 26 ...
+[2026-09-09 10:08:12,262][INFO] - Episode 26: BaseEpisode(episode_id='38', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_05.scene_instance.json')
+Instruction: I spilt something and need to clean it. Can you bring something to the right counter to help?
+Planner Output Action: [8, 28, 10, 54]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the sponge, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  54%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                                                                 | 27/50 [03:05<02:46,  7.25s/it][2026-09-09 10:08:19,865][INFO] - Evaluating episode 27 ...
+[2026-09-09 10:08:19,875][INFO] - Episode 27: BaseEpisode(episode_id='25', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_05.scene_instance.json')
+Instruction: There's been a spill, and I require an object to assist with cleaning it. Can you bring it to the brown table?
+Planner Output Action: [11, 28, 7, 51]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the sponge, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  56%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                                                            | 28/50 [03:11<02:32,  6.95s/it][2026-09-09 10:08:26,101][INFO] - Evaluating episode 28 ...
+[2026-09-09 10:08:26,331][INFO] - Episode 28: BaseEpisode(episode_id='44', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: A screw is loose in the brown table, bring something to fix it.
+Planner Output Action: [11, 19, 7, 51]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [23, 51]
+Executed action: pick up the drill, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [12, 23, 7, 51]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the drill, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  58%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                                                        | 29/50 [03:48<05:36, 16.03s/it][2026-09-09 10:09:03,324][INFO] - Evaluating episode 29 ...
+[2026-09-09 10:09:03,337][INFO] - Episode 29: BaseEpisode(episode_id='0', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: Acquire a sports object and position it in the brown table.
+Planner Output Action: [8, 16, 7, 51]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  60%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                    | 30/50 [03:56<04:29, 13.47s/it][2026-09-09 10:09:10,804][INFO] - Evaluating episode 30 ...
+[2026-09-09 10:09:10,822][INFO] - Episode 30: BaseEpisode(episode_id='17', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: Locate an instrument to remedy the loose screw in the brown table.
+Planner Output Action: [11, 19, 6]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the table 1, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  62%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                                                | 31/50 [04:02<03:35, 11.32s/it][2026-09-09 10:09:17,114][INFO] - Evaluating episode 31 ...
+[2026-09-09 10:09:17,124][INFO] - Episode 31: BaseEpisode(episode_id='49', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: It looks like I've spilled something. Would you mind getting the object I need to clean it up in the sink?
+Planner Output Action: [10, 28, 9, 53]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the sponge, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  64%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                            | 32/50 [04:12<03:13, 10.74s/it][2026-09-09 10:09:26,506][INFO] - Evaluating episode 32 ...
+[2026-09-09 10:09:26,519][INFO] - Episode 32: BaseEpisode(episode_id='14', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: Find an item that can be used for cutting at the left counter.
+Planner Output Action: [11, 25]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the knife, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  66%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                                       | 33/50 [04:17<02:37,  9.25s/it][2026-09-09 10:09:32,286][INFO] - Evaluating episode 33 ...
+[2026-09-09 10:09:32,296][INFO] - Episode 33: BaseEpisode(episode_id='21', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: Procure an item to rectify the loose screw issue in the black table.
+Planner Output Action: [6, 19, 50]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: place at the table 1, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  68%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                                   | 34/50 [04:24<02:15,  8.47s/it][2026-09-09 10:09:38,918][INFO] - Evaluating episode 34 ...
+[2026-09-09 10:09:38,930][INFO] - Episode 34: BaseEpisode(episode_id='5', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: Procure a plaything for sports and deposit it in the sofa.
+Planner Output Action: [6, 16, 12, 56]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  70%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                               | 35/50 [04:31<02:00,  8.06s/it][2026-09-09 10:09:46,018][INFO] - Evaluating episode 35 ...
+[2026-09-09 10:09:46,028][INFO] - Episode 35: BaseEpisode(episode_id='34', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: I spilt something and need to clean it. Can you bring something to the black table to help?
+Planner Output Action: [8, 28, 6, 50]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the sponge, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  72%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                           | 36/50 [04:37<01:44,  7.50s/it][2026-09-09 10:09:52,210][INFO] - Evaluating episode 36 ...
+[2026-09-09 10:09:52,219][INFO] - Episode 36: BaseEpisode(episode_id='7', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: Fetch a sports equipment and place it in the right counter.
+Planner Output Action: [6, 16, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  74%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                      | 37/50 [04:44<01:33,  7.21s/it][2026-09-09 10:09:58,735][INFO] - Evaluating episode 37 ...
+[2026-09-09 10:09:58,745][INFO] - Episode 37: BaseEpisode(episode_id='22', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: I'd like to engage in a sport, so kindly transport an item for play to the left counter.
+Planner Output Action: [12, 16, 11, 55]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  76%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                  | 38/50 [04:49<01:19,  6.64s/it][2026-09-09 10:10:04,045][INFO] - Evaluating episode 38 ...
+[2026-09-09 10:10:04,054][INFO] - Episode 38: BaseEpisode(episode_id='45', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: Procure an item for hot coffee pouring at the right counter.
+Planner Output Action: [6, 44, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the mug, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [7, 43, 10, 54]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the cup, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  78%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                              | 39/50 [05:13<02:10, 11.86s/it][2026-09-09 10:10:28,108][INFO] - Evaluating episode 39 ...
+[2026-09-09 10:10:28,119][INFO] - Episode 39: BaseEpisode(episode_id='9', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: There's a spill, and I need an object to clean it up. Could you bring it to the sink?
+Planner Output Action: [11, 28, 9, 53]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the sponge, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  80%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                          | 40/50 [05:22<01:48, 10.88s/it][2026-09-09 10:10:36,696][INFO] - Evaluating episode 40 ...
+[2026-09-09 10:10:36,818][INFO] - Episode 40: BaseEpisode(episode_id='43', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Bring me something to pour hot coffee into at the black table.
+Planner Output Action: [10, 44, 6, 50]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the mug, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  82%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                      | 41/50 [05:29<01:28,  9.85s/it][2026-09-09 10:10:44,123][INFO] - Evaluating episode 41 ...
+[2026-09-09 10:10:44,134][INFO] - Episode 41: BaseEpisode(episode_id='10', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Can you bring something to assist in cutting paper at the sink?
+Planner Output Action: [11, 21, 9, 53]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the scissors, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  84%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                 | 42/50 [05:36<01:11,  8.99s/it][2026-09-09 10:10:51,121][INFO] - Evaluating episode 42 ...
+[2026-09-09 10:10:51,134][INFO] - Episode 42: BaseEpisode(episode_id='8', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: I'd like to engage in a sport, so kindly transport an item for play to the black table.
+Planner Output Action: [16, 6, 50]
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+An unexpected error occurred: Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4081, prompt_tokens=5158, total_tokens=9239, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3929, rejected_prediction_tokens=None, text_tokens=152), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=4069, image_tokens=0))
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  86%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                             | 43/50 [07:15<04:10, 35.78s/it][2026-09-09 10:12:29,412][INFO] - Evaluating episode 43 ...
+[2026-09-09 10:12:29,422][INFO] - Episode 43: BaseEpisode(episode_id='31', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Acquire a sports object and position it in the TV stand.
+Planner Output Action: [12, 16, 8, 52]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  88%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                         | 44/50 [07:25<02:49, 28.23s/it][2026-09-09 10:12:40,035][INFO] - Evaluating episode 44 ...
+[2026-09-09 10:12:40,045][INFO] - Episode 44: BaseEpisode(episode_id='12', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Prepare for a game by delivering something to play with to the brown table.
+Planner Output Action: [7, 51]
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [39, 7, 51]
+Executed action: pick up the lego, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  90%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                     | 45/50 [07:36<01:55, 23.15s/it][2026-09-09 10:12:51,333][INFO] - Evaluating episode 45 ...
+[2026-09-09 10:12:51,344][INFO] - Episode 45: BaseEpisode(episode_id='23', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: I want to play a sport, bring something to play with to the right counter.
+Planner Output Action: [8, 16, 10, 54]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  92%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                 | 46/50 [07:41<01:09, 17.48s/it][2026-09-09 10:12:55,577][INFO] - Evaluating episode 46 ...
+[2026-09-09 10:12:55,586][INFO] - Episode 46: BaseEpisode(episode_id='6', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: There's a spill, and I need an object to clean it up. Could you bring it to the sink?
+Planner Output Action: [11, 28, 9, 53]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the sponge, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  94%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎            | 47/50 [07:47<00:42, 14.03s/it][2026-09-09 10:13:01,546][INFO] - Evaluating episode 47 ...
+[2026-09-09 10:13:01,557][INFO] - Episode 47: BaseEpisode(episode_id='26', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: A screw is loose in the right counter, bring something to fix it.
+Planner Output Action: [6, 19, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  96%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌        | 48/50 [07:54<00:23, 11.95s/it][2026-09-09 10:13:08,644][INFO] - Evaluating episode 48 ...
+[2026-09-09 10:13:08,654][INFO] - Episode 48: BaseEpisode(episode_id='27', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Bring me a suitable object to pour hot coffee into at the sofa.
+Planner Output Action: [3, 65, 44, 12, 56]
+Executed action: navigate to the cabinet 4, Task success: False
+Executed action: open the cabinet 4, Task success: False
+Executed action: pick up the mug, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  98%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊    | 49/50 [08:04<00:11, 11.30s/it][2026-09-09 10:13:18,416][INFO] - Evaluating episode 49 ...
+[2026-09-09 10:13:18,428][INFO] - Episode 49: BaseEpisode(episode_id='11', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Grab an item for securing the loose screw within the left counter.
+Planner Output Action: [11, 19]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Planner Output Action: [11, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [17, 11, 55]
+Executed action: pick up the clamp, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [55, 19]
+Executed action: place at the left counter in the kitchen, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [08:18<00:00, 12.32s/it]Episodes: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [08:18<00:00,  9.97s/it]
+['/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_33_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_21_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_17_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_41_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_6_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_22_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_25_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_46_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_34_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_9_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_16_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_26_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_4_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_27_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_44_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_39_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_18_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_5_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_31_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_47_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_40_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_35_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_49_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_37_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_28_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_29_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_12_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_24_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_45_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_32_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_19_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_36_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_13_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_10_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_38_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_15_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_11_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_7_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_2_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_14_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_48_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_43_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_42_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_3_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_1_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_8_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_20_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_30_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_23_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_50_final_res.json'] 50
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_33_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 1, 'empty_plan': 1, 'instruction': 'Find an item that can be used for cutting at the left counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 2, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 5.766253232955933}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_21_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'Retrieve a suitable implement to address the loose screw problem in the left counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 5, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4, 'episode_elapsed_seconds': 7.4521520137786865}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_17_final_res.json
+{'reward': 6.25, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': "I'm in need of an implement for cutting paper at the left counter. Please get it for me.", 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 2.5, 'num_steps': 2, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [2.7700254917144775]}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_41_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'Bring me something to pour hot coffee into at the black table.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 7.304584503173828}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_6_final_res.json
+{'reward': 0.3125, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'Bring me a suitable object to pour hot coffee into at the sink.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 6.494577407836914}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_22_final_res.json
+{'reward': 3.0, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Acquire a sports object and position it in the sink.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 1.25, 'num_steps': 5, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [3.5960912704467773]}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_25_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'I need a vessel to pour hot coffee into at the brown table.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 5, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4, 'episode_elapsed_seconds': 6.290428638458252}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_46_final_res.json
+{'reward': 3.75, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'I want to play a sport, bring something to play with to the right counter.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 4, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [4.206324815750122]}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_34_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'Procure an item to rectify the loose screw issue in the black table.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 3, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.6666666666666666, 'episode_elapsed_seconds': 6.62183403968811}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_9_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'A screw is loose in the sofa, bring something to fix it.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 5, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4, 'episode_elapsed_seconds': 8.142764568328857}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_16_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 1, 'empty_plan': 1, 'instruction': 'Fetch an item to assist with cutting a piece of paper at the left counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 2, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 5.803575277328491}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_26_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': "There's been a spill, and I require an object to assist with cleaning it. Can you bring it to the sink?", 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 7.137131929397583}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_4_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'Prepare for a game by delivering something to play with to the sofa.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 6.286972522735596}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_27_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'I spilt something and need to clean it. Can you bring something to the right counter to help?', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 7.603136777877808}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_44_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'Acquire a sports object and position it in the TV stand.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 10.612700939178467}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_39_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 4, 'empty_plan': 1, 'instruction': 'Procure an item for hot coffee pouring at the right counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 8, 'planner_steps': 3, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 24.053483724594116}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_18_final_res.json
+{'reward': 3.75, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Acquire a sports object and position it in the brown table.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 4, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [3.1642935276031494]}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_5_final_res.json
+{'reward': 3.0, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Procure an item for hot coffee pouring at the black table.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 1.25, 'num_steps': 5, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [3.7034034729003906]}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_31_final_res.json
+{'reward': 0.8333333333333334, 'num_invalid_actions': 0, 'empty_plan': 1, 'instruction': 'Locate an instrument to remedy the loose screw in the brown table.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 3, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': 6.291234016418457}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_47_final_res.json
+{'reward': 0.3125, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': "There's a spill, and I need an object to clean it up. Could you bring it to the sink?", 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 5.9602391719818115}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_40_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': "There's a spill, and I need an object to clean it up. Could you bring it to the sink?", 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 8.577028036117554}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_35_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'Procure a plaything for sports and deposit it in the sofa.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 7.087458610534668}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_49_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'Bring me a suitable object to pour hot coffee into at the sofa.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 5, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4, 'episode_elapsed_seconds': 9.761394023895264}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_37_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'Fetch a sports equipment and place it in the right counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 6.51483678817749}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_28_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': "There's been a spill, and I require an object to assist with cleaning it. Can you bring it to the brown table?", 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 6.2253029346466064}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_29_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 4, 'empty_plan': 1, 'instruction': 'A screw is loose in the brown table, bring something to fix it.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 10, 'planner_steps': 4, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4, 'episode_elapsed_seconds': 36.99281167984009}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_12_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 4, 'empty_plan': 1, 'instruction': 'Fetch a container for pouring hot coffee into at the brown table.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 7, 'planner_steps': 3, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5714285714285714, 'episode_elapsed_seconds': 10.17753553390503}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_24_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 0, 'empty_plan': 1, 'instruction': 'Find an item that can be used for cutting at the left counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 2, 'planner_steps': 3, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': 8.765891551971436}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_45_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 3, 'empty_plan': 1, 'instruction': 'Prepare for a game by delivering something to play with to the brown table.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 5, 'planner_steps': 3, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.6, 'episode_elapsed_seconds': 11.287386894226074}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_32_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': "It looks like I've spilled something. Would you mind getting the object I need to clean it up in the sink?", 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 9.380926847457886}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_19_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 1, 'empty_plan': 1, 'instruction': "It looks like I've spilled something. Would you mind getting the object I need to clean it up in the right counter?", 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 2, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 7.135493993759155}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_36_final_res.json
+{'reward': 0.3125, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'I spilt something and need to clean it. Can you bring something to the black table to help?', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 6.181509494781494}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_13_final_res.json
+{'reward': 0.15625, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'Please arrange for a sports object to be placed in the right counter for my amusement.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 8, 'planner_steps': 3, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.25, 'episode_elapsed_seconds': 9.464047908782959}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_10_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 1, 'empty_plan': 1, 'instruction': 'Locate an instrument to remedy the loose screw in the sofa.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.25, 'episode_elapsed_seconds': 5.985450506210327}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_38_final_res.json
+{'reward': 3.75, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': "I'd like to engage in a sport, so kindly transport an item for play to the left counter.", 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 4, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [5.274589538574219]}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_15_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'Could you please bring a tool for cutting the paper at the brown table?', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 6.2729713916778564}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_11_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'Please, get something to fasten the loose screw in the sink.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 5.797702312469482}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_7_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'I spilt something and need to clean it. Can you bring something to the TV stand to help?', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 5.583541631698608}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_2_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'Bring me a suitable object to pour hot coffee into at the sink.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 5, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4, 'episode_elapsed_seconds': 7.6914145946502686}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_14_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 0, 'empty_plan': 1, 'instruction': "I'd like to engage in a sport, so kindly transport an item for play to the black table.", 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 6, 'planner_steps': 3, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': 10.387155532836914}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_48_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'A screw is loose in the right counter, bring something to fix it.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 7.086888551712036}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_43_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': "I'd like to engage in a sport, so kindly transport an item for play to the black table.", 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 3, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.6666666666666666, 'episode_elapsed_seconds': 98.27787375450134}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_42_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'Can you bring something to assist in cutting paper at the sink?', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 6.98598837852478}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_3_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'Procure an item to rectify the loose screw issue in the right counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 5, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4, 'episode_elapsed_seconds': 6.007432699203491}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_1_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 0, 'empty_plan': 1, 'instruction': 'Prepare for a game by delivering something to play with to the TV stand.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': 8.956251621246338}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_8_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 1, 'empty_plan': 1, 'instruction': "It looks like I've spilled something. Would you mind getting the object I need to clean it up in the left counter?", 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 2, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 6.642676591873169}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_20_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'I spilt something and need to clean it. Can you bring something to the left counter to help?', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 7.069802761077881}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_30_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'Acquire a sports object and position it in the brown table.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 7.466447353363037}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_23_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 1, 'empty_plan': 1, 'instruction': 'Bring me a suitable object to pour hot coffee into at the left counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 2, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': 8.798742055892944}
+closed_feedback/gemini-3-flash-preview_eb-hab_v2_full/common_sense/results/episode_50_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 4, 'empty_plan': 1, 'instruction': 'Grab an item for securing the loose screw within the left counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 9, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4444444444444444, 'episode_elapsed_seconds': 14.69379186630249}
+final results: 
+{'reward': 0.5085416666666667, 'num_invalid_actions': 1.66, 'empty_plan': 0.88, 'task_success': 0.12, 'task_progress': 0.12, 'subgoal_reward': 0.1, 'num_steps': 4.32, 'planner_steps': 2.1, 'planner_output_error': 0.0, 'num_invalid_action_ratio': 0.38498412698412693, 'episode_elapsed_seconds': 9.915831055641174}

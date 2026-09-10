@@ -1,0 +1,85 @@
+{
+  "status": "complete",
+  "files": [
+    {
+      "source": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/images/episode_19/episode_19_step_0.png",
+      "destination": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_interrupted/run_202609082225/long_horizon/images/episode_19/episode_19_step_0.png",
+      "sha256": "8ce34cfaaae607deb28fc2ec26e8eb59e37365a81f102bcbc8aeea1bc1c31988"
+    },
+    {
+      "source": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/images/episode_19/episode_19_step_1.png",
+      "destination": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_interrupted/run_202609082225/long_horizon/images/episode_19/episode_19_step_1.png",
+      "sha256": "38c235f908aeca619189b5dac0312d6db08b587ced55b3a9f3803a9a033b248d"
+    },
+    {
+      "source": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/images/episode_19/episode_19_step_10.png",
+      "destination": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_interrupted/run_202609082225/long_horizon/images/episode_19/episode_19_step_10.png",
+      "sha256": "05ea01960ce43a1001fa97257ce7622e44f16769c0d3fdf7ab6c87427ef48dde"
+    },
+    {
+      "source": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/images/episode_19/episode_19_step_11.png",
+      "destination": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_interrupted/run_202609082225/long_horizon/images/episode_19/episode_19_step_11.png",
+      "sha256": "432e5edc14fd773df0b2f3fb5c22907963d747ee86c0c1d12634736ec0fbe306"
+    },
+    {
+      "source": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/images/episode_19/episode_19_step_12.png",
+      "destination": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_interrupted/run_202609082225/long_horizon/images/episode_19/episode_19_step_12.png",
+      "sha256": "334c96db2676f23d31a0bf7b0d02239c848d66d6f4950510ded6a03e5bfd1079"
+    },
+    {
+      "source": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/images/episode_19/episode_19_step_13.png",
+      "destination": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_interrupted/run_202609082225/long_horizon/images/episode_19/episode_19_step_13.png",
+      "sha256": "334c96db2676f23d31a0bf7b0d02239c848d66d6f4950510ded6a03e5bfd1079"
+    },
+    {
+      "source": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/images/episode_19/episode_19_step_14.png",
+      "destination": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_interrupted/run_202609082225/long_horizon/images/episode_19/episode_19_step_14.png",
+      "sha256": "334c96db2676f23d31a0bf7b0d02239c848d66d6f4950510ded6a03e5bfd1079"
+    },
+    {
+      "source": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/images/episode_19/episode_19_step_15.png",
+      "destination": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_interrupted/run_202609082225/long_horizon/images/episode_19/episode_19_step_15.png",
+      "sha256": "334c96db2676f23d31a0bf7b0d02239c848d66d6f4950510ded6a03e5bfd1079"
+    },
+    {
+      "source": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/images/episode_19/episode_19_step_2.png",
+      "destination": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_interrupted/run_202609082225/long_horizon/images/episode_19/episode_19_step_2.png",
+      "sha256": "38c235f908aeca619189b5dac0312d6db08b587ced55b3a9f3803a9a033b248d"
+    },
+    {
+      "source": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/images/episode_19/episode_19_step_3.png",
+      "destination": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_interrupted/run_202609082225/long_horizon/images/episode_19/episode_19_step_3.png",
+      "sha256": "6df4747ca209d927fd65aa65f95ac1693963fea5a2082e596ff46f7db3a4ad55"
+    },
+    {
+      "source": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/images/episode_19/episode_19_step_4.png",
+      "destination": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_interrupted/run_202609082225/long_horizon/images/episode_19/episode_19_step_4.png",
+      "sha256": "6df4747ca209d927fd65aa65f95ac1693963fea5a2082e596ff46f7db3a4ad55"
+    },
+    {
+      "source": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/images/episode_19/episode_19_step_5.png",
+      "destination": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_interrupted/run_202609082225/long_horizon/images/episode_19/episode_19_step_5.png",
+      "sha256": "841a5346972ca7ac08ba9b7534c504e41204726e22810f4a4e9ce3ed27307239"
+    },
+    {
+      "source": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/images/episode_19/episode_19_step_6.png",
+      "destination": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_interrupted/run_202609082225/long_horizon/images/episode_19/episode_19_step_6.png",
+      "sha256": "841a5346972ca7ac08ba9b7534c504e41204726e22810f4a4e9ce3ed27307239"
+    },
+    {
+      "source": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/images/episode_19/episode_19_step_7.png",
+      "destination": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_interrupted/run_202609082225/long_horizon/images/episode_19/episode_19_step_7.png",
+      "sha256": "fe80b90e48f773055b786779003068a7e000bf153d46041b3ea15680452bb266"
+    },
+    {
+      "source": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/images/episode_19/episode_19_step_8.png",
+      "destination": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_interrupted/run_202609082225/long_horizon/images/episode_19/episode_19_step_8.png",
+      "sha256": "fe80b90e48f773055b786779003068a7e000bf153d46041b3ea15680452bb266"
+    },
+    {
+      "source": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/images/episode_19/episode_19_step_9.png",
+      "destination": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_interrupted/run_202609082225/long_horizon/images/episode_19/episode_19_step_9.png",
+      "sha256": "bf22c92fff7f346a42e93802f84c08e39e2bb4cd7159ae18b9d78db373265616"
+    }
+  ]
+}

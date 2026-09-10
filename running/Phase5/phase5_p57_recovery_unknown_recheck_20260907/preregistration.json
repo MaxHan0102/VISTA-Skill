@@ -1,0 +1,117 @@
+{
+  "claim_eligible": false,
+  "dataset_manifest_sha256": "732f908358e591eb63e5f08b4c3642149fd6b08e2fa349c7aed01c219efec9be",
+  "diagnostic": true,
+  "executor_base_urls": [
+    "http://192.168.1.185:8000/v1",
+    "http://192.168.1.192:8001/v1"
+  ],
+  "protocol": {
+    "acquisition_seed": 570907,
+    "budget": {
+      "maximum_episode_total": 4,
+      "mechanism_rollouts": 4
+    },
+    "candidate_budget": 0,
+    "claim_eligible": false,
+    "config": "configs/vista_phase5_hab.json",
+    "dataset": "running/Phase5/phase5_p57_recovery_20260907/development.pickle",
+    "dataset_manifest": "running/Phase5/phase5_p57_recovery_20260907/development_manifest.json",
+    "decision": {
+      "audit": "Open audit only after proxy and finalist pass. Preserve audit failures and do not tune against them.",
+      "discovery": "At least two independent natural acquisition episodes contain identified not-near failure, successful navigation without resolving target evidence, and another same-target not-near failure.",
+      "local_endpoints": "Mechanism diagnostics only: failed-target retry without new evidence, evidence recovery, invalid actions, guard blocks, steps, and per-purpose cost. No local endpoint substitutes for the task gate.",
+      "mechanism": "Replay both arms on the first two supporting acquisition tasks, once each. Require fewer retries without new target evidence, with no reduction in summed success or progress. This outcome-selected acquisition screen is not held-out evidence.",
+      "no_candidate": "Stop after the registered acquisition budget; do not insert a human candidate.",
+      "proxy_and_finalist": "Unchanged Phase-5 semantic task-first Gate, plus paired task-success non-inferiority LCB >= -0.05.",
+      "shadow": "Positive but underpowered candidates may be tested on finalist, but cannot be promoted through a failed proxy."
+    },
+    "evidence": {
+      "max_visual_calls_per_episode": 4,
+      "min_confidence": 0.75,
+      "min_coverage": 0.5,
+      "visual_max_completion_tokens": 1024,
+      "visual_on_failed_preconditions": true
+    },
+    "executor": {
+      "max_completion_tokens": 4096,
+      "model": "Qwen/Qwen3-VL-8B-Instruct",
+      "n_shots": 10,
+      "resolution": 500,
+      "temperature": 0.0,
+      "tensor_parallel": 1
+    },
+    "historical_development_layout_exposure": true,
+    "initial_skill": "interface_only",
+    "minimum_independent_chains": 2,
+    "new_goal_combinations_only": true,
+    "official_test_access": false,
+    "output_dir": "running/Phase5/phase5_p57_recovery_unknown_recheck_20260907",
+    "parallelism": {
+      "arm_order": "Counterbalance by numeric task index plus rollout seed.",
+      "assignment": "Fixed task-level endpoint index in dataset manifest; both arms and all seeds of each task stay on the same endpoint.",
+      "deviation": "This bounded diagnostic registers two endpoint blocks, unlike the single-host controlled main protocol; do not treat it as an official controlled artifact.",
+      "maximum_client_workers": 2,
+      "report_endpoint_strata": true
+    },
+    "protocol_id": "phase5_p57_unknown_evidence_recheck_v2",
+    "recheck_driver_sha256": "a3e7a25c4224c703288e308c7c32ffbf0f9d73edfcb5c7060a7104e0cd27bf6a",
+    "recheck_scope": "Only the original two outcome-selected acquisition tasks, both arms, same seed/endpoints/candidate/thresholds. Fix visual-query starvation after UNKNOWN; never open held-out stages or promote. V1 No-Go retained.",
+    "rollout_seeds": [
+      0,
+      1,
+      2
+    ],
+    "source_artifacts": {
+      "candidate_skill.json": "ecaf10846b126f04512263a2ccab3f91e45a21a29d402d172bfe04f5779dbd04",
+      "discovery.json": "1c7044a6945cc01967c6cb420cee95ca7a62b2dbc053b098b6fd87e63605b96b",
+      "parent_skill.json": "00d0e3ab4298022807343a66770fd0b03115a9f2a4806ce7d545d76698a672f6"
+    },
+    "source_run": "running/Phase5/phase5_p57_recovery_20260907"
+  },
+  "protocol_sha256": "69da68d956d85c2be3c0223f939b7dec47f8c511a4869d45ce366577a1257169",
+  "source_sha256": {
+    "configs/vista_phase5_hab.json": "33c40d05e68f8caa3388af4c1b1d598fe1119f54239a71d29e25f8e0aad731d1",
+    "scripts/phase5_recovery_dataset.py": "038e19f95ea809707aa096af60224e3fc0a900e112c306ba86682ae62e1bd14d",
+    "scripts/phase5_recovery_pilot.py": "5b939ce675aa337e22afde3786b51a3ba8005e1f3ee0b55383714429d2b8341a",
+    "vista_skill/__init__.py": "31bc7b5cb5cefe1260422381e59694283dde2628c28bd2daa97bb3054f2a1cd8",
+    "vista_skill/action_schema.py": "b102d3115213b2983e0098fd7c3de5a269c103c6a8d6ab4f23bd58a874f8da14",
+    "vista_skill/artifacts.py": "01ad93606a45c1b4684f3f9516d20dffc0c8e7edc4c5cbfb8895def0d0df12ed",
+    "vista_skill/attribution.py": "9b2da63d66baea8273f1f19bf4b668981de7b89e85060af25d18d618dff669e3",
+    "vista_skill/baselines.py": "d7968082bf87a9e8c484108e4d0d37e6eef3d8e97f196e04a7b3019d3f6a8b6a",
+    "vista_skill/belief.py": "191af2ccaaf5ff9dd013ab7b947b89020eece46cddbb59f3c2c538c5f600ddca",
+    "vista_skill/clustering.py": "22c3e6b8600aeaa509fb09411bd16d3312ab49b46ff4e7d7b1a4dfd5615b58bd",
+    "vista_skill/config.py": "2a71449213fdd4c6c01e1f283ee94e846253ac1866cc12b48d26d22384a1dcf3",
+    "vista_skill/discovery.py": "250855a5f66fcfa5e750906824ad48de9afe223190551f09ec1d966035a32580",
+    "vista_skill/emphasis.py": "ca6338af7682e2893d2a9b3edb7cefbb33bdaeb42c64b33e92118f7c70bf63b1",
+    "vista_skill/evaluation.py": "1c8d8d8d06d573b21383081f8a724b8392b007473c6c4789431beb6ba58bf82c",
+    "vista_skill/evidence.py": "bd5cf56025df0557ac8a8ec32dd93c7ebc52f908244d84436de401a6761053a5",
+    "vista_skill/evidence_guard.py": "6e37319e9adde0e31a598567c3804f427a36723066dceb542d9915c71da0f417",
+    "vista_skill/evidence_oracle.py": "492745551c1286af7c03d57dd53ff839a115931dda558c95b37b7f5001dbde68",
+    "vista_skill/evolution.py": "0c5ab079c1b0e81a2720aad645d90d9e6bd0d38883e993ec12faed67c228511b",
+    "vista_skill/fault_injection.py": "3b40bb7c9536ccc2634348f01899fd422e85b3624c36a473cb550f285acf7534",
+    "vista_skill/integrations/__init__.py": "d4ba0274a1abdba5c3db3e0eac87236cd2474c18082deecb4b76aecd0871e11f",
+    "vista_skill/integrations/embodiedbench/__init__.py": "f067d26bf3e31af0251a38108a47a313fca139fa6068b8d2209cda3331ff398d",
+    "vista_skill/integrations/embodiedbench/cli.py": "f863dbc076cd192b3d0d82ab7a34e7dc5a7836d3eff1d6d1a9dff0411c75614e",
+    "vista_skill/integrations/embodiedbench/environment.py": "18a363323cc5b8ea6d0341af53571eb6686e9c22119f5761bb7f91f9864150ff",
+    "vista_skill/integrations/embodiedbench/manifest.py": "bd04ede349a3d7a7d3050b5444cd31f88a6665a38ea58c29949b4d1054e002a5",
+    "vista_skill/integrations/embodiedbench/planner.py": "dcd7cff4c29eb3fc46a96b795e61f5601e660eb9a7bc87b0541338dd4373e4c4",
+    "vista_skill/integrations/embodiedbench/runner.py": "d924cfb367049b993dbcf3bd3f29dca28969b7f776af7e9072eaa48142cf25a2",
+    "vista_skill/integrations/embodiedbench/state_oracle.py": "59b0b554552a7e5d7e56df8a07056f052571f21168769dd9f997e4908fa3fce9",
+    "vista_skill/integrations/embodiedbench/task_semantics.py": "dbe2a4e8437deddf4817a74eb080ec423cf843394e6bb28d641c49364cadeef2",
+    "vista_skill/integrity.py": "2d0aaa5fa4d6e83dc97d5a8708658d06670cdccb88eedd847f67b256bf76fe6c",
+    "vista_skill/lineage.py": "bb6b6c4813dbe0b8de2f12106a7084780ede6fc067e80a7699c363cc0210966d",
+    "vista_skill/meta_skills.py": "d09512b03e73c60a60bc19f6d3325f7d9d19ab5f678658f39da45906ec532b45",
+    "vista_skill/metrics.py": "35efdccd4c6abebca95e8bae07294e206e5b05dbc6d104d8884399a79817c580",
+    "vista_skill/mismatch.py": "ab04b117dd162d728d6275a5b9647d9def828b02c76d4c4b07c0d628bd9501f1",
+    "vista_skill/models.py": "ddc818baf67f175c0682168fcba78fd1c14b647e5ce5c36dbff463af429c30aa",
+    "vista_skill/pipeline.py": "dd0dd5fdc6cb7d74aa9bd86bf55cd283624bfb0e24baa856322d7c1af1c041ab",
+    "vista_skill/protocol.py": "e56fa609bee40c053f4b7c2ceb509185c69c269452a8e798dc98ade3873566ef",
+    "vista_skill/recovery.py": "e0b72b20c7ebc7cedf3797381f6834f6ae0f56bf790102fd591478b9f10b563e",
+    "vista_skill/schemas.py": "1ef458862a27f386758947291c8c956ee8b81e4a9bde564ff0e16c0d6c92c1e1",
+    "vista_skill/skills.py": "34152b806e5601c3fb4d3c8cc2f83a61898f99341f7e654b976d97ec3cb1f175",
+    "vista_skill/temporal.py": "be01ee8aa18e794a7013ed76cd88b8ec47e424324590c6f95fcd4e14de7f4b48",
+    "vista_skill/update_audit.py": "d7f0cc079b0fcf38387968ce4fd8620c1e3b20b9aa6e75e32ce6f5e281deaeef",
+    "vista_skill/workflow.py": "3e627fdcb9cf35a4445e64362b143002f7ba1ca950801893e07effbab6014f53"
+  }
+}

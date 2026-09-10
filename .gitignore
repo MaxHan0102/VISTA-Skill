@@ -5,11 +5,71 @@
 # `bash context4agent/clone_refs.sh` (pins tracked there).
 /context4agent/repository/
 
-# --- Generated run outputs (repo rule: never commit running/ outputs) --------
-/EmbodiedBench/running/
+# --- Experiment records --------------------------------------------------
+# JSON/JSONL, logs, configs, summaries and migration manifests are trackable
+# in both output roots. Keep rendered images and extensionless API image
+# caches local. Patterns are scoped so source/design assets are unaffected.
+/running/**/*.[pP][nN][gG]
+/running/**/*.[jJ][pP][gG]
+/running/**/*.[jJ][pP][eE][gG]
+/running/**/*.[gG][iI][fF]
+/running/**/*.[wW][eE][bB][pP]
+/running/**/*.[bB][mM][pP]
+/running/**/*.[tT][iI][fF]
+/running/**/*.[tT][iI][fF][fF]
+/running/**/*.[sS][vV][gG]
+/running/**/*.[iI][cC][oO]
+/running/**/*.[aA][vV][iI][fF]
+/running/**/*.[hH][eE][iI][cC]
+/running/**/*.[hH][eE][iI][fF]
+/running/**/*.[pP][pP][mM]
+/running/**/*.[pP][gG][mM]
+/running/**/*.[pP][bB][mM]
+/running/**/*.[pP][nN][mM]
+/running/**/*.[eE][xX][rR]
+/running/**/input_images/
+# Raw generated benchmark datasets remain local; keep their metadata/hashes.
+/running/**/*.pickle
+/EmbodiedBench/running/**/*.[pP][nN][gG]
+/EmbodiedBench/running/**/*.[jJ][pP][gG]
+/EmbodiedBench/running/**/*.[jJ][pP][eE][gG]
+/EmbodiedBench/running/**/*.[gG][iI][fF]
+/EmbodiedBench/running/**/*.[wW][eE][bB][pP]
+/EmbodiedBench/running/**/*.[bB][mM][pP]
+/EmbodiedBench/running/**/*.[tT][iI][fF]
+/EmbodiedBench/running/**/*.[tT][iI][fF][fF]
+/EmbodiedBench/running/**/*.[sS][vV][gG]
+/EmbodiedBench/running/**/*.[iI][cC][oO]
+/EmbodiedBench/running/**/*.[aA][vV][iI][fF]
+/EmbodiedBench/running/**/*.[hH][eE][iI][cC]
+/EmbodiedBench/running/**/*.[hH][eE][iI][fF]
+/EmbodiedBench/running/**/*.[pP][pP][mM]
+/EmbodiedBench/running/**/*.[pP][gG][mM]
+/EmbodiedBench/running/**/*.[pP][bB][mM]
+/EmbodiedBench/running/**/*.[pP][nN][mM]
+/EmbodiedBench/running/**/*.[eE][xX][rR]
+/EmbodiedBench/running/**/input_images/
 
-# VISTA-Skill sidecar artifacts and Python build/test caches.
-/running/
+# Backup archives can embed the excluded images or duplicate old records.
+# Keep their inventories/hashes, but not the archive payloads or runtime locks.
+/running/**/*.tar
+/running/**/*.gz
+/running/**/*.zip
+/running/**/*.tgz
+/running/**/*.bz2
+/running/**/*.xz
+/running/**/*.7z
+/running/**/*.lock
+/EmbodiedBench/running/**/*.tar
+/EmbodiedBench/running/**/*.gz
+/EmbodiedBench/running/**/*.zip
+/EmbodiedBench/running/**/*.tgz
+/EmbodiedBench/running/**/*.bz2
+/EmbodiedBench/running/**/*.xz
+/EmbodiedBench/running/**/*.7z
+/EmbodiedBench/running/**/*.lock
+
+# Python build/test caches.
 # Habitat import creates this transient symlink to its dataset assets.
 /data
 __pycache__/

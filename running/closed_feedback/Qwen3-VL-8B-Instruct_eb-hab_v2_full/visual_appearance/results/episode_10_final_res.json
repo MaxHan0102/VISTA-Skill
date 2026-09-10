@@ -1,0 +1,1 @@
+{"reward": 1.5625, "num_invalid_actions": 0, "empty_plan": 0, "instruction": "Please, carry a purple fruit to a large gray piece of furniture with a backrest.", "task_success": true, "task_progress": 1.0, "subgoal_reward": 1.25, "num_steps": 8, "planner_steps": 2, "planner_output_error": 0, "num_invalid_action_ratio": 0.0, "episode_elapsed_seconds": [10.63085150718689]}

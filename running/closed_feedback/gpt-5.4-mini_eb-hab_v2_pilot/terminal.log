@@ -1,0 +1,36 @@
+Output directory: /root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_pilot
+[2026-09-08 16:53:20,320][INFO] - Current eval set: base
+2026-09-08 16:53:20,426 Initializing dataset LangRearrangeDataset-v0
+2026-09-08 16:53:20,426 Loading from /root/max/VISTA-Skill/EmbodiedBench/embodiedbench/envs/eb_habitat/datasets/base.pickle
+2026-09-08 16:53:20,429 initializing sim RearrangeSim-v0
+2026-09-08 16:53:21,815 Initializing task RearrangePredicateTask-v0
+Num episodes 50
+Episodes:   0%|                                                                                                                                                                                                                       | 0/2 [00:00<?, ?it/s][2026-09-08 16:53:21,940][INFO] - Evaluating episode 0 ...
+[2026-09-08 16:53:23,199][INFO] - Episode 0: BaseEpisode(episode_id='39', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_05.scene_instance.json')
+Instruction: Move one of the pear items to the indicated sofa.
+Planner Output Action: [12, 31, 12, 56]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [12]
+Executed action: navigate to the sofa, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  50%|███████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                                       | 1/2 [00:19<00:19, 19.47s/it][2026-09-08 16:53:41,410][INFO] - Evaluating episode 1 ...
+[2026-09-08 16:53:41,435][INFO] - Episode 1: BaseEpisode(episode_id='3', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_05.scene_instance.json')
+Instruction: Find a orange on the TV stand and move it to the sink.
+Planner Output Action: [8, 45, 9, 53]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:24<00:00, 10.85s/it]Episodes: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:24<00:00, 12.14s/it]
+['/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_pilot/base/results/episode_2_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_pilot/base/results/episode_1_final_res.json'] 2
+closed_feedback/gpt-5.4-mini_eb-hab_v2_pilot/base/results/episode_2_final_res.json
+{'reward': 3.4375, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Find a orange on the TV stand and move it to the sink.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 1.25, 'num_steps': 4, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [4.768002510070801]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_pilot/base/results/episode_1_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 2, 'empty_plan': 1, 'instruction': 'Move one of the pear items to the indicated sofa.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 5, 'planner_steps': 3, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4, 'episode_elapsed_seconds': 18.209625959396362}
+final results: 
+{'reward': 1.71875, 'num_invalid_actions': 1.0, 'empty_plan': 0.5, 'task_success': 0.5, 'task_progress': 0.5, 'subgoal_reward': 0.625, 'num_steps': 4.5, 'planner_steps': 2.0, 'planner_output_error': 0.0, 'num_invalid_action_ratio': 0.2, 'episode_elapsed_seconds': 11.488814234733582}

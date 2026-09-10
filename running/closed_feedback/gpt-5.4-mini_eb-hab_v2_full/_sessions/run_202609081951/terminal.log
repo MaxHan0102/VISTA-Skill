@@ -1,0 +1,1456 @@
+Output directory: /root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951
+[2026-09-08 19:51:04,228][INFO] - Current eval set: spatial_relationship
+2026-09-08 19:51:04,335 Initializing dataset LangRearrangeDataset-v0
+2026-09-08 19:51:04,336 Loading from /root/max/VISTA-Skill/EmbodiedBench/embodiedbench/envs/eb_habitat/datasets/spatial_relationship.pickle
+2026-09-08 19:51:04,339 initializing sim RearrangeSim-v0
+2026-09-08 19:51:05,730 Initializing task RearrangePredicateTask-v0
+Num episodes 50
+Episodes:   0%|                                                                                                                                                                                                                            | 0/50 [00:00<?, ?it/s][2026-09-08 19:51:05,856][INFO] - Evaluating episode 0 ...
+[2026-09-08 19:51:07,088][INFO] - Episode 0: BaseEpisode(episode_id='39', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Move a spatula from the right counter to the right receptacle of the left counter.
+Planner Output Action: [10, 24, 11, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the spatula, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 24, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the spatula, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 15, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [10, 24, 11, 59]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the spatula, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [10, 24, 11, 59]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the spatula, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [10, 24, 15, 59]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the spatula, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [10, 24, 11, 59]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the spatula, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:   2%|████▏                                                                                                                                                                                                               | 1/50 [00:52<42:40, 52.26s/it][2026-09-08 19:51:58,121][INFO] - Evaluating episode 1 ...
+[2026-09-08 19:51:58,159][INFO] - Episode 1: BaseEpisode(episode_id='31', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Move a screwdriver from the sofa to the right receptacle of the left counter.
+Planner Output Action: [12, 19, 10, 54]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 19, 11, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 19, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [14, 58]
+Executed action: navigate to the left drawer of the kitchen counter, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 19, 15, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [14, 59]
+Executed action: navigate to the left drawer of the kitchen counter, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [14, 19, 58]
+Executed action: navigate to the left drawer of the kitchen counter, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Planner Output Action: [14, 19, 58]
+Executed action: navigate to the left drawer of the kitchen counter, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Planner Output Action: [14, 19, 58]
+Executed action: navigate to the left drawer of the kitchen counter, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:   4%|████████▍                                                                                                                                                                                                           | 2/50 [01:40<40:06, 50.14s/it][2026-09-08 19:52:46,773][INFO] - Evaluating episode 2 ...
+[2026-09-08 19:52:46,790][INFO] - Episode 2: BaseEpisode(episode_id='42', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Move a strawberry from the right counter to the right receptacle of the left counter.
+Planner Output Action: [10, 38, 14, 58]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the strawberry, Task success: False
+Executed action: navigate to the left drawer of the kitchen counter, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Planner Output Action: [14, 38, 15, 59]
+Executed action: navigate to the left drawer of the kitchen counter, Task success: False
+Executed action: pick up the strawberry, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [14, 38, 58]
+Executed action: navigate to the left drawer of the kitchen counter, Task success: False
+Executed action: pick up the strawberry, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [14, 58]
+Executed action: navigate to the left drawer of the kitchen counter, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Planner Output Action: [14, 38, 59]
+Executed action: navigate to the left drawer of the kitchen counter, Task success: False
+Executed action: pick up the strawberry, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [15, 38, 14, 58]
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: pick up the strawberry, Task success: False
+Executed action: navigate to the left drawer of the kitchen counter, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:   6%|████████████▋                                                                                                                                                                                                       | 3/50 [02:17<34:29, 44.03s/it][2026-09-08 19:53:23,523][INFO] - Evaluating episode 3 ...
+[2026-09-08 19:53:23,540][INFO] - Episode 3: BaseEpisode(episode_id='37', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Find a orange and move it to the right of the sink.
+Planner Output Action: [9, 45, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Planner Output Action: [45, 54]
+Executed action: pick up the orange, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [9, 45, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9, 45, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Episodes:   8%|████████████████▋                                                                                                                                                                                                | 4/50 [06:19<1:33:40, 122.18s/it][2026-09-08 19:57:25,521][INFO] - Evaluating episode 4 ...
+[2026-09-08 19:57:25,537][INFO] - Episode 4: BaseEpisode(episode_id='26', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Move a plum from the sofa to the right receptacle of the left counter.
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [12, 30, 11, 55]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the plum, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Episodes:  10%|████████████████████▉                                                                                                                                                                                            | 5/50 [10:28<2:05:45, 167.68s/it][2026-09-08 20:01:33,879][INFO] - Evaluating episode 5 ...
+[2026-09-08 20:01:33,906][INFO] - Episode 5: BaseEpisode(episode_id='3', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Move a hammer from the brown table to the right receptacle of the left counter.
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [6, 18, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [11, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 17, 10, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the clamp, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [11, 18, 11, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Episodes:  12%|█████████████████████████                                                                                                                                                                                        | 6/50 [12:53<1:57:21, 160.04s/it][2026-09-08 20:03:59,094][INFO] - Evaluating episode 6 ...
+[2026-09-08 20:03:59,353][INFO] - Episode 6: BaseEpisode(episode_id='48', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Hey, on the sink, I accidentally left my plate, can you bring it to the right of the sink?
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [9, 27, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Episodes:  14%|█████████████████████████████▎                                                                                                                                                                                   | 7/50 [15:51<1:59:04, 166.16s/it][2026-09-08 20:06:57,843][INFO] - Evaluating episode 7 ...
+[2026-09-08 20:06:58,105][INFO] - Episode 7: BaseEpisode(episode_id='30', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_07.scene_instance.json')
+Instruction: Place a sponge and a ball on the right of the sink.
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [9]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Episodes:  16%|█████████████████████████████████▍                                                                                                                                                                               | 8/50 [19:42<2:10:43, 186.75s/it][2026-09-08 20:10:48,672][INFO] - Evaluating episode 8 ...
+[2026-09-08 20:10:48,745][INFO] - Episode 8: BaseEpisode(episode_id='35', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_05.scene_instance.json')
+Instruction: Transport a padlock and carefully position it in the designated left receptacle of the right counter.
+Planner Output Action: [10, 20, 59]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the padlock, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [14, 20, 58]
+Executed action: navigate to the left drawer of the kitchen counter, Task success: False
+Executed action: pick up the padlock, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Planner Output Action: [10, 20, 14, 58]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the padlock, Task success: False
+Executed action: navigate to the left drawer of the kitchen counter, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Planner Output Action: [10, 20, 58]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the padlock, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Episodes:  18%|█████████████████████████████████████▌                                                                                                                                                                           | 9/50 [21:11<1:46:45, 156.22s/it][2026-09-08 20:12:17,777][INFO] - Evaluating episode 9 ...
+[2026-09-08 20:12:17,854][INFO] - Episode 9: BaseEpisode(episode_id='36', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move a lego from the right counter to the right receptacle of the left counter.
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [10, 39, 11, 58]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the lego, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [11, 15, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Episodes:  20%|█████████████████████████████████████████▌                                                                                                                                                                      | 10/50 [24:57<1:58:22, 177.56s/it][2026-09-08 20:16:03,132][INFO] - Evaluating episode 10 ...
+[2026-09-08 20:16:03,154][INFO] - Episode 10: BaseEpisode(episode_id='38', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move a clamp from the right counter to the right receptacle of the left counter.
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Episodes:  22%|█████████████████████████████████████████████▊                                                                                                                                                                  | 11/50 [29:22<2:12:53, 204.44s/it][2026-09-08 20:20:28,523][INFO] - Evaluating episode 11 ...
+[2026-09-08 20:20:28,537][INFO] - Episode 11: BaseEpisode(episode_id='41', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move a knife from the brown table to the right receptacle of the left counter.
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [7, 25, 11, 58]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the knife, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 15]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [15, 59]
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Episodes:  24%|█████████████████████████████████████████████████▉                                                                                                                                                              | 12/50 [32:51<2:10:24, 205.90s/it][2026-09-08 20:23:57,759][INFO] - Evaluating episode 12 ...
+[2026-09-08 20:23:57,774][INFO] - Episode 12: BaseEpisode(episode_id='23', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Find a orange and move it to the right of the sink.
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Episodes:  26%|██████████████████████████████████████████████████████                                                                                                                                                          | 13/50 [36:36<2:10:23, 211.45s/it][2026-09-08 20:27:41,989][INFO] - Evaluating episode 13 ...
+[2026-09-08 20:27:42,013][INFO] - Episode 13: BaseEpisode(episode_id='21', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move a sponge from the brown table to the right receptacle of the left counter.
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [7, 28, 11, 59]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the sponge, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [11, 15, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Episodes:  28%|██████████████████████████████████████████████████████████▏                                                                                                                                                     | 14/50 [42:02<2:27:46, 246.30s/it][2026-09-08 20:33:08,822][INFO] - Evaluating episode 14 ...
+[2026-09-08 20:33:08,837][INFO] - Episode 14: BaseEpisode(episode_id='40', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move a spoon from the right counter to the right receptacle of the left counter.
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [10, 26, 14, 58]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the spoon, Task success: False
+Executed action: navigate to the left drawer of the kitchen counter, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [14, 58]
+Executed action: navigate to the left drawer of the kitchen counter, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [10, 26, 14, 58]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the spoon, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  30%|██████████████████████████████████████████████████████████████▍                                                                                                                                                 | 15/50 [45:21<2:15:19, 231.99s/it][2026-09-08 20:36:27,625][INFO] - Evaluating episode 15 ...
+[2026-09-08 20:36:27,634][INFO] - Episode 15: BaseEpisode(episode_id='32', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move a block from the brown table to the right receptacle of the left counter.
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [7, 22, 10, 54]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the block, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [11, 15, 22, 58]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: pick up the block, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 15, 22, 15, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: pick up the block, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  32%|██████████████████████████████████████████████████████████████████▌                                                                                                                                             | 16/50 [48:59<2:09:03, 227.74s/it][2026-09-08 20:40:05,502][INFO] - Evaluating episode 16 ...
+[2026-09-08 20:40:05,510][INFO] - Episode 16: BaseEpisode(episode_id='27', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Collect a knife from the TV stand and place it in the left receptacle of the right counter.
+Planner Output Action: [8, 25, 10, 54]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the knife, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [54, 15, 54]
+Executed action: place at the right counter in the kitchen, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [11, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [8, 25, 10, 54]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the knife, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [15, 19]
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Planner Output Action: [11, 17, 10, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the clamp, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [8, 25, 10, 15, 25, 59]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the knife, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  34%|██████████████████████████████████████████████████████████████████████▋                                                                                                                                         | 17/50 [49:44<1:34:55, 172.60s/it][2026-09-08 20:40:49,872][INFO] - Evaluating episode 17 ...
+[2026-09-08 20:40:49,881][INFO] - Episode 17: BaseEpisode(episode_id='29', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move a spatula from the left counter to the right receptacle of the left counter.
+Planner Output Action: [11, 24, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the spatula, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [11, 24, 10, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the spatula, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [11, 24, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the spatula, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 24, 10, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the spatula, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [11, 24, 10, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the spatula, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [11, 24, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the spatula, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  36%|██████████████████████████████████████████████████████████████████████████▉                                                                                                                                     | 18/50 [50:19<1:10:05, 131.42s/it][2026-09-08 20:41:25,436][INFO] - Evaluating episode 18 ...
+[2026-09-08 20:41:25,694][INFO] - Episode 18: BaseEpisode(episode_id='44', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: Hey, on the right of the sink, I accidentally left my knife, can you bring it to the left counter?
+Planner Output Action: [9, 25, 11, 55]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the knife, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  38%|████████████████████████████████████████████████████████████████████████████████▏                                                                                                                                  | 19/50 [50:23<48:10, 93.25s/it][2026-09-08 20:41:29,772][INFO] - Evaluating episode 19 ...
+[2026-09-08 20:41:29,786][INFO] - Episode 19: BaseEpisode(episode_id='33', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: Move a rubriks cube from the left counter to the right receptacle of the left counter.
+Planner Output Action: [11, 40, 11, 58]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Episodes:  40%|███████████████████████████████████████████████████████████████████████████████████▏                                                                                                                            | 20/50 [54:56<1:13:34, 147.15s/it][2026-09-08 20:46:02,535][INFO] - Evaluating episode 20 ...
+[2026-09-08 20:46:02,553][INFO] - Episode 20: BaseEpisode(episode_id='16', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: Move a drill from the brown table to the right receptacle of the left counter.
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [7, 23, 11, 59]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the drill, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 23, 10, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the drill, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [11, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  42%|███████████████████████████████████████████████████████████████████████████████████████▎                                                                                                                        | 21/50 [58:50<1:23:38, 173.04s/it][2026-09-08 20:49:55,937][INFO] - Evaluating episode 21 ...
+[2026-09-08 20:49:56,052][INFO] - Episode 21: BaseEpisode(episode_id='7', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: Move a apple from the black table to the right receptacle of the left counter.
+Planner Output Action: [6, 33, 11, 59]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [11, 15, 14]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: navigate to the left drawer of the kitchen counter, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [11, 15, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 15, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 15, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 15, 33, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 15]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [59]
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  44%|██████████████████████████████████████████████████████████████████████████████████████████▋                                                                                                                   | 22/50 [1:01:26<1:18:26, 168.10s/it][2026-09-08 20:52:32,532][INFO] - Evaluating episode 22 ...
+[2026-09-08 20:52:32,542][INFO] - Episode 22: BaseEpisode(episode_id='11', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: Move a plate from the right counter to the right receptacle of the left counter.
+Planner Output Action: [10, 27, 11, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [10, 27, 11, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [10, 27, 11, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [10, 27, 11, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [10, 27, 11, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [10, 27, 11, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  46%|███████████████████████████████████████████████████████████████████████████████████████████████▋                                                                                                                | 23/50 [1:02:01<57:36, 128.03s/it][2026-09-08 20:53:07,097][INFO] - Evaluating episode 23 ...
+[2026-09-08 20:53:07,171][INFO] - Episode 23: BaseEpisode(episode_id='43', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_13.scene_instance.json')
+Instruction: Transfer an block to the designated left receptacle of the right counter.
+Planner Output Action: [10, 22, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  48%|████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                                                                            | 24/50 [1:02:06<39:32, 91.24s/it][2026-09-08 20:53:12,515][INFO] - Evaluating episode 24 ...
+[2026-09-08 20:53:12,739][INFO] - Episode 24: BaseEpisode(episode_id='19', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_06.scene_instance.json')
+Instruction: On the right of the sink, I need a spatula and a book.
+Planner Output Action: [9, 24, 10, 25, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the spatula, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the knife, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [9, 24, 10, 25, 54, 9, 41, 10, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the spatula, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the knife, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the book, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  50%|████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                                        | 25/50 [1:02:24<28:52, 69.31s/it][2026-09-08 20:53:30,655][INFO] - Evaluating episode 25 ...
+[2026-09-08 20:53:30,723][INFO] - Episode 25: BaseEpisode(episode_id='0', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: Move a peach from the sofa to the right receptacle of the left counter.
+Planner Output Action: [12, 32, 11, 54]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the peach, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [11, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [11, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [11, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [11, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [11, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 48, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the wrench, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [11, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 32, 11, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the peach, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  52%|████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                                                                    | 26/50 [1:03:57<30:31, 76.30s/it][2026-09-08 20:55:03,272][INFO] - Evaluating episode 26 ...
+[2026-09-08 20:55:03,281][INFO] - Episode 26: BaseEpisode(episode_id='17', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: Move a pear from the sofa to the right receptacle of the left counter.
+Planner Output Action: [12, 31, 11, 55]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 31, 11, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 31, 11, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 31, 58]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 31, 11, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [11, 31, 58]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 31, 58]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 31, 58]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the pear, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  54%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                                                                | 27/50 [1:06:01<34:42, 90.56s/it][2026-09-08 20:57:07,103][INFO] - Evaluating episode 27 ...
+[2026-09-08 20:57:07,112][INFO] - Episode 27: BaseEpisode(episode_id='15', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: Move a clamp from the brown table to the right receptacle of the left counter.
+Planner Output Action: [6, 17, 11, 58]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the clamp, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Planner Output Action: [15, 17, 15, 59]
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: pick up the clamp, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 15, 17, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: pick up the clamp, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 15, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 15, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 15]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [59]
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  56%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                            | 28/50 [1:06:48<28:27, 77.59s/it][2026-09-08 20:57:54,433][INFO] - Evaluating episode 28 ...
+[2026-09-08 20:57:54,580][INFO] - Episode 28: BaseEpisode(episode_id='28', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: The rubriks cube is on the right of the sink but you should move it to the sink.
+Planner Output Action: [9, 40, 9, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  58%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                                                       | 29/50 [1:06:54<19:39, 56.14s/it][2026-09-08 20:58:00,537][INFO] - Evaluating episode 29 ...
+[2026-09-08 20:58:00,552][INFO] - Episode 29: BaseEpisode(episode_id='22', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: Move a padlock from the left counter to the right receptacle of the left counter.
+Planner Output Action: [11, 20, 11, 58]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the padlock, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 20, 15, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the padlock, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 20, 15, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the padlock, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 20, 15, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the padlock, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 20, 15, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the padlock, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 20, 15, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the padlock, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  60%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                                                   | 30/50 [1:07:36<17:18, 51.92s/it][2026-09-08 20:58:42,615][INFO] - Evaluating episode 30 ...
+[2026-09-08 20:58:42,683][INFO] - Episode 30: BaseEpisode(episode_id='1', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_11.scene_instance.json')
+Instruction: Place a block and a pear on the left receptacle of the right counter.
+Planner Output Action: [10, 22, 54, 31, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 22, 54, 31, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 22, 54, 31, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 22, 54, 31, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 22, 10, 31, 10]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Episodes:  62%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                               | 31/50 [1:08:52<18:40, 59.00s/it][2026-09-08 20:59:58,111][INFO] - Evaluating episode 31 ...
+[2026-09-08 20:59:58,125][INFO] - Episode 31: BaseEpisode(episode_id='46', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_11.scene_instance.json')
+Instruction: Find a orange and move it to the right of the sink.
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Episodes:  64%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                           | 32/50 [1:13:07<35:19, 117.76s/it][2026-09-08 21:04:12,998][INFO] - Evaluating episode 32 ...
+[2026-09-08 21:04:13,011][INFO] - Episode 32: BaseEpisode(episode_id='6', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_11.scene_instance.json')
+Instruction: Pick up an bowl from the left counter and deposit it into the left receptacle of the right counter.
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Episodes:  66%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                                      | 33/50 [1:17:51<47:31, 167.76s/it][2026-09-08 21:08:57,414][INFO] - Evaluating episode 33 ...
+[2026-09-08 21:08:57,563][INFO] - Episode 33: BaseEpisode(episode_id='10', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: On the left counter there is a banana, move it to the right of the sink.
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Episodes:  68%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                                  | 34/50 [1:20:54<45:55, 172.24s/it][2026-09-08 21:12:00,102][INFO] - Evaluating episode 34 ...
+[2026-09-08 21:12:00,125][INFO] - Episode 34: BaseEpisode(episode_id='24', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: Find a wrench and move it to the right of the sink.
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [8, 48, 9, 53]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the wrench, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [48, 10, 54]
+Executed action: pick up the wrench, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  70%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                              | 35/50 [1:23:26<41:32, 166.14s/it][2026-09-08 21:14:32,009][INFO] - Evaluating episode 35 ...
+[2026-09-08 21:14:32,019][INFO] - Episode 35: BaseEpisode(episode_id='14', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: Move a screwdriver from the black table to the right receptacle of the left counter.
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [6, 19, 11, 58]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left drawer of the kitchen counter, Task success: False
+Planner Output Action: [10, 15]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: navigate to the right drawer of the kitchen counter, Task success: False
+Planner Output Action: [11, 59]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right drawer of the kitchen counter, Task success: False
+empty plan, stop here
+Planner Output Action: -2
+Episodes:  72%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                          | 36/50 [1:24:36<32:01, 137.27s/it][2026-09-08 21:15:41,931][INFO] - Evaluating episode 36 ...
+[2026-09-08 21:15:41,948][INFO] - Episode 36: BaseEpisode(episode_id='13', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: Move a block from the left counter to the right receptacle of the left counter.
+Planner Output Action: [11, 22, 10, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 22, 11, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 22, 11, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [11, 22]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Planner Output Action: [10, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [11, 22, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 22, 10, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [11, 22, 14, 58]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the block, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  74%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                      | 37/50 [1:27:28<32:00, 147.76s/it][2026-09-08 21:18:34,167][INFO] - Evaluating episode 37 ...
+[2026-09-08 21:18:34,277][INFO] - Episode 37: BaseEpisode(episode_id='2', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_16.scene_instance.json')
+Instruction: On the right of the sink I need you to put a drill.
+Planner Output Action: [9, 23, 10, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the drill, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [9, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9, 23, 10, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the drill, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [9, 23, 10, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the drill, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [9, 23, 10, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the drill, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [9, 23, 10, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the drill, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  76%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                  | 38/50 [1:28:11<23:17, 116.49s/it][2026-09-08 21:19:17,679][INFO] - Evaluating episode 38 ...
+[2026-09-08 21:19:17,748][INFO] - Episode 38: BaseEpisode(episode_id='18', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_13.scene_instance.json')
+Instruction: Find a toy airplane on the right of the sink and move it to the left counter.
+Planner Output Action: [9, 47, 11, 55]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the toy airplane, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  78%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                              | 39/50 [1:28:18<15:19, 83.58s/it][2026-09-08 21:19:24,489][INFO] - Evaluating episode 39 ...
+[2026-09-08 21:19:24,498][INFO] - Episode 39: BaseEpisode(episode_id='45', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_13.scene_instance.json')
+Instruction: Detach the strawberry from the right of the sink.
+Planner Output Action: [9, 38, 7, 51]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the strawberry, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  80%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                         | 40/50 [1:28:24<10:04, 60.42s/it][2026-09-08 21:19:30,849][INFO] - Evaluating episode 40 ...
+[2026-09-08 21:19:30,917][INFO] - Episode 40: BaseEpisode(episode_id='8', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_08.scene_instance.json')
+Instruction: I left my orange on the TV stand, can you bring it to the right of the sink?
+Planner Output Action: [8, 45, 9, 53]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9, 35, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the can, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [8, 45, 9, 53]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Failed to decode JSON: Extra data: line 1 column 1546 (char 1545)
+Planner Output Action: -1
+Planner Output Action: [8, 45, 10, 54]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [8, 45, 9, 54]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the orange, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  82%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                     | 41/50 [1:29:27<09:08, 60.98s/it][2026-09-08 21:20:33,158][INFO] - Evaluating episode 41 ...
+[2026-09-08 21:20:33,227][INFO] - Episode 41: BaseEpisode(episode_id='12', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_12.scene_instance.json')
+Instruction: Journey to the left receptacle of the right counter.
+Planner Output Action: [10, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  84%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                 | 42/50 [1:29:36<06:03, 45.45s/it][2026-09-08 21:20:42,358][INFO] - Evaluating episode 42 ...
+[2026-09-08 21:20:42,426][INFO] - Episode 42: BaseEpisode(episode_id='20', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_10.scene_instance.json')
+Instruction: Find a toy airplane and move it to the left receptacle of the right counter.
+Planner Output Action: [12, 47, 10, 54]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the toy airplane, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 47, 10, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the toy airplane, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 47, 10, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the toy airplane, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 47, 10, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the toy airplane, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 47, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the toy airplane, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  86%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                             | 43/50 [1:30:24<05:22, 46.09s/it][2026-09-08 21:21:29,944][INFO] - Evaluating episode 43 ...
+[2026-09-08 21:21:29,953][INFO] - Episode 43: BaseEpisode(episode_id='5', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_10.scene_instance.json')
+Instruction: Take an strawberry and transfer it to the allocated right of the sink.
+Planner Output Action: [9, 38, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the strawberry, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9, 38, 10, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the strawberry, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Failed to decode JSON: Expecting value: line 1 column 1 (char 0)
+Planner Output Action: -1
+Planner Output Action: [9, 38, 10, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the strawberry, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [9, 38, 10, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the strawberry, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [9, 38, 10, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the strawberry, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  88%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                         | 44/50 [1:31:36<05:24, 54.09s/it][2026-09-08 21:22:42,703][INFO] - Evaluating episode 44 ...
+[2026-09-08 21:22:42,779][INFO] - Episode 44: BaseEpisode(episode_id='4', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_14.scene_instance.json')
+Instruction: Move a rubriks cube to the right of the sink.
+Planner Output Action: [9, 40, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [9, 40, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9, 40, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [9, 40, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9, 40, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  90%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                     | 45/50 [1:32:15<04:07, 49.43s/it][2026-09-08 21:23:21,250][INFO] - Evaluating episode 45 ...
+[2026-09-08 21:23:21,319][INFO] - Episode 45: BaseEpisode(episode_id='49', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_02.scene_instance.json')
+Instruction: Take an plate and transfer it to the allocated right of the sink.
+Planner Output Action: [9, 27, 53]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [9, 27, 10, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  92%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                | 46/50 [1:32:34<02:41, 40.33s/it][2026-09-08 21:23:40,349][INFO] - Evaluating episode 46 ...
+[2026-09-08 21:23:40,418][INFO] - Episode 46: BaseEpisode(episode_id='47', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_06.scene_instance.json')
+Instruction: Pick a cleanser from the right of the sink and move it to the left counter.
+Planner Output Action: [9, 29, 11, 55]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  94%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍            | 47/50 [1:32:40<01:30, 30.08s/it][2026-09-08 21:23:46,522][INFO] - Evaluating episode 47 ...
+[2026-09-08 21:23:46,591][INFO] - Episode 47: BaseEpisode(episode_id='34', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_05.scene_instance.json')
+Instruction: Find a mug on the TV stand and move it to the left receptacle of the right counter.
+Planner Output Action: [8, 44, 10, 54]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the mug, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [44, 10, 54]
+Executed action: pick up the mug, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 44, 10, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the mug, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [44, 10, 54]
+Executed action: pick up the mug, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [8, 44, 10, 55]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the mug, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [10, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [10, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [10, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [10, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [10, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [10, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  96%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋        | 48/50 [1:34:09<01:35, 47.68s/it][2026-09-08 21:25:15,254][INFO] - Evaluating episode 48 ...
+[2026-09-08 21:25:15,264][INFO] - Episode 48: BaseEpisode(episode_id='9', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_05.scene_instance.json')
+Instruction: Find a orange and move it to the left receptacle of the right counter.
+Planner Output Action: [10, 45, 11, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [10, 45, 10, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 45, 10, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 45, 10, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 45, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  98%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊    | 49/50 [1:34:49<00:45, 45.46s/it][2026-09-08 21:25:55,537][INFO] - Evaluating episode 49 ...
+[2026-09-08 21:25:55,635][INFO] - Episode 49: BaseEpisode(episode_id='25', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_14.scene_instance.json')
+Instruction: On the right of the sink, remove the scissors.
+Planner Output Action: [9, 21]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the scissors, Task success: False
+Planner Output Action: [10, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 17, 11, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the clamp, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [9, 21, 11, 55]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the scissors, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [9, 21, 10, 54]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the scissors, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [9, 21, 11, 55]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the scissors, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [1:35:39<00:00, 46.66s/it]Episodes: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [1:35:39<00:00, 114.78s/it]
+['/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_33_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_21_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_17_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_41_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_6_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_22_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_25_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_46_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_34_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_9_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_16_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_26_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_4_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_27_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_44_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_39_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_18_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_5_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_31_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_47_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_40_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_35_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_49_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_37_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_28_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_29_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_12_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_24_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_45_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_32_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_19_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_36_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_13_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_10_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_38_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_15_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_11_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_7_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_2_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_14_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_48_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_43_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_42_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_3_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_1_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_8_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_20_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_30_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_23_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_50_final_res.json'] 50
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_33_final_res.json
+{'reward': -1.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Pick up an bowl from the left counter and deposit it into the left receptacle of the right counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 0, 'planner_steps': 10, 'planner_output_error': 10, 'num_invalid_action_ratio': 0, 'episode_elapsed_seconds': 284.40155386924744}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_21_final_res.json
+{'reward': -0.21568627450980393, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a drill from the brown table to the right receptacle of the left counter.', 'task_success': False, 'task_progress': 0.6666666666666666, 'subgoal_reward': 0.0, 'num_steps': 10, 'planner_steps': 10, 'planner_output_error': 7, 'num_invalid_action_ratio': 1.0, 'episode_elapsed_seconds': [233.35745215415955]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_17_final_res.json
+{'reward': 0.16304347826086957, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Collect a knife from the TV stand and place it in the left receptacle of the right counter.', 'task_success': False, 'task_progress': 0.75, 'subgoal_reward': 0.0, 'num_steps': 23, 'planner_steps': 8, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.43478260869565216, 'episode_elapsed_seconds': [44.35120868682861]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_41_final_res.json
+{'reward': 0.013888888888888888, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'I left my orange on the TV stand, can you bring it to the right of the sink?', 'task_success': False, 'task_progress': 0.25, 'subgoal_reward': 0.0, 'num_steps': 17, 'planner_steps': 6, 'planner_output_error': 1, 'num_invalid_action_ratio': 0.5882352941176471, 'episode_elapsed_seconds': [62.22610545158386]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_6_final_res.json
+{'reward': -0.17647058823529413, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a hammer from the brown table to the right receptacle of the left counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 14, 'planner_steps': 7, 'planner_output_error': 3, 'num_invalid_action_ratio': 0.7142857142857143, 'episode_elapsed_seconds': 145.18362522125244}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_22_final_res.json
+{'reward': 0.017241379310344827, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a apple from the black table to the right receptacle of the left counter.', 'task_success': False, 'task_progress': 0.5, 'subgoal_reward': 0.0, 'num_steps': 27, 'planner_steps': 12, 'planner_output_error': 2, 'num_invalid_action_ratio': 0.37037037037037035, 'episode_elapsed_seconds': [156.44940853118896]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_25_final_res.json
+{'reward': 1.0714285714285714, 'num_invalid_actions': 2, 'empty_plan': 0, 'instruction': 'On the right of the sink, I need a spatula and a book.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 14, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.14285714285714285, 'episode_elapsed_seconds': [17.888874769210815]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_46_final_res.json
+{'reward': 2.142857142857143, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Take an plate and transfer it to the allocated right of the sink.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 7, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [19.01055121421814]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_34_final_res.json
+{'reward': -1.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'On the left counter there is a banana, move it to the right of the sink.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 0, 'planner_steps': 10, 'planner_output_error': 10, 'num_invalid_action_ratio': 0, 'episode_elapsed_seconds': 182.53802919387817}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_9_final_res.json
+{'reward': -0.13333333333333333, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Transport a padlock and carefully position it in the designated left receptacle of the right counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 13, 'planner_steps': 6, 'planner_output_error': 2, 'num_invalid_action_ratio': 0.7692307692307693, 'episode_elapsed_seconds': 89.02984070777893}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_16_final_res.json
+{'reward': -0.33333333333333337, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a block from the brown table to the right receptacle of the left counter.', 'task_success': False, 'task_progress': 0.3333333333333333, 'subgoal_reward': 0.0, 'num_steps': 11, 'planner_steps': 11, 'planner_output_error': 8, 'num_invalid_action_ratio': 0.9090909090909091, 'episode_elapsed_seconds': [217.84013199806213]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_26_final_res.json
+{'reward': 0.10869565217391304, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a peach from the sofa to the right receptacle of the left counter.', 'task_success': False, 'task_progress': 0.5, 'subgoal_reward': 0.0, 'num_steps': 23, 'planner_steps': 9, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.43478260869565216, 'episode_elapsed_seconds': [92.52174711227417]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_4_final_res.json
+{'reward': -0.14285714285714285, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Find a orange and move it to the right of the sink.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 12, 'planner_steps': 7, 'planner_output_error': 2, 'num_invalid_action_ratio': 0.8333333333333334, 'episode_elapsed_seconds': 241.97756433486938}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_27_final_res.json
+{'reward': 0.08333333333333333, 'num_invalid_actions': 8, 'empty_plan': 0, 'instruction': 'Move a pear from the sofa to the right receptacle of the left counter.', 'task_success': False, 'task_progress': 0.5, 'subgoal_reward': 0.0, 'num_steps': 30, 'planner_steps': 10, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.26666666666666666, 'episode_elapsed_seconds': [123.79540157318115]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_44_final_res.json
+{'reward': -0.05555555555555555, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Take an strawberry and transfer it to the allocated right of the sink.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 17, 'planner_steps': 6, 'planner_output_error': 1, 'num_invalid_action_ratio': 0.5882352941176471, 'episode_elapsed_seconds': [72.72274708747864]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_39_final_res.json
+{'reward': 3.75, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Find a toy airplane on the right of the sink and move it to the left counter.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 4, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [6.715078830718994]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_18_final_res.json
+{'reward': 0.07575757575757575, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a spatula from the left counter to the right receptacle of the left counter.', 'task_success': False, 'task_progress': 0.3333333333333333, 'subgoal_reward': 0.0, 'num_steps': 22, 'planner_steps': 7, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.45454545454545453, 'episode_elapsed_seconds': [35.528356313705444]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_5_final_res.json
+{'reward': -0.5357142857142857, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a plum from the sofa to the right receptacle of the left counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 11, 'planner_output_error': 10, 'num_invalid_action_ratio': 2.5, 'episode_elapsed_seconds': 248.3399076461792}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_31_final_res.json
+{'reward': -0.038461538461538464, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Place a block and a pear on the left receptacle of the right counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 25, 'planner_steps': 6, 'planner_output_error': 1, 'num_invalid_action_ratio': 0.4, 'episode_elapsed_seconds': 75.42405438423157}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_47_final_res.json
+{'reward': 3.125, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Pick a cleanser from the right of the sink and move it to the left counter.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 4, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [6.083846569061279]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_40_final_res.json
+{'reward': 6.666666666666666, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Detach the strawberry from the right of the sink.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 1.6666666666666665, 'num_steps': 2, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [6.323847055435181]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_35_final_res.json
+{'reward': 0.6923076923076923, 'num_invalid_actions': 8, 'empty_plan': 0, 'instruction': 'Find a wrench and move it to the right of the sink.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 7, 'planner_steps': 8, 'planner_output_error': 6, 'num_invalid_action_ratio': 1.1428571428571428, 'episode_elapsed_seconds': [151.85751962661743]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_49_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Find a orange and move it to the left receptacle of the right counter.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 19, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5263157894736842, 'episode_elapsed_seconds': [40.24570274353027]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_37_final_res.json
+{'reward': -0.10714285714285714, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a block from the left counter to the right receptacle of the left counter.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 25, 'planner_steps': 11, 'planner_output_error': 3, 'num_invalid_action_ratio': 0.4, 'episode_elapsed_seconds': [172.1919665336609]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_28_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a clamp from the brown table to the right receptacle of the left counter.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 23, 'planner_steps': 8, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.43478260869565216, 'episode_elapsed_seconds': [47.29244947433472]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_29_final_res.json
+{'reward': 3.75, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'The rubriks cube is on the right of the sink but you should move it to the sink.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 1.25, 'num_steps': 4, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [5.930621147155762]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_12_final_res.json
+{'reward': -0.38235294117647056, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a knife from the brown table to the right receptacle of the left counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 8, 'planner_steps': 12, 'planner_output_error': 9, 'num_invalid_action_ratio': 1.25, 'episode_elapsed_seconds': 209.2190511226654}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_24_final_res.json
+{'reward': 10.0, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Transfer an block to the designated left receptacle of the right counter.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 1, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [5.322958469390869]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_45_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a rubriks cube to the right of the sink.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 15, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.6666666666666666, 'episode_elapsed_seconds': [38.44899582862854]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_32_final_res.json
+{'reward': -1.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Find a orange and move it to the right of the sink.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 0, 'planner_steps': 10, 'planner_output_error': 10, 'num_invalid_action_ratio': 0, 'episode_elapsed_seconds': 254.87216353416443}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_19_final_res.json
+{'reward': 3.125, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Hey, on the right of the sink, I accidentally left my knife, can you bring it to the left counter?', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 4, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [4.051487684249878]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_36_final_res.json
+{'reward': 0.05, 'num_invalid_actions': 3, 'empty_plan': 1, 'instruction': 'Move a screwdriver from the black table to the right receptacle of the left counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 8, 'planner_steps': 6, 'planner_output_error': 2, 'num_invalid_action_ratio': 0.375, 'episode_elapsed_seconds': 69.90925979614258}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_13_final_res.json
+{'reward': -1.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Find a orange and move it to the right of the sink.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 0, 'planner_steps': 10, 'planner_output_error': 10, 'num_invalid_action_ratio': 0, 'episode_elapsed_seconds': 224.21364831924438}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_10_final_res.json
+{'reward': -0.380952380952381, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a lego from the right counter to the right receptacle of the left counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 7, 'planner_steps': 9, 'planner_output_error': 7, 'num_invalid_action_ratio': 1.4285714285714286, 'episode_elapsed_seconds': 225.27615356445312}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_38_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'On the right of the sink I need you to put a drill.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [43.37500715255737]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_15_final_res.json
+{'reward': -0.2916666666666667, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a spoon from the right counter to the right receptacle of the left counter.', 'task_success': False, 'task_progress': 0.6666666666666666, 'subgoal_reward': 0.0, 'num_steps': 8, 'planner_steps': 11, 'planner_output_error': 8, 'num_invalid_action_ratio': 1.25, 'episode_elapsed_seconds': [198.7611038684845]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_11_final_res.json
+{'reward': -1.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a clamp from the right counter to the right receptacle of the left counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 0, 'planner_steps': 10, 'planner_output_error': 10, 'num_invalid_action_ratio': 0, 'episode_elapsed_seconds': 265.36791920661926}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_7_final_res.json
+{'reward': -0.5769230769230769, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Hey, on the sink, I accidentally left my plate, can you bring it to the right of the sink?', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 3, 'planner_steps': 11, 'planner_output_error': 10, 'num_invalid_action_ratio': 3.3333333333333335, 'episode_elapsed_seconds': 178.48816871643066}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_2_final_res.json
+{'reward': 0.13392857142857142, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a screwdriver from the sofa to the right receptacle of the left counter.', 'task_success': False, 'task_progress': 0.75, 'subgoal_reward': 0.0, 'num_steps': 28, 'planner_steps': 9, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.35714285714285715, 'episode_elapsed_seconds': [48.586416482925415]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_14_final_res.json
+{'reward': -0.40625, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a sponge from the brown table to the right receptacle of the left counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 7, 'planner_steps': 11, 'planner_output_error': 9, 'num_invalid_action_ratio': 1.4285714285714286, 'episode_elapsed_seconds': 326.80569672584534}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_48_final_res.json
+{'reward': 0.125, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Find a mug on the TV stand and move it to the left receptacle of the right counter.', 'task_success': False, 'task_progress': 0.75, 'subgoal_reward': 0.0, 'num_steps': 30, 'planner_steps': 11, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.3333333333333333, 'episode_elapsed_seconds': [88.63533735275269]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_43_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Find a toy airplane and move it to the left receptacle of the right counter.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 19, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5263157894736842, 'episode_elapsed_seconds': [47.49133062362671]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_42_final_res.json
+{'reward': 15.0, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Journey to the left receptacle of the right counter.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 5.0, 'num_steps': 1, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [9.110537052154541]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_3_final_res.json
+{'reward': 0.1515151515151515, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a strawberry from the right counter to the right receptacle of the left counter.', 'task_success': False, 'task_progress': 0.6666666666666666, 'subgoal_reward': 0.0, 'num_steps': 22, 'planner_steps': 7, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.45454545454545453, 'episode_elapsed_seconds': [36.706594944000244]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_1_final_res.json
+{'reward': 0.11904761904761904, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a spatula from the right counter to the right receptacle of the left counter.', 'task_success': False, 'task_progress': 0.6666666666666666, 'subgoal_reward': 0.0, 'num_steps': 28, 'planner_steps': 9, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.35714285714285715, 'episode_elapsed_seconds': [51.004945278167725]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_8_final_res.json
+{'reward': -0.8522727272727273, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Place a sponge and a ball on the right of the sink.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 1, 'planner_steps': 11, 'planner_output_error': 10, 'num_invalid_action_ratio': 10.0, 'episode_elapsed_seconds': 230.56368398666382}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_20_final_res.json
+{'reward': -0.7142857142857143, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a rubriks cube from the left counter to the right receptacle of the left counter.', 'task_success': 0, 'task_progress': 0, 'subgoal_reward': 0, 'num_steps': 4, 'planner_steps': 11, 'planner_output_error': 10, 'num_invalid_action_ratio': 2.5, 'episode_elapsed_seconds': 272.74594616889954}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_30_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a padlock from the left counter to the right receptacle of the left counter.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 24, 'planner_steps': 6, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4166666666666667, 'episode_elapsed_seconds': [42.034260749816895]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_23_final_res.json
+{'reward': 0.13888888888888887, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move a plate from the right counter to the right receptacle of the left counter.', 'task_success': False, 'task_progress': 0.6666666666666666, 'subgoal_reward': 0.0, 'num_steps': 24, 'planner_steps': 6, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4166666666666667, 'episode_elapsed_seconds': [34.52826166152954]}
+closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_50_final_res.json
+{'reward': 0.08333333333333333, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'On the right of the sink, remove the scissors.', 'task_success': False, 'task_progress': 0.3333333333333333, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [49.34192514419556]}
+final results: 
+{'reward': 0.8048735105755677, 'num_invalid_actions': 8.02, 'empty_plan': 0.02, 'task_success': 0.2, 'task_progress': 0.36666666666666664, 'subgoal_reward': 0.15833333333333333, 'num_steps': 12.78, 'planner_steps': 7.22, 'planner_output_error': 3.22, 'num_invalid_action_ratio': 0.7800865637829562, 'episode_elapsed_seconds': 114.68176891326904}

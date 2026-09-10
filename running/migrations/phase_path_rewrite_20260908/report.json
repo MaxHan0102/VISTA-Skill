@@ -1,0 +1,32 @@
+{
+  "mode": "apply",
+  "changed_files": 2787,
+  "changed_by_root": {
+    "README.md": 1,
+    "configs": 5,
+    "docs": 6,
+    "running/Phase1": 1258,
+    "running/Phase2": 1122,
+    "running/Phase3": 99,
+    "running/Phase4": 26,
+    "running/Phase5": 256,
+    "scripts": 12,
+    "tests": 1,
+    "vista_skill": 1
+  },
+  "hash_dependency_rounds": 7,
+  "updated_digest_values": 2790,
+  "alias_count": 217,
+  "excluded": [
+    "running/closed_feedback",
+    "running/stock_v2_*",
+    "running/phase_reorganization_20260908",
+    "context4agent/latex",
+    "binary files and original source archives"
+  ],
+  "provenance": "Relocated derivatives; pre-migration bytes preserved in originals.tar.gz. New hashes are storage identities, not a new preregistration or experiment.",
+  "status": "verified",
+  "backup_sha256": "b2b9975f2d3d3aff8a9de916f7c865c549320c0ed03de51f4ddad01a21e4b0bb",
+  "verified_files": 2787,
+  "removed_aliases": 217
+}

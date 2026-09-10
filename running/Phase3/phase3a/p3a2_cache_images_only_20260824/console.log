@@ -1,0 +1,337 @@
+[2026-08-25T09:28:56+08:00] START stage=p3a2_cache_images_only
+[2026-08-25T09:28:56+08:00] COMMAND ["/root/miniconda3/envs/max_embench/bin/python", "scripts/phase3a_extract_visual_evidence.py", "--dataset", "running/Phase3/phase3a/phase3a_dataset_v2_20260824.json", "--condition", "images_only", "--base-url", "http://192.168.1.185:8000/v1", "--base-url", "http://192.168.1.173:8001/v1", "--model", "Qwen/Qwen3-VL-8B-Instruct", "--output", "running/Phase3/phase3a/cache_images_only_20260824.jsonl", "--summary", "running/Phase3/phase3a/cache_images_only_20260824.summary.json", "--request-seed", "0", "--max-retries", "3"]
+condition=images_only sample=1/300 id=natural:0:s1 evidence=1 error=None
+condition=images_only sample=2/300 id=natural:0:s2 evidence=3 error=None
+condition=images_only sample=3/300 id=natural:0:s4 evidence=5 error=None
+condition=images_only sample=4/300 id=natural:11:s14 evidence=6 error=None
+condition=images_only sample=5/300 id=natural:2:s2 evidence=2 error=None
+condition=images_only sample=6/300 id=natural:0:s3 evidence=4 error=None
+condition=images_only sample=7/300 id=natural:10:s2 evidence=3 error=None
+condition=images_only sample=8/300 id=natural:10:s4 evidence=5 error=None
+condition=images_only sample=9/300 id=natural:11:s18 evidence=8 error=None
+condition=images_only sample=10/300 id=natural:9:s2 evidence=2 error=None
+condition=images_only sample=11/300 id=natural:10:s1 evidence=1 error=None
+condition=images_only sample=12/300 id=natural:11:s10 evidence=7 error=None
+condition=images_only sample=13/300 id=natural:1:s16 evidence=7 error=None
+condition=images_only sample=14/300 id=natural:10:s3 evidence=4 error=None
+condition=images_only sample=15/300 id=natural:11:s12 evidence=7 error=None
+condition=images_only sample=16/300 id=natural:1:s18 evidence=8 error=None
+condition=images_only sample=17/300 id=natural:11:s1 evidence=1 error=None
+condition=images_only sample=18/300 id=natural:11:s15 evidence=9 error=None
+condition=images_only sample=19/300 id=natural:3:s6 evidence=6 error=None
+condition=images_only sample=20/300 id=natural:11:s11 evidence=5 error=None
+condition=images_only sample=21/300 id=natural:11:s17 evidence=10 error=None
+condition=images_only sample=22/300 id=natural:4:s13 evidence=8 error=None
+condition=images_only sample=23/300 id=natural:11:s13 evidence=5 error=None
+condition=images_only sample=24/300 id=natural:11:s2 evidence=2 error=None
+condition=images_only sample=25/300 id=natural:6:s4 evidence=5 error=None
+condition=images_only sample=26/300 id=natural:11:s16 evidence=8 error=None
+condition=images_only sample=27/300 id=natural:11:s20 evidence=11 error=None
+condition=images_only sample=28/300 id=natural:8:s13 evidence=9 error=None
+condition=images_only sample=29/300 id=natural:11:s19 evidence=9 error=None
+condition=images_only sample=30/300 id=natural:11:s4 evidence=0 error=None
+condition=images_only sample=31/300 id=natural:11:s3 evidence=3 error=None
+condition=images_only sample=32/300 id=natural:11:s6 evidence=6 error=None
+condition=images_only sample=33/300 id=natural:11:s5 evidence=4 error=None
+condition=images_only sample=34/300 id=natural:11:s8 evidence=6 error=None
+condition=images_only sample=35/300 id=natural:11:s7 evidence=4 error=None
+condition=images_only sample=36/300 id=natural:1:s10 evidence=4 error=None
+condition=images_only sample=37/300 id=natural:11:s9 evidence=5 error=None
+condition=images_only sample=38/300 id=natural:1:s12 evidence=5 error=None
+condition=images_only sample=39/300 id=natural:12:s1 evidence=1 error=None
+condition=images_only sample=40/300 id=natural:1:s14 evidence=6 error=None
+condition=images_only sample=41/300 id=natural:1:s1 evidence=1 error=None
+condition=images_only sample=42/300 id=natural:1:s15 evidence=7 error=None
+condition=images_only sample=43/300 id=natural:1:s11 evidence=3 error=None
+condition=images_only sample=44/300 id=natural:1:s17 evidence=7 error=None
+condition=images_only sample=45/300 id=natural:1:s13 evidence=4 error=None
+condition=images_only sample=46/300 id=natural:1:s2 evidence=3 error=None
+condition=images_only sample=47/300 id=natural:1:s19 evidence=7 error=None
+condition=images_only sample=48/300 id=natural:1:s20 evidence=7 error=None
+condition=images_only sample=49/300 id=natural:1:s21 evidence=7 error=None
+condition=images_only sample=50/300 id=natural:1:s22 evidence=7 error=None
+condition=images_only sample=51/300 id=natural:1:s23 evidence=7 error=None
+condition=images_only sample=52/300 id=natural:1:s24 evidence=7 error=None
+condition=images_only sample=53/300 id=natural:1:s3 evidence=2 error=None
+condition=images_only sample=54/300 id=natural:1:s4 evidence=4 error=None
+condition=images_only sample=55/300 id=natural:1:s5 evidence=2 error=None
+condition=images_only sample=56/300 id=natural:1:s6 evidence=4 error=None
+condition=images_only sample=57/300 id=natural:1:s7 evidence=2 error=None
+condition=images_only sample=58/300 id=natural:1:s8 evidence=4 error=None
+condition=images_only sample=59/300 id=natural:1:s9 evidence=2 error=None
+condition=images_only sample=60/300 id=natural:3:s2 evidence=3 error=None
+condition=images_only sample=61/300 id=natural:2:s1 evidence=1 error=None
+condition=images_only sample=62/300 id=natural:3:s4 evidence=4 error=None
+condition=images_only sample=63/300 id=natural:3:s1 evidence=1 error=None
+condition=images_only sample=64/300 id=natural:4:s1 evidence=2 error=None
+condition=images_only sample=65/300 id=natural:3:s3 evidence=2 error=None
+condition=images_only sample=66/300 id=natural:4:s11 evidence=7 error=None
+condition=images_only sample=67/300 id=natural:3:s5 evidence=5 error=None
+condition=images_only sample=68/300 id=natural:4:s3 evidence=4 error=None
+condition=images_only sample=69/300 id=natural:4:s10 evidence=5 error=None
+condition=images_only sample=70/300 id=natural:4:s5 evidence=5 error=None
+condition=images_only sample=71/300 id=natural:4:s12 evidence=7 error=None
+condition=images_only sample=72/300 id=natural:4:s7 evidence=6 error=None
+condition=images_only sample=73/300 id=natural:4:s2 evidence=2 error=None
+condition=images_only sample=74/300 id=natural:4:s9 evidence=6 error=None
+condition=images_only sample=75/300 id=natural:4:s4 evidence=3 error=None
+condition=images_only sample=76/300 id=natural:6:s2 evidence=3 error=None
+condition=images_only sample=77/300 id=natural:4:s6 evidence=4 error=None
+condition=images_only sample=78/300 id=natural:7:s10 evidence=6 error=None
+condition=images_only sample=79/300 id=natural:4:s8 evidence=4 error=None
+condition=images_only sample=80/300 id=natural:7:s12 evidence=6 error=None
+condition=images_only sample=81/300 id=stress:40:s3 evidence=3 error=None
+condition=images_only sample=82/300 id=stress:40:s5 evidence=5 error=None
+condition=images_only sample=83/300 id=stress:40:s6 evidence=5 error=None
+condition=images_only sample=84/300 id=stress:41:s3 evidence=3 error=None
+condition=images_only sample=85/300 id=stress:41:s5 evidence=4 error=None
+condition=images_only sample=86/300 id=stress:41:s6 evidence=5 error=None
+condition=images_only sample=87/300 id=stress:42:s3 evidence=3 error=None
+condition=images_only sample=88/300 id=stress:42:s5 evidence=4 error=None
+condition=images_only sample=89/300 id=stress:42:s6 evidence=5 error=None
+condition=images_only sample=90/300 id=stress:43:s3 evidence=3 error=None
+condition=images_only sample=91/300 id=stress:43:s5 evidence=4 error=None
+condition=images_only sample=92/300 id=stress:43:s6 evidence=5 error=None
+condition=images_only sample=93/300 id=stress:40:s7 evidence=5 error=None
+condition=images_only sample=94/300 id=stress:40:s8 evidence=5 error=None
+condition=images_only sample=95/300 id=stress:41:s7 evidence=5 error=None
+condition=images_only sample=96/300 id=stress:41:s8 evidence=5 error=None
+condition=images_only sample=97/300 id=stress:42:s7 evidence=5 error=None
+condition=images_only sample=98/300 id=stress:42:s8 evidence=5 error=None
+condition=images_only sample=99/300 id=stress:43:s7 evidence=5 error=None
+condition=images_only sample=100/300 id=stress:43:s8 evidence=5 error=None
+condition=images_only sample=101/300 id=stress:44:s7 evidence=5 error=None
+condition=images_only sample=102/300 id=stress:44:s8 evidence=5 error=None
+condition=images_only sample=103/300 id=stress:45:s7 evidence=5 error=None
+condition=images_only sample=104/300 id=stress:45:s8 evidence=5 error=None
+condition=images_only sample=105/300 id=stress:40:s1 evidence=1 error=None
+condition=images_only sample=106/300 id=stress:41:s1 evidence=1 error=None
+condition=images_only sample=107/300 id=stress:42:s1 evidence=1 error=None
+condition=images_only sample=108/300 id=stress:43:s1 evidence=1 error=None
+condition=images_only sample=109/300 id=stress:44:s1 evidence=16 error=None
+condition=images_only sample=110/300 id=stress:40:s4 evidence=5 error=None
+condition=images_only sample=111/300 id=stress:40:s2 evidence=2 error=None
+condition=images_only sample=112/300 id=stress:45:s1 evidence=1 error=None
+condition=images_only sample=113/300 id=stress:44:s3 evidence=3 error=None
+condition=images_only sample=114/300 id=stress:41:s4 evidence=3 error=None
+condition=images_only sample=115/300 id=stress:41:s2 evidence=1 error=None
+condition=images_only sample=116/300 id=stress:46:s1 evidence=1 error=None
+condition=images_only sample=117/300 id=stress:44:s5 evidence=4 error=None
+condition=images_only sample=118/300 id=stress:42:s4 evidence=3 error=None
+condition=images_only sample=119/300 id=stress:42:s2 evidence=1 error=None
+condition=images_only sample=120/300 id=stress:44:s6 evidence=5 error=None
+condition=images_only sample=121/300 id=natural:20:s1 evidence=1 error=None
+condition=images_only sample=122/300 id=natural:20:s2 evidence=3 error=None
+condition=images_only sample=123/300 id=natural:24:s4 evidence=5 error=None
+condition=images_only sample=124/300 id=natural:21:s16 evidence=8 error=None
+condition=images_only sample=125/300 id=natural:23:s2 evidence=2 error=None
+condition=images_only sample=126/300 id=natural:21:s1 evidence=16 error=None
+condition=images_only sample=127/300 id=natural:21:s10 evidence=7 error=None
+condition=images_only sample=128/300 id=natural:21:s19 evidence=1 error=None
+condition=images_only sample=129/300 id=natural:21:s11 evidence=1 error=None
+condition=images_only sample=130/300 id=natural:21:s12 evidence=8 error=None
+condition=images_only sample=131/300 id=natural:21:s20 evidence=10 error=None
+condition=images_only sample=132/300 id=natural:21:s13 evidence=0 error=None
+condition=images_only sample=133/300 id=natural:21:s14 evidence=8 error=None
+condition=images_only sample=134/300 id=natural:25:s13 evidence=6 error=None
+condition=images_only sample=135/300 id=natural:21:s15 evidence=7 error=None
+condition=images_only sample=136/300 id=natural:21:s17 evidence=11 error=None
+condition=images_only sample=137/300 id=natural:25:s15 evidence=6 error=None
+condition=images_only sample=138/300 id=natural:21:s18 evidence=9 error=None
+condition=images_only sample=139/300 id=natural:21:s2 evidence=2 error=None
+condition=images_only sample=140/300 id=natural:25:s17 evidence=6 error=None
+condition=images_only sample=141/300 id=natural:21:s3 evidence=3 error=None
+condition=images_only sample=142/300 id=natural:21:s4 evidence=5 error=None
+condition=images_only sample=143/300 id=natural:25:s3 evidence=2 error=None
+condition=images_only sample=144/300 id=natural:21:s5 evidence=4 error=None
+condition=images_only sample=145/300 id=natural:21:s6 evidence=6 error=None
+condition=images_only sample=146/300 id=natural:21:s7 evidence=5 error=None
+condition=images_only sample=147/300 id=natural:21:s8 evidence=7 error=None
+condition=images_only sample=148/300 id=natural:21:s9 evidence=5 error=None
+condition=images_only sample=149/300 id=natural:22:s10 evidence=5 error=None
+condition=images_only sample=150/300 id=natural:22:s1 evidence=1 error=None
+condition=images_only sample=151/300 id=natural:22:s12 evidence=5 error=None
+condition=images_only sample=152/300 id=natural:22:s11 evidence=3 error=None
+condition=images_only sample=153/300 id=natural:22:s14 evidence=5 error=None
+condition=images_only sample=154/300 id=natural:22:s13 evidence=3 error=None
+condition=images_only sample=155/300 id=natural:22:s16 evidence=5 error=None
+condition=images_only sample=156/300 id=natural:22:s15 evidence=3 error=None
+condition=images_only sample=157/300 id=natural:22:s18 evidence=6 error=None
+condition=images_only sample=158/300 id=natural:22:s17 evidence=4 error=None
+condition=images_only sample=159/300 id=natural:22:s2 evidence=3 error=None
+condition=images_only sample=160/300 id=natural:22:s19 evidence=4 error=None
+condition=images_only sample=161/300 id=natural:22:s20 evidence=6 error=None
+condition=images_only sample=162/300 id=natural:22:s3 evidence=3 error=None
+condition=images_only sample=163/300 id=natural:22:s4 evidence=5 error=None
+condition=images_only sample=164/300 id=natural:22:s5 evidence=3 error=None
+condition=images_only sample=165/300 id=natural:22:s6 evidence=5 error=None
+condition=images_only sample=166/300 id=natural:22:s7 evidence=3 error=None
+condition=images_only sample=167/300 id=natural:22:s8 evidence=5 error=None
+condition=images_only sample=168/300 id=natural:22:s9 evidence=3 error=None
+condition=images_only sample=169/300 id=natural:24:s2 evidence=3 error=None
+condition=images_only sample=170/300 id=natural:23:s1 evidence=1 error=None
+condition=images_only sample=171/300 id=natural:25:s11 evidence=7 error=None
+condition=images_only sample=172/300 id=natural:24:s1 evidence=1 error=None
+condition=images_only sample=173/300 id=natural:25:s19 evidence=7 error=None
+condition=images_only sample=174/300 id=stress:47:s3 evidence=3 error=None
+condition=images_only sample=175/300 id=stress:47:s5 evidence=4 error=None
+condition=images_only sample=176/300 id=stress:47:s6 evidence=5 error=None
+condition=images_only sample=177/300 id=stress:48:s3 evidence=3 error=None
+condition=images_only sample=178/300 id=stress:48:s5 evidence=4 error=None
+condition=images_only sample=179/300 id=stress:48:s6 evidence=5 error=None
+condition=images_only sample=180/300 id=stress:49:s3 evidence=3 error=None
+condition=images_only sample=181/300 id=stress:49:s5 evidence=4 error=None
+condition=images_only sample=182/300 id=stress:49:s6 evidence=5 error=None
+condition=images_only sample=183/300 id=stress:47:s7 evidence=5 error=None
+condition=images_only sample=184/300 id=stress:47:s8 evidence=5 error=None
+condition=images_only sample=185/300 id=stress:48:s7 evidence=5 error=None
+condition=images_only sample=186/300 id=stress:48:s8 evidence=5 error=None
+condition=images_only sample=187/300 id=stress:49:s7 evidence=5 error=None
+condition=images_only sample=188/300 id=stress:49:s8 evidence=5 error=None
+condition=images_only sample=189/300 id=stress:50:s7 evidence=4 error=None
+condition=images_only sample=190/300 id=stress:51:s7 evidence=5 error=None
+condition=images_only sample=191/300 id=stress:47:s1 evidence=3 error=None
+condition=images_only sample=192/300 id=stress:48:s1 evidence=1 error=None
+condition=images_only sample=193/300 id=stress:49:s1 evidence=1 error=None
+condition=images_only sample=194/300 id=stress:50:s1 evidence=4 error=None
+condition=images_only sample=195/300 id=stress:47:s4 evidence=3 error=None
+condition=images_only sample=196/300 id=stress:47:s2 evidence=1 error=None
+condition=images_only sample=197/300 id=stress:51:s1 evidence=1 error=None
+condition=images_only sample=198/300 id=stress:50:s3 evidence=3 error=None
+condition=images_only sample=199/300 id=stress:51:s8 evidence=5 error=None
+condition=images_only sample=200/300 id=stress:48:s4 evidence=3 error=None
+condition=images_only sample=201/300 id=natural:13:s1 evidence=1 error=None
+condition=images_only sample=202/300 id=natural:13:s2 evidence=3 error=None
+condition=images_only sample=203/300 id=natural:14:s6 evidence=6 error=None
+condition=images_only sample=204/300 id=natural:32:s17 evidence=6 error=None
+condition=images_only sample=205/300 id=natural:16:s2 evidence=2 error=None
+condition=images_only sample=206/300 id=natural:14:s1 evidence=1 error=None
+condition=images_only sample=207/300 id=natural:14:s2 evidence=2 error=None
+condition=images_only sample=208/300 id=natural:15:s11 evidence=8 error=None
+condition=images_only sample=209/300 id=natural:32:s19 evidence=7 error=None
+condition=images_only sample=210/300 id=natural:30:s2 evidence=2 error=None
+condition=images_only sample=211/300 id=natural:14:s3 evidence=3 error=None
+condition=images_only sample=212/300 id=natural:14:s4 evidence=5 error=None
+condition=images_only sample=213/300 id=natural:15:s6 evidence=6 error=None
+condition=images_only sample=214/300 id=natural:32:s2 evidence=2 error=None
+condition=images_only sample=215/300 id=natural:34:s4 evidence=3 error=None
+condition=images_only sample=216/300 id=natural:14:s5 evidence=5 error=None
+condition=images_only sample=217/300 id=natural:15:s4 evidence=5 error=None
+condition=images_only sample=218/300 id=natural:15:s9 evidence=8 error=None
+condition=images_only sample=219/300 id=natural:32:s21 evidence=7 error=None
+condition=images_only sample=220/300 id=natural:36:s2 evidence=2 error=None
+condition=images_only sample=221/300 id=natural:15:s1 evidence=1 error=None
+condition=images_only sample=222/300 id=natural:15:s5 evidence=6 error=None
+condition=images_only sample=223/300 id=natural:17:s4 evidence=5 error=None
+condition=images_only sample=224/300 id=natural:34:s12 evidence=5 error=None
+condition=images_only sample=225/300 id=natural:15:s10 evidence=7 error=None
+condition=images_only sample=226/300 id=natural:15:s8 evidence=7 error=None
+condition=images_only sample=227/300 id=natural:31:s4 evidence=5 error=None
+condition=images_only sample=228/300 id=natural:34:s18 evidence=6 error=None
+condition=images_only sample=229/300 id=natural:15:s2 evidence=2 error=None
+condition=images_only sample=230/300 id=natural:17:s2 evidence=0 error=None
+condition=images_only sample=231/300 id=natural:37:s4 evidence=5 error=None
+condition=images_only sample=232/300 id=natural:34:s20 evidence=7 error=None
+condition=images_only sample=233/300 id=natural:15:s3 evidence=3 error=None
+condition=images_only sample=234/300 id=natural:18:s1 evidence=2 error=None
+condition=images_only sample=235/300 id=natural:38:s4 evidence=5 error=None
+condition=images_only sample=236/300 id=natural:15:s7 evidence=6 error=None
+condition=images_only sample=237/300 id=natural:18:s11 evidence=0 error=None
+condition=images_only sample=238/300 id=natural:16:s1 evidence=1 error=None
+condition=images_only sample=239/300 id=natural:18:s13 evidence=0 error=None
+condition=images_only sample=240/300 id=natural:17:s1 evidence=1 error=None
+condition=images_only sample=241/300 id=natural:18:s15 evidence=5 error=None
+condition=images_only sample=242/300 id=natural:17:s3 evidence=4 error=None
+condition=images_only sample=243/300 id=natural:18:s17 evidence=5 error=None
+condition=images_only sample=244/300 id=natural:18:s10 evidence=3 error=None
+condition=images_only sample=245/300 id=natural:18:s19 evidence=5 error=None
+condition=images_only sample=246/300 id=natural:18:s12 evidence=3 error=None
+condition=images_only sample=247/300 id=natural:18:s3 evidence=4 error=None
+condition=images_only sample=248/300 id=natural:18:s14 evidence=3 error=None
+condition=images_only sample=249/300 id=natural:18:s5 evidence=0 error=None
+condition=images_only sample=250/300 id=natural:18:s16 evidence=3 error=None
+condition=images_only sample=251/300 id=natural:18:s7 evidence=0 error=None
+condition=images_only sample=252/300 id=natural:18:s18 evidence=3 error=None
+condition=images_only sample=253/300 id=natural:18:s9 evidence=0 error=None
+condition=images_only sample=254/300 id=natural:18:s2 evidence=2 error=None
+condition=images_only sample=255/300 id=natural:27:s3 evidence=3 error=None
+condition=images_only sample=256/300 id=natural:18:s4 evidence=3 error=None
+condition=images_only sample=257/300 id=natural:28:s10 evidence=7 error=None
+condition=images_only sample=258/300 id=natural:18:s6 evidence=3 error=None
+condition=images_only sample=259/300 id=natural:28:s12 evidence=7 error=None
+condition=images_only sample=260/300 id=natural:18:s8 evidence=3 error=None
+condition=images_only sample=261/300 id=natural:28:s14 evidence=8 error=None
+condition=images_only sample=262/300 id=natural:19:s1 evidence=1 error=None
+condition=images_only sample=263/300 id=natural:28:s16 evidence=8 error=None
+condition=images_only sample=264/300 id=natural:27:s1 evidence=1 error=None
+condition=images_only sample=265/300 id=natural:28:s18 evidence=8 error=None
+condition=images_only sample=266/300 id=natural:27:s2 evidence=1 error=None
+condition=images_only sample=267/300 id=natural:28:s2 evidence=3 error=None
+condition=images_only sample=268/300 id=stress:54:s3 evidence=3 error=None
+condition=images_only sample=269/300 id=stress:54:s5 evidence=4 error=None
+condition=images_only sample=270/300 id=stress:54:s6 evidence=5 error=None
+condition=images_only sample=271/300 id=stress:55:s3 evidence=2 error=None
+condition=images_only sample=272/300 id=stress:55:s5 evidence=0 error=None
+condition=images_only sample=273/300 id=stress:55:s6 evidence=5 error=None
+condition=images_only sample=274/300 id=stress:56:s3 evidence=3 error=None
+condition=images_only sample=275/300 id=stress:56:s5 evidence=4 error=None
+condition=images_only sample=276/300 id=stress:56:s6 evidence=5 error=None
+condition=images_only sample=277/300 id=stress:57:s3 evidence=3 error=None
+condition=images_only sample=278/300 id=stress:54:s7 evidence=5 error=None
+condition=images_only sample=279/300 id=stress:54:s8 evidence=5 error=None
+condition=images_only sample=280/300 id=stress:55:s7 evidence=0 error=None
+condition=images_only sample=281/300 id=stress:55:s8 evidence=5 error=None
+condition=images_only sample=282/300 id=stress:56:s7 evidence=5 error=None
+condition=images_only sample=283/300 id=stress:56:s8 evidence=5 error=None
+condition=images_only sample=284/300 id=stress:57:s7 evidence=5 error=None
+condition=images_only sample=285/300 id=stress:57:s8 evidence=5 error=None
+condition=images_only sample=286/300 id=stress:58:s7 evidence=5 error=None
+condition=images_only sample=287/300 id=stress:58:s8 evidence=5 error=None
+condition=images_only sample=288/300 id=stress:54:s1 evidence=1 error=None
+condition=images_only sample=289/300 id=stress:55:s1 evidence=1 error=None
+condition=images_only sample=290/300 id=stress:56:s1 evidence=1 error=None
+condition=images_only sample=291/300 id=stress:57:s1 evidence=2 error=None
+condition=images_only sample=292/300 id=stress:58:s1 evidence=1 error=None
+condition=images_only sample=293/300 id=stress:54:s4 evidence=3 error=None
+condition=images_only sample=294/300 id=stress:54:s2 evidence=1 error=None
+condition=images_only sample=295/300 id=stress:59:s1 evidence=1 error=None
+condition=images_only sample=296/300 id=stress:57:s5 evidence=4 error=None
+condition=images_only sample=297/300 id=stress:59:s7 evidence=5 error=None
+condition=images_only sample=298/300 id=stress:55:s4 evidence=0 error=None
+condition=images_only sample=299/300 id=stress:55:s2 evidence=2 error=None
+condition=images_only sample=300/300 id=stress:57:s6 evidence=5 error=None
+{
+  "analysis_type": "phase3a_visual_evidence_cache",
+  "base_urls": [
+    "http://192.168.1.185:8000/v1",
+    "http://192.168.1.173:8001/v1"
+  ],
+  "condition": "images_only",
+  "dataset": "/root/max/VISTA-Skill/running/Phase3/phase3a/phase3a_dataset_v2_20260824.json",
+  "dataset_id": "vista_phase3a_evidence_state_oracle_v2",
+  "elapsed_seconds_this_invocation": 1628.6166085649747,
+  "endpoint_assignment": "round_robin by frozen dataset index; images_only uses +1 crossover offset",
+  "error_count": 0,
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "output": "running/Phase3/phase3a/cache_images_only_20260824.jsonl",
+  "request_seed": 0,
+  "sample_count": 300,
+  "usage": {
+    "calls": 300,
+    "completion_tokens": 126112,
+    "prompt_tokens": 223211
+  },
+  "usage_by_endpoint": {
+    "http://192.168.1.173:8001/v1": {
+      "calls": 150,
+      "completion_tokens": 60594,
+      "prompt_tokens": 111539
+    },
+    "http://192.168.1.185:8000/v1": {
+      "calls": 150,
+      "completion_tokens": 65518,
+      "prompt_tokens": 111672
+    }
+  }
+}
+[2026-08-25T09:56:05+08:00] END stage=p3a2_cache_images_only exit_code=0

@@ -1,0 +1,41 @@
+{
+  "status": "complete",
+  "protocol": "stock_feedback_v2",
+  "smoke_policy": false,
+  "categories": {
+    "base": {
+      "completed": 60,
+      "expected": 60,
+      "task_success": 0.5666666666666667
+    },
+    "common_sense": {
+      "completed": 60,
+      "expected": 60,
+      "task_success": 0.6833333333333333
+    },
+    "complex_instruction": {
+      "completed": 60,
+      "expected": 60,
+      "task_success": 0.65
+    },
+    "visual_appearance": {
+      "completed": 60,
+      "expected": 60,
+      "task_success": 0.6
+    },
+    "long_horizon": {
+      "completed": 60,
+      "expected": 60,
+      "task_success": 0.26666666666666666
+    }
+  },
+  "completed": 300,
+  "expected": 300,
+  "category_mean_success": 0.5533333333333333,
+  "result_index": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/resume_state.json",
+  "schema_compatibility_counts": {
+    "gemini_inline_refs_v1": 300
+  },
+  "mixed_schema_compatibility": false,
+  "cost_note": "All original/attempt API audits, including abandoned partial episodes, contribute to cost."
+}

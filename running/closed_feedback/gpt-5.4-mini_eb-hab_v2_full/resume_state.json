@@ -1,0 +1,2482 @@
+{
+  "version": 1,
+  "protocol": "stock_feedback_v2",
+  "dataset_hashes": {
+    "base": "1e338a8729b89fa8101d1834d25c5a00c95f31296d93253e469679fe83c71c23",
+    "common_sense": "2242c0f236e4bf3b751eeec371b5ff8bac72fd271a84eed6b49b656e3e21af17",
+    "complex_instruction": "76d345f1ffe8680f462aaf7291b827704950d994364f70a254bfb470e8ba715c",
+    "spatial_relationship": "1ced7f6dc77d31e0c075a1b99ff8476a857b34a53ead755df7f359a5b8ec0884",
+    "visual_appearance": "77723ce19418f66feaacc26cb71bfe6119c31c33744365cb60067f4ed758a2e8",
+    "long_horizon": "eea7bc6754689fbd889c4469cc7e667e979919836231be8b5917b6d4e5b31bfb"
+  },
+  "records": {
+    "base/10": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_10_final_res.json",
+      "sha256": "94de6be2c4d94a8384699364bd0623fb2d7d901dc63b45ec79b891e78894e62f",
+      "episode_id": "35",
+      "schema_compatibility": "stock"
+    },
+    "base/11": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_11_final_res.json",
+      "sha256": "5ccf1b244db954497783fdd15d1f1b1e9f24d3006fd6d1f5476dcf51d7014166",
+      "episode_id": "0",
+      "schema_compatibility": "stock"
+    },
+    "base/12": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_12_final_res.json",
+      "sha256": "2e8ef97cd2e366304d9e8a1d9444b5fa214c848cb69822162d0b84221a896259",
+      "episode_id": "1",
+      "schema_compatibility": "stock"
+    },
+    "base/13": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_13_final_res.json",
+      "sha256": "3af48373c56d961d6ff2b9f80141ffc357a636dcc4ce65b1211ff1838dc1cf78",
+      "episode_id": "40",
+      "schema_compatibility": "stock"
+    },
+    "base/14": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_14_final_res.json",
+      "sha256": "a428f53f1700e3d25dccf188b88cf5183ee070c9b47e5760ddeccaf6037b5f91",
+      "episode_id": "36",
+      "schema_compatibility": "stock"
+    },
+    "base/15": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_15_final_res.json",
+      "sha256": "4665b75c23879b62bb800fafa50cc65a68eebd3adac880b662fbef00d86a1477",
+      "episode_id": "44",
+      "schema_compatibility": "stock"
+    },
+    "base/16": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_16_final_res.json",
+      "sha256": "98fb922757eb0ea4ea65b029e3617cbe0530d575cf2edce5ab33b13629593d31",
+      "episode_id": "33",
+      "schema_compatibility": "stock"
+    },
+    "base/17": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_17_final_res.json",
+      "sha256": "40820b0a91c36abb875e7d0e97a57911f049e1c99fc8cb1058da6e7ff3d163a2",
+      "episode_id": "43",
+      "schema_compatibility": "stock"
+    },
+    "base/18": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_18_final_res.json",
+      "sha256": "253ac7a06946274b345f64bf5b68cb4e205ad7705282961139d17a1db32e87f6",
+      "episode_id": "13",
+      "schema_compatibility": "stock"
+    },
+    "base/19": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_19_final_res.json",
+      "sha256": "d8fcfd3d03dc409ff9e7fc082849cd8430def1a98c0cc1b99dcee5bfab06cae8",
+      "episode_id": "19",
+      "schema_compatibility": "stock"
+    },
+    "base/1": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_1_final_res.json",
+      "sha256": "39fe50172d63304d23bb81de255cc1a2d9b1dc0f7ab526a8b3b406698ae0b59d",
+      "episode_id": "39",
+      "schema_compatibility": "stock"
+    },
+    "base/20": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_20_final_res.json",
+      "sha256": "328cb4abf619090caae862647a9121b5d7626826b8980a752f6516808fb279c5",
+      "episode_id": "31",
+      "schema_compatibility": "stock"
+    },
+    "base/21": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_21_final_res.json",
+      "sha256": "e67eb6508433f984839ab494b1656b270f66b4094b45e8a218b25a6df82dffe5",
+      "episode_id": "12",
+      "schema_compatibility": "stock"
+    },
+    "base/22": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_22_final_res.json",
+      "sha256": "6248774c29a29823e8b62f23d70b4ce84f9a6b4489baf2be2513fad1fcc367e5",
+      "episode_id": "20",
+      "schema_compatibility": "stock"
+    },
+    "base/23": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_23_final_res.json",
+      "sha256": "af7ebecafd5298090863a15d32196bde50ea64ad1d10b6eb55262ed574b7c2e9",
+      "episode_id": "42",
+      "schema_compatibility": "stock"
+    },
+    "base/24": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_24_final_res.json",
+      "sha256": "c1aacd885efee68b743bba38eb7f4d6b664a266f2fb4bb3fa462a7bb7499d2a1",
+      "episode_id": "14",
+      "schema_compatibility": "stock"
+    },
+    "base/25": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_25_final_res.json",
+      "sha256": "ca160ae5c8ec19e5f1e4bf60d41d531e82254259fb67d0eee958508d2a93b942",
+      "episode_id": "32",
+      "schema_compatibility": "stock"
+    },
+    "base/26": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_26_final_res.json",
+      "sha256": "b1af3ab58a1cd5f2e66fe82686f90d0fb4ab09dd9b8df6d9f9723c34742714f3",
+      "episode_id": "45",
+      "schema_compatibility": "stock"
+    },
+    "base/27": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_27_final_res.json",
+      "sha256": "cf7ad90474459552d89dfffacb1bf73967922e08fdb80b44be7896e8397f4d78",
+      "episode_id": "17",
+      "schema_compatibility": "stock"
+    },
+    "base/28": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_28_final_res.json",
+      "sha256": "664e8965e8fd0d8cb71935553b03ba80f4cc912a50ec7915551dad233389c97e",
+      "episode_id": "15",
+      "schema_compatibility": "stock"
+    },
+    "base/29": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_29_final_res.json",
+      "sha256": "67be1fcfe95e699556e8e73f5ada5ec962c380ab111fde3ec4e2c8b0cce3ec0c",
+      "episode_id": "10",
+      "schema_compatibility": "stock"
+    },
+    "base/2": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_2_final_res.json",
+      "sha256": "3ce3bc1dc1b3f5cc22f5f0cc397f59befaa3c44734ef1714f31a323314cf2a1f",
+      "episode_id": "3",
+      "schema_compatibility": "stock"
+    },
+    "base/30": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_30_final_res.json",
+      "sha256": "f99fc2f1cdcff094407fcc2cd26131c6d06f554aa2f7a32df777cfd02bd9e2d1",
+      "episode_id": "22",
+      "schema_compatibility": "stock"
+    },
+    "base/31": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_31_final_res.json",
+      "sha256": "7382bd7d1608359382eb0b2ab55115452d01588f4af4847edbc35c6ab84ed7ae",
+      "episode_id": "41",
+      "schema_compatibility": "stock"
+    },
+    "base/32": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_32_final_res.json",
+      "sha256": "58e35cbbe5563b99c33556ada41348045908857c624b05bc67b3d8231f82c43d",
+      "episode_id": "48",
+      "schema_compatibility": "stock"
+    },
+    "base/33": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_33_final_res.json",
+      "sha256": "7f7aa0c10d98e7d6fda4b4306a6cd0fd8b029958779b0e02c70f31f054feae5c",
+      "episode_id": "2",
+      "schema_compatibility": "stock"
+    },
+    "base/34": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_34_final_res.json",
+      "sha256": "b8bfda0e7fa3ee05508843bc66f62c8d500e708f984d765c86ae20e00cbd0026",
+      "episode_id": "49",
+      "schema_compatibility": "stock"
+    },
+    "base/35": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_35_final_res.json",
+      "sha256": "969c0fc5b11beb074eb8375205d82c6f9d3f913ff14745ddf7878eacc777af0d",
+      "episode_id": "18",
+      "schema_compatibility": "stock"
+    },
+    "base/36": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_36_final_res.json",
+      "sha256": "37f545a63582f0763d5fa886379515680b92f623e7788ce9513c5ec1ab082b51",
+      "episode_id": "8",
+      "schema_compatibility": "stock"
+    },
+    "base/37": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_37_final_res.json",
+      "sha256": "0c29b6eee2846e05f83073bd92108697106cc9a328a32c90dcd0109c71624a7d",
+      "episode_id": "23",
+      "schema_compatibility": "stock"
+    },
+    "base/38": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_38_final_res.json",
+      "sha256": "c4d507200e789c6dc1ba05c047567e29403e03b3959be466c0ea615ee83469e3",
+      "episode_id": "7",
+      "schema_compatibility": "stock"
+    },
+    "base/39": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_39_final_res.json",
+      "sha256": "5efb90cddc5930f1a1e18f4fd1b2ee787dd3afc8812eeee3fb4a599791a09637",
+      "episode_id": "46",
+      "schema_compatibility": "stock"
+    },
+    "base/3": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_3_final_res.json",
+      "sha256": "e86dccc1a031d86ff7c72181c76d930f1aedecc31f3fa43871acbec2b0c3477f",
+      "episode_id": "47",
+      "schema_compatibility": "stock"
+    },
+    "base/40": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_40_final_res.json",
+      "sha256": "3239eaf9a1dcf4d7fd74aea16324a71689162f28bccd77e03b4511d562930049",
+      "episode_id": "4",
+      "schema_compatibility": "stock"
+    },
+    "base/41": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_41_final_res.json",
+      "sha256": "34d2fecb56c0adc2d3297e2f960f80a21fcb7d16fdb20bf17d6583a871e5b8e4",
+      "episode_id": "37",
+      "schema_compatibility": "stock"
+    },
+    "base/42": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_42_final_res.json",
+      "sha256": "d5b177af7964d2b3b4ed075a435e3827c4198847d5efca4c18148fb2c66cd176",
+      "episode_id": "6",
+      "schema_compatibility": "stock"
+    },
+    "base/43": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_43_final_res.json",
+      "sha256": "03fa250889c7fcb1e5f30ce7a6021420d473094e9fc5f033f8a10fe0b4592035",
+      "episode_id": "24",
+      "schema_compatibility": "stock"
+    },
+    "base/44": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_44_final_res.json",
+      "sha256": "a0d77d355fc52ec6472d76c5806a0994d148f0605d4740c3ceaa079940423aa9",
+      "episode_id": "9",
+      "schema_compatibility": "stock"
+    },
+    "base/45": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_45_final_res.json",
+      "sha256": "0b5a851c3f81930675854502317d9d4bcc8b976c789edc4cdd7b090b2f67a72e",
+      "episode_id": "26",
+      "schema_compatibility": "stock"
+    },
+    "base/46": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_46_final_res.json",
+      "sha256": "8ee9f1165a60878d253bea53ae6983385425bf6159213d8d12dd0b8cfb7fa56f",
+      "episode_id": "16",
+      "schema_compatibility": "stock"
+    },
+    "base/47": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_47_final_res.json",
+      "sha256": "e7941d801dc93a1776066718de76c936ea4bb6fb314d24464b8661fec5c1ef89",
+      "episode_id": "34",
+      "schema_compatibility": "stock"
+    },
+    "base/48": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_48_final_res.json",
+      "sha256": "62c0cf2c87f0c98c6230f6ab07178ca137093c8e8097188e8ef2f9807c9d4ce4",
+      "episode_id": "27",
+      "schema_compatibility": "stock"
+    },
+    "base/49": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_49_final_res.json",
+      "sha256": "4910af72bee7d7e9f7840c1837c0d89e650b8004fa3d1540a69439b9d8e20339",
+      "episode_id": "11",
+      "schema_compatibility": "stock"
+    },
+    "base/4": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_4_final_res.json",
+      "sha256": "7b8d3fd543dc64fa01ac1d82783824d6bdfef752d7b69d223625ea46994bec72",
+      "episode_id": "5",
+      "schema_compatibility": "stock"
+    },
+    "base/50": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_50_final_res.json",
+      "sha256": "de52fe474e0ecb355ce1f5d59d04e018099896ec7b9121dc4ee1330133d15066",
+      "episode_id": "29",
+      "schema_compatibility": "stock"
+    },
+    "base/5": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_5_final_res.json",
+      "sha256": "6f47c4fe651fbc95c763f785eeb9d864dbd32426b3f1e09c9306711f77c94199",
+      "episode_id": "25",
+      "schema_compatibility": "stock"
+    },
+    "base/6": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_6_final_res.json",
+      "sha256": "c458e8347ddbdbaad305ac78dec3f7d88412a5d5d20e3ff3b057d8c393682093",
+      "episode_id": "30",
+      "schema_compatibility": "stock"
+    },
+    "base/7": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_7_final_res.json",
+      "sha256": "72790b742a46f2090039c932e7b2578abb59d22a6777a83d0fb2aab0091c0543",
+      "episode_id": "38",
+      "schema_compatibility": "stock"
+    },
+    "base/8": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_8_final_res.json",
+      "sha256": "e7b609b77600fe86b18665990d7f3e03f22e5dd05e923ebc7e5f320b4140da00",
+      "episode_id": "28",
+      "schema_compatibility": "stock"
+    },
+    "base/9": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/base/results/episode_9_final_res.json",
+      "sha256": "f3b68094038f6205b8684a42ff859f5cde2e314892300186b0d1b920bd6b80b2",
+      "episode_id": "21",
+      "schema_compatibility": "stock"
+    },
+    "common_sense/10": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_10_final_res.json",
+      "sha256": "3f1877079178a0aeeb7ff6c175463f6481f93ceb3509387ce54d35429ff21031",
+      "episode_id": "29",
+      "schema_compatibility": "stock"
+    },
+    "common_sense/11": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_11_final_res.json",
+      "sha256": "498292711d89cc50a2207981c591cb315252b762c7c3bf30d2c6684480dc3712",
+      "episode_id": "30",
+      "schema_compatibility": "stock"
+    },
+    "common_sense/12": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_12_final_res.json",
+      "sha256": "5ebf08a0b1a56d542f44caa5fb930355b471ac8e2d8766831314017c47635bc0",
+      "episode_id": "1",
+      "schema_compatibility": "stock"
+    },
+    "common_sense/13": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_13_final_res.json",
+      "sha256": "80bcfee38600f95f16e432c0a5f80b561ccb51220bd4053bd5f419dfb21bccf4",
+      "episode_id": "2",
+      "schema_compatibility": "stock"
+    },
+    "common_sense/14": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_14_final_res.json",
+      "sha256": "04173a4fb1714b13b7161b20f1e31200b2a54666aae8a93e7ee4198adaf4222e",
+      "episode_id": "18",
+      "schema_compatibility": "stock"
+    },
+    "common_sense/15": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_15_final_res.json",
+      "sha256": "56172b63149caf65a433e55ae9391a2eda1c97aecb695dce9b16808a7e3df855",
+      "episode_id": "42",
+      "schema_compatibility": "stock"
+    },
+    "common_sense/1": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_1_final_res.json",
+      "sha256": "6e2e3c86e2286b1739c71db5cd4619ef0d035246d2c1aef808bb0d188c670ab3",
+      "episode_id": "39",
+      "schema_compatibility": "stock"
+    },
+    "common_sense/2": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_2_final_res.json",
+      "sha256": "b9b5f7647b4b681492078d6b93bf6d921f51598e97048296334a961b16b6bbea",
+      "episode_id": "36",
+      "schema_compatibility": "stock"
+    },
+    "common_sense/3": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_3_final_res.json",
+      "sha256": "112c26141262e3b8651e604412fb696cf8006f852ddd16d0b7b5e006b0e03462",
+      "episode_id": "28",
+      "schema_compatibility": "stock"
+    },
+    "common_sense/4": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_4_final_res.json",
+      "sha256": "de14a6c0cd56f33a6ae69b5a19bf3b7097bfe2ea11afe8597562be3f22beb47b",
+      "episode_id": "33",
+      "schema_compatibility": "stock"
+    },
+    "common_sense/5": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_5_final_res.json",
+      "sha256": "1038c19a01716b974c6901bd567d0d0fa8e6a7872d4f3dfef2c5684d219bfa23",
+      "episode_id": "20",
+      "schema_compatibility": "stock"
+    },
+    "common_sense/6": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_6_final_res.json",
+      "sha256": "a279fcc0968e437fa09209cf3024d228992d98411c9fd03bc65e4e51261e677f",
+      "episode_id": "46",
+      "schema_compatibility": "stock"
+    },
+    "common_sense/7": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_7_final_res.json",
+      "sha256": "0367446e7217112d9c3ee6e5d24383d0a7ffa55f24d5428456a338d67b772ed5",
+      "episode_id": "24",
+      "schema_compatibility": "stock"
+    },
+    "common_sense/8": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_8_final_res.json",
+      "sha256": "d2a6b7c735277b6bdc28762555641c2d0de86718ff23d64ceb36e6d0e413544e",
+      "episode_id": "47",
+      "schema_compatibility": "stock"
+    },
+    "common_sense/9": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_9_final_res.json",
+      "sha256": "090dc480196430321317862f75bf1491456fe3508b16a10bc643becc3f684825",
+      "episode_id": "40",
+      "schema_compatibility": "stock"
+    },
+    "common_sense/16": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_16_final_res.json",
+      "sha256": "231f861e1d0ea0566745c43210cd05a664849c62c29c82e620bbfea9020f142a",
+      "episode_id": "4",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743/common_sense/results/episode_16_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/17": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_17_final_res.json",
+      "sha256": "251647cb7f02ac470afe1d668f61b3547d220da826839c6320328024648ce303",
+      "episode_id": "37",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743/common_sense/results/episode_17_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/18": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_18_final_res.json",
+      "sha256": "f14561a3ef0fdb361080c2d5e06b1095d3494a634a5e22016f35dec686fa0458",
+      "episode_id": "16",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743/common_sense/results/episode_18_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/19": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_19_final_res.json",
+      "sha256": "b06c5ae6a16246d34ade6650e9e1b9f18d6fcf700878e15511ddf21beaaa7665",
+      "episode_id": "48",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743/common_sense/results/episode_19_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/20": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_20_final_res.json",
+      "sha256": "0f068cbe5a8dc055e1c063d11b04b79e2f080a93233398b59be1ef67a62afb7d",
+      "episode_id": "35",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743/common_sense/results/episode_20_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/21": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_21_final_res.json",
+      "sha256": "ef8dc1b11fa17de08d4eee6e1f95c4cc9fbac868f813379f51a76c86e9e250ea",
+      "episode_id": "19",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743/common_sense/results/episode_21_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/22": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_22_final_res.json",
+      "sha256": "7515554b429f83f09619f05159b2333954ff1de0c9b58124cb9d08ea014192f8",
+      "episode_id": "15",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743/common_sense/results/episode_22_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/23": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_23_final_res.json",
+      "sha256": "00a789b1fd2c0fea85d63104aa1134e5acb66e22007071959efb1c0c687fd41c",
+      "episode_id": "41",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743/common_sense/results/episode_23_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/24": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_24_final_res.json",
+      "sha256": "bf4557a933dbd94451b6553dda41e8ab5cd33a622df8c24a9f6d52662e1ae2cf",
+      "episode_id": "13",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743/common_sense/results/episode_24_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/25": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_25_final_res.json",
+      "sha256": "2dd5b71674de70c1f0203b02a6017fff06fb452d4c88836854c1efff22775063",
+      "episode_id": "3",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743/common_sense/results/episode_25_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/26": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_26_final_res.json",
+      "sha256": "ed0685f88bcac535ab823f73ba7fa420db237f22314d51ee040a43864c8f2611",
+      "episode_id": "32",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743/common_sense/results/episode_26_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/27": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_27_final_res.json",
+      "sha256": "879aa3ce4cf3b3e74722408466a9d0798fe5c72415a85b23cfe77e88b8bb26b1",
+      "episode_id": "38",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743/common_sense/results/episode_27_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/28": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_28_final_res.json",
+      "sha256": "f2be90b64718142f4bc36b12cd6edbef948bd171f2910b595f725389a9cb065a",
+      "episode_id": "25",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743/common_sense/results/episode_28_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081743",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/29": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_29_final_res.json",
+      "sha256": "e9ce13c0eb86f2e1c3782039c8453a81d7dd7db06f686ee9a5a54ad9dea1cd2c",
+      "episode_id": "44",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_29_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/30": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_30_final_res.json",
+      "sha256": "8023d59ba4daec71736e1d5fb253142c670cb766e4c3cfbbecff094085cd8628",
+      "episode_id": "0",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_30_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/31": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_31_final_res.json",
+      "sha256": "553b3eecf8837d3b8ed8859fdfd33e3aeac410b49d3cbbc38a4132d0da3fd07f",
+      "episode_id": "17",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_31_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/32": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_32_final_res.json",
+      "sha256": "49d009c47ae23e372bafc4f8a67669fac2b6a538ee81bd15a6bff973f7403bde",
+      "episode_id": "49",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_32_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/33": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_33_final_res.json",
+      "sha256": "13ab0ceda000e070999ed66e9aa84d41b1081706b606c25e29080a1c90537ef2",
+      "episode_id": "14",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_33_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/34": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_34_final_res.json",
+      "sha256": "400dc196c5d47d30c3f7a4f75c2f7bbee7769bd4c19216c6f689bfaac300dc4a",
+      "episode_id": "21",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_34_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/35": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_35_final_res.json",
+      "sha256": "cbccb66a0442bdf0385643ae238883678890cf2e5e1d6528a8f54a32b0d40da9",
+      "episode_id": "5",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_35_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/36": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_36_final_res.json",
+      "sha256": "22fe6f8c828e8f274d1aa632015ed4fab54f6488e672d6822634dd5ead293836",
+      "episode_id": "34",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_36_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/37": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_37_final_res.json",
+      "sha256": "f9f42965e6ecba7a10476b5370308ce05c24ce83373e703f6d2c61fa3ec3966a",
+      "episode_id": "7",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_37_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/38": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_38_final_res.json",
+      "sha256": "d9b80c945b75dbe0b4db3019bc15aef37ced1c3ad67f5e4c1187f485f083ac79",
+      "episode_id": "22",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_38_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/39": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_39_final_res.json",
+      "sha256": "9fbb34c9217ca23f7a1df1966263f45f2793b407ddfd824b2ee470cebb7ae6c5",
+      "episode_id": "45",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_39_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/40": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_40_final_res.json",
+      "sha256": "6cadcc0e2acbb624a123f476b3afdb2735a66b43895c24d85ce7b19452ae62ab",
+      "episode_id": "9",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_40_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/41": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_41_final_res.json",
+      "sha256": "a2f48ac86672ddb90fc5da373955aa4c362fe38ad2895dd88be69b62a79aae54",
+      "episode_id": "43",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_41_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/42": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_42_final_res.json",
+      "sha256": "99392f9c55d3d3ba1daa720b49bd6e9264939c5f4d587ca6ff3d9a273210cabf",
+      "episode_id": "10",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_42_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/43": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_43_final_res.json",
+      "sha256": "6ce4f42d5f54803cb8445f638704063a034235b3911be880b7d5b0b8396d30ac",
+      "episode_id": "8",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_43_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/44": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_44_final_res.json",
+      "sha256": "0a0589c6257ec739869c0cfacb1c06adc33887f1775761462c6ed0b6b7db4abe",
+      "episode_id": "31",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_44_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/45": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_45_final_res.json",
+      "sha256": "8b5c91e6a84982ce9488808093b5f099b8b309caa310320af28a608a9a345ca5",
+      "episode_id": "12",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_45_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/46": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_46_final_res.json",
+      "sha256": "faad76a34281a78cf4ffd7109471602dbea20f0ec75a1bcca9e4faca29f8284c",
+      "episode_id": "23",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_46_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/47": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_47_final_res.json",
+      "sha256": "43d71dfc4697cda606d1c806916caa483216a1c3a21f1ad4889ed1e9875d5f3e",
+      "episode_id": "6",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_47_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/48": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_48_final_res.json",
+      "sha256": "c6d7b37abd688a7cfe95a95f08f61bed6cbd73827c4a5ff352bfa85ad9309c1e",
+      "episode_id": "26",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_48_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/49": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_49_final_res.json",
+      "sha256": "c2ffa93aaf19cd8a991c51ce5ffe18af8ae11e5a0cd1180f883bed900b090884",
+      "episode_id": "27",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_49_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "common_sense/50": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/common_sense/results/episode_50_final_res.json",
+      "sha256": "221a3c5686b207d1945d24187526cd0c1a903c26014be811d5b504c34e76e245",
+      "episode_id": "11",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754/common_sense/results/episode_50_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081754",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/10": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_10_final_res.json",
+      "sha256": "e531f01b16f48014fc244dd8c2f226a3f18393074e3629d8be4b663d872b5be4",
+      "episode_id": "44",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806/complex_instruction/results/episode_10_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/11": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_11_final_res.json",
+      "sha256": "9fcc23c66d436649a106c8bacaa85ffb4c50c743d5b75be55ef77b55f7adc53e",
+      "episode_id": "17",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806/complex_instruction/results/episode_11_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/12": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_12_final_res.json",
+      "sha256": "84242ce75cc2dd8ed1ef32b6991df56cf913c1f1ea2238a1346b9fa8e5123bd8",
+      "episode_id": "33",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806/complex_instruction/results/episode_12_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/13": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_13_final_res.json",
+      "sha256": "e39512b89f3d6d99fa35f732c71f00acd41b5f2ec8c0cfe930d334eb08356ab1",
+      "episode_id": "42",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806/complex_instruction/results/episode_13_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/14": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_14_final_res.json",
+      "sha256": "6877a0a7dce0aa0549eabaaa63eee6d6fd3019b85410b3ce991e7fe577fa12f7",
+      "episode_id": "29",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806/complex_instruction/results/episode_14_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/1": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_1_final_res.json",
+      "sha256": "6eae2805a2f3a20423c13abcdc4c46bc0ec1f8aa83e411f46a2da7645ce2b514",
+      "episode_id": "39",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806/complex_instruction/results/episode_1_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/2": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_2_final_res.json",
+      "sha256": "7508b01d1d0fb68e77173e9a4f0582619f9259fc7b837ed9f7e2b7d7b7335e00",
+      "episode_id": "0",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806/complex_instruction/results/episode_2_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/3": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_3_final_res.json",
+      "sha256": "68009430fe37ac5ad32c67b6450279334a9852524335f9cd8fa06f9f9cc27974",
+      "episode_id": "12",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806/complex_instruction/results/episode_3_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/4": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_4_final_res.json",
+      "sha256": "d8e02cbfb8db55b2a6ef4d23a59fc41dafd69b40a1feab69caa99cf97363628a",
+      "episode_id": "20",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806/complex_instruction/results/episode_4_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/5": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_5_final_res.json",
+      "sha256": "0a7ab015705fb3ba9162302c764d7540dedb0b8360b126e36eebf088dfd62ce8",
+      "episode_id": "6",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806/complex_instruction/results/episode_5_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/6": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_6_final_res.json",
+      "sha256": "418b9b999f69bf51340c3a87c5b7e200933586f8189f6483e9f978504fed3bbc",
+      "episode_id": "13",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806/complex_instruction/results/episode_6_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/7": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_7_final_res.json",
+      "sha256": "7b1abc47d4a1ba7f0ff3e0005f98f1c3e47b7a62b5aa2d440ecc10bc031ac7b0",
+      "episode_id": "30",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806/complex_instruction/results/episode_7_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/8": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_8_final_res.json",
+      "sha256": "5e4254985556c0fde0206b8e99db1aaf009767101279df27b20c9bdd1a3e6ff6",
+      "episode_id": "19",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806/complex_instruction/results/episode_8_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/9": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_9_final_res.json",
+      "sha256": "9e2490e30becb47cc4fab8c15ddaff75ba87a1154f9ff9a555a6c896c60c48af",
+      "episode_id": "35",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806/complex_instruction/results/episode_9_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081806",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/15": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_15_final_res.json",
+      "sha256": "17b1a56d1e32e4eb694e650c8937f0cb627e9f89c3bf5ee13974a2d161c6010e",
+      "episode_id": "36",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081816/complex_instruction/results/episode_15_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081816",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/16": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_16_final_res.json",
+      "sha256": "970fd040b8b42bf25f4c06af7ef65eff060925f0e97f95516178b18e8c8b395d",
+      "episode_id": "38",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081816/complex_instruction/results/episode_16_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081816",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/17": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_17_final_res.json",
+      "sha256": "806970a9da6c74c9e09a18c821bc0faabbd2c9818077a604152b602773e8b603",
+      "episode_id": "34",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081819/complex_instruction/results/episode_17_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081819",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/18": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_18_final_res.json",
+      "sha256": "033a22ebd63a6e0c5f3f1e1df28cdc5155fc58c84c49a0ee1789f37fdce4ec9b",
+      "episode_id": "9",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081819/complex_instruction/results/episode_18_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081819",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/19": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_19_final_res.json",
+      "sha256": "c64e7dc9c90347d0b375c973e3795ffd0675c36ad8217a3df60d0732805df8bb",
+      "episode_id": "43",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081819/complex_instruction/results/episode_19_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081819",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/20": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_20_final_res.json",
+      "sha256": "919adeb4fc648eac8d8277cc61317279205baba228e790ec486d04f48fc225a1",
+      "episode_id": "41",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081819/complex_instruction/results/episode_20_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081819",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/21": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_21_final_res.json",
+      "sha256": "26f44f67e3f751fa092f39bc3a836b861af11dca09d1c563ca0c68e69048e541",
+      "episode_id": "31",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081819/complex_instruction/results/episode_21_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081819",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/22": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_22_final_res.json",
+      "sha256": "e2efbf9023bd89fcf7005c176e9a150cd9aeaf09f4e6a89dddf79fe7704edd20",
+      "episode_id": "23",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081819/complex_instruction/results/episode_22_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081819",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/23": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_23_final_res.json",
+      "sha256": "f512888ff928d4bc06b4d612f535b1c720c3084b041c03d63bb6df32d34d437c",
+      "episode_id": "3",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081819/complex_instruction/results/episode_23_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081819",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/24": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_24_final_res.json",
+      "sha256": "61561994a8910a77f8245cec2828feb8321a9bf70c35d8e88a2ab977d6d4a9e7",
+      "episode_id": "1",
+      "schema_compatibility": "stock",
+      "source_path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081819/complex_instruction/results/episode_24_final_res.json",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081819",
+      "consolidation_manifest": "/root/max/VISTA-Skill/running/migrations/closed_feedback_consolidation_202609081850/manifest.json"
+    },
+    "complex_instruction/25": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_25_final_res.json",
+      "sha256": "0f673a90bd2f04e6c49361b6d1f0e7660305298500eb09a19c92b68cc2a30274",
+      "episode_id": "2",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/26": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_26_final_res.json",
+      "sha256": "4cdb7f0504ad083e702e9392619a98c63e40397e8ab5b2354b813ebce83fcca6",
+      "episode_id": "15",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/27": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_27_final_res.json",
+      "sha256": "46c9f7fe142202eddee22ed2afaa84c5d2c3f2ca74af266f7d5e23c03597f4eb",
+      "episode_id": "10",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/28": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_28_final_res.json",
+      "sha256": "413e6ca75aad1f960e63b2459b6adbac24047519eb6867dcd20a7a7e2448c275",
+      "episode_id": "18",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/29": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_29_final_res.json",
+      "sha256": "978c17990da7f412f3af6e1ad64576206e5dac05ce9c917b5fcedab4981d038c",
+      "episode_id": "40",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/30": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_30_final_res.json",
+      "sha256": "634fdf9022bb92993eaad618b54ded0741de435904be9b54ba71b0e3e7406ff1",
+      "episode_id": "8",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/31": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_31_final_res.json",
+      "sha256": "70d0a9e722c32c611324ebad9880edc90edef20367c1c92e33c2ce334ec29fcb",
+      "episode_id": "28",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/32": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_32_final_res.json",
+      "sha256": "5df0f444125ce528a9d6e18ab45f61a9963653997540b686c76ddaa81e786215",
+      "episode_id": "16",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/33": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_33_final_res.json",
+      "sha256": "a9a625e04b0773b4e85512fb5f93aea708cc9b93f3de51b5def4fca380edd6ca",
+      "episode_id": "46",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/34": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_34_final_res.json",
+      "sha256": "f6106b8347a96fabdc0422332baee9734dc9c904cc599c0c825abbf431c92057",
+      "episode_id": "37",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/35": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_35_final_res.json",
+      "sha256": "9d0417680c4c57fada1a158537e815004b56f66dc90dff2494d0bc1b928ef837",
+      "episode_id": "24",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/36": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_36_final_res.json",
+      "sha256": "c08017bec6edd18c674d083b95ee16c3e9583b3f702ee5d26513c8c19f609154",
+      "episode_id": "21",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/37": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_37_final_res.json",
+      "sha256": "0f6a4411aebc91a82cc924968410f73366ac0428b5d5d26f106aa72807421e40",
+      "episode_id": "25",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/38": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_38_final_res.json",
+      "sha256": "8e41de55726e547e60c436c7d1db8cc393a7a5c7932d46ec53b219fe30a8c7b7",
+      "episode_id": "4",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/39": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_39_final_res.json",
+      "sha256": "efb033442776413b16e64173d1a9ca061ff70739b8c187045d680815ec7040c6",
+      "episode_id": "49",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/40": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_40_final_res.json",
+      "sha256": "b57a87f163295fb60fa9122a72aad2d4623127f1d1471410fa5ec64a0ff9fc2a",
+      "episode_id": "5",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/41": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_41_final_res.json",
+      "sha256": "edc5e99fd3d95bfc61ed9a16b0052e9063bac418ca3e3cccf723bd5352566d36",
+      "episode_id": "11",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/42": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_42_final_res.json",
+      "sha256": "331857338ec83f59e55862649739c5c2818ae0fdfb96046ad08cab65fe0fdd28",
+      "episode_id": "26",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/43": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_43_final_res.json",
+      "sha256": "bc5c08097d796ce5a024a3068753f82d13db40153f110eff189f13e32843740d",
+      "episode_id": "47",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/44": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_44_final_res.json",
+      "sha256": "d41a991c83a447f0f809d5a0d2e42d5f77fc3abc370260ba43a1e367b565c156",
+      "episode_id": "48",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/45": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_45_final_res.json",
+      "sha256": "e8f6d3576342555783695cc89c5f0ebc37fd7d2b0f45d30e461c8df250358692",
+      "episode_id": "14",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/46": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_46_final_res.json",
+      "sha256": "0e8171f778f57083ea05a88e2ec986cef538521b078de2b34559ce38edd4c4a3",
+      "episode_id": "7",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/47": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_47_final_res.json",
+      "sha256": "b213e7d10d61448e3f04358f87b188df6dcaae4852a74fc8a2059f004092cd58",
+      "episode_id": "27",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/48": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_48_final_res.json",
+      "sha256": "165dd90c63080bec85d93f64bfca750c9f3b997d67ff85c87271afaee9578491",
+      "episode_id": "22",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/49": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_49_final_res.json",
+      "sha256": "3201f4e35dcb9b2d3d623c23d198d9c9dbe86de586c04df15a129ddc97ad5487",
+      "episode_id": "32",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "complex_instruction/50": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/complex_instruction/results/episode_50_final_res.json",
+      "sha256": "2ffc44dc0151df8a090c6c10bef152a83b9b1a2156013046ecdf0ed0de6f0b15",
+      "episode_id": "45",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081902"
+    },
+    "spatial_relationship/10": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_10_final_res.json",
+      "sha256": "045feed535527e9a25d181bcde0d4f8a4612bd9f76236a87be92b10eb77cf1de",
+      "episode_id": "36",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/11": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_11_final_res.json",
+      "sha256": "0f20f39934a648f1816232c8d97c6159dd4dec804eae3c88c6211693fc9ae65f",
+      "episode_id": "38",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/12": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_12_final_res.json",
+      "sha256": "edc2c98ad8ad2007e9664e386e5d78662ad17cd7cdc9352090fd2d5dc0e72de6",
+      "episode_id": "41",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/13": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_13_final_res.json",
+      "sha256": "de50090f07e0d6470cca4d2683f918a3a3484f5cde1e1b5111f75fde08440369",
+      "episode_id": "23",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/14": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_14_final_res.json",
+      "sha256": "c5dbe3abc52c5ae4c0a54e5589d2394d5e8ef6fb364e8ae565a96ca58de99492",
+      "episode_id": "21",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/15": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_15_final_res.json",
+      "sha256": "8709e17b7aae791de33cb59d4303e52631d5927b0170e973f4f98ea1835479ad",
+      "episode_id": "40",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/16": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_16_final_res.json",
+      "sha256": "a251d96dbc9cc8e178a9a04fb07a00142b70a9972b3e717dea55abd8d1370f00",
+      "episode_id": "32",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/17": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_17_final_res.json",
+      "sha256": "1741fa0f8dad33b94aeb4823d37866fc5db3dc64e3648035b21cebe6c6301692",
+      "episode_id": "27",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/18": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_18_final_res.json",
+      "sha256": "a4bfad13d0cfb3c8bf6d319e926ea76e03c9d79da771e86f9129d0f3072b5bed",
+      "episode_id": "29",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/19": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_19_final_res.json",
+      "sha256": "9ac5b507a1e83288366a3a88f24c6d629e961f6d3e6c076b1fea22e974c8a7a1",
+      "episode_id": "44",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/1": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_1_final_res.json",
+      "sha256": "8d90efe29b2cfa2526218af363a575e65f0ebf01e1109efee48c0611b07e4287",
+      "episode_id": "39",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/20": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_20_final_res.json",
+      "sha256": "ec2a52372e1e71e5e1ccd98a5fa258090192e9477a4f56cb158f447ada80f4ab",
+      "episode_id": "33",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/21": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_21_final_res.json",
+      "sha256": "2ced3eb097c267aac61abc85306604639ad347f186156835ad23ba21661b5487",
+      "episode_id": "16",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/22": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_22_final_res.json",
+      "sha256": "01e77f9884f4dabe66473f36a329226c01d69c9f027d52db4b1fea15aac8b258",
+      "episode_id": "7",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/23": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_23_final_res.json",
+      "sha256": "1bc78a17ad968d262a1d5575d5b6921ca0791d9e88eb79679ff3242421bd1197",
+      "episode_id": "11",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/24": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_24_final_res.json",
+      "sha256": "43cd71ec9153901e67fd3fbb253ac28e5170f14d26676b3b52f5cc09955d629c",
+      "episode_id": "43",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/25": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_25_final_res.json",
+      "sha256": "3517a09d3ac66de47183b61983f2b40999f9acbb087e435428afe3b8803c34eb",
+      "episode_id": "19",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/26": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_26_final_res.json",
+      "sha256": "e738c0d5fa1c8c29a60c4eb18340226c33eba88b931a13cdd2e5565b46f2e57c",
+      "episode_id": "0",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/27": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_27_final_res.json",
+      "sha256": "a765d0be52c87b06f6e7f7ccd7bdff3920277be26562b3e39986ff501c18df35",
+      "episode_id": "17",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/28": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_28_final_res.json",
+      "sha256": "48bb3285c8739f6fc75efd43920f8b463b8c2461eed0bb84c20d2ec0c138bb2a",
+      "episode_id": "15",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/29": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_29_final_res.json",
+      "sha256": "830abdca190603352fdcc6fdc535856235853e763320df800b509d6b7ea93e50",
+      "episode_id": "28",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/2": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_2_final_res.json",
+      "sha256": "09e000ac5c65e40ab4d7a67697d08e98b6e4dde55e63d0c4241819e309a35065",
+      "episode_id": "31",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/30": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_30_final_res.json",
+      "sha256": "2a03674a406193217e54fbe164f986bad93e132179cc320d16a60f9447512ff5",
+      "episode_id": "22",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/31": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_31_final_res.json",
+      "sha256": "667e46488d73233b1f6aba1714f61497a69d4ab15ccefe945ef887e1b3e7337e",
+      "episode_id": "1",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/32": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_32_final_res.json",
+      "sha256": "a5607d97f2a594d13a881809e559e40a0c9e3fc4a26cd01285f5754d6e49529b",
+      "episode_id": "46",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/33": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_33_final_res.json",
+      "sha256": "e761f6f40fb3706e0d81762fd8bca663804f93d79672686ec07579d3db0a649f",
+      "episode_id": "6",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/34": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_34_final_res.json",
+      "sha256": "f223aa1873beb44382c04486651d3614acf47a7069a4ac1e373339e93e9f8e39",
+      "episode_id": "10",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/35": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_35_final_res.json",
+      "sha256": "446c524404c06ae9cb99471ab5c6e86bf67ec439d385360fea71b0456a6aeeb8",
+      "episode_id": "24",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/36": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_36_final_res.json",
+      "sha256": "61f3df187f89f97316cccb866c914043b95210e0f1caa6eb96050945c9116145",
+      "episode_id": "14",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/37": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_37_final_res.json",
+      "sha256": "18f014dba1adcae37559e62e6903aa340ad455e2085bccb549f69818b281ed54",
+      "episode_id": "13",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/38": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_38_final_res.json",
+      "sha256": "05345fa61aba255f5d74363fbb2dd03e8a63159e35a42dbb89c0afd88c9f2dc6",
+      "episode_id": "2",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/39": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_39_final_res.json",
+      "sha256": "e66be840f61fad28da93387cd2bf275668107bb1a9d8e082eca893725f45c29c",
+      "episode_id": "18",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/3": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_3_final_res.json",
+      "sha256": "17b7c72a363961aebaa84bd5d7aaa52b542c478e1c85fa4cb9e03e650a79074d",
+      "episode_id": "42",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/40": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_40_final_res.json",
+      "sha256": "cc1911ea7aabf7909530d6b0f61f4ff796d8db014e9d5249aed876011cb859a7",
+      "episode_id": "45",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/41": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_41_final_res.json",
+      "sha256": "a1edb0e4b1d08efc9f88035a83bda8dbe8e338309d2f4666f40a6ef48fb431c1",
+      "episode_id": "8",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/42": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_42_final_res.json",
+      "sha256": "d860b759b806791a1fff33fa4f27e57919f6d23869b2ccdacbc2f9248606dd69",
+      "episode_id": "12",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/43": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_43_final_res.json",
+      "sha256": "329485717045406213c6568ed9791fd9aa3afbf65b5a6f8ac78e2970098cfa3d",
+      "episode_id": "20",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/44": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_44_final_res.json",
+      "sha256": "49b5bb76bcd390ec6cab15055415d5f2c7212c71c4ad589cce22943ac69a82d6",
+      "episode_id": "5",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/45": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_45_final_res.json",
+      "sha256": "b1b3d1dc30e853a114191aeba8ac05280ed1d8a8ae7b13d29738df56b794c35d",
+      "episode_id": "4",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/46": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_46_final_res.json",
+      "sha256": "eca599779fca3c38efca57e61c40a5fddad946253d9dc908b33098993f0197a4",
+      "episode_id": "49",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/47": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_47_final_res.json",
+      "sha256": "38e86f39a5d6d9d04dfcc6b76e0c21590241a0812392cf2458ab6c9b6e3da67e",
+      "episode_id": "47",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/48": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_48_final_res.json",
+      "sha256": "4a7239388589e4cb115fe6ffc2657c8f172118ec3ee0c9e7556f78c8364c4936",
+      "episode_id": "34",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/49": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_49_final_res.json",
+      "sha256": "584c8fe5156e3576a8159c3efbbf491e7ae81906a651bbe3d471520f70095aaa",
+      "episode_id": "9",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/4": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_4_final_res.json",
+      "sha256": "ed5e470a8e418f7eea4c26c690d625c9ba676f429ecc840b7da8591094992ddb",
+      "episode_id": "37",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/50": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_50_final_res.json",
+      "sha256": "3d97d083d40e63c914fb3be63d6ca914077b433f19b5a733baef0d5995a1b2d0",
+      "episode_id": "25",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/5": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_5_final_res.json",
+      "sha256": "2d143abb8c57e58f6515638a06a389628be2796f633902c0b60dc6ac480c3fbc",
+      "episode_id": "26",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/6": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_6_final_res.json",
+      "sha256": "a1857fce1f21f7d48e3b3ccc97f155940f2c4cb17049db5102b4f1089ed4cca6",
+      "episode_id": "3",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/7": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_7_final_res.json",
+      "sha256": "a3cfdab66592031e0d541e0fd782ac0917f7268ec2c20fe279d21751c4c702d6",
+      "episode_id": "48",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/8": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_8_final_res.json",
+      "sha256": "2ee1ede56caabbdf376ec7c674d6004aaa7e4bf06b4ab505593066deaa066379",
+      "episode_id": "30",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "spatial_relationship/9": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/spatial_relationship/results/episode_9_final_res.json",
+      "sha256": "385184a21aed47b74fb8b8342bdeecb50df6c5ab6ddcaef316c0228a5a365771",
+      "episode_id": "35",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609081951"
+    },
+    "visual_appearance/10": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_10_final_res.json",
+      "sha256": "fb330d28153eeeb839463146527c1a7dd7c98760f455edf52e7f3797c08529e9",
+      "episode_id": "34",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/11": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_11_final_res.json",
+      "sha256": "7f19aefdca831b18958275c0438cddb0f986640a434891e0a4c09bfdd8d834b6",
+      "episode_id": "7",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/12": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_12_final_res.json",
+      "sha256": "b9fe578d78c2126e4e695fab4d393aaba4d2f89db4f9a3d276e4d45f63bed27f",
+      "episode_id": "22",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/13": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_13_final_res.json",
+      "sha256": "69635002e18e71e259cc7386be3faca17b8c8b6fecc49b97c4193fc73ad9e294",
+      "episode_id": "9",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/14": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_14_final_res.json",
+      "sha256": "8b7b4b16edbd0f4c8a874eef68463ff2418f297ee1b816fdcc07214938bd2728",
+      "episode_id": "38",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/15": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_15_final_res.json",
+      "sha256": "552a5c6c2973c6cc5d33e60116d4678bbca756e8635e5e5ce3bf770d8918c67c",
+      "episode_id": "23",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/16": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_16_final_res.json",
+      "sha256": "69e60b527c4841f45c0310935733218909753a9419fc2bd5418ec150497c6f4a",
+      "episode_id": "40",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/17": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_17_final_res.json",
+      "sha256": "d732cf09b574a4869701001510e00c4a76824686edd9f6d447d138bab73cf53d",
+      "episode_id": "44",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/18": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_18_final_res.json",
+      "sha256": "04eb9a326dd9ca5fdea620e7e788b48846ef5202506d798241412d802aea1f2a",
+      "episode_id": "41",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/19": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_19_final_res.json",
+      "sha256": "ed897612c1b58533ce276eb8795744447bdb78896ac4bf8cd82d7f5efda982a3",
+      "episode_id": "19",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/1": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_1_final_res.json",
+      "sha256": "b904b9f93fd1effa326f3351caffe91fb7af0c38b27640e594d4877251ad1c59",
+      "episode_id": "39",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/20": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_20_final_res.json",
+      "sha256": "a77575cf3c144058c99464bf8a21dda5baaf14e2624d34b928a9cdaa0bb68709",
+      "episode_id": "6",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/21": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_21_final_res.json",
+      "sha256": "aed30497236665a24503bd9f76fdf39fe27a11010f9cd18dc5b1b6a4b99c2220",
+      "episode_id": "26",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/22": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_22_final_res.json",
+      "sha256": "e83b738778f804d08a90af844c567d2e56c5f1b2fd27a06c99c0de4d4cd120fa",
+      "episode_id": "17",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/23": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_23_final_res.json",
+      "sha256": "869966a37bff86d2012f41039fd7a4266c972a740b922363092281a125060718",
+      "episode_id": "1",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/24": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_24_final_res.json",
+      "sha256": "d10d3128062e3a3efce291c03638332c1d177a0614f9d3911e3b10c0bc64c6be",
+      "episode_id": "8",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/25": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_25_final_res.json",
+      "sha256": "15cc179d269e4840ae2861841be964fb65e3eda4c486c1ca5b2b505f5ca7f7f6",
+      "episode_id": "4",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/26": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_26_final_res.json",
+      "sha256": "67487bf8dfe2ad69378dbe3bae17550ecb5c4019934357ba50daec68f23bf787",
+      "episode_id": "37",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/27": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_27_final_res.json",
+      "sha256": "227e7ace30a846f59223e20643fc19318daca927c05a2409b83f1e2480781fca",
+      "episode_id": "14",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/28": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_28_final_res.json",
+      "sha256": "3cc005d3d975b1d11862698f5a02e6e7760312867b2e8f18c3c38c5508081d7a",
+      "episode_id": "47",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/29": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_29_final_res.json",
+      "sha256": "ebfc5859e38a115a5b40e7412a6654448363d92d741a364a75387baa45152098",
+      "episode_id": "5",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/2": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_2_final_res.json",
+      "sha256": "c637d4587f7897b967d9382225ae7f0c0e2b78748e3f5ae13c05c44e434ac4f0",
+      "episode_id": "30",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/30": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_30_final_res.json",
+      "sha256": "2f6ea03584df707af749d97447660fbd9f65bbd43a4c7117d3608969e5c4eb3d",
+      "episode_id": "27",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/31": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_31_final_res.json",
+      "sha256": "801e11ee4ff8d5dad03e78fac7c54b0a1086e2344e3c919c6e0ad33954f62135",
+      "episode_id": "45",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/32": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_32_final_res.json",
+      "sha256": "5a2b6ac8509b2b69473e25b1b4272acf30f77fac710e2aa77055fc97590fdc41",
+      "episode_id": "15",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/33": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_33_final_res.json",
+      "sha256": "a049ec9eb8ab8567b08d04e34a4a19f46e70edab7010dca4571c1df7f5a54454",
+      "episode_id": "16",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/34": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_34_final_res.json",
+      "sha256": "14824e96b52bc57c01e954e6ffd880a46a5336ddc298b4c9c09929e021b9cb81",
+      "episode_id": "10",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/35": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_35_final_res.json",
+      "sha256": "d4eb76ae81d86e3f4c361605fa2ee70869bd8c9cf54e261e0b816684f4e898bd",
+      "episode_id": "25",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/36": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_36_final_res.json",
+      "sha256": "f019246026f159df95fcade90b033ce086b3a3edc05bd5a8d1cfcf978e56c8ea",
+      "episode_id": "29",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/37": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_37_final_res.json",
+      "sha256": "5a6db4c73a46c5977349fad9de92f2f0bb94be6e507397b93b27210a12f79efd",
+      "episode_id": "2",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/38": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_38_final_res.json",
+      "sha256": "5b30d9b31a50a80a39075d5146a012561d2a23f975332d4eb2bf3c1390214969",
+      "episode_id": "32",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/39": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_39_final_res.json",
+      "sha256": "de8e20b8d88c444b628c6af6afcf3ae58ae9a7cf01aa1450faa185b5ecc43845",
+      "episode_id": "18",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/3": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_3_final_res.json",
+      "sha256": "4178e9e7ea03e9ff8801a13a13631c43952f6faa83f2789bac6a16571d5e17dd",
+      "episode_id": "20",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/40": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_40_final_res.json",
+      "sha256": "acc4fdd8d8d304be31a43f615da5aef8d4b1720a9800c791f121010f57816cdd",
+      "episode_id": "31",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/41": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_41_final_res.json",
+      "sha256": "599020ea9585782d93b9a834c254e60d586e4c806bb9043e1691415f986c87b6",
+      "episode_id": "12",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/42": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_42_final_res.json",
+      "sha256": "1a3f288ace53be1046e2a965cca29a31f4cd40e51276dec981a9d54252e935bd",
+      "episode_id": "11",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/43": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_43_final_res.json",
+      "sha256": "781453eda6727b52c3cea5294fa78078098acc201e0e6cc466c300c1dcb0c4ff",
+      "episode_id": "28",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/44": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_44_final_res.json",
+      "sha256": "4799c00f5c476a610700c2ef556acf686f12093dc72ec67a190fd1d924e84593",
+      "episode_id": "24",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/45": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_45_final_res.json",
+      "sha256": "afd7f84e2c52ce821f6be7d4abcba71e83a9fa5916c4d86c246a3a3515cca79f",
+      "episode_id": "3",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/46": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_46_final_res.json",
+      "sha256": "02e9c1a85a3cae293d82c6db83e2962a8a132547e5ba8ea325aef153662308a9",
+      "episode_id": "33",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/47": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_47_final_res.json",
+      "sha256": "d7de395dab9c8e2234f5ffa474588f45c987a1224875170c76c72b6a63e05080",
+      "episode_id": "48",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/48": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_48_final_res.json",
+      "sha256": "e6c0d980b899ce23748732976e8feda669a945ca82a698487cc3abc584295e5c",
+      "episode_id": "46",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/49": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_49_final_res.json",
+      "sha256": "9db3fd125639da7b202d8ecdc69bf4e968441ec151267a00d89462fd06e6051e",
+      "episode_id": "42",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/4": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_4_final_res.json",
+      "sha256": "c2c863b9f190979df801f0e5d6e47559a0c358f6b082dfcdfb81aff27cca1e1a",
+      "episode_id": "35",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/50": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_50_final_res.json",
+      "sha256": "aaf21a4a52655374f021817b0a8915f235933bd4d7c3cdd0be8b083afcdaee4b",
+      "episode_id": "49",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/5": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_5_final_res.json",
+      "sha256": "7359c7a7f6d44a7d1da87dc5523f44a4cea740f09f84763786e07d3c1758eef6",
+      "episode_id": "43",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/6": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_6_final_res.json",
+      "sha256": "9666f9dab6716e0a31412282262e820f153654e8396a6cac49ce8ab26b338ac8",
+      "episode_id": "36",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/7": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_7_final_res.json",
+      "sha256": "be45ecdcad4809c5ce5d1d0dcd1c1d4db8ed4fbe8f862d17ffb5b4842f4ec6dc",
+      "episode_id": "0",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/8": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_8_final_res.json",
+      "sha256": "e723a692d4c76522fb406e7713dddfaa14f547d96ac7c62107cc940eef3d8f7f",
+      "episode_id": "21",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "visual_appearance/9": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/visual_appearance/results/episode_9_final_res.json",
+      "sha256": "3be93b6d8eac74eddf090010a48687392041f3a4ecca6e8db1f4262edb4c90f8",
+      "episode_id": "13",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082126"
+    },
+    "long_horizon/10": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_10_final_res.json",
+      "sha256": "00971c3e73a9d4411a79391793c896878d35b20ae53ee760d91ed5097176b4f4",
+      "episode_id": "15",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082209"
+    },
+    "long_horizon/11": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_11_final_res.json",
+      "sha256": "0dd84f80b5a4a9c272ea6ffd0fbde47542211bb76f69e671521fbf11387816a3",
+      "episode_id": "10",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082209"
+    },
+    "long_horizon/12": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_12_final_res.json",
+      "sha256": "bf393120b16f1824de45a53d8f24d04a85b9a2c831d90770fc2f956b752e8281",
+      "episode_id": "2",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082209"
+    },
+    "long_horizon/13": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_13_final_res.json",
+      "sha256": "d0f41b6ea4b297a4d3f69c77a8ac8598752877ae1c1e0b50602b2d8f56ca46b2",
+      "episode_id": "8",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082209"
+    },
+    "long_horizon/14": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_14_final_res.json",
+      "sha256": "31d8a99b5b24f3ccac6e0420385b484fce1f894f167223e703384dbed5eb3e0f",
+      "episode_id": "31",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082209"
+    },
+    "long_horizon/15": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_15_final_res.json",
+      "sha256": "cccca5a54361e696d868fb19daaa8969520a538bd23495b09d07f00a813435ca",
+      "episode_id": "12",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082209"
+    },
+    "long_horizon/16": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_16_final_res.json",
+      "sha256": "2d0b905f5e7b92f9fe981dd0ac1fbb926102cf429db20e56d395d31b6265e397",
+      "episode_id": "46",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082209"
+    },
+    "long_horizon/17": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_17_final_res.json",
+      "sha256": "2320fb0b43eb29b2308a1e3f24fc71d625fd47e3bb65c410f5a3702898e1576b",
+      "episode_id": "37",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082209"
+    },
+    "long_horizon/18": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_18_final_res.json",
+      "sha256": "39f990273466e891908cc0324065ce04732ad812c3269589d3e7fdf9d1fdf834",
+      "episode_id": "6",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082209"
+    },
+    "long_horizon/1": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_1_final_res.json",
+      "sha256": "746a6a3aa05e3ddecfc1a1344b1b5233006c0e0f6c93429d881c0ff9182b810c",
+      "episode_id": "39",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082209"
+    },
+    "long_horizon/2": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_2_final_res.json",
+      "sha256": "5d2d35b3d2abd576b98ae3836670ec0e654f3ca610784836f2f6abe956150792",
+      "episode_id": "33",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082209"
+    },
+    "long_horizon/3": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_3_final_res.json",
+      "sha256": "a2c164b680e3c428e9a3a2d310536b3da890ed38e343b18e213e00fed339c23a",
+      "episode_id": "13",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082209"
+    },
+    "long_horizon/4": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_4_final_res.json",
+      "sha256": "7d168e7108ef0f259907f1f3742efaef7123d7139f04ab000adba68fe975d10f",
+      "episode_id": "25",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082209"
+    },
+    "long_horizon/5": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_5_final_res.json",
+      "sha256": "49afbabf79972bcfa80d97b2bb53870fc88c7917ac5894c46d226718f73472df",
+      "episode_id": "30",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082209"
+    },
+    "long_horizon/6": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_6_final_res.json",
+      "sha256": "edf0b66e7f9f423238d81fe96f1e4a1f185df43278dae909a672410e38d712ca",
+      "episode_id": "38",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082209"
+    },
+    "long_horizon/7": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_7_final_res.json",
+      "sha256": "f1fe64e3b0909d0ee9d3dd06b553fa56d0f0901a266b78d844bac86005f086de",
+      "episode_id": "43",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082209"
+    },
+    "long_horizon/8": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_8_final_res.json",
+      "sha256": "fa0f68ef7133002351b9b4d506ae16c917dfae1162f340937087e2ce421f59c0",
+      "episode_id": "0",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082209"
+    },
+    "long_horizon/9": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_9_final_res.json",
+      "sha256": "d0395fd66ebff62119d8aedeb4a7c583a16f098a60ec6a65c752e92f22499097",
+      "episode_id": "17",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609082209"
+    },
+    "long_horizon/19": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_19_final_res.json",
+      "sha256": "a315a7e451e66860a547185a04a331dfca09c15889544ce223d64d364ed209e8",
+      "episode_id": "21",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/20": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_20_final_res.json",
+      "sha256": "2e8999921fa60ee4301353ae4578fcc54f7b1d8936223ed9ee1d0f6362a94259",
+      "episode_id": "3",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/21": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_21_final_res.json",
+      "sha256": "1856aabd2625efaca3f35d1042a94fc41db3704b7d1c1fb35f0ed46a2202490a",
+      "episode_id": "47",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/22": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_22_final_res.json",
+      "sha256": "44cec75ce555bebee6fa55ac8e4a64bbf1f40ca91ca1397ce58606317afdb9bc",
+      "episode_id": "5",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/23": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_23_final_res.json",
+      "sha256": "a9a03caf8fd00641f54c881b787a3eece2e2afd02ac5a203a1796a27ac348775",
+      "episode_id": "40",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/24": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_24_final_res.json",
+      "sha256": "95ece5a18e2e2ff179f117b4beec20c4f7410d9f804b0367b79171dfa9b3bb6f",
+      "episode_id": "27",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/25": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_25_final_res.json",
+      "sha256": "6382d10d89cc7a427e8662f7ef29ca85e55590f83514220e52fa3fd5b443b4d0",
+      "episode_id": "22",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/26": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_26_final_res.json",
+      "sha256": "402d0c776e302d786bfcad237b6688d626e7c122333c4ed03d49d06930ab2626",
+      "episode_id": "11",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/27": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_27_final_res.json",
+      "sha256": "6268711b1989ed58b4b09d5f2f7496cbab8da8e617b0a832485183c0e8772067",
+      "episode_id": "29",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/28": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_28_final_res.json",
+      "sha256": "17c959a1b078cc771701743f247bc87363edec2d17931f4a83d84f15a82d14e6",
+      "episode_id": "9",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/29": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_29_final_res.json",
+      "sha256": "c821b799984ace9f8784c26c9a3fab0cc9b5a0e555b18b67a44004f0ec1ae250",
+      "episode_id": "35",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/30": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_30_final_res.json",
+      "sha256": "ca7ab597f634227c967a9076716c9e888c0d1b1f311a4e99840ab73ff539909a",
+      "episode_id": "23",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/31": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_31_final_res.json",
+      "sha256": "e4514d6968456c621e5e30de99f0f6a4eef75b7df81446fcbec9c65588d287c2",
+      "episode_id": "45",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/32": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_32_final_res.json",
+      "sha256": "afcf641ccedab1473b61ec36250b5f231ee5e7f0cb0dec490c770d5d4ef03445",
+      "episode_id": "36",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/33": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_33_final_res.json",
+      "sha256": "d6a3eb714410c3db9212ed28c3f75db672ee75c9af810a3dc8b49c8b471f5831",
+      "episode_id": "20",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/34": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_34_final_res.json",
+      "sha256": "b24ff9588397af565a55bbad35f477070dae8b620b29e7ac00d478a514fbc270",
+      "episode_id": "7",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/35": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_35_final_res.json",
+      "sha256": "3b0b7bef401859989597c537de1482c6fdd8e53019cf58eefa6130a90c26c488",
+      "episode_id": "44",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/36": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_36_final_res.json",
+      "sha256": "2b66c539a27048337a368426e1ff103ffb4647e23efc16f06e8798387ddfac7f",
+      "episode_id": "19",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/37": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_37_final_res.json",
+      "sha256": "285f4eca92efc7329b6f845590293046e4fb0138c4bce2b2b3c1e6f44bf426bc",
+      "episode_id": "14",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/38": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_38_final_res.json",
+      "sha256": "6dc52de6910239997354596fed888d85da69388f4ba70291ba9730b09d927120",
+      "episode_id": "1",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/39": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_39_final_res.json",
+      "sha256": "c85fb1310308312e469612aed6602630ccda1737c336504480ae54ec11f7e34f",
+      "episode_id": "41",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/40": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_40_final_res.json",
+      "sha256": "ef431aace38a719818e94d9e06c6ab9250b576e9734b6412fed887e47cf5b413",
+      "episode_id": "18",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/41": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_41_final_res.json",
+      "sha256": "bf0b2d5919b40a5cecb48c9ada6b3dd05055d16bb9efdf03f9af2e83daacf977",
+      "episode_id": "28",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/42": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_42_final_res.json",
+      "sha256": "6070805a3e102bf44f87cca9b2c6d2ac0307104b55d384c4837fde6b5b3e424f",
+      "episode_id": "42",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/43": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_43_final_res.json",
+      "sha256": "dbbfbcd3411bcfa01446efb9e94bc1071cbfd945178ea61d7f6ebb09360e0959",
+      "episode_id": "4",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/44": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_44_final_res.json",
+      "sha256": "971e36469f46a0a3106e22c55ac51e4d2c9b2721aefcba91ea446b3fe923fec4",
+      "episode_id": "24",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/45": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_45_final_res.json",
+      "sha256": "f5341c8ee0f2192fff0a4519d162e2f459b82cf9722e8826747252b6519c96e5",
+      "episode_id": "26",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/46": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_46_final_res.json",
+      "sha256": "d48928e76feb34f206743f816d66689dbfc628e8b3920b9d79cfd02b8aab46ad",
+      "episode_id": "49",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/47": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_47_final_res.json",
+      "sha256": "1cc97497e1bb5f0baeb8e9a7f39cf13e497b238c123760b8c02ebb2535dd3ba1",
+      "episode_id": "48",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/48": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_48_final_res.json",
+      "sha256": "ba4d92c83d3b0417a4b8863ea4ea251061c4456984df9151ab3c3b3689ee3177",
+      "episode_id": "16",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/49": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_49_final_res.json",
+      "sha256": "5a88ef480d6e56f0185be546db35061d3e1c99960932dc473b750e4a7ce41a4d",
+      "episode_id": "34",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    },
+    "long_horizon/50": {
+      "path": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/results/episode_50_final_res.json",
+      "sha256": "b1e5dbfef263647abd044844efcc88948e1df583637388bd18de18ab50b7d91e",
+      "episode_id": "32",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_sessions/run_202609090917"
+    }
+  },
+  "identities": {
+    "complex_instruction": {
+      "25": "2",
+      "26": "15",
+      "27": "10",
+      "28": "18",
+      "29": "40",
+      "30": "8",
+      "31": "28",
+      "32": "16",
+      "33": "46",
+      "34": "37",
+      "35": "24",
+      "36": "21",
+      "37": "25",
+      "38": "4",
+      "39": "49",
+      "40": "5",
+      "41": "11",
+      "42": "26",
+      "43": "47",
+      "44": "48",
+      "45": "14",
+      "46": "7",
+      "47": "27",
+      "48": "22",
+      "49": "32",
+      "50": "45",
+      "10": "44",
+      "11": "17",
+      "12": "33",
+      "13": "42",
+      "14": "29",
+      "1": "39",
+      "2": "0",
+      "3": "12",
+      "4": "20",
+      "5": "6",
+      "6": "13",
+      "7": "30",
+      "8": "19",
+      "9": "35",
+      "15": "36",
+      "16": "38",
+      "17": "34",
+      "18": "9",
+      "19": "43",
+      "20": "41",
+      "21": "31",
+      "22": "23",
+      "23": "3",
+      "24": "1"
+    },
+    "spatial_relationship": {
+      "1": "39",
+      "2": "31",
+      "3": "42",
+      "4": "37",
+      "5": "26",
+      "6": "3",
+      "7": "48",
+      "8": "30",
+      "9": "35",
+      "10": "36",
+      "11": "38",
+      "12": "41",
+      "13": "23",
+      "14": "21",
+      "15": "40",
+      "16": "32",
+      "17": "27",
+      "18": "29",
+      "19": "44",
+      "20": "33",
+      "21": "16",
+      "22": "7",
+      "23": "11",
+      "24": "43",
+      "25": "19",
+      "26": "0",
+      "27": "17",
+      "28": "15",
+      "29": "28",
+      "30": "22",
+      "31": "1",
+      "32": "46",
+      "33": "6",
+      "34": "10",
+      "35": "24",
+      "36": "14",
+      "37": "13",
+      "38": "2",
+      "39": "18",
+      "40": "45",
+      "41": "8",
+      "42": "12",
+      "43": "20",
+      "44": "5",
+      "45": "4",
+      "46": "49",
+      "47": "47",
+      "48": "34",
+      "49": "9",
+      "50": "25"
+    },
+    "visual_appearance": {
+      "1": "39",
+      "2": "30",
+      "3": "20",
+      "4": "35",
+      "5": "43",
+      "6": "36",
+      "7": "0",
+      "8": "21",
+      "9": "13",
+      "10": "34",
+      "11": "7",
+      "12": "22",
+      "13": "9",
+      "14": "38",
+      "15": "23",
+      "16": "40",
+      "17": "44",
+      "18": "41",
+      "19": "19",
+      "20": "6",
+      "21": "26",
+      "22": "17",
+      "23": "1",
+      "24": "8",
+      "25": "4",
+      "26": "37",
+      "27": "14",
+      "28": "47",
+      "29": "5",
+      "30": "27",
+      "31": "45",
+      "32": "15",
+      "33": "16",
+      "34": "10",
+      "35": "25",
+      "36": "29",
+      "37": "2",
+      "38": "32",
+      "39": "18",
+      "40": "31",
+      "41": "12",
+      "42": "11",
+      "43": "28",
+      "44": "24",
+      "45": "3",
+      "46": "33",
+      "47": "48",
+      "48": "46",
+      "49": "42",
+      "50": "49"
+    },
+    "long_horizon": {
+      "1": "39",
+      "2": "33",
+      "3": "13",
+      "4": "25",
+      "5": "30",
+      "6": "38",
+      "7": "43",
+      "8": "0",
+      "9": "17",
+      "10": "15",
+      "11": "10",
+      "12": "2",
+      "13": "8",
+      "14": "31",
+      "15": "12",
+      "16": "46",
+      "17": "37",
+      "18": "6",
+      "19": "21",
+      "20": "3",
+      "21": "47",
+      "22": "5",
+      "23": "40",
+      "24": "27",
+      "25": "22",
+      "26": "11",
+      "27": "29",
+      "28": "9",
+      "29": "35",
+      "30": "23",
+      "31": "45",
+      "32": "36",
+      "33": "20",
+      "34": "7",
+      "35": "44",
+      "36": "19",
+      "37": "14",
+      "38": "1",
+      "39": "41",
+      "40": "18",
+      "41": "28",
+      "42": "42",
+      "43": "4",
+      "44": "24",
+      "45": "26",
+      "46": "49",
+      "47": "48",
+      "48": "16",
+      "49": "34",
+      "50": "32"
+    },
+    "base": {
+      "1": "39",
+      "2": "3",
+      "3": "47",
+      "4": "5",
+      "5": "25",
+      "6": "30",
+      "7": "38",
+      "8": "28",
+      "9": "21",
+      "10": "35",
+      "11": "0",
+      "12": "1",
+      "13": "40",
+      "14": "36",
+      "15": "44",
+      "16": "33",
+      "17": "43",
+      "18": "13",
+      "19": "19",
+      "20": "31",
+      "21": "12",
+      "22": "20",
+      "23": "42",
+      "24": "14",
+      "25": "32",
+      "26": "45",
+      "27": "17",
+      "28": "15",
+      "29": "10",
+      "30": "22",
+      "31": "41",
+      "32": "48",
+      "33": "2",
+      "34": "49",
+      "35": "18",
+      "36": "8",
+      "37": "23",
+      "38": "7",
+      "39": "46",
+      "40": "4",
+      "41": "37",
+      "42": "6",
+      "43": "24",
+      "44": "9",
+      "45": "26",
+      "46": "16",
+      "47": "34",
+      "48": "27",
+      "49": "11",
+      "50": "29"
+    },
+    "common_sense": {
+      "1": "39",
+      "2": "36",
+      "3": "28",
+      "4": "33",
+      "5": "20",
+      "6": "46",
+      "7": "24",
+      "8": "47",
+      "9": "40",
+      "10": "29",
+      "11": "30",
+      "12": "1",
+      "13": "2",
+      "14": "18",
+      "15": "42",
+      "16": "4",
+      "17": "37",
+      "18": "16",
+      "19": "48",
+      "20": "35",
+      "21": "19",
+      "22": "15",
+      "23": "41",
+      "24": "13",
+      "25": "3",
+      "26": "32",
+      "27": "38",
+      "28": "25",
+      "29": "44",
+      "30": "0",
+      "31": "17",
+      "32": "49",
+      "33": "14",
+      "34": "21",
+      "35": "5",
+      "36": "34",
+      "37": "7",
+      "38": "22",
+      "39": "45",
+      "40": "9",
+      "41": "43",
+      "42": "10",
+      "43": "8",
+      "44": "31",
+      "45": "12",
+      "46": "23",
+      "47": "6",
+      "48": "26",
+      "49": "27",
+      "50": "11"
+    }
+  },
+  "partial_results": []
+}

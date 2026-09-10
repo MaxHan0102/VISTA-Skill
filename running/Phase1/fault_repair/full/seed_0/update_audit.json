@@ -1,0 +1,220 @@
+{
+  "audits": [
+    {
+      "candidate_skill_sha256": "c4d9d4fa8135b111be1a626af6ac166b28018a743caa9b3a9d6307b5742565e7",
+      "candidate_version": 1,
+      "classification": "harmful",
+      "field": "termination",
+      "overall_delta": 0.0623957105696236,
+      "pairs": [
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "95",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 101,
+          "subgroup": "311525c5",
+          "task_id": "95"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "95",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 102,
+          "subgroup": "311525c5",
+          "task_id": "95"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "95",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 103,
+          "subgroup": "311525c5",
+          "task_id": "95"
+        },
+        {
+          "candidate_score": -0.05,
+          "candidate_success": false,
+          "delta": 0.0,
+          "episode_id": "96",
+          "parent_score": -0.05,
+          "parent_success": false,
+          "seed": 101,
+          "subgroup": "f0917e29",
+          "task_id": "96"
+        },
+        {
+          "candidate_score": 0.975,
+          "candidate_success": true,
+          "delta": 1.025,
+          "episode_id": "96",
+          "parent_score": -0.05,
+          "parent_success": false,
+          "seed": 102,
+          "subgroup": "f0917e29",
+          "task_id": "96"
+        },
+        {
+          "candidate_score": -0.05,
+          "candidate_success": false,
+          "delta": 0.0,
+          "episode_id": "96",
+          "parent_score": -0.05,
+          "parent_success": false,
+          "seed": 103,
+          "subgroup": "f0917e29",
+          "task_id": "96"
+        },
+        {
+          "candidate_score": 0.11000000000000001,
+          "candidate_success": false,
+          "delta": 0.0016666666666666635,
+          "episode_id": "97",
+          "parent_score": 0.10833333333333335,
+          "parent_success": false,
+          "seed": 101,
+          "subgroup": "fd8dd56c",
+          "task_id": "97"
+        },
+        {
+          "candidate_score": 0.03333333333333334,
+          "candidate_success": false,
+          "delta": -0.07820512820512822,
+          "episode_id": "97",
+          "parent_score": 0.11153846153846156,
+          "parent_success": false,
+          "seed": 102,
+          "subgroup": "fd8dd56c",
+          "task_id": "97"
+        },
+        {
+          "candidate_score": 0.0690217391304348,
+          "candidate_success": false,
+          "delta": 0.0041407867494824,
+          "episode_id": "97",
+          "parent_score": 0.0648809523809524,
+          "parent_success": false,
+          "seed": 103,
+          "subgroup": "fd8dd56c",
+          "task_id": "97"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "98",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 101,
+          "subgroup": "6e3da8a1",
+          "task_id": "98"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "98",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 102,
+          "subgroup": "6e3da8a1",
+          "task_id": "98"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "98",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 103,
+          "subgroup": "6e3da8a1",
+          "task_id": "98"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "99",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 101,
+          "subgroup": "42f1b012",
+          "task_id": "99"
+        },
+        {
+          "candidate_score": 0.9833333333333333,
+          "candidate_success": true,
+          "delta": -0.01666666666666672,
+          "episode_id": "99",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 102,
+          "subgroup": "42f1b012",
+          "task_id": "99"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "99",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 103,
+          "subgroup": "42f1b012",
+          "task_id": "99"
+        }
+      ],
+      "parent_skill_sha256": "8de4adcf650e676fb659577187d2fc0859006b77bccc502526fe9994e1c3495c",
+      "parent_version": 0,
+      "patch_id": "0d6e2cb4e9b87b3b8fd0",
+      "promoted": false,
+      "snapshot_id": "v0-v1-f21d76f86094-c4d9d4fa8135",
+      "subgroup_deltas": {
+        "311525c5": 0.0,
+        "42f1b012": -0.005555555555555573,
+        "6e3da8a1": 0.0,
+        "f0917e29": 0.3416666666666666,
+        "fd8dd56c": -0.024132558262993053
+      },
+      "task_deltas": {
+        "95": 0.0,
+        "96": 0.3416666666666666,
+        "97": -0.024132558262993053,
+        "98": 0.0,
+        "99": -0.005555555555555573
+      }
+    }
+  ],
+  "epsilon": 0.0,
+  "manifest_sha256": "7f283eff39e85b4eb29a896da134bcaa736175823aaa04448cc3775e566b6c4c",
+  "pair_count": 15,
+  "reliability": {
+    "beneficial_update_precision": 0.0,
+    "beneficial_updates": 0.0,
+    "harmful_update_rate": 0.0,
+    "harmful_updates": 0.0,
+    "missed_beneficial_update_rate": 0.0,
+    "neutral_update_rate": 0.0,
+    "neutral_updates": 0.0,
+    "promoted_updates": 0.0,
+    "update_coverage": 0.0
+  },
+  "rollout_seeds": [
+    101,
+    102,
+    103
+  ],
+  "rotation_index": 0,
+  "schema_version": "1",
+  "split_sha256": "a0a76a7e727f8fcffb9f9dcbe8642083bed657dde37d36aaabc9b352176973d2",
+  "update_count": 1
+}

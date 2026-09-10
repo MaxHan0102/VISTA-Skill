@@ -1,0 +1,1 @@
+{"reward": 0.0, "num_invalid_actions": 10, "empty_plan": 0, "instruction": "I want to play a sport, bring something to play with to the right counter.", "task_success": false, "task_progress": 0.0, "subgoal_reward": 0.0, "num_steps": 20, "planner_steps": 8, "planner_output_error": 0, "num_invalid_action_ratio": 0.5, "episode_elapsed_seconds": [103.8698353767395]}

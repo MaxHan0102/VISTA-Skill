@@ -1,0 +1,46 @@
+{
+  "child_pid": 3044779,
+  "command": [
+    "env",
+    "PYTHONPATH=EmbodiedBench:.",
+    "CUDA_VISIBLE_DEVICES=0",
+    "OPENAI_API_KEY=EMPTY",
+    "/root/miniconda3/envs/max_embench/bin/python",
+    "-m",
+    "vista_skill.integrations.embodiedbench.cli",
+    "experiment",
+    "--method",
+    "rule_only",
+    "--config",
+    "configs/vista_fault_repair_fullsel_p10.json",
+    "--manifest",
+    "configs/eb_hab_train_validation_manifest.json",
+    "--diagnostic",
+    "--state-oracle-labels",
+    "--max-acquisition-episodes",
+    "10",
+    "--evolution-seeds",
+    "0",
+    "--executor-base-url",
+    "http://192.168.1.185:8000/v1",
+    "--output-dir",
+    "running/Phase3/phase3a/p3a0_oracle_final_20260824_run"
+  ],
+  "config_sha256": {
+    "configs/eb_hab_train_validation_manifest.json": "7462885905426236019c931d2bccf4b81a5286734e23aab80d9b478a2b988535",
+    "configs/vista_fault_repair_fullsel_p10.json": "19b061cce3a83a06f034e19a77acbad597491733e4aa394e440b9a3b23037819"
+  },
+  "console_log": "running/Phase3/phase3a/p3a0_oracle_final_20260824/console.log",
+  "cwd": "/root/max/VISTA-Skill",
+  "endpoints": [
+    "http://192.168.1.185:8000/v1"
+  ],
+  "exit_code": 0,
+  "finished_at": "2026-08-24T22:12:29+08:00",
+  "git_commit": "439aab7124abd75603ea86fd729de59276cf043f",
+  "hostname": "pingan-03",
+  "stage": "p3a0_oracle_final",
+  "started_at": "2026-08-24T22:08:24+08:00",
+  "status": "completed",
+  "wrapper_pid": 3044775
+}

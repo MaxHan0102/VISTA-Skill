@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "files": [
+    {
+      "source": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/base/images/episode_4/episode_4_step_0.png",
+      "destination": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/_interrupted/run_202609090948/base/images/episode_4/episode_4_step_0.png",
+      "sha256": "5d06ddd4b42d6ac402409917fe8cfc4a70512bcdd5c5d0f71a369ffdfcbc8d19"
+    }
+  ]
+}

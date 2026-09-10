@@ -1,0 +1,198 @@
+{
+  "disk_only_mechanism_reproduced": true,
+  "mechanism_analysis_sha256": "bb6885a1be9e3a16474f6a0772828b7e4272cf8a3996bd05accb574a8c83bda3",
+  "stages": {
+    "acquisition": {
+      "parent": {
+        "episodes": 12,
+        "successes": 6.0,
+        "success_rate": 0.5,
+        "mean_progress": 0.5,
+        "environment_steps": 171,
+        "invalid_actions": 74,
+        "guard_blocks": 0,
+        "per_task": [
+          {
+            "episode_id": "p57_acquisition_00",
+            "task_success": 1.0,
+            "task_progress": 1.0,
+            "environment_steps": 23,
+            "invalid_actions": 9,
+            "temporal_guard_blocks": 0
+          },
+          {
+            "episode_id": "p57_acquisition_01",
+            "task_success": 0.0,
+            "task_progress": 0.0,
+            "environment_steps": 21,
+            "invalid_actions": 10,
+            "temporal_guard_blocks": 0
+          },
+          {
+            "episode_id": "p57_acquisition_02",
+            "task_success": 1.0,
+            "task_progress": 1.0,
+            "environment_steps": 10,
+            "invalid_actions": 3,
+            "temporal_guard_blocks": 0
+          },
+          {
+            "episode_id": "p57_acquisition_03",
+            "task_success": 0.0,
+            "task_progress": 0.0,
+            "environment_steps": 18,
+            "invalid_actions": 10,
+            "temporal_guard_blocks": 0
+          },
+          {
+            "episode_id": "p57_acquisition_04",
+            "task_success": 0.0,
+            "task_progress": 0.0,
+            "environment_steps": 20,
+            "invalid_actions": 10,
+            "temporal_guard_blocks": 0
+          },
+          {
+            "episode_id": "p57_acquisition_05",
+            "task_success": 1.0,
+            "task_progress": 1.0,
+            "environment_steps": 6,
+            "invalid_actions": 1,
+            "temporal_guard_blocks": 0
+          },
+          {
+            "episode_id": "p57_acquisition_06",
+            "task_success": 0.0,
+            "task_progress": 0.0,
+            "environment_steps": 20,
+            "invalid_actions": 10,
+            "temporal_guard_blocks": 0
+          },
+          {
+            "episode_id": "p57_acquisition_07",
+            "task_success": 1.0,
+            "task_progress": 1.0,
+            "environment_steps": 4,
+            "invalid_actions": 0,
+            "temporal_guard_blocks": 0
+          },
+          {
+            "episode_id": "p57_acquisition_08",
+            "task_success": 0.0,
+            "task_progress": 0.0,
+            "environment_steps": 20,
+            "invalid_actions": 10,
+            "temporal_guard_blocks": 0
+          },
+          {
+            "episode_id": "p57_acquisition_09",
+            "task_success": 1.0,
+            "task_progress": 1.0,
+            "environment_steps": 4,
+            "invalid_actions": 0,
+            "temporal_guard_blocks": 0
+          },
+          {
+            "episode_id": "p57_acquisition_10",
+            "task_success": 1.0,
+            "task_progress": 1.0,
+            "environment_steps": 6,
+            "invalid_actions": 1,
+            "temporal_guard_blocks": 0
+          },
+          {
+            "episode_id": "p57_acquisition_11",
+            "task_success": 0.0,
+            "task_progress": 0.0,
+            "environment_steps": 19,
+            "invalid_actions": 10,
+            "temporal_guard_blocks": 0
+          }
+        ]
+      }
+    },
+    "mechanism": {
+      "candidate": {
+        "episodes": 2,
+        "successes": 0.0,
+        "success_rate": 0.0,
+        "mean_progress": 0.0,
+        "environment_steps": 13,
+        "invalid_actions": 4,
+        "guard_blocks": 6,
+        "per_task": [
+          {
+            "episode_id": "p57_acquisition_00",
+            "task_success": 0.0,
+            "task_progress": 0.0,
+            "environment_steps": 7,
+            "invalid_actions": 2,
+            "temporal_guard_blocks": 3
+          },
+          {
+            "episode_id": "p57_acquisition_01",
+            "task_success": 0.0,
+            "task_progress": 0.0,
+            "environment_steps": 6,
+            "invalid_actions": 2,
+            "temporal_guard_blocks": 3
+          }
+        ]
+      },
+      "parent": {
+        "episodes": 2,
+        "successes": 1.0,
+        "success_rate": 0.5,
+        "mean_progress": 0.5,
+        "environment_steps": 25,
+        "invalid_actions": 10,
+        "guard_blocks": 0,
+        "per_task": [
+          {
+            "episode_id": "p57_acquisition_00",
+            "task_success": 1.0,
+            "task_progress": 1.0,
+            "environment_steps": 4,
+            "invalid_actions": 0,
+            "temporal_guard_blocks": 0
+          },
+          {
+            "episode_id": "p57_acquisition_01",
+            "task_success": 0.0,
+            "task_progress": 0.0,
+            "environment_steps": 21,
+            "invalid_actions": 10,
+            "temporal_guard_blocks": 0
+          }
+        ]
+      }
+    }
+  },
+  "discovery": {
+    "chains": 25,
+    "independent_episodes": 8,
+    "evidence_ids": 37,
+    "candidate_generated": true
+  },
+  "skills": {
+    "parent_sha256": "052b4e954e04a6d3ae64888d15feb09285bd3dec72061a29210a94d57f8c792e",
+    "candidate_sha256": "b78a1c696deb6e94ededccbe5980d548b380e0ef137b8e4768e527630540d3df",
+    "frozen_sha256": "4fef6d3c4ccac5315b45f0ba7e83fad99ba768fec7a8485bd016801f6b1d5659",
+    "frozen_version": 0,
+    "frozen_temporal_rules": 0,
+    "frozen_procedure": []
+  },
+  "total_cost": {
+    "calls": 144,
+    "prompt_tokens": 493303,
+    "completion_tokens": 49725,
+    "tokens": 543028
+  },
+  "unopened_roles": [
+    "proxy",
+    "finalist",
+    "audit"
+  ],
+  "preregistration_sha256": "e17d2c3fb5d97f96c750203b3de5483e71300514fa4508140e1e69dd194bc01d",
+  "claim_eligible": false
+}

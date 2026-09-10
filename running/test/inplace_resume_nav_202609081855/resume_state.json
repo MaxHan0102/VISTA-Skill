@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "protocol": "stock_feedback_v2",
+  "dataset_hashes": {
+    "base": "6b575621a6b15e90e1040dd86d661a5e1ee70134f42fd7f3d61706347449c55a"
+  },
+  "records": {
+    "base/1": {
+      "path": "/root/max/VISTA-Skill/running/test/inplace_resume_nav_202609081855/base/results/episode_1_final_res.json",
+      "sha256": "7ad81992b87326aceb39d1d9e7accf1af6734dc07ff8426d30536c1232d141e3",
+      "episode_id": "nav_0",
+      "schema_compatibility": "stock"
+    },
+    "base/2": {
+      "path": "/root/max/VISTA-Skill/running/test/inplace_resume_nav_202609081855/base/results/episode_2_final_res.json",
+      "sha256": "c8987b8a7b535ba1ee720df58b5f8ac64cc127614d3f466ee9947856b35b62b6",
+      "episode_id": "nav_1",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/test/inplace_resume_nav_202609081855/_sessions/run_202609081856"
+    }
+  },
+  "identities": {
+    "base": {
+      "2": "nav_1",
+      "1": "nav_0"
+    }
+  },
+  "partial_results": []
+}

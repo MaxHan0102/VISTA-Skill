@@ -1,0 +1,110 @@
+{
+  "config_sha256": "1eba1c1bb656e56aa755c15ee1db723f96cf93aff8030eabd174dc79489e3eb0",
+  "diagnostic": true,
+  "env": "eb-hab",
+  "evaluation_data_policy": "vista_skill_embodiedbench_integrity_v1_2026_09_02",
+  "evaluation_data_policy_sha256": "69e8f15c928ed9a06a178c87aedca97b6730e425e47e42862d6b1e6fff3bbbe3",
+  "evidence_guard": "authority_aware",
+  "evolution_seeds": [
+    0
+  ],
+  "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+  "executor_model_type": "remote",
+  "executor_temperature": 0.0,
+  "experiment_id": "cf77b8f827af4010ad5de6c29486a0db",
+  "frozen": true,
+  "guard_min_visual_confidence": 0.75,
+  "guard_min_visual_coverage": 0.5,
+  "initial_skill": "interface",
+  "manifest_sha256": "b08ee365b22302899084e209f09002e96242d3ce3eb4bad410d0523b4a163bec",
+  "max_completion_tokens": 4096,
+  "meta_skill_sha256": null,
+  "meta_skills": "none",
+  "method": "full",
+  "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+  "n_shots": 10,
+  "protocol": "vista_skill_phase5_hab_2026_09_02",
+  "resolution": 500,
+  "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+  "run_count": 1,
+  "runs": [
+    {
+      "acquisition_episode_budget": 1,
+      "acquisition_episode_count": 1,
+      "config_sha256": "1eba1c1bb656e56aa755c15ee1db723f96cf93aff8030eabd174dc79489e3eb0",
+      "diagnostic": true,
+      "env": "eb-hab",
+      "evaluation_data_policy": "vista_skill_embodiedbench_integrity_v1_2026_09_02",
+      "evaluation_data_policy_sha256": "69e8f15c928ed9a06a178c87aedca97b6730e425e47e42862d6b1e6fff3bbbe3",
+      "evidence_guard": "authority_aware",
+      "evolution_decisions": [],
+      "evolution_seed": 0,
+      "evolution_seeds": [
+        0
+      ],
+      "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+      "executor_model_type": "remote",
+      "executor_temperature": 0.0,
+      "executor_usage": {
+        "calls": 1,
+        "completion_tokens": 319,
+        "prompt_tokens": 4120
+      },
+      "frozen": true,
+      "frozen_skill_sha256": "4fef6d3c4ccac5315b45f0ba7e83fad99ba768fec7a8485bd016801f6b1d5659",
+      "gate_rollout_seeds": [
+        0,
+        1,
+        2
+      ],
+      "guard_min_visual_confidence": 0.75,
+      "guard_min_visual_coverage": 0.5,
+      "initial_skill": "interface",
+      "manifest_sha256": "b08ee365b22302899084e209f09002e96242d3ce3eb4bad410d0523b4a163bec",
+      "max_completion_tokens": 4096,
+      "meta_skill_sha256": null,
+      "meta_skills": "none",
+      "method": "full",
+      "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+      "method_usage": {
+        "vista_goal_grounding": {
+          "calls": 1,
+          "completion_tokens": 26,
+          "prompt_tokens": 1938
+        },
+        "vista_visual_evidence": {
+          "calls": 4,
+          "completion_tokens": 1399,
+          "prompt_tokens": 3116
+        }
+      },
+      "n_shots": 10,
+      "protocol": "vista_skill_phase5_hab_2026_09_02",
+      "ready_clusters_by_episode": [
+        0
+      ],
+      "resolution": 500,
+      "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+      "run_id": "cf77b8f827af4010ad5de6c29486a0db_seed_0",
+      "skill_fault": null,
+      "split_rotation_index": 0,
+      "split_sha256": "e6558c0c6b1e2a99603aeee7350104c888a130cef043c188ca90cdd99372fbeb",
+      "state_oracle_labels": false,
+      "tensor_parallel": 1,
+      "update_reliability": {
+        "beneficial_update_precision": 0.0,
+        "beneficial_updates": 0.0,
+        "harmful_update_rate": 0.0,
+        "harmful_updates": 0.0,
+        "missed_beneficial_update_rate": 0.0,
+        "neutral_update_rate": 0.0,
+        "neutral_updates": 0.0,
+        "promoted_updates": 0.0,
+        "update_coverage": 0.0
+      }
+    }
+  ],
+  "skill_fault": null,
+  "state_oracle_labels": false,
+  "tensor_parallel": 1
+}

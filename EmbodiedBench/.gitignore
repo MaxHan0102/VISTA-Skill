@@ -4,7 +4,7 @@ outputs/
 .vscode/
 embodiedbench/envs/eb_manipulation/generate_dataset.sh
 embodiedbench/envs/eb_manipulation/tools/__pycache__/grasploc.cpython-39.pyc
-*running
+# Experiment record/image rules are maintained in the root ../.gitignore.
 *.DS_Store
 embodiedbench.egg-info/
 *outdated

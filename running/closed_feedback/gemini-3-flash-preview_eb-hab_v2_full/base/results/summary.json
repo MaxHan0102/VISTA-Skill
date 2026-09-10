@@ -1,0 +1,13 @@
+{
+  "reward": 2.8226419413919417,
+  "num_invalid_actions": 1.42,
+  "empty_plan": 0.34,
+  "task_success": 0.6,
+  "task_progress": 0.6175,
+  "subgoal_reward": 0.5708333333333333,
+  "num_steps": 5.24,
+  "planner_steps": 1.66,
+  "planner_output_error": 0.0,
+  "num_invalid_action_ratio": 0.19013675213675213,
+  "episode_elapsed_seconds": 15.210253586769104
+}

@@ -1,0 +1,47 @@
+{
+  "accepted_evidence_count": 159,
+  "analysis_type": "phase3b_strict_no_feedback_evidence_cache",
+  "base_urls": [
+    "http://192.168.1.185:8000/v1",
+    "http://192.168.1.173:8001/v1"
+  ],
+  "condition": "T0_pair_strict",
+  "dataset": "/root/max/VISTA-Skill/running/Phase3/phase3a/phase3a_dataset_v3_cachefix_20260825.json",
+  "dataset_id": "vista_phase3a_evidence_state_oracle_cachefix_v3",
+  "elapsed_seconds_this_invocation": 467.09303695103154,
+  "error_count": 0,
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "output": "/root/max/VISTA-Skill/running/Phase3/phase3b/T0_pair_strict.jsonl",
+  "output_sha256": "f5ebce67157f4590df25b1d4f1d41c6af4dcf31251ef1e1d23fa8254b1aea84d",
+  "request_seed": 0,
+  "sample_count": 200,
+  "splits": {
+    "audit": 0,
+    "dev": 120,
+    "selection": 80
+  },
+  "strict_isolation": true,
+  "tier_counts": {
+    "action_prior": 8,
+    "direct_current": 136,
+    "temporal": 25,
+    "unknown": 268
+  },
+  "usage": {
+    "calls": 200,
+    "completion_tokens": 35158,
+    "prompt_tokens": 136502
+  },
+  "usage_by_endpoint": {
+    "http://192.168.1.173:8001/v1": {
+      "calls": 100,
+      "completion_tokens": 17431,
+      "prompt_tokens": 68103
+    },
+    "http://192.168.1.185:8000/v1": {
+      "calls": 100,
+      "completion_tokens": 17727,
+      "prompt_tokens": 68399
+    }
+  }
+}

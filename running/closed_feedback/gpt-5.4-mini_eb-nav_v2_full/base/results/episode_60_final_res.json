@@ -1,0 +1,1 @@
+{"reward": 0.07142857142857142, "instruction": "navigate to the Bowl in the room and be as close as possible to it", "task_success": 1.0, "num_steps": 14, "planner_steps": 3, "planner_output_error": 0, "episode_elapsed_seconds": 15.123827695846558}

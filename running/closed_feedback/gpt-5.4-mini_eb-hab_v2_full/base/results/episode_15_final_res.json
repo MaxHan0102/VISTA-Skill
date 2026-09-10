@@ -1,0 +1,1 @@
+{"reward": 2.5, "num_invalid_actions": 0, "empty_plan": 0, "instruction": "On the left counter, remove the lego.", "task_success": true, "task_progress": 1.0, "subgoal_reward": 0.0, "num_steps": 4, "planner_steps": 1, "planner_output_error": 0, "num_invalid_action_ratio": 0.0, "episode_elapsed_seconds": [6.582886457443237]}

@@ -1,5 +1,7 @@
 # VISTA-Skill Phase 4 实验日志
 
+> 2026-09-08 目录整理：本阶段实验实体已归档至 `running/Phase4/`，路径引用已改写且兼容软链接已删除，原版已备份。引用的 Phase1 源数据仍归 Phase1，详见[实验输出目录说明](experiment_output_layout.md)。
+
 本文件记录 2026-08-27 开始的人工目标 Skill（post-hoc oracle target）验证。它不修改
 Phase 1--3 的冻结结论，也不把人工读取测试轨迹得到的 Skill 冒充为自动演化结果。
 
@@ -25,12 +27,12 @@ Phase 1--3 的冻结结论，也不把人工读取测试轨迹得到的 Skill �
 
 | 环境/臂 | artifact | SHA256 | episodes | success | progress | invalid action ratio |
 |---|---|---|---:|---:|---:|---:|
-| EB-HAB No Skill | `running/pilot/eval/no_skill.jsonl` | `4a61c0cf…` | 20 | 0.550 | 0.633 | 0.386 |
-| EB-HAB Static S0 | `running/pilot/eval/static_shared_skill.jsonl` | `6ac9f987…` | 20 | 0.450 | 0.533 | 0.421 |
-| EB-NAV No Skill | `running/vista_skill/nav_official/base/no_skill/events.jsonl` | `4ac7cee2…` | 60 | 0.633 | 0.000 | 0.267 |
-| EB-NAV Static S0 | `running/vista_skill/nav_official/base/static_shared_skill/events.jsonl` | `96f77629…` | 60 | 0.600 | 0.000 | 0.226 |
+| EB-HAB No Skill | `running/Phase1/pilot/eval/no_skill.jsonl` | `4a61c0cf…` | 20 | 0.550 | 0.633 | 0.386 |
+| EB-HAB Static S0 | `running/Phase1/pilot/eval/static_shared_skill.jsonl` | `6ac9f987…` | 20 | 0.450 | 0.533 | 0.421 |
+| EB-NAV No Skill | `running/Phase1/vista_skill/nav_official/base/no_skill/events.jsonl` | `4ac7cee2…` | 60 | 0.633 | 0.000 | 0.267 |
+| EB-NAV Static S0 | `running/Phase1/vista_skill/nav_official/base/static_shared_skill/events.jsonl` | `96f77629…` | 60 | 0.600 | 0.000 | 0.226 |
 
-完整可复现统计写入 `running/target_skill_oracle_v1/source_analysis.json`。这里采用当前磁盘上的
+完整可复现统计写入 `running/Phase4/target_skill_oracle_v1/source_analysis.json`。这里采用当前磁盘上的
 E6 对照轨迹；它与更早 E5 的 EB-HAB 小样本方向不同，这正是本实验不把 S0 均值当作可靠优化
 信号、而改为读取 episode-level failure 的原因。
 
@@ -61,7 +63,7 @@ EB-NAV 的主要可修复模式：
 | EB-HAB | `target_habitat_rearrangement_oracle_v1` | 511 | `5e32f5ec…` | `59e53743…` |
 | EB-NAV | `target_feedback_navigation_oracle_v1` | 367 | `3f026dc2…` | `a4ab4e7c…` |
 
-Canonical artifacts 与完整明文位于 `running/target_skill_oracle_v1/artifacts/manifest.json`。代码入口是
+Canonical artifacts 与完整明文位于 `running/Phase4/target_skill_oracle_v1/artifacts/manifest.json`。代码入口是
 `vista_skill.skills::{target_habitat_skill_v1,target_navigation_skill_v1}`，构建脚本是
 `scripts/build_target_skill_artifacts.py`。
 
@@ -85,14 +87,14 @@ summary 和 runtime manifest。结果在实验完成后追加，禁止根据中�
 
 - 实验名：`P4-O1_target_skill_oracle_v1_common_sense_seed0`。
 - EB-HAB 三臂位于
-  `running/target_skill_oracle_v1/validation_common_sense_seed0/eb_hab/common_sense/`。
+  `running/Phase4/target_skill_oracle_v1/validation_common_sense_seed0/eb_hab/common_sense/`。
 - 首次切换 EB-NAV 时，harness 错误沿用了 `max_embench` Python，因缺少
   `ai2thor.platform` 在 0 个 episode 前退出（exit=1）。失败 console 与 runtime manifest 原样保留在
   `validation_common_sense_seed0/eb_nav/common_sense/no_skill/`，没有把它计入结果。
 - 修复 harness，使 `--nav-python` 默认为 `max_embench_nav` 后，从全新目录
   `validation_common_sense_seed0_nav_resume1/` 重跑 EB-NAV 三臂。有效三臂数据集 SHA256 均为
   `3e7d2cb4…`，seed、模型、顺序和配置匹配。
-- 统一分析：`running/target_skill_oracle_v1/validation_common_sense_seed0_analysis.json`
+- 统一分析：`running/Phase4/target_skill_oracle_v1/validation_common_sense_seed0_analysis.json`
   （file SHA256 `338f296e…`）；NAV resume manifest 的 file SHA256 为 `cb85714e…`。
 
 ### 冻结验证结果

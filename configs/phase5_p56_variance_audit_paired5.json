@@ -4,13 +4,13 @@
   "purpose": "Expand the pre-registered shadow-borderline E6 candidate from paired-3 to paired-5 without reconsidering promotion.",
   "config": "configs/vista_phase5_hab.json",
   "manifest": "configs/eb_hab_train_validation_manifest.json",
-  "source_proposal": "running/phase5_temporal_sequential_paired_e6_20260903_rerun1/seed_0/update_proposals/v0-v1-001436ce4072-4e90990d463b",
-  "source_seed0_rollouts": "running/phase5_temporal_sequential_paired_e6_20260903_rerun1/seed_0/gate_rollouts/proxy",
+  "source_proposal": "running/Phase5/phase5_temporal_sequential_paired_e6_20260903_rerun1/seed_0/update_proposals/v0-v1-001436ce4072-4e90990d463b",
+  "source_seed0_rollouts": "running/Phase5/phase5_temporal_sequential_paired_e6_20260903_rerun1/seed_0/gate_rollouts/proxy",
   "reused_audit_rollout_sources": {
-    "1": "running/phase5_p56_variance_audit_paired3_20260903/update_audit_rollouts",
-    "2": "running/phase5_p56_variance_audit_paired3_20260903/update_audit_rollouts"
+    "1": "running/Phase5/phase5_p56_variance_audit_paired3_20260903/update_audit_rollouts",
+    "2": "running/Phase5/phase5_p56_variance_audit_paired3_20260903/update_audit_rollouts"
   },
-  "output_dir": "running/phase5_p56_variance_audit_paired5_20260903",
+  "output_dir": "running/Phase5/phase5_p56_variance_audit_paired5_20260903",
   "episode_ids": ["60", "61", "62", "63", "64", "65", "66", "67", "68", "69"],
   "all_rollout_seeds": [0, 1, 2, 3, 4],
   "reused_rollout_seeds": [0],

@@ -1,0 +1,15 @@
+{
+  "episodes": 4,
+  "excludes_endpoint_probes": true,
+  "executor": {
+    "calls": 20,
+    "completion_tokens": 7370,
+    "prompt_tokens": 91367
+  },
+  "method": {
+    "calls": 11,
+    "completion_tokens": 3267,
+    "prompt_tokens": 8574
+  },
+  "remote_gpu_hours": null
+}

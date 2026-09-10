@@ -1,0 +1,417 @@
+{
+  "analysis": {
+    "arm_summary": {
+      "candidate": {
+        "coordinate_mean_progress": 0.7041666666666667,
+        "coordinate_mean_score": 0.6851341421736159,
+        "coordinate_success_rate": 0.7,
+        "pass_at_k": 0.8
+      },
+      "parent": {
+        "coordinate_mean_progress": 0.85,
+        "coordinate_mean_score": 0.8238998671893409,
+        "coordinate_success_rate": 0.8333333333333334,
+        "pass_at_k": 0.9
+      }
+    },
+    "between_task_mean_delta_variance": 0.059540468687016374,
+    "candidate_trajectory_divergent_tasks": 7,
+    "decision": "repeated_rollout_path",
+    "delta_divergent_tasks": 7,
+    "episode_count": 10,
+    "paired_coordinate_count": 30,
+    "paired_mean_delta": -0.138765725015725,
+    "paired_rows": [
+      {
+        "candidate_score": -0.045454545454545456,
+        "candidate_success": 0.0,
+        "delta": -1.0136363636363637,
+        "episode_id": "70",
+        "parent_score": 0.9681818181818181,
+        "parent_success": 1.0,
+        "seed": 0
+      },
+      {
+        "candidate_score": -0.047619047619047616,
+        "candidate_success": 0.0,
+        "delta": -0.005952380952380945,
+        "episode_id": "70",
+        "parent_score": -0.04166666666666667,
+        "parent_success": 0.0,
+        "seed": 1
+      },
+      {
+        "candidate_score": -0.045454545454545456,
+        "candidate_success": 0.0,
+        "delta": -0.17878787878787883,
+        "episode_id": "70",
+        "parent_score": 0.13333333333333336,
+        "parent_success": 0.0,
+        "seed": 2
+      },
+      {
+        "candidate_score": 1.0,
+        "candidate_success": 1.0,
+        "delta": 0.0,
+        "episode_id": "71",
+        "parent_score": 1.0,
+        "parent_success": 1.0,
+        "seed": 0
+      },
+      {
+        "candidate_score": 1.0,
+        "candidate_success": 1.0,
+        "delta": 0.0,
+        "episode_id": "71",
+        "parent_score": 1.0,
+        "parent_success": 1.0,
+        "seed": 1
+      },
+      {
+        "candidate_score": 1.0,
+        "candidate_success": 1.0,
+        "delta": 0.0,
+        "episode_id": "71",
+        "parent_score": 1.0,
+        "parent_success": 1.0,
+        "seed": 2
+      },
+      {
+        "candidate_score": 1.0,
+        "candidate_success": 1.0,
+        "delta": 0.0,
+        "episode_id": "72",
+        "parent_score": 1.0,
+        "parent_success": 1.0,
+        "seed": 0
+      },
+      {
+        "candidate_score": 0.0,
+        "candidate_success": 0.0,
+        "delta": -1.0,
+        "episode_id": "72",
+        "parent_score": 1.0,
+        "parent_success": 1.0,
+        "seed": 1
+      },
+      {
+        "candidate_score": 1.0,
+        "candidate_success": 1.0,
+        "delta": 0.0,
+        "episode_id": "72",
+        "parent_score": 1.0,
+        "parent_success": 1.0,
+        "seed": 2
+      },
+      {
+        "candidate_score": 1.0,
+        "candidate_success": 1.0,
+        "delta": 0.0,
+        "episode_id": "73",
+        "parent_score": 1.0,
+        "parent_success": 1.0,
+        "seed": 0
+      },
+      {
+        "candidate_score": 1.0,
+        "candidate_success": 1.0,
+        "delta": 0.03076923076923077,
+        "episode_id": "73",
+        "parent_score": 0.9692307692307692,
+        "parent_success": 1.0,
+        "seed": 1
+      },
+      {
+        "candidate_score": 0.9833333333333333,
+        "candidate_success": 1.0,
+        "delta": 0.010606060606060508,
+        "episode_id": "73",
+        "parent_score": 0.9727272727272728,
+        "parent_success": 1.0,
+        "seed": 2
+      },
+      {
+        "candidate_score": 1.0,
+        "candidate_success": 1.0,
+        "delta": 0.0,
+        "episode_id": "74",
+        "parent_score": 1.0,
+        "parent_success": 1.0,
+        "seed": 0
+      },
+      {
+        "candidate_score": 1.0,
+        "candidate_success": 1.0,
+        "delta": 0.0,
+        "episode_id": "74",
+        "parent_score": 1.0,
+        "parent_success": 1.0,
+        "seed": 1
+      },
+      {
+        "candidate_score": 1.0,
+        "candidate_success": 1.0,
+        "delta": 0.0,
+        "episode_id": "74",
+        "parent_score": 1.0,
+        "parent_success": 1.0,
+        "seed": 2
+      },
+      {
+        "candidate_score": 0.975,
+        "candidate_success": 1.0,
+        "delta": -0.025000000000000022,
+        "episode_id": "75",
+        "parent_score": 1.0,
+        "parent_success": 1.0,
+        "seed": 0
+      },
+      {
+        "candidate_score": 1.0,
+        "candidate_success": 1.0,
+        "delta": 0.0,
+        "episode_id": "75",
+        "parent_score": 1.0,
+        "parent_success": 1.0,
+        "seed": 1
+      },
+      {
+        "candidate_score": 1.0,
+        "candidate_success": 1.0,
+        "delta": 0.0,
+        "episode_id": "75",
+        "parent_score": 1.0,
+        "parent_success": 1.0,
+        "seed": 2
+      },
+      {
+        "candidate_score": 0.9590909090909091,
+        "candidate_success": 1.0,
+        "delta": -0.0051948051948051965,
+        "episode_id": "76",
+        "parent_score": 0.9642857142857143,
+        "parent_success": 1.0,
+        "seed": 0
+      },
+      {
+        "candidate_score": -0.05,
+        "candidate_success": 0.0,
+        "delta": -1.009090909090909,
+        "episode_id": "76",
+        "parent_score": 0.9590909090909091,
+        "parent_success": 1.0,
+        "seed": 1
+      },
+      {
+        "candidate_score": -0.05,
+        "candidate_success": 0.0,
+        "delta": -1.0142857142857142,
+        "episode_id": "76",
+        "parent_score": 0.9642857142857143,
+        "parent_success": 1.0,
+        "seed": 2
+      },
+      {
+        "candidate_score": -0.047619047619047616,
+        "candidate_success": 0.0,
+        "delta": 0.007936507936507943,
+        "episode_id": "77",
+        "parent_score": -0.05555555555555556,
+        "parent_success": 0.0,
+        "seed": 0
+      },
+      {
+        "candidate_score": -0.05263157894736842,
+        "candidate_success": 0.0,
+        "delta": 0.0,
+        "episode_id": "77",
+        "parent_score": -0.05263157894736842,
+        "parent_success": 0.0,
+        "seed": 1
+      },
+      {
+        "candidate_score": -0.00795454545454545,
+        "candidate_success": 0.0,
+        "delta": 0.039664502164502166,
+        "episode_id": "77",
+        "parent_score": -0.047619047619047616,
+        "parent_success": 0.0,
+        "seed": 2
+      },
+      {
+        "candidate_score": 1.0,
+        "candidate_success": 1.0,
+        "delta": 0.0,
+        "episode_id": "78",
+        "parent_score": 1.0,
+        "parent_success": 1.0,
+        "seed": 0
+      },
+      {
+        "candidate_score": 1.0,
+        "candidate_success": 1.0,
+        "delta": 0.0,
+        "episode_id": "78",
+        "parent_score": 1.0,
+        "parent_success": 1.0,
+        "seed": 1
+      },
+      {
+        "candidate_score": 1.0,
+        "candidate_success": 1.0,
+        "delta": 0.0,
+        "episode_id": "78",
+        "parent_score": 1.0,
+        "parent_success": 1.0,
+        "seed": 2
+      },
+      {
+        "candidate_score": 1.0,
+        "candidate_success": 1.0,
+        "delta": 0.01666666666666672,
+        "episode_id": "79",
+        "parent_score": 0.9833333333333333,
+        "parent_success": 1.0,
+        "seed": 0
+      },
+      {
+        "candidate_score": 1.0,
+        "candidate_success": 1.0,
+        "delta": 0.0,
+        "episode_id": "79",
+        "parent_score": 1.0,
+        "parent_success": 1.0,
+        "seed": 1
+      },
+      {
+        "candidate_score": 0.9833333333333333,
+        "candidate_success": 1.0,
+        "delta": -0.01666666666666672,
+        "episode_id": "79",
+        "parent_score": 1.0,
+        "parent_success": 1.0,
+        "seed": 2
+      }
+    ],
+    "parent_trajectory_divergent_tasks": 5,
+    "pass_at_k_is_promotion_eligible": false,
+    "per_task": {
+      "70": {
+        "candidate_pass_at_k": 0.0,
+        "candidate_unique_trajectory_count": 3,
+        "mean_delta": -0.3994588744588745,
+        "parent_pass_at_k": 1.0,
+        "parent_unique_trajectory_count": 3,
+        "unique_delta_count": 3,
+        "within_task_delta_variance": 0.2903785184872847
+      },
+      "71": {
+        "candidate_pass_at_k": 1.0,
+        "candidate_unique_trajectory_count": 1,
+        "mean_delta": 0.0,
+        "parent_pass_at_k": 1.0,
+        "parent_unique_trajectory_count": 1,
+        "unique_delta_count": 1,
+        "within_task_delta_variance": 0.0
+      },
+      "72": {
+        "candidate_pass_at_k": 1.0,
+        "candidate_unique_trajectory_count": 2,
+        "mean_delta": -0.3333333333333333,
+        "parent_pass_at_k": 1.0,
+        "parent_unique_trajectory_count": 1,
+        "unique_delta_count": 2,
+        "within_task_delta_variance": 0.33333333333333337
+      },
+      "73": {
+        "candidate_pass_at_k": 1.0,
+        "candidate_unique_trajectory_count": 3,
+        "mean_delta": 0.013791763791763759,
+        "parent_pass_at_k": 1.0,
+        "parent_unique_trajectory_count": 3,
+        "unique_delta_count": 3,
+        "within_task_delta_variance": 0.0002442979191230943
+      },
+      "74": {
+        "candidate_pass_at_k": 1.0,
+        "candidate_unique_trajectory_count": 1,
+        "mean_delta": 0.0,
+        "parent_pass_at_k": 1.0,
+        "parent_unique_trajectory_count": 1,
+        "unique_delta_count": 1,
+        "within_task_delta_variance": 0.0
+      },
+      "75": {
+        "candidate_pass_at_k": 1.0,
+        "candidate_unique_trajectory_count": 2,
+        "mean_delta": -0.00833333333333334,
+        "parent_pass_at_k": 1.0,
+        "parent_unique_trajectory_count": 1,
+        "unique_delta_count": 2,
+        "within_task_delta_variance": 0.00020833333333333373
+      },
+      "76": {
+        "candidate_pass_at_k": 1.0,
+        "candidate_unique_trajectory_count": 3,
+        "mean_delta": -0.6761904761904761,
+        "parent_pass_at_k": 1.0,
+        "parent_unique_trajectory_count": 3,
+        "unique_delta_count": 3,
+        "within_task_delta_variance": 0.337683139371451
+      },
+      "77": {
+        "candidate_pass_at_k": 0.0,
+        "candidate_unique_trajectory_count": 3,
+        "mean_delta": 0.01586700336700337,
+        "parent_pass_at_k": 0.0,
+        "parent_unique_trajectory_count": 3,
+        "unique_delta_count": 3,
+        "within_task_delta_variance": 0.0004404877513192809
+      },
+      "78": {
+        "candidate_pass_at_k": 1.0,
+        "candidate_unique_trajectory_count": 1,
+        "mean_delta": 0.0,
+        "parent_pass_at_k": 1.0,
+        "parent_unique_trajectory_count": 1,
+        "unique_delta_count": 1,
+        "within_task_delta_variance": 0.0
+      },
+      "79": {
+        "candidate_pass_at_k": 1.0,
+        "candidate_unique_trajectory_count": 2,
+        "mean_delta": 0.0,
+        "parent_pass_at_k": 1.0,
+        "parent_unique_trajectory_count": 2,
+        "unique_delta_count": 3,
+        "within_task_delta_variance": 0.0002777777777777795
+      }
+    },
+    "rollout_seed_count": 3,
+    "task_first_mean_delta": -0.138765725015725,
+    "thresholds": {
+      "minimum_delta_divergent_tasks": 2,
+      "within_task_variance_share": 0.2
+    },
+    "within_task_delta_variance": 0.09625658879736225,
+    "within_task_variance_share": 0.6178331629081869
+  },
+  "candidate_skill_sha256": "4e90990d463bf0b1555f5dd12c4fcaa48349f5fdd4e097aa6b4ec318c2885b19",
+  "claim_eligible": false,
+  "diagnostic": true,
+  "new_rollout_executor_usage": {
+    "by_phase": {
+      "update_audit": {
+        "calls": 222,
+        "completion_tokens": 82924,
+        "prompt_tokens": 1005245
+      }
+    },
+    "calls": 222,
+    "completion_tokens": 82924,
+    "prompt_tokens": 1005245
+  },
+  "parent_skill_sha256": "052b4e954e04a6d3ae64888d15feb09285bd3dec72061a29210a94d57f8c792e",
+  "protocol_id": "vista_skill_phase5_p56_shadow_confirmation_2026_09_03",
+  "record_count": 60
+}

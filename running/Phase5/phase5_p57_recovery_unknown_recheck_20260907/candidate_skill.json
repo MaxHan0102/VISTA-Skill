@@ -1,0 +1,47 @@
+{
+  "artifact_sha256": "b7bfc251a6c01cfab97eee7bbfa406fc72b2fa97e8effd53120252d92a0738fa",
+  "protocol": {
+    "claim_eligible": false,
+    "diagnostic": true,
+    "preregistration_sha256": "e17d2c3fb5d97f96c750203b3de5483e71300514fa4508140e1e69dd194bc01d",
+    "promoted": false
+  },
+  "schema_version": "2",
+  "skill": {
+    "activation": [],
+    "constraint": [],
+    "effect": [],
+    "frozen": false,
+    "metadata": {
+      "initialization": "interface-only",
+      "prior_task_rules": 0,
+      "prior_transition_rules": 0
+    },
+    "parent_version": 0,
+    "prediction_rules": [],
+    "procedure": [
+      "After a pick fails because the selected object is not near, pause picks of that object. Navigate to obtain a useful new view and require fresh evidence that the same object is near before retrying. Successful navigation alone is insufficient; if the object remains unconfirmed, search another location."
+    ],
+    "skill_id": "shared_embodied_execution",
+    "temporal_rules": [
+      {
+        "argument_index": 0,
+        "blocked_action_type": "pick",
+        "field": "procedure",
+        "recovery_action_types": [
+          "nav"
+        ],
+        "recovery_release": "target_evidence",
+        "rule_id": "discovered_pick_target_evidence_v1",
+        "trigger_action_type": "pick",
+        "trigger_predicate": "near({arg0})",
+        "trigger_success": false,
+        "trigger_value": "false"
+      }
+    ],
+    "termination": [],
+    "termination_policy": "all_goals_evidence",
+    "version": 1
+  },
+  "skill_sha256": "b78a1c696deb6e94ededccbe5980d548b380e0ef137b8e4768e527630540d3df"
+}

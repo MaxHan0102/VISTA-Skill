@@ -1,0 +1,1 @@
+{"reward": 0.0, "instruction": "I need to set a time-based alert to wake me up. Please navigate to that object and stay near it.", "task_success": 0.0, "num_steps": 20, "planner_steps": 7, "planner_output_error": 0, "episode_elapsed_seconds": 34.34946393966675}

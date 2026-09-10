@@ -1,0 +1,2102 @@
+{
+  "base/10": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_10_final_res.json",
+    "sha256": "baed24cdee32205d933d1d8665f266802eef0f7680760c72569b64c38d977bdd",
+    "episode_id": "nav_9",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/11": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_11_final_res.json",
+    "sha256": "ff3ee8e506d37c0dc2bc73262020e249c5358b042f5ca4d0bf64e098427c8e84",
+    "episode_id": "nav_10",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/12": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_12_final_res.json",
+    "sha256": "483c72a87e38b7447a4c6807597e2e423e4cd7b389d8a5ed31f034dbbc449a49",
+    "episode_id": "nav_11",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/13": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_13_final_res.json",
+    "sha256": "539f096c581a40172711d1f0ba89a698823f0b25d6d18cd97142999793043748",
+    "episode_id": "nav_12",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/14": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_14_final_res.json",
+    "sha256": "79255e64efddadeb86c0478575933aec54649fc1e8cdb2bf06db1efd17431462",
+    "episode_id": "nav_13",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/15": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_15_final_res.json",
+    "sha256": "e99a1e71015fb6a6d05d27278c931c73b1a6f2ba04d9d5f8fd56ce436f9cc598",
+    "episode_id": "nav_14",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/16": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_16_final_res.json",
+    "sha256": "7b93ed3921fc02f0549e7cc0098c16be0df0bd905f24e79dc8960e849b7cb4e3",
+    "episode_id": "nav_15",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/17": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_17_final_res.json",
+    "sha256": "4b2b3276a0687cbe0765a6aaeff8edb44c4fab80eb63b25811966a4fd7d86b91",
+    "episode_id": "nav_16",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/18": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_18_final_res.json",
+    "sha256": "180ad809d4818bfe1eb78d23d2565aff1f1e2a1ddc35cb88f7618a4152e048fc",
+    "episode_id": "nav_17",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/19": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_19_final_res.json",
+    "sha256": "1c168bfa2e3f2487bab6a5e0d49cb3fcf6904786ff9451462c68b23a5742d912",
+    "episode_id": "nav_18",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/1": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_1_final_res.json",
+    "sha256": "954b60d067ce6c604ac2ae7e155aee12f12f190f30e2b86812f8c0702add38a6",
+    "episode_id": "nav_0",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/20": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_20_final_res.json",
+    "sha256": "0900fbc5f790fd5d032b60d1a709718b0640361cf6c1a17c3e0a96d80b4b8f2f",
+    "episode_id": "nav_19",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/21": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_21_final_res.json",
+    "sha256": "412e20d29656d22cc0c5822112d7bba99259753b7b90a06e39ac9a86d89ec18c",
+    "episode_id": "nav_20",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/22": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_22_final_res.json",
+    "sha256": "bdf420be0356eed5c04a5dbf9c745efb9bdaec4298c0221eb12452cab389330a",
+    "episode_id": "nav_21",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/23": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_23_final_res.json",
+    "sha256": "682fd8aea5ff61ca0f82f40326c6767a090b4dec205c6114b94b97d5dbbe5c36",
+    "episode_id": "nav_22",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/24": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_24_final_res.json",
+    "sha256": "d4b1562b8e2383a9d8e5561222564c6648040cc4975e8c97b2f30aadbbb6120f",
+    "episode_id": "nav_23",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/25": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_25_final_res.json",
+    "sha256": "4cf5292007c65b0ff707acbdfe2992d74c7ae4e5f3bf6f7478e214cebf8d2be2",
+    "episode_id": "nav_24",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/26": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_26_final_res.json",
+    "sha256": "fe81b65de98be26353ecbce7e34a14aeb8c75ff8bde5b41c061123ddcfed2251",
+    "episode_id": "nav_25",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/27": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_27_final_res.json",
+    "sha256": "c458cc29be0ea81c9bd13cfd054e6771c8dbc1246cbd20fe6a2858174530baf3",
+    "episode_id": "nav_26",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/28": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_28_final_res.json",
+    "sha256": "9497654154d3f155e14dbdfc16e3421c019e29e96c1b27da6a144a30211233b8",
+    "episode_id": "nav_27",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/29": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_29_final_res.json",
+    "sha256": "a26abe48ec11c047abc938ecfd49533db1e49c20006e1614eb59f89cee574d7c",
+    "episode_id": "nav_28",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/2": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_2_final_res.json",
+    "sha256": "c16ae1a7447892cee70b6cb837782ca36ff6f48b82e3d02706f9cb6abc2674c3",
+    "episode_id": "nav_1",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/30": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_30_final_res.json",
+    "sha256": "2c1eb881200d089cfa13c3628dfdfa65d7ed737175c77d38a2e27a9099ecd2fd",
+    "episode_id": "nav_29",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/31": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_31_final_res.json",
+    "sha256": "d1faaac4dcb70604b84a2b0fc20e7d774e3a10b9298ae5107ce12278608cb9eb",
+    "episode_id": "nav_30",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/32": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_32_final_res.json",
+    "sha256": "5b6697111e7e4ed091569a12f87990508cbb30f39952bad9aeb5eb69663692fb",
+    "episode_id": "nav_31",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/33": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_33_final_res.json",
+    "sha256": "d4350ad35fc5d68dec9309f02f76c0d880e82f488c915d73f82d6f6b39ba644f",
+    "episode_id": "nav_32",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/34": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_34_final_res.json",
+    "sha256": "e11a8434e7a417dfb6b8f44c26139e85837a87b2f877b1bacc7b1788dfe2c2ef",
+    "episode_id": "nav_33",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/35": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_35_final_res.json",
+    "sha256": "ce3554de3ff8d5b6f87a0e4d62978495604254d01ed187b377ee981b7191c433",
+    "episode_id": "nav_34",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/36": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_36_final_res.json",
+    "sha256": "aec6e8b12ec8b89b28ffb82806c6009d25a0f0593375f739c4ae0a49e2eb4048",
+    "episode_id": "nav_35",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/37": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_37_final_res.json",
+    "sha256": "4657f14aa21070b3d940f03d3305d64790a4c487162738036fdfa8b88d90b133",
+    "episode_id": "nav_36",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/38": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_38_final_res.json",
+    "sha256": "fb9a9fd2a54bdd8d1de35cf3e57da7769a273dcf317fe2a37de34bbea7347b2e",
+    "episode_id": "nav_37",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/39": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_39_final_res.json",
+    "sha256": "282c19ee79f812b02419de5745df483cbb44e266f3ab0ff73eb781a6a89b2318",
+    "episode_id": "nav_38",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/3": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_3_final_res.json",
+    "sha256": "a5d9c4804297ec9e2b610da09d538f217293a14720cecc8dd4d05e4ad3fa8b76",
+    "episode_id": "nav_2",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/40": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_40_final_res.json",
+    "sha256": "e0ecdf00941a180348bc6637876a5f24cb95343cbd0bce149633cbc26183c2d6",
+    "episode_id": "nav_39",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/41": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_41_final_res.json",
+    "sha256": "6cacfb3ddb8abd5574a1aa5901993bce44e795e8c6537810e447d028603a65e7",
+    "episode_id": "nav_40",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/42": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_42_final_res.json",
+    "sha256": "ba1c3c2b3f0841e07ffe00d1290c9a01df97da4f54ea69267f68c58dec0902db",
+    "episode_id": "nav_41",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/43": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_43_final_res.json",
+    "sha256": "14e1892cf446ee6f954561df41f2946cd86cbb77cad9c2c8119f43d295851b83",
+    "episode_id": "nav_42",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/44": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_44_final_res.json",
+    "sha256": "07dcd85ab41d0e04490ddd66ad03c4d0ae93b01d5bbf1eaad301ed6423c8302d",
+    "episode_id": "nav_43",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/45": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_45_final_res.json",
+    "sha256": "9e314fe41a5b1f13740cf6c1854dfcdd52cd49e83d04f9bee038446c89926569",
+    "episode_id": "nav_44",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/46": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_46_final_res.json",
+    "sha256": "39b6f5162bf7440918db3284f3390d107bd630af2fa214ce93c750326465a59e",
+    "episode_id": "nav_45",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/47": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_47_final_res.json",
+    "sha256": "640c32000c849a66144c7ffa0bdfec4f9ac2ec894320b687dc199f98eb75d24f",
+    "episode_id": "nav_46",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/48": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_48_final_res.json",
+    "sha256": "89c26e71e5c9f833fa6809f8b1e6d6920a0fa4508cd4b04e4c95e9557ab6f37f",
+    "episode_id": "nav_47",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/49": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_49_final_res.json",
+    "sha256": "75ccb93a3b3867c8467f83ee1be9aa5d0a52c8204c302333870d9b25bdf7300e",
+    "episode_id": "nav_48",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/4": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_4_final_res.json",
+    "sha256": "3ca01f0f0a5dc2ab5563d09733f1cb5ecc558ffb8e6bd2ef369eef097fa97015",
+    "episode_id": "nav_3",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/50": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_50_final_res.json",
+    "sha256": "8d20c8c08ae96cb75b1ea2f0d84a71ad82e272385ba4f19577e8459e1ff7c366",
+    "episode_id": "nav_49",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/51": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_51_final_res.json",
+    "sha256": "9b8f84434160ccb1b53fd7c0404c566e67e58f88245dd6e29b77d314c7635f40",
+    "episode_id": "nav_50",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/52": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_52_final_res.json",
+    "sha256": "c505ebcb9acab3270a09b859cdb52de08c30266f947119de1fd55edbf31d153d",
+    "episode_id": "nav_51",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/53": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_53_final_res.json",
+    "sha256": "a67f60a7b667ad1895af1fa066fca654b6136674d1f323e18889ed032056d6ec",
+    "episode_id": "nav_52",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/54": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_54_final_res.json",
+    "sha256": "cc0adf9264ba5a3a0c6b6e3380a9551aee5bc9fe72f4b9edb09321f820f740a9",
+    "episode_id": "nav_53",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/55": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_55_final_res.json",
+    "sha256": "1dfaaff04bfa8917a668398574e30c23bb653a02edb2fd48f34276c5847b591a",
+    "episode_id": "nav_54",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/56": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_56_final_res.json",
+    "sha256": "72de6c5779cd6f9510a54b9cfb93621c7ce782bc1c2971ab8d1a0c133eac38b2",
+    "episode_id": "nav_55",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/57": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_57_final_res.json",
+    "sha256": "5962de013c3f7b55723c23428cf108523649c3bb12259193994f0f9ced0f5924",
+    "episode_id": "nav_56",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/58": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_58_final_res.json",
+    "sha256": "8dcecaa5499daee99a0b44e7694eba81036d82626eeddcdce1ad6592f19d896c",
+    "episode_id": "nav_57",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/59": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_59_final_res.json",
+    "sha256": "a3622d1d0f7a1540a502bb0db58f76a08d9b6cf8836915ab2d1c8de057d554ec",
+    "episode_id": "nav_58",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/5": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_5_final_res.json",
+    "sha256": "606021288630e95a2eff0bfc1fd7d4c601fe376be9b697476bac5dea839e7238",
+    "episode_id": "nav_4",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/60": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_60_final_res.json",
+    "sha256": "524f118bd2a608e5b70b306273132989258e6c602cbc32335fe32fa0646bceb6",
+    "episode_id": "nav_59",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/6": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_6_final_res.json",
+    "sha256": "7306b52b2c3c2676c4af5d9b89a47471d304bb7ed52b789b020e58e2daa597dc",
+    "episode_id": "nav_5",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/7": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_7_final_res.json",
+    "sha256": "47e56ac7c36e3d0724e650c6226edb968ffb02cd929e0de13e25575c94160191",
+    "episode_id": "nav_6",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/8": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_8_final_res.json",
+    "sha256": "3359c1524c0c30e7566c9830182b4cc7f1081520b2762820d0869a24f039ccd0",
+    "episode_id": "nav_7",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "base/9": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/base/results/episode_9_final_res.json",
+    "sha256": "9328bd92a2403b2d4bd62748b7a9e7e35f5853d47f58115dfde320218e793bbd",
+    "episode_id": "nav_8",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091137"
+  },
+  "common_sense/10": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_10_final_res.json",
+    "sha256": "7d9bf1c98cd46fc8c273305f64225e83cb3578c0df6fe8732796e5ba84403f4a",
+    "episode_id": "nav_9",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/11": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_11_final_res.json",
+    "sha256": "66f3cab99236084c1e7817dbe873ee207e7a45251337541ab214646e2cab7773",
+    "episode_id": "nav_10",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/12": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_12_final_res.json",
+    "sha256": "7aab708ef0e35d923215aacc2b3058692c68045a0f76d678f5f20af59fa47e26",
+    "episode_id": "nav_11",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/13": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_13_final_res.json",
+    "sha256": "de054c5d13893c9d08ac8f2516d5bee8bc43827c1b3d4afc5f50e943c8fa3fc1",
+    "episode_id": "nav_12",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/14": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_14_final_res.json",
+    "sha256": "fb08cd970cff1d2c22c68d6d77516b5d4e06dec5c9f055897c14e294ca3822c8",
+    "episode_id": "nav_13",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/15": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_15_final_res.json",
+    "sha256": "f8649c780788110cf815553a2cf426a974bf1744d7ec4ef3d102734ef9724c77",
+    "episode_id": "nav_14",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/16": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_16_final_res.json",
+    "sha256": "98d63c971322dd802a4c352c8ed0fc8f4f94bbda40b9c99f360b77d52071979d",
+    "episode_id": "nav_15",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/17": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_17_final_res.json",
+    "sha256": "169fb6b4f27c440ec58e0d8bfecf72310baeafd990fc7f66fc5921c3ed92fd1b",
+    "episode_id": "nav_16",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/18": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_18_final_res.json",
+    "sha256": "88b931bd6ee9a7fbe0a02fd54afd71301945b94fc868f77e8652fc9c46360ee6",
+    "episode_id": "nav_17",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/19": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_19_final_res.json",
+    "sha256": "7e9fc8cf3c86e0ada8f6d84bf1fad9ff67f6c3a439fb46ed2ce5347d6b301cdb",
+    "episode_id": "nav_18",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/1": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_1_final_res.json",
+    "sha256": "a7152bdd61edf6935bbe39618f19baeb71e4ece4a8e463e43204d4e95accb856",
+    "episode_id": "nav_0",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/20": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_20_final_res.json",
+    "sha256": "27da4b79fde35177310b1519d2ce019a6874183d60eeb4149230a19d34b82858",
+    "episode_id": "nav_19",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/21": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_21_final_res.json",
+    "sha256": "e2b87608ff0cd843eab8dfc5b5962cb9e9a31a51c2e97f819c092202aed2462e",
+    "episode_id": "nav_20",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/22": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_22_final_res.json",
+    "sha256": "53171409876acaf738808808239d9fc95a09fb1ce90ff8998c27c9c4a590e418",
+    "episode_id": "nav_21",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/23": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_23_final_res.json",
+    "sha256": "e7ef0766da139872d5b7fff9d74deef537e76f38beb56d734d18c5fc8a74cf85",
+    "episode_id": "nav_22",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/24": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_24_final_res.json",
+    "sha256": "293f7f2b6fcd5332844fdbc0e528d71f94aa5ffda252220142686e8334f0db3e",
+    "episode_id": "nav_23",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/25": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_25_final_res.json",
+    "sha256": "7276ac4cf4eaf5a346977eb197d70014e522ff5689d97fea442c8a7b061d0495",
+    "episode_id": "nav_24",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/26": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_26_final_res.json",
+    "sha256": "caefb4cce9e0bb8e4faf0b641073a037a91e0a9c78945015d049f7d5c8af5f1e",
+    "episode_id": "nav_25",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/27": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_27_final_res.json",
+    "sha256": "05a1f38fd9049b79a4e8b2eef719b3769ec2de609782d7a9ce20c9a67fd1d072",
+    "episode_id": "nav_26",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/28": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_28_final_res.json",
+    "sha256": "7d9d07633eca98c096dcf2a6b555b7facb2b79faa558d65c1065d46e1cdb4c28",
+    "episode_id": "nav_27",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/29": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_29_final_res.json",
+    "sha256": "654ca973e041a354adfd4a9535eb000fd037c878888340ff37a7ceb0299c4350",
+    "episode_id": "nav_28",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/2": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_2_final_res.json",
+    "sha256": "4a3f31613f83d09a9c72c70066f066cc3ad71d3ffc760a5068764c4134d054bf",
+    "episode_id": "nav_1",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/30": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_30_final_res.json",
+    "sha256": "dc693f4569eff739de3a3e9700567bd1670ba8505295438f39e347a976a760c1",
+    "episode_id": "nav_29",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/31": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_31_final_res.json",
+    "sha256": "b1855cc71710c08d020c9d565dcab4ef846554241d4b1e742de77eaacfe88988",
+    "episode_id": "nav_30",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/32": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_32_final_res.json",
+    "sha256": "2643b057ff011b8e992683fc6d378010e23265b29a2ad43ca5be123d13f8272b",
+    "episode_id": "nav_31",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/33": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_33_final_res.json",
+    "sha256": "045cf86cb8cb9ddf355b95bf72d9acd390c9a12bdf0e66e7e64f3bfe8de0914e",
+    "episode_id": "nav_32",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/34": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_34_final_res.json",
+    "sha256": "0418d8a495cb7c55ddbbc63ae077a50a934af8b791875199ce603837f314fb13",
+    "episode_id": "nav_33",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/35": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_35_final_res.json",
+    "sha256": "93b5b2aaa3e08241691f37780c54a982d0bd7afdb497b6af4304aed8efbd9f35",
+    "episode_id": "nav_34",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/36": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_36_final_res.json",
+    "sha256": "54f0dd2b424b4eb5977de1471146686f75fd4f777162c1406e23d4c8322e8121",
+    "episode_id": "nav_35",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/37": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_37_final_res.json",
+    "sha256": "a4e9e898548f1b3e6e190be0ba749631ebbc6465f9477b8a9fa27ce41fc16a5b",
+    "episode_id": "nav_36",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/38": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_38_final_res.json",
+    "sha256": "5d0e0ccfd7f558cbc12a6d9e04517ea42890e99de3fc5b455fdc0b003241bf2a",
+    "episode_id": "nav_37",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/39": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_39_final_res.json",
+    "sha256": "3e91c7f7c78d681e2c4dc4bf1f80532090ccdce605887b428555cd81ce140e76",
+    "episode_id": "nav_38",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/3": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_3_final_res.json",
+    "sha256": "27cbb89944b8ec07dd93ff2121e20a693ff9213aaf5c52a6e6532b4e5ae3a43b",
+    "episode_id": "nav_2",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/40": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_40_final_res.json",
+    "sha256": "a8d3e7e7218b8de93527afcb81312b58b1fa909d7546dde484f9e97cf1e7fd08",
+    "episode_id": "nav_39",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/41": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_41_final_res.json",
+    "sha256": "b530d9982637227cd01ce1657c18ace3869a6189567c4daac24743835e89e77a",
+    "episode_id": "nav_40",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/42": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_42_final_res.json",
+    "sha256": "2f3df454267566bccf612f29ebd1a3624e0ed9b129429f63415ec1b023d36413",
+    "episode_id": "nav_41",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/43": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_43_final_res.json",
+    "sha256": "8948deb3736c87112a0b8db9f2ef8e75b625c6ab34fc70b78350ec17891734f3",
+    "episode_id": "nav_42",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/44": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_44_final_res.json",
+    "sha256": "eccf9c90722fb2f1a15e073998207ac3731ae8af03f248b470d71e0a9fe4acc1",
+    "episode_id": "nav_43",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/45": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_45_final_res.json",
+    "sha256": "e45afca371ef5a0be1dbfa880d75557f07da41597ea9f1112ebf2aaf0f51af81",
+    "episode_id": "nav_44",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/46": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_46_final_res.json",
+    "sha256": "edaf3aab7759eb7d5735073fd9a1cf5cd62986d218eb985bb8f548c528279c90",
+    "episode_id": "nav_45",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/47": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_47_final_res.json",
+    "sha256": "8a15c5eac74de3cd73b47412f66f9b86381fa837b16f39a4ca488bf290179b29",
+    "episode_id": "nav_46",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/48": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_48_final_res.json",
+    "sha256": "f86cf6ceebce0cc9d9ddb8ccb71928e93e685f4a2f1f7abaf12061b31a983aab",
+    "episode_id": "nav_47",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/49": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_49_final_res.json",
+    "sha256": "6df435521ed38d865bbc31d396416f895c96cea0f53a49881864efd69664bcd9",
+    "episode_id": "nav_48",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/4": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_4_final_res.json",
+    "sha256": "069de1225898d13c1005e1395e253af61f1777cb56b64fbc3ca964155f71e59c",
+    "episode_id": "nav_3",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/50": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_50_final_res.json",
+    "sha256": "44a2f7ab8821b28e249f407f2666e0fedc768c0bcedca7ddbc49c4fea8615b4a",
+    "episode_id": "nav_49",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/51": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_51_final_res.json",
+    "sha256": "3ea37aa77eb077c3d91c9cae23815c1bf5ef93bf21ac82746d722307d2efa9b8",
+    "episode_id": "nav_50",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/52": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_52_final_res.json",
+    "sha256": "8b79336be43c3ef9a275fb87b35ac223a12149195968433681a010cba15d696a",
+    "episode_id": "nav_51",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/53": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_53_final_res.json",
+    "sha256": "0aab10a81233cfc74a9419d6e05f4ed2e116e2761ff4a09ac28143760b755c3d",
+    "episode_id": "nav_52",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/54": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_54_final_res.json",
+    "sha256": "4dd0099c293d9fbecc806c16f397054c288a275c7452574bd1ff1a68e9e0c427",
+    "episode_id": "nav_53",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/55": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_55_final_res.json",
+    "sha256": "6640ab4b130ab055a9238ad1e0eebb20a5eac4be7e27da7127f00a3a315347ff",
+    "episode_id": "nav_54",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/56": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_56_final_res.json",
+    "sha256": "39f0d1a49c7cdbf69af0b07a7afbc380d71088c1669b853f33162ccbda42ac77",
+    "episode_id": "nav_55",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/57": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_57_final_res.json",
+    "sha256": "e7452007efb922cb5dc5fc533ed0678887ef0f42af0002cd36b86b4934822e91",
+    "episode_id": "nav_56",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/58": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_58_final_res.json",
+    "sha256": "6955a075681b0a3a68d5d93a932f199ee3d6e6ae487b97ae497bbc353f864c44",
+    "episode_id": "nav_57",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/59": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_59_final_res.json",
+    "sha256": "4ff8e77ea9bf60060822607ad5579662353ee2f2062f744e9642ccaec8071ea9",
+    "episode_id": "nav_58",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/5": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_5_final_res.json",
+    "sha256": "4aa4ef6128f940695b0760ff8684dbec79693a48b371163fcc52c3fd74553dc2",
+    "episode_id": "nav_4",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/60": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_60_final_res.json",
+    "sha256": "c5eb6b9f7126c77576d4426676b6d7ab364e03d48a8ae991ad296c31354b529e",
+    "episode_id": "nav_59",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/6": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_6_final_res.json",
+    "sha256": "31a3e54f17c1520f13d1148cc6fa1dc499787dd4589348b71fd0516d846b2d9f",
+    "episode_id": "nav_5",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/7": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_7_final_res.json",
+    "sha256": "8c677f424b873bf3bf1158d81c507cb8d96db6f5e5c4b713f8ada4f347b40993",
+    "episode_id": "nav_6",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/8": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_8_final_res.json",
+    "sha256": "363dc8c32e8063be6ef33b6314f2d0e20df1f444cf8a5c9265dc45b91263fed2",
+    "episode_id": "nav_7",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "common_sense/9": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/common_sense/results/episode_9_final_res.json",
+    "sha256": "388f3712c728192a694826828a84c55a913f8f6ce31e94d0ace444b8bf2b520c",
+    "episode_id": "nav_8",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091237"
+  },
+  "complex_instruction/10": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_10_final_res.json",
+    "sha256": "d591336457ba688c20fd7eba756185ecdf78860c90814a87b1190c5b1c013c77",
+    "episode_id": "nav_9",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/11": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_11_final_res.json",
+    "sha256": "7a64abbf8188c7905938a435de7136a9bc60853e303948d7d306921b2eb6b9dd",
+    "episode_id": "nav_10",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/12": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_12_final_res.json",
+    "sha256": "5d553484c82c6c76e42b26c5434dd59938eabb34d70acd7446b61fc22c6bea51",
+    "episode_id": "nav_11",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/13": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_13_final_res.json",
+    "sha256": "c107c7ad6bdef24577065f72963b5122a34d7a010176c39b63b6dbfc5d3a73f1",
+    "episode_id": "nav_12",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/14": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_14_final_res.json",
+    "sha256": "cbf6277a014c0ea5c3cabc1898ca90b6a1400b742720ecb1904d3a302207d20f",
+    "episode_id": "nav_13",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/15": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_15_final_res.json",
+    "sha256": "6af11792ea3612d1895db27950e1e61b2c324e49c364df058eaf26d997cf1f4b",
+    "episode_id": "nav_14",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/16": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_16_final_res.json",
+    "sha256": "cf6d68b2d9767d417cf154285c40ba37794eafa32e22464c9a7dbb9a3298456e",
+    "episode_id": "nav_15",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/17": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_17_final_res.json",
+    "sha256": "12d75795eb38baca744d95ef2193fcf42fa4fafb25f117ec51a4fc183fbe83bd",
+    "episode_id": "nav_16",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/18": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_18_final_res.json",
+    "sha256": "89bd9236f8a01152cf3e255762d194d3d995190b6ce342c11fe88046f178ecc5",
+    "episode_id": "nav_17",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/19": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_19_final_res.json",
+    "sha256": "eebe6173f9fd1860998303f0b6580d5f20f467cbd0e14754a4e6e91f7b8688f8",
+    "episode_id": "nav_18",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/1": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_1_final_res.json",
+    "sha256": "63105f0ce68d848114d5e2209e4fa0ad2be7331fccfd665723b7bab7d644e6cd",
+    "episode_id": "nav_0",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/20": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_20_final_res.json",
+    "sha256": "0db67bdca80d2fd6e81a1b4074e297a6c0af15ab329594e2821641356a6c50f5",
+    "episode_id": "nav_19",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/21": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_21_final_res.json",
+    "sha256": "c5fdacc373b53bb11647dece32f91d5c55b52f86e5e256ca02381ca24e67edac",
+    "episode_id": "nav_20",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/22": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_22_final_res.json",
+    "sha256": "c8ac1721a0c3b7590b966e3e318082c0171f353073661c19918205cb3d0930b7",
+    "episode_id": "nav_21",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/23": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_23_final_res.json",
+    "sha256": "cfcdd745d5d1430e1fdb23a7290e7e9a29dd8be15e9df15b15e6ff38c3ebf2f3",
+    "episode_id": "nav_22",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/24": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_24_final_res.json",
+    "sha256": "170f816b39a868bec42640d660e06248d10f9e87fa0e97be2de53a6ef11f0b6f",
+    "episode_id": "nav_23",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/25": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_25_final_res.json",
+    "sha256": "076df83d4e352ec8b26dc1862bb1bd0048d505809347436cdb53497629f400bc",
+    "episode_id": "nav_24",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/26": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_26_final_res.json",
+    "sha256": "04354e84186902800c411fd45d604daa636324fbe5b87ec308a6c179a23871a1",
+    "episode_id": "nav_25",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/27": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_27_final_res.json",
+    "sha256": "93a783871124f6fd472546cdfcf325a551cd56c1659514773056327084662ca3",
+    "episode_id": "nav_26",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/28": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_28_final_res.json",
+    "sha256": "5e1b818d52bfa183700d2b1f9edf2b4685b38eff0bc0c85a9dd15060d5eefc4a",
+    "episode_id": "nav_27",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/29": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_29_final_res.json",
+    "sha256": "2b508d72aecbcbd84f1b4797113d0c3f022c46bfff179f57f1792e2758982119",
+    "episode_id": "nav_28",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/2": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_2_final_res.json",
+    "sha256": "46a348af98d60439cd99d3a045192ada2d77101b1fe899f33c083d83da6e1c7e",
+    "episode_id": "nav_1",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/30": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_30_final_res.json",
+    "sha256": "182e3f9886bab7db0059fadf94991498fbd8ee678120758ad0cb6e02b18a1736",
+    "episode_id": "nav_29",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/31": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_31_final_res.json",
+    "sha256": "342c8dd2308cfe5122351e13c6244c5aaa9dae21cd4549191c5a4294f980ada7",
+    "episode_id": "nav_30",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/32": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_32_final_res.json",
+    "sha256": "2b050235ff871ac9dfaf66a8658108bf6e6085d4ac30c51de79720bb7ae48976",
+    "episode_id": "nav_31",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/33": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_33_final_res.json",
+    "sha256": "4511a82d412ed1ad01feecda8d42f235fba5355294dd3cb4ab6b3c2a17c4b9ec",
+    "episode_id": "nav_32",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/34": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_34_final_res.json",
+    "sha256": "84d46cd61f4c491703cc6a11872542c62091aa2a3c2894e131b2d937f4880d58",
+    "episode_id": "nav_33",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/35": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_35_final_res.json",
+    "sha256": "49d28aa59a226870dd72889e40a2f68c309fa89e123ec63463793b51cb89c6c2",
+    "episode_id": "nav_34",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/36": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_36_final_res.json",
+    "sha256": "69d6cba634466c9b2f4a5c98c0a2b2e9b5c0f7bcaf381049d83bdd3ae13f630b",
+    "episode_id": "nav_35",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/37": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_37_final_res.json",
+    "sha256": "48cd7c4f1c44f2d742a1700c8c19db5083fc84a71662b671b1b4b43136d66134",
+    "episode_id": "nav_36",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/38": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_38_final_res.json",
+    "sha256": "d4324810947df7b41a5e492f689bc980450905b8c6132cbfdf605d5a84747ecd",
+    "episode_id": "nav_37",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/39": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_39_final_res.json",
+    "sha256": "5cdda8af98a6f75bf6ae8b4884d927f842edb2d33ca97b456a21a70530e1203d",
+    "episode_id": "nav_38",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/3": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_3_final_res.json",
+    "sha256": "f164635ee2627b8fdf0bd0b7842aa850b075de52f5a0acc1d3dae0fa8358f47c",
+    "episode_id": "nav_2",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/40": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_40_final_res.json",
+    "sha256": "bf33a3e32549bbd02c075a191e5189704cb2d7b7b0db0f44e33d25c9b3a389c7",
+    "episode_id": "nav_39",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/41": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_41_final_res.json",
+    "sha256": "ea0a371783558e1e2b1e8ef24419437c7128de67a6bb77b5777c91b7c3a495ad",
+    "episode_id": "nav_40",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/42": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_42_final_res.json",
+    "sha256": "a6c8cda3e15f3ea2eff7339292ee04a9edebb165cb0485e1af27aa5f08ba8eb6",
+    "episode_id": "nav_41",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/43": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_43_final_res.json",
+    "sha256": "9dfb9cd97d3e404343a4c96710bd87a58a07f3b28d8bc67704906c00d7ff6d2e",
+    "episode_id": "nav_42",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/44": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_44_final_res.json",
+    "sha256": "2f80b7f1312e135c144329353bd153d792a87563ab4b1e8e296d37ae2f4f515b",
+    "episode_id": "nav_43",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/45": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_45_final_res.json",
+    "sha256": "20dd28a023af8d2a05b63ecfb6d4458a7310dc45bb548ee32ffb7ab938d9eaf9",
+    "episode_id": "nav_44",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/46": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_46_final_res.json",
+    "sha256": "5be5c197f69abdad66bd78efee083448365f77cc87b79d9d9144ef6582ba5b33",
+    "episode_id": "nav_45",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/47": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_47_final_res.json",
+    "sha256": "6d61ae62a5a50fb550187f71a829953c92ccc525bb52577542aa287e441153a9",
+    "episode_id": "nav_46",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/48": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_48_final_res.json",
+    "sha256": "2a5ac357921a60a8feac990753d37077201af92b81ce23fe6eba31005b664b28",
+    "episode_id": "nav_47",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/49": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_49_final_res.json",
+    "sha256": "2341f9fb767a55e31e0578556a38da2b31b9235e21b8a3e1bc6a5ac20f448a0d",
+    "episode_id": "nav_48",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/4": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_4_final_res.json",
+    "sha256": "01490e35829248a4e28190b3f6e8d8c7eff9eae7fe9d0aa7796a574720a7b803",
+    "episode_id": "nav_3",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/50": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_50_final_res.json",
+    "sha256": "15259ce1127ad9e1e0d62ffbcab39d3a82a4c4ce98df6de9d93e2590506bde1a",
+    "episode_id": "nav_49",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/51": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_51_final_res.json",
+    "sha256": "f08b325b38e294a9c9692d7ce1e14860db1cc8a4a7b793e1d3aad9316fe285f3",
+    "episode_id": "nav_50",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/52": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_52_final_res.json",
+    "sha256": "20a095700c12ca892509b7318c515ea6fe6821c9ca16ac862f6589bb4851460b",
+    "episode_id": "nav_51",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/53": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_53_final_res.json",
+    "sha256": "b62451e67713f544d1cd5c9ed771e2e80c96cd5122f03758f5a0578886599705",
+    "episode_id": "nav_52",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/54": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_54_final_res.json",
+    "sha256": "eee4d2e37da0862661778026ef5ea68b67b53532f2096b9c688c20b1552a1cdd",
+    "episode_id": "nav_53",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/55": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_55_final_res.json",
+    "sha256": "d6edd4e9017d36cf744e3995aa10e90611b58d7e03e28ec81892802a7c3ad811",
+    "episode_id": "nav_54",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/56": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_56_final_res.json",
+    "sha256": "a628999015c6861763ef35e2f0cbf8e343cb7db3dc87279cb54eaf6ae52016ca",
+    "episode_id": "nav_55",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/57": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_57_final_res.json",
+    "sha256": "8950e96fef98bf9850bb9ceeeeb3cf6a78f6359e0caa911990530b1bb1167873",
+    "episode_id": "nav_56",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/58": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_58_final_res.json",
+    "sha256": "7e7a27ee5635f8bae01a63338e6510802c3c27f266340f95bcf87045031cacce",
+    "episode_id": "nav_57",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/59": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_59_final_res.json",
+    "sha256": "71f824af7889b9d53db4a6dc9204f268f765360b0a482e4574c5462976898d8e",
+    "episode_id": "nav_58",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/5": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_5_final_res.json",
+    "sha256": "6fe46f1af8fa6172e566cb4188273762832d725e340180e072d42b6838e820d6",
+    "episode_id": "nav_4",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/60": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_60_final_res.json",
+    "sha256": "3c8c0f0c1ce04b26bb818cc1d83bab01a91640468485e4ef7ceccbfd39ba30ce",
+    "episode_id": "nav_59",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/6": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_6_final_res.json",
+    "sha256": "7f51ffed231a472a9cf8ce19dade8874aa69cef13f9f83277bcbe288c8ea4ac5",
+    "episode_id": "nav_5",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/7": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_7_final_res.json",
+    "sha256": "915837aff8a3c3dc5c6ab4c0455bcbb35efad585d25a594af9cfc051af06c55e",
+    "episode_id": "nav_6",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/8": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_8_final_res.json",
+    "sha256": "fbc2e1186e9b6b72739452437903fe80614400e467322720eea6ed57411d9a9f",
+    "episode_id": "nav_7",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "complex_instruction/9": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/complex_instruction/results/episode_9_final_res.json",
+    "sha256": "3b1f770f70e9b58790b532b371f13535a4c99fc58439990ed973d395d4cb0bee",
+    "episode_id": "nav_8",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091316"
+  },
+  "visual_appearance/10": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_10_final_res.json",
+    "sha256": "bf05a62332ac59b87d399b7f2a0b53fe3c2591407afb1b1eab1c5f0046903638",
+    "episode_id": "nav_9",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/11": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_11_final_res.json",
+    "sha256": "b9a580c52e0823e6b171aa57270e0e51d16a985b667f8cbb59b75ae623ed58ed",
+    "episode_id": "nav_10",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/12": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_12_final_res.json",
+    "sha256": "e7ab76a1a9fe19fbea4a8113622a31204098acbf385674f7addff607538f0523",
+    "episode_id": "nav_11",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/13": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_13_final_res.json",
+    "sha256": "58fffc4cc34f6613251023f80f4e4132471fdc3993da3699d125bd072df7d925",
+    "episode_id": "nav_12",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/14": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_14_final_res.json",
+    "sha256": "0eb5eea40007f8aedaae21a6acabf419151185e61d61133db369b7efa7bcd4f4",
+    "episode_id": "nav_13",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/15": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_15_final_res.json",
+    "sha256": "c7930a8bd060562a2b3130d9a72eefc733b2e1711be96fb79f82637b36a0cf04",
+    "episode_id": "nav_14",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/16": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_16_final_res.json",
+    "sha256": "45afa602883b4cd7b33d63c58e32726778af750ba7b942c8dd17d24c7fb5c362",
+    "episode_id": "nav_15",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/17": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_17_final_res.json",
+    "sha256": "cbc8d170d8e6d06a4a02910767f4fef72fde382116172f75d65ef1e3e7d9f4ef",
+    "episode_id": "nav_16",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/18": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_18_final_res.json",
+    "sha256": "9b0f2f95f7eec1d0b465f7cb65fdf5b8c5f304e9d6e15cdb35f7bd2d6e6fca60",
+    "episode_id": "nav_17",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/19": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_19_final_res.json",
+    "sha256": "7965cb027e0fc245c13eef083844fe88ff235c39d7a4bbeeb4230a227b649a07",
+    "episode_id": "nav_18",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/1": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_1_final_res.json",
+    "sha256": "2fb0d6102947ca7cbd2ef361e4a5bb0aba1aafc3b7747feab78819b9ae52c87b",
+    "episode_id": "nav_0",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/20": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_20_final_res.json",
+    "sha256": "c78fd0f50207e393812db2d1a861d7185720589ec4934f56155fd5b438f87f29",
+    "episode_id": "nav_19",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/21": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_21_final_res.json",
+    "sha256": "36058bd1a5a08ac52d21c92380f2f2d51c23f3f0bfd2542cea16307459d5aad3",
+    "episode_id": "nav_20",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/22": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_22_final_res.json",
+    "sha256": "934783f1697886eee470686af748fbd8f2d23373bf95f7e8b3f11190bea14bd5",
+    "episode_id": "nav_21",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/23": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_23_final_res.json",
+    "sha256": "c1dadb2d031b27acb4ccd4425a8c1debabee0f4509bab529c04c42c122b2c36f",
+    "episode_id": "nav_22",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/24": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_24_final_res.json",
+    "sha256": "ea7baff40a0044d53067ade09ad57f497285862749b05bb4c1df8700b373c2bc",
+    "episode_id": "nav_23",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/25": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_25_final_res.json",
+    "sha256": "88882312b65bccc3ba237f1ccbd69320f56f91b118856f5738b65916cb3549d2",
+    "episode_id": "nav_24",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/26": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_26_final_res.json",
+    "sha256": "8e26ba2e2a9c300922a54defb3119bb8f4dd083980491dc5350cf9f397b346d9",
+    "episode_id": "nav_25",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/27": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_27_final_res.json",
+    "sha256": "f4615f1ea1a12e95ecff3efdb6ca07ffe909b9b166878662020518f792c7f188",
+    "episode_id": "nav_26",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/28": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_28_final_res.json",
+    "sha256": "ea48d30b01633829467558274ea78a6e67911d40ef822098d9287a7e4df0a20b",
+    "episode_id": "nav_27",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/29": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_29_final_res.json",
+    "sha256": "cc1c2d5353690116d60d603ae31aadc04a73bb49b426e8c935e5dc081da9791a",
+    "episode_id": "nav_28",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/2": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_2_final_res.json",
+    "sha256": "8b22cec16dbbcae5f8fc55c54fa05cb2093cba0c49f2eede090ceb6e5b5e8c65",
+    "episode_id": "nav_1",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/30": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_30_final_res.json",
+    "sha256": "ec5b499b443a2436b299b4a9cda28e34d8ece545c1d2157f19b1c9c882465396",
+    "episode_id": "nav_29",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/31": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_31_final_res.json",
+    "sha256": "4783c6735cbe5dc368494743cb00237d062462c06f048211dc9082ae9b7becc2",
+    "episode_id": "nav_30",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/32": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_32_final_res.json",
+    "sha256": "a0a9cb00317f8514c1574314720b132a8bcf80c354112e93184bde8c484d3546",
+    "episode_id": "nav_31",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/33": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_33_final_res.json",
+    "sha256": "9c3527f58f09e7c517d7fea715fd0d4ae2f6c529df125f0f493fa91c71afa0c9",
+    "episode_id": "nav_32",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/34": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_34_final_res.json",
+    "sha256": "248db056f8573bf34546ff12952d48c05074d35e07b4f55cde868033b694787d",
+    "episode_id": "nav_33",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/35": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_35_final_res.json",
+    "sha256": "8ccbb61e318455fafc4efc7aef2342d6c3b7f5d75b125a26bb527ff55c85cfa2",
+    "episode_id": "nav_34",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/36": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_36_final_res.json",
+    "sha256": "847b56cf80ac9ee0e0aa63e5306b20b162a775f4d8afb5ab08714c77f7201160",
+    "episode_id": "nav_35",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/37": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_37_final_res.json",
+    "sha256": "7ab9c9b91ac936e7a539e0ceb18b546ff381069f08b7e18e6f913fe9569b339c",
+    "episode_id": "nav_36",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/3": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_3_final_res.json",
+    "sha256": "69a7a95055041399f0ac34a8d307cab723e789a3a72dc0498acbd8341d226052",
+    "episode_id": "nav_2",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/4": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_4_final_res.json",
+    "sha256": "88aa851b850c6cffa0ca7661f8b57f0973912eceb525f4e3a8eb9d3445a7666e",
+    "episode_id": "nav_3",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/5": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_5_final_res.json",
+    "sha256": "16eb7ca378b9b7fb7c81355491da7f6932e31d0f3694d5085c40b0f8a2602bd8",
+    "episode_id": "nav_4",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/6": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_6_final_res.json",
+    "sha256": "534eb770f7356bc8d086d98ebc54b6a608125bfdf2ce90487456cf1366c16fb8",
+    "episode_id": "nav_5",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/7": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_7_final_res.json",
+    "sha256": "3d9d41aea3b25cc81418d3c5df26d351a158e1be5c8772276c850211b0999f30",
+    "episode_id": "nav_6",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/8": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_8_final_res.json",
+    "sha256": "e36a6c55c5964f344fa1a8cddc904d0d5f5f10168b8e8e52ee304f07299c9013",
+    "episode_id": "nav_7",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/9": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_9_final_res.json",
+    "sha256": "931c24eecf2efdfa968b7e9b6bc5d9abd9b8214698340d86f0710795618167f4",
+    "episode_id": "nav_8",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091351"
+  },
+  "visual_appearance/38": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_38_final_res.json",
+    "sha256": "64880f0c21e00e60bbfa5aeedbc577368ad64d049d34bdf1200ed2a6308d82fe",
+    "episode_id": "nav_37",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/39": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_39_final_res.json",
+    "sha256": "5b187a9fc5c06899e1c3952d0d8613dff57a8bb75d313354dc2686e31ee4c1b7",
+    "episode_id": "nav_38",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/40": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_40_final_res.json",
+    "sha256": "22bf125fa2490e69a3c33be93d18583f5665cb05cbd988a8405e9b78f7737482",
+    "episode_id": "nav_39",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/41": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_41_final_res.json",
+    "sha256": "ba243f74ae31599ec6e667bb1c8033152bbc1ae62388fdcfa57f90af8a923d87",
+    "episode_id": "nav_40",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/42": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_42_final_res.json",
+    "sha256": "a864de9f4cd4a9bf2ae024aef8afcc2dc86a1f4036342dacfc8195ee5ff63486",
+    "episode_id": "nav_41",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/43": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_43_final_res.json",
+    "sha256": "25b7b0d183f5e41e40d7e0c67cdac8cf2fd76ad3b6018313cff5481e2dc9de19",
+    "episode_id": "nav_42",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/44": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_44_final_res.json",
+    "sha256": "3a8cefac6cbe24b735ab3a11f590d6584ef78ab6c1adbe887ba9cb4764e7c3a2",
+    "episode_id": "nav_43",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/45": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_45_final_res.json",
+    "sha256": "9623cfa8c990a5c9edcfa2c7d2508271196fcf444b15f0226f7cce8bdb9e9f38",
+    "episode_id": "nav_44",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/46": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_46_final_res.json",
+    "sha256": "958565f44a07ef30139347b5a7fc1a2ba050e54b651a3f586861f288fb168d7b",
+    "episode_id": "nav_45",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/47": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_47_final_res.json",
+    "sha256": "69930d89ab9e2a9baa0af3e3a6be567b730357d9213c8281139297221fe9842d",
+    "episode_id": "nav_46",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/48": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_48_final_res.json",
+    "sha256": "b9ce7c482de4c17415a61d930704cc853505260670754215fe14c22cd0846872",
+    "episode_id": "nav_47",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/49": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_49_final_res.json",
+    "sha256": "decf7f7ec8bb8ceb086e79b8a33ea10e2f7ac3d36b43d804d0957b7ea3f17d3b",
+    "episode_id": "nav_48",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/50": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_50_final_res.json",
+    "sha256": "bdb8b2f34905f9374f143c5e3fc574195710fccab42d2e6eb693d18040aa9bd7",
+    "episode_id": "nav_49",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/51": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_51_final_res.json",
+    "sha256": "9acfe5fba787e8083db0bb8b4c249fc38cb289bf7e5cdc0387d1421c1c51d335",
+    "episode_id": "nav_50",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/52": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_52_final_res.json",
+    "sha256": "1654b03422aede9cc6d9878365151da18da3b2dd8e95da4e6c06e21544d186cf",
+    "episode_id": "nav_51",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/53": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_53_final_res.json",
+    "sha256": "048ad57eb2c1235b516b8223504e5f026ad22904a2f9571f6bdf5f57fe296e98",
+    "episode_id": "nav_52",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/54": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_54_final_res.json",
+    "sha256": "24d3863cbf30ecb326cef9dfde8d2662776b7560130a70158cc2079a45f6ad4e",
+    "episode_id": "nav_53",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/55": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_55_final_res.json",
+    "sha256": "e4d2bbe41e6816cfad103da6b8d7466fd4803d5ecb916e18a2e1cef092eaacaf",
+    "episode_id": "nav_54",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/56": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_56_final_res.json",
+    "sha256": "ef4ca7b4cfd6430626656040b0215b6277cbaeb38e7e13bc0d3247c5f988ba72",
+    "episode_id": "nav_55",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/57": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_57_final_res.json",
+    "sha256": "decbe4fcdc3a6c67108aa6a5223fabed5ea675111f342475e7849a7e537603ba",
+    "episode_id": "nav_56",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/58": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_58_final_res.json",
+    "sha256": "d5b567942caf1c1acee4468f91136e86d577023fc9ba97dd2558d04d7fee4e29",
+    "episode_id": "nav_57",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/59": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_59_final_res.json",
+    "sha256": "1fcd0629bc9581ffdc0ba8a0373fdcc04e10f8ec77d27f77963edcd283521d6a",
+    "episode_id": "nav_58",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "visual_appearance/60": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_60_final_res.json",
+    "sha256": "455bb570c62a22a211d4b5bf2e3037eefebb86d063629cdfdd6df0d783de4480",
+    "episode_id": "nav_59",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428"
+  },
+  "long_horizon/10": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_10_final_res.json",
+    "sha256": "e369777d3c4a27bb6f87687994918e1acd80f356d044e16a6102cc4bfce43e34",
+    "episode_id": "nav_9",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/11": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_11_final_res.json",
+    "sha256": "e9b5e3052f263d8ce548574c3c266ea6dc841830d5aac9b80311c75392f0f309",
+    "episode_id": "nav_10",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/12": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_12_final_res.json",
+    "sha256": "aa530a5394da3d3cb103a827ea6073d096de226b160927128f7afdc13e00106e",
+    "episode_id": "nav_11",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/13": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_13_final_res.json",
+    "sha256": "719d3111758708ea0348cd1183e629d109636ebabab62b5cf95a4edceda9dc4d",
+    "episode_id": "nav_12",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/14": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_14_final_res.json",
+    "sha256": "4c4b954fec13c6ef4df15bd35f2a37b24abde3f60d752641663ae95ebba9b9d9",
+    "episode_id": "nav_13",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/15": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_15_final_res.json",
+    "sha256": "8dc96e2bbf01ae6b749b5be2f6c2427e3d0e12a0770c659267fb8a42a6fa298f",
+    "episode_id": "nav_14",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/16": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_16_final_res.json",
+    "sha256": "026106b9a6b8dadde7b94fa97f240f6b3ed8a839ca9081d7157ab7874d0a9444",
+    "episode_id": "nav_15",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/17": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_17_final_res.json",
+    "sha256": "6baa50913306f71bd2f2d32cad46bd2900fa1c45b4d85e9cb7faad344f3386d9",
+    "episode_id": "nav_16",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/18": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_18_final_res.json",
+    "sha256": "341be7e70d68960853e2667a58510449965c4b70786adce086bd8b628fb10e03",
+    "episode_id": "nav_17",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/19": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_19_final_res.json",
+    "sha256": "05853ea24c5c2e3be3a407508772b0d15d38fb724f584fdf05e2d76db358f4a4",
+    "episode_id": "nav_18",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/1": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_1_final_res.json",
+    "sha256": "4e0a72cfd65ef1a28b1f606761ffd4ddc1c83120529405d4fc52f8a99b2cd027",
+    "episode_id": "nav_0",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/20": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_20_final_res.json",
+    "sha256": "2d1670cca5decc92a68ea2bffd377ed9aba1996b9fe9cd14eecf1c05023ba7a4",
+    "episode_id": "nav_19",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/21": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_21_final_res.json",
+    "sha256": "e95ac0745adf8d0ea6afca805d5592bcb9fe7271ff249f7a389cc0e0713d237e",
+    "episode_id": "nav_20",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/22": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_22_final_res.json",
+    "sha256": "e4b34893d5c444aff6d188e76a8e4e2b2a4bdf9fcc9cd8e7e95a2ef608b04501",
+    "episode_id": "nav_21",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/23": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_23_final_res.json",
+    "sha256": "f70d8337205d61353bbfd7707f57ca899ef9118c881dadf9c8a5f85c715ee8e9",
+    "episode_id": "nav_22",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/24": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_24_final_res.json",
+    "sha256": "a31aeec62ff4045d4504ce96f24045a168523b76d430d8fea91d3a9651727d10",
+    "episode_id": "nav_23",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/25": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_25_final_res.json",
+    "sha256": "ac7e1db984a6c4ae54e63b80750a71ce61860b76cd2e857f116e79a78c392026",
+    "episode_id": "nav_24",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/26": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_26_final_res.json",
+    "sha256": "67f24b6ac1825f9e85e4a51bc33ce24d840ea802b326c88c8cfd735a632d8961",
+    "episode_id": "nav_25",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/27": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_27_final_res.json",
+    "sha256": "b091fb4906b9b8499b3c1f9a824bdae0f55149efc4e2c0660189a93f68b62506",
+    "episode_id": "nav_26",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/28": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_28_final_res.json",
+    "sha256": "32843babe6de5f5167dd18173ff5aaa0caf6f2a996abf98c9d044996df83990c",
+    "episode_id": "nav_27",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/29": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_29_final_res.json",
+    "sha256": "d547ccffe567a6db8fd9103deb4837ba9b635debfb3d4427f422b3257bbcbb79",
+    "episode_id": "nav_28",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/2": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_2_final_res.json",
+    "sha256": "5a7e5971953eefa0fb69e62a2bb9d5c3fa5fe4004bdd9b9a8e0ef5f7f8464a50",
+    "episode_id": "nav_1",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/30": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_30_final_res.json",
+    "sha256": "d1b2370e8c23cf2c0ea916e41679eb6539e07044576ce92c8e95164c8bf83989",
+    "episode_id": "nav_29",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/31": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_31_final_res.json",
+    "sha256": "a2c8986690392d2a8e6730902e8fa887bb047fd4408c550c12c9e0755acbda7f",
+    "episode_id": "nav_30",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/32": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_32_final_res.json",
+    "sha256": "d3dc200d3fe4fcac9f730b1026153f1472d725919ea5ce5eaab7484ca3fd3e8b",
+    "episode_id": "nav_31",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/33": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_33_final_res.json",
+    "sha256": "c04f5ec58239a4361f2c85ab51a025a86854a8da0a2543ad584e1912b703b149",
+    "episode_id": "nav_32",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/34": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_34_final_res.json",
+    "sha256": "9ca3af687f92b889fa42b39b3a73ed32a2852add52ef07afb905e858f8b07555",
+    "episode_id": "nav_33",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/35": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_35_final_res.json",
+    "sha256": "5e8e107d79b0f6ed1abbe77933d39a6eeaad643c04e58e3dec009e36d8bd5b27",
+    "episode_id": "nav_34",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/36": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_36_final_res.json",
+    "sha256": "26c1c23a1b9b11743b08cbed856dde8be42868e21547dd30227229e39a3f5b5e",
+    "episode_id": "nav_35",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/37": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_37_final_res.json",
+    "sha256": "ab1dbbaf6f4b491ebb200b311079eab441831e04c77087298337686f00ed560b",
+    "episode_id": "nav_36",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/38": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_38_final_res.json",
+    "sha256": "c54be06413d95450bb97febc9e2ee7baa82275ac601ba0f59478242dce7d0867",
+    "episode_id": "nav_37",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/39": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_39_final_res.json",
+    "sha256": "9291237cb3bd870c359c35bcb1686f0821a5d1901dd65aaf151901c870e39740",
+    "episode_id": "nav_38",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/3": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_3_final_res.json",
+    "sha256": "81fc5fec5180cd38684bba6f2bd957e1aadf7319610daed6e436edfba66136f0",
+    "episode_id": "nav_2",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/40": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_40_final_res.json",
+    "sha256": "88f368a150ceefe4033dda44dc25d4925f0b652bccdc7041bf65596069d88478",
+    "episode_id": "nav_39",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/41": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_41_final_res.json",
+    "sha256": "ccb67944e6e9f6c9f8bf6044c9ea4fc1114486eb91e4f3f9299d24bbcc5ed5e1",
+    "episode_id": "nav_40",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/42": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_42_final_res.json",
+    "sha256": "bb517f602f5ee964def92fdb498d537d1b236667b761204345f0c0a4b3313b51",
+    "episode_id": "nav_41",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/43": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_43_final_res.json",
+    "sha256": "a77d8553d8b4d6c724937273b30ae9ebbcdf51755694445fea9e28d74b141333",
+    "episode_id": "nav_42",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/44": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_44_final_res.json",
+    "sha256": "997386e6861dbde8a20f9b8e1d9a3dbd9d7931a553ee9fdf0209a31ce75eeb20",
+    "episode_id": "nav_43",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/45": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_45_final_res.json",
+    "sha256": "c0de860ec28323074a7dc012e850580c0c886419d3cbf1296630a14d9f0efb66",
+    "episode_id": "nav_44",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/46": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_46_final_res.json",
+    "sha256": "838de3092246b722a5f775e7ed56832d5c909a8f76f6f24df2957bc336faacbd",
+    "episode_id": "nav_45",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/47": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_47_final_res.json",
+    "sha256": "eabddbe7f51e953d70478d02afffea71f316d8c8a54483c116746c0d8f77c699",
+    "episode_id": "nav_46",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/48": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_48_final_res.json",
+    "sha256": "245e247c50db04310b0fe4cede96553d03abec9043d479ca954f5138b68db83e",
+    "episode_id": "nav_47",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/49": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_49_final_res.json",
+    "sha256": "d33f83a2e2c05e4f4c451546260b92d840106d3a52d7d9ed832049462ca6252c",
+    "episode_id": "nav_48",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/4": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_4_final_res.json",
+    "sha256": "78029ddf1ed39d9cd1a3aaef99c2de9ecb80a6185ad347df307c88af983d31fe",
+    "episode_id": "nav_3",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/50": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_50_final_res.json",
+    "sha256": "c87622d20c27511ec7cb0a49e698a1c675afb02c74bf6bdd013766f05c8fe5c6",
+    "episode_id": "nav_49",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/51": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_51_final_res.json",
+    "sha256": "92a332840ed5e51408c20c9477a4c6fdef6d60e5a1e1b4ef5bbae0d5254d97c6",
+    "episode_id": "nav_50",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/52": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_52_final_res.json",
+    "sha256": "7c952dca34641b9110b73300dad511f999085db51b69bd8fcea4684d28df80a3",
+    "episode_id": "nav_51",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/53": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_53_final_res.json",
+    "sha256": "927a11ab2bb82cbfce74dfea89054cf29725185af98e7f14862660aa05a81cca",
+    "episode_id": "nav_52",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/54": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_54_final_res.json",
+    "sha256": "194baff855896ba68f96e50e357fbbf561d943341c18e22d5c90e921f0046dda",
+    "episode_id": "nav_53",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/55": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_55_final_res.json",
+    "sha256": "7345edf87c7a9dcca99033057573c81df6b9503945a49c25d732688e9ad33382",
+    "episode_id": "nav_54",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/56": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_56_final_res.json",
+    "sha256": "4fd5ef1d1718c6f9e6ccdf1edc73a664fd50210e7b45d6e1b294003825d6c026",
+    "episode_id": "nav_55",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/57": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_57_final_res.json",
+    "sha256": "28b41062b5fd44e043ee5df8c4952407db89a56988630e38f35388289a60fe7c",
+    "episode_id": "nav_56",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/58": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_58_final_res.json",
+    "sha256": "3d262f083b89db269449d058ac2488be1d47c2f8752410c86b92c0aaa7f4080d",
+    "episode_id": "nav_57",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/59": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_59_final_res.json",
+    "sha256": "763f75e907ccc6b0a9918b88478076149e87ace9bde11ba784eb0ce501ee7794",
+    "episode_id": "nav_58",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/5": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_5_final_res.json",
+    "sha256": "903e6aadfb8d6dcaad8d029b1c0163ed7c4aa0d95c33f9249af3bb457c4c2840",
+    "episode_id": "nav_4",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/60": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_60_final_res.json",
+    "sha256": "e0b8c4e52d46ebff83fd41437f1b5390576e3ffa31e42c90eba7105548556369",
+    "episode_id": "nav_59",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/6": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_6_final_res.json",
+    "sha256": "540d5f8889c623e74dc8981322abd8d2d848882d1f850dfd316dc46ef0623ffa",
+    "episode_id": "nav_5",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/7": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_7_final_res.json",
+    "sha256": "3affa199cb08831a58ed2171b96f66903facaf4daa105ea29a8d37442c220e72",
+    "episode_id": "nav_6",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/8": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_8_final_res.json",
+    "sha256": "3ed9ed85e02222c8ccf400556e57bde527b9cdaf78f9888a88cd11062786c8e4",
+    "episode_id": "nav_7",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  },
+  "long_horizon/9": {
+    "path": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/long_horizon/results/episode_9_final_res.json",
+    "sha256": "6e2eed7adbde6a2b86aa214be5ffa84bb86bdb7aafcf383cb402888444b583ff",
+    "episode_id": "nav_8",
+    "schema_compatibility": "gemini_inline_refs_v1",
+    "source_run": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091439"
+  }
+}

@@ -1,0 +1,1 @@
+{"reward": 0.0, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "task_success": 0.0, "num_steps": 20, "planner_steps": 13, "planner_output_error": 0, "episode_elapsed_seconds": 68.0217719078064}

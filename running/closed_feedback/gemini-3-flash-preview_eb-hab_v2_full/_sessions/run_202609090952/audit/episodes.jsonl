@@ -1,0 +1,50 @@
+{"split": "base", "episode_number": 1, "episode_id": "39", "instruction": "Move one of the pear items to the indicated sofa.", "api_call_start": 1}
+{"split": "base", "episode_number": 2, "episode_id": "3", "instruction": "Find a orange on the TV stand and move it to the sink.", "api_call_start": 3}
+{"split": "base", "episode_number": 3, "episode_id": "47", "instruction": "Take an pear and transfer it to the allocated left counter.", "api_call_start": 4}
+{"split": "base", "episode_number": 4, "episode_id": "5", "instruction": "Find a orange and move it to the right counter.", "api_call_start": 5}
+{"split": "base", "episode_number": 5, "episode_id": "25", "instruction": "On the right counter, I need a toy airplane and a orange.", "api_call_start": 7}
+{"split": "base", "episode_number": 6, "episode_id": "30", "instruction": "I left the fridge open. Can you help?", "api_call_start": 9}
+{"split": "base", "episode_number": 7, "episode_id": "38", "instruction": "On the TV stand I need you to put a plate.", "api_call_start": 10}
+{"split": "base", "episode_number": 8, "episode_id": "28", "instruction": "Detach the strawberry from the right counter.", "api_call_start": 12}
+{"split": "base", "episode_number": 9, "episode_id": "21", "instruction": "Bring a banana and a can to the left counter.", "api_call_start": 13}
+{"split": "base", "episode_number": 10, "episode_id": "35", "instruction": "I left my mug on the sofa, can you bring it to the left counter?", "api_call_start": 15}
+{"split": "base", "episode_number": 11, "episode_id": "0", "instruction": "Find a toy airplane and move it to the right counter.", "api_call_start": 16}
+{"split": "base", "episode_number": 12, "episode_id": "1", "instruction": "Hey, on the sink, I accidentally left my plate, can you bring it to the right counter?", "api_call_start": 18}
+{"split": "base", "episode_number": 13, "episode_id": "40", "instruction": "I need a book on the TV stand. Can you help?", "api_call_start": 19}
+{"split": "base", "episode_number": 14, "episode_id": "36", "instruction": "The fridge door is open because of my mistake. Can you close it, please?", "api_call_start": 20}
+{"split": "base", "episode_number": 15, "episode_id": "44", "instruction": "On the left counter, remove the lego.", "api_call_start": 21}
+{"split": "base", "episode_number": 16, "episode_id": "33", "instruction": "The sink needs an hammer and a cup on it.", "api_call_start": 22}
+{"split": "base", "episode_number": 17, "episode_id": "43", "instruction": "The rubriks cube is on the right counter but you should move it to the sink.", "api_call_start": 28}
+{"split": "base", "episode_number": 18, "episode_id": "13", "instruction": "Put both an rubriks cube and a lid onto the left counter.", "api_call_start": 29}
+{"split": "base", "episode_number": 19, "episode_id": "19", "instruction": "Displace the spatula from the sink.", "api_call_start": 32}
+{"split": "base", "episode_number": 20, "episode_id": "31", "instruction": "Find a wrench and move it to the left counter.", "api_call_start": 33}
+{"split": "base", "episode_number": 21, "episode_id": "12", "instruction": "Transfer an pear to the designated sink.", "api_call_start": 35}
+{"split": "base", "episode_number": 22, "episode_id": "20", "instruction": "Collect a knife from the TV stand and place it in the sink.", "api_call_start": 37}
+{"split": "base", "episode_number": 23, "episode_id": "42", "instruction": "I need a banana on the sofa. Can you help?", "api_call_start": 38}
+{"split": "base", "episode_number": 24, "episode_id": "14", "instruction": "Move the knife off the TV stand.", "api_call_start": 45}
+{"split": "base", "episode_number": 25, "episode_id": "32", "instruction": "Find a mug on the right counter and move it to the TV stand.", "api_call_start": 46}
+{"split": "base", "episode_number": 26, "episode_id": "45", "instruction": "Find a orange and move it to the right counter.", "api_call_start": 47}
+{"split": "base", "episode_number": 27, "episode_id": "17", "instruction": "I left the fridge open. Can you help?", "api_call_start": 49}
+{"split": "base", "episode_number": 28, "episode_id": "15", "instruction": "Extract a cup from the left counter and move it to the sofa.", "api_call_start": 50}
+{"split": "base", "episode_number": 29, "episode_id": "10", "instruction": "Could you exchange drill and plum between sofa and sink?", "api_call_start": 51}
+{"split": "base", "episode_number": 30, "episode_id": "22", "instruction": "Transport a banana and carefully position it in the designated left counter.", "api_call_start": 52}
+{"split": "base", "episode_number": 31, "episode_id": "41", "instruction": "Take an can and transfer it to the allocated left counter.", "api_call_start": 54}
+{"split": "base", "episode_number": 32, "episode_id": "48", "instruction": "Displace the can from the left counter.", "api_call_start": 56}
+{"split": "base", "episode_number": 33, "episode_id": "2", "instruction": "Find a lid on the left counter and move it to the right counter.", "api_call_start": 57}
+{"split": "base", "episode_number": 34, "episode_id": "49", "instruction": "Find a lid and move it to the left counter.", "api_call_start": 58}
+{"split": "base", "episode_number": 35, "episode_id": "18", "instruction": "I left the fridge open. Can you help?", "api_call_start": 60}
+{"split": "base", "episode_number": 36, "episode_id": "8", "instruction": "Find a toy airplane and move it to the left counter.", "api_call_start": 61}
+{"split": "base", "episode_number": 37, "episode_id": "23", "instruction": "Find a mug on the left counter and move it to the sink.", "api_call_start": 63}
+{"split": "base", "episode_number": 38, "episode_id": "7", "instruction": "Extract the toy airplane from the left counter.", "api_call_start": 64}
+{"split": "base", "episode_number": 39, "episode_id": "46", "instruction": "Lift the lego off the right counter.", "api_call_start": 66}
+{"split": "base", "episode_number": 40, "episode_id": "4", "instruction": "Retrieve a apple and place it into the predetermined sofa.", "api_call_start": 67}
+{"split": "base", "episode_number": 41, "episode_id": "37", "instruction": "Find a mug on the sink and move it to the left counter.", "api_call_start": 70}
+{"split": "base", "episode_number": 42, "episode_id": "6", "instruction": "Unseat the rubriks cube from the sink.", "api_call_start": 71}
+{"split": "base", "episode_number": 43, "episode_id": "24", "instruction": "The fridge door is open because of my mistake. Can you close it, please?", "api_call_start": 72}
+{"split": "base", "episode_number": 44, "episode_id": "9", "instruction": "Move a ball to the sofa.", "api_call_start": 73}
+{"split": "base", "episode_number": 45, "episode_id": "26", "instruction": "The right counter needs an toy airplane and a lego on it.", "api_call_start": 79}
+{"split": "base", "episode_number": 46, "episode_id": "16", "instruction": "Displace the orange from the TV stand.", "api_call_start": 81}
+{"split": "base", "episode_number": 47, "episode_id": "34", "instruction": "Walk to the right counter area.", "api_call_start": 82}
+{"split": "base", "episode_number": 48, "episode_id": "27", "instruction": "Find a orange and move it to the sofa.", "api_call_start": 83}
+{"split": "base", "episode_number": 49, "episode_id": "11", "instruction": "Displace the strawberry from the sink.", "api_call_start": 85}
+{"split": "base", "episode_number": 50, "episode_id": "29", "instruction": "Find a mug and move it to the sofa.", "api_call_start": 86}

@@ -1,0 +1,1 @@
+{"reward": 0.0, "num_invalid_actions": 0, "empty_plan": 0, "instruction": "Could you exchange drill and plum between sofa and sink?", "task_success": false, "task_progress": 0.0, "subgoal_reward": 0.0, "num_steps": 30, "planner_steps": 15, "planner_output_error": 0, "num_invalid_action_ratio": 0.0, "episode_elapsed_seconds": [0.9740335941314697]}

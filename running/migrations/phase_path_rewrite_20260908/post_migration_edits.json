@@ -1,0 +1,38 @@
+[
+  {
+    "path": "docs/experiment_log_phase1.md",
+    "migration_sha256": "ab667e83d8432aed6a8efa38480d27cb6ea3f2d7e1cbf74d6c0e816ae80f5234",
+    "final_sha256": "58eb8b284015894a36d54041b8097c6ccb8f19aa7eb2138f0e2b2644e499accd",
+    "reason": "Update directory-migration notes to final no-symlink state; restore deliberate old-path test fixtures excluded from future rewrites."
+  },
+  {
+    "path": "docs/experiment_log_phase2.md",
+    "migration_sha256": "5cc642d78ddb80fa1651bf3b65417b823ce96e0beabf0979647b6645af1998f8",
+    "final_sha256": "67399f5527e698d2f76fd0583734bb75a0ea6103d4c5b3dc82ce969177592f2b",
+    "reason": "Update directory-migration notes to final no-symlink state; restore deliberate old-path test fixtures excluded from future rewrites."
+  },
+  {
+    "path": "docs/experiment_log_phase3.md",
+    "migration_sha256": "76c6f859a8f0acca3f6bd838caf02f62d4d6b0d741986340a927bd1d5921952b",
+    "final_sha256": "79444709f7fce713ec23c26f362d34594e377a47ec38da5495ab783287f9714a",
+    "reason": "Update directory-migration notes to final no-symlink state; restore deliberate old-path test fixtures excluded from future rewrites."
+  },
+  {
+    "path": "docs/experiment_log_phase4.md",
+    "migration_sha256": "5b1e3b38c86277bb86db5ff7a0212484d9c00b0cf212444f4530258b5583642d",
+    "final_sha256": "6500f2aecb2d3503dd4e6cbed58f687f5145bf9d1d98c6e46e5e2cf05ad3cf23",
+    "reason": "Update directory-migration notes to final no-symlink state; restore deliberate old-path test fixtures excluded from future rewrites."
+  },
+  {
+    "path": "docs/experiment_log_phase5.md",
+    "migration_sha256": "f4ca8537862f80204fa9174ec311f262624fc23b3d71ebd784a55b88c6a0536a",
+    "final_sha256": "b42b39115659f0f9d686722ef808b751d644501fd0a447319be59ad018de6633",
+    "reason": "Update directory-migration notes to final no-symlink state; restore deliberate old-path test fixtures excluded from future rewrites."
+  },
+  {
+    "path": "tests/test_experiment_path_migration.py",
+    "migration_sha256": "eb5c7703b1afa6d9f2b586543f52e4b0672153637d366780b8928fa64d4dc19d",
+    "final_sha256": "1d4e79f961e945ea409632c66f4d8d7c4908cdc3155b38eb81b42059541a7b49",
+    "reason": "Update directory-migration notes to final no-symlink state; restore deliberate old-path test fixtures excluded from future rewrites."
+  }
+]

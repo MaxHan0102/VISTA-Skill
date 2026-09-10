@@ -1,0 +1,84 @@
+{
+  "env": "eb-hab",
+  "provider": "gemini",
+  "model": "gemini-3.5-flash",
+  "track": "rgb_only",
+  "eval_sets": [
+    "base"
+  ],
+  "episodes": 47,
+  "start_index": 3,
+  "seed": 0,
+  "frames": 1,
+  "n_shots": null,
+  "resolution": null,
+  "max_steps": null,
+  "max_tokens": null,
+  "temperature": null,
+  "api_retries": 3,
+  "retry_delay": 5,
+  "expected_episodes": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/resume_expected_episodes.json",
+  "artifact_root": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full",
+  "resume_existing": false,
+  "api_key_env": "GEMINI_API_KEY",
+  "base_url": "https://api.openlux.ai/v1",
+  "output": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/_sessions/run_202609090948",
+  "log_level": "INFO",
+  "dry_run": false,
+  "smoke_policy": false,
+  "requested_output": "/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/_sessions/run_202609090948",
+  "started_at": "2026-09-09T09:48:38.977178+08:00",
+  "protocol": "stock_feedback_v2",
+  "official_config": {
+    "model_name": "gemini-3.5-flash",
+    "down_sample_ratio": 1,
+    "model_type": "remote",
+    "language_only": false,
+    "eval_sets": [
+      "base"
+    ],
+    "chat_history": false,
+    "n_shots": 10,
+    "multistep": false,
+    "resolution": 500,
+    "exp_name": "feedback_comparison",
+    "env_feedback": false,
+    "tp": 1,
+    "start_epi_index": 3
+  },
+  "schema_compatibility": "closed_objects_v1",
+  "script_sha256": "b4f198b6efe480c95b410a539893534b913d2bbcf339017810e42137039db639",
+  "skill_or_memory": false,
+  "git_revision": "c1ae2e312b8054da3708f7ab877c5fce22ddc696",
+  "git_dirty": true,
+  "source_hashes": {
+    "EmbodiedBench/embodiedbench/envs/eb_habitat/EBHabEnv.py": "8765e30893386fbfb2ace6a95b9c9b182d412583cd76390853d2bf2a11f825d3",
+    "EmbodiedBench/embodiedbench/planner/vlm_planner.py": "5489386a1c694099f146c22e5b854085945caa0e21708e03c5b538949a47c058",
+    "EmbodiedBench/embodiedbench/evaluator/eb_habitat_evaluator.py": "a691a81405ccdf33a70454fb901d466c4bcb514867936b5364b86d5578d6fa3a",
+    "EmbodiedBench/embodiedbench/planner/remote_model.py": "8c50923997c9e937e96c07fee2087737a52b9052f41c3254737c43f2499e928e",
+    "EmbodiedBench/embodiedbench/configs/eb-hab.yaml": "fc66ba766a97bccb27b1fc6405da58bc1adc3d8ff885c470462ade073c589274"
+  },
+  "runtime_changes": [
+    [
+      "if done or info['last_action_success'] == 0:",
+      "if done:",
+      1
+    ]
+  ],
+  "storage_runtime_changes": [
+    [
+      "os.path.join(self.env.log_path, 'config.txt')",
+      "os.path.join('/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/_sessions/run_202609090948', self.eval_set, 'config.txt')",
+      1
+    ],
+    [
+      "result open mode",
+      "exclusive creation"
+    ]
+  ],
+  "remote_defaults": {
+    "temperature": 0,
+    "max_completion_tokens": 4096,
+    "gpt5_temperature": "omitted by stock RemoteModel"
+  }
+}

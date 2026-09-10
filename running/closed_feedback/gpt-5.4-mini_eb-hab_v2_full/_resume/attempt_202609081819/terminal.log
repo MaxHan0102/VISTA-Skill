@@ -1,0 +1,209 @@
+Output directory: /root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_resume/attempt_202609081819
+[2026-09-08 18:19:40,706][INFO] - Current eval set: complex_instruction
+2026-09-08 18:19:40,816 Initializing dataset LangRearrangeDataset-v0
+2026-09-08 18:19:40,816 Loading from /root/max/VISTA-Skill/EmbodiedBench/embodiedbench/envs/eb_habitat/datasets/complex_instruction.pickle
+2026-09-08 18:19:40,819 initializing sim RearrangeSim-v0
+2026-09-08 18:19:42,213 Initializing task RearrangePredicateTask-v0
+Num episodes 50
+Episodes:   0%|                                                                                                                                                                                                                            | 0/50 [00:00<?, ?it/s][2026-09-08 18:19:44,226][INFO] - Evaluating episode 16 ...
+[2026-09-08 18:19:44,233][INFO] - Episode 16: BaseEpisode(episode_id='34', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: There's an apple on the sofa, but on the sink I need you to put a ball.
+API retry 1/3 in 5s (HTTP 400); request unchanged
+Planner Output Action: [12, 16, 9, 53]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [12, 33]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the apple, Task success: False
+Planner Output Action: [6, 50, 12, 16, 9, 53]
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [12, 33, 12, 56, 12, 16, 9, 53]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [12, 16, 9, 53]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:   2%|████▏                                                                                                                                                                                                               | 1/50 [00:35<29:20, 35.93s/it][2026-09-08 18:20:20,154][INFO] - Evaluating episode 17 ...
+[2026-09-08 18:20:20,163][INFO] - Episode 17: BaseEpisode(episode_id='9', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: On the sofa there's an apple, but instead find a bowl and move it to the black table.
+Planner Output Action: [7, 42, 6, 50]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [7, 42, 6, 50]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 42, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:   4%|████████▍                                                                                                                                                                                                           | 2/50 [00:51<19:18, 24.13s/it][2026-09-08 18:20:36,032][INFO] - Evaluating episode 18 ...
+[2026-09-08 18:20:36,101][INFO] - Episode 18: BaseEpisode(episode_id='43', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: On the sofa there's an apple, but instead find a cleanser and move it to the TV stand.
+Planner Output Action: [29, 8, 52]
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:   6%|████████████▋                                                                                                                                                                                                       | 3/50 [00:56<12:00, 15.33s/it][2026-09-08 18:20:40,878][INFO] - Evaluating episode 19 ...
+[2026-09-08 18:20:40,887][INFO] - Episode 19: BaseEpisode(episode_id='41', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: Instead of finding an apple, I need a cleanser on the right counter. Can you help?
+Planner Output Action: [10, 29]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:   8%|████████████████▉                                                                                                                                                                                                   | 4/50 [01:02<08:46, 11.45s/it][2026-09-08 18:20:46,389][INFO] - Evaluating episode 20 ...
+[2026-09-08 18:20:46,538][INFO] - Episode 20: BaseEpisode(episode_id='31', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: Should the fridge door be open, move an bowl to the right counter; otherwise, transport an rubriks cube to the right counter.
+Planner Output Action: [8, 40, 10, 54]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Planner Output Action: [13]
+Executed action: navigate to the refrigerator, Task success: False
+Planner Output Action: [13, 60, 42, 10, 54]
+Executed action: navigate to the refrigerator, Task success: False
+Executed action: open the refrigerator, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Planner Output Action: [10]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Planner Output Action: [54]
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Planner Output Action: [54]
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [54]
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [42, 10, 54]
+Executed action: pick up the bowl, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  10%|█████████████████████▏                                                                                                                                                                                              | 5/50 [02:11<24:08, 32.18s/it][2026-09-08 18:21:55,324][INFO] - Evaluating episode 21 ...
+[2026-09-08 18:21:55,333][INFO] - Episode 21: BaseEpisode(episode_id='23', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: In case the fridge remains open, perform a transfer of an book to the brown table; when closed, execute a transfer of the box to the brown table.
+Planner Output Action: [13, 41, 7, 51]
+Executed action: navigate to the refrigerator, Task success: False
+Executed action: pick up the book, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [7, 36, 7, 51]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the box, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [13, 41, 7, 51]
+Executed action: navigate to the refrigerator, Task success: False
+Executed action: pick up the book, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [13]
+Executed action: navigate to the refrigerator, Task success: False
+Planner Output Action: [13, 41, 7, 51]
+Executed action: navigate to the refrigerator, Task success: False
+Executed action: pick up the book, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [13, 41, 7, 51]
+Executed action: navigate to the refrigerator, Task success: False
+Executed action: pick up the book, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  12%|█████████████████████████▍                                                                                                                                                                                          | 6/50 [02:42<23:28, 32.01s/it][2026-09-08 18:22:26,998][INFO] - Evaluating episode 22 ...
+[2026-09-08 18:22:27,013][INFO] - Episode 22: BaseEpisode(episode_id='3', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: Instead of finding an apple, I need a spatula on the left counter. Can you help?
+Planner Output Action: [11]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Planner Output Action: [24, 55]
+Executed action: pick up the spatula, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 24, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the spatula, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 24, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the spatula, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 24, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the spatula, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [24, 55]
+Executed action: pick up the spatula, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  14%|█████████████████████████████▋                                                                                                                                                                                      | 7/50 [03:08<21:30, 30.01s/it][2026-09-08 18:22:52,886][INFO] - Evaluating episode 23 ...
+[2026-09-08 18:22:52,955][INFO] - Episode 23: BaseEpisode(episode_id='1', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_13.scene_instance.json')
+Instruction: On the sofa there's an apple, but instead find a padlock and move it to the TV stand.
+Planner Output Action: [12, 20, 8, 52]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the padlock, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  16%|█████████████████████████████████▉                                                                                                                                                                                  | 8/50 [03:13<15:26, 22.07s/it][2026-09-08 18:22:57,956][INFO] - Evaluating episode 24 ...
+[2026-09-08 18:22:57,965][INFO] - Episode 24: BaseEpisode(episode_id='2', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_13.scene_instance.json')
+Instruction: There's an apple on the sofa, but on the right counter I need you to put a book.
+Planner Output Action: [12, 33, 10, 54, 8, 41, 10, 54]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the book, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [10, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+API retry 1/3 in 5s (HTTP 400); request unchanged
+Planner Output Action: [10, 8, 41, 10, 54]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the book, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+API retry 1/3 in 5s (HTTP 400); request unchanged
+API retry 2/3 in 10s (HTTP 400); request unchanged
+API retry 3/3 in 20s (HTTP 400); request unchanged
+Planner Output Action: [10]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+API retry 1/3 in 5s (HTTP 400); request unchanged
+API retry 2/3 in 10s (HTTP 400); request unchanged
+API retry 3/3 in 20s (HTTP 400); request unchanged
+API retries exhausted (FatalAPIError, HTTP 400)

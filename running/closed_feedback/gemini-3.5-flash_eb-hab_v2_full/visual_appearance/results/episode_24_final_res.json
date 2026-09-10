@@ -1,0 +1,1 @@
+{"reward": 0.55, "num_invalid_actions": 8, "empty_plan": 0, "instruction": "Take a yellow round fruit and position it within the right counter.", "task_success": true, "task_progress": 1.0, "subgoal_reward": 0.0, "num_steps": 25, "planner_steps": 6, "planner_output_error": 0, "num_invalid_action_ratio": 0.32, "episode_elapsed_seconds": [51.023595571517944]}

@@ -1,0 +1,307 @@
+{
+  "affected_group_rule": "goal expression recursively contains on_top(...) and requires pick",
+  "alpha": 0.05,
+  "analysis_type": "posthoc_diagnostic_not_threshold_selection",
+  "audit_affected_task_ids": [
+    "80",
+    "82",
+    "83",
+    "84",
+    "86",
+    "87",
+    "89",
+    "90",
+    "91",
+    "93",
+    "94",
+    "96",
+    "97",
+    "99"
+  ],
+  "bootstrap_samples": 10000,
+  "candidates": [
+    {
+      "audit_affected": {
+        "bootstrap_lcb": -0.0585719217036641,
+        "definition": "goal expression recursively contains on_top(...) and requires pick",
+        "mean_delta": 0.05870188149119172,
+        "n_tasks": 14
+      },
+      "audit_classification_epsilon_0": "beneficial",
+      "audit_global": {
+        "bootstrap_lcb": -0.04091986621734904,
+        "mean_delta": 0.04164687259938976,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": 0.0,
+        "definition": "all remaining tasks",
+        "mean_delta": 0.0018518518518518513,
+        "n_tasks": 6,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "877fa9621cd18158701649234887126370416541983bcf7ed34b3d4c031aed39",
+      "compiled_rule_check": {
+        "effect_pick_rule_after": "true",
+        "pick_rule_after": null,
+        "place_rule_after": null,
+        "target_fault": "effect_pick_inversion",
+        "unrelated_place_rule_corrupted": false
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "fd930f4c2ceaf87d9ac0",
+      "recorded_gate_accepted": false,
+      "selection_finalist": null,
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": -0.2043227634303149,
+        "mean_delta": -0.004322763430314925,
+        "passed": false,
+        "worst_subgroup_delta": -0.5
+      }
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": -0.059059811324848895,
+        "definition": "goal expression recursively contains on_top(...) and requires pick",
+        "mean_delta": 0.05870188149119172,
+        "n_tasks": 14
+      },
+      "audit_classification_epsilon_0": "beneficial",
+      "audit_global": {
+        "bootstrap_lcb": -0.04061786656008624,
+        "mean_delta": 0.04164687259938976,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": 0.0,
+        "definition": "all remaining tasks",
+        "mean_delta": 0.0018518518518518513,
+        "n_tasks": 6,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "877fa9621cd18158701649234887126370416541983bcf7ed34b3d4c031aed39",
+      "compiled_rule_check": {
+        "effect_pick_rule_after": "true",
+        "pick_rule_after": null,
+        "place_rule_after": null,
+        "target_fault": "effect_pick_inversion",
+        "unrelated_place_rule_corrupted": false
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "fd930f4c2ceaf87d9ac0",
+      "recorded_gate_accepted": false,
+      "selection_finalist": null,
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": -0.2043227634303149,
+        "mean_delta": -0.004322763430314925,
+        "passed": false,
+        "worst_subgroup_delta": -0.5
+      }
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": -0.18113440652914337,
+        "definition": "goal expression recursively contains on_top(...) and requires pick",
+        "mean_delta": -0.03191819008180564,
+        "n_tasks": 14
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.12493507319022193,
+        "mean_delta": -0.02178717750170839,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": 0.0,
+        "definition": "all remaining tasks",
+        "mean_delta": 0.0018518518518518513,
+        "n_tasks": 6,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "99c20ee6b002c217cdec6e13309676e9087b9987c6564f76ccac61dc5d247abc",
+      "compiled_rule_check": {
+        "effect_pick_rule_after": null,
+        "pick_rule_after": null,
+        "place_rule_after": null,
+        "target_fault": "effect_pick_inversion",
+        "unrelated_place_rule_corrupted": false
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "28b2ae020da3f5270d25",
+      "recorded_gate_accepted": false,
+      "selection_finalist": null,
+      "selection_proxy": null
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": -0.05909942330259426,
+        "definition": "goal expression recursively contains on_top(...) and requires pick",
+        "mean_delta": 0.05870188149119172,
+        "n_tasks": 14
+      },
+      "audit_classification_epsilon_0": "beneficial",
+      "audit_global": {
+        "bootstrap_lcb": -0.04095446125194408,
+        "mean_delta": 0.04164687259938976,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": 0.0,
+        "definition": "all remaining tasks",
+        "mean_delta": 0.0018518518518518513,
+        "n_tasks": 6,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "877fa9621cd18158701649234887126370416541983bcf7ed34b3d4c031aed39",
+      "compiled_rule_check": {
+        "effect_pick_rule_after": "true",
+        "pick_rule_after": null,
+        "place_rule_after": null,
+        "target_fault": "effect_pick_inversion",
+        "unrelated_place_rule_corrupted": false
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "fd930f4c2ceaf87d9ac0",
+      "recorded_gate_accepted": false,
+      "selection_finalist": null,
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": -0.2043227634303149,
+        "mean_delta": -0.004322763430314925,
+        "passed": false,
+        "worst_subgroup_delta": -0.5
+      }
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": -0.09687801616373044,
+        "definition": "goal expression recursively contains on_top(...) and requires pick",
+        "mean_delta": 0.02048916596018046,
+        "n_tasks": 14
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.0676384479717813,
+        "mean_delta": 0.014897971727681874,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": 0.0,
+        "definition": "all remaining tasks",
+        "mean_delta": 0.0018518518518518513,
+        "n_tasks": 6,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "d5504405fb2bbcb13a22a2360043dfd1b4edac8b44371b5b4cb3000c109864a0",
+      "compiled_rule_check": {
+        "effect_pick_rule_after": "true",
+        "pick_rule_after": null,
+        "place_rule_after": null,
+        "target_fault": "effect_pick_inversion",
+        "unrelated_place_rule_corrupted": false
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "3e87cdf8df19266493e6",
+      "recorded_gate_accepted": false,
+      "selection_finalist": null,
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": -0.0004166666666666652,
+        "mean_delta": 0.19500755565384048,
+        "passed": false,
+        "worst_subgroup_delta": -0.006249999999999978
+      }
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": 0.005123117623117619,
+        "definition": "goal expression recursively contains on_top(...) and requires pick",
+        "mean_delta": 0.08212313149813151,
+        "n_tasks": 14
+      },
+      "audit_classification_epsilon_0": "beneficial",
+      "audit_global": {
+        "bootstrap_lcb": 0.004354677629134143,
+        "mean_delta": 0.05859730315980316,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": 0.0,
+        "definition": "all remaining tasks",
+        "mean_delta": 0.0037037037037037025,
+        "n_tasks": 6,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "3676fbb4d35675adee5473a497b79c919bd533ef5ee1e277c13c7c3de02d645d",
+      "compiled_rule_check": {
+        "effect_pick_rule_after": "true",
+        "pick_rule_after": null,
+        "place_rule_after": null,
+        "target_fault": "effect_pick_inversion",
+        "unrelated_place_rule_corrupted": false
+      },
+      "diagnostic_affected_plus_protected_policy_pass": true,
+      "patch_id": "744c8e26442ffa7058da",
+      "recorded_gate_accepted": false,
+      "selection_finalist": null,
+      "selection_proxy": {
+        "episodes": 10.0,
+        "independent_tasks": 10.0,
+        "lcb": -0.015764411027568925,
+        "mean_delta": 0.09458333333333332,
+        "passed": false,
+        "worst_subgroup_delta": 0.0
+      }
+    },
+    {
+      "audit_affected": {
+        "bootstrap_lcb": -0.15633954562321675,
+        "definition": "goal expression recursively contains on_top(...) and requires pick",
+        "mean_delta": -0.0245237869052841,
+        "n_tasks": 14
+      },
+      "audit_classification_epsilon_0": "harmful",
+      "audit_global": {
+        "bootstrap_lcb": -0.11137343358395987,
+        "mean_delta": -0.016611095278143313,
+        "n_tasks": 20
+      },
+      "audit_protected": {
+        "bootstrap_lcb": 0.0,
+        "definition": "all remaining tasks",
+        "mean_delta": 0.0018518518518518513,
+        "n_tasks": 6,
+        "noninferiority_margin": -0.05
+      },
+      "candidate_sha256": "5175c7d58af398ebf60a47d86ca7103babdb8672357641f8cd43047dd49e5e18",
+      "compiled_rule_check": {
+        "effect_pick_rule_after": null,
+        "pick_rule_after": null,
+        "place_rule_after": null,
+        "target_fault": "effect_pick_inversion",
+        "unrelated_place_rule_corrupted": false
+      },
+      "diagnostic_affected_plus_protected_policy_pass": false,
+      "patch_id": "2a6f955f6e8ee7c6babf",
+      "recorded_gate_accepted": false,
+      "selection_finalist": null,
+      "selection_proxy": null
+    }
+  ],
+  "fault": "effect_pick_inversion",
+  "interpretation_guardrail": "Audit outcomes were already observed. Use this result to formulate and power a preregistered policy, never to select its final threshold.",
+  "materialized_candidate_count": 7,
+  "non_materialized_candidate_count": 0,
+  "non_materialized_candidates": [],
+  "proposal_attempt_count": 7,
+  "semantic_policy_pass_count": 1,
+  "source_run": "running/Phase2/phase2_effect_pick_inversion/full/seed_0",
+  "unique_candidate_hash_count": 5,
+  "unrelated_rule_corruption_count": 0
+}

@@ -1,0 +1,9 @@
+{
+  "phase": "Phase3C",
+  "service": "phase3c_vllm",
+  "shutdown_local_time": "2026-08-25T15:57:00+08:00",
+  "shutdown_reason": "All eligible Phase3C branches completed or were cancelled by the frozen offline No-Go gate.",
+  "gpu_memory_after_shutdown_mib": 106,
+  "gpu_utilization_after_shutdown_percent": 0,
+  "recoverability": "The service can be relaunched from scripts/serve_qwen3vl_vllm.sh; all experiment artifacts and logs are retained."
+}

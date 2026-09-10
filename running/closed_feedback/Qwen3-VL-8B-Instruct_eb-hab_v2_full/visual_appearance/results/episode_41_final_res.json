@@ -1,0 +1,1 @@
+{"reward": 0.09259259259259259, "num_invalid_actions": 9, "empty_plan": 1, "instruction": "Lift a small purple cube-shaped object off the right counter.", "task_success": 0, "task_progress": 0, "subgoal_reward": 0, "num_steps": 18, "planner_steps": 10, "planner_output_error": 0, "num_invalid_action_ratio": 0.5, "episode_elapsed_seconds": 39.270951986312866}

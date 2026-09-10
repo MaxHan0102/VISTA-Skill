@@ -1,5 +1,22 @@
 # VISTA-Skill P0 Implementation
 
+The closed-source executor feedback comparison is available through
+`scripts/evaluate_closed_loop_feedback.py` (EB-Habitat/EB-Navigation), now using
+the stock evaluator, planner, RemoteModel and native result/log formats under
+`stock_feedback_v2`. Defaults come from official YAML (single-frame RGB and
+multi-action plans). RGB-only mode minimally removes feedback history and the
+hidden-failure replanning branch in memory; full mode retains stock behavior.
+The former independent three-frame/single-action v1 loop has been removed;
+its historical pilot results remain separate. API setup and launch commands are in
+[the baseline guide](closed_source_feedback_baselines.md). This does not yet
+implement information isolation for the full VISTA evolution pipeline.
+
+As of 2026-09-10, all eight GPT/Gemini/Qwen w/o feedback baseline runs are
+complete (2,400 tasks). The [final log](experiment_log_wo_feedback_baselines.md)
+records per-subset results, dataset/result provenance, schema revisions and
+retry-cost limitations. These are executor-only baselines, not VISTA-Skill
+method results or a fully verified causal comparison with historical w/ rows.
+
 The opt-in 2026-09-07 P5.7 bounded recovery diagnostic is implemented in
 `scripts/phase5_recovery_pilot.py`, with its protocol in
 `configs/phase5_p57_recovery_pilot.json`. It discovers a constrained temporal
@@ -304,7 +321,7 @@ Frozen audit never constructs an attribution or patch teacher:
 ```bash
 PYTHONPATH=EmbodiedBench:. python -m vista_skill.integrations.embodiedbench.cli \
   evaluate --mode frozen_skill \
-  --skill running/vista_skill/full/seed_0/frozen_skill.json --stage audit
+  --skill running/Phase1/vista_skill/full/seed_0/frozen_skill.json --stage audit
 ```
 
 `experiment` also writes `seed_<n>/update_audit.json`, proposal snapshots under
@@ -384,7 +401,7 @@ reference exactly over 102 transitions and mapped all 624 post queries.
 
 Phase3A then collected 40 natural and 20 fixed-script stress episodes and
 froze a 300-transition, scene-disjoint dev/selection/audit dataset at
-`running/phase3a/phase3a_dataset_v3_cachefix_20260825.json`.  Two 300-call
+`running/Phase3/phase3a/phase3a_dataset_v3_cachefix_20260825.json`.  Two 300-call
 Qwen caches cover feedback-conditioned and images-only evidence.  The final
 Guard v2 adds outcome-aware rejection, failed-action temporal persistence,
 action-local visual relevance, conservative negative spatial relations, and
@@ -394,7 +411,7 @@ method, so live `--evidence-guard strict|authority_aware` does not add a second
 visual call.
 
 The frozen audit result is
-`running/phase3a/phase3a_guard_v2_frozen_audit_v4_20260825.json`.  It is a
+`running/Phase3/phase3a/phase3a_guard_v2_frozen_audit_v4_20260825.json`.  It is a
 pre-registered **No-Go**: false contradictions fell from 0.00738 to zero and
 Skill-update recall stayed at 1.0, but the paired 95% CI included zero and
 coverage fell by 14.85 percentage points versus the matched threshold arm.
@@ -414,7 +431,7 @@ was precise when asserted (`0.9655`) but had only `0.0544` coverage,
 fell below the strict pair arm (`0.0966` versus `0.1523`).  Phase3B is therefore
 a pre-registered No-Go: selection metrics, fresh episodes 60--79, fresh audit,
 and late-feedback fusion were not opened.  The immutable decision artifact is
-`running/phase3b/phase3b_final_decision_20260825.json`; full causality and cost
+`running/Phase3/phase3b/phase3b_final_decision_20260825.json`; full causality and cost
 records are in `docs/experiment_log_phase3.md`.
 
 Phase3C tested whether three short, frozen, environment-neutral Meta-Skills
@@ -435,7 +452,7 @@ already 10/10, so this is non-regression rather than incremental value.  The
 matched core Meta arm used 1.4313x the teacher/patch tokens.  Per the
 pre-registration, EB-Hab executor/live evolution and EB-Nav zero-shot branches
 were cancelled and Phase3C v1 is not enabled in the main method.  The immutable
-decision is `running/phase3c/offline/phase3c_offline_decision.json`; detailed
+decision is `running/Phase3/phase3c/offline/phase3c_offline_decision.json`; detailed
 causality and limitations are in `docs/experiment_log_phase3.md`.
 
 Phase4 P4-O1 added two frozen, five-field, post-hoc human Target Skills for

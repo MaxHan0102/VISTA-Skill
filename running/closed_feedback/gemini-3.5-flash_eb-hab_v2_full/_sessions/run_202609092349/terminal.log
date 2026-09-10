@@ -1,0 +1,1548 @@
+Output directory: /root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/_sessions/run_202609092349
+[2026-09-09 23:50:02,737][INFO] - Current eval set: long_horizon
+2026-09-09 23:50:02,842 Initializing dataset LangRearrangeDataset-v0
+2026-09-09 23:50:02,842 Loading from /root/max/VISTA-Skill/EmbodiedBench/embodiedbench/envs/eb_habitat/datasets/long_horizon.pickle
+2026-09-09 23:50:02,846 initializing sim RearrangeSim-v0
+2026-09-09 23:50:04,249 Initializing task RearrangePredicateTask-v0
+Num episodes 50
+Episodes:   0%|                                                                                                                                                                                                                            | 0/50 [00:00<?, ?it/s][2026-09-09 23:50:04,374][INFO] - Evaluating episode 0 ...
+[2026-09-09 23:50:05,674][INFO] - Episode 0: BaseEpisode(episode_id='39', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_14.scene_instance.json')
+Instruction: Transport all plate and put them on the right counter.
+Planner Output Action: [6, 27, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [7, 27, 10, 54]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [12, 27, 10, 54]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [8, 27, 10, 54]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [5, 27, 10, 54, 11, 27, 10, 54, 9, 27, 10, 54]
+Executed action: navigate to the chair 1, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:   2%|████▏                                                                                                                                                                                                               | 1/50 [00:35<29:01, 35.53s/it][2026-09-09 23:50:39,905][INFO] - Evaluating episode 1 ...
+[2026-09-09 23:50:39,917][INFO] - Episode 1: BaseEpisode(episode_id='33', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_14.scene_instance.json')
+Instruction: Move all the hammer to the right counter.
+Planner Output Action: [6, 18, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [7, 18, 10, 54]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [8, 18, 10, 54]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [12, 18, 10, 54]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [11, 18, 10, 54]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:   4%|████████▍                                                                                                                                                                                                           | 2/50 [01:10<28:03, 35.08s/it][2026-09-09 23:51:14,667][INFO] - Evaluating episode 2 ...
+[2026-09-09 23:51:14,679][INFO] - Episode 2: BaseEpisode(episode_id='13', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_14.scene_instance.json')
+Instruction: Deposit all apple onto the TV stand.
+Planner Output Action: [6, 33, 8, 52]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [7, 33, 8, 52]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [12, 33, 8, 52]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [11, 33, 8, 52, 10, 33, 8, 52]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the apple, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:   6%|████████████▋                                                                                                                                                                                                       | 3/50 [01:33<23:12, 29.63s/it][2026-09-09 23:51:37,820][INFO] - Evaluating episode 3 ...
+[2026-09-09 23:51:37,831][INFO] - Episode 3: BaseEpisode(episode_id='25', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_14.scene_instance.json')
+Instruction: Securely position all hammer on the brown table.
+Planner Output Action: [6, 18, 7, 51]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [12, 18, 7, 51]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [8, 18, 7, 51]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [5, 18, 7, 51]
+Executed action: navigate to the chair 1, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [10, 18, 7, 51]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [11, 18, 7, 51, 9, 18, 7, 51]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:   8%|████████████████▉                                                                                                                                                                                                   | 4/50 [02:03<22:52, 29.84s/it][2026-09-09 23:52:07,968][INFO] - Evaluating episode 4 ...
+[2026-09-09 23:52:08,237][INFO] - Episode 4: BaseEpisode(episode_id='30', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the ball to the brown table, the block to the brown table, and the hammer to the black table.
+Planner Output Action: [12, 16, 7, 51, 8, 22, 7, 51, 11, 18, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the block, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+An unexpected error occurred: Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4080, prompt_tokens=5307, total_tokens=9387, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3928, rejected_prediction_tokens=None, text_tokens=152), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=4218, image_tokens=0))
+Planner Output Action: [16, 7, 51, 6, 22, 7, 51]
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the block, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [18, 6, 50]
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  10%|█████████████████████▏                                                                                                                                                                                              | 5/50 [03:46<42:11, 56.26s/it][2026-09-09 23:53:51,083][INFO] - Evaluating episode 5 ...
+[2026-09-09 23:53:51,093][INFO] - Episode 5: BaseEpisode(episode_id='38', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the rubriks cube to the left counter, the wrench to the left counter, and the bowl to the brown table.
+Planner Output Action: [12, 40, 11, 55, 8, 48, 11, 55, 6, 42, 7, 51]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the wrench, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [11, 42, 7, 51]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [42, 51]
+Executed action: pick up the bowl, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [6, 42, 7, 51]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+An unexpected error occurred: Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4487, prompt_tokens=6091, total_tokens=10578, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=4323, rejected_prediction_tokens=None, text_tokens=149), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=4417, image_tokens=0))
+Planner Output Action: [5, 42, 7, 51]
+Executed action: navigate to the chair 1, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  12%|█████████████████████████▍                                                                                                                                                                                          | 6/50 [05:44<56:31, 77.08s/it][2026-09-09 23:55:48,577][INFO] - Evaluating episode 6 ...
+[2026-09-09 23:55:48,587][INFO] - Episode 6: BaseEpisode(episode_id='43', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the hammer to the black table, the screwdriver to the left counter, and the bowl to the black table.
+Planner Output Action: [12, 18, 6, 50, 12, 19, 11, 55, 7, 42, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [19, 11, 55]
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [55]
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+An unexpected error occurred: Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4490, prompt_tokens=6016, total_tokens=10506, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=4323, rejected_prediction_tokens=None, text_tokens=152), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=4349, image_tokens=0))
+Planner Output Action: [55]
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [11, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [55]
+Executed action: place at the left counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  14%|█████████████████████████████▍                                                                                                                                                                                    | 7/50 [08:10<1:11:33, 99.84s/it][2026-09-09 23:58:15,271][INFO] - Evaluating episode 7 ...
+[2026-09-09 23:58:15,281][INFO] - Episode 7: BaseEpisode(episode_id='0', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the screwdriver to the brown table, the book to the black table, and the cleanser to the brown table.
+Planner Output Action: [12, 19, 7, 51, 8, 41, 6, 50, 9, 29, 7, 51]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the book, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [51]
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [6]
+Executed action: navigate to the table 1, Task success: False
+Planner Output Action: [7, 51, 8, 41, 6, 50, 9, 29, 7, 51]
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the book, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  16%|█████████████████████████████████▌                                                                                                                                                                                | 8/50 [09:16<1:02:18, 89.02s/it][2026-09-09 23:59:21,115][INFO] - Evaluating episode 8 ...
+[2026-09-09 23:59:21,125][INFO] - Episode 8: BaseEpisode(episode_id='17', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the plate to the black table, the bowl to the black table, and the hammer to the black table.
+An unexpected error occurred: Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4490, prompt_tokens=5592, total_tokens=10083, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=4321, rejected_prediction_tokens=None, text_tokens=154), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3964, image_tokens=0))
+Planner Output Action: [9, 27, 6, 50, 7, 42, 6, 50, 12, 18, 6, 50]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [6]
+Executed action: navigate to the table 1, Task success: False
+Planner Output Action: [6]
+Executed action: navigate to the table 1, Task success: False
+An unexpected error occurred: Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4490, prompt_tokens=5922, total_tokens=10413, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=4323, rejected_prediction_tokens=None, text_tokens=152), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=4264, image_tokens=0))
+Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4490, prompt_tokens=5922, total_tokens=10413, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=4322, rejected_prediction_tokens=None, text_tokens=153), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=4264, image_tokens=0))
+Planner Output Action: [6]
+Executed action: navigate to the table 1, Task success: False
+Planner Output Action: [8]
+Executed action: navigate to the TV stand, Task success: False
+Planner Output Action: [5, 18, 6, 50]
+Executed action: navigate to the chair 1, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [8, 18, 6, 50, 10, 18, 6, 50]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  18%|█████████████████████████████████████▌                                                                                                                                                                           | 9/50 [13:47<1:39:39, 145.84s/it][2026-09-10 00:03:51,899][INFO] - Evaluating episode 9 ...
+[2026-09-10 00:03:51,909][INFO] - Episode 9: BaseEpisode(episode_id='15', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the rubriks cube to the black table, the hammer to the left counter, and the lemon to the brown table.
+Planner Output Action: [12, 40, 6, 50, 8, 18, 11, 55, 10, 34, 7, 51]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [18, 11, 55]
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+An unexpected error occurred: Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4490, prompt_tokens=5960, total_tokens=10450, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=4326, rejected_prediction_tokens=None, text_tokens=149), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=4298, image_tokens=0))
+Planner Output Action: [11]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Planner Output Action: [11]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Planner Output Action: [11]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Planner Output Action: [11]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Planner Output Action: [6]
+Executed action: navigate to the table 1, Task success: False
+Planner Output Action: [34, 7, 51, 12, 40, 6, 50, 8, 18, 11, 55]
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  20%|█████████████████████████████████████████▌                                                                                                                                                                      | 10/50 [16:12<1:37:02, 145.57s/it][2026-09-10 00:06:16,866][INFO] - Evaluating episode 10 ...
+[2026-09-10 00:06:16,876][INFO] - Episode 10: BaseEpisode(episode_id='10', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the ball to the left counter, the spoon to the black table, and the bowl to the left counter.
+Planner Output Action: [11]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Planner Output Action: [7, 16, 11, 55, 8, 26, 6, 50, 12, 42, 11, 55]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the spoon, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [55, 8, 26, 6, 50, 12, 42, 11, 55]
+Executed action: place at the left counter in the kitchen, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the spoon, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [55, 8, 26, 6, 50, 12, 42, 11, 55]
+Executed action: place at the left counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  22%|█████████████████████████████████████████████▊                                                                                                                                                                  | 11/50 [16:40<1:11:08, 109.44s/it][2026-09-10 00:06:44,394][INFO] - Evaluating episode 11 ...
+[2026-09-10 00:06:44,404][INFO] - Episode 11: BaseEpisode(episode_id='2', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the wrench to the black table, the book to the left counter, and the cleanser to the left counter.
+An unexpected error occurred: Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4490, prompt_tokens=5592, total_tokens=10083, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=4321, rejected_prediction_tokens=None, text_tokens=154), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3964, image_tokens=0))
+Planner Output Action: [11, 48, 6, 50]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the wrench, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 41, 11, 55, 8, 29, 11, 55]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the book, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+An unexpected error occurred: Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4490, prompt_tokens=5897, total_tokens=10387, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=4327, rejected_prediction_tokens=None, text_tokens=148), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=4241, image_tokens=0))
+Planner Output Action: [11]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Planner Output Action: [11]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Planner Output Action: [6]
+Executed action: navigate to the table 1, Task success: False
+Planner Output Action: [11]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Planner Output Action: [6]
+Executed action: navigate to the table 1, Task success: False
+An unexpected error occurred: Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4491, prompt_tokens=6001, total_tokens=10491, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=4329, rejected_prediction_tokens=None, text_tokens=147), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=4335, image_tokens=0))
+Planner Output Action: [7, 48, 6, 50]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the wrench, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [11]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+An unexpected error occurred: Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4490, prompt_tokens=6097, total_tokens=10588, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=4325, rejected_prediction_tokens=None, text_tokens=150), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=4423, image_tokens=0))
+Planner Output Action: [8, 29, 11, 55, 12, 41, 11, 55, 7, 48, 6, 50]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the book, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  24%|█████████████████████████████████████████████████▉                                                                                                                                                              | 12/50 [24:02<2:13:24, 210.64s/it][2026-09-10 00:14:06,475][INFO] - Evaluating episode 12 ...
+[2026-09-10 00:14:06,485][INFO] - Episode 12: BaseEpisode(episode_id='8', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the spoon to the brown table, the sponge to the brown table, and the cleanser to the black table.
+Planner Output Action: [10, 26, 7, 51, 11, 28, 7, 51, 9, 29, 6, 50]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the spoon, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the sponge, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+An unexpected error occurred: Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4490, prompt_tokens=5893, total_tokens=10383, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=4321, rejected_prediction_tokens=None, text_tokens=154), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=4237, image_tokens=0))
+Planner Output Action: [6]
+Executed action: navigate to the table 1, Task success: False
+Planner Output Action: [6]
+Executed action: navigate to the table 1, Task success: False
+Planner Output Action: [7]
+Executed action: navigate to the table 2, Task success: False
+Planner Output Action: [9, 29, 6, 50]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+An unexpected error occurred: Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4487, prompt_tokens=6025, total_tokens=10512, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=4323, rejected_prediction_tokens=None, text_tokens=149), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=4357, image_tokens=0))
+Planner Output Action: [7]
+Executed action: navigate to the table 2, Task success: False
+Planner Output Action: [6]
+Executed action: navigate to the table 1, Task success: False
+Planner Output Action: [7]
+Executed action: navigate to the table 2, Task success: False
+An unexpected error occurred: Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4080, prompt_tokens=5484, total_tokens=9564, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3932, rejected_prediction_tokens=None, text_tokens=148), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=4395, image_tokens=0))
+Planner Output Action: [6]
+Executed action: navigate to the table 1, Task success: False
+Planner Output Action: [7]
+Executed action: navigate to the table 2, Task success: False
+Planner Output Action: [6]
+Executed action: navigate to the table 1, Task success: False
+Planner Output Action: [7]
+Executed action: navigate to the table 2, Task success: False
+Planner Output Action: [6]
+Executed action: navigate to the table 1, Task success: False
+An unexpected error occurred: Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4081, prompt_tokens=5569, total_tokens=9650, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3928, rejected_prediction_tokens=None, text_tokens=153), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=4480, image_tokens=0))
+Planner Output Action: [8, 28, 7, 51]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the sponge, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  26%|██████████████████████████████████████████████████████                                                                                                                                                          | 13/50 [33:38<3:18:11, 321.39s/it][2026-09-10 00:23:42,715][INFO] - Evaluating episode 13 ...
+[2026-09-10 00:23:42,725][INFO] - Episode 13: BaseEpisode(episode_id='31', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the cleanser to the brown table, the sponge to the left counter, and the screwdriver to the left counter.
+Planner Output Action: [12, 29, 7, 51, 8, 28, 11, 55, 6, 19, 11, 55]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the sponge, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [10, 19, 11, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [5, 19, 11, 55]
+Executed action: navigate to the chair 1, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  28%|██████████████████████████████████████████████████████████▏                                                                                                                                                     | 14/50 [34:43<2:26:27, 244.10s/it][2026-09-10 00:24:48,210][INFO] - Evaluating episode 14 ...
+[2026-09-10 00:24:48,219][INFO] - Episode 14: BaseEpisode(episode_id='12', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the rubriks cube to the brown table, the drill to the black table, and the lemon to the black table.
+Planner Output Action: [8]
+Executed action: navigate to the TV stand, Task success: False
+Planner Output Action: [12]
+Executed action: navigate to the sofa, Task success: False
+Planner Output Action: [34, 6, 50, 8, 40, 7, 51, 8, 23, 6, 50]
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the drill, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [40, 7, 51, 11, 34, 6, 50, 10, 23, 6, 50]
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the drill, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  30%|██████████████████████████████████████████████████████████████▍                                                                                                                                                 | 15/50 [35:44<1:50:11, 188.90s/it][2026-09-10 00:25:49,189][INFO] - Evaluating episode 15 ...
+[2026-09-10 00:25:49,199][INFO] - Episode 15: BaseEpisode(episode_id='46', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the lemon to the left counter, the block to the brown table, and the bowl to the brown table.
+Planner Output Action: [8, 34, 11, 55, 12, 22, 7, 51, 6, 42, 7, 51]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the block, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [34, 11, 55]
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  32%|██████████████████████████████████████████████████████████████████▌                                                                                                                                             | 16/50 [36:17<1:20:26, 141.94s/it][2026-09-10 00:26:22,088][INFO] - Evaluating episode 16 ...
+[2026-09-10 00:26:22,098][INFO] - Episode 16: BaseEpisode(episode_id='37', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the drill to the left counter, the bowl to the black table, and the screwdriver to the left counter.
+Planner Output Action: [11, 42, 6, 50, 10, 19, 11, 55, 7, 23, 11, 55]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the drill, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [23, 55]
+Executed action: pick up the drill, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [12, 19, 11, 55]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [8, 19, 11, 55]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [5, 19, 11, 55]
+Executed action: navigate to the chair 1, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [14, 19, 11, 55]
+Executed action: navigate to the left drawer of the kitchen counter, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  34%|██████████████████████████████████████████████████████████████████████▋                                                                                                                                         | 17/50 [38:15<1:14:04, 134.69s/it][2026-09-10 00:28:19,907][INFO] - Evaluating episode 17 ...
+[2026-09-10 00:28:19,917][INFO] - Episode 17: BaseEpisode(episode_id='6', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the wrench to the black table, the sponge to the black table, and the hammer to the brown table.
+Planner Output Action: [12, 48, 6, 50, 8, 28, 6, 50, 10, 18, 7, 51]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the wrench, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the sponge, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [28, 6, 50]
+Executed action: pick up the sponge, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [7, 51]
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [6]
+Executed action: navigate to the table 1, Task success: False
+Planner Output Action: [18, 7, 51]
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [48, 6, 50]
+Executed action: pick up the wrench, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [11, 48, 6, 50]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the wrench, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  36%|██████████████████████████████████████████████████████████████████████████▉                                                                                                                                     | 18/50 [41:17<1:19:27, 148.99s/it][2026-09-10 00:31:22,181][INFO] - Evaluating episode 18 ...
+[2026-09-10 00:31:22,190][INFO] - Episode 18: BaseEpisode(episode_id='21', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the ball to the brown table, the cleanser to the black table, and the lemon to the brown table.
+Planner Output Action: [6, 34, 7, 51]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [12, 16, 7, 51, 11, 29, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [16, 7, 51]
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [9, 16, 7, 51]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [11, 34, 7, 51, 5, 16, 7, 51]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  38%|███████████████████████████████████████████████████████████████████████████████                                                                                                                                 | 19/50 [42:41<1:06:52, 129.42s/it][2026-09-10 00:32:46,017][INFO] - Evaluating episode 19 ...
+[2026-09-10 00:32:46,026][INFO] - Episode 19: BaseEpisode(episode_id='3', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the lemon to the left counter, the plate to the brown table, and the bowl to the black table.
+Planner Output Action: [12, 34, 11, 55, 7, 42, 6, 50, 10, 27, 7, 51]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [9, 27, 7, 51]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [8, 27, 7, 51]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [2, 64, 27, 7, 51]
+Executed action: navigate to the cabinet 5, Task success: False
+Executed action: open the cabinet 5, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  40%|████████████████████████████████████████████████████████████████████████████████████                                                                                                                              | 20/50 [44:01<57:20, 114.69s/it][2026-09-10 00:34:06,365][INFO] - Evaluating episode 20 ...
+[2026-09-10 00:34:06,540][INFO] - Episode 20: BaseEpisode(episode_id='47', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Set down all the spoon onto the right counter.
+Planner Output Action: [6, 26, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the spoon, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [6, 26, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the spoon, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [7, 26, 10, 54]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the spoon, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  42%|████████████████████████████████████████████████████████████████████████████████████████▌                                                                                                                          | 21/50 [45:03<47:41, 98.68s/it][2026-09-10 00:35:07,715][INFO] - Evaluating episode 21 ...
+[2026-09-10 00:35:07,730][INFO] - Episode 21: BaseEpisode(episode_id='5', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the lemon to the black table, the book to the left counter, and the hammer to the brown table.
+Planner Output Action: [12]
+Executed action: navigate to the sofa, Task success: False
+Planner Output Action: [34, 6, 50, 7]
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Planner Output Action: [8]
+Executed action: navigate to the TV stand, Task success: False
+Planner Output Action: [5]
+Executed action: navigate to the chair 1, Task success: False
+Planner Output Action: [10]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Planner Output Action: [18, 7, 51, 8, 41, 11, 55]
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the book, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [6]
+Executed action: navigate to the table 1, Task success: False
+Planner Output Action: [18, 7, 51]
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [18, 51]
+Executed action: pick up the hammer, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [11, 34, 6, 50]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [41, 11, 55]
+Executed action: pick up the book, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [9, 34, 6, 50, 5, 18, 7, 51]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the lemon, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  44%|███████████████████████████████████████████████████████████████████████████████████████████▌                                                                                                                    | 22/50 [50:41<1:19:37, 170.63s/it][2026-09-10 00:40:46,143][INFO] - Evaluating episode 22 ...
+[2026-09-10 00:40:46,153][INFO] - Episode 22: BaseEpisode(episode_id='40', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the plate to the brown table, the bowl to the black table, and the hammer to the black table.
+Planner Output Action: [11, 42, 6, 50, 10, 18, 6, 50]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [27, 7, 51]
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [9, 27, 7, 51]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [18, 6, 50]
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  46%|███████████████████████████████████████████████████████████████████████████████████████████████▋                                                                                                                | 23/50 [53:03<1:12:49, 161.85s/it][2026-09-10 00:43:07,516][INFO] - Evaluating episode 23 ...
+[2026-09-10 00:43:07,525][INFO] - Episode 23: BaseEpisode(episode_id='27', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the plate to the black table, the screwdriver to the black table, and the cleanser to the black table.
+Planner Output Action: [9, 29, 6, 50, 11, 27, 6, 50, 8, 19, 6, 50]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the plate, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [10, 29, 6, 50, 7, 19, 6, 50]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 29, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [5, 29, 6, 50]
+Executed action: navigate to the chair 1, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  48%|████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                                                                             | 24/50 [54:09<57:43, 133.23s/it][2026-09-10 00:44:13,973][INFO] - Evaluating episode 24 ...
+[2026-09-10 00:44:13,983][INFO] - Episode 24: BaseEpisode(episode_id='22', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the spoon to the black table, the hammer to the left counter, and the cleanser to the brown table.
+Planner Output Action: [10, 26, 6, 50, 12, 18, 11, 55, 9, 29, 7, 51]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the spoon, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [10, 18, 11, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [8, 18, 11, 55]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [5, 18, 11, 55]
+Executed action: navigate to the chair 1, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  50%|█████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                         | 25/50 [55:28<48:45, 117.03s/it][2026-09-10 00:45:33,212][INFO] - Evaluating episode 25 ...
+[2026-09-10 00:45:33,222][INFO] - Episode 25: BaseEpisode(episode_id='11', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the screwdriver to the left counter, the strawberry to the black table, and the hammer to the left counter.
+Planner Output Action: [7]
+Executed action: navigate to the table 2, Task success: False
+Planner Output Action: [19, 11, 55, 7, 18, 11, 55, 12, 38, 6, 50]
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the strawberry, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [19, 11, 55]
+Executed action: pick up the screwdriver, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [38, 6, 50]
+Executed action: pick up the strawberry, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  52%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                                                                     | 26/50 [56:24<39:26, 98.59s/it][2026-09-10 00:46:28,771][INFO] - Evaluating episode 26 ...
+[2026-09-10 00:46:28,781][INFO] - Episode 26: BaseEpisode(episode_id='29', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the rubriks cube to the black table, the cleanser to the left counter, and the lemon to the left counter.
+Planner Output Action: [12, 40, 6, 50, 9, 29, 11, 55]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the rubriks cube, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [7, 34, 11, 55]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [8, 34, 11, 55]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [10, 34, 11, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  54%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                                                                 | 27/50 [57:31<34:11, 89.17s/it][2026-09-10 00:47:35,988][INFO] - Evaluating episode 27 ...
+[2026-09-10 00:47:35,998][INFO] - Episode 27: BaseEpisode(episode_id='9', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the lemon to the brown table, the cleanser to the black table, and the hammer to the brown table.
+Planner Output Action: [11, 34, 7, 51, 12, 29, 6, 50, 8, 18, 7, 51]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the lemon, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [10, 18, 7, 51, 9, 29, 6, 50, 12, 34, 7, 51]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the hammer, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  56%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                                                                            | 28/50 [58:24<28:43, 78.32s/it][2026-09-10 00:48:28,994][INFO] - Evaluating episode 28 ...
+[2026-09-10 00:48:29,200][INFO] - Episode 28: BaseEpisode(episode_id='35', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_06.scene_instance.json')
+Instruction: Arrange all toy airplane on the TV stand.
+Planner Output Action: [12, 47, 8, 52]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the toy airplane, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [6, 47, 8, 52]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the toy airplane, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [7, 47, 8, 52]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the toy airplane, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [11, 47, 8, 52]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the toy airplane, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [10, 47, 8, 52]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the toy airplane, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  58%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                                                        | 29/50 [59:23<25:23, 72.57s/it][2026-09-10 00:49:28,143][INFO] - Evaluating episode 29 ...
+[2026-09-10 00:49:28,153][INFO] - Episode 29: BaseEpisode(episode_id='23', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_06.scene_instance.json')
+Instruction: Relocate every ball from left counter onto the black table.
+Planner Output Action: [11, 16, 6, 50]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [11, 16, 6, 50]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [11, 16, 6, 50]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [11, 16, 6, 50]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [11, 16, 6, 50]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  60%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                                                   | 30/50 [1:00:11<21:43, 65.17s/it][2026-09-10 00:50:16,043][INFO] - Evaluating episode 30 ...
+[2026-09-10 00:50:16,054][INFO] - Episode 30: BaseEpisode(episode_id='45', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_06.scene_instance.json')
+Instruction: Shift all the pear over to black table.
+Planner Output Action: [10, 31, 6, 50]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [10]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Planner Output Action: [11, 31, 6, 50]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [7, 31, 6, 50]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [12, 31, 6, 50]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  62%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                               | 31/50 [1:01:39<22:46, 71.94s/it][2026-09-10 00:51:43,787][INFO] - Evaluating episode 31 ...
+[2026-09-10 00:51:43,952][INFO] - Episode 31: BaseEpisode(episode_id='36', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_12.scene_instance.json')
+Instruction: Arrange all banana on the right counter.
+Planner Output Action: [12, 37, 10, 54]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the banana, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  64%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                                           | 32/50 [1:01:50<16:07, 53.74s/it][2026-09-10 00:51:55,040][INFO] - Evaluating episode 32 ...
+[2026-09-10 00:51:55,065][INFO] - Episode 32: BaseEpisode(episode_id='20', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_12.scene_instance.json')
+Instruction: Relocate every cleanser from sink onto the sofa.
+Planner Output Action: [9, 29, 12, 56]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [9, 29, 12, 56]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [9, 29, 12, 56]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [9, 29, 12, 56]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [9, 29, 12, 56]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  66%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                                       | 33/50 [1:02:39<14:50, 52.38s/it][2026-09-10 00:52:44,255][INFO] - Evaluating episode 33 ...
+[2026-09-10 00:52:44,267][INFO] - Episode 33: BaseEpisode(episode_id='7', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_12.scene_instance.json')
+Instruction: Place all the drill onto the TV stand.
+Planner Output Action: [10, 23, 8, 52]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the drill, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [6, 23, 8, 52]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the drill, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [7, 23, 8, 52]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the drill, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [12, 23, 8, 52]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the drill, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  68%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                   | 34/50 [1:03:15<12:36, 47.29s/it][2026-09-10 00:53:19,657][INFO] - Evaluating episode 34 ...
+[2026-09-10 00:53:19,788][INFO] - Episode 34: BaseEpisode(episode_id='44', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_11.scene_instance.json')
+Instruction: Shift all the mug over to TV stand.
+Planner Output Action: [6, 44, 8, 52]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the mug, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [7, 44, 8, 52]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the mug, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [12, 44, 8, 52]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the mug, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [10, 44, 8, 52]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the mug, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: False
+Planner Output Action: [11, 44, 8, 52]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the mug, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  70%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                              | 35/50 [1:04:53<15:39, 62.63s/it][2026-09-10 00:54:58,084][INFO] - Evaluating episode 35 ...
+[2026-09-10 00:54:58,299][INFO] - Episode 35: BaseEpisode(episode_id='19', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_09.scene_instance.json')
+Instruction: Carefully load all orange onto the brown table.
+Planner Output Action: [6, 45, 7, 51]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the orange, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  72%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                          | 36/50 [1:05:03<10:55, 46.85s/it][2026-09-10 00:55:08,134][INFO] - Evaluating episode 36 ...
+[2026-09-10 00:55:08,145][INFO] - Episode 36: BaseEpisode(episode_id='14', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_09.scene_instance.json')
+Instruction: Transfer all ball to the brown table.
+Planner Output Action: [16, 7, 51]
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [6, 16, 7, 51]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [6, 16, 7, 51]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [6, 16, 7, 51]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [6, 16, 7, 51]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the ball, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  74%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                      | 37/50 [1:05:59<10:41, 49.38s/it][2026-09-10 00:56:03,400][INFO] - Evaluating episode 37 ...
+[2026-09-10 00:56:03,472][INFO] - Episode 37: BaseEpisode(episode_id='1', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_10.scene_instance.json')
+Instruction: Put all the spoon on the brown table.
+Planner Output Action: [10, 26, 7, 51]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the spoon, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [11, 26, 7, 51]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the spoon, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  76%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                  | 38/50 [1:06:14<07:51, 39.31s/it][2026-09-10 00:56:19,233][INFO] - Evaluating episode 38 ...
+[2026-09-10 00:56:19,332][INFO] - Episode 38: BaseEpisode(episode_id='41', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_08.scene_instance.json')
+Instruction: Deposit all pear onto the left counter.
+Planner Output Action: [6]
+Executed action: navigate to the table 1, Task success: False
+Planner Output Action: [31, 11, 55]
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [7, 31, 11, 55]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [12, 31, 11, 55]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [10, 31, 11, 55]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: False
+Planner Output Action: [8, 31, 11, 55]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the pear, Task success: False
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: place at the left counter in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  78%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                              | 39/50 [1:07:03<07:44, 42.21s/it][2026-09-10 00:57:08,195][INFO] - Evaluating episode 39 ...
+[2026-09-10 00:57:08,292][INFO] - Episode 39: BaseEpisode(episode_id='18', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: Transfer all lego to the sofa.
+Planner Output Action: [7, 39, 12, 56]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the lego, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [7, 39, 12, 56]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the lego, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [7, 39, 12, 56]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the lego, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [7, 39, 12, 56]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the lego, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [7, 39, 12, 56]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the lego, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  80%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                         | 40/50 [1:08:03<07:53, 47.38s/it][2026-09-10 00:58:07,656][INFO] - Evaluating episode 40 ...
+[2026-09-10 00:58:07,726][INFO] - Episode 40: BaseEpisode(episode_id='28', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: Shift all the padlock over to black table.
+Planner Output Action: [8, 20, 6, 50]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the padlock, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [7, 20, 6, 50]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the padlock, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  82%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                     | 41/50 [1:08:26<06:01, 40.12s/it][2026-09-10 00:58:30,833][INFO] - Evaluating episode 41 ...
+[2026-09-10 00:58:30,904][INFO] - Episode 41: BaseEpisode(episode_id='42', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_15.scene_instance.json')
+Instruction: Deposit all the cleanser onto sofa.
+Planner Output Action: [9, 29, 12, 56]
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [11, 29, 12, 56]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [10, 29, 12, 56]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [6, 29, 12, 56]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [7, 29, 12, 56]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Planner Output Action: [8, 29, 12, 56]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the sofa, Task success: False
+Executed action: place at the sofa, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  84%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                 | 42/50 [1:09:11<05:32, 41.58s/it][2026-09-10 00:59:15,828][INFO] - Evaluating episode 42 ...
+[2026-09-10 00:59:15,933][INFO] - Episode 42: BaseEpisode(episode_id='4', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_07.scene_instance.json')
+Instruction: Shift all the box over to right counter.
+Planner Output Action: [6, 36, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the box, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [6, 36, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the box, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [6, 36, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the box, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [6, 36, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the box, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [7, 36, 10, 54]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the box, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  86%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                             | 43/50 [1:09:57<05:00, 42.95s/it][2026-09-10 01:00:01,957][INFO] - Evaluating episode 43 ...
+[2026-09-10 01:00:02,028][INFO] - Episode 43: BaseEpisode(episode_id='24', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: Gather up all clamp and set them on the TV stand.
+Planner Output Action: [6]
+Executed action: navigate to the table 1, Task success: False
+Planner Output Action: [17, 8, 52]
+Executed action: pick up the clamp, Task success: False
+Executed action: navigate to the TV stand, Task success: False
+Executed action: place at the TV stand, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  88%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                         | 44/50 [1:10:09<03:22, 33.78s/it][2026-09-10 01:00:14,351][INFO] - Evaluating episode 44 ...
+[2026-09-10 01:00:14,485][INFO] - Episode 44: BaseEpisode(episode_id='26', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_05.scene_instance.json')
+Instruction: Set down all the bowl onto the brown table.
+Planner Output Action: [6, 42, 7, 51]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [12, 42, 7, 51]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [8, 42, 7, 51]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+Planner Output Action: [11]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Planner Output Action: [42, 7, 51]
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: False
+An unexpected error occurred: Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4082, prompt_tokens=5349, total_tokens=9431, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3933, rejected_prediction_tokens=None, text_tokens=149), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=4260, image_tokens=0))
+Planner Output Action: [10, 42, 7, 51]
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: place at the table 2, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  90%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                     | 45/50 [1:12:31<05:29, 65.96s/it][2026-09-10 01:02:35,406][INFO] - Evaluating episode 45 ...
+[2026-09-10 01:02:35,417][INFO] - Episode 45: BaseEpisode(episode_id='49', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_05.scene_instance.json')
+Instruction: Place all the cleanser onto the black table.
+Planner Output Action: [11, 29, 6, 50]
+Executed action: navigate to the left counter in the kitchen, Task success: False
+Executed action: pick up the cleanser, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  92%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                | 46/50 [1:12:36<03:11, 47.80s/it][2026-09-10 01:02:40,839][INFO] - Evaluating episode 46 ...
+[2026-09-10 01:02:40,850][INFO] - Episode 46: BaseEpisode(episode_id='48', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_05.scene_instance.json')
+Instruction: Shift all the strawberry over to sink.
+Planner Output Action: [6, 38, 9, 53]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the strawberry, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [6, 38, 9, 53]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the strawberry, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [6, 38, 9, 53]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the strawberry, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Planner Output Action: [6, 38, 9, 53, 7, 38, 9, 53]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the strawberry, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the strawberry, Task success: False
+Executed action: navigate to the sink in the kitchen, Task success: False
+Executed action: place at the sink in the kitchen, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  94%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍            | 47/50 [1:13:04<02:06, 42.00s/it][2026-09-10 01:03:09,297][INFO] - Evaluating episode 47 ...
+[2026-09-10 01:03:09,368][INFO] - Episode 47: BaseEpisode(episode_id='16', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_13.scene_instance.json')
+Instruction: Carefully load all can onto the black table.
+Planner Output Action: [8, 35, 6, 50]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the can, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [8, 35, 6, 50]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the can, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [8, 35, 6, 50]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the can, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [8, 35, 6, 50]
+Executed action: navigate to the TV stand, Task success: False
+Executed action: pick up the can, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Planner Output Action: [7, 35, 6, 50]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the can, Task success: False
+Executed action: navigate to the table 1, Task success: False
+Executed action: place at the table 1, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  96%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋        | 48/50 [1:16:30<03:02, 91.22s/it][2026-09-10 01:06:35,357][INFO] - Evaluating episode 48 ...
+[2026-09-10 01:06:35,368][INFO] - Episode 48: BaseEpisode(episode_id='34', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_13.scene_instance.json')
+Instruction: Position all scissors on the right counter.
+Planner Output Action: [6, 21, 10, 54]
+Executed action: navigate to the table 1, Task success: False
+Executed action: pick up the scissors, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [7, 21, 10, 54]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the scissors, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  98%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊    | 49/50 [1:16:48<01:08, 68.98s/it][2026-09-10 01:06:52,432][INFO] - Evaluating episode 49 ...
+[2026-09-10 01:06:52,442][INFO] - Episode 49: BaseEpisode(episode_id='32', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_13.scene_instance.json')
+Instruction: Put all the bowl on the right counter.
+Planner Output Action: [6]
+Executed action: navigate to the table 1, Task success: False
+Planner Output Action: [42, 10, 54]
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [7, 42, 10, 54]
+Executed action: navigate to the table 2, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: False
+Planner Output Action: [12, 42, 10, 54]
+Executed action: navigate to the sofa, Task success: False
+Executed action: pick up the bowl, Task success: False
+Executed action: navigate to the right counter in the kitchen, Task success: False
+Executed action: place at the right counter in the kitchen, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [1:17:19<00:00, 57.75s/it]Episodes: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [1:17:19<00:00, 92.79s/it]
+['/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_33_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_21_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_17_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_41_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_6_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_22_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_25_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_46_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_34_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_9_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_16_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_26_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_4_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_27_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_44_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_39_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_18_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_5_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_31_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_47_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_40_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_35_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_49_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_37_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_28_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_29_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_12_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_24_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_45_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_32_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_19_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_36_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_13_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_10_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_38_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_15_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_11_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_7_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_2_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_14_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_48_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_43_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_42_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_3_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_1_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_8_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_20_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_30_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_23_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_50_final_res.json'] 50
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_33_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Relocate every cleanser from sink onto the sofa.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [49.152143716812134]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_21_final_res.json
+{'reward': 1.0416666666666667, 'num_invalid_actions': 4, 'empty_plan': 0, 'instruction': 'Set down all the spoon onto the right counter.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 12, 'planner_steps': 3, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.3333333333333333, 'episode_elapsed_seconds': [61.14843940734863]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_17_final_res.json
+{'reward': 0.027777777777777776, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move the drill to the left counter, the bowl to the black table, and the screwdriver to the left counter.', 'task_success': False, 'task_progress': 0.16666666666666666, 'subgoal_reward': 0.0, 'num_steps': 30, 'planner_steps': 6, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.3333333333333333, 'episode_elapsed_seconds': [117.78288102149963]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_41_final_res.json
+{'reward': 1.875, 'num_invalid_actions': 2, 'empty_plan': 0, 'instruction': 'Shift all the padlock over to black table.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 1.25, 'num_steps': 8, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.25, 'episode_elapsed_seconds': [23.087982416152954]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_6_final_res.json
+{'reward': 0.016025641025641024, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move the rubriks cube to the left counter, the wrench to the left counter, and the bowl to the brown table.', 'task_success': False, 'task_progress': 0.08333333333333333, 'subgoal_reward': 0.0, 'num_steps': 26, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.38461538461538464, 'episode_elapsed_seconds': [117.4470887184143]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_22_final_res.json
+{'reward': 0.027777777777777776, 'num_invalid_actions': 9, 'empty_plan': 0, 'instruction': 'Move the lemon to the black table, the book to the left counter, and the hammer to the brown table.', 'task_success': False, 'task_progress': 0.16666666666666666, 'subgoal_reward': 0.0, 'num_steps': 30, 'planner_steps': 12, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.3, 'episode_elapsed_seconds': [338.38424253463745]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_25_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move the spoon to the black table, the hammer to the left counter, and the cleanser to the brown table.', 'task_success': False, 'task_progress': 0.08333333333333333, 'subgoal_reward': 0.0, 'num_steps': 24, 'planner_steps': 4, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4166666666666667, 'episode_elapsed_seconds': [79.20310592651367]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_46_final_res.json
+{'reward': 3.75, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Place all the cleanser onto the black table.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 1.25, 'num_steps': 4, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [5.391171932220459]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_34_final_res.json
+{'reward': 0.9375, 'num_invalid_actions': 4, 'empty_plan': 0, 'instruction': 'Place all the drill onto the TV stand.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.625, 'num_steps': 16, 'planner_steps': 4, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.25, 'episode_elapsed_seconds': [35.38106918334961]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_9_final_res.json
+{'reward': 0.01736111111111111, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move the plate to the black table, the bowl to the black table, and the hammer to the black table.', 'task_success': False, 'task_progress': 0.08333333333333333, 'subgoal_reward': 0.0, 'num_steps': 24, 'planner_steps': 7, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4166666666666667, 'episode_elapsed_seconds': [270.7501368522644]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_16_final_res.json
+{'reward': 0.8055555555555555, 'num_invalid_actions': 2, 'empty_plan': 0, 'instruction': 'Move the lemon to the left counter, the block to the brown table, and the bowl to the brown table.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 15, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.13333333333333333, 'episode_elapsed_seconds': [32.86392569541931]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_26_final_res.json
+{'reward': 0.7407407407407407, 'num_invalid_actions': 4, 'empty_plan': 0, 'instruction': 'Move the screwdriver to the left counter, the strawberry to the black table, and the hammer to the left counter.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.4166666666666663, 'num_steps': 18, 'planner_steps': 4, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.2222222222222222, 'episode_elapsed_seconds': [55.52547788619995]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_4_final_res.json
+{'reward': 0.052083333333333336, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Securely position all hammer on the brown table.', 'task_success': False, 'task_progress': 0.25, 'subgoal_reward': 0.0, 'num_steps': 24, 'planner_steps': 6, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4166666666666667, 'episode_elapsed_seconds': [30.10757875442505]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_27_final_res.json
+{'reward': 0.020833333333333332, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move the rubriks cube to the black table, the cleanser to the left counter, and the lemon to the left counter.', 'task_success': False, 'task_progress': 0.08333333333333333, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 4, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [67.18132519721985]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_44_final_res.json
+{'reward': 3.75, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Gather up all clamp and set them on the TV stand.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 1.25, 'num_steps': 4, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [12.309792757034302]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_39_final_res.json
+{'reward': 0.625, 'num_invalid_actions': 8, 'empty_plan': 0, 'instruction': 'Deposit all pear onto the left counter.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4, 'episode_elapsed_seconds': [48.836833477020264]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_18_final_res.json
+{'reward': 0.3869047619047619, 'num_invalid_actions': 9, 'empty_plan': 0, 'instruction': 'Move the wrench to the black table, the sponge to the black table, and the hammer to the brown table.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 28, 'planner_steps': 7, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.32142857142857145, 'episode_elapsed_seconds': [182.23943400382996]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_5_final_res.json
+{'reward': 0.6818181818181818, 'num_invalid_actions': 6, 'empty_plan': 0, 'instruction': 'Move the ball to the brown table, the block to the brown table, and the hammer to the black table.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.41666666666666685, 'num_steps': 22, 'planner_steps': 3, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.2727272727272727, 'episode_elapsed_seconds': [102.82186031341553]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_31_final_res.json
+{'reward': 0.8088235294117647, 'num_invalid_actions': 4, 'empty_plan': 0, 'instruction': 'Shift all the pear over to black table.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.625, 'num_steps': 17, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.23529411764705882, 'episode_elapsed_seconds': [87.7069845199585]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_47_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Shift all the strawberry over to sink.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 4, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [28.419551134109497]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_40_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Transfer all lego to the sofa.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [59.33084797859192]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_35_final_res.json
+{'reward': 0.625, 'num_invalid_actions': 8, 'empty_plan': 0, 'instruction': 'Shift all the mug over to TV stand.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 1.25, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4, 'episode_elapsed_seconds': [98.26539778709412]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_49_final_res.json
+{'reward': 1.5625, 'num_invalid_actions': 2, 'empty_plan': 0, 'instruction': 'Position all scissors on the right counter.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 8, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.25, 'episode_elapsed_seconds': [17.036997079849243]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_37_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Transfer all ball to the brown table.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 19, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5263157894736842, 'episode_elapsed_seconds': [55.226813316345215]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_28_final_res.json
+{'reward': 0.020833333333333332, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move the lemon to the brown table, the cleanser to the black table, and the hammer to the brown table.', 'task_success': False, 'task_progress': 0.08333333333333333, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [52.9725923538208]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_29_final_res.json
+{'reward': 0.75, 'num_invalid_actions': 8, 'empty_plan': 0, 'instruction': 'Arrange all toy airplane on the TV stand.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 1.25, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4, 'episode_elapsed_seconds': [58.915417194366455]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_12_final_res.json
+{'reward': 0.05555555555555555, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move the wrench to the black table, the book to the left counter, and the cleanser to the left counter.', 'task_success': False, 'task_progress': 0.3333333333333333, 'subgoal_reward': 0.0, 'num_steps': 30, 'planner_steps': 10, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.3333333333333333, 'episode_elapsed_seconds': [442.04447889328003]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_24_final_res.json
+{'reward': 0.11904761904761904, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move the plate to the black table, the screwdriver to the black table, and the cleanser to the black table.', 'task_success': False, 'task_progress': 0.6666666666666666, 'subgoal_reward': 0.0, 'num_steps': 28, 'planner_steps': 4, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.35714285714285715, 'episode_elapsed_seconds': [66.42371535301208]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_45_final_res.json
+{'reward': 0.75, 'num_invalid_actions': 8, 'empty_plan': 0, 'instruction': 'Set down all the bowl onto the brown table.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4, 'episode_elapsed_seconds': [140.89536786079407]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_32_final_res.json
+{'reward': 3.125, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Arrange all banana on the right counter.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 4, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [11.060273885726929]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_19_final_res.json
+{'reward': 0.5797101449275361, 'num_invalid_actions': 6, 'empty_plan': 0, 'instruction': 'Move the ball to the brown table, the cleanser to the black table, and the lemon to the brown table.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 23, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.2608695652173913, 'episode_elapsed_seconds': [83.78952240943909]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_36_final_res.json
+{'reward': 3.75, 'num_invalid_actions': 0, 'empty_plan': 0, 'instruction': 'Carefully load all orange onto the brown table.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 4, 'planner_steps': 1, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.0, 'episode_elapsed_seconds': [9.806264638900757]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_13_final_res.json
+{'reward': 0.013888888888888888, 'num_invalid_actions': 5, 'empty_plan': 0, 'instruction': 'Move the spoon to the brown table, the sponge to the brown table, and the cleanser to the black table.', 'task_success': False, 'task_progress': 0.08333333333333333, 'subgoal_reward': 0.0, 'num_steps': 30, 'planner_steps': 14, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.16666666666666666, 'episode_elapsed_seconds': [576.1926972866058]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_10_final_res.json
+{'reward': 0.013888888888888888, 'num_invalid_actions': 9, 'empty_plan': 0, 'instruction': 'Move the rubriks cube to the black table, the hammer to the left counter, and the lemon to the brown table.', 'task_success': False, 'task_progress': 0.08333333333333333, 'subgoal_reward': 0.0, 'num_steps': 30, 'planner_steps': 8, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.3, 'episode_elapsed_seconds': [144.9315309524536]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_38_final_res.json
+{'reward': 1.5625, 'num_invalid_actions': 2, 'empty_plan': 0, 'instruction': 'Put all the spoon on the brown table.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 8, 'planner_steps': 2, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.25, 'episode_elapsed_seconds': [15.7256178855896]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_15_final_res.json
+{'reward': 0.08680555555555554, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move the rubriks cube to the brown table, the drill to the black table, and the lemon to the black table.', 'task_success': False, 'task_progress': 0.4166666666666667, 'subgoal_reward': 0.0, 'num_steps': 24, 'planner_steps': 4, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4166666666666667, 'episode_elapsed_seconds': [60.94522833824158]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_11_final_res.json
+{'reward': 0.07246376811594202, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move the ball to the left counter, the spoon to the black table, and the bowl to the left counter.', 'task_success': False, 'task_progress': 0.3333333333333333, 'subgoal_reward': 0.0, 'num_steps': 23, 'planner_steps': 4, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.43478260869565216, 'episode_elapsed_seconds': [27.492292404174805]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_7_final_res.json
+{'reward': 0.01736111111111111, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move the hammer to the black table, the screwdriver to the left counter, and the bowl to the black table.', 'task_success': False, 'task_progress': 0.08333333333333333, 'subgoal_reward': 0.0, 'num_steps': 24, 'planner_steps': 8, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4166666666666667, 'episode_elapsed_seconds': [146.65762424468994]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_2_final_res.json
+{'reward': 0.5, 'num_invalid_actions': 6, 'empty_plan': 0, 'instruction': 'Move all the hammer to the right counter.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.3, 'episode_elapsed_seconds': [34.72274875640869]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_14_final_res.json
+{'reward': 0.020833333333333332, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move the cleanser to the brown table, the sponge to the left counter, and the screwdriver to the left counter.', 'task_success': False, 'task_progress': 0.08333333333333333, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 3, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [65.4589490890503]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_48_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Carefully load all can onto the black table.', 'task_success': False, 'task_progress': 0.25, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [205.96980023384094]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_43_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Shift all the box over to right counter.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [45.99601197242737]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_42_final_res.json
+{'reward': 0.10416666666666667, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Deposit all the cleanser onto sofa.', 'task_success': False, 'task_progress': 0.5, 'subgoal_reward': 0.0, 'num_steps': 24, 'planner_steps': 6, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4166666666666667, 'episode_elapsed_seconds': [44.89479207992554]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_3_final_res.json
+{'reward': 0.5833333333333333, 'num_invalid_actions': 6, 'empty_plan': 0, 'instruction': 'Deposit all apple onto the TV stand.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 4, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.3, 'episode_elapsed_seconds': [23.12293767929077]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_1_final_res.json
+{'reward': 0.5989583333333334, 'num_invalid_actions': 8, 'empty_plan': 0, 'instruction': 'Transport all plate and put them on the right counter.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 24, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.3333333333333333, 'episode_elapsed_seconds': [34.202919721603394]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_8_final_res.json
+{'reward': 0.01736111111111111, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move the screwdriver to the brown table, the book to the black table, and the cleanser to the brown table.', 'task_success': False, 'task_progress': 0.08333333333333333, 'subgoal_reward': 0.0, 'num_steps': 24, 'planner_steps': 4, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4166666666666667, 'episode_elapsed_seconds': [65.79726791381836]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_20_final_res.json
+{'reward': 0.016666666666666666, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Move the lemon to the left counter, the plate to the brown table, and the bowl to the black table.', 'task_success': False, 'task_progress': 0.08333333333333333, 'subgoal_reward': 0.0, 'num_steps': 25, 'planner_steps': 4, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.4, 'episode_elapsed_seconds': [80.30154991149902]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_30_final_res.json
+{'reward': 0.0, 'num_invalid_actions': 10, 'empty_plan': 0, 'instruction': 'Relocate every ball from left counter onto the black table.', 'task_success': False, 'task_progress': 0.0, 'subgoal_reward': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.5, 'episode_elapsed_seconds': [47.86361074447632]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_23_final_res.json
+{'reward': 0.7638888888888888, 'num_invalid_actions': 4, 'empty_plan': 0, 'instruction': 'Move the plate to the brown table, the bowl to the black table, and the hammer to the black table.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.41666666666666685, 'num_steps': 18, 'planner_steps': 4, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.2222222222222222, 'episode_elapsed_seconds': [141.33905053138733]}
+closed_feedback/gemini-3.5-flash_eb-hab_v2_full/long_horizon/results/episode_50_final_res.json
+{'reward': 1.25, 'num_invalid_actions': 4, 'empty_plan': 0, 'instruction': 'Put all the bowl on the right counter.', 'task_success': True, 'task_progress': 1.0, 'subgoal_reward': 0.0, 'num_steps': 12, 'planner_steps': 4, 'planner_output_error': 0, 'num_invalid_action_ratio': 0.3333333333333333, 'episode_elapsed_seconds': [31.523571729660034]}
+final results: 
+{'reward': 0.6504926321842882, 'num_invalid_actions': 7.16, 'empty_plan': 0.0, 'task_success': 0.48, 'task_progress': 0.5599999999999998, 'subgoal_reward': 0.17499999999999996, 'num_steps': 19.68, 'planner_steps': 4.74, 'planner_output_error': 0.0, 'num_invalid_action_ratio': 0.33641907889451295, 'episode_elapsed_seconds': 92.69293831348419}

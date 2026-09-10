@@ -1,0 +1,28 @@
+[2026-08-25T10:39:11+08:00] START stage=p3a3_guard_v2_frozen_audit_v4
+[2026-08-25T10:39:11+08:00] COMMAND ["/root/miniconda3/envs/max_embench/bin/python", "scripts/phase3a_evidence_guard_audit.py", "--dataset", "running/Phase3/phase3a/phase3a_dataset_v3_cachefix_20260825.json", "--images-feedback", "running/Phase3/phase3a/cache_images_feedback_20260824.jsonl", "--images-only", "running/Phase3/phase3a/cache_images_only_20260824.jsonl", "--config", "configs/vista_fault_repair_fullsel_p10.json", "--output", "running/Phase3/phase3a/phase3a_guard_v2_frozen_audit_v4_20260825.json", "--bootstrap-samples", "2000", "--seed", "0"]
+{
+  "bootstrap": {
+    "absolute_reduction": 0.007380073800738007,
+    "e0_false_contradiction_rate": 0.007380073800738007,
+    "guard_false_contradiction_rate": 0.0,
+    "paired_bootstrap_95_ci_lower": 0.0,
+    "paired_bootstrap_95_ci_upper": 0.024793388429752067,
+    "relative_reduction": 1.0
+  },
+  "decision": "no_go",
+  "frozen_arm": "E4_authority:0.50:0.00",
+  "go_checks": {
+    "clean_false_skill_update_lt_0_05": true,
+    "contradiction_precision_ge_0_90": true,
+    "coverage_ge_0_50": true,
+    "false_contradiction_relative_reduction_ge_0_50": true,
+    "field_macro_f1_not_below_e0": true,
+    "guard_gain_not_explained_by_matched_threshold": false,
+    "paired_ci_excludes_zero": false,
+    "skill_update_recall_loss_le_0_10": true,
+    "target_macro_f1_not_below_e0": true,
+    "tokens_le_1_2x_e0": true,
+    "visual_calls_not_above_e0": true
+  }
+}
+[2026-08-25T10:39:15+08:00] END stage=p3a3_guard_v2_frozen_audit_v4 exit_code=0

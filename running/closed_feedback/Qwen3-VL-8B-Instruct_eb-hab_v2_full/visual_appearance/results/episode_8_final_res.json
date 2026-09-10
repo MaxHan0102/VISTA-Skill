@@ -1,0 +1,1 @@
+{"reward": 3.75, "num_invalid_actions": 0, "empty_plan": 0, "instruction": "Retrieve a purple fruit and place it in the sink.", "task_success": true, "task_progress": 1.0, "subgoal_reward": 1.25, "num_steps": 4, "planner_steps": 1, "planner_output_error": 0, "num_invalid_action_ratio": 0.0, "episode_elapsed_seconds": [5.243723630905151]}

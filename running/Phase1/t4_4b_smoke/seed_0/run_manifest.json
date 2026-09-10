@@ -1,0 +1,67 @@
+{
+  "acquisition_episode_budget": 2,
+  "acquisition_episode_count": 2,
+  "config_sha256": "01390149bf71b473fd551eb017ca885d411ea645af67db8c14f1b7c43e586620",
+  "diagnostic": true,
+  "env": "eb-hab",
+  "evolution_decisions": [],
+  "evolution_seed": 0,
+  "evolution_seeds": [
+    0
+  ],
+  "executor_model": "Qwen/Qwen3-VL-4B-Instruct",
+  "executor_model_type": "remote",
+  "executor_temperature": 0.0,
+  "executor_usage": {
+    "calls": 4,
+    "completion_tokens": 1603,
+    "prompt_tokens": 17487
+  },
+  "frozen": true,
+  "frozen_skill_sha256": "54b60a62f571c7f4e475a30e67d58072f37b60481854d49c19b1a38a4124deb4",
+  "gate_rollout_seeds": [
+    0,
+    1,
+    2
+  ],
+  "manifest_sha256": "7f283eff39e85b4eb29a896da134bcaa736175823aaa04448cc3775e566b6c4c",
+  "max_completion_tokens": 4096,
+  "method": "full",
+  "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+  "method_usage": {
+    "vista_goal_grounding": {
+      "calls": 2,
+      "completion_tokens": 79,
+      "prompt_tokens": 3881
+    },
+    "vista_visual_evidence": {
+      "calls": 17,
+      "completion_tokens": 12616,
+      "prompt_tokens": 15434
+    }
+  },
+  "n_shots": 10,
+  "protocol": "vista_t4_4b_executor_2026_08_21",
+  "ready_clusters_by_episode": [
+    0,
+    0
+  ],
+  "resolution": 500,
+  "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+  "run_id": "d7dd0a3b36374e1e8c0d1219c41c9f8f_seed_0",
+  "skill_fault": null,
+  "split_rotation_index": 0,
+  "split_sha256": "a0a76a7e727f8fcffb9f9dcbe8642083bed657dde37d36aaabc9b352176973d2",
+  "tensor_parallel": 1,
+  "update_reliability": {
+    "beneficial_update_precision": 0.0,
+    "beneficial_updates": 0.0,
+    "harmful_update_rate": 0.0,
+    "harmful_updates": 0.0,
+    "missed_beneficial_update_rate": 0.0,
+    "neutral_update_rate": 0.0,
+    "neutral_updates": 0.0,
+    "promoted_updates": 0.0,
+    "update_coverage": 0.0
+  }
+}

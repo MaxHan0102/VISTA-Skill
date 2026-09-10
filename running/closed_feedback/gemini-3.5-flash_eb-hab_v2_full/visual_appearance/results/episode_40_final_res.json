@@ -1,0 +1,1 @@
+{"reward": 1.25, "num_invalid_actions": 2, "empty_plan": 0, "instruction": "Move one of the white cylindrical object with a handle items to the indicated sink.", "task_success": true, "task_progress": 1.0, "subgoal_reward": 0.0, "num_steps": 8, "planner_steps": 2, "planner_output_error": 0, "num_invalid_action_ratio": 0.25, "episode_elapsed_seconds": [19.146357536315918]}

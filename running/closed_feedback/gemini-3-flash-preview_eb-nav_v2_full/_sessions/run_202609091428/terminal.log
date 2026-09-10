@@ -1,0 +1,689 @@
+Output directory: /root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/_sessions/run_202609091428
+[2026-09-09 14:29:00,228][INFO] - Current eval set: visual_appearance
+Episodes:   0%|                                                                                                                                                                                                                            | 0/23 [00:00<?, ?it/s][2026-09-09 14:29:01,541][INFO] - Evaluating episode 0 ...
+INFO:EB_logger:Evaluating episode 0 ...
+[2026-09-09 14:29:01,541][INFO] - Restoring scene FloorPlan228...
+INFO:EB_logger:Restoring scene FloorPlan228...
+Instruction: Approach the tall green container with a smooth texture.
+Planner Output Action: [2, 2]
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 1.0
+Episodes:   4%|█████████▏                                                                                                                                                                                                          | 1/23 [00:24<09:01, 24.62s/it][2026-09-09 14:29:26,157][INFO] - Evaluating episode 1 ...
+INFO:EB_logger:Evaluating episode 1 ...
+[2026-09-09 14:29:26,157][INFO] - Restoring scene FloorPlan229...
+INFO:EB_logger:Restoring scene FloorPlan229...
+Instruction: Find the small upright object with a polished golden surface and intricate details.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4082, prompt_tokens=4506, total_tokens=8588, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3932, rejected_prediction_tokens=None, text_tokens=150), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3417, image_tokens=0))
+local variable 'out' referenced before assignment
+retrying...
+Planner Output Action: [0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:   9%|██████████████████▍                                                                                                                                                                                                 | 2/23 [01:16<14:08, 40.39s/it][2026-09-09 14:30:17,589][INFO] - Evaluating episode 2 ...
+INFO:EB_logger:Evaluating episode 2 ...
+[2026-09-09 14:30:17,589][INFO] - Restoring scene FloorPlan230...
+INFO:EB_logger:Restoring scene FloorPlan230...
+Instruction: Head closer to the cylindrical container with a bright blue surface.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 2, 0, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 2, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  13%|███████████████████████████▋                                                                                                                                                                                        | 3/23 [01:27<09:00, 27.02s/it][2026-09-09 14:30:28,699][INFO] - Evaluating episode 3 ...
+INFO:EB_logger:Evaluating episode 3 ...
+[2026-09-09 14:30:28,699][INFO] - Restoring scene FloorPlan311...
+INFO:EB_logger:Restoring scene FloorPlan311...
+Instruction: Get near the cylindrical object with a smooth gray surface and a handle on the side.
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 3, 0, 0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 3, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  17%|████████████████████████████████████▊                                                                                                                                                                               | 4/23 [01:50<08:09, 25.74s/it][2026-09-09 14:30:52,470][INFO] - Evaluating episode 4 ...
+INFO:EB_logger:Evaluating episode 4 ...
+[2026-09-09 14:30:52,470][INFO] - Restoring scene FloorPlan312...
+INFO:EB_logger:Restoring scene FloorPlan312...
+Instruction: Move towards the small black square object with a smooth matte finish.
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4081, prompt_tokens=4487, total_tokens=8568, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3928, rejected_prediction_tokens=None, text_tokens=153), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3398, image_tokens=0))
+local variable 'out' referenced before assignment
+retrying...
+Planner Output Action: [0, 0, 3, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 0, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  22%|██████████████████████████████████████████████                                                                                                                                                                      | 5/23 [02:43<10:35, 35.30s/it][2026-09-09 14:31:44,731][INFO] - Evaluating episode 5 ...
+INFO:EB_logger:Evaluating episode 5 ...
+[2026-09-09 14:31:44,731][INFO] - Restoring scene FloorPlan313...
+INFO:EB_logger:Restoring scene FloorPlan313...
+Instruction: Locate the white rectangular container with smooth edges.
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 2, 0, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  26%|███████████████████████████████████████████████████████▎                                                                                                                                                            | 6/23 [03:05<08:45, 30.93s/it][2026-09-09 14:32:07,187][INFO] - Evaluating episode 6 ...
+INFO:EB_logger:Evaluating episode 6 ...
+[2026-09-09 14:32:07,187][INFO] - Restoring scene FloorPlan314...
+INFO:EB_logger:Restoring scene FloorPlan314...
+Instruction: Move towards the small brown square object with a smooth finish.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 3, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  30%|████████████████████████████████████████████████████████████████▌                                                                                                                                                   | 7/23 [03:37<08:19, 31.24s/it][2026-09-09 14:32:39,060][INFO] - Evaluating episode 7 ...
+INFO:EB_logger:Evaluating episode 7 ...
+[2026-09-09 14:32:39,060][INFO] - Restoring scene FloorPlan315...
+INFO:EB_logger:Restoring scene FloorPlan315...
+Instruction: Get near the cylindrical object with a smooth gray surface and a handle on the side.
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  35%|█████████████████████████████████████████████████████████████████████████▋                                                                                                                                          | 8/23 [03:50<06:21, 25.42s/it][2026-09-09 14:32:52,031][INFO] - Evaluating episode 8 ...
+INFO:EB_logger:Evaluating episode 8 ...
+[2026-09-09 14:32:52,031][INFO] - Restoring scene FloorPlan316...
+INFO:EB_logger:Restoring scene FloorPlan316...
+Instruction: Locate the rectangular object with a bright yellow cover and visible spine.
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 2, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  39%|██████████████████████████████████████████████████████████████████████████████████▉                                                                                                                                 | 9/23 [04:10<05:30, 23.59s/it][2026-09-09 14:33:11,592][INFO] - Evaluating episode 9 ...
+INFO:EB_logger:Evaluating episode 9 ...
+[2026-09-09 14:33:11,592][INFO] - Restoring scene FloorPlan317...
+INFO:EB_logger:Restoring scene FloorPlan317...
+Instruction: Head closer to the tall green container with a dark finish and woven pattern.
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  43%|███████████████████████████████████████████████████████████████████████████████████████████▋                                                                                                                       | 10/23 [04:24<04:31, 20.91s/it][2026-09-09 14:33:26,512][INFO] - Evaluating episode 10 ...
+INFO:EB_logger:Evaluating episode 10 ...
+[2026-09-09 14:33:26,512][INFO] - Restoring scene FloorPlan318...
+INFO:EB_logger:Restoring scene FloorPlan318...
+Instruction: Get near the cylindrical object with a smooth gray surface and a handle on the side.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 3, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4081, prompt_tokens=4398, total_tokens=8479, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3930, rejected_prediction_tokens=None, text_tokens=151), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3309, image_tokens=0))
+local variable 'out' referenced before assignment
+retrying...
+Planner Output Action: [4, 0, 0, 0, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  48%|████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                                                                              | 11/23 [05:42<07:40, 38.34s/it][2026-09-09 14:34:44,350][INFO] - Evaluating episode 11 ...
+INFO:EB_logger:Evaluating episode 11 ...
+[2026-09-09 14:34:44,351][INFO] - Restoring scene FloorPlan319...
+INFO:EB_logger:Restoring scene FloorPlan319...
+Instruction: Move near to that object who has a conical cover supported by a rod on a rectangular base, where warm light emits
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [0, 0, 3, 0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 1.0
+Episodes:  52%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                     | 12/23 [05:55<05:35, 30.51s/it][2026-09-09 14:34:56,956][INFO] - Evaluating episode 12 ...
+INFO:EB_logger:Evaluating episode 12 ...
+[2026-09-09 14:34:56,956][INFO] - Restoring scene FloorPlan320...
+INFO:EB_logger:Restoring scene FloorPlan320...
+Instruction: Approach the tall green container with a smooth texture.
+Planner Output Action: [0, 3]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Planner Output Action: [3, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  57%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                                                                           | 13/23 [06:09<04:15, 25.58s/it][2026-09-09 14:35:11,205][INFO] - Evaluating episode 13 ...
+INFO:EB_logger:Evaluating episode 13 ...
+[2026-09-09 14:35:11,205][INFO] - Restoring scene FloorPlan321...
+INFO:EB_logger:Restoring scene FloorPlan321...
+Instruction: Move towards the slim white rectangular device with smooth edges.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 3, 0]
+Executed action: 0, Task success: 1.0
+Episodes:  61%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                                                  | 14/23 [06:22<03:16, 21.83s/it][2026-09-09 14:35:24,378][INFO] - Evaluating episode 14 ...
+INFO:EB_logger:Evaluating episode 14 ...
+[2026-09-09 14:35:24,378][INFO] - Restoring scene FloorPlan322...
+INFO:EB_logger:Restoring scene FloorPlan322...
+Instruction: Get near the cylindrical object with a smooth gray surface and a handle on the side.
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [4, 4, 4, 4]
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 1.0
+Episodes:  65%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                                         | 15/23 [06:38<02:38, 19.87s/it][2026-09-09 14:35:39,702][INFO] - Evaluating episode 15 ...
+INFO:EB_logger:Evaluating episode 15 ...
+[2026-09-09 14:35:39,702][INFO] - Restoring scene FloorPlan323...
+INFO:EB_logger:Restoring scene FloorPlan323...
+Instruction: Locate the box-like object with a smooth white surface and sharp edges.
+Planner Output Action: [0, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 2, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  70%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                                | 16/23 [07:00<02:24, 20.61s/it][2026-09-09 14:36:02,017][INFO] - Evaluating episode 16 ...
+INFO:EB_logger:Evaluating episode 16 ...
+[2026-09-09 14:36:02,018][INFO] - Restoring scene FloorPlan324...
+INFO:EB_logger:Restoring scene FloorPlan324...
+Instruction: Find the compact rectangular object with a dark body and a bright blue display.
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 2, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  74%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                       | 17/23 [07:24<02:09, 21.64s/it][2026-09-09 14:36:26,056][INFO] - Evaluating episode 17 ...
+INFO:EB_logger:Evaluating episode 17 ...
+[2026-09-09 14:36:26,056][INFO] - Restoring scene FloorPlan325...
+INFO:EB_logger:Restoring scene FloorPlan325...
+Instruction: Get near the cylindrical object with a smooth gray surface and a handle on the side.
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [4, 4]
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+empty plan, using random action instead
+Planner Output Action: 4
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  78%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                             | 18/23 [07:59<02:08, 25.65s/it][2026-09-09 14:37:01,042][INFO] - Evaluating episode 18 ...
+INFO:EB_logger:Evaluating episode 18 ...
+[2026-09-09 14:37:01,042][INFO] - Restoring scene FloorPlan326...
+INFO:EB_logger:Restoring scene FloorPlan326...
+Instruction: Move towards the slim metallic object with a shiny silver finish.
+Planner Output Action: [3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 3, 0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4082, prompt_tokens=4395, total_tokens=8477, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3930, rejected_prediction_tokens=None, text_tokens=152), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3306, image_tokens=0))
+local variable 'out' referenced before assignment
+retrying...
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=4081, prompt_tokens=4392, total_tokens=8473, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=3929, rejected_prediction_tokens=None, text_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0, text_tokens=3303, image_tokens=0))
+local variable 'out' referenced before assignment
+retrying...
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes:  83%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                    | 19/23 [09:51<03:26, 51.53s/it][2026-09-09 14:38:52,851][INFO] - Evaluating episode 19 ...
+INFO:EB_logger:Evaluating episode 19 ...
+[2026-09-09 14:38:52,851][INFO] - Restoring scene FloorPlan327...
+INFO:EB_logger:Restoring scene FloorPlan327...
+Instruction: Move near to that object who has a conical cover supported by a rod on a rectangular base, where warm light emits
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 1.0
+Episodes:  87%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                           | 20/23 [10:06<02:01, 40.62s/it][2026-09-09 14:39:08,048][INFO] - Evaluating episode 20 ...
+INFO:EB_logger:Evaluating episode 20 ...
+[2026-09-09 14:39:08,048][INFO] - Restoring scene FloorPlan328...
+INFO:EB_logger:Restoring scene FloorPlan328...
+Instruction: Locate the white rectangular container with smooth edges.
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 3, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 3, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes:  91%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                  | 21/23 [10:18<01:03, 31.91s/it][2026-09-09 14:39:19,644][INFO] - Evaluating episode 21 ...
+INFO:EB_logger:Evaluating episode 21 ...
+[2026-09-09 14:39:19,644][INFO] - Restoring scene FloorPlan329...
+INFO:EB_logger:Restoring scene FloorPlan329...
+Instruction: Get near the slim metallic object with a shiny silver finish.
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 2, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 1.0
+Episodes:  96%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊         | 22/23 [10:35<00:27, 27.50s/it][2026-09-09 14:39:36,881][INFO] - Evaluating episode 22 ...
+INFO:EB_logger:Evaluating episode 22 ...
+[2026-09-09 14:39:36,881][INFO] - Restoring scene FloorPlan330...
+INFO:EB_logger:Restoring scene FloorPlan330...
+Instruction: Move towards the round object with a clear, transparent surface.
+Planner Output Action: [0, 2]
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 0, 0, 2, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 1.0
+Episodes: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 23/23 [10:47<00:00, 22.86s/it]Episodes: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 23/23 [10:47<00:00, 28.15s/it]
+['/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_33_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_21_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_17_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_41_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_55_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_6_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_54_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_22_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_25_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_46_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_34_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_9_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_16_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_51_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_26_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_4_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_27_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_44_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_39_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_18_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_5_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_56_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_31_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_47_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_40_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_35_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_49_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_58_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_37_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_28_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_29_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_12_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_24_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_45_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_60_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_32_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_57_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_19_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_52_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_36_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_13_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_10_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_38_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_15_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_11_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_7_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_2_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_14_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_48_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_53_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_43_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_42_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_3_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_1_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_8_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_20_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_30_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_23_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_59_final_res.json', '/root/max/VISTA-Skill/running/closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_50_final_res.json'] 60
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_33_final_res.json
+{'reward': 0.0, 'instruction': 'Get near the flat, round item with a shiny golden surface.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 37.96813440322876}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_21_final_res.json
+{'reward': 0.1, 'instruction': 'Approach the tall green container with a smooth texture.', 'task_success': 1.0, 'num_steps': 10, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 12.887705326080322}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_17_final_res.json
+{'reward': 0.05555555555555555, 'instruction': 'Approach the circular dark container with a smooth black surface.', 'task_success': 1.0, 'num_steps': 18, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 27.8860182762146}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_41_final_res.json
+{'reward': 0.0, 'instruction': 'Get near the cylindrical object with a smooth gray surface and a handle on the side.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 23.335896253585815}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_55_final_res.json
+{'reward': 0.0, 'instruction': 'Get near the cylindrical object with a smooth gray surface and a handle on the side.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 8, 'planner_output_error': 0, 'episode_elapsed_seconds': 34.4337043762207}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_6_final_res.json
+{'reward': 0.1111111111111111, 'instruction': 'Head closer to the small cylindrical object with a light gray and white finish.', 'task_success': 1.0, 'num_steps': 9, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 12.231825351715088}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_54_final_res.json
+{'reward': 0.1111111111111111, 'instruction': 'Find the compact rectangular object with a dark body and a bright blue display.', 'task_success': 1.0, 'num_steps': 9, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 23.689775705337524}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_22_final_res.json
+{'reward': 0.1111111111111111, 'instruction': 'Move towards the rectangular object with a shiny golden color and a small opening on the top.', 'task_success': 1.0, 'num_steps': 9, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 11.271778583526611}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_25_final_res.json
+{'reward': 0.0625, 'instruction': 'Head closer to the soft, square object with a bright yellow cover.', 'task_success': 1.0, 'num_steps': 16, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 20.80400538444519}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_46_final_res.json
+{'reward': 0.0, 'instruction': 'Locate the rectangular object with a bright yellow cover and visible spine.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 19.178601503372192}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_34_final_res.json
+{'reward': 0.07692307692307693, 'instruction': 'Move near to that object who has a conical cover supported by a rod on a rectangular base, where warm light emits', 'task_success': 1.0, 'num_steps': 13, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 178.32066297531128}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_9_final_res.json
+{'reward': 0.07142857142857142, 'instruction': 'Find the crumpled green object with a leafy texture and uneven edges.', 'task_success': 1.0, 'num_steps': 14, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 14.248943567276001}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_16_final_res.json
+{'reward': 0.125, 'instruction': 'Move towards the shiny silver object with a rounded base and smooth texture.', 'task_success': 1.0, 'num_steps': 8, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 13.169968128204346}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_51_final_res.json
+{'reward': 0.125, 'instruction': 'Move towards the slim white rectangular device with smooth edges.', 'task_success': 1.0, 'num_steps': 8, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 12.911764144897461}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_26_final_res.json
+{'reward': 0.08333333333333333, 'instruction': 'Get near the tall upright object with a slim stand and a rounded shade.', 'task_success': 1.0, 'num_steps': 12, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 11.766640663146973}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_4_final_res.json
+{'reward': 0.0, 'instruction': 'Move towards the shiny silver object with a rounded base and smooth texture.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 22.29457712173462}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_27_final_res.json
+{'reward': 0.0, 'instruction': 'Locate the short metallic item with a golden surface and a round light source.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 23.86750841140747}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_44_final_res.json
+{'reward': 0.0, 'instruction': 'Move towards the small brown square object with a smooth finish.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 31.555999517440796}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_39_final_res.json
+{'reward': 0.0, 'instruction': 'Find the small upright object with a polished golden surface and intricate details.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 50.9873788356781}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_18_final_res.json
+{'reward': 0.0, 'instruction': 'Find the crumpled green object with a leafy texture and uneven edges.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 24.383593320846558}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_5_final_res.json
+{'reward': 0.1111111111111111, 'instruction': 'Locate the metallic container with a polished golden surface.', 'task_success': 1.0, 'num_steps': 9, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 11.026912450790405}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_56_final_res.json
+{'reward': 0.0, 'instruction': 'Move towards the slim metallic object with a shiny silver finish.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 111.45631384849548}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_31_final_res.json
+{'reward': 0.0, 'instruction': 'Locate the soft, cushion-like object with a vibrant purple cover.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 18.159926176071167}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_47_final_res.json
+{'reward': 0.09090909090909091, 'instruction': 'Head closer to the tall green container with a dark finish and woven pattern.', 'task_success': 1.0, 'num_steps': 11, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 14.61867380142212}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_40_final_res.json
+{'reward': 0.1111111111111111, 'instruction': 'Head closer to the cylindrical container with a bright blue surface.', 'task_success': 1.0, 'num_steps': 9, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 10.742144584655762}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_35_final_res.json
+{'reward': 0.0, 'instruction': 'Find the tall, narrow object with a reflective silver surface and a rounded top opening.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 69.7661235332489}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_49_final_res.json
+{'reward': 0.08333333333333333, 'instruction': 'Move near to that object who has a conical cover supported by a rod on a rectangular base, where warm light emits', 'task_success': 1.0, 'num_steps': 12, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 11.994334936141968}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_58_final_res.json
+{'reward': 0.1111111111111111, 'instruction': 'Locate the white rectangular container with smooth edges.', 'task_success': 1.0, 'num_steps': 9, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 11.334374904632568}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_37_final_res.json
+{'reward': 0.1, 'instruction': 'Move to the rectangular object with a brown cardboard-like appearance.', 'task_success': 1.0, 'num_steps': 10, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 12.89892578125}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_28_final_res.json
+{'reward': 0.0, 'instruction': 'Move towards the tall, cylindrical container with a clean white finish.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 7, 'planner_output_error': 0, 'episode_elapsed_seconds': 295.72435188293457}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_29_final_res.json
+{'reward': 0.0, 'instruction': 'Approach the rectangular metallic object with a smooth silver surface.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 26.231517791748047}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_12_final_res.json
+{'reward': 0.07142857142857142, 'instruction': 'Locate the rounded metallic object with a shiny silver surface and a handle on top.', 'task_success': 1.0, 'num_steps': 14, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 15.98443865776062}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_24_final_res.json
+{'reward': 0.09090909090909091, 'instruction': 'Locate the short metallic item with a golden surface and a round light source.', 'task_success': 1.0, 'num_steps': 11, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 15.277700901031494}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_45_final_res.json
+{'reward': 0.1111111111111111, 'instruction': 'Get near the cylindrical object with a smooth gray surface and a handle on the side.', 'task_success': 1.0, 'num_steps': 9, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 12.58977460861206}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_60_final_res.json
+{'reward': 0.09090909090909091, 'instruction': 'Move towards the round object with a clear, transparent surface.', 'task_success': 1.0, 'num_steps': 11, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 11.60449743270874}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_32_final_res.json
+{'reward': 0.1, 'instruction': 'Head closer to the cylindrical container with a bright blue surface.', 'task_success': 1.0, 'num_steps': 10, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 10.644111633300781}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_57_final_res.json
+{'reward': 0.06666666666666667, 'instruction': 'Move near to that object who has a conical cover supported by a rod on a rectangular base, where warm light emits', 'task_success': 1.0, 'num_steps': 15, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 14.851295471191406}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_19_final_res.json
+{'reward': 0.0, 'instruction': 'Locate the rounded metallic object with a shiny silver surface and a handle on top.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 23.11483120918274}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_52_final_res.json
+{'reward': 0.08333333333333333, 'instruction': 'Get near the cylindrical object with a smooth gray surface and a handle on the side.', 'task_success': 1.0, 'num_steps': 12, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 15.02467393875122}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_36_final_res.json
+{'reward': 0.0, 'instruction': 'Move towards the soft rectangular item with a yellow cover and floral patterns.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 19.802168607711792}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_13_final_res.json
+{'reward': 0.1, 'instruction': 'Get near the circular black metal structure with a smooth finish.', 'task_success': 1.0, 'num_steps': 10, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 12.128979206085205}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_10_final_res.json
+{'reward': 0.0, 'instruction': 'Move towards the shiny rectangular object with a metallic silver finish.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 24.26581859588623}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_38_final_res.json
+{'reward': 0.125, 'instruction': 'Approach the tall green container with a smooth texture.', 'task_success': 1.0, 'num_steps': 8, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 24.225172758102417}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_15_final_res.json
+{'reward': 0.09090909090909091, 'instruction': 'Move closer to the small round object with a green surface and a cylindrical shape.', 'task_success': 1.0, 'num_steps': 11, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 15.203711748123169}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_11_final_res.json
+{'reward': 0.125, 'instruction': 'Approach the tall cylindrical container with a brushed silver surface.', 'task_success': 1.0, 'num_steps': 8, 'planner_steps': 2, 'planner_output_error': 0, 'episode_elapsed_seconds': 7.034511089324951}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_7_final_res.json
+{'reward': 0.125, 'instruction': 'Move to the round, smooth object with a bright red surface.', 'task_success': 1.0, 'num_steps': 8, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 13.42909574508667}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_2_final_res.json
+{'reward': 0.09090909090909091, 'instruction': 'Approach the circular dark container with a smooth black surface.', 'task_success': 1.0, 'num_steps': 11, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 13.208136081695557}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_14_final_res.json
+{'reward': 0.0, 'instruction': 'Move towards the shiny silver object with a rounded base and smooth texture.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 17.600837230682373}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_48_final_res.json
+{'reward': 0.0, 'instruction': 'Get near the cylindrical object with a smooth gray surface and a handle on the side.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 77.25960659980774}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_53_final_res.json
+{'reward': 0.0, 'instruction': 'Locate the box-like object with a smooth white surface and sharp edges.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 21.665582180023193}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_43_final_res.json
+{'reward': 0.0, 'instruction': 'Locate the white rectangular container with smooth edges.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 21.9775493144989}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_42_final_res.json
+{'reward': 0.0, 'instruction': 'Move towards the small black square object with a smooth matte finish.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 51.85689616203308}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_3_final_res.json
+{'reward': 0.0, 'instruction': 'Approach the red rectangular item with black edges around the sides.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 5, 'planner_output_error': 0, 'episode_elapsed_seconds': 21.793545722961426}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_1_final_res.json
+{'reward': 0.1, 'instruction': 'Find the rectangular yellowish object with a soft and smooth surface.', 'task_success': 1.0, 'num_steps': 10, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 17.392956733703613}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_8_final_res.json
+{'reward': 0.09090909090909091, 'instruction': 'Get near the rectangular device with a black center and deep red sides.', 'task_success': 1.0, 'num_steps': 11, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 12.738083839416504}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_20_final_res.json
+{'reward': 0.125, 'instruction': 'Move to the tall, compact black device with a smooth finish.', 'task_success': 1.0, 'num_steps': 8, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 19.607411861419678}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_30_final_res.json
+{'reward': 0.09090909090909091, 'instruction': 'Approach the tall green container with a smooth texture.', 'task_success': 1.0, 'num_steps': 11, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 31.099322080612183}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_23_final_res.json
+{'reward': 0.0, 'instruction': 'Move towards the slim metallic object with a shiny silver finish.', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 6, 'planner_output_error': 0, 'episode_elapsed_seconds': 38.47910690307617}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_59_final_res.json
+{'reward': 0.07142857142857142, 'instruction': 'Get near the slim metallic object with a shiny silver finish.', 'task_success': 1.0, 'num_steps': 14, 'planner_steps': 4, 'planner_output_error': 0, 'episode_elapsed_seconds': 16.971291303634644}
+closed_feedback/gemini-3-flash-preview_eb-nav_v2_full/visual_appearance/results/episode_50_final_res.json
+{'reward': 0.1111111111111111, 'instruction': 'Approach the tall green container with a smooth texture.', 'task_success': 1.0, 'num_steps': 9, 'planner_steps': 3, 'planner_output_error': 0, 'episode_elapsed_seconds': 13.942216873168945}
+final results: 
+{'reward': 0.05835305897805899, 'task_success': 0.6, 'num_steps': 14.45, 'planner_steps': 4.05, 'planner_output_error': 0.0, 'episode_elapsed_seconds': 30.198690100510916}

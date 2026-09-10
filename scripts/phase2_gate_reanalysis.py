@@ -20,7 +20,7 @@ def _args() -> argparse.Namespace:
     parser.add_argument(
         "--run-dir",
         type=Path,
-        default=Path("running/fault_repair_e8p_constraint/full/seed_0"),
+        default=Path("running/Phase1/fault_repair_e8p_constraint/full/seed_0"),
     )
     parser.add_argument(
         "--dataset",
@@ -31,7 +31,7 @@ def _args() -> argparse.Namespace:
         ),
     )
     parser.add_argument(
-        "--output", type=Path, default=Path("running/phase2_gate_reanalysis.json")
+        "--output", type=Path, default=Path("running/Phase2/phase2_gate_reanalysis.json")
     )
     parser.add_argument(
         "--fault",

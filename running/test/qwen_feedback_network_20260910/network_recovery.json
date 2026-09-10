@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-10",
+  "cause": "192.168.1.* requests routed via unresolved 192.168.31.2 gateway; reproduced outside sandbox",
+  "temporary_dhcp_address": "192.168.1.182/32",
+  "dhcp_server": "192.168.1.1",
+  "interface": "eno2",
+  "target_routes": [
+    "192.168.1.185/32",
+    "192.168.1.173/32"
+  ],
+  "original_address_retained": "192.168.31.33/24",
+  "ipv6_and_default_route": "unchanged",
+  "hab_endpoint": "http://192.168.1.185:8000/v1",
+  "nav_endpoint": "http://192.168.1.173:8001/v1",
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "advertised_max_model_len": 16384,
+  "dhclient_pid_file": "/run/dhclient-qwen-feedback.pid",
+  "dhclient_lease_file": "/var/lib/dhcp/dhclient-qwen-feedback.leases",
+  "custom_script": "/etc/dhcp/dhclient-script",
+  "custom_config": "/etc/dhcp/qwen-feedback.conf",
+  "cleanup_pending": true
+}

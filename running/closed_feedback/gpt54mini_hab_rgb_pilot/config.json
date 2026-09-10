@@ -1,0 +1,50 @@
+{
+  "env": "eb-hab",
+  "provider": "openai",
+  "model": "gpt-5.4-mini",
+  "track": "rgb_only",
+  "eval_sets": [
+    "base"
+  ],
+  "episodes": 2,
+  "start_index": 0,
+  "seed": 0,
+  "frames": 3,
+  "max_steps": null,
+  "n_shots": 10,
+  "resolution": 500,
+  "max_tokens": 4096,
+  "temperature": null,
+  "reasoning_effort": null,
+  "timeout": 120,
+  "api_key_env": "OPENAI_API_KEY",
+  "base_url": "https://api.openlux.ai/v1",
+  "output": "/root/max/VISTA-Skill/running/closed_feedback/gpt54mini_hab_rgb_pilot",
+  "dry_run": false,
+  "smoke_policy": false,
+  "protocol": "closed_feedback_v1",
+  "requested_output": "/root/max/VISTA-Skill/running/closed_feedback/gpt54mini_hab_rgb_pilot",
+  "started_at": "2026-09-08T16:21:04.316523+08:00",
+  "skill_or_memory": false,
+  "replan_every_action": true,
+  "termination": "stock_environment_done_or_step_budget",
+  "api_options": {
+    "model": "gpt-5.4-mini",
+    "response_format": {
+      "type": "json_object"
+    },
+    "max_completion_tokens": 4096
+  },
+  "script_sha256": "9239f4d91d870c37acd1b5679e64cc5db225f0e6cae9b5fa9a502607e3056b24",
+  "git_revision": "c1ae2e312b8054da3708f7ab877c5fce22ddc696",
+  "git_dirty": true,
+  "python_version": "3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]",
+  "openai_sdk_version": "1.60.0",
+  "source_hashes": {
+    "vista_skill/integrations/embodiedbench/environment.py": "18a363323cc5b8ea6d0341af53571eb6686e9c22119f5761bb7f91f9864150ff",
+    "EmbodiedBench/embodiedbench/evaluator/config/system_prompts.py": "b42deeb6a9cd868bc7883668caa68599ae5c0d65af86456cc17b434e86ded86a",
+    "EmbodiedBench/embodiedbench/evaluator/config/habitat_examples.json": "4978e4c9b298ebcedd178e11f9cc23c8cca4baa8e27e1f2009e45adaa4d852ef",
+    "EmbodiedBench/embodiedbench/evaluator/config/eb_navigation_example.py": "fdfa105e24735ebab1ef454f370667ed99de869f18330e8d9a8328a08eaa3023",
+    "EmbodiedBench/embodiedbench/envs/eb_habitat/EBHabEnv.py": "8765e30893386fbfb2ace6a95b9c9b182d412583cd76390853d2bf2a11f825d3"
+  }
+}

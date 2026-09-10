@@ -1,0 +1,1 @@
+{"reward": 0.5, "num_invalid_actions": 2, "empty_plan": 0, "instruction": "Gather up all clamp and set them on the TV stand.", "task_success": true, "task_progress": 1.0, "subgoal_reward": 1.25, "num_steps": 30, "planner_steps": 9, "planner_output_error": 0, "num_invalid_action_ratio": 0.06666666666666667, "episode_elapsed_seconds": [45.715388774871826]}

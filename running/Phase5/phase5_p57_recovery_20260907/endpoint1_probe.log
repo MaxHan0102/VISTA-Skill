@@ -1,0 +1,8 @@
+[PASS] models_list: served models=['Qwen/Qwen3-VL-8B-Instruct'] (expect 'Qwen/Qwen3-VL-8B-Instruct')
+[PASS] plain_completion: content='Hello!' usage_pt=22
+[PASS] seed_determinism: identical=True (len 13/13)
+[PASS] json_schema_strict: target=skill_update keys=['confidence', 'evidence_ids', 'field', 'mismatch_ids', 'rationale', 'subreason', 'target']
+[PASS] trajectory_schema: route=FAIL_EXECUTION field=procedure
+[PASS] multimodal_image: content='The image is a solid, uniform field of deep maroon or burgundy color with no discernible objects, patterns, or variations.'
+
+6/6 checks passed

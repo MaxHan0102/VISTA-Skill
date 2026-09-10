@@ -1,0 +1,26 @@
+{
+  "audits": [],
+  "epsilon": 0.0,
+  "manifest_sha256": "b08ee365b22302899084e209f09002e96242d3ce3eb4bad410d0523b4a163bec",
+  "pair_count": 0,
+  "reliability": {
+    "beneficial_update_precision": 0.0,
+    "beneficial_updates": 0.0,
+    "harmful_update_rate": 0.0,
+    "harmful_updates": 0.0,
+    "missed_beneficial_update_rate": 0.0,
+    "neutral_update_rate": 0.0,
+    "neutral_updates": 0.0,
+    "promoted_updates": 0.0,
+    "update_coverage": 0.0
+  },
+  "rollout_seeds": [
+    101,
+    102,
+    103
+  ],
+  "rotation_index": 0,
+  "schema_version": "1",
+  "split_sha256": "e6558c0c6b1e2a99603aeee7350104c888a130cef043c188ca90cdd99372fbeb",
+  "update_count": 0
+}

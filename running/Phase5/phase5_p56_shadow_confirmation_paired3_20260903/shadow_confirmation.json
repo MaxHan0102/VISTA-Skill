@@ -1,0 +1,35 @@
+{
+  "analysis": {
+    "candidate_promoted": false,
+    "promotion_eligible_from_this_diagnostic": false,
+    "stage": {
+      "metrics": {
+        "affected_independent_tasks": 7.0,
+        "affected_lcb": -0.3549474335188621,
+        "affected_mean_delta": -0.1982367500224643,
+        "candidate_pass_at_k": 0.8,
+        "episodes": 30.0,
+        "independent_tasks": 10.0,
+        "lcb": -0.27601731601731594,
+        "max_rollouts_per_task": 3.0,
+        "mean_delta": -0.138765725015725,
+        "parent_pass_at_k": 0.9,
+        "protected_independent_tasks": 3.0,
+        "protected_lcb": 0.0,
+        "protected_mean_delta": 0.0,
+        "repeated_tasks": 10.0,
+        "semantic_scope_tag_count": 1.0,
+        "worst_subgroup_delta": -0.3311993561993562
+      },
+      "passed": false,
+      "reason": "affected-task benefit is unproven or protected tasks regressed",
+      "stage": "paired_finalist"
+    },
+    "verdict": "contradictory",
+    "would_remain_shadow_if_underpowered": false
+  },
+  "claim_eligible": false,
+  "diagnostic": true,
+  "protocol_sha256": "307e30eba9feb49228056b7e8dee587775f1531dfa91e82f09034504fb8f12eb",
+  "records_sha256": "4be608dab162849a009ee3c5778ebd9154d9015f211e393caa7acb77588db092"
+}

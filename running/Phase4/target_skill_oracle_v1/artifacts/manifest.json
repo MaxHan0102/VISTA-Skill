@@ -1,0 +1,41 @@
+{
+  "artifacts": {
+    "eb-hab": {
+      "artifact_sha256": "190515a2bfd635fafa413b4107423cb72afba3475d2dd3905e378d1a64a8b56e",
+      "path": "running/Phase4/target_skill_oracle_v1/artifacts/target_habitat_skill_v1.json",
+      "rendered_skill": "Skill: target_habitat_rearrangement_oracle_v1 (v1)\nActivation:\n- Use for embodied search, delivery, and removal tasks with named movable objects and receptacles.\n- Bind exact object categories, quantities, source clues, and destination before acting; keep those bindings unchanged.\nProcedure:\n- Translate the instruction into a checklist of exact target objects, remaining quantities, source clues, and the exact destination. For remove or detach from X, the goal is not-at-X: after picking, place the object on a different valid receptacle.\n- When not holding, search systematically across untried plausible receptacles. Navigate to one and inspect the new image. Navigation success means only that the robot reached that receptacle; it never proves that the requested object is present or near.\n- Pick only when the exact requested object category is visibly present at the current location or feedback explicitly supports nearness. Do not replace the requested noun with a similar object or synonym. If a Pick fails as not near, mark that location tried, navigate to a different untried location, and do not repeat Pick until new location or visibility evidence exists.\n- For a possible closed container, navigate to it, open it at most once when closed, then inspect before picking. Do not repeat Open after success or without new state evidence.\n- After feedback confirms Pick or holding the target, immediately enter delivery mode: navigate to the exact destination and Place there. Never Pick while holding or place back on the source or at a convenient receptacle.\n- After a successful Place, verify the exact object-destination goal. For multiple objects, mark only that object complete and repeat the search-pick-deliver cycle for the remaining checklist. After an uncertain search, Pick, Open, or Place, output only the next evidence-gathering action; chain actions only when every intermediate precondition is already supported.\nEffect:\n- A successful Navigation establishes nearness to its receptacle only, not nearness to any movable object guessed to be there.\n- A successful Pick of the requested object establishes holding that object; a failed action changes no task predicate. A successful Place at the bound destination establishes the object-destination goal and frees the gripper.\n- Progress counts only for the requested category, quantity, and destination; interacting with another object is not progress.\nTermination:\n- For delivery, stop only after every requested object instance is evidence-verified at the exact destination and the gripper is free.\n- For remove or detach tasks, stop only after every requested object is no longer at the named source and has been placed on a different valid receptacle. Holding, reaching a receptacle, or completing one of several subgoals is not completion.\nConstraint:\n- Never repeat the same failed interaction at the same location without an intervening state-changing or evidence-gathering action; switch to a different untried location after not-near feedback.\n- Preserve object identity and destination fidelity. Never Pick while already holding, Place while empty, or infer that an unseen object is absent.\n- Use only listed action IDs and exact action semantics. Treat explicit environment feedback about success, holding, nearness, open state, and invalid preconditions as stronger evidence than a visual guess.",
+      "rendered_word_count": 511,
+      "skill_id": "target_habitat_rearrangement_oracle_v1",
+      "skill_sha256": "5e32f5ec1256dbefba26c28bcfb7ee6ce1cdb59131965c261f2704c250cbec88",
+      "trajectory_sources": [
+        {
+          "path": "running/Phase1/pilot/eval/no_skill.jsonl",
+          "sha256": "4a61c0cff9e677b9bb88e5991b7a5d0080562d0f53f03885f367e6bbdd192095"
+        },
+        {
+          "path": "running/Phase1/pilot/eval/static_shared_skill.jsonl",
+          "sha256": "b2b7f534abb91f1bd4b94fe16cf0bdfd41b18cbb3a3f7f591b3c7528c8ef22db"
+        }
+      ]
+    },
+    "eb-nav": {
+      "artifact_sha256": "3866d568e5f3294f58e9bd5a6ea8ff518f18047857b80d7c89169cd96cca7cff",
+      "path": "running/Phase4/target_skill_oracle_v1/artifacts/target_navigation_skill_v1.json",
+      "rendered_skill": "Skill: target_feedback_navigation_oracle_v1 (v1)\nActivation:\n- Use for egocentric navigation to one named target object when each step reports action success and target distance.\n- Bind the exact target category from the instruction and optimize only its reported distance.\nProcedure:\n- Maintain the last and best target distance from feedback. On every planner call output exactly ONE primitive action, despite any generic request for a 5-6 action plan, then re-observe the image and new distance before choosing again.\n- Probe a plausible forward, left, or right translation. Continue that direction only while the reported distance strictly decreases; a successful motion is not progress when distance stays equal or increases.\n- If distance increases, do not continue the stale plan: choose the inverse lateral direction or backtrack once, then re-observe. When already close to the best point, use single-step probes and never execute a long run that can overshoot it.\n- If an action fails or distance is unchanged, treat the path as blocked. Do not repeat the same translation; choose a different lateral move, or one 90-degree rotation followed by a separately planned translation. Use rotation or camera tilt only for recovery when the target is lost or translations are blocked.\n- Prefer the direction with demonstrated numeric improvement over a visual guess. If two consecutive choices fail to beat the best distance, return toward the last improving direction and test a different single-step alternative.\nEffect:\n- A movement makes goal progress only when the numeric target distance decreases. Rotation and camera tilt change viewpoint but do not by themselves reduce distance.\n- A failed or zero-displacement action leaves position unchanged and invalidates repeating that same local move.\nTermination:\n- The task is complete only when feedback supports near(target), operationally target distance at or below 1.0 meter; otherwise continue single-step closed-loop control.\nConstraint:\n- Numeric target-distance feedback overrides claims that the object merely looks visible, close, or reachable.\n- Never emit more than one action in executable_plan. Never repeat a blocked action, continue a direction after distance worsens, or rotate while a translation is reliably reducing distance.\n- Unknown is not false, action success is not goal success, and the target identity must remain the exact instructed category.",
+      "rendered_word_count": 367,
+      "skill_id": "target_feedback_navigation_oracle_v1",
+      "skill_sha256": "3f026dc279220f04ed0cd3d604a07ec51d6ebfd004b9438412431dd4459c46c5",
+      "trajectory_sources": [
+        {
+          "path": "running/Phase1/vista_skill/nav_official/base/no_skill/events.jsonl",
+          "sha256": "4ac7cee236803cf0b26879ae10b81002b640e56bf69fb90d13d7d73f8dc9076b"
+        },
+        {
+          "path": "running/Phase1/vista_skill/nav_official/base/static_shared_skill/events.jsonl",
+          "sha256": "a5be6463160d493306a7d1a7abbb20919018b1315fbce57164719c79841eaecb"
+        }
+      ]
+    }
+  },
+  "protocol": "vista_target_skill_posthoc_oracle_v1_2026_08_27"
+}

@@ -1,0 +1,13 @@
+Internet Systems Consortium DHCP Client 4.4.1
+Copyright 2004-2018 Internet Systems Consortium.
+All rights reserved.
+For info, please visit https://www.isc.org/software/dhcp/
+
+Listening on LPF/eno2/10:7c:61:4d:33:f2
+Sending on   LPF/eno2/10:7c:61:4d:33:f2
+Sending on   Socket/fallback
+DHCPDISCOVER on eno2 to 255.255.255.255 port 67 interval 3 (xid=0x27078e11)
+DHCPOFFER of 192.168.1.182 from 192.168.1.1
+DHCPREQUEST for 192.168.1.182 on eno2 to 255.255.255.255 port 67 (xid=0x118e0727)
+DHCPACK of 192.168.1.182 from 192.168.1.1 (xid=0x27078e11)
+bound to 192.168.1.182 -- renewal in 3237 seconds.

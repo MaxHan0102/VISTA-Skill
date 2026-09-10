@@ -1,0 +1,79 @@
+{
+  "config_sha256": "b4e00516096fb9156f610e165ab89b04b1ab82f02c7d07ef76fb862e7c22434c",
+  "diagnostic": true,
+  "env": "eb-hab",
+  "evidence_guard": "none",
+  "evolution_seeds": [
+    0
+  ],
+  "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+  "executor_model_type": "remote",
+  "executor_temperature": 0.0,
+  "experiment_id": "9d8b6ba75fc94b63a6826c7e4cb90ab1",
+  "frozen": true,
+  "guard_min_visual_confidence": 0.75,
+  "guard_min_visual_coverage": 0.5,
+  "initial_skill": "shared",
+  "manifest_sha256": "b08ee365b22302899084e209f09002e96242d3ce3eb4bad410d0523b4a163bec",
+  "max_completion_tokens": 4096,
+  "method": "rule_only",
+  "method_model": null,
+  "n_shots": 10,
+  "protocol": "vista_skill_fault_repair_fullsel_p10f30_2026_08_20",
+  "resolution": 500,
+  "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+  "run_count": 1,
+  "runs": [
+    {
+      "acquisition_episode_budget": 40,
+      "acquisition_episode_count": 40,
+      "config_sha256": "b4e00516096fb9156f610e165ab89b04b1ab82f02c7d07ef76fb862e7c22434c",
+      "diagnostic": true,
+      "env": "eb-hab",
+      "evidence_guard": "none",
+      "evolution_decisions": [],
+      "evolution_seed": 0,
+      "evolution_seeds": [
+        0
+      ],
+      "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+      "executor_model_type": "remote",
+      "executor_temperature": 0.0,
+      "executor_usage": {
+        "calls": 170,
+        "completion_tokens": 64201,
+        "prompt_tokens": 787122
+      },
+      "frozen": true,
+      "frozen_skill_sha256": "54b60a62f571c7f4e475a30e67d58072f37b60481854d49c19b1a38a4124deb4",
+      "gate_rollout_seeds": [
+        0,
+        1,
+        2
+      ],
+      "guard_min_visual_confidence": 0.75,
+      "guard_min_visual_coverage": 0.5,
+      "initial_skill": "shared",
+      "manifest_sha256": "b08ee365b22302899084e209f09002e96242d3ce3eb4bad410d0523b4a163bec",
+      "max_completion_tokens": 4096,
+      "method": "rule_only",
+      "method_model": null,
+      "method_usage": null,
+      "n_shots": 10,
+      "protocol": "vista_skill_fault_repair_fullsel_p10f30_2026_08_20",
+      "ready_clusters_by_episode": [],
+      "resolution": 500,
+      "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+      "run_id": "9d8b6ba75fc94b63a6826c7e4cb90ab1_seed_0",
+      "skill_fault": null,
+      "split_rotation_index": 0,
+      "split_sha256": "e6558c0c6b1e2a99603aeee7350104c888a130cef043c188ca90cdd99372fbeb",
+      "state_oracle_labels": true,
+      "tensor_parallel": 1,
+      "update_reliability": null
+    }
+  ],
+  "skill_fault": null,
+  "state_oracle_labels": true,
+  "tensor_parallel": 1
+}

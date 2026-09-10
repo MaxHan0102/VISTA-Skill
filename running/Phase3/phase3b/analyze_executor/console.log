@@ -1,0 +1,131 @@
+[2026-08-25T12:35:32+08:00] START stage=analyze_executor
+[2026-08-25T12:35:32+08:00] COMMAND ["env", "PYTHONPATH=.", "/root/miniconda3/envs/max_embench/bin/python", "scripts/phase3b_analyze_executor_pilot.py", "--summary", "running/Phase3/phase3b/executor_C0_current/summary.json", "--summary", "running/Phase3/phase3b/executor_C1_no_feedback/summary.json", "--summary", "running/Phase3/phase3b/executor_C2_temporal_no_feedback/summary.json", "--summary", "running/Phase3/phase3b/executor_C3_temporal_feedback/summary.json", "--output", "running/Phase3/phase3b/phase3b_executor_paired_analysis_20260825.json"]
+{
+  "analysis_type": "phase3b_executor_feedback_history_paired_pilot",
+  "arm_metrics": {
+    "C0_current": {
+      "adjacent_repetition_rate": 0.015873015873015872,
+      "elapsed_seconds": 677.0077823998872,
+      "executor_usage": {
+        "calls": 129,
+        "completion_tokens": 48135,
+        "prompt_tokens": 587456
+      },
+      "invalid_action_rate": 0.3701067615658363,
+      "mean_task_progress": 0.638888888888889,
+      "mean_task_success": 0.6,
+      "planner_output_errors": 0,
+      "triple_loop_count": 1
+    },
+    "C1_no_feedback": {
+      "adjacent_repetition_rate": 0.029069767441860465,
+      "elapsed_seconds": 496.7994528869167,
+      "executor_usage": {
+        "calls": 103,
+        "completion_tokens": 34912,
+        "prompt_tokens": 450597
+      },
+      "invalid_action_rate": 0.35148514851485146,
+      "mean_task_progress": 0.5912698412698413,
+      "mean_task_success": 0.5333333333333333,
+      "planner_output_errors": 0,
+      "triple_loop_count": 1
+    },
+    "C2_temporal_no_feedback": {
+      "adjacent_repetition_rate": 0.04950495049504951,
+      "elapsed_seconds": 563.6982645681128,
+      "executor_usage": {
+        "calls": 118,
+        "completion_tokens": 40422,
+        "prompt_tokens": 562291
+      },
+      "invalid_action_rate": 0.3879310344827586,
+      "mean_task_progress": 0.6347222222222223,
+      "mean_task_success": 0.6,
+      "planner_output_errors": 0,
+      "triple_loop_count": 2
+    },
+    "C3_temporal_feedback": {
+      "adjacent_repetition_rate": 0.03619909502262444,
+      "elapsed_seconds": 587.8417863021605,
+      "executor_usage": {
+        "calls": 112,
+        "completion_tokens": 42117,
+        "prompt_tokens": 547720
+      },
+      "invalid_action_rate": 0.336,
+      "mean_task_progress": 0.7597222222222223,
+      "mean_task_success": 0.6666666666666666,
+      "planner_output_errors": 0,
+      "triple_loop_count": 5
+    }
+  },
+  "decision": "no_go",
+  "episode_count": 30,
+  "episode_ids": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29"
+  ],
+  "go_checks": {
+    "c2_invalid_rate_within_limit": true,
+    "c2_progress_strictly_above_c1": true,
+    "c2_progress_within_0_10_of_c0": true,
+    "c2_repetition_rate_within_limit": false
+  },
+  "limitations": [
+    "Thirty paired tasks are a mechanism pilot; bootstrap intervals are descriptive.",
+    "Adjacent repetition includes legitimate repeated navigation actions.",
+    "The pilot tests frozen S0 prompting without an evidence ledger or evolution."
+  ],
+  "paired": true,
+  "paired_progress_bootstrap": {
+    "C2_minus_C0": {
+      "ci95_lower": -0.16666666666666666,
+      "ci95_upper": 0.1625,
+      "mean_delta": -0.004166666666666667
+    },
+    "C2_minus_C1": {
+      "ci95_lower": -0.06666666666666667,
+      "ci95_upper": 0.15357142857142858,
+      "mean_delta": 0.04345238095238095
+    },
+    "C3_minus_C0": {
+      "ci95_lower": -0.025,
+      "ci95_upper": 0.26666666666666666,
+      "mean_delta": 0.12083333333333333
+    }
+  },
+  "screening_limits": {
+    "adjacent_repetition_rate": 0.035873015873015876,
+    "invalid_action_rate": 0.4626334519572953
+  }
+}
+[2026-08-25T12:35:32+08:00] END stage=analyze_executor exit_code=0

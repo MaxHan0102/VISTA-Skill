@@ -1,0 +1,53 @@
+{
+  "candidate_artifact_sha256": "dba80be3f439e2d5a58af3803549f070e320a31eb63d576b552b508e29124e08",
+  "candidate_skill_sha256": "580733761480da79cfdf957b574fe8a1dcbf428730d2a92f03c6b57c0d58f4b7",
+  "candidate_version": 1,
+  "evidence_ids": [
+    "1:s14:visual:6:not_holding",
+    "1:s14:visual:1:at(spoon,receptacle_aabb_tbl1_top1_frl_apartment_table_01)",
+    "1:s17:visual:7:not_holding",
+    "1:s17:visual:1:at(spoon,receptacle_aabb_tbl1_top1_frl_apartment_table_01)"
+  ],
+  "field": "constraint",
+  "parent_artifact_sha256": "3a1266e6cab039911095e9c91d4ac1d7ad0da99db988cf2132ebfa5a74a52750",
+  "parent_skill_sha256": "bf7ff08f9026c1f9aa0fc981c32204bf4d4cf74324d9f413e0ee04c128153e1c",
+  "parent_version": 0,
+  "patch_id": "ac00d408e2ee64a5a234",
+  "promoted": false,
+  "protocol": {
+    "acquisition_episode_budget": 20,
+    "config_sha256": "b4e00516096fb9156f610e165ab89b04b1ab82f02c7d07ef76fb862e7c22434c",
+    "diagnostic": true,
+    "env": "eb-hab",
+    "evolution_seed": 0,
+    "evolution_seeds": [
+      0
+    ],
+    "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "executor_model_type": "remote",
+    "executor_temperature": 0.0,
+    "frozen": true,
+    "gate_rollout_seeds": [
+      0,
+      1,
+      2
+    ],
+    "initial_skill": "shared",
+    "manifest_sha256": "b08ee365b22302899084e209f09002e96242d3ce3eb4bad410d0523b4a163bec",
+    "max_completion_tokens": 4096,
+    "method": "full",
+    "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "n_shots": 10,
+    "protocol": "vista_skill_fault_repair_fullsel_p10f30_2026_08_20",
+    "resolution": 500,
+    "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+    "run_id": "7d09ee85e56640a6abdcf34a0dd4bfa4_seed_0",
+    "skill_fault": "constraint_pick_multihold",
+    "split_rotation_index": 0,
+    "split_sha256": "e6558c0c6b1e2a99603aeee7350104c888a130cef043c188ca90cdd99372fbeb",
+    "tensor_parallel": 1
+  },
+  "schema_version": "1",
+  "snapshot_id": "v0-v1-674a4c3633f7-580733761480",
+  "snapshot_sha256": "5f07295ca3e38fee3b0d1e773b7d29b7e403dd18a8b5ae60848236a73461dea9"
+}

@@ -1,0 +1,100 @@
+{
+  "env": "eb-nav",
+  "provider": "qwen",
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "track": "rgb_only",
+  "eval_sets": [
+    "base",
+    "common_sense",
+    "complex_instruction",
+    "visual_appearance",
+    "long_horizon"
+  ],
+  "episodes": 0,
+  "start_index": 0,
+  "seed": 0,
+  "frames": 1,
+  "n_shots": null,
+  "resolution": null,
+  "max_steps": null,
+  "max_tokens": null,
+  "temperature": null,
+  "api_retries": 3,
+  "retry_delay": 5,
+  "expected_episodes": null,
+  "artifact_root": null,
+  "resume_existing": false,
+  "api_key_env": "QWEN_API_KEY",
+  "base_url": "http://192.168.1.173:8001/v1",
+  "output": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full",
+  "log_level": "INFO",
+  "dry_run": false,
+  "smoke_policy": false,
+  "requested_output": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-nav_v2_full",
+  "started_at": "2026-09-10T09:54:52.307529+08:00",
+  "protocol": "stock_feedback_v2",
+  "official_config": {
+    "model_name": "Qwen/Qwen3-VL-8B-Instruct",
+    "down_sample_ratio": 1,
+    "model_type": "remote",
+    "language_only": false,
+    "eval_sets": [
+      "base",
+      "common_sense",
+      "complex_instruction",
+      "visual_appearance",
+      "long_horizon"
+    ],
+    "chat_history": false,
+    "n_shots": 3,
+    "multiview": false,
+    "detection_box": false,
+    "multistep": false,
+    "resolution": 500,
+    "exp_name": "feedback_comparison",
+    "visual_icl": false,
+    "tp": 1,
+    "truncate": true
+  },
+  "schema_compatibility": "closed_objects_v1",
+  "script_sha256": "593c52f7c47eb1e3fb2e4d434e3804c1ce087a65c75526fe274e3c927a3e8126",
+  "skill_or_memory": false,
+  "source_hashes": {
+    "EmbodiedBench/embodiedbench/configs/eb-nav.yaml": "b5c4bcbc3dc61c62563a7fbc8d19c8bc00073f94831d7dfbfea9c5a41d52823e",
+    "EmbodiedBench/embodiedbench/planner/remote_model.py": "8c50923997c9e937e96c07fee2087737a52b9052f41c3254737c43f2499e928e",
+    "EmbodiedBench/embodiedbench/planner/nav_planner.py": "dc10c7923588899548ddbb75515e9693f89f19d720eaace6bff93e5d3b0fdb79",
+    "EmbodiedBench/embodiedbench/envs/eb_navigation/EBNavEnv.py": "2e127bcc69d5716239afd763f7d0db705a581674d949e558a34d8bb49ee977c2",
+    "EmbodiedBench/embodiedbench/evaluator/eb_navigation_evaluator.py": "213864889a8675242de8528bd06c8c74d2825850cf654c2ead456d90ebc0eeeb"
+  },
+  "resume_managed": true,
+  "endpoint_models": {
+    "object": "list",
+    "data": [
+      {
+        "id": "Qwen/Qwen3-VL-8B-Instruct",
+        "object": "model",
+        "created": 1789005283,
+        "owned_by": "vllm",
+        "root": "Qwen/Qwen3-VL-8B-Instruct",
+        "parent": null,
+        "max_model_len": 16384,
+        "permission": [
+          {
+            "id": "modelperm-9805676fcbc4b8b9",
+            "object": "model_permission",
+            "created": 1789005283,
+            "allow_create_engine": false,
+            "allow_sampling": true,
+            "allow_logprobs": true,
+            "allow_search_indices": false,
+            "allow_view": true,
+            "allow_fine_tuning": false,
+            "organization": "*",
+            "group": null,
+            "is_blocking": false
+          }
+        ]
+      }
+    ]
+  }
+}

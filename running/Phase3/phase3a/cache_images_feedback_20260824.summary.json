@@ -1,0 +1,34 @@
+{
+  "analysis_type": "phase3a_visual_evidence_cache",
+  "base_urls": [
+    "http://192.168.1.185:8000/v1",
+    "http://192.168.1.173:8001/v1"
+  ],
+  "condition": "images_and_feedback",
+  "dataset": "/root/max/VISTA-Skill/running/Phase3/phase3a/phase3a_dataset_v2_20260824.json",
+  "dataset_id": "vista_phase3a_evidence_state_oracle_v2",
+  "elapsed_seconds_this_invocation": 1418.2701898450032,
+  "endpoint_assignment": "round_robin by frozen dataset index; images_only uses +1 crossover offset",
+  "error_count": 0,
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "output": "running/Phase3/phase3a/cache_images_feedback_20260824.jsonl",
+  "request_seed": 0,
+  "sample_count": 300,
+  "usage": {
+    "calls": 300,
+    "completion_tokens": 109199,
+    "prompt_tokens": 230253
+  },
+  "usage_by_endpoint": {
+    "http://192.168.1.173:8001/v1": {
+      "calls": 150,
+      "completion_tokens": 57971,
+      "prompt_tokens": 115181
+    },
+    "http://192.168.1.185:8000/v1": {
+      "calls": 150,
+      "completion_tokens": 51228,
+      "prompt_tokens": 115072
+    }
+  }
+}

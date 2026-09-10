@@ -1,0 +1,1 @@
+{"reward": 0.0, "num_invalid_actions": 2, "empty_plan": 1, "instruction": "Locate a purple fruit and convey it to the sink.", "task_success": 0, "task_progress": 0, "subgoal_reward": 0, "num_steps": 12, "planner_steps": 4, "planner_output_error": 0, "num_invalid_action_ratio": 0.16666666666666666, "episode_elapsed_seconds": 13.397281169891357}

@@ -1,0 +1,88 @@
+{
+  "analysis_type": "phase3c_final_analysis",
+  "decision": "no_go",
+  "decision_basis": "The frozen offline conjunction failed synthetic and natural attribution; conditional live branches were therefore cancelled.",
+  "meta_skill": {
+    "version": "phase3c_frozen_v1",
+    "sha256": "ec349ec8bbb0a6dced55267fc0d44c0259a4772f384b3adab765fa0faeff43cc",
+    "whitespace_token_proxy": 423
+  },
+  "offline_gate": {
+    "access_and_freeze": true,
+    "synthetic": false,
+    "natural": false,
+    "patch": true,
+    "metamorphic": true
+  },
+  "key_results": {
+    "synthetic": {
+      "current_target_macro_f1": 0.5279106858054227,
+      "meta_target_macro_f1": 0.43209876543209874,
+      "target_delta": -0.09581192037332392,
+      "current_field_macro_f1": 0.9386973180076629,
+      "meta_field_macro_f1": 0.2962962962962963,
+      "field_delta": -0.6424010217113666,
+      "invalid": 0
+    },
+    "natural_constraint_pick_multihold": {
+      "current_direct_skill_update_f1": 0.5912195121951219,
+      "meta_direct_skill_update_f1": 0.15384615384615385,
+      "current_rule_first_skill_update_f1": 0.8571428571428571,
+      "meta_rule_first_skill_update_f1": 0.8571428571428571
+    },
+    "natural_effect_pick_inversion": {
+      "current_direct_skill_update_f1": 0.5820768136557609,
+      "meta_direct_skill_update_f1": 0.42857142857142855,
+      "current_rule_first_skill_update_f1": 0.625,
+      "meta_rule_first_skill_update_f1": 0.625
+    },
+    "patch": {
+      "constraint_pick_multihold": "10/10",
+      "effect_pick_inversion": "10/10",
+      "environment_neutral": "20/20",
+      "complete_test_intent_in_rationale": "0/20"
+    },
+    "metamorphic": {
+      "target_field_agreement": 0.9444444444444444,
+      "invalid": 0,
+      "disagreements": 4,
+      "disagreement_family": "unknown_as_false under identifier/entity rename"
+    }
+  },
+  "cost": {
+    "phase3c_calls": 676,
+    "phase3c_prompt_tokens": 424278,
+    "phase3c_completion_tokens": 131946,
+    "phase3c_total_tokens": 556224,
+    "matched_core_current_total_tokens": 348393,
+    "matched_core_meta_total_tokens": 498640,
+    "matched_core_meta_over_current_ratio": 1.4312602681458594,
+    "executor_calls": 0,
+    "habitat_rollouts": 0
+  },
+  "interpretation": [
+    "The attribution instruction made the 8B teacher consistently over-abstain; it reduced weak-gold false updates but lost too many true Skill updates.",
+    "The existing deterministic rule-first assigner prevented regressions, but the Meta-Skill added no update-yield improvement on either natural fault.",
+    "Patch success was already saturated by the current evidence-corrected compiled-rule path, so 20/20 does not demonstrate incremental Meta-Skill value.",
+    "High metamorphic agreement shows stable behavior, not useful behavior.",
+    "The frozen bundle increased matched core teacher/patch tokens by 43.1 percent while failing the benefit gates."
+  ],
+  "cancelled_by_preregistered_no_go": [
+    "fresh Phase3C live fault admission",
+    "30-episode EB-HAB observe-and-recover executor pilot",
+    "EB-HAB live Meta-Skill evolution comparison",
+    "EB-NAV zero-shot prompt pilot",
+    "EB-NAV live evolution adapter"
+  ],
+  "artifacts": {
+    "offline_decision": "running/Phase3/phase3c/offline/phase3c_offline_decision.json",
+    "offline_decision_sha256": "c0d580e28639ffff29470b6a9b579769487993455a20cdc1617461d3a04c80d8",
+    "synthetic_sha256": "9b1ad4fc8b678d4641bd01a21ec520e0e1d93b49318c1942555f5d200a0b4f92",
+    "metamorphic_sha256": "1c578c39fb0b657689ee088d4489ea133b7ededfb9aae342dc6365a32a0ce430"
+  },
+  "limitations": [
+    "Natural labels are injected-fault weak gold; control events are not independently annotated for unrelated defects.",
+    "The observe-and-recover executor Skill was not evaluated because the frozen offline gate failed, so Phase3C makes no claim about its execution-only utility.",
+    "Static stage contracts prevent evaluation-label leakage, but prompt-section placement cannot provide attention-level isolation inside one executor model."
+  ]
+}

@@ -5,7 +5,7 @@ cd /root/max/VISTA-Skill || exit 2
 export PYTHONPATH=.
 PY=/root/miniconda3/envs/max_embench/bin/python
 BASE_URL=http://127.0.0.1:8000/v1
-OUT=running/phase3c/offline
+OUT=running/Phase3/phase3c/offline
 mkdir -p "$OUT"
 
 run_one() {
@@ -29,9 +29,9 @@ run_one "$OUT/synthetic_meta.json" \
 
 for fault in constraint_pick_multihold effect_pick_inversion; do
   if [[ "$fault" == "constraint_pick_multihold" ]]; then
-    events=running/phase2_multihold_provenance_fix/full/seed_0/acquisition.jsonl
+    events=running/Phase2/phase2_multihold_provenance_fix/full/seed_0/acquisition.jsonl
   else
-    events=running/phase2_effect_pick_inversion/full/seed_0/acquisition.jsonl
+    events=running/Phase2/phase2_effect_pick_inversion/full/seed_0/acquisition.jsonl
   fi
   for seed in 0 1 2 3 4; do
     run_one "$OUT/natural_${fault}_seed${seed}.json" \

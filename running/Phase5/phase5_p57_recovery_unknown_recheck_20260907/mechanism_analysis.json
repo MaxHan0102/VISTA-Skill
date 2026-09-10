@@ -1,0 +1,159 @@
+{
+  "claim_eligible": false,
+  "coordinate_metadata": [
+    {
+      "arm": "parent",
+      "artifact_sha256": "77d409d6b9b8275b02a97f860ebef4e39806335706c63040a706892cea274a0f",
+      "elapsed_seconds": 8.63122276798822,
+      "endpoint": "http://192.168.1.185:8000/v1",
+      "endpoint_index": 0,
+      "episode_id": "p57_acquisition_00",
+      "executor_usage": {
+        "by_phase": {
+          "mechanism": {
+            "calls": 1,
+            "completion_tokens": 353,
+            "prompt_tokens": 4122
+          }
+        },
+        "calls": 1,
+        "completion_tokens": 353,
+        "prompt_tokens": 4122
+      },
+      "local_metrics": {
+        "failed_target_triggers": 0,
+        "guard_blocks": 0,
+        "retries_without_new_evidence": 0,
+        "successful_retries_without_evidence": 0,
+        "target_evidence_recoveries": 0
+      },
+      "method_usage": {},
+      "seed": 570907,
+      "skill_sha256": "052b4e954e04a6d3ae64888d15feb09285bd3dec72061a29210a94d57f8c792e"
+    },
+    {
+      "arm": "candidate",
+      "artifact_sha256": "eb0f15c8d88c76014f8e961ec3add9312458979630224c5d2859faff4c7504c1",
+      "elapsed_seconds": 111.92809544299962,
+      "endpoint": "http://192.168.1.185:8000/v1",
+      "endpoint_index": 0,
+      "episode_id": "p57_acquisition_00",
+      "executor_usage": {
+        "by_phase": {
+          "mechanism": {
+            "calls": 5,
+            "completion_tokens": 1725,
+            "prompt_tokens": 22817
+          }
+        },
+        "calls": 5,
+        "completion_tokens": 1725,
+        "prompt_tokens": 22817
+      },
+      "local_metrics": {
+        "failed_target_triggers": 1,
+        "guard_blocks": 3,
+        "retries_without_new_evidence": 0,
+        "successful_retries_without_evidence": 0,
+        "target_evidence_recoveries": 0
+      },
+      "method_usage": {
+        "vista_visual_evidence": {
+          "calls": 4,
+          "completion_tokens": 1531,
+          "prompt_tokens": 3239
+        }
+      },
+      "seed": 570907,
+      "skill_sha256": "b78a1c696deb6e94ededccbe5980d548b380e0ef137b8e4768e527630540d3df"
+    },
+    {
+      "arm": "parent",
+      "artifact_sha256": "616afb316ab34efbd9c59a38c748e20674b8277e86bd316ecf01b51928ec83c8",
+      "elapsed_seconds": 77.89400873304112,
+      "endpoint": "http://192.168.1.192:8001/v1",
+      "endpoint_index": 1,
+      "episode_id": "p57_acquisition_01",
+      "executor_usage": {
+        "by_phase": {
+          "mechanism": {
+            "calls": 10,
+            "completion_tokens": 3846,
+            "prompt_tokens": 46705
+          }
+        },
+        "calls": 10,
+        "completion_tokens": 3846,
+        "prompt_tokens": 46705
+      },
+      "local_metrics": {
+        "failed_target_triggers": 1,
+        "guard_blocks": 0,
+        "retries_without_new_evidence": 7,
+        "successful_retries_without_evidence": 0,
+        "target_evidence_recoveries": 0
+      },
+      "method_usage": {
+        "vista_visual_evidence": {
+          "calls": 4,
+          "completion_tokens": 1118,
+          "prompt_tokens": 3093
+        }
+      },
+      "seed": 570907,
+      "skill_sha256": "052b4e954e04a6d3ae64888d15feb09285bd3dec72061a29210a94d57f8c792e"
+    },
+    {
+      "arm": "candidate",
+      "artifact_sha256": "a33df22585c93f1ce2bebd8a3538200812ff483b18a62e2330fd9f2600ff0993",
+      "elapsed_seconds": 37.27210253296653,
+      "endpoint": "http://192.168.1.192:8001/v1",
+      "endpoint_index": 1,
+      "episode_id": "p57_acquisition_01",
+      "executor_usage": {
+        "by_phase": {
+          "mechanism": {
+            "calls": 4,
+            "completion_tokens": 1446,
+            "prompt_tokens": 17723
+          }
+        },
+        "calls": 4,
+        "completion_tokens": 1446,
+        "prompt_tokens": 17723
+      },
+      "local_metrics": {
+        "failed_target_triggers": 1,
+        "guard_blocks": 3,
+        "retries_without_new_evidence": 0,
+        "successful_retries_without_evidence": 0,
+        "target_evidence_recoveries": 0
+      },
+      "method_usage": {
+        "vista_visual_evidence": {
+          "calls": 3,
+          "completion_tokens": 618,
+          "prompt_tokens": 2242
+        }
+      },
+      "seed": 570907,
+      "skill_sha256": "b78a1c696deb6e94ededccbe5980d548b380e0ef137b8e4768e527630540d3df"
+    }
+  ],
+  "metrics": {
+    "candidate": {
+      "guard_blocks": 6,
+      "progress_sum": 0.0,
+      "retries_without_new_evidence": 0,
+      "successes": 0.0
+    },
+    "parent": {
+      "guard_blocks": 0,
+      "progress_sum": 1.0,
+      "retries_without_new_evidence": 7,
+      "successes": 1.0
+    }
+  },
+  "outcome_selected_acquisition_diagnostic": true,
+  "verdict": "no_go"
+}

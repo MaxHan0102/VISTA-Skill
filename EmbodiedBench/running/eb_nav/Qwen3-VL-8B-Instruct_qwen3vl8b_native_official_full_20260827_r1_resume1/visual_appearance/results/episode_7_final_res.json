@@ -1,0 +1,1 @@
+{"reward": 0.1111111111111111, "instruction": "Move to the round, smooth object with a bright red surface.", "task_success": 1.0, "num_steps": 9, "planner_steps": 3, "planner_output_error": 0, "episode_elapsed_seconds": 13.111334085464478}

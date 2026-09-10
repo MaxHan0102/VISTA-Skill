@@ -4,11 +4,39 @@
 
 This file adds Claude Code architecture and operational context to the shared repository guidance in `AGENTS.md`.
 
+## Experiment output and Git policy
+
+Follow the output-placement table in `AGENTS.md` and the current inventory in
+`docs/experiment_output_layout.md`. Paths are relative to the repository root:
+
+- Method experiments and phase-specific diagnostics: `running/PhaseN/<experiment_id>/`.
+- General smoke tests, fixed-policy checks and resume fixtures: `running/test/<test_id>/`.
+- Closed-model feedback runs: `running/closed_feedback/<run_id>/`; keep active runs in place.
+- Relocation records and local original backups: `running/migrations/<migration_id>/`.
+- Native EmbodiedBench raw output: `EmbodiedBench/running/<environment>/<experiment_id>/`.
+  Existing navigation baseline console/analysis records use `running/embodiedbench_native_nav/`.
+
+Do not scatter new tests or migration backups at the `running/` root. Set output
+paths explicitly; from the benchmark working directory, VISTA output usually
+requires `../running/...`. Resume attempts stay within their owning run's
+`_resume/attempt_<id>/`. Do not relocate outputs being written by another session.
+For authorized reorganizations, rewrite paths and verified hash dependencies,
+retain original backups and a migration manifest, and validate scores and file
+references. Do not leave compatibility symlinks or treat changed hashes as a new
+preregistration.
+
+Non-image records in both output roots may be tracked by Git. Keep images,
+extensionless `audit/input_images/` image caches, backup archives and runtime
+locks ignored. Retain image paths/hashes in JSON records. Check logs for secrets
+before staging; never commit credentials, downloaded datasets or simulator
+assets. Do not restore a blanket `running/` ignore rule. Tracking eligibility is
+not an instruction to commit or push.
+
 ## What this repository is
 
 VISTA-Skill is a research project (CVPR 2027 target) studying **visual transition credit assignment for reliable skill evolution** in embodied agents under partial observability. It is being developed **on top of** EmbodiedBench, an ICML 2025 benchmark for multi-modal embodied agents. The repo has two disjoint parts:
 
-- `context4agent/` — the *paper*: LaTeX (`latex/`, main + `sec/`), reference PDFs (`PDF/`), and **authoritative design docs in Chinese** (`markdown/`). These docs state the method, baselines, and current project decisions.
+- `context4agent/` — research context: reference PDFs (`PDF/`), **authoritative design docs in Chinese** (`markdown/`), and a stale reference-only LaTeX copy (`latex/`). Never edit or build that LaTeX tree; the maintained paper lives in a separate local project. The Chinese docs state the method, baselines, and current project decisions.
 - `EmbodiedBench/` — the *runnable benchmark*. It was a git submodule and is now inlined directly (see commit `59b7023`); stock benchmark code lives here.
 - `vista_skill/`, `configs/`, `tests/`, `scripts/`, `docs/` — the *VISTA-Skill method, experiment protocol, and tooling*.
 
@@ -39,7 +67,7 @@ python -m embodiedbench.main env=eb-hab model_name=gpt-4o-mini exp_name=baseline
 ```
 CLI args use **Hydra `key=value` syntax** and override the per-env YAML. Useful flags: `down_sample_ratio=0.1` (fast debug run on 10% of data), `eval_sets=[<subset>]` (single capability subset), `language_only=True` (text-only), `chat_history=True`, `n_shots=N`, `multiview`/`multistep`/`visual_icl`, `resolution`, `log_level=DEBUG`.
 
-There is a VISTA-Skill test suite under `tests/` (run with `pytest` from the repo root) plus the per-environment EmbodiedBench smoke tests. The exact suite layout evolves, so consult `tests/` and `docs/implementation.md` for what currently exists rather than assuming. For simulator-level checks, use the per-environment smoke-test entry points in the README and a small seeded evaluation, e.g. `python -m embodiedbench.envs.eb_habitat.EBHabEnv`. The tests under `habitat-lab/test/` cover that upstream dependency only. Results and rendered frames are written under `EmbodiedBench/running/`.
+There is a VISTA-Skill test suite under `tests/` (run with `pytest` from the repo root) plus the per-environment EmbodiedBench smoke tests. The exact suite layout evolves, so consult `tests/` and `docs/implementation.md` for what currently exists rather than assuming. For simulator-level checks, use the per-environment smoke-test entry points in the README and a small seeded evaluation, e.g. `python -m embodiedbench.envs.eb_habitat.EBHabEnv`. The tests under `habitat-lab/test/` cover that upstream dependency only. Native evaluator results and rendered frames default to `EmbodiedBench/running/`; VISTA experiments and general engineering tests use the categories above.
 
 ### Model types
 `model_type=` selects how the model is called:

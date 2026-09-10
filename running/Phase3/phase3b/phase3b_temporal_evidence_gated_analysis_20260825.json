@@ -1,0 +1,475 @@
+{
+  "analysis_type": "phase3b_strict_temporal_evidence_gated_audit",
+  "audit_samples_read": 0,
+  "dataset": "/root/max/VISTA-Skill/running/Phase3/phase3a/phase3a_dataset_v3_cachefix_20260825.json",
+  "dataset_id": "vista_phase3a_evidence_state_oracle_cachefix_v3",
+  "decision": "no_go_dev",
+  "dev_cost": {
+    "T0_pair_strict": {
+      "calls": 120,
+      "completion_tokens": 21039,
+      "prompt_tokens": 81930
+    },
+    "T1_temporal_strict": {
+      "calls": 120,
+      "completion_tokens": 28712,
+      "prompt_tokens": 124754
+    }
+  },
+  "dev_go_checks": {
+    "accepted_predicate_precision_ge_0_90": true,
+    "clean_false_skill_update_rate_lt_0_05": true,
+    "contradiction_recall_ge_0_50": false,
+    "predicate_macro_f1_gain_ge_0_10": false,
+    "query_coverage_ge_0_50": false,
+    "target_macro_f1_within_0_05_of_e0": false,
+    "tokens_le_1_5x_pair": true
+  },
+  "dev_metrics": {
+    "E0_current": {
+      "arm": "E0_current",
+      "attribution_vs_oracle_routing": {
+        "clean_control_count": 180,
+        "clean_false_skill_update_rate": 0.0,
+        "false_recurrence_cluster_proxy_count": 0,
+        "false_skill_updates": 0,
+        "field_macro_f1": 1.0,
+        "skill_update_gold_count": 14,
+        "skill_update_recall": 1.0,
+        "target_macro_f1": 0.7764486714383763
+      },
+      "contradiction": {
+        "false_contradiction_rate": 0.006329113924050633,
+        "fn": 46.0,
+        "fp": 2.0,
+        "precision": 0.9927007299270073,
+        "recall": 0.8553459119496856,
+        "tn": 314.0,
+        "tp": 272.0
+      },
+      "predicate_all_including_task_complete": {
+        "asserted": 411,
+        "brier": 0.2016485022972022,
+        "by_action": {
+          "close": {
+            "coverage": 0.4861111111111111,
+            "macro_f1": 0.5210755813953488,
+            "targets": 72
+          },
+          "nav": {
+            "coverage": 0.5344827586206896,
+            "macro_f1": 0.5597789307466727,
+            "targets": 174
+          },
+          "open": {
+            "coverage": 0.5052631578947369,
+            "macro_f1": 0.5316606929510155,
+            "targets": 95
+          },
+          "pick": {
+            "coverage": 0.7637130801687764,
+            "macro_f1": 0.6990451881262998,
+            "targets": 237
+          },
+          "place": {
+            "coverage": 0.72,
+            "macro_f1": 0.7639432485322897,
+            "targets": 75
+          }
+        },
+        "correct": 334,
+        "coverage": 0.6294027565084227,
+        "ece_asserted": 0.16294386131386773,
+        "macro_f1": 0.6361992589777019,
+        "precision": 0.8126520681265207,
+        "recall": 0.5114854517611026,
+        "selective_risk": [
+          {
+            "confidence_threshold": 0.5,
+            "coverage": 1.0,
+            "n_retained": 411,
+            "selective_risk": 0.1873479318734793
+          },
+          {
+            "confidence_threshold": 0.75,
+            "coverage": 0.9829683698296837,
+            "n_retained": 404,
+            "selective_risk": 0.1782178217821782
+          },
+          {
+            "confidence_threshold": 0.9,
+            "coverage": 0.9829683698296837,
+            "n_retained": 404,
+            "selective_risk": 0.1782178217821782
+          }
+        ],
+        "targets": 653
+      },
+      "predicate_state": {
+        "asserted": 411,
+        "brier": 0.19076261163240724,
+        "by_action": {
+          "close": {
+            "coverage": 0.603448275862069,
+            "macro_f1": 0.5863039399624765,
+            "targets": 58
+          },
+          "nav": {
+            "coverage": 0.6788321167883211,
+            "macro_f1": 0.6263201884355292,
+            "targets": 137
+          },
+          "open": {
+            "coverage": 0.6153846153846154,
+            "macro_f1": 0.5925925925925926,
+            "targets": 78
+          },
+          "pick": {
+            "coverage": 0.905,
+            "macro_f1": 0.7558974073661955,
+            "targets": 200
+          },
+          "place": {
+            "coverage": 0.9,
+            "macro_f1": 0.868925831202046,
+            "targets": 60
+          }
+        },
+        "correct": 334,
+        "coverage": 0.7711069418386491,
+        "ece_asserted": 0.16294386131386773,
+        "macro_f1": 0.7060620353525144,
+        "precision": 0.8126520681265207,
+        "recall": 0.626641651031895,
+        "selective_risk": [
+          {
+            "confidence_threshold": 0.5,
+            "coverage": 1.0,
+            "n_retained": 411,
+            "selective_risk": 0.1873479318734793
+          },
+          {
+            "confidence_threshold": 0.75,
+            "coverage": 0.9829683698296837,
+            "n_retained": 404,
+            "selective_risk": 0.1782178217821782
+          },
+          {
+            "confidence_threshold": 0.9,
+            "coverage": 0.9829683698296837,
+            "n_retained": 404,
+            "selective_risk": 0.1782178217821782
+          }
+        ],
+        "targets": 533
+      },
+      "propagation_case_count": 194,
+      "sample_count": 120
+    },
+    "T0_pair_strict": {
+      "arm": "T0_pair_strict",
+      "attribution_vs_oracle_routing": {
+        "clean_control_count": 180,
+        "clean_false_skill_update_rate": 0.0,
+        "false_recurrence_cluster_proxy_count": 0,
+        "false_skill_updates": 0,
+        "field_macro_f1": 0.32085561497326204,
+        "skill_update_gold_count": 14,
+        "skill_update_recall": 0.0,
+        "target_macro_f1": 0.30438842203548083
+      },
+      "contradiction": {
+        "false_contradiction_rate": 0.015822784810126583,
+        "fn": 213.0,
+        "fp": 5.0,
+        "precision": 0.9545454545454546,
+        "recall": 0.330188679245283,
+        "tn": 311.0,
+        "tp": 105.0
+      },
+      "predicate_all_including_task_complete": {
+        "asserted": 47,
+        "brier": 0.23325298621745788,
+        "by_action": {
+          "close": {
+            "coverage": 0.0,
+            "macro_f1": 0.0,
+            "targets": 72
+          },
+          "nav": {
+            "coverage": 0.06896551724137931,
+            "macro_f1": 0.16216216216216214,
+            "targets": 174
+          },
+          "open": {
+            "coverage": 0.0,
+            "macro_f1": 0.0,
+            "targets": 95
+          },
+          "pick": {
+            "coverage": 0.09282700421940929,
+            "macro_f1": 0.1892679900744417,
+            "targets": 237
+          },
+          "place": {
+            "coverage": 0.17333333333333334,
+            "macro_f1": 0.24074074074074073,
+            "targets": 75
+          }
+        },
+        "correct": 46,
+        "coverage": 0.07197549770290965,
+        "ece_asserted": 0.014042553191489282,
+        "macro_f1": 0.14452122082703853,
+        "precision": 0.9787234042553191,
+        "recall": 0.07044410413476264,
+        "selective_risk": [
+          {
+            "confidence_threshold": 0.5,
+            "coverage": 1.0,
+            "n_retained": 47,
+            "selective_risk": 0.02127659574468085
+          },
+          {
+            "confidence_threshold": 0.75,
+            "coverage": 1.0,
+            "n_retained": 47,
+            "selective_risk": 0.02127659574468085
+          },
+          {
+            "confidence_threshold": 0.9,
+            "coverage": 1.0,
+            "n_retained": 47,
+            "selective_risk": 0.02127659574468085
+          }
+        ],
+        "targets": 653
+      },
+      "predicate_state": {
+        "asserted": 47,
+        "brier": 0.2294825515947467,
+        "by_action": {
+          "close": {
+            "coverage": 0.0,
+            "macro_f1": 0.0,
+            "targets": 58
+          },
+          "nav": {
+            "coverage": 0.08759124087591241,
+            "macro_f1": 0.1643835616438356,
+            "targets": 137
+          },
+          "open": {
+            "coverage": 0.0,
+            "macro_f1": 0.0,
+            "targets": 78
+          },
+          "pick": {
+            "coverage": 0.11,
+            "macro_f1": 0.19735984354628422,
+            "targets": 200
+          },
+          "place": {
+            "coverage": 0.21666666666666667,
+            "macro_f1": 0.26530612244897955,
+            "targets": 60
+          }
+        },
+        "correct": 46,
+        "coverage": 0.08818011257035648,
+        "ece_asserted": 0.014042553191489282,
+        "macro_f1": 0.15225037257824145,
+        "precision": 0.9787234042553191,
+        "recall": 0.08630393996247655,
+        "selective_risk": [
+          {
+            "confidence_threshold": 0.5,
+            "coverage": 1.0,
+            "n_retained": 47,
+            "selective_risk": 0.02127659574468085
+          },
+          {
+            "confidence_threshold": 0.75,
+            "coverage": 1.0,
+            "n_retained": 47,
+            "selective_risk": 0.02127659574468085
+          },
+          {
+            "confidence_threshold": 0.9,
+            "coverage": 1.0,
+            "n_retained": 47,
+            "selective_risk": 0.02127659574468085
+          }
+        ],
+        "targets": 533
+      },
+      "propagation_case_count": 194,
+      "sample_count": 120
+    },
+    "T1_temporal_strict": {
+      "arm": "T1_temporal_strict",
+      "attribution_vs_oracle_routing": {
+        "clean_control_count": 180,
+        "clean_false_skill_update_rate": 0.0,
+        "false_recurrence_cluster_proxy_count": 0,
+        "false_skill_updates": 0,
+        "field_macro_f1": 0.32085561497326204,
+        "skill_update_gold_count": 14,
+        "skill_update_recall": 0.0,
+        "target_macro_f1": 0.30438842203548083
+      },
+      "contradiction": {
+        "false_contradiction_rate": 0.006329113924050633,
+        "fn": 313.0,
+        "fp": 2.0,
+        "precision": 0.7142857142857143,
+        "recall": 0.015723270440251572,
+        "tn": 314.0,
+        "tp": 5.0
+      },
+      "predicate_all_including_task_complete": {
+        "asserted": 29,
+        "brier": 0.24040535987748857,
+        "by_action": {
+          "close": {
+            "coverage": 0.0,
+            "macro_f1": 0.0,
+            "targets": 72
+          },
+          "nav": {
+            "coverage": 0.04597701149425287,
+            "macro_f1": 0.1142857142857143,
+            "targets": 174
+          },
+          "open": {
+            "coverage": 0.0,
+            "macro_f1": 0.0,
+            "targets": 95
+          },
+          "pick": {
+            "coverage": 0.004219409282700422,
+            "macro_f1": 0.011494252873563218,
+            "targets": 237
+          },
+          "place": {
+            "coverage": 0.26666666666666666,
+            "macro_f1": 0.3166666666666667,
+            "targets": 75
+          }
+        },
+        "correct": 28,
+        "coverage": 0.0444104134762634,
+        "ece_asserted": 0.02517241379310342,
+        "macro_f1": 0.09395973154362416,
+        "precision": 0.9655172413793104,
+        "recall": 0.042879019908116385,
+        "selective_risk": [
+          {
+            "confidence_threshold": 0.5,
+            "coverage": 1.0,
+            "n_retained": 29,
+            "selective_risk": 0.034482758620689655
+          },
+          {
+            "confidence_threshold": 0.75,
+            "coverage": 1.0,
+            "n_retained": 29,
+            "selective_risk": 0.034482758620689655
+          },
+          {
+            "confidence_threshold": 0.9,
+            "coverage": 1.0,
+            "n_retained": 29,
+            "selective_risk": 0.034482758620689655
+          }
+        ],
+        "targets": 653
+      },
+      "predicate_state": {
+        "asserted": 29,
+        "brier": 0.23824521575984992,
+        "by_action": {
+          "close": {
+            "coverage": 0.0,
+            "macro_f1": 0.0,
+            "targets": 58
+          },
+          "nav": {
+            "coverage": 0.058394160583941604,
+            "macro_f1": 0.11594202898550726,
+            "targets": 137
+          },
+          "open": {
+            "coverage": 0.0,
+            "macro_f1": 0.0,
+            "targets": 78
+          },
+          "pick": {
+            "coverage": 0.005,
+            "macro_f1": 0.011494252873563218,
+            "targets": 200
+          },
+          "place": {
+            "coverage": 0.3333333333333333,
+            "macro_f1": 0.34545454545454546,
+            "targets": 60
+          }
+        },
+        "correct": 28,
+        "coverage": 0.054409005628517824,
+        "ece_asserted": 0.02517241379310342,
+        "macro_f1": 0.09655172413793103,
+        "precision": 0.9655172413793104,
+        "recall": 0.0525328330206379,
+        "selective_risk": [
+          {
+            "confidence_threshold": 0.5,
+            "coverage": 1.0,
+            "n_retained": 29,
+            "selective_risk": 0.034482758620689655
+          },
+          {
+            "confidence_threshold": 0.75,
+            "coverage": 1.0,
+            "n_retained": 29,
+            "selective_risk": 0.034482758620689655
+          },
+          {
+            "confidence_threshold": 0.9,
+            "coverage": 1.0,
+            "n_retained": 29,
+            "selective_risk": 0.034482758620689655
+          }
+        ],
+        "targets": 533
+      },
+      "propagation_case_count": 194,
+      "sample_count": 120
+    }
+  },
+  "dev_tier_counts": {
+    "action_prior": 34,
+    "direct_current": 155,
+    "temporal": 3,
+    "unknown": 161
+  },
+  "information_isolation": {
+    "action_prior_authorizes_persistent_write": false,
+    "expected_transition": false,
+    "last_action_success": false,
+    "oracle": false,
+    "pre_ledger": false,
+    "raw_feedback": false,
+    "skill": false
+  },
+  "limitations": [
+    "Oracle labels define action-local query truth, not human visual-inferability labels.",
+    "Counterfactual faults modify only expected transitions; observed RGB and oracle state stay fixed.",
+    "Phase3A audit is not read; a new scene/task-disjoint audit is conditional on both Phase3B gates."
+  ],
+  "selection_cost": null,
+  "selection_go_checks": null,
+  "selection_metrics": null,
+  "selection_opened": false,
+  "selection_tier_counts": null
+}

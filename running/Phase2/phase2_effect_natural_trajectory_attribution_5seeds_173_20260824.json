@@ -1,0 +1,1138 @@
+{
+  "analysis_type": "natural_fault_injection_trajectory_reflection_weak_audit",
+  "base_url": "http://192.168.1.173:8001/v1",
+  "episode_count": 20,
+  "fault": "effect_pick_inversion",
+  "gold_positive_count": 10,
+  "gold_positive_rule_suffix": ":effect_pick_holds_target_category",
+  "limitation": "The injected fault defines positive episodes before outcomes, but controls are not independently annotated for unrelated natural Skill defects.",
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "seed_reports": [
+    {
+      "metrics": {
+        "confusion": {
+          "abstain->abstain": 6,
+          "abstain->skill_update": 4,
+          "skill_update->abstain": 5,
+          "skill_update->skill_update": 5
+        },
+        "field_macro_f1": 0.19047619047619044,
+        "skill_update_f1": 0.5263157894736842,
+        "skill_update_precision": 0.5555555555555556,
+        "skill_update_recall": 0.5,
+        "target_macro_f1": 0.5488721804511277
+      },
+      "rows": [
+        {
+          "confidence": 0.95,
+          "episode_id": "0",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "1",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "2",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "3",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "4",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "5",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "6",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "7",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 1.0,
+          "episode_id": "8",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "9",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "10",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "11",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "12",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "13",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "14",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "15",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "16",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "17",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "18",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "19",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        }
+      ],
+      "seed": 0,
+      "usage": {
+        "trajectory_reflection": {
+          "calls": 20,
+          "completion_tokens": 4506,
+          "prompt_tokens": 7627
+        }
+      }
+    },
+    {
+      "metrics": {
+        "confusion": {
+          "abstain->abstain": 6,
+          "abstain->skill_update": 4,
+          "skill_update->abstain": 5,
+          "skill_update->skill_update": 5
+        },
+        "field_macro_f1": 0.19047619047619044,
+        "skill_update_f1": 0.5263157894736842,
+        "skill_update_precision": 0.5555555555555556,
+        "skill_update_recall": 0.5,
+        "target_macro_f1": 0.5488721804511277
+      },
+      "rows": [
+        {
+          "confidence": 0.95,
+          "episode_id": "0",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "1",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "2",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "3",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "4",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "5",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "6",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "7",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "8",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "9",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "10",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "11",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "12",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "13",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "14",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "15",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "16",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "17",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "18",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "19",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        }
+      ],
+      "seed": 1,
+      "usage": {
+        "trajectory_reflection": {
+          "calls": 20,
+          "completion_tokens": 4250,
+          "prompt_tokens": 7627
+        }
+      }
+    },
+    {
+      "metrics": {
+        "confusion": {
+          "abstain->abstain": 6,
+          "abstain->skill_update": 4,
+          "skill_update->abstain": 5,
+          "skill_update->skill_update": 5
+        },
+        "field_macro_f1": 0.19047619047619044,
+        "skill_update_f1": 0.5263157894736842,
+        "skill_update_precision": 0.5555555555555556,
+        "skill_update_recall": 0.5,
+        "target_macro_f1": 0.5488721804511277
+      },
+      "rows": [
+        {
+          "confidence": 0.95,
+          "episode_id": "0",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "1",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "2",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "3",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "4",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "5",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "6",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "7",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "8",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "9",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "10",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "11",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "12",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "13",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "14",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "15",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "16",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "17",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "18",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "19",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        }
+      ],
+      "seed": 2,
+      "usage": {
+        "trajectory_reflection": {
+          "calls": 20,
+          "completion_tokens": 4250,
+          "prompt_tokens": 7627
+        }
+      }
+    },
+    {
+      "metrics": {
+        "confusion": {
+          "abstain->abstain": 6,
+          "abstain->skill_update": 4,
+          "skill_update->abstain": 5,
+          "skill_update->skill_update": 5
+        },
+        "field_macro_f1": 0.19047619047619044,
+        "skill_update_f1": 0.5263157894736842,
+        "skill_update_precision": 0.5555555555555556,
+        "skill_update_recall": 0.5,
+        "target_macro_f1": 0.5488721804511277
+      },
+      "rows": [
+        {
+          "confidence": 0.95,
+          "episode_id": "0",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "1",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "2",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "3",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "4",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "5",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "6",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "7",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "8",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "9",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "10",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "11",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "12",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "13",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "14",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "15",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "16",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "17",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "18",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "19",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        }
+      ],
+      "seed": 3,
+      "usage": {
+        "trajectory_reflection": {
+          "calls": 20,
+          "completion_tokens": 4250,
+          "prompt_tokens": 7627
+        }
+      }
+    },
+    {
+      "metrics": {
+        "confusion": {
+          "abstain->abstain": 6,
+          "abstain->skill_update": 4,
+          "skill_update->abstain": 5,
+          "skill_update->skill_update": 5
+        },
+        "field_macro_f1": 0.19047619047619044,
+        "skill_update_f1": 0.5263157894736842,
+        "skill_update_precision": 0.5555555555555556,
+        "skill_update_recall": 0.5,
+        "target_macro_f1": 0.5488721804511277
+      },
+      "rows": [
+        {
+          "confidence": 0.95,
+          "episode_id": "0",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "1",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "2",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "3",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "4",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "5",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "6",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "7",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "8",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "9",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "10",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.98,
+          "episode_id": "11",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "12",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "13",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "14",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "15",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "16",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_BETTER"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "17",
+          "error": null,
+          "gold_field": "effect",
+          "gold_target": "skill_update",
+          "predicted_field": "procedure",
+          "predicted_target": "skill_update",
+          "route": "S_NEW"
+        },
+        {
+          "confidence": 0.95,
+          "episode_id": "18",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        },
+        {
+          "confidence": 0.0,
+          "episode_id": "19",
+          "error": null,
+          "gold_field": "none",
+          "gold_target": "abstain",
+          "predicted_field": "none",
+          "predicted_target": "abstain",
+          "route": "FAIL_EXECUTION"
+        }
+      ],
+      "seed": 4,
+      "usage": {
+        "trajectory_reflection": {
+          "calls": 20,
+          "completion_tokens": 4250,
+          "prompt_tokens": 7627
+        }
+      }
+    }
+  ],
+  "source_events": "running/Phase2/phase2_effect_pick_inversion/full/seed_0/acquisition.jsonl"
+}

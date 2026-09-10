@@ -1,0 +1,2364 @@
+Output directory: /root/max/VISTA-Skill/running/test/inplace_resume_hab_202609081855/_sessions/run_202609081854
+[2026-09-08 18:54:25,495][INFO] - Current eval set: base
+2026-09-08 18:54:25,583 Initializing dataset LangRearrangeDataset-v0
+2026-09-08 18:54:25,583 Loading from /root/max/VISTA-Skill/EmbodiedBench/embodiedbench/envs/eb_habitat/datasets/base.pickle
+2026-09-08 18:54:25,586 initializing sim RearrangeSim-v0
+2026-09-08 18:54:26,984 Initializing task RearrangePredicateTask-v0
+Num episodes 50
+Episodes:   0%|          | 0/50 [00:00<?, ?it/s][2026-09-08 18:54:28,392][INFO] - Evaluating episode 1 ...
+[2026-09-08 18:54:28,400][INFO] - Episode 1: BaseEpisode(episode_id='3', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_05.scene_instance.json')
+Instruction: Find a orange on the TV stand and move it to the sink.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:   2%|▏         | 1/50 [00:00<00:43,  1.13it/s][2026-09-08 18:54:29,279][INFO] - Evaluating episode 2 ...
+[2026-09-08 18:54:29,291][INFO] - Episode 2: BaseEpisode(episode_id='47', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_05.scene_instance.json')
+Instruction: Take an pear and transfer it to the allocated left counter.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:   4%|▍         | 2/50 [00:01<00:42,  1.14it/s][2026-09-08 18:54:30,153][INFO] - Evaluating episode 3 ...
+[2026-09-08 18:54:30,166][INFO] - Episode 3: BaseEpisode(episode_id='5', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_05.scene_instance.json')
+Instruction: Find a orange and move it to the right counter.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:   6%|▌         | 3/50 [00:02<00:41,  1.13it/s][2026-09-08 18:54:31,045][INFO] - Evaluating episode 4 ...
+[2026-09-08 18:54:31,305][INFO] - Episode 4: BaseEpisode(episode_id='25', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_05.scene_instance.json')
+Instruction: On the right counter, I need a toy airplane and a orange.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:   8%|▊         | 4/50 [00:03<00:45,  1.00it/s][2026-09-08 18:54:32,214][INFO] - Evaluating episode 5 ...
+[2026-09-08 18:54:32,396][INFO] - Episode 5: BaseEpisode(episode_id='30', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_13.scene_instance.json')
+Instruction: I left the fridge open. Can you help?
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  10%|█         | 5/50 [00:04<00:46,  1.03s/it][2026-09-08 18:54:33,311][INFO] - Evaluating episode 6 ...
+[2026-09-08 18:54:33,334][INFO] - Episode 6: BaseEpisode(episode_id='38', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_13.scene_instance.json')
+Instruction: On the TV stand I need you to put a plate.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  12%|█▏        | 6/50 [00:05<00:44,  1.01s/it][2026-09-08 18:54:34,285][INFO] - Evaluating episode 7 ...
+[2026-09-08 18:54:34,300][INFO] - Episode 7: BaseEpisode(episode_id='28', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_13.scene_instance.json')
+Instruction: Detach the strawberry from the right counter.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  14%|█▍        | 7/50 [00:06<00:42,  1.01it/s][2026-09-08 18:54:35,239][INFO] - Evaluating episode 8 ...
+[2026-09-08 18:54:35,253][INFO] - Episode 8: BaseEpisode(episode_id='21', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_13.scene_instance.json')
+Instruction: Bring a banana and a can to the left counter.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  16%|█▌        | 8/50 [00:07<00:42,  1.00s/it][2026-09-08 18:54:36,254][INFO] - Evaluating episode 9 ...
+[2026-09-08 18:54:36,324][INFO] - Episode 9: BaseEpisode(episode_id='35', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: I left my mug on the sofa, can you bring it to the left counter?
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  18%|█▊        | 9/50 [00:08<00:42,  1.03s/it][2026-09-08 18:54:37,344][INFO] - Evaluating episode 10 ...
+[2026-09-08 18:54:37,354][INFO] - Episode 10: BaseEpisode(episode_id='0', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Find a toy airplane and move it to the right counter.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  20%|██        | 10/50 [00:09<00:40,  1.02s/it][2026-09-08 18:54:38,356][INFO] - Evaluating episode 11 ...
+[2026-09-08 18:54:38,497][INFO] - Episode 11: BaseEpisode(episode_id='1', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: Hey, on the sink, I accidentally left my plate, can you bring it to the right counter?
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  22%|██▏       | 11/50 [00:11<00:41,  1.07s/it][2026-09-08 18:54:39,535][INFO] - Evaluating episode 12 ...
+[2026-09-08 18:54:39,546][INFO] - Episode 12: BaseEpisode(episode_id='40', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_02.scene_instance.json')
+Instruction: I need a book on the TV stand. Can you help?
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  24%|██▍       | 12/50 [00:12<00:39,  1.05s/it][2026-09-08 18:54:40,538][INFO] - Evaluating episode 13 ...
+[2026-09-08 18:54:40,813][INFO] - Episode 13: BaseEpisode(episode_id='36', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_05.scene_instance.json')
+Instruction: The fridge door is open because of my mistake. Can you close it, please?
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  26%|██▌       | 13/50 [00:13<00:38,  1.05s/it][2026-09-08 18:54:41,595][INFO] - Evaluating episode 14 ...
+[2026-09-08 18:54:41,719][INFO] - Episode 14: BaseEpisode(episode_id='44', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_10.scene_instance.json')
+Instruction: On the left counter, remove the lego.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  28%|██▊       | 14/50 [00:14<00:38,  1.07s/it][2026-09-08 18:54:42,719][INFO] - Evaluating episode 15 ...
+[2026-09-08 18:54:42,736][INFO] - Episode 15: BaseEpisode(episode_id='33', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_10.scene_instance.json')
+Instruction: The sink needs an hammer and a cup on it.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  30%|███       | 15/50 [00:15<00:36,  1.06s/it][2026-09-08 18:54:43,734][INFO] - Evaluating episode 16 ...
+[2026-09-08 18:54:43,920][INFO] - Episode 16: BaseEpisode(episode_id='43', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: The rubriks cube is on the right counter but you should move it to the sink.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  32%|███▏      | 16/50 [00:16<00:37,  1.10s/it][2026-09-08 18:54:44,920][INFO] - Evaluating episode 17 ...
+[2026-09-08 18:54:44,938][INFO] - Episode 17: BaseEpisode(episode_id='13', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_04.scene_instance.json')
+Instruction: Put both an rubriks cube and a lid onto the left counter.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  34%|███▍      | 17/50 [00:17<00:35,  1.07s/it][2026-09-08 18:54:45,929][INFO] - Evaluating episode 18 ...
+[2026-09-08 18:54:46,000][INFO] - Episode 18: BaseEpisode(episode_id='19', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Displace the spatula from the sink.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  36%|███▌      | 18/50 [00:18<00:34,  1.06s/it][2026-09-08 18:54:46,984][INFO] - Evaluating episode 19 ...
+[2026-09-08 18:54:46,998][INFO] - Episode 19: BaseEpisode(episode_id='31', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Find a wrench and move it to the left counter.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  38%|███▊      | 19/50 [00:19<00:32,  1.05s/it][2026-09-08 18:54:47,983][INFO] - Evaluating episode 20 ...
+[2026-09-08 18:54:47,992][INFO] - Episode 20: BaseEpisode(episode_id='12', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Transfer an pear to the designated sink.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  40%|████      | 20/50 [00:20<00:30,  1.03s/it][2026-09-08 18:54:48,961][INFO] - Evaluating episode 21 ...
+[2026-09-08 18:54:48,971][INFO] - Episode 21: BaseEpisode(episode_id='20', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Collect a knife from the TV stand and place it in the sink.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  42%|████▏     | 21/50 [00:21<00:29,  1.00s/it][2026-09-08 18:54:49,911][INFO] - Evaluating episode 22 ...
+[2026-09-08 18:54:49,953][INFO] - Episode 22: BaseEpisode(episode_id='42', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: I need a banana on the sofa. Can you help?
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  44%|████▍     | 22/50 [00:22<00:28,  1.00s/it][2026-09-08 18:54:50,914][INFO] - Evaluating episode 23 ...
+[2026-09-08 18:54:50,928][INFO] - Episode 23: BaseEpisode(episode_id='14', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Move the knife off the TV stand.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  46%|████▌     | 23/50 [00:23<00:26,  1.01it/s][2026-09-08 18:54:51,890][INFO] - Evaluating episode 24 ...
+[2026-09-08 18:54:51,900][INFO] - Episode 24: BaseEpisode(episode_id='32', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Find a mug on the right counter and move it to the TV stand.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  48%|████▊     | 24/50 [00:24<00:25,  1.01it/s][2026-09-08 18:54:52,872][INFO] - Evaluating episode 25 ...
+[2026-09-08 18:54:52,882][INFO] - Episode 25: BaseEpisode(episode_id='45', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_00.scene_instance.json')
+Instruction: Find a orange and move it to the right counter.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  50%|█████     | 25/50 [00:25<00:24,  1.01it/s][2026-09-08 18:54:53,863][INFO] - Evaluating episode 26 ...
+[2026-09-08 18:54:54,014][INFO] - Episode 26: BaseEpisode(episode_id='17', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_18.scene_instance.json')
+Instruction: I left the fridge open. Can you help?
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  52%|█████▏    | 26/50 [00:26<00:25,  1.04s/it][2026-09-08 18:54:55,032][INFO] - Evaluating episode 27 ...
+[2026-09-08 18:54:55,104][INFO] - Episode 27: BaseEpisode(episode_id='15', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_06.scene_instance.json')
+Instruction: Extract a cup from the left counter and move it to the sofa.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  54%|█████▍    | 27/50 [00:27<00:24,  1.05s/it][2026-09-08 18:54:56,103][INFO] - Evaluating episode 28 ...
+[2026-09-08 18:54:56,112][INFO] - Episode 28: BaseEpisode(episode_id='10', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_06.scene_instance.json')
+Instruction: Could you exchange drill and plum between sofa and sink?
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  56%|█████▌    | 28/50 [00:28<00:22,  1.04s/it][2026-09-08 18:54:57,113][INFO] - Evaluating episode 29 ...
+[2026-09-08 18:54:57,123][INFO] - Episode 29: BaseEpisode(episode_id='22', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_06.scene_instance.json')
+Instruction: Transport a banana and carefully position it in the designated left counter.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  58%|█████▊    | 29/50 [00:29<00:21,  1.02s/it][2026-09-08 18:54:58,096][INFO] - Evaluating episode 30 ...
+[2026-09-08 18:54:58,167][INFO] - Episode 30: BaseEpisode(episode_id='41', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_01.scene_instance.json')
+Instruction: Take an can and transfer it to the allocated left counter.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  60%|██████    | 30/50 [00:30<00:19,  1.03it/s][2026-09-08 18:54:58,956][INFO] - Evaluating episode 31 ...
+[2026-09-08 18:54:58,965][INFO] - Episode 31: BaseEpisode(episode_id='48', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_01.scene_instance.json')
+Instruction: Displace the can from the left counter.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  62%|██████▏   | 31/50 [00:31<00:17,  1.09it/s][2026-09-08 18:54:59,748][INFO] - Evaluating episode 32 ...
+[2026-09-08 18:54:59,819][INFO] - Episode 32: BaseEpisode(episode_id='2', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: Find a lid on the left counter and move it to the right counter.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  64%|██████▍   | 32/50 [00:32<00:17,  1.03it/s][2026-09-08 18:55:00,836][INFO] - Evaluating episode 33 ...
+[2026-09-08 18:55:00,849][INFO] - Episode 33: BaseEpisode(episode_id='49', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_03.scene_instance.json')
+Instruction: Find a lid and move it to the left counter.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  66%|██████▌   | 33/50 [00:33<00:16,  1.01it/s][2026-09-08 18:55:01,888][INFO] - Evaluating episode 34 ...
+[2026-09-08 18:55:01,985][INFO] - Episode 34: BaseEpisode(episode_id='18', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_16.scene_instance.json')
+Instruction: I left the fridge open. Can you help?
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  68%|██████▊   | 34/50 [00:34<00:16,  1.03s/it][2026-09-08 18:55:02,996][INFO] - Evaluating episode 35 ...
+[2026-09-08 18:55:03,071][INFO] - Episode 35: BaseEpisode(episode_id='8', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_07.scene_instance.json')
+Instruction: Find a toy airplane and move it to the left counter.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  70%|███████   | 35/50 [00:35<00:15,  1.04s/it][2026-09-08 18:55:04,078][INFO] - Evaluating episode 36 ...
+[2026-09-08 18:55:04,088][INFO] - Episode 36: BaseEpisode(episode_id='23', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_07.scene_instance.json')
+Instruction: Find a mug on the left counter and move it to the sink.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  72%|███████▏  | 36/50 [00:36<00:14,  1.03s/it][2026-09-08 18:55:05,070][INFO] - Evaluating episode 37 ...
+[2026-09-08 18:55:05,081][INFO] - Episode 37: BaseEpisode(episode_id='7', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_07.scene_instance.json')
+Instruction: Extract the toy airplane from the left counter.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  74%|███████▍  | 37/50 [00:37<00:13,  1.01s/it][2026-09-08 18:55:06,032][INFO] - Evaluating episode 38 ...
+[2026-09-08 18:55:06,105][INFO] - Episode 38: BaseEpisode(episode_id='46', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_04.scene_instance.json')
+Instruction: Lift the lego off the right counter.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  76%|███████▌  | 38/50 [00:38<00:11,  1.04it/s][2026-09-08 18:55:06,872][INFO] - Evaluating episode 39 ...
+[2026-09-08 18:55:06,943][INFO] - Episode 39: BaseEpisode(episode_id='4', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_08.scene_instance.json')
+Instruction: Retrieve a apple and place it into the predetermined sofa.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  78%|███████▊  | 39/50 [00:39<00:10,  1.07it/s][2026-09-08 18:55:07,738][INFO] - Evaluating episode 40 ...
+[2026-09-08 18:55:07,814][INFO] - Episode 40: BaseEpisode(episode_id='37', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_08.scene_instance.json')
+Instruction: Find a mug on the sink and move it to the left counter.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  80%|████████  | 40/50 [00:40<00:09,  1.03it/s][2026-09-08 18:55:08,808][INFO] - Evaluating episode 41 ...
+[2026-09-08 18:55:08,817][INFO] - Episode 41: BaseEpisode(episode_id='6', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_08.scene_instance.json')
+Instruction: Unseat the rubriks cube from the sink.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  82%|████████▏ | 41/50 [00:41<00:08,  1.01it/s][2026-09-08 18:55:09,824][INFO] - Evaluating episode 42 ...
+[2026-09-08 18:55:09,896][INFO] - Episode 42: BaseEpisode(episode_id='24', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_00.scene_instance.json')
+Instruction: The fridge door is open because of my mistake. Can you close it, please?
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  84%|████████▍ | 42/50 [00:42<00:07,  1.05it/s][2026-09-08 18:55:10,692][INFO] - Evaluating episode 43 ...
+[2026-09-08 18:55:10,703][INFO] - Episode 43: BaseEpisode(episode_id='9', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_00.scene_instance.json')
+Instruction: Move a ball to the sofa.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  86%|████████▌ | 43/50 [00:43<00:06,  1.09it/s][2026-09-08 18:55:11,546][INFO] - Evaluating episode 44 ...
+[2026-09-08 18:55:11,636][INFO] - Episode 44: BaseEpisode(episode_id='26', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_14.scene_instance.json')
+Instruction: The right counter needs an toy airplane and a lego on it.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  88%|████████▊ | 44/50 [00:44<00:05,  1.03it/s][2026-09-08 18:55:12,623][INFO] - Evaluating episode 45 ...
+[2026-09-08 18:55:12,696][INFO] - Episode 45: BaseEpisode(episode_id='16', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_10.scene_instance.json')
+Instruction: Displace the orange from the TV stand.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  90%|█████████ | 45/50 [00:45<00:04,  1.07it/s][2026-09-08 18:55:13,486][INFO] - Evaluating episode 46 ...
+[2026-09-08 18:55:13,556][INFO] - Episode 46: BaseEpisode(episode_id='34', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_11.scene_instance.json')
+Instruction: Walk to the right counter area.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: True
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  92%|█████████▏| 46/50 [00:45<00:02,  1.44it/s][2026-09-08 18:55:13,616][INFO] - Evaluating episode 47 ...
+[2026-09-08 18:55:13,693][INFO] - Episode 47: BaseEpisode(episode_id='27', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_11.scene_instance.json')
+Instruction: Find a orange and move it to the sofa.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  94%|█████████▍| 47/50 [00:46<00:02,  1.25it/s][2026-09-08 18:55:14,670][INFO] - Evaluating episode 48 ...
+[2026-09-08 18:55:14,744][INFO] - Episode 48: BaseEpisode(episode_id='11', scene_id='data/replica_cad/configs/scenes/v3_sc0_staging_03.scene_instance.json')
+Instruction: Displace the strawberry from the sink.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Invalid action or task complete. If invalid then Replanning.
+Episodes:  96%|█████████▌| 48/50 [00:47<00:01,  1.23it/s][2026-09-08 18:55:15,516][INFO] - Evaluating episode 49 ...
+[2026-09-08 18:55:15,587][INFO] - Episode 49: BaseEpisode(episode_id='29', scene_id='data/replica_cad/configs/scenes/v3_sc3_staging_01.scene_instance.json')
+Instruction: Find a mug and move it to the sofa.
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False
+Planner Output Action: [0, 0]
+Executed action: navigate to the cabinet 7, Task success: False
+Executed action: navigate to the cabinet 7, Task success: False

@@ -1,0 +1,54 @@
+{
+  "candidate_artifact_sha256": "94ec75424978bd7100252b44f33e2a6626b0a8b959971d7551f4f9795d01f822",
+  "candidate_skill_sha256": "c4d9d4fa8135b111be1a626af6ac166b28018a743caa9b3a9d6307b5742565e7",
+  "candidate_version": 1,
+  "evidence_ids": [
+    "6:s1:goal:6:s1:visual:0:at(can,receptacle_aabb_counter_left_kitchen_counter)",
+    "6:s1:visual:0:at(can,receptacle_aabb_counter_left_kitchen_counter)",
+    "8:s1:goal:8:s1:visual:0:at(ball,receptacle_aabb_tbl2_top1_frl_apartment_table_02)+8:s1:visual:1:at(spoon,receptacle_aabb_tbl2_top1_frl_apartment_table_02)",
+    "8:s1:visual:0:at(ball,receptacle_aabb_tbl2_top1_frl_apartment_table_02)",
+    "8:s1:visual:1:at(spoon,receptacle_aabb_tbl2_top1_frl_apartment_table_02)",
+    "15:s4:visual:6:task_complete"
+  ],
+  "field": "termination",
+  "parent_artifact_sha256": "31621c09aa866d40a13305f85e1b2b8f9bb691fcaa00471b77ddc4f23f53376e",
+  "parent_skill_sha256": "8de4adcf650e676fb659577187d2fc0859006b77bccc502526fe9994e1c3495c",
+  "parent_version": 0,
+  "patch_id": "8f563980473ba9bd9a3a",
+  "promoted": false,
+  "protocol": {
+    "acquisition_episode_budget": 20,
+    "config_sha256": "2eeb3f151a121c5ab1c55483cbcb1d4fad2677c8c992071a9d9afd80a824261e",
+    "diagnostic": true,
+    "env": "eb-hab",
+    "evolution_seed": 0,
+    "evolution_seeds": [
+      0
+    ],
+    "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "executor_model_type": "remote",
+    "executor_temperature": 0.0,
+    "frozen": true,
+    "gate_rollout_seeds": [
+      0,
+      1,
+      2
+    ],
+    "manifest_sha256": "7f283eff39e85b4eb29a896da134bcaa736175823aaa04448cc3775e566b6c4c",
+    "max_completion_tokens": 4096,
+    "method": "full",
+    "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "n_shots": 10,
+    "protocol": "vista_skill_fault_repair_2026_08_19",
+    "resolution": 500,
+    "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+    "run_id": "ec58a78e02404913a2d2305d9e27e52e_seed_0",
+    "skill_fault": "termination",
+    "split_rotation_index": 0,
+    "split_sha256": "a0a76a7e727f8fcffb9f9dcbe8642083bed657dde37d36aaabc9b352176973d2",
+    "tensor_parallel": 1
+  },
+  "schema_version": "1",
+  "snapshot_id": "v0-v1-d4a1d044b44e-c4d9d4fa8135",
+  "snapshot_sha256": "ce94ff49db1997af744265bc62967b95723f813b4fdcf399325babb35d00a018"
+}

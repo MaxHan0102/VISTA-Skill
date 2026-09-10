@@ -1,0 +1,191 @@
+{
+  "dhcp_address": "192.168.1.182",
+  "dhcp_server": "192.168.1.1",
+  "interface": "eno2",
+  "host_routes": [
+    "192.168.1.185",
+    "192.168.1.192"
+  ],
+  "results": [
+    {
+      "host": "192.168.1.185",
+      "port": 22,
+      "response": "SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.17"
+    },
+    {
+      "host": "192.168.1.185",
+      "port": 8000,
+      "response": "HTTP/1.1 200 OK\r\ndate: Mon, 07 Sep 2026 08:21:21 GMT\r\nserver: uvicorn\r\ncontent-length: 485\r\ncontent-type: application/json\r\n\r\n{\"object\":\"list\",\"data\":[{\"id\":\"Qwen/Qwen3-VL-8B-Instruct\",\"object\":\"model\",\"created\":1788769281,\"owned_by\":\"vllm\",\"root\":\"Qwen/Qwen3-VL-8B-Instruct\",\"parent\":null,\"max_model_len\":16384,\"permission\":[{\"id\":\"modelperm-9207413980b1d1ef\",\"object\":\"model_permission\",\"created\":1788769281,\"allow_create_engine\":false,\"allow_sampling\":true,\"allow_logprobs\":true,\"allow_search_indices\":false,\"allow_view\":true,\"allow_fine_tuning\":false,\"organization\":\"*\",\"group\":null,\"is_blocking\":false}]}]}"
+    },
+    {
+      "host": "192.168.1.185",
+      "port": 8001,
+      "error": "[Errno 111] Connection refused"
+    },
+    {
+      "host": "192.168.1.192",
+      "port": 22,
+      "response": "SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.17"
+    },
+    {
+      "host": "192.168.1.192",
+      "port": 8000,
+      "error": "[Errno 111] Connection refused"
+    },
+    {
+      "host": "192.168.1.192",
+      "port": 8001,
+      "response": "HTTP/1.1 200 OK\r\ndate: Mon, 07 Sep 2026 08:21:20 GMT\r\nserver: uvicorn\r\ncontent-length: 485\r\ncontent-type: application/json\r\n\r\n{\"object\":\"list\",\"data\":[{\"id\":\"Qwen/Qwen3-VL-8B-Instruct\",\"object\":\"model\",\"created\":1788769281,\"owned_by\":\"vllm\",\"root\":\"Qwen/Qwen3-VL-8B-Instruct\",\"parent\":null,\"max_model_len\":16384,\"permission\":[{\"id\":\"modelperm-9b165e79e1d3d246\",\"object\":\"model_permission\",\"created\":1788769281,\"allow_create_engine\":false,\"allow_sampling\":true,\"allow_logprobs\":true,\"allow_search_indices\":false,\"allow_view\":true,\"allow_fine_tuning\":false,\"organization\":\"*\",\"group\":null,\"is_blocking\":false}]}]}"
+    }
+  ],
+  "original_address": "192.168.31.33/24",
+  "original_default_gateway": "192.168.31.2",
+  "original_gateway_arp": "unresolved",
+  "direct_target_arp_verified": true,
+  "ssh_authentication": "unavailable with existing root key; HTTP serving remains usable",
+  "vllm_version_both": "0.27.1",
+  "gpu_dtype_tensor_parallel_verification": "unavailable via unauthenticated API; diagnostic endpoint blocks are recorded separately",
+  "cleanup_pending": false,
+  "cleanup": {
+    "own_dhclient_stopped": [
+      437119
+    ],
+    "dhcp_release_packet_sent": true,
+    "dhcp_release_acknowledgment": "not available; DHCPRELEASE has no acknowledgment",
+    "addresses": [
+      {
+        "ifindex": 2,
+        "ifname": "eno2",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 1500,
+        "qdisc": "mq",
+        "operstate": "UP",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "10:7c:61:4d:33:f2",
+        "broadcast": "ff:ff:ff:ff:ff:ff",
+        "altnames": [
+          "enp7s0"
+        ],
+        "addr_info": [
+          {
+            "family": "inet",
+            "local": "192.168.31.33",
+            "prefixlen": 24,
+            "broadcast": "192.168.31.255",
+            "scope": "global",
+            "noprefixroute": true,
+            "label": "eno2",
+            "valid_life_time": 4294967295,
+            "preferred_life_time": 4294967295
+          },
+          {
+            "family": "inet6",
+            "local": "240e:3bc:3088:52a2:9429:2ce3:7382:b8b5",
+            "prefixlen": 64,
+            "scope": "global",
+            "temporary": true,
+            "dynamic": true,
+            "valid_life_time": 7200,
+            "preferred_life_time": 7200
+          },
+          {
+            "family": "inet6",
+            "local": "240e:3bc:3088:52a2:f6a0:295b:8bc6:d288",
+            "prefixlen": 64,
+            "scope": "global",
+            "temporary": true,
+            "deprecated": true,
+            "dynamic": true,
+            "valid_life_time": 7200,
+            "preferred_life_time": 0
+          },
+          {
+            "family": "inet6",
+            "local": "240e:3bc:3088:52a2:127c:61ff:fe4d:33f2",
+            "prefixlen": 64,
+            "scope": "global",
+            "dynamic": true,
+            "mngtmpaddr": true,
+            "valid_life_time": 7200,
+            "preferred_life_time": 7200
+          },
+          {
+            "family": "inet6",
+            "local": "fe80::127c:61ff:fe4d:33f2",
+            "prefixlen": 64,
+            "scope": "link",
+            "valid_life_time": 4294967295,
+            "preferred_life_time": 4294967295
+          }
+        ]
+      }
+    ],
+    "routes": [
+      {
+        "dst": "default",
+        "gateway": "192.168.31.2",
+        "dev": "eno2",
+        "protocol": "static",
+        "metric": 20100,
+        "flags": []
+      },
+      {
+        "dst": "10.11.13.0/24",
+        "dev": "ztyaazrz5y",
+        "protocol": "kernel",
+        "scope": "link",
+        "prefsrc": "10.11.13.39",
+        "flags": []
+      },
+      {
+        "dst": "169.254.0.0/16",
+        "dev": "br-080e3b486bd4",
+        "scope": "link",
+        "metric": 1000,
+        "flags": []
+      },
+      {
+        "dst": "172.17.0.0/16",
+        "dev": "docker0",
+        "protocol": "kernel",
+        "scope": "link",
+        "prefsrc": "172.17.0.1",
+        "flags": [
+          "linkdown"
+        ]
+      },
+      {
+        "dst": "172.18.0.0/16",
+        "dev": "br-95d1ef81189e",
+        "protocol": "kernel",
+        "scope": "link",
+        "prefsrc": "172.18.0.1",
+        "flags": []
+      },
+      {
+        "dst": "192.167.0.0/24",
+        "dev": "br-080e3b486bd4",
+        "protocol": "kernel",
+        "scope": "link",
+        "prefsrc": "192.167.0.1",
+        "flags": []
+      },
+      {
+        "dst": "192.168.31.0/24",
+        "dev": "eno2",
+        "protocol": "kernel",
+        "scope": "link",
+        "prefsrc": "192.168.31.33",
+        "metric": 100,
+        "flags": []
+      }
+    ]
+  }
+}

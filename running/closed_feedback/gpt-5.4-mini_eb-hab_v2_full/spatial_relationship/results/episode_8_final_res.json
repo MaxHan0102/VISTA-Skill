@@ -1,0 +1,1 @@
+{"reward": -0.8522727272727273, "num_invalid_actions": 10, "empty_plan": 0, "instruction": "Place a sponge and a ball on the right of the sink.", "task_success": 0, "task_progress": 0, "subgoal_reward": 0, "num_steps": 1, "planner_steps": 11, "planner_output_error": 10, "num_invalid_action_ratio": 10.0, "episode_elapsed_seconds": 230.56368398666382}

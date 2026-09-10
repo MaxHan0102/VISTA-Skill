@@ -1,0 +1,1 @@
+{"reward": 0.08333333333333333, "num_invalid_actions": 10, "empty_plan": 0, "instruction": "Displace a small red object with green top from the sink.", "task_success": false, "task_progress": 0.3333333333333333, "subgoal_reward": 0.0, "num_steps": 20, "planner_steps": 5, "planner_output_error": 0, "num_invalid_action_ratio": 0.5, "episode_elapsed_seconds": [90.4816484451294]}

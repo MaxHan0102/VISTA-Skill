@@ -1,0 +1,8 @@
+{
+  "reward": 0.053728630760364514,
+  "task_success": 0.5666666666666667,
+  "num_steps": 15.083333333333334,
+  "planner_steps": 4.25,
+  "planner_output_error": 0.0,
+  "episode_elapsed_seconds": 59.45138569275538
+}

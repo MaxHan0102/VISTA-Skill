@@ -1,0 +1,12 @@
+{
+  "bugfix_recheck_rollouts": 4,
+  "held_out_stages_opened": false,
+  "natural_candidates_generated": 1,
+  "natural_model_episodes": 20,
+  "natural_promotions": 0,
+  "network_temporary_configuration_removed": true,
+  "recheck_output": "running/Phase5/phase5_p57_recovery_unknown_recheck_20260907",
+  "status": "live_completed_no_go_in_both_versions",
+  "unit_tests_passed": 295,
+  "v1_rollouts": 16
+}

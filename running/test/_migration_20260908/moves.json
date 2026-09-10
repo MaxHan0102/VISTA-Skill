@@ -1,0 +1,26 @@
+[
+  {
+    "source": "running/stock_v2_hab_full_validation",
+    "destination": "running/test/stock_v2_hab_full_validation"
+  },
+  {
+    "source": "running/stock_v2_hab_rgb_only_validation",
+    "destination": "running/test/stock_v2_hab_rgb_only_validation"
+  },
+  {
+    "source": "running/stock_v2_hab_smoke",
+    "destination": "running/test/stock_v2_hab_smoke"
+  },
+  {
+    "source": "running/stock_v2_nav_full_validation",
+    "destination": "running/test/stock_v2_nav_full_validation"
+  },
+  {
+    "source": "running/stock_v2_nav_rgb_only_validation",
+    "destination": "running/test/stock_v2_nav_rgb_only_validation"
+  },
+  {
+    "source": "running/stock_v2_nav_smoke",
+    "destination": "running/test/stock_v2_nav_smoke"
+  }
+]

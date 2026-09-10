@@ -1,0 +1,413 @@
+{
+  "audits": [
+    {
+      "candidate_skill_sha256": "5ea3365354211e1530e8e95cb45cf52d041ae565fde9af07a5669f80ffc5d0d1",
+      "candidate_version": 1,
+      "classification": "harmful",
+      "field": "termination",
+      "overall_delta": -0.0006254399195575628,
+      "pairs": [
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "95",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 101,
+          "subgroup": "311525c5",
+          "task_id": "95"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "95",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 102,
+          "subgroup": "311525c5",
+          "task_id": "95"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "95",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 103,
+          "subgroup": "311525c5",
+          "task_id": "95"
+        },
+        {
+          "candidate_score": -0.047619047619047616,
+          "candidate_success": false,
+          "delta": 0.0,
+          "episode_id": "96",
+          "parent_score": -0.047619047619047616,
+          "parent_success": false,
+          "seed": 101,
+          "subgroup": "f0917e29",
+          "task_id": "96"
+        },
+        {
+          "candidate_score": -0.047619047619047616,
+          "candidate_success": false,
+          "delta": 0.0,
+          "episode_id": "96",
+          "parent_score": -0.047619047619047616,
+          "parent_success": false,
+          "seed": 102,
+          "subgroup": "f0917e29",
+          "task_id": "96"
+        },
+        {
+          "candidate_score": -0.05,
+          "candidate_success": false,
+          "delta": 0.00882352941176471,
+          "episode_id": "96",
+          "parent_score": -0.05882352941176471,
+          "parent_success": false,
+          "seed": 103,
+          "subgroup": "f0917e29",
+          "task_id": "96"
+        },
+        {
+          "candidate_score": 0.11296296296296299,
+          "candidate_success": false,
+          "delta": 0.0,
+          "episode_id": "97",
+          "parent_score": 0.11296296296296299,
+          "parent_success": false,
+          "seed": 101,
+          "subgroup": "fd8dd56c",
+          "task_id": "97"
+        },
+        {
+          "candidate_score": 0.1065217391304348,
+          "candidate_success": false,
+          "delta": -0.0050167224080267525,
+          "episode_id": "97",
+          "parent_score": 0.11153846153846156,
+          "parent_success": false,
+          "seed": 102,
+          "subgroup": "fd8dd56c",
+          "task_id": "97"
+        },
+        {
+          "candidate_score": 0.11000000000000001,
+          "candidate_success": false,
+          "delta": 0.0034782608695652084,
+          "episode_id": "97",
+          "parent_score": 0.1065217391304348,
+          "parent_success": false,
+          "seed": 103,
+          "subgroup": "fd8dd56c",
+          "task_id": "97"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "98",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 101,
+          "subgroup": "6e3da8a1",
+          "task_id": "98"
+        },
+        {
+          "candidate_score": 0.9666666666666667,
+          "candidate_success": true,
+          "delta": -0.033333333333333326,
+          "episode_id": "98",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 102,
+          "subgroup": "6e3da8a1",
+          "task_id": "98"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "98",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 103,
+          "subgroup": "6e3da8a1",
+          "task_id": "98"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "99",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 101,
+          "subgroup": "42f1b012",
+          "task_id": "99"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.01666666666666672,
+          "episode_id": "99",
+          "parent_score": 0.9833333333333333,
+          "parent_success": true,
+          "seed": 102,
+          "subgroup": "42f1b012",
+          "task_id": "99"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "99",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 103,
+          "subgroup": "42f1b012",
+          "task_id": "99"
+        }
+      ],
+      "parent_skill_sha256": "8de4adcf650e676fb659577187d2fc0859006b77bccc502526fe9994e1c3495c",
+      "parent_version": 0,
+      "patch_id": "ed56156c2c975de6e764",
+      "promoted": false,
+      "snapshot_id": "v0-v1-109fde420c8b-5ea336535421",
+      "subgroup_deltas": {
+        "311525c5": 0.0,
+        "42f1b012": 0.005555555555555573,
+        "6e3da8a1": -0.011111111111111108,
+        "f0917e29": 0.0029411764705882366,
+        "fd8dd56c": -0.0005128205128205147
+      },
+      "task_deltas": {
+        "95": 0.0,
+        "96": 0.0029411764705882366,
+        "97": -0.0005128205128205147,
+        "98": -0.011111111111111108,
+        "99": 0.005555555555555573
+      }
+    },
+    {
+      "candidate_skill_sha256": "5ea3365354211e1530e8e95cb45cf52d041ae565fde9af07a5669f80ffc5d0d1",
+      "candidate_version": 1,
+      "classification": "harmful",
+      "field": "termination",
+      "overall_delta": -0.0006254399195575628,
+      "pairs": [
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "95",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 101,
+          "subgroup": "311525c5",
+          "task_id": "95"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "95",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 102,
+          "subgroup": "311525c5",
+          "task_id": "95"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "95",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 103,
+          "subgroup": "311525c5",
+          "task_id": "95"
+        },
+        {
+          "candidate_score": -0.047619047619047616,
+          "candidate_success": false,
+          "delta": 0.0,
+          "episode_id": "96",
+          "parent_score": -0.047619047619047616,
+          "parent_success": false,
+          "seed": 101,
+          "subgroup": "f0917e29",
+          "task_id": "96"
+        },
+        {
+          "candidate_score": -0.047619047619047616,
+          "candidate_success": false,
+          "delta": 0.0,
+          "episode_id": "96",
+          "parent_score": -0.047619047619047616,
+          "parent_success": false,
+          "seed": 102,
+          "subgroup": "f0917e29",
+          "task_id": "96"
+        },
+        {
+          "candidate_score": -0.05,
+          "candidate_success": false,
+          "delta": 0.00882352941176471,
+          "episode_id": "96",
+          "parent_score": -0.05882352941176471,
+          "parent_success": false,
+          "seed": 103,
+          "subgroup": "f0917e29",
+          "task_id": "96"
+        },
+        {
+          "candidate_score": 0.11296296296296299,
+          "candidate_success": false,
+          "delta": 0.0,
+          "episode_id": "97",
+          "parent_score": 0.11296296296296299,
+          "parent_success": false,
+          "seed": 101,
+          "subgroup": "fd8dd56c",
+          "task_id": "97"
+        },
+        {
+          "candidate_score": 0.1065217391304348,
+          "candidate_success": false,
+          "delta": -0.0050167224080267525,
+          "episode_id": "97",
+          "parent_score": 0.11153846153846156,
+          "parent_success": false,
+          "seed": 102,
+          "subgroup": "fd8dd56c",
+          "task_id": "97"
+        },
+        {
+          "candidate_score": 0.11000000000000001,
+          "candidate_success": false,
+          "delta": 0.0034782608695652084,
+          "episode_id": "97",
+          "parent_score": 0.1065217391304348,
+          "parent_success": false,
+          "seed": 103,
+          "subgroup": "fd8dd56c",
+          "task_id": "97"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "98",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 101,
+          "subgroup": "6e3da8a1",
+          "task_id": "98"
+        },
+        {
+          "candidate_score": 0.9666666666666667,
+          "candidate_success": true,
+          "delta": -0.033333333333333326,
+          "episode_id": "98",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 102,
+          "subgroup": "6e3da8a1",
+          "task_id": "98"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "98",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 103,
+          "subgroup": "6e3da8a1",
+          "task_id": "98"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "99",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 101,
+          "subgroup": "42f1b012",
+          "task_id": "99"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.01666666666666672,
+          "episode_id": "99",
+          "parent_score": 0.9833333333333333,
+          "parent_success": true,
+          "seed": 102,
+          "subgroup": "42f1b012",
+          "task_id": "99"
+        },
+        {
+          "candidate_score": 1.0,
+          "candidate_success": true,
+          "delta": 0.0,
+          "episode_id": "99",
+          "parent_score": 1.0,
+          "parent_success": true,
+          "seed": 103,
+          "subgroup": "42f1b012",
+          "task_id": "99"
+        }
+      ],
+      "parent_skill_sha256": "8de4adcf650e676fb659577187d2fc0859006b77bccc502526fe9994e1c3495c",
+      "parent_version": 0,
+      "patch_id": "f0e1f6052139f70aaa7a",
+      "promoted": false,
+      "snapshot_id": "v0-v1-173cfdf3f9b1-5ea336535421",
+      "subgroup_deltas": {
+        "311525c5": 0.0,
+        "42f1b012": 0.005555555555555573,
+        "6e3da8a1": -0.011111111111111108,
+        "f0917e29": 0.0029411764705882366,
+        "fd8dd56c": -0.0005128205128205147
+      },
+      "task_deltas": {
+        "95": 0.0,
+        "96": 0.0029411764705882366,
+        "97": -0.0005128205128205147,
+        "98": -0.011111111111111108,
+        "99": 0.005555555555555573
+      }
+    }
+  ],
+  "epsilon": 0.0,
+  "manifest_sha256": "7f283eff39e85b4eb29a896da134bcaa736175823aaa04448cc3775e566b6c4c",
+  "pair_count": 30,
+  "reliability": {
+    "beneficial_update_precision": 0.0,
+    "beneficial_updates": 0.0,
+    "harmful_update_rate": 0.0,
+    "harmful_updates": 0.0,
+    "missed_beneficial_update_rate": 0.0,
+    "neutral_update_rate": 0.0,
+    "neutral_updates": 0.0,
+    "promoted_updates": 0.0,
+    "update_coverage": 0.0
+  },
+  "rollout_seeds": [
+    101,
+    102,
+    103
+  ],
+  "rotation_index": 0,
+  "schema_version": "1",
+  "split_sha256": "a0a76a7e727f8fcffb9f9dcbe8642083bed657dde37d36aaabc9b352176973d2",
+  "update_count": 2
+}

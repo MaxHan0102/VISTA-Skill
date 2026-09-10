@@ -1,0 +1,188 @@
+{
+  "base_url": "http://192.168.1.173:8001/v1",
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "passed": 10,
+  "total": 10,
+  "trials": [
+    {
+      "candidate_sha256": "1cfd1e5cae810aa059042ac55ea464cd792dcbc08f4e72ebd88a4a6b91a8c783",
+      "new": "The gripper can hold at most one object; pick only if not holding.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "2c93452594cffbc1eeb3",
+      "pick_rule_after": "false",
+      "place_rule_after": "true",
+      "seed": 0,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 207,
+          "prompt_tokens": 351
+        }
+      }
+    },
+    {
+      "candidate_sha256": "1cfd1e5cae810aa059042ac55ea464cd792dcbc08f4e72ebd88a4a6b91a8c783",
+      "new": "The gripper can hold at most one object; pick only if not holding.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "2c93452594cffbc1eeb3",
+      "pick_rule_after": "false",
+      "place_rule_after": "true",
+      "seed": 1,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 213,
+          "prompt_tokens": 351
+        }
+      }
+    },
+    {
+      "candidate_sha256": "1cfd1e5cae810aa059042ac55ea464cd792dcbc08f4e72ebd88a4a6b91a8c783",
+      "new": "The gripper can hold at most one object; pick only if not holding.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "2c93452594cffbc1eeb3",
+      "pick_rule_after": "false",
+      "place_rule_after": "true",
+      "seed": 2,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 213,
+          "prompt_tokens": 351
+        }
+      }
+    },
+    {
+      "candidate_sha256": "1cfd1e5cae810aa059042ac55ea464cd792dcbc08f4e72ebd88a4a6b91a8c783",
+      "new": "The gripper can hold at most one object; pick only if not holding.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "2c93452594cffbc1eeb3",
+      "pick_rule_after": "false",
+      "place_rule_after": "true",
+      "seed": 3,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 213,
+          "prompt_tokens": 351
+        }
+      }
+    },
+    {
+      "candidate_sha256": "1cfd1e5cae810aa059042ac55ea464cd792dcbc08f4e72ebd88a4a6b91a8c783",
+      "new": "The gripper can hold at most one object; pick only if not holding.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "2c93452594cffbc1eeb3",
+      "pick_rule_after": "false",
+      "place_rule_after": "true",
+      "seed": 4,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 213,
+          "prompt_tokens": 351
+        }
+      }
+    },
+    {
+      "candidate_sha256": "1cfd1e5cae810aa059042ac55ea464cd792dcbc08f4e72ebd88a4a6b91a8c783",
+      "new": "The gripper can hold at most one object; pick only if not holding.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "2c93452594cffbc1eeb3",
+      "pick_rule_after": "false",
+      "place_rule_after": "true",
+      "seed": 5,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 213,
+          "prompt_tokens": 351
+        }
+      }
+    },
+    {
+      "candidate_sha256": "1cfd1e5cae810aa059042ac55ea464cd792dcbc08f4e72ebd88a4a6b91a8c783",
+      "new": "The gripper can hold at most one object; pick only if not holding.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "2c93452594cffbc1eeb3",
+      "pick_rule_after": "false",
+      "place_rule_after": "true",
+      "seed": 6,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 213,
+          "prompt_tokens": 351
+        }
+      }
+    },
+    {
+      "candidate_sha256": "1cfd1e5cae810aa059042ac55ea464cd792dcbc08f4e72ebd88a4a6b91a8c783",
+      "new": "The gripper can hold at most one object; pick only if not holding.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "2c93452594cffbc1eeb3",
+      "pick_rule_after": "false",
+      "place_rule_after": "true",
+      "seed": 7,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 213,
+          "prompt_tokens": 351
+        }
+      }
+    },
+    {
+      "candidate_sha256": "1cfd1e5cae810aa059042ac55ea464cd792dcbc08f4e72ebd88a4a6b91a8c783",
+      "new": "The gripper can hold at most one object; pick only if not holding.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "2c93452594cffbc1eeb3",
+      "pick_rule_after": "false",
+      "place_rule_after": "true",
+      "seed": 8,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 213,
+          "prompt_tokens": 351
+        }
+      }
+    },
+    {
+      "candidate_sha256": "1cfd1e5cae810aa059042ac55ea464cd792dcbc08f4e72ebd88a4a6b91a8c783",
+      "new": "The gripper can hold at most one object; pick only if not holding.",
+      "old": "The gripper can hold multiple objects; pick freely without releasing.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "2c93452594cffbc1eeb3",
+      "pick_rule_after": "false",
+      "place_rule_after": "true",
+      "seed": 9,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 213,
+          "prompt_tokens": 351
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,448 @@
+{
+  "diagnostic": true,
+  "environments": {
+    "eb_hab": {
+      "arms": {
+        "no_skill": {
+          "dataset_sha256": "2242c0f236e4bf3b751eeec371b5ff8bac72fd271a84eed6b49b656e3e21af17",
+          "elapsed_seconds": 901.1306915283203,
+          "episodes": 20,
+          "invalid_action_ratio": 0.44501278772378516,
+          "mean_composite_score": 0.11932723882609467,
+          "mean_environment_steps": 19.55,
+          "mean_planner_steps": 9.55,
+          "mean_steps_when_successful": 8.666666666666666,
+          "mean_task_progress": 0.1875,
+          "mean_task_success": 0.15,
+          "run_id": "evaluate_ea583cb869784812910aaf55bc490938",
+          "seconds_per_episode": 45.05653457641601,
+          "skill_sha256": null,
+          "total_environment_steps": 391,
+          "total_invalid_actions": 174,
+          "total_planner_steps": 191
+        },
+        "static_shared_skill": {
+          "dataset_sha256": "2242c0f236e4bf3b751eeec371b5ff8bac72fd271a84eed6b49b656e3e21af17",
+          "elapsed_seconds": 778.5655403137207,
+          "episodes": 20,
+          "invalid_action_ratio": 0.39755351681957185,
+          "mean_composite_score": 0.2258404999482487,
+          "mean_environment_steps": 16.35,
+          "mean_planner_steps": 7.9,
+          "mean_steps_when_successful": 4.6,
+          "mean_task_progress": 0.275,
+          "mean_task_success": 0.25,
+          "run_id": "evaluate_5d8cadf42ec64d5e8cf03abf09b69d32",
+          "seconds_per_episode": 38.928277015686035,
+          "skill_sha256": "54b60a62f571c7f4e475a30e67d58072f37b60481854d49c19b1a38a4124deb4",
+          "total_environment_steps": 327,
+          "total_invalid_actions": 130,
+          "total_planner_steps": 158
+        },
+        "target_skill": {
+          "dataset_sha256": "2242c0f236e4bf3b751eeec371b5ff8bac72fd271a84eed6b49b656e3e21af17",
+          "elapsed_seconds": 915.4313480854034,
+          "episodes": 20,
+          "invalid_action_ratio": 0.3515625,
+          "mean_composite_score": 0.23964075220731568,
+          "mean_environment_steps": 19.2,
+          "mean_planner_steps": 8.65,
+          "mean_steps_when_successful": 10.4,
+          "mean_task_progress": 0.325,
+          "mean_task_success": 0.25,
+          "run_id": "evaluate_516e0c695b504b2eb52065a8d01c61ee",
+          "seconds_per_episode": 45.77156740427017,
+          "skill_sha256": "5e32f5ec1256dbefba26c28bcfb7ee6ce1cdb59131965c261f2704c250cbec88",
+          "total_environment_steps": 384,
+          "total_invalid_actions": 135,
+          "total_planner_steps": 173
+        }
+      },
+      "static_shared_skill_minus_no_skill": {
+        "composite_score": {
+          "ci95_high": 0.3110379041036936,
+          "ci95_low": -0.09453267359826581,
+          "mean_delta": 0.10651326112215405
+        },
+        "environment_steps": {
+          "ci95_high": 1.15,
+          "ci95_low": -7.7,
+          "mean_delta": -3.2
+        },
+        "improved_episode_ids": [
+          "16",
+          "28",
+          "40"
+        ],
+        "invalid_action_ratio": {
+          "ci95_high": -0.005172603092393206,
+          "ci95_low": -0.19490354949737101,
+          "mean_delta": -0.10263261122154044
+        },
+        "mcnemar_exact_p": 0.625,
+        "paired_episodes": 20,
+        "planner_steps": {
+          "ci95_high": 0.35,
+          "ci95_low": -3.75,
+          "mean_delta": -1.65
+        },
+        "regressed_episode_ids": [
+          "2"
+        ],
+        "success_losses": 1,
+        "success_ties": 16,
+        "success_wins": 3,
+        "task_progress": {
+          "ci95_high": 0.275,
+          "ci95_low": -0.0875,
+          "mean_delta": 0.0875
+        },
+        "task_success": {
+          "ci95_high": 0.3,
+          "ci95_low": -0.1,
+          "mean_delta": 0.1
+        }
+      },
+      "target_minus_no_skill": {
+        "composite_score": {
+          "ci95_high": 0.37115526543696553,
+          "ci95_low": -0.13069428473143643,
+          "mean_delta": 0.12031351338122101
+        },
+        "environment_steps": {
+          "ci95_high": 3.05,
+          "ci95_low": -3.9,
+          "mean_delta": -0.35
+        },
+        "improved_episode_ids": [
+          "29",
+          "35",
+          "40",
+          "42"
+        ],
+        "invalid_action_ratio": {
+          "ci95_high": 0.0009709647675726435,
+          "ci95_low": -0.17163570691434468,
+          "mean_delta": -0.09063513381221014
+        },
+        "mcnemar_exact_p": 0.6875,
+        "paired_episodes": 20,
+        "planner_steps": {
+          "ci95_high": 0.75,
+          "ci95_low": -2.65,
+          "mean_delta": -0.9
+        },
+        "regressed_episode_ids": [
+          "2",
+          "4"
+        ],
+        "success_losses": 2,
+        "success_ties": 14,
+        "success_wins": 4,
+        "task_progress": {
+          "ci95_high": 0.375,
+          "ci95_low": -0.1,
+          "mean_delta": 0.1375
+        },
+        "task_success": {
+          "ci95_high": 0.35,
+          "ci95_low": -0.15,
+          "mean_delta": 0.1
+        }
+      },
+      "target_minus_static_shared_skill": {
+        "composite_score": {
+          "ci95_high": 0.26390769518307333,
+          "ci95_low": -0.23455013844618308,
+          "mean_delta": 0.013800252259066966
+        },
+        "environment_steps": {
+          "ci95_high": 8.6,
+          "ci95_low": -2.85,
+          "mean_delta": 2.85
+        },
+        "improved_episode_ids": [
+          "29",
+          "35",
+          "42"
+        ],
+        "invalid_action_ratio": {
+          "ci95_high": 0.09470899470899471,
+          "ci95_low": -0.07334342609720787,
+          "mean_delta": 0.01199747740933031
+        },
+        "mcnemar_exact_p": 1.0,
+        "paired_episodes": 20,
+        "planner_steps": {
+          "ci95_high": 2.85,
+          "ci95_low": -1.45,
+          "mean_delta": 0.75
+        },
+        "regressed_episode_ids": [
+          "16",
+          "28",
+          "4"
+        ],
+        "success_losses": 3,
+        "success_ties": 14,
+        "success_wins": 3,
+        "task_progress": {
+          "ci95_high": 0.275,
+          "ci95_low": -0.175,
+          "mean_delta": 0.05
+        },
+        "task_success": {
+          "ci95_high": 0.25,
+          "ci95_low": -0.25,
+          "mean_delta": 0.0
+        }
+      }
+    },
+    "eb_nav": {
+      "arms": {
+        "no_skill": {
+          "dataset_sha256": "3e7d2cb4246b6e2edaeaabd318dba93e4dbbff114c8368ed0c862e64f417afcf",
+          "elapsed_seconds": 669.8773770332336,
+          "episodes": 20,
+          "invalid_action_ratio": 0.2508250825082508,
+          "mean_composite_score": 0.36370440833676126,
+          "mean_environment_steps": 15.15,
+          "mean_planner_steps": 6.8,
+          "mean_steps_when_successful": 11.181818181818182,
+          "mean_task_progress": 0.0,
+          "mean_task_success": 0.55,
+          "raw_navigation": {
+            "episodes_with_exactly_single_step_plans": 0,
+            "episodes_with_plan_at_least_3_actions": 20,
+            "mean_final_distance": 1.3658565119456652,
+            "mean_max_open_loop_plan_actions": 4.75,
+            "mean_minimum_distance": 1.1665055293623043,
+            "mean_stagnant_steps": 4.55,
+            "mean_worsening_steps": 1.65,
+            "raw_trajectory_dir": "running/Phase4/simulator/running/eb_nav/vista_skill/evaluate/evaluate_7400e3c851624747bb25800fd44a9c43/official_test/common_sense/s0/no_skill"
+          },
+          "run_id": "evaluate_7400e3c851624747bb25800fd44a9c43",
+          "seconds_per_episode": 33.49386885166168,
+          "skill_sha256": null,
+          "total_environment_steps": 303,
+          "total_invalid_actions": 76,
+          "total_planner_steps": 136
+        },
+        "static_shared_skill": {
+          "dataset_sha256": "3e7d2cb4246b6e2edaeaabd318dba93e4dbbff114c8368ed0c862e64f417afcf",
+          "elapsed_seconds": 671.2630565166473,
+          "episodes": 20,
+          "invalid_action_ratio": 0.24113475177304963,
+          "mean_composite_score": 0.43652564102564095,
+          "mean_environment_steps": 14.1,
+          "mean_planner_steps": 6.45,
+          "mean_steps_when_successful": 10.923076923076923,
+          "mean_task_progress": 0.0,
+          "mean_task_success": 0.65,
+          "raw_navigation": {
+            "episodes_with_exactly_single_step_plans": 0,
+            "episodes_with_plan_at_least_3_actions": 20,
+            "mean_final_distance": 1.235969789245853,
+            "mean_max_open_loop_plan_actions": 4.85,
+            "mean_minimum_distance": 1.07453187071595,
+            "mean_stagnant_steps": 4.1,
+            "mean_worsening_steps": 1.05,
+            "raw_trajectory_dir": "running/Phase4/simulator/running/eb_nav/vista_skill/evaluate/evaluate_c22875f23dc64211b69bf4391ad27ddf/official_test/common_sense/s0/57086f2f1f66"
+          },
+          "run_id": "evaluate_c22875f23dc64211b69bf4391ad27ddf",
+          "seconds_per_episode": 33.56315282583237,
+          "skill_sha256": "57086f2f1f66641265c56e84d80e08f378408f7ef3ca81ba64520406fa64723f",
+          "total_environment_steps": 282,
+          "total_invalid_actions": 68,
+          "total_planner_steps": 129
+        },
+        "target_skill": {
+          "dataset_sha256": "3e7d2cb4246b6e2edaeaabd318dba93e4dbbff114c8368ed0c862e64f417afcf",
+          "elapsed_seconds": 1124.2575616836548,
+          "episodes": 20,
+          "invalid_action_ratio": 0.1824561403508772,
+          "mean_composite_score": 0.40581765018607124,
+          "mean_environment_steps": 14.25,
+          "mean_planner_steps": 14.25,
+          "mean_steps_when_successful": 10.416666666666666,
+          "mean_task_progress": 0.0,
+          "mean_task_success": 0.6,
+          "raw_navigation": {
+            "episodes_with_exactly_single_step_plans": 20,
+            "episodes_with_plan_at_least_3_actions": 0,
+            "mean_final_distance": 1.3623626264986604,
+            "mean_max_open_loop_plan_actions": 1.0,
+            "mean_minimum_distance": 1.287351103679025,
+            "mean_stagnant_steps": 4.75,
+            "mean_worsening_steps": 1.35,
+            "raw_trajectory_dir": "running/Phase4/simulator/running/eb_nav/vista_skill/evaluate/evaluate_94f07679964f4c399fdfb13128910e1f/official_test/common_sense/s0/3f026dc27922"
+          },
+          "run_id": "evaluate_94f07679964f4c399fdfb13128910e1f",
+          "seconds_per_episode": 56.21287808418274,
+          "skill_sha256": "3f026dc279220f04ed0cd3d604a07ec51d6ebfd004b9438412431dd4459c46c5",
+          "total_environment_steps": 285,
+          "total_invalid_actions": 52,
+          "total_planner_steps": 285
+        }
+      },
+      "static_shared_skill_minus_no_skill": {
+        "composite_score": {
+          "ci95_high": 0.2503888888888889,
+          "ci95_low": -0.10224861739567619,
+          "mean_delta": 0.07282123268887974
+        },
+        "environment_steps": {
+          "ci95_high": 0.75,
+          "ci95_low": -3.05,
+          "mean_delta": -1.05
+        },
+        "improved_episode_ids": [
+          "nav_0",
+          "nav_1",
+          "nav_15",
+          "nav_9"
+        ],
+        "invalid_action_ratio": {
+          "ci95_high": 0.04035856300562182,
+          "ci95_low": -0.11055361305361307,
+          "mean_delta": -0.028212326888797483
+        },
+        "mcnemar_exact_p": 0.6875,
+        "paired_episodes": 20,
+        "planner_steps": {
+          "ci95_high": 0.95,
+          "ci95_low": -1.9,
+          "mean_delta": -0.35
+        },
+        "regressed_episode_ids": [
+          "nav_11",
+          "nav_18"
+        ],
+        "success_losses": 2,
+        "success_ties": 14,
+        "success_wins": 4,
+        "task_progress": {
+          "ci95_high": 0.0,
+          "ci95_low": 0.0,
+          "mean_delta": 0.0
+        },
+        "task_success": {
+          "ci95_high": 0.35,
+          "ci95_low": -0.15,
+          "mean_delta": 0.1
+        }
+      },
+      "target_minus_no_skill": {
+        "composite_score": {
+          "ci95_high": 0.2241937185621396,
+          "ci95_low": -0.13859491437355215,
+          "mean_delta": 0.042113241849309965
+        },
+        "environment_steps": {
+          "ci95_high": 1.2,
+          "ci95_low": -3.1,
+          "mean_delta": -0.9
+        },
+        "improved_episode_ids": [
+          "nav_13",
+          "nav_15",
+          "nav_17",
+          "nav_2"
+        ],
+        "invalid_action_ratio": {
+          "ci95_high": 0.009638694638694642,
+          "ci95_low": -0.15930029035292195,
+          "mean_delta": -0.07113241849309962
+        },
+        "mcnemar_exact_p": 1.0,
+        "paired_episodes": 20,
+        "planner_steps": {
+          "ci95_high": 9.7,
+          "ci95_low": 5.15,
+          "mean_delta": 7.45
+        },
+        "regressed_episode_ids": [
+          "nav_16",
+          "nav_18",
+          "nav_4"
+        ],
+        "success_losses": 3,
+        "success_ties": 13,
+        "success_wins": 4,
+        "task_progress": {
+          "ci95_high": 0.0,
+          "ci95_low": 0.0,
+          "mean_delta": 0.0
+        },
+        "task_success": {
+          "ci95_high": 0.3,
+          "ci95_low": -0.2,
+          "mean_delta": 0.05
+        }
+      },
+      "target_minus_static_shared_skill": {
+        "composite_score": {
+          "ci95_high": 0.18636524148366254,
+          "ci95_low": -0.24599640125955916,
+          "mean_delta": -0.030707990839569783
+        },
+        "environment_steps": {
+          "ci95_high": 2.9,
+          "ci95_low": -2.65,
+          "mean_delta": 0.15
+        },
+        "improved_episode_ids": [
+          "nav_11",
+          "nav_13",
+          "nav_17",
+          "nav_2"
+        ],
+        "invalid_action_ratio": {
+          "ci95_high": 0.05053561935140882,
+          "ci95_low": -0.14372960372960372,
+          "mean_delta": -0.04292009160430214
+        },
+        "mcnemar_exact_p": 1.0,
+        "paired_episodes": 20,
+        "planner_steps": {
+          "ci95_high": 10.3,
+          "ci95_low": 5.25,
+          "mean_delta": 7.8
+        },
+        "regressed_episode_ids": [
+          "nav_0",
+          "nav_1",
+          "nav_16",
+          "nav_4",
+          "nav_9"
+        ],
+        "success_losses": 5,
+        "success_ties": 11,
+        "success_wins": 4,
+        "task_progress": {
+          "ci95_high": 0.0,
+          "ci95_low": 0.0,
+          "mean_delta": 0.0
+        },
+        "task_success": {
+          "ci95_high": 0.25,
+          "ci95_low": -0.35,
+          "mean_delta": -0.05
+        }
+      }
+    }
+  },
+  "evaluation_split": "official_test/common_sense",
+  "evaluation_subset_used_in_synthesis": false,
+  "macro_average_success": {
+    "no_skill": 0.35000000000000003,
+    "static_shared_skill": 0.45,
+    "target_skill": 0.425
+  },
+  "protocol": "vista_target_skill_heldout_subset_analysis_v1_2026_08_27",
+  "result_roots": {
+    "eb_hab": "running/Phase4/target_skill_oracle_v1/validation_common_sense_seed0",
+    "eb_nav": "running/Phase4/target_skill_oracle_v1/validation_common_sense_seed0_nav_resume1"
+  },
+  "source_split": "official_test/base"
+}

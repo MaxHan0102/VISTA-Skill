@@ -1,0 +1,1 @@
+{"reward": 0.3125, "num_invalid_actions": 2, "empty_plan": 1, "instruction": "There's a spill, and I need an object to clean it up. Could you bring it to the sink?", "task_success": 0, "task_progress": 0, "subgoal_reward": 0, "num_steps": 4, "planner_steps": 2, "planner_output_error": 0, "num_invalid_action_ratio": 0.5, "episode_elapsed_seconds": 9.152626991271973}

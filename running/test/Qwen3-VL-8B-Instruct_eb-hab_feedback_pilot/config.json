@@ -1,0 +1,90 @@
+{
+  "env": "eb-hab",
+  "provider": "qwen",
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "track": "rgb_only",
+  "eval_sets": [
+    "base"
+  ],
+  "episodes": 2,
+  "start_index": 0,
+  "seed": 0,
+  "frames": 1,
+  "n_shots": null,
+  "resolution": null,
+  "max_steps": null,
+  "max_tokens": null,
+  "temperature": null,
+  "api_retries": 3,
+  "retry_delay": 5,
+  "expected_episodes": null,
+  "artifact_root": null,
+  "resume_existing": false,
+  "api_key_env": "QWEN_API_KEY",
+  "base_url": "http://192.168.1.185:8000/v1",
+  "output": "/root/max/VISTA-Skill/running/test/Qwen3-VL-8B-Instruct_eb-hab_feedback_pilot",
+  "log_level": "INFO",
+  "dry_run": false,
+  "smoke_policy": false,
+  "requested_output": "/root/max/VISTA-Skill/running/test/Qwen3-VL-8B-Instruct_eb-hab_feedback_pilot",
+  "started_at": "2026-09-10T09:54:05.506055+08:00",
+  "protocol": "stock_feedback_v2",
+  "official_config": {
+    "model_name": "Qwen/Qwen3-VL-8B-Instruct",
+    "down_sample_ratio": 1,
+    "model_type": "remote",
+    "language_only": false,
+    "eval_sets": [
+      "base"
+    ],
+    "chat_history": false,
+    "n_shots": 10,
+    "multistep": false,
+    "resolution": 500,
+    "exp_name": "feedback_comparison",
+    "env_feedback": false,
+    "tp": 1,
+    "start_epi_index": 0
+  },
+  "schema_compatibility": "closed_objects_v1",
+  "script_sha256": "593c52f7c47eb1e3fb2e4d434e3804c1ce087a65c75526fe274e3c927a3e8126",
+  "skill_or_memory": false,
+  "source_hashes": {
+    "EmbodiedBench/embodiedbench/configs/eb-hab.yaml": "fc66ba766a97bccb27b1fc6405da58bc1adc3d8ff885c470462ade073c589274",
+    "EmbodiedBench/embodiedbench/planner/remote_model.py": "8c50923997c9e937e96c07fee2087737a52b9052f41c3254737c43f2499e928e",
+    "EmbodiedBench/embodiedbench/planner/vlm_planner.py": "5489386a1c694099f146c22e5b854085945caa0e21708e03c5b538949a47c058",
+    "EmbodiedBench/embodiedbench/envs/eb_habitat/EBHabEnv.py": "8765e30893386fbfb2ace6a95b9c9b182d412583cd76390853d2bf2a11f825d3",
+    "EmbodiedBench/embodiedbench/evaluator/eb_habitat_evaluator.py": "a691a81405ccdf33a70454fb901d466c4bcb514867936b5364b86d5578d6fa3a"
+  },
+  "resume_managed": true,
+  "endpoint_models": {
+    "object": "list",
+    "data": [
+      {
+        "id": "Qwen/Qwen3-VL-8B-Instruct",
+        "object": "model",
+        "created": 1789005236,
+        "owned_by": "vllm",
+        "root": "Qwen/Qwen3-VL-8B-Instruct",
+        "parent": null,
+        "max_model_len": 16384,
+        "permission": [
+          {
+            "id": "modelperm-bbab7e7f7b751930",
+            "object": "model_permission",
+            "created": 1789005236,
+            "allow_create_engine": false,
+            "allow_sampling": true,
+            "allow_logprobs": true,
+            "allow_search_indices": false,
+            "allow_view": true,
+            "allow_fine_tuning": false,
+            "organization": "*",
+            "group": null,
+            "is_blocking": false
+          }
+        ]
+      }
+    ]
+  }
+}

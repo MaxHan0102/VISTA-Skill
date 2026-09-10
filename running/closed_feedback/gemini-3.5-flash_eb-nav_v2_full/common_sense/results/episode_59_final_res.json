@@ -1,0 +1,1 @@
+{"reward": 0.0, "instruction": "I need to use a digital device that comes with a keyboard to join a video conference. Can you navigate to that object and stay close?", "task_success": 0.0, "num_steps": 20, "planner_steps": 5, "planner_output_error": 0, "episode_elapsed_seconds": 39.859272718429565}

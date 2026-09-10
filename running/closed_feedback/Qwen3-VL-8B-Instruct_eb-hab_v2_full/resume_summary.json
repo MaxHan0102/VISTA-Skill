@@ -1,0 +1,46 @@
+{
+  "status": "complete",
+  "protocol": "stock_feedback_v2",
+  "smoke_policy": false,
+  "categories": {
+    "base": {
+      "completed": 50,
+      "expected": 50,
+      "task_success": 0.5
+    },
+    "common_sense": {
+      "completed": 50,
+      "expected": 50,
+      "task_success": 0.06
+    },
+    "complex_instruction": {
+      "completed": 50,
+      "expected": 50,
+      "task_success": 0.16
+    },
+    "spatial_relationship": {
+      "completed": 50,
+      "expected": 50,
+      "task_success": 0.26
+    },
+    "visual_appearance": {
+      "completed": 50,
+      "expected": 50,
+      "task_success": 0.24
+    },
+    "long_horizon": {
+      "completed": 50,
+      "expected": 50,
+      "task_success": 0.08
+    }
+  },
+  "completed": 300,
+  "expected": 300,
+  "category_mean_success": 0.2166666666666667,
+  "result_index": "/root/max/VISTA-Skill/running/closed_feedback/Qwen3-VL-8B-Instruct_eb-hab_v2_full/resume_state.json",
+  "schema_compatibility_counts": {
+    "closed_objects_v1": 300
+  },
+  "mixed_schema_compatibility": false,
+  "cost_note": "All original/attempt API audits, including abandoned partial episodes, contribute to cost."
+}

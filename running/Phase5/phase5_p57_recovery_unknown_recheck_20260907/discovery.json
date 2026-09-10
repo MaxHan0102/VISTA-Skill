@@ -1,0 +1,461 @@
+{
+  "candidate_generated": true,
+  "chains": [
+    {
+      "episode_id": "p57_acquisition_00",
+      "evidence_ids": [
+        "p57_acquisition_00:s6:feedback:near(ball)",
+        "p57_acquisition_00:s9:feedback:near(ball)"
+      ],
+      "navigation_event_ids": [
+        "a39d3656c2127fa404ba"
+      ],
+      "repeat_event_id": "0d695a275d72e1bdb878",
+      "repeat_step": 9,
+      "target": "ball",
+      "trigger_event_id": "4bac256b8f36e400efad",
+      "trigger_step": 6,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_00",
+      "evidence_ids": [
+        "p57_acquisition_00:s9:feedback:near(ball)",
+        "p57_acquisition_00:s11:feedback:near(ball)"
+      ],
+      "navigation_event_ids": [
+        "ff2a8b796d81a49a2260"
+      ],
+      "repeat_event_id": "9b2fecb801a12792de0b",
+      "repeat_step": 11,
+      "target": "ball",
+      "trigger_event_id": "0d695a275d72e1bdb878",
+      "trigger_step": 9,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_00",
+      "evidence_ids": [
+        "p57_acquisition_00:s11:feedback:near(ball)",
+        "p57_acquisition_00:s13:feedback:near(ball)"
+      ],
+      "navigation_event_ids": [
+        "43420e47481d05711253"
+      ],
+      "repeat_event_id": "cda905525862629f7c6e",
+      "repeat_step": 13,
+      "target": "ball",
+      "trigger_event_id": "9b2fecb801a12792de0b",
+      "trigger_step": 11,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_01",
+      "evidence_ids": [
+        "p57_acquisition_01:s2:feedback:near(plum)",
+        "p57_acquisition_01:s4:feedback:near(plum)"
+      ],
+      "navigation_event_ids": [
+        "ecb7bb3546f30f878602"
+      ],
+      "repeat_event_id": "48e90e364e413e7bd82c",
+      "repeat_step": 4,
+      "target": "plum",
+      "trigger_event_id": "bb3ef5a1159304b123a9",
+      "trigger_step": 2,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_01",
+      "evidence_ids": [
+        "p57_acquisition_01:s8:feedback:near(plum)",
+        "p57_acquisition_01:s10:feedback:near(plum)"
+      ],
+      "navigation_event_ids": [
+        "9f01362567d4d56a2c84"
+      ],
+      "repeat_event_id": "671832883f8c01fdf9bd",
+      "repeat_step": 10,
+      "target": "plum",
+      "trigger_event_id": "b3923cb8615e2bc154e4",
+      "trigger_step": 8,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_01",
+      "evidence_ids": [
+        "p57_acquisition_01:s10:feedback:near(plum)",
+        "p57_acquisition_01:s12:feedback:near(plum)"
+      ],
+      "navigation_event_ids": [
+        "57ca1bea1a758d10dad7"
+      ],
+      "repeat_event_id": "324b168d710dcb5d1377",
+      "repeat_step": 12,
+      "target": "plum",
+      "trigger_event_id": "671832883f8c01fdf9bd",
+      "trigger_step": 10,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_02",
+      "evidence_ids": [
+        "p57_acquisition_02:s2:feedback:near(cleanser)",
+        "p57_acquisition_02:s4:feedback:near(cleanser)"
+      ],
+      "navigation_event_ids": [
+        "edaa0043e7a692d7f558"
+      ],
+      "repeat_event_id": "1c1c0cbc05aaf75d091c",
+      "repeat_step": 4,
+      "target": "cleanser",
+      "trigger_event_id": "3456c1e4ebbf544e788a",
+      "trigger_step": 2,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_02",
+      "evidence_ids": [
+        "p57_acquisition_02:s4:feedback:near(cleanser)",
+        "p57_acquisition_02:s6:feedback:near(cleanser)"
+      ],
+      "navigation_event_ids": [
+        "641380fa941b21452802"
+      ],
+      "repeat_event_id": "bed04cf5fbeea139c795",
+      "repeat_step": 6,
+      "target": "cleanser",
+      "trigger_event_id": "1c1c0cbc05aaf75d091c",
+      "trigger_step": 4,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_03",
+      "evidence_ids": [
+        "p57_acquisition_03:s2:feedback:near(book)",
+        "p57_acquisition_03:s11:feedback:near(book)"
+      ],
+      "navigation_event_ids": [
+        "a76fe9539fa19399ecbd",
+        "0f5c162133fe1418333c",
+        "b5ef33aed8074d86d96e",
+        "1c5fa913c0d19270dcea"
+      ],
+      "repeat_event_id": "c29a2677b65cd63425b0",
+      "repeat_step": 11,
+      "target": "book",
+      "trigger_event_id": "c328386e39147a6af67a",
+      "trigger_step": 2,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_03",
+      "evidence_ids": [
+        "p57_acquisition_03:s11:feedback:near(book)",
+        "p57_acquisition_03:s14:feedback:near(book)"
+      ],
+      "navigation_event_ids": [
+        "a701366eb1e549b949db"
+      ],
+      "repeat_event_id": "47f8fddbac9adb1c73d3",
+      "repeat_step": 14,
+      "target": "book",
+      "trigger_event_id": "c29a2677b65cd63425b0",
+      "trigger_step": 11,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_04",
+      "evidence_ids": [
+        "p57_acquisition_04:s2:feedback:near(screwdriver)",
+        "p57_acquisition_04:s4:feedback:near(screwdriver)"
+      ],
+      "navigation_event_ids": [
+        "07f5603219865ddf6404"
+      ],
+      "repeat_event_id": "fef72082f4ce8aaeda5c",
+      "repeat_step": 4,
+      "target": "screwdriver",
+      "trigger_event_id": "6f5350bc60d4220cfadb",
+      "trigger_step": 2,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_04",
+      "evidence_ids": [
+        "p57_acquisition_04:s6:feedback:near(screwdriver)",
+        "p57_acquisition_04:s8:feedback:near(screwdriver)"
+      ],
+      "navigation_event_ids": [
+        "e5ab77f7e02cdf8fceb7"
+      ],
+      "repeat_event_id": "98b2661afecb3277dd22",
+      "repeat_step": 8,
+      "target": "screwdriver",
+      "trigger_event_id": "d77ab1e06b685c397ea8",
+      "trigger_step": 6,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_04",
+      "evidence_ids": [
+        "p57_acquisition_04:s10:feedback:near(screwdriver)",
+        "p57_acquisition_04:s12:feedback:near(screwdriver)"
+      ],
+      "navigation_event_ids": [
+        "bd7e89a553c4bb378d08"
+      ],
+      "repeat_event_id": "b06200a02f17e6b4e04b",
+      "repeat_step": 12,
+      "target": "screwdriver",
+      "trigger_event_id": "1c9ed9b49a14fcf00d86",
+      "trigger_step": 10,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_06",
+      "evidence_ids": [
+        "p57_acquisition_06:s2:feedback:near(can)",
+        "p57_acquisition_06:s4:feedback:near(can)"
+      ],
+      "navigation_event_ids": [
+        "0c189551259252a99023"
+      ],
+      "repeat_event_id": "6082e9dfc04c9dad2bac",
+      "repeat_step": 4,
+      "target": "can",
+      "trigger_event_id": "b0c5c4c74c87e6bcf3b5",
+      "trigger_step": 2,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_06",
+      "evidence_ids": [
+        "p57_acquisition_06:s8:feedback:near(can)",
+        "p57_acquisition_06:s10:feedback:near(can)"
+      ],
+      "navigation_event_ids": [
+        "b4e3d751d7dfa5825286"
+      ],
+      "repeat_event_id": "bdbe0d78492a6735d186",
+      "repeat_step": 10,
+      "target": "can",
+      "trigger_event_id": "1008b6a19542c24971da",
+      "trigger_step": 8,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_08",
+      "evidence_ids": [
+        "p57_acquisition_08:s2:feedback:near(toy_airplane)",
+        "p57_acquisition_08:s4:feedback:near(toy_airplane)"
+      ],
+      "navigation_event_ids": [
+        "5c53191e5d36c43058ba"
+      ],
+      "repeat_event_id": "e2669fbd1fff81ad26b3",
+      "repeat_step": 4,
+      "target": "toy_airplane",
+      "trigger_event_id": "4af2520ac61b6da66bdd",
+      "trigger_step": 2,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_08",
+      "evidence_ids": [
+        "p57_acquisition_08:s4:feedback:near(toy_airplane)",
+        "p57_acquisition_08:s6:feedback:near(toy_airplane)"
+      ],
+      "navigation_event_ids": [
+        "47e29bb496ba430d20eb"
+      ],
+      "repeat_event_id": "74ab4849ea4cb6bfcec7",
+      "repeat_step": 6,
+      "target": "toy_airplane",
+      "trigger_event_id": "e2669fbd1fff81ad26b3",
+      "trigger_step": 4,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_08",
+      "evidence_ids": [
+        "p57_acquisition_08:s6:feedback:near(toy_airplane)",
+        "p57_acquisition_08:s8:feedback:near(toy_airplane)"
+      ],
+      "navigation_event_ids": [
+        "56affcf62d6d83408799"
+      ],
+      "repeat_event_id": "e07d5e030c954a1d52c6",
+      "repeat_step": 8,
+      "target": "toy_airplane",
+      "trigger_event_id": "74ab4849ea4cb6bfcec7",
+      "trigger_step": 6,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_08",
+      "evidence_ids": [
+        "p57_acquisition_08:s8:feedback:near(toy_airplane)",
+        "p57_acquisition_08:s10:feedback:near(toy_airplane)"
+      ],
+      "navigation_event_ids": [
+        "349a5e062d4ed7dd557a"
+      ],
+      "repeat_event_id": "1eaaf7cbffa8083dd913",
+      "repeat_step": 10,
+      "target": "toy_airplane",
+      "trigger_event_id": "e07d5e030c954a1d52c6",
+      "trigger_step": 8,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_08",
+      "evidence_ids": [
+        "p57_acquisition_08:s10:feedback:near(toy_airplane)",
+        "p57_acquisition_08:s12:feedback:near(toy_airplane)"
+      ],
+      "navigation_event_ids": [
+        "0e25005a311f580645cf"
+      ],
+      "repeat_event_id": "64047066cd4a1d5085fb",
+      "repeat_step": 12,
+      "target": "toy_airplane",
+      "trigger_event_id": "1eaaf7cbffa8083dd913",
+      "trigger_step": 10,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_11",
+      "evidence_ids": [
+        "p57_acquisition_11:s2:feedback:near(padlock)",
+        "p57_acquisition_11:s4:feedback:near(padlock)"
+      ],
+      "navigation_event_ids": [
+        "a99e09e25e98ad6199d8"
+      ],
+      "repeat_event_id": "7cfe55d6ec2ab2cff66b",
+      "repeat_step": 4,
+      "target": "padlock",
+      "trigger_event_id": "c35217b750508fddddb4",
+      "trigger_step": 2,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_11",
+      "evidence_ids": [
+        "p57_acquisition_11:s4:feedback:near(padlock)",
+        "p57_acquisition_11:s6:feedback:near(padlock)"
+      ],
+      "navigation_event_ids": [
+        "58f5214fd03922a73322"
+      ],
+      "repeat_event_id": "53fa5b7125337bdcee10",
+      "repeat_step": 6,
+      "target": "padlock",
+      "trigger_event_id": "7cfe55d6ec2ab2cff66b",
+      "trigger_step": 4,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_11",
+      "evidence_ids": [
+        "p57_acquisition_11:s6:feedback:near(padlock)",
+        "p57_acquisition_11:s8:feedback:near(padlock)"
+      ],
+      "navigation_event_ids": [
+        "c66ebadcf6e5d0319a99"
+      ],
+      "repeat_event_id": "b385c16a975c31ea29e4",
+      "repeat_step": 8,
+      "target": "padlock",
+      "trigger_event_id": "53fa5b7125337bdcee10",
+      "trigger_step": 6,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_11",
+      "evidence_ids": [
+        "p57_acquisition_11:s8:feedback:near(padlock)",
+        "p57_acquisition_11:s10:feedback:near(padlock)"
+      ],
+      "navigation_event_ids": [
+        "7e1011efcc4e8db6097f"
+      ],
+      "repeat_event_id": "3a20aaf72dd3be01c11a",
+      "repeat_step": 10,
+      "target": "padlock",
+      "trigger_event_id": "b385c16a975c31ea29e4",
+      "trigger_step": 8,
+      "trigger_vtca_identified": true
+    },
+    {
+      "episode_id": "p57_acquisition_11",
+      "evidence_ids": [
+        "p57_acquisition_11:s10:feedback:near(padlock)",
+        "p57_acquisition_11:s12:feedback:near(padlock)"
+      ],
+      "navigation_event_ids": [
+        "b4f9f693b3f617a32af2"
+      ],
+      "repeat_event_id": "4ec51a51eeaed56e54f6",
+      "repeat_step": 12,
+      "target": "padlock",
+      "trigger_event_id": "3a20aaf72dd3be01c11a",
+      "trigger_step": 10,
+      "trigger_vtca_identified": true
+    }
+  ],
+  "evidence_ids": [
+    "p57_acquisition_00:s11:feedback:near(ball)",
+    "p57_acquisition_00:s13:feedback:near(ball)",
+    "p57_acquisition_00:s6:feedback:near(ball)",
+    "p57_acquisition_00:s9:feedback:near(ball)",
+    "p57_acquisition_01:s10:feedback:near(plum)",
+    "p57_acquisition_01:s12:feedback:near(plum)",
+    "p57_acquisition_01:s2:feedback:near(plum)",
+    "p57_acquisition_01:s4:feedback:near(plum)",
+    "p57_acquisition_01:s8:feedback:near(plum)",
+    "p57_acquisition_02:s2:feedback:near(cleanser)",
+    "p57_acquisition_02:s4:feedback:near(cleanser)",
+    "p57_acquisition_02:s6:feedback:near(cleanser)",
+    "p57_acquisition_03:s11:feedback:near(book)",
+    "p57_acquisition_03:s14:feedback:near(book)",
+    "p57_acquisition_03:s2:feedback:near(book)",
+    "p57_acquisition_04:s10:feedback:near(screwdriver)",
+    "p57_acquisition_04:s12:feedback:near(screwdriver)",
+    "p57_acquisition_04:s2:feedback:near(screwdriver)",
+    "p57_acquisition_04:s4:feedback:near(screwdriver)",
+    "p57_acquisition_04:s6:feedback:near(screwdriver)",
+    "p57_acquisition_04:s8:feedback:near(screwdriver)",
+    "p57_acquisition_06:s10:feedback:near(can)",
+    "p57_acquisition_06:s2:feedback:near(can)",
+    "p57_acquisition_06:s4:feedback:near(can)",
+    "p57_acquisition_06:s8:feedback:near(can)",
+    "p57_acquisition_08:s10:feedback:near(toy_airplane)",
+    "p57_acquisition_08:s12:feedback:near(toy_airplane)",
+    "p57_acquisition_08:s2:feedback:near(toy_airplane)",
+    "p57_acquisition_08:s4:feedback:near(toy_airplane)",
+    "p57_acquisition_08:s6:feedback:near(toy_airplane)",
+    "p57_acquisition_08:s8:feedback:near(toy_airplane)",
+    "p57_acquisition_11:s10:feedback:near(padlock)",
+    "p57_acquisition_11:s12:feedback:near(padlock)",
+    "p57_acquisition_11:s2:feedback:near(padlock)",
+    "p57_acquisition_11:s4:feedback:near(padlock)",
+    "p57_acquisition_11:s6:feedback:near(padlock)",
+    "p57_acquisition_11:s8:feedback:near(padlock)"
+  ],
+  "grammar": "failed_pick_nav_failed_pick_target_evidence_v1",
+  "independent_episodes": [
+    "p57_acquisition_00",
+    "p57_acquisition_01",
+    "p57_acquisition_02",
+    "p57_acquisition_03",
+    "p57_acquisition_04",
+    "p57_acquisition_06",
+    "p57_acquisition_08",
+    "p57_acquisition_11"
+  ],
+  "minimum_episodes": 2,
+  "model_calls": 0,
+  "uses_task_outcomes": false
+}

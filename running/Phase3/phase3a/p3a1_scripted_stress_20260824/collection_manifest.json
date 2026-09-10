@@ -1,0 +1,42 @@
+{
+  "action_counts": {
+    "close": 37,
+    "nav": 20,
+    "open": 58,
+    "pick": 20,
+    "place": 20
+  },
+  "analysis_type": "phase3a_scripted_stress_collection",
+  "episode_count": 20,
+  "episode_ids": [
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45",
+    "46",
+    "47",
+    "48",
+    "49",
+    "50",
+    "51",
+    "52",
+    "53",
+    "54",
+    "55",
+    "56",
+    "57",
+    "58",
+    "59"
+  ],
+  "finished_at_unix": 1787582154.418501,
+  "manifest": "/root/max/VISTA-Skill/configs/eb_hab_train_validation_manifest.json",
+  "manifest_sha256": "b08ee365b22302899084e209f09002e96242d3ce3eb4bad410d0523b4a163bec",
+  "output": "running/Phase3/phase3a/p3a1_scripted_stress_20260824/events.jsonl",
+  "policy": "fixed public-catalog schedule: invalid place/pick/open probes, then nav/open/reopen/close/reclose; no state-adaptive action selection",
+  "seed": 0,
+  "started_at_unix": 1787582140.0259264,
+  "task_successes": 2,
+  "transition_count": 155
+}

@@ -1,0 +1,9 @@
+{"split": "complex_instruction", "episode_number": 17, "episode_id": "34", "instruction": "There's an apple on the sofa, but on the sink I need you to put a ball.", "api_call_start": 1}
+{"split": "complex_instruction", "episode_number": 18, "episode_id": "9", "instruction": "On the sofa there's an apple, but instead find a bowl and move it to the black table.", "api_call_start": 7}
+{"split": "complex_instruction", "episode_number": 19, "episode_id": "43", "instruction": "On the sofa there's an apple, but instead find a cleanser and move it to the TV stand.", "api_call_start": 10}
+{"split": "complex_instruction", "episode_number": 20, "episode_id": "41", "instruction": "Instead of finding an apple, I need a cleanser on the right counter. Can you help?", "api_call_start": 11}
+{"split": "complex_instruction", "episode_number": 21, "episode_id": "31", "instruction": "Should the fridge door be open, move an bowl to the right counter; otherwise, transport an rubriks cube to the right counter.", "api_call_start": 12}
+{"split": "complex_instruction", "episode_number": 22, "episode_id": "23", "instruction": "In case the fridge remains open, perform a transfer of an book to the brown table; when closed, execute a transfer of the box to the brown table.", "api_call_start": 25}
+{"split": "complex_instruction", "episode_number": 23, "episode_id": "3", "instruction": "Instead of finding an apple, I need a spatula on the left counter. Can you help?", "api_call_start": 31}
+{"split": "complex_instruction", "episode_number": 24, "episode_id": "1", "instruction": "On the sofa there's an apple, but instead find a padlock and move it to the TV stand.", "api_call_start": 37}
+{"split": "complex_instruction", "episode_number": 25, "episode_id": "2", "instruction": "There's an apple on the sofa, but on the right counter I need you to put a book.", "api_call_start": 38}

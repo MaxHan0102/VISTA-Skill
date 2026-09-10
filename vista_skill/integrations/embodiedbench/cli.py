@@ -141,7 +141,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     experiment.add_argument("--method-api-key", default=os.environ.get("VISTA_METHOD_API_KEY"))
     experiment.add_argument("--manifest", default=DEFAULT_MANIFEST)
     experiment.add_argument("--config", default="configs/vista_phase5_hab.json")
-    experiment.add_argument("--output-dir", default="running/vista_skill/full")
+    experiment.add_argument("--output-dir", default="running/Phase5/vista_skill/full")
     experiment.add_argument("--evolution-seeds", default="0,1,2")
     experiment.add_argument("--max-acquisition-episodes", type=int)
     experiment.add_argument(
@@ -245,7 +245,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         choices=("acquisition", "selection", "audit", "official_test"),
         default="audit",
     )
-    evaluate.add_argument("--output", default="running/vista_skill/frozen_audit/events.jsonl")
+    evaluate.add_argument("--output", default="running/Phase5/vista_skill/frozen_audit/events.jsonl")
     evaluate.add_argument("--seed", type=int, default=0)
     evaluate.add_argument("--max-episodes", type=int)
     evaluate.add_argument(

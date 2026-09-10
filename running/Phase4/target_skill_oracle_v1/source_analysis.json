@@ -1,0 +1,405 @@
+{
+  "analysis_type": "posthoc_source_trajectory_analysis",
+  "eb_hab": {
+    "no_skill": {
+      "adjacent_repetition_ratio": 0.012987012987012988,
+      "episodes": 20,
+      "invalid_action_ratio": 0.38645418326693226,
+      "mean_environment_steps": 12.55,
+      "mean_planner_steps": 5.6,
+      "mean_steps_when_successful": 8.818181818181818,
+      "mean_task_progress": 0.6333333333333333,
+      "mean_task_success": 0.55,
+      "repeated_two_action_cycle_ratio": 0.25
+    },
+    "observed_failure_signals": {
+      "additional": [
+        "requested-object identity substitution",
+        "Pick repeated while already holding or after failed Pick",
+        "destination/removal semantics lost after manipulation",
+        "multi-object checklist incompletion"
+      ],
+      "dominant": "invalid Pick loops after navigation without object-nearness evidence"
+    },
+    "paired": {
+      "outcome_or_progress_changes": [
+        {
+          "episode_id": "31",
+          "instruction": "Find a wrench and move it to the left counter.",
+          "no_skill_invalid": 10,
+          "no_skill_progress": 0.25,
+          "no_skill_steps": 26,
+          "no_skill_success": 0.0,
+          "static_invalid": 10,
+          "static_progress": 0.0,
+          "static_steps": 19,
+          "static_success": 0.0
+        },
+        {
+          "episode_id": "35",
+          "instruction": "I left my mug on the sofa, can you bring it to the left counter?",
+          "no_skill_invalid": 0,
+          "no_skill_progress": 1.0,
+          "no_skill_steps": 4,
+          "no_skill_success": 1.0,
+          "static_invalid": 10,
+          "static_progress": 0.25,
+          "static_steps": 20,
+          "static_success": 0.0
+        },
+        {
+          "episode_id": "38",
+          "instruction": "On the TV stand I need you to put a plate.",
+          "no_skill_invalid": 6,
+          "no_skill_progress": 1.0,
+          "no_skill_steps": 16,
+          "no_skill_success": 1.0,
+          "static_invalid": 10,
+          "static_progress": 0.0,
+          "static_steps": 20,
+          "static_success": 0.0
+        },
+        {
+          "episode_id": "44",
+          "instruction": "On the left counter, remove the lego.",
+          "no_skill_invalid": 0,
+          "no_skill_progress": 0.0,
+          "no_skill_steps": 2,
+          "no_skill_success": 0.0,
+          "static_invalid": 0,
+          "static_progress": 1.0,
+          "static_steps": 8,
+          "static_success": 1.0
+        },
+        {
+          "episode_id": "5",
+          "instruction": "Find a orange and move it to the right counter.",
+          "no_skill_invalid": 8,
+          "no_skill_progress": 1.0,
+          "no_skill_steps": 24,
+          "no_skill_success": 1.0,
+          "static_invalid": 10,
+          "static_progress": 0.0,
+          "static_steps": 27,
+          "static_success": 0.0
+        }
+      ],
+      "paired_episodes": 20,
+      "static_minus_no_skill_progress": {
+        "ci95_high": 0.075,
+        "ci95_low": -0.2875,
+        "mean_delta": -0.1
+      },
+      "static_minus_no_skill_success": {
+        "ci95_high": 0.1,
+        "ci95_low": -0.3,
+        "mean_delta": -0.1
+      },
+      "static_success_improved_episode_ids": [
+        "44"
+      ],
+      "static_success_regressed_episode_ids": [
+        "35",
+        "38",
+        "5"
+      ],
+      "success_ties": 16
+    },
+    "static_shared_skill": {
+      "adjacent_repetition_ratio": 0.016597510373443983,
+      "episodes": 20,
+      "invalid_action_ratio": 0.421455938697318,
+      "mean_environment_steps": 13.05,
+      "mean_planner_steps": 6.15,
+      "mean_steps_when_successful": 6.111111111111111,
+      "mean_task_progress": 0.5333333333333333,
+      "mean_task_success": 0.45,
+      "repeated_two_action_cycle_ratio": 0.3883495145631068
+    }
+  },
+  "eb_nav": {
+    "no_skill": {
+      "adjacent_repetition_ratio": 0.4893882646691635,
+      "episodes": 60,
+      "invalid_action_ratio": 0.26713124274099886,
+      "mean_environment_steps": 14.35,
+      "mean_planner_steps": 6.616666666666666,
+      "mean_steps_when_successful": 11.078947368421053,
+      "mean_task_progress": 0.0,
+      "mean_task_success": 0.6333333333333333,
+      "repeated_two_action_cycle_ratio": 0.302496328928047
+    },
+    "no_skill_distance_dynamics": {
+      "episodes_with_plan_at_least_3_actions": 58,
+      "mean_final_distance": 1.3553210398995215,
+      "mean_max_open_loop_plan_actions": 4.766666666666667,
+      "mean_minimum_distance": 1.2624102620545476,
+      "mean_stagnant_steps": 4.4,
+      "mean_worsening_steps": 1.35,
+      "overshot_near_threshold_episode_ids": [
+        "nav_49"
+      ]
+    },
+    "observed_failure_signals": {
+      "additional": [
+        "blocked translations repeated without recovery",
+        "visual closeness claims override numeric distance",
+        "rotation used despite an improving translation"
+      ],
+      "dominant": "open-loop multi-action plans overshoot or continue after distance worsens"
+    },
+    "paired": {
+      "outcome_or_progress_changes": [
+        {
+          "episode_id": "nav_11",
+          "instruction": "navigate to the Kettle in the room and be as close as possible to it",
+          "no_skill_invalid": 1,
+          "no_skill_progress": 0.0,
+          "no_skill_steps": 20,
+          "no_skill_success": 0.0,
+          "static_invalid": 1,
+          "static_progress": 0.0,
+          "static_steps": 11,
+          "static_success": 1.0
+        },
+        {
+          "episode_id": "nav_13",
+          "instruction": "navigate to the Pot in the room and be as close as possible to it",
+          "no_skill_invalid": 6,
+          "no_skill_progress": 0.0,
+          "no_skill_steps": 20,
+          "no_skill_success": 0.0,
+          "static_invalid": 0,
+          "static_progress": 0.0,
+          "static_steps": 10,
+          "static_success": 1.0
+        },
+        {
+          "episode_id": "nav_18",
+          "instruction": "navigate to the Kettle in the room and be as close as possible to it",
+          "no_skill_invalid": 13,
+          "no_skill_progress": 0.0,
+          "no_skill_steps": 20,
+          "no_skill_success": 0.0,
+          "static_invalid": 5,
+          "static_progress": 0.0,
+          "static_steps": 16,
+          "static_success": 1.0
+        },
+        {
+          "episode_id": "nav_2",
+          "instruction": "navigate to the Toaster in the room and be as close as possible to it",
+          "no_skill_invalid": 0,
+          "no_skill_progress": 0.0,
+          "no_skill_steps": 9,
+          "no_skill_success": 1.0,
+          "static_invalid": 1,
+          "static_progress": 0.0,
+          "static_steps": 20,
+          "static_success": 0.0
+        },
+        {
+          "episode_id": "nav_20",
+          "instruction": "navigate to the GarbageCan in the room and be as close as possible to it",
+          "no_skill_invalid": 2,
+          "no_skill_progress": 0.0,
+          "no_skill_steps": 12,
+          "no_skill_success": 1.0,
+          "static_invalid": 9,
+          "static_progress": 0.0,
+          "static_steps": 20,
+          "static_success": 0.0
+        },
+        {
+          "episode_id": "nav_29",
+          "instruction": "navigate to the GarbageCan in the room and be as close as possible to it",
+          "no_skill_invalid": 0,
+          "no_skill_progress": 0.0,
+          "no_skill_steps": 8,
+          "no_skill_success": 1.0,
+          "static_invalid": 3,
+          "static_progress": 0.0,
+          "static_steps": 20,
+          "static_success": 0.0
+        },
+        {
+          "episode_id": "nav_33",
+          "instruction": "navigate to the DeskLamp in the room and be as close as possible to it",
+          "no_skill_invalid": 0,
+          "no_skill_progress": 0.0,
+          "no_skill_steps": 13,
+          "no_skill_success": 1.0,
+          "static_invalid": 14,
+          "static_progress": 0.0,
+          "static_steps": 20,
+          "static_success": 0.0
+        },
+        {
+          "episode_id": "nav_37",
+          "instruction": "navigate to the GarbageCan in the room and be as close as possible to it",
+          "no_skill_invalid": 0,
+          "no_skill_progress": 0.0,
+          "no_skill_steps": 8,
+          "no_skill_success": 1.0,
+          "static_invalid": 0,
+          "static_progress": 0.0,
+          "static_steps": 20,
+          "static_success": 0.0
+        },
+        {
+          "episode_id": "nav_42",
+          "instruction": "navigate to the Box in the room and be as close as possible to it",
+          "no_skill_invalid": 16,
+          "no_skill_progress": 0.0,
+          "no_skill_steps": 20,
+          "no_skill_success": 0.0,
+          "static_invalid": 1,
+          "static_progress": 0.0,
+          "static_steps": 17,
+          "static_success": 1.0
+        },
+        {
+          "episode_id": "nav_48",
+          "instruction": "navigate to the DeskLamp in the room and be as close as possible to it",
+          "no_skill_invalid": 0,
+          "no_skill_progress": 0.0,
+          "no_skill_steps": 11,
+          "no_skill_success": 1.0,
+          "static_invalid": 9,
+          "static_progress": 0.0,
+          "static_steps": 20,
+          "static_success": 0.0
+        },
+        {
+          "episode_id": "nav_49",
+          "instruction": "navigate to the GarbageCan in the room and be as close as possible to it",
+          "no_skill_invalid": 1,
+          "no_skill_progress": 0.0,
+          "no_skill_steps": 20,
+          "no_skill_success": 0.0,
+          "static_invalid": 0,
+          "static_progress": 0.0,
+          "static_steps": 10,
+          "static_success": 1.0
+        },
+        {
+          "episode_id": "nav_51",
+          "instruction": "navigate to the Laptop in the room and be as close as possible to it",
+          "no_skill_invalid": 0,
+          "no_skill_progress": 0.0,
+          "no_skill_steps": 7,
+          "no_skill_success": 1.0,
+          "static_invalid": 5,
+          "static_progress": 0.0,
+          "static_steps": 20,
+          "static_success": 0.0
+        },
+        {
+          "episode_id": "nav_57",
+          "instruction": "navigate to the Book in the room and be as close as possible to it",
+          "no_skill_invalid": 1,
+          "no_skill_progress": 0.0,
+          "no_skill_steps": 10,
+          "no_skill_success": 1.0,
+          "static_invalid": 10,
+          "static_progress": 0.0,
+          "static_steps": 20,
+          "static_success": 0.0
+        },
+        {
+          "episode_id": "nav_59",
+          "instruction": "navigate to the Bowl in the room and be as close as possible to it",
+          "no_skill_invalid": 4,
+          "no_skill_progress": 0.0,
+          "no_skill_steps": 20,
+          "no_skill_success": 0.0,
+          "static_invalid": 0,
+          "static_progress": 0.0,
+          "static_steps": 11,
+          "static_success": 1.0
+        }
+      ],
+      "paired_episodes": 60,
+      "static_minus_no_skill_progress": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean_delta": 0.0
+      },
+      "static_minus_no_skill_success": {
+        "ci95_high": 0.08333333333333333,
+        "ci95_low": -0.15,
+        "mean_delta": -0.03333333333333333
+      },
+      "static_success_improved_episode_ids": [
+        "nav_11",
+        "nav_13",
+        "nav_18",
+        "nav_42",
+        "nav_49",
+        "nav_59"
+      ],
+      "static_success_regressed_episode_ids": [
+        "nav_2",
+        "nav_20",
+        "nav_29",
+        "nav_33",
+        "nav_37",
+        "nav_48",
+        "nav_51",
+        "nav_57"
+      ],
+      "success_ties": 46
+    },
+    "static_distance_dynamics": {
+      "episodes_with_plan_at_least_3_actions": 60,
+      "mean_final_distance": 1.444043741951298,
+      "mean_max_open_loop_plan_actions": 5.016666666666667,
+      "mean_minimum_distance": 1.267361756643541,
+      "mean_stagnant_steps": 4.483333333333333,
+      "mean_worsening_steps": 1.7833333333333334,
+      "overshot_near_threshold_episode_ids": [
+        "nav_2",
+        "nav_37"
+      ]
+    },
+    "static_shared_skill": {
+      "adjacent_repetition_ratio": 0.5202380952380953,
+      "episodes": 60,
+      "invalid_action_ratio": 0.22555555555555556,
+      "mean_environment_steps": 15.0,
+      "mean_planner_steps": 6.683333333333334,
+      "mean_steps_when_successful": 11.666666666666666,
+      "mean_task_progress": 0.0,
+      "mean_task_success": 0.6,
+      "repeated_two_action_cycle_ratio": 0.3875
+    }
+  },
+  "source_split": "official_test/base",
+  "source_trajectory_contamination": true,
+  "sources": {
+    "hab_no": {
+      "path": "running/Phase1/pilot/eval/no_skill.jsonl",
+      "sha256": "4a61c0cff9e677b9bb88e5991b7a5d0080562d0f53f03885f367e6bbdd192095"
+    },
+    "hab_static": {
+      "path": "running/Phase1/pilot/eval/static_shared_skill.jsonl",
+      "sha256": "b2b7f534abb91f1bd4b94fe16cf0bdfd41b18cbb3a3f7f591b3c7528c8ef22db"
+    },
+    "nav_no": {
+      "path": "running/Phase1/vista_skill/nav_official/base/no_skill/events.jsonl",
+      "sha256": "4ac7cee236803cf0b26879ae10b81002b640e56bf69fb90d13d7d73f8dc9076b"
+    },
+    "nav_no_raw": {
+      "path": "running/Phase4/simulator/running/eb_nav/vista_skill/evaluate/evaluate_5c1d770e3c274ddc8671b9a32e2426cb/official_test/base/s0/no_skill",
+      "sha256": null
+    },
+    "nav_static": {
+      "path": "running/Phase1/vista_skill/nav_official/base/static_shared_skill/events.jsonl",
+      "sha256": "a5be6463160d493306a7d1a7abbb20919018b1315fbce57164719c79841eaecb"
+    },
+    "nav_static_raw": {
+      "path": "running/Phase1/simulator/running/eb_nav/vista_skill/evaluate/evaluate_7d147751609a4bd79c79d0230c7e043e/official_test/base/s0/57086f2f1f66",
+      "sha256": null
+    }
+  }
+}

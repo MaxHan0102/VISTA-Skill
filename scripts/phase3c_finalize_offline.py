@@ -11,7 +11,7 @@ from vista_skill.meta_skills import frozen_meta_skills
 
 def _args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--root", type=Path, default=Path("running/phase3c/offline"))
+    parser.add_argument("--root", type=Path, default=Path("running/Phase3/phase3c/offline"))
     parser.add_argument("--output", type=Path, required=True)
     return parser.parse_args()
 
@@ -45,7 +45,7 @@ def main() -> int:
     root = args.root
     bundle = frozen_meta_skills()
     synthetic_meta = _read(root / "synthetic_meta.json")
-    synthetic_current = _read(Path("running/phase2_teacher_attribution_173_20260824.json"))
+    synthetic_current = _read(Path("running/Phase2/phase2_teacher_attribution_173_20260824.json"))
     synthetic = {
         "current_target_macro_f1": synthetic_current["target_macro_f1"]["mean"],
         "meta_target_macro_f1": synthetic_meta["target_macro_f1"]["mean"],
@@ -67,14 +67,14 @@ def main() -> int:
 
     current_paths = {
         "constraint_pick_multihold": [
-            Path("running/phase2_natural_attribution_weak_audit_173_20260824.json"),
+            Path("running/Phase2/phase2_natural_attribution_weak_audit_173_20260824.json"),
             *[
-                Path(f"running/phase2_natural_attribution_weak_audit_seed{seed}_173_20260824.json")
+                Path(f"running/Phase2/phase2_natural_attribution_weak_audit_seed{seed}_173_20260824.json")
                 for seed in range(1, 5)
             ],
         ],
         "effect_pick_inversion": [
-            Path(f"running/phase2_effect_natural_attribution_audit_seed{seed}_173_20260824.json")
+            Path(f"running/Phase2/phase2_effect_natural_attribution_audit_seed{seed}_173_20260824.json")
             for seed in range(5)
         ],
     }

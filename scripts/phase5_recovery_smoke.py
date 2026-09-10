@@ -43,7 +43,7 @@ def main():
     args = parser.parse_args()
     output = Path(args.output_dir).resolve()
     output.mkdir(parents=True, exist_ok=True)
-    dataset = REPO / "running/phase5_p57_recovery_20260907/development.pickle"
+    dataset = REPO / "running/Phase5/phase5_p57_recovery_20260907/development.pickle"
     os.chdir(REPO / "EmbodiedBench")
     results = {}
     for release in ("action_or_evidence", "target_evidence"):

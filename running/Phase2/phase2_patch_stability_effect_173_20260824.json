@@ -1,0 +1,199 @@
+{
+  "base_url": "http://192.168.1.173:8001/v1",
+  "fault": "effect_pick_inversion",
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "passed": 10,
+  "total": 10,
+  "trials": [
+    {
+      "candidate_sha256": "3676fbb4d35675adee5473a497b79c919bd533ef5ee1e277c13c7c3de02d645d",
+      "new": "Picking up an object results in holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "b7d9753d643525fcb512",
+      "seed": 0,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 285,
+          "prompt_tokens": 432
+        }
+      }
+    },
+    {
+      "candidate_sha256": "3676fbb4d35675adee5473a497b79c919bd533ef5ee1e277c13c7c3de02d645d",
+      "new": "Picking up an object results in holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "b7d9753d643525fcb512",
+      "seed": 1,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 283,
+          "prompt_tokens": 432
+        }
+      }
+    },
+    {
+      "candidate_sha256": "3676fbb4d35675adee5473a497b79c919bd533ef5ee1e277c13c7c3de02d645d",
+      "new": "Picking up an object results in holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "b7d9753d643525fcb512",
+      "seed": 2,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 283,
+          "prompt_tokens": 432
+        }
+      }
+    },
+    {
+      "candidate_sha256": "3676fbb4d35675adee5473a497b79c919bd533ef5ee1e277c13c7c3de02d645d",
+      "new": "Picking up an object results in holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "b7d9753d643525fcb512",
+      "seed": 3,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 283,
+          "prompt_tokens": 432
+        }
+      }
+    },
+    {
+      "candidate_sha256": "3676fbb4d35675adee5473a497b79c919bd533ef5ee1e277c13c7c3de02d645d",
+      "new": "Picking up an object results in holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "b7d9753d643525fcb512",
+      "seed": 4,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 283,
+          "prompt_tokens": 432
+        }
+      }
+    },
+    {
+      "candidate_sha256": "3676fbb4d35675adee5473a497b79c919bd533ef5ee1e277c13c7c3de02d645d",
+      "new": "Picking up an object results in holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "b7d9753d643525fcb512",
+      "seed": 5,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 283,
+          "prompt_tokens": 432
+        }
+      }
+    },
+    {
+      "candidate_sha256": "3676fbb4d35675adee5473a497b79c919bd533ef5ee1e277c13c7c3de02d645d",
+      "new": "Picking up an object results in holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "b7d9753d643525fcb512",
+      "seed": 6,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 283,
+          "prompt_tokens": 432
+        }
+      }
+    },
+    {
+      "candidate_sha256": "3676fbb4d35675adee5473a497b79c919bd533ef5ee1e277c13c7c3de02d645d",
+      "new": "Picking up an object results in holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "b7d9753d643525fcb512",
+      "seed": 7,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 283,
+          "prompt_tokens": 432
+        }
+      }
+    },
+    {
+      "candidate_sha256": "3676fbb4d35675adee5473a497b79c919bd533ef5ee1e277c13c7c3de02d645d",
+      "new": "Picking up an object results in holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "b7d9753d643525fcb512",
+      "seed": 8,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 283,
+          "prompt_tokens": 432
+        }
+      }
+    },
+    {
+      "candidate_sha256": "3676fbb4d35675adee5473a497b79c919bd533ef5ee1e277c13c7c3de02d645d",
+      "new": "Picking up an object results in holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "b7d9753d643525fcb512",
+      "seed": 9,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 283,
+          "prompt_tokens": 432
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "analysis_type": "phase3a_state_oracle_feasibility",
+  "coordinate_linkage_complete": true,
+  "labelled_events": "running/Phase3/phase3a/p3a0_oracle_final_20260824_run/seed_0/acquisition.jsonl",
+  "mapping": {
+    "action:close": {
+      "coverage": 1.0,
+      "mapped": 8,
+      "total": 8,
+      "values": {
+        "true": 8
+      }
+    },
+    "action:nav": {
+      "coverage": 1.0,
+      "mapped": 261,
+      "total": 261,
+      "values": {
+        "false": 180,
+        "true": 81
+      }
+    },
+    "action:pick": {
+      "coverage": 1.0,
+      "mapped": 300,
+      "total": 300,
+      "values": {
+        "false": 196,
+        "true": 104
+      }
+    },
+    "action:place": {
+      "coverage": 1.0,
+      "mapped": 55,
+      "total": 55,
+      "values": {
+        "false": 18,
+        "true": 37
+      }
+    },
+    "all_post": {
+      "coverage": 1.0,
+      "mapped": 624,
+      "total": 624,
+      "values": {
+        "false": 394,
+        "true": 230
+      }
+    },
+    "predicate:at": {
+      "coverage": 1.0,
+      "mapped": 7,
+      "total": 7,
+      "values": {
+        "true": 7
+      }
+    },
+    "predicate:holding": {
+      "coverage": 1.0,
+      "mapped": 81,
+      "total": 81,
+      "values": {
+        "false": 61,
+        "true": 20
+      }
+    },
+    "predicate:near": {
+      "coverage": 1.0,
+      "mapped": 365,
+      "total": 365,
+      "values": {
+        "false": 231,
+        "true": 134
+      }
+    },
+    "predicate:not_holding": {
+      "coverage": 1.0,
+      "mapped": 65,
+      "total": 65,
+      "values": {
+        "false": 6,
+        "true": 59
+      }
+    },
+    "predicate:open": {
+      "coverage": 1.0,
+      "mapped": 4,
+      "total": 4,
+      "values": {
+        "true": 4
+      }
+    },
+    "predicate:task_complete": {
+      "coverage": 1.0,
+      "mapped": 102,
+      "total": 102,
+      "values": {
+        "false": 96,
+        "true": 6
+      }
+    }
+  },
+  "oracle_absent_from_transition_payloads": true,
+  "oracle_label_count": 102,
+  "reference_events": null,
+  "rollout_non_interference": null,
+  "transition_count": 102
+}

@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "files": [
+    {
+      "source": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/long_horizon/images/episode_19/episode_19_step_0.png",
+      "destination": "/root/max/VISTA-Skill/running/closed_feedback/gpt-5.4-mini_eb-hab_v2_full/_interrupted/run_202609090917/long_horizon/images/episode_19/episode_19_step_0.png",
+      "sha256": "84408ee134a6e1f4bbc620eb89ee77b5eb8cb031dcfeea59d25e889817c053ab"
+    }
+  ]
+}

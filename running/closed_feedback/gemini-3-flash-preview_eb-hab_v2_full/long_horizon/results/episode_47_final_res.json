@@ -1,0 +1,1 @@
+{"reward": 0.0, "num_invalid_actions": 2, "empty_plan": 1, "instruction": "Shift all the strawberry over to sink.", "task_success": 0, "task_progress": 0, "subgoal_reward": 0, "num_steps": 4, "planner_steps": 2, "planner_output_error": 0, "num_invalid_action_ratio": 0.5, "episode_elapsed_seconds": 7.309330224990845}

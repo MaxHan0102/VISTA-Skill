@@ -1,0 +1,60 @@
+{
+  "artifact_sha256": "3beaead2e334afaa7f586b767cca2b21a330538b3325574931449e2991174ac8",
+  "protocol": {
+    "acquisition_episode_budget": 20,
+    "config_sha256": "693a07648db0f606eff156eb1acb5caacc966016eb806910b53f7eeb6e534c02",
+    "diagnostic": true,
+    "env": "eb-hab",
+    "evolution_seed": 0,
+    "evolution_seeds": [
+      0
+    ],
+    "executor_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "executor_model_type": "remote",
+    "executor_temperature": 0.0,
+    "frozen": true,
+    "gate_rollout_seeds": [
+      0,
+      1,
+      2
+    ],
+    "initial_skill": "minimal",
+    "manifest_sha256": "7f283eff39e85b4eb29a896da134bcaa736175823aaa04448cc3775e566b6c4c",
+    "max_completion_tokens": 4096,
+    "method": "vista_without_vtca",
+    "method_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "n_shots": 10,
+    "protocol": "vista_skill_fault_repair_mind1_2026_08_20",
+    "resolution": 500,
+    "rng_seed_policy": "python+numpy+torch+habitat+openai_request",
+    "run_id": "1db7f088a6cf4fb1b71e1d29bb5359cd_seed_0",
+    "skill_fault": null,
+    "split_rotation_index": 0,
+    "split_sha256": "a0a76a7e727f8fcffb9f9dcbe8642083bed657dde37d36aaabc9b352176973d2",
+    "tensor_parallel": 1
+  },
+  "schema_version": "2",
+  "skill": {
+    "activation": [
+      "Use for embodied tasks that require step-wise execution."
+    ],
+    "constraint": [],
+    "effect": [],
+    "frozen": true,
+    "metadata": {
+      "initialization": "minimal"
+    },
+    "parent_version": null,
+    "prediction_rules": [],
+    "procedure": [
+      "Execute the instructed primitive action and observe its result."
+    ],
+    "skill_id": "shared_embodied_execution",
+    "termination": [
+      "Stop when the instructed goal is reached."
+    ],
+    "termination_policy": "all_goals_evidence",
+    "version": 0
+  },
+  "skill_sha256": "fb14a11a29a5fd4f36828c7697609e34525c5f6486f6ab5a0f9894d0d4ef9693"
+}

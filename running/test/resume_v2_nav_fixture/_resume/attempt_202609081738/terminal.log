@@ -1,0 +1,16 @@
+Output directory: /root/max/VISTA-Skill/running/test/resume_v2_nav_fixture/_resume/attempt_202609081738
+[2026-09-08 17:38:26,570][INFO] - Current eval set: base
+Episodes:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-08 17:38:27,820][INFO] - Evaluating episode 0 ...
+INFO:EB_logger:Evaluating episode 0 ...
+[2026-09-08 17:38:27,820][INFO] - Restoring scene FloorPlan12...
+INFO:EB_logger:Restoring scene FloorPlan12...
+Instruction: navigate to the Pot in the room and be as close as possible to it
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Episodes: 100%|██████████| 1/1 [00:00<00:00,  3.10it/s]Episodes: 100%|██████████| 1/1 [00:00<00:00,  3.09it/s]
+['/root/max/VISTA-Skill/running/test/resume_v2_nav_fixture/_resume/attempt_202609081738/base/results/episode_2_final_res.json'] 1
+resume_v2_nav_fixture/_resume/attempt_202609081738/base/results/episode_2_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Pot in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 2, 'planner_steps': 1, 'planner_output_error': 0, 'episode_elapsed_seconds': 0.13416600227355957}
+final results: 
+{'reward': 0.0, 'task_success': 0.0, 'num_steps': 2.0, 'planner_steps': 1.0, 'planner_output_error': 0.0, 'episode_elapsed_seconds': 0.13416600227355957}

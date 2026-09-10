@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "protocol": "stock_feedback_v2",
+  "dataset_hashes": {
+    "base": "1e338a8729b89fa8101d1834d25c5a00c95f31296d93253e469679fe83c71c23"
+  },
+  "records": {
+    "base/1": {
+      "path": "/root/max/VISTA-Skill/running/test/Qwen3-VL-8B-Instruct_eb-hab_feedback_pilot/base/results/episode_1_final_res.json",
+      "sha256": "ebf8b287cf72e515867ee71a18976c569d94e521b2812e1f7e8a7b3ede135240",
+      "episode_id": "39",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/test/Qwen3-VL-8B-Instruct_eb-hab_feedback_pilot/_sessions/run_202609100954"
+    },
+    "base/2": {
+      "path": "/root/max/VISTA-Skill/running/test/Qwen3-VL-8B-Instruct_eb-hab_feedback_pilot/base/results/episode_2_final_res.json",
+      "sha256": "4d6b4c0abde20781fc04ec91f6bfa0f3cb3d13962bfe367adaf236873fbe5137",
+      "episode_id": "3",
+      "schema_compatibility": "closed_objects_v1",
+      "source_run": "/root/max/VISTA-Skill/running/test/Qwen3-VL-8B-Instruct_eb-hab_feedback_pilot/_sessions/run_202609100954"
+    }
+  },
+  "identities": {
+    "base": {
+      "1": "39",
+      "2": "3"
+    }
+  },
+  "partial_results": []
+}

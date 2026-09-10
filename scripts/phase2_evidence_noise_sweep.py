@@ -48,7 +48,7 @@ class _FixedProvider:
 def _args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--output", type=Path, default=Path("running/phase2_evidence_noise.json")
+        "--output", type=Path, default=Path("running/Phase2/phase2_evidence_noise.json")
     )
     parser.add_argument("--requests", type=int, default=300)
     parser.add_argument("--replicates", type=int, default=20)

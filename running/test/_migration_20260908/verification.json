@@ -1,0 +1,12 @@
+{
+  "status": "verified",
+  "moved_directories": 6,
+  "test_files": 114,
+  "rewritten_test_files": 18,
+  "updated_documents": 3,
+  "hash_dependency_rounds": 2,
+  "all_file_hashes_verified": true,
+  "all_summaries_unchanged": true,
+  "symlinks_created": 0,
+  "closed_feedback_excluded": true
+}

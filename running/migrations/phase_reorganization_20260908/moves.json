@@ -1,0 +1,1698 @@
+[
+  {
+    "source": "running/fault_repair",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/fault_repair"
+  },
+  {
+    "source": "running/fault_repair_e8_termination_fragmented",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/fault_repair_e8_termination_fragmented"
+  },
+  {
+    "source": "running/fault_repair_e8b_casebug",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/fault_repair_e8b_casebug"
+  },
+  {
+    "source": "running/fault_repair_e8c_falsepos",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/fault_repair_e8c_falsepos"
+  },
+  {
+    "source": "running/fault_repair_e8d_mind2",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/fault_repair_e8d_mind2"
+  },
+  {
+    "source": "running/fault_repair_e8e_echo",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/fault_repair_e8e_echo"
+  },
+  {
+    "source": "running/fault_repair_e8f_echo2",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/fault_repair_e8f_echo2"
+  },
+  {
+    "source": "running/fault_repair_e8g_termination",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/fault_repair_e8g_termination"
+  },
+  {
+    "source": "running/fault_repair_e8h_lapsemask",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/fault_repair_e8h_lapsemask"
+  },
+  {
+    "source": "running/fault_repair_e8i_parityecho",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/fault_repair_e8i_parityecho"
+  },
+  {
+    "source": "running/fault_repair_e8j_ruleecho",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/fault_repair_e8j_ruleecho"
+  },
+  {
+    "source": "running/fault_repair_e8k_duprules",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/fault_repair_e8k_duprules"
+  },
+  {
+    "source": "running/fault_repair_e8l_p2power",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/fault_repair_e8l_p2power"
+  },
+  {
+    "source": "running/fault_repair_e8o_f4task",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/fault_repair_e8o_f4task"
+  },
+  {
+    "source": "running/fault_repair_e8p_constraint",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/fault_repair_e8p_constraint"
+  },
+  {
+    "source": "running/fault_repair_pick",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/fault_repair_pick"
+  },
+  {
+    "source": "running/phase2_e8p_natural_attribution_partition_audit_seed1_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_e8p_natural_attribution_partition_audit_seed1_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_e8p_natural_attribution_weak_audit_seed0_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_e8p_natural_attribution_weak_audit_seed0_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_effect_natural_attribution_audit_seed0_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_effect_natural_attribution_audit_seed0_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_effect_natural_attribution_audit_seed1_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_effect_natural_attribution_audit_seed1_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_effect_natural_attribution_audit_seed2_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_effect_natural_attribution_audit_seed2_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_effect_natural_attribution_audit_seed3_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_effect_natural_attribution_audit_seed3_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_effect_natural_attribution_audit_seed4_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_effect_natural_attribution_audit_seed4_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_effect_natural_evidence_weak_audit_seed0_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_effect_natural_evidence_weak_audit_seed0_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_effect_natural_evidence_weak_audit_seed1_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_effect_natural_evidence_weak_audit_seed1_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_effect_natural_evidence_weak_audit_seed2_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_effect_natural_evidence_weak_audit_seed2_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_effect_natural_trajectory_attribution_5seeds_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_effect_natural_trajectory_attribution_5seeds_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_effect_pick_inversion",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_effect_pick_inversion"
+  },
+  {
+    "source": "running/phase2_effect_pick_inversion_gate_reanalysis_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_effect_pick_inversion_gate_reanalysis_20260824.json"
+  },
+  {
+    "source": "running/phase2_evidence_noise_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_evidence_noise_20260824.json"
+  },
+  {
+    "source": "running/phase2_gate_reanalysis_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_gate_reanalysis_20260824.json"
+  },
+  {
+    "source": "running/phase2_multihold_natural_evidence_three_arm_seed0_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_multihold_natural_evidence_three_arm_seed0_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_multihold_provenance_fix",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_multihold_provenance_fix"
+  },
+  {
+    "source": "running/phase2_multihold_provenance_fix_reanalysis_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_multihold_provenance_fix_reanalysis_20260824.json"
+  },
+  {
+    "source": "running/phase2_multihold_provenance_fix_reanalysis_corrected_v2_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_multihold_provenance_fix_reanalysis_corrected_v2_20260824.json"
+  },
+  {
+    "source": "running/phase2_natural_attribution_partition_audit_seed0_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_natural_attribution_partition_audit_seed0_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_natural_attribution_partition_refined_audit_seed1_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_natural_attribution_partition_refined_audit_seed1_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_natural_attribution_weak_audit_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_natural_attribution_weak_audit_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_natural_attribution_weak_audit_seed1_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_natural_attribution_weak_audit_seed1_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_natural_attribution_weak_audit_seed2_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_natural_attribution_weak_audit_seed2_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_natural_attribution_weak_audit_seed3_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_natural_attribution_weak_audit_seed3_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_natural_attribution_weak_audit_seed4_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_natural_attribution_weak_audit_seed4_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_natural_evidence_three_arm_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_natural_evidence_three_arm_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_natural_evidence_three_arm_seed1_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_natural_evidence_three_arm_seed1_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_natural_evidence_three_arm_seed1_retry_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_natural_evidence_three_arm_seed1_retry_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_natural_evidence_three_arm_seed2_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_natural_evidence_three_arm_seed2_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_natural_evidence_weak_audit_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_natural_evidence_weak_audit_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_natural_trajectory_attribution_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_natural_trajectory_attribution_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_natural_trajectory_attribution_5seeds_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_natural_trajectory_attribution_5seeds_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_patch_stability_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_patch_stability_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_patch_stability_effect_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_patch_stability_effect_173_20260824.json"
+  },
+  {
+    "source": "running/phase2_teacher_attribution_173_20260824.json",
+    "phase": 2,
+    "evidence": "docs/experiment_log_phase2.md; campaign name and artifact contents",
+    "destination": "running/Phase2/phase2_teacher_attribution_173_20260824.json"
+  },
+  {
+    "source": "running/phase3a",
+    "phase": 3,
+    "evidence": "docs/experiment_log_phase3.md; campaign name and artifact contents",
+    "destination": "running/Phase3/phase3a"
+  },
+  {
+    "source": "running/phase3b",
+    "phase": 3,
+    "evidence": "docs/experiment_log_phase3.md; campaign name and artifact contents",
+    "destination": "running/Phase3/phase3b"
+  },
+  {
+    "source": "running/phase3c",
+    "phase": 3,
+    "evidence": "docs/experiment_log_phase3.md; campaign name and artifact contents",
+    "destination": "running/Phase3/phase3c"
+  },
+  {
+    "source": "running/phase5_constraint_discovery_smoke_20260902",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; campaign name and artifact contents",
+    "destination": "running/Phase5/phase5_constraint_discovery_smoke_20260902"
+  },
+  {
+    "source": "running/phase5_constraint_paired_pilot_20260902",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; campaign name and artifact contents",
+    "destination": "running/Phase5/phase5_constraint_paired_pilot_20260902"
+  },
+  {
+    "source": "running/phase5_constraint_paired_pilot_v2_20260902",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; campaign name and artifact contents",
+    "destination": "running/Phase5/phase5_constraint_paired_pilot_v2_20260902"
+  },
+  {
+    "source": "running/phase5_constraint_paired_pilot_v3_usage_20260902",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; campaign name and artifact contents",
+    "destination": "running/Phase5/phase5_constraint_paired_pilot_v3_usage_20260902"
+  },
+  {
+    "source": "running/phase5_discovery_guarded_smoke_20260902",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; campaign name and artifact contents",
+    "destination": "running/Phase5/phase5_discovery_guarded_smoke_20260902"
+  },
+  {
+    "source": "running/phase5_discovery_recurrence_smoke_20260902",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; campaign name and artifact contents",
+    "destination": "running/Phase5/phase5_discovery_recurrence_smoke_20260902"
+  },
+  {
+    "source": "running/phase5_discovery_recurrence_v2_20260902",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; campaign name and artifact contents",
+    "destination": "running/Phase5/phase5_discovery_recurrence_v2_20260902"
+  },
+  {
+    "source": "running/phase5_discovery_recurrence_v3_20260902",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; campaign name and artifact contents",
+    "destination": "running/Phase5/phase5_discovery_recurrence_v3_20260902"
+  },
+  {
+    "source": "running/phase5_discovery_smoke_20260902",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; campaign name and artifact contents",
+    "destination": "running/Phase5/phase5_discovery_smoke_20260902"
+  },
+  {
+    "source": "running/phase5_discovery_sparse_visual_smoke_20260902",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; campaign name and artifact contents",
+    "destination": "running/Phase5/phase5_discovery_sparse_visual_smoke_20260902"
+  },
+  {
+    "source": "running/phase5_p56_shadow_confirmation_paired3_20260903",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; campaign name and artifact contents",
+    "destination": "running/Phase5/phase5_p56_shadow_confirmation_paired3_20260903"
+  },
+  {
+    "source": "running/phase5_p56_shadow_replay_e6_20260903",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; campaign name and artifact contents",
+    "destination": "running/Phase5/phase5_p56_shadow_replay_e6_20260903"
+  },
+  {
+    "source": "running/phase5_p56_variance_audit_paired3_20260903",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; campaign name and artifact contents",
+    "destination": "running/Phase5/phase5_p56_variance_audit_paired3_20260903"
+  },
+  {
+    "source": "running/phase5_p56_variance_audit_paired5_20260903",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; campaign name and artifact contents",
+    "destination": "running/Phase5/phase5_p56_variance_audit_paired5_20260903"
+  },
+  {
+    "source": "running/phase5_p57_recovery_20260907",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; campaign name and artifact contents",
+    "destination": "running/Phase5/phase5_p57_recovery_20260907"
+  },
+  {
+    "source": "running/phase5_p57_recovery_unknown_recheck_20260907",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; campaign name and artifact contents",
+    "destination": "running/Phase5/phase5_p57_recovery_unknown_recheck_20260907"
+  },
+  {
+    "source": "running/phase5_temporal_sequential_paired_e6_20260903_rerun1",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; campaign name and artifact contents",
+    "destination": "running/Phase5/phase5_temporal_sequential_paired_e6_20260903_rerun1"
+  },
+  {
+    "source": "running/pilot",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/pilot"
+  },
+  {
+    "source": "running/t4_4b_pilot",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/t4_4b_pilot"
+  },
+  {
+    "source": "running/t4_4b_smoke",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/t4_4b_smoke"
+  },
+  {
+    "source": "running/t4c_minimal",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/t4c_minimal"
+  },
+  {
+    "source": "running/target_skill_oracle_v1",
+    "phase": 4,
+    "evidence": "docs/experiment_log_phase4.md; campaign name and artifact contents",
+    "destination": "running/Phase4/target_skill_oracle_v1"
+  },
+  {
+    "source": "running/vista_skill",
+    "phase": 1,
+    "evidence": "docs/experiment_log_phase1.md; campaign name and artifact contents",
+    "destination": "running/Phase1/vista_skill"
+  },
+  {
+    "source": "EmbodiedBench/running/eb_habitat/p57_generated_smoke",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; E11 / P5.6 image namespace",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/EmbodiedBench/running/eb_habitat/p57_generated_smoke"
+  },
+  {
+    "source": "EmbodiedBench/running/eb_habitat/p57_scripted_smoke",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; E11 / P5.6 image namespace",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/EmbodiedBench/running/eb_habitat/p57_scripted_smoke"
+  },
+  {
+    "source": "EmbodiedBench/running/eb_habitat/phase5_p57_target_evidence_recovery_20260907_v1",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; E11 / P5.6 image namespace",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/EmbodiedBench/running/eb_habitat/phase5_p57_target_evidence_recovery_20260907_v1"
+  },
+  {
+    "source": "EmbodiedBench/running/eb_habitat/phase5_p57_unknown_evidence_recheck_v2",
+    "phase": 5,
+    "evidence": "docs/experiment_log_phase5.md; E11 / P5.6 image namespace",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/EmbodiedBench/running/eb_habitat/phase5_p57_unknown_evidence_recheck_v2"
+  },
+  {
+    "source": "running/eb_habitat/phase3b_C0_current_562577bce7de49e3882b5354d70a7f3f",
+    "phase": 3,
+    "evidence": "docs/experiment_log_phase3.md; named Phase3 image namespace",
+    "referenced_by_phases": [
+      3
+    ],
+    "destination": "running/Phase3/simulator/running/eb_habitat/phase3b_C0_current_562577bce7de49e3882b5354d70a7f3f"
+  },
+  {
+    "source": "running/eb_habitat/phase3b_C1_no_feedback_5de3b8b68e0543999bf3e3d035564665",
+    "phase": 3,
+    "evidence": "docs/experiment_log_phase3.md; named Phase3 image namespace",
+    "referenced_by_phases": [
+      3
+    ],
+    "destination": "running/Phase3/simulator/running/eb_habitat/phase3b_C1_no_feedback_5de3b8b68e0543999bf3e3d035564665"
+  },
+  {
+    "source": "running/eb_habitat/phase3b_C2_temporal_no_feedback_06c35ddedaca407283f1a42cbf46b30e",
+    "phase": 3,
+    "evidence": "docs/experiment_log_phase3.md; named Phase3 image namespace",
+    "referenced_by_phases": [
+      3
+    ],
+    "destination": "running/Phase3/simulator/running/eb_habitat/phase3b_C2_temporal_no_feedback_06c35ddedaca407283f1a42cbf46b30e"
+  },
+  {
+    "source": "running/eb_habitat/phase3b_C3_temporal_feedback_f744bc1e62234767a3237d6f4a0ad785",
+    "phase": 3,
+    "evidence": "docs/experiment_log_phase3.md; named Phase3 image namespace",
+    "referenced_by_phases": [
+      3
+    ],
+    "destination": "running/Phase3/simulator/running/eb_habitat/phase3b_C3_temporal_feedback_f744bc1e62234767a3237d6f4a0ad785"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/11dca658d7ea48d18118578a403befa1_seed_0",
+    "phase": 2,
+    "evidence": "experiment_id: running/phase2_effect_pick_inversion/embodiskill_star_common_gate/experiment_manifest.json",
+    "referenced_by_phases": [
+      2
+    ],
+    "destination": "running/Phase2/simulator/running/eb_habitat/vista_skill/11dca658d7ea48d18118578a403befa1_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/14aa72ef4048459daca38d199c3a2245_seed_0",
+    "phase": 5,
+    "evidence": "path reference: running/phase5_discovery_recurrence_smoke_20260902/seed_0/acquisition.jsonl",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/14aa72ef4048459daca38d199c3a2245_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/14c457e016e94554bf5a1196eec3f553_seed_0",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8l_p2power/full/seed_0/acquisition.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/14c457e016e94554bf5a1196eec3f553_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/178be101e5bb47b2bc09715347ff4a4b_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair_pick/vista_without_vtca/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/178be101e5bb47b2bc09715347ff4a4b_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/1a2d53f9d6cc49dab290ff92f67d4fbd_seed_0",
+    "phase": 3,
+    "evidence": "experiment_id: running/phase3a/p3a0_no_oracle_reference_20260824_run/experiment_manifest.json",
+    "referenced_by_phases": [
+      3
+    ],
+    "destination": "running/Phase3/simulator/running/eb_habitat/vista_skill/1a2d53f9d6cc49dab290ff92f67d4fbd_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/1a30451555cb4202b28ff5005cf8fb63_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/t4c_minimal/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/1a30451555cb4202b28ff5005cf8fb63_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/1db75fb0861b443882850488b431e4de_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/pilot/embodiskill_star_native/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/1db75fb0861b443882850488b431e4de_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/1db7f088a6cf4fb1b71e1d29bb5359cd_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/t4c_minimal/vista_without_vtca/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/1db7f088a6cf4fb1b71e1d29bb5359cd_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/1e1f65ac58b54924b5d136e619087318_seed_0",
+    "phase": 5,
+    "evidence": "experiment_id: running/phase5_discovery_recurrence_v3_20260902/experiment_manifest.json",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/1e1f65ac58b54924b5d136e619087318_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/21d16345375c4e6db6837e0e41f2bcc3_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair_e8g_termination/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/21d16345375c4e6db6837e0e41f2bcc3_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/23fa267c25b840aab59f777a1f3a0751_seed_0",
+    "phase": 3,
+    "evidence": "experiment_id: running/phase3a/p3a0_oracle_fixed_20260824_run/experiment_manifest.json",
+    "referenced_by_phases": [
+      3
+    ],
+    "destination": "running/Phase3/simulator/running/eb_habitat/vista_skill/23fa267c25b840aab59f777a1f3a0751_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/25b7a30ce26a4f06abf393e1864b15bf_seed_0",
+    "phase": 2,
+    "evidence": "experiment_id: running/phase2_multihold_provenance_fix/embodiskill_star_common_gate/experiment_manifest.json",
+    "referenced_by_phases": [
+      2
+    ],
+    "destination": "running/Phase2/simulator/running/eb_habitat/vista_skill/25b7a30ce26a4f06abf393e1864b15bf_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/2936aa6d692b44a184a3d291fa488adc_seed_0",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8o_f4task/full/seed_0/acquisition.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/2936aa6d692b44a184a3d291fa488adc_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/2a871f43082b4001ba644f5655d1a930_seed_0",
+    "phase": 5,
+    "evidence": "experiment_id: running/phase5_discovery_sparse_visual_smoke_20260902/experiment_manifest.json",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/2a871f43082b4001ba644f5655d1a930_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/2cc583de568d40308af2c33c59292876_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair_e8k_duprules/vista_without_vtca/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/2cc583de568d40308af2c33c59292876_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/388ef95328ab4b8a9d0e35061af8b03a_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/pilot/vista_without_vtca/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/388ef95328ab4b8a9d0e35061af8b03a_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/3f9fa927a09b4a53b1bd29b4e7eae39c_seed_0",
+    "phase": 3,
+    "evidence": "experiment_id: running/phase3a/p3a0_oracle_final_20260824_run/experiment_manifest.json",
+    "referenced_by_phases": [
+      3
+    ],
+    "destination": "running/Phase3/simulator/running/eb_habitat/vista_skill/3f9fa927a09b4a53b1bd29b4e7eae39c_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/479f314dcccd4569abb8aaeef6a9fa19_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair_e8_termination_fragmented/vista_without_vtca/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/479f314dcccd4569abb8aaeef6a9fa19_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/4cb820251d764353ac8603a7f9f9655c_seed_0",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8h_lapsemask/full/seed_0/acquisition.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/4cb820251d764353ac8603a7f9f9655c_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/56930ccd96934891b00df6afa7ced44a_seed_0",
+    "phase": 5,
+    "evidence": "experiment_id: running/phase5_constraint_paired_pilot_v2_20260902/experiment_manifest.json",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/56930ccd96934891b00df6afa7ced44a_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/6983a01634784c528a7ea400aee0483c_seed_0",
+    "phase": 5,
+    "evidence": "experiment_id: running/phase5_discovery_smoke_20260902/experiment_manifest.json",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/6983a01634784c528a7ea400aee0483c_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/6fe877eb0d8a467f88308114afec48e8_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/t4_4b_pilot/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/6fe877eb0d8a467f88308114afec48e8_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/71f17888e8bc4f768c9e052bbf477fc8_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair_pick/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/71f17888e8bc4f768c9e052bbf477fc8_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/7d09ee85e56640a6abdcf34a0dd4bfa4_seed_0",
+    "phase": 2,
+    "evidence": "experiment_id: running/phase2_multihold_provenance_fix/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      2
+    ],
+    "destination": "running/Phase2/simulator/running/eb_habitat/vista_skill/7d09ee85e56640a6abdcf34a0dd4bfa4_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/853e27cceb494bd086d74f38d0831f98_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/pilot/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/853e27cceb494bd086d74f38d0831f98_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/8692f160ff904c8dbd10bcf14128f4c3_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/8692f160ff904c8dbd10bcf14128f4c3_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/8a3c4ca0d7984bcd9c0cfba9fec95056_seed_0",
+    "phase": 3,
+    "evidence": "experiment_id: running/phase3a/p3a1_natural40_cachefix_20260825_run/experiment_manifest.json",
+    "referenced_by_phases": [
+      3
+    ],
+    "destination": "running/Phase3/simulator/running/eb_habitat/vista_skill/8a3c4ca0d7984bcd9c0cfba9fec95056_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/92c7aba1405b4d38ab07fe6c1b34168e_seed_0",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8d_mind2/vista_without_vtca/seed_0/acquisition.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/92c7aba1405b4d38ab07fe6c1b34168e_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/93288bdddced422caaa04f084ef887b8_seed_0",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8b_casebug/full/seed_0/acquisition.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/93288bdddced422caaa04f084ef887b8_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/9354ffe694d4489cac40b3c96fde2676_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair_e8d_mind2/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/9354ffe694d4489cac40b3c96fde2676_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/965911827cc54231bc9ce726ac443e25_seed_0",
+    "phase": 5,
+    "evidence": "experiment_id: running/phase5_constraint_paired_pilot_v3_usage_20260902/experiment_manifest.json",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/965911827cc54231bc9ce726ac443e25_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/98339a1e96e34ccf936d56957b2f9b5e_seed_0",
+    "phase": 3,
+    "evidence": "experiment_id: running/phase3a/p3a0_oracle_cachefix_20260825_run/experiment_manifest.json",
+    "referenced_by_phases": [
+      3
+    ],
+    "destination": "running/Phase3/simulator/running/eb_habitat/vista_skill/98339a1e96e34ccf936d56957b2f9b5e_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/99e0478f4617466599fe2cebdb945cd7_seed_0",
+    "phase": 5,
+    "evidence": "path reference: running/phase5_constraint_paired_pilot_20260902/seed_0/acquisition.jsonl",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/99e0478f4617466599fe2cebdb945cd7_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/9cdc03a2437c4223b34ae80b661e6e0b_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair_e8g_termination/vista_without_vtca/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/9cdc03a2437c4223b34ae80b661e6e0b_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/9cdc887e98794c0681c9736a0db71d29_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair_e8_termination_fragmented/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/9cdc887e98794c0681c9736a0db71d29_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/9d8b6ba75fc94b63a6826c7e4cb90ab1_seed_0",
+    "phase": 3,
+    "evidence": "experiment_id: running/phase3a/p3a1_natural40_20260824_run/experiment_manifest.json",
+    "referenced_by_phases": [
+      3
+    ],
+    "destination": "running/Phase3/simulator/running/eb_habitat/vista_skill/9d8b6ba75fc94b63a6826c7e4cb90ab1_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/a6ad0bcef9324be7a0f62080ab463e31_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair_e8p_constraint/vista_without_vtca/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/a6ad0bcef9324be7a0f62080ab463e31_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/a99c4810128a4978a8932b5b6ee0b223_seed_0",
+    "phase": 3,
+    "evidence": "experiment_id: running/phase3a/p3a0_oracle_smoke_run3_20260824_run/experiment_manifest.json",
+    "referenced_by_phases": [
+      3
+    ],
+    "destination": "running/Phase3/simulator/running/eb_habitat/vista_skill/a99c4810128a4978a8932b5b6ee0b223_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/a9dc6c97e23f44fe8c8e2765cf4bcc1a_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair_e8p_constraint/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/a9dc6c97e23f44fe8c8e2765cf4bcc1a_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/b21899795e4842c99a557ee4c1648e60_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair/vista_without_vtca/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/b21899795e4842c99a557ee4c1648e60_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/b7efe82268084a7e9c3bbf43b14d4600_seed_0",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8i_parityecho/full/seed_0/acquisition.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/b7efe82268084a7e9c3bbf43b14d4600_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/b94644a59da145fc9784cbdbad47e47d_seed_0",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8k_duprules/full/seed_0/acquisition.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/b94644a59da145fc9784cbdbad47e47d_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/bb53c9cfc4ba4504aedaa240105cbb50_seed_0",
+    "phase": 5,
+    "evidence": "experiment_id: running/phase5_constraint_discovery_smoke_20260902/experiment_manifest.json",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/bb53c9cfc4ba4504aedaa240105cbb50_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/c18020be18fa460db0cbbc42b7aa936f_seed_0",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8e_echo/full/seed_0/acquisition.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/c18020be18fa460db0cbbc42b7aa936f_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/c184a6483e24424780d0747d1758eee5_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/pilot/embodiskill_star_common_gate/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/c184a6483e24424780d0747d1758eee5_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/c7d2c9e7ec8845be910cf54352b01c6a_seed_0",
+    "phase": 2,
+    "evidence": "experiment_id: running/phase2_effect_pick_inversion/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      2
+    ],
+    "destination": "running/Phase2/simulator/running/eb_habitat/vista_skill/c7d2c9e7ec8845be910cf54352b01c6a_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/cf77b8f827af4010ad5de6c29486a0db_seed_0",
+    "phase": 5,
+    "evidence": "experiment_id: running/phase5_discovery_guarded_smoke_20260902/experiment_manifest.json",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/cf77b8f827af4010ad5de6c29486a0db_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/d1411b43476c424880df778464289e9b_seed_0",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8f_echo2/full/seed_0/acquisition.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/d1411b43476c424880df778464289e9b_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/d77ca2508b7646aeba3553a98665ac03_seed_0",
+    "phase": 5,
+    "evidence": "path reference: running/phase5_discovery_recurrence_v2_20260902/seed_0/acquisition.jsonl",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/d77ca2508b7646aeba3553a98665ac03_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/d7dd0a3b36374e1e8c0d1219c41c9f8f_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/t4_4b_smoke/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/d7dd0a3b36374e1e8c0d1219c41c9f8f_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/e3269dc27bec433488fd41178856486f_seed_0",
+    "phase": 5,
+    "evidence": "experiment_id: running/phase5_temporal_sequential_paired_e6_20260903_rerun1/experiment_manifest.json",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/e3269dc27bec433488fd41178856486f_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/e84d8862ffa049799e0cd29624b5db8c_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair/full_v1_textonly/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/e84d8862ffa049799e0cd29624b5db8c_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/ec58a78e02404913a2d2305d9e27e52e_seed_0",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8c_falsepos/full/seed_0/acquisition.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/ec58a78e02404913a2d2305d9e27e52e_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_00423f326bd84d2daf6e6104d96686b8",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair/eval/arm_b_v2_solo_rerun.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_00423f326bd84d2daf6e6104d96686b8"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_03c5d7f75d0746a28ac0a8fa468a0b0d",
+    "phase": 1,
+    "evidence": "path reference: running/t4c_minimal/eval/arm_a_corrupted_frozen.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_03c5d7f75d0746a28ac0a8fa468a0b0d"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_06dc62c96df64136be5f2370606e0506",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8g_termination/eval/arm_a_corrupted_frozen.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_06dc62c96df64136be5f2370606e0506"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_0d7baf32f9d64de39a646f1c2cf0e893",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair/eval/arm_c_wo_vtca_evolved.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_0d7baf32f9d64de39a646f1c2cf0e893"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_137a2d1d3e8f4cf69d31f00815a0262e",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8_termination_fragmented/eval/arm_a_corrupted_frozen.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_137a2d1d3e8f4cf69d31f00815a0262e"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_4273fc13e57740128f83a8aa3e726367",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair/eval/arm_a_corrupted_frozen.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_4273fc13e57740128f83a8aa3e726367"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_45016803d2964c3fb9fb8d23712a6466",
+    "phase": 1,
+    "evidence": "path reference: running/pilot/eval/embodiskill_star_native.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_45016803d2964c3fb9fb8d23712a6466"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_516e0c695b504b2eb52065a8d01c61ee",
+    "phase": 4,
+    "evidence": "path reference: running/target_skill_oracle_v1/validation_common_sense_seed0/eb_hab/common_sense/target_skill/events.jsonl",
+    "referenced_by_phases": [
+      4
+    ],
+    "destination": "running/Phase4/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_516e0c695b504b2eb52065a8d01c61ee"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_5d8cadf42ec64d5e8cf03abf09b69d32",
+    "phase": 4,
+    "evidence": "path reference: running/target_skill_oracle_v1/validation_common_sense_seed0/eb_hab/common_sense/static_shared_skill/events.jsonl",
+    "referenced_by_phases": [
+      4
+    ],
+    "destination": "running/Phase4/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_5d8cadf42ec64d5e8cf03abf09b69d32"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_62d6e9b4ba23420e93de8f27b54f759f",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_pick/eval/arm_b_full_evolved.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_62d6e9b4ba23420e93de8f27b54f759f"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_664bae0383e64a208b8c08ba8efbdcd5",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8p_constraint/eval/arm_c_wo_vtca_evolved.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_664bae0383e64a208b8c08ba8efbdcd5"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_73d3da6a7c6341c882fb7c833e04d139",
+    "phase": 1,
+    "evidence": "path reference: running/t4c_minimal/eval/arm_c_wo_vtca_evolved.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_73d3da6a7c6341c882fb7c833e04d139"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_8dee3353131e433eb1bc04cdbf430661",
+    "phase": 1,
+    "evidence": "path reference: running/pilot/eval/vista_without_vtca.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_8dee3353131e433eb1bc04cdbf430661"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_b31f5642e360454ebace225eed6bc48c",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_pick/eval/arm_c_wo_vtca_evolved.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_b31f5642e360454ebace225eed6bc48c"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_b9ef1059d55d46e0955aae30b6409010",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8k_duprules/eval/arm_a_corrupted_frozen.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_b9ef1059d55d46e0955aae30b6409010"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_bda7e844f3b54c8aa3d26d5f39d2ecbf",
+    "phase": 1,
+    "evidence": "path reference: running/pilot/eval/static_shared_skill.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_bda7e844f3b54c8aa3d26d5f39d2ecbf"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_bef1f22a914048a58ddd47808f20e0a6",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8p_constraint/eval/arm_a_corrupted_frozen.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_bef1f22a914048a58ddd47808f20e0a6"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_bfe9a6901dd5407dacadb3f1437c9159",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_pick/eval/arm_a_corrupted_frozen.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_bfe9a6901dd5407dacadb3f1437c9159"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_cb578538238a45178d9848bc13a015d6",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair/eval/arm_b_full_evolved.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_cb578538238a45178d9848bc13a015d6"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_d3541ab3e783421f83d0dcb0df6415f0",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8g_termination/eval/arm_c_wo_vtca_evolved.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_d3541ab3e783421f83d0dcb0df6415f0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_de21c9583c8b49ac8204a2a8617e3b97",
+    "phase": 1,
+    "evidence": "path reference: running/t4c_minimal/eval/arm_b_full_evolved.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_de21c9583c8b49ac8204a2a8617e3b97"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_ed2964885ce740acad35972808865dcb",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8g_termination/eval/arm_b_full_evolved.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_ed2964885ce740acad35972808865dcb"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_f045e748da4c4531a703047140c7b611",
+    "phase": 1,
+    "evidence": "path reference: running/pilot/eval/embodiskill_star_common_gate.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_f045e748da4c4531a703047140c7b611"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_f2e4e08f16bd492bab67778f13722ae2",
+    "phase": 1,
+    "evidence": "path reference: running/pilot/eval/full.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_f2e4e08f16bd492bab67778f13722ae2"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_f52f0d810dce4ec19e6a579b3ab1d791",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair/eval/arm_b_v1_textonly.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_f52f0d810dce4ec19e6a579b3ab1d791"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_fa219458b0e946d49aadcf7859be3edb",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8p_constraint/eval/arm_b_full_evolved.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_fa219458b0e946d49aadcf7859be3edb"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/fb50f246311948e6a1bf3b11967cb42a_seed_0",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8j_ruleecho/full/seed_0/acquisition.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/fb50f246311948e6a1bf3b11967cb42a_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/gate/14c457e016e94554bf5a1196eec3f553_seed_0",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8l_p2power/full/seed_0/gate_rollouts/proxy/91_s0_6411981039.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/gate/14c457e016e94554bf5a1196eec3f553_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/gate/1db7f088a6cf4fb1b71e1d29bb5359cd_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/t4c_minimal/vista_without_vtca/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/gate/1db7f088a6cf4fb1b71e1d29bb5359cd_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/gate/21d16345375c4e6db6837e0e41f2bcc3_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair_e8g_termination/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/gate/21d16345375c4e6db6837e0e41f2bcc3_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/gate/2936aa6d692b44a184a3d291fa488adc_seed_0",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8o_f4task/full/seed_0/gate_rollouts/finalist/72_s0_912598a84e.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/gate/2936aa6d692b44a184a3d291fa488adc_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/gate/2cc583de568d40308af2c33c59292876_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair_e8k_duprules/vista_without_vtca/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/gate/2cc583de568d40308af2c33c59292876_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/gate/56930ccd96934891b00df6afa7ced44a_seed_0",
+    "phase": 5,
+    "evidence": "experiment_id: running/phase5_constraint_paired_pilot_v2_20260902/experiment_manifest.json",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/gate/56930ccd96934891b00df6afa7ced44a_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/gate/7d09ee85e56640a6abdcf34a0dd4bfa4_seed_0",
+    "phase": 2,
+    "evidence": "experiment_id: running/phase2_multihold_provenance_fix/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      2
+    ],
+    "destination": "running/Phase2/simulator/running/eb_habitat/vista_skill/gate/7d09ee85e56640a6abdcf34a0dd4bfa4_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/gate/965911827cc54231bc9ce726ac443e25_seed_0",
+    "phase": 5,
+    "evidence": "experiment_id: running/phase5_constraint_paired_pilot_v3_usage_20260902/experiment_manifest.json",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/gate/965911827cc54231bc9ce726ac443e25_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/gate/99e0478f4617466599fe2cebdb945cd7_seed_0",
+    "phase": 5,
+    "evidence": "path reference: running/phase5_constraint_paired_pilot_20260902/seed_0/gate_rollouts/proxy/61_s0_82747d7189.jsonl",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/gate/99e0478f4617466599fe2cebdb945cd7_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/gate/a6ad0bcef9324be7a0f62080ab463e31_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair_e8p_constraint/vista_without_vtca/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/gate/a6ad0bcef9324be7a0f62080ab463e31_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/gate/a9dc6c97e23f44fe8c8e2765cf4bcc1a_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair_e8p_constraint/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/gate/a9dc6c97e23f44fe8c8e2765cf4bcc1a_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/gate/c7d2c9e7ec8845be910cf54352b01c6a_seed_0",
+    "phase": 2,
+    "evidence": "experiment_id: running/phase2_effect_pick_inversion/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      2
+    ],
+    "destination": "running/Phase2/simulator/running/eb_habitat/vista_skill/gate/c7d2c9e7ec8845be910cf54352b01c6a_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/gate/e3269dc27bec433488fd41178856486f_seed_0",
+    "phase": 5,
+    "evidence": "experiment_id: running/phase5_temporal_sequential_paired_e6_20260903_rerun1/experiment_manifest.json",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/gate/e3269dc27bec433488fd41178856486f_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/phase3a_scripted_stress_20260824",
+    "phase": 3,
+    "evidence": "path reference: running/phase3a/phase3a_dataset_v2_20260824.json",
+    "referenced_by_phases": [
+      3
+    ],
+    "destination": "running/Phase3/simulator/running/eb_habitat/vista_skill/phase3a_scripted_stress_20260824"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/phase3a_scripted_stress_cachefix_20260825",
+    "phase": 3,
+    "evidence": "path reference: running/phase3a/phase3a_dataset_v3_cachefix_20260825.json",
+    "referenced_by_phases": [
+      3
+    ],
+    "destination": "running/Phase3/simulator/running/eb_habitat/vista_skill/phase3a_scripted_stress_cachefix_20260825"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/21d16345375c4e6db6837e0e41f2bcc3_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair_e8g_termination/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/update_audit/21d16345375c4e6db6837e0e41f2bcc3_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/4cb820251d764353ac8603a7f9f9655c_seed_0",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8h_lapsemask/full/seed_0/update_audit_rollouts/95/s103_bf7ff08f9026c1f9aa0fc981c32204bf4d4cf74324d9f413e0ee04c128153e1c.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/update_audit/4cb820251d764353ac8603a7f9f9655c_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/6fe877eb0d8a467f88308114afec48e8_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/t4_4b_pilot/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/update_audit/6fe877eb0d8a467f88308114afec48e8_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/71f17888e8bc4f768c9e052bbf477fc8_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair_pick/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/update_audit/71f17888e8bc4f768c9e052bbf477fc8_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/7d09ee85e56640a6abdcf34a0dd4bfa4_seed_0",
+    "phase": 2,
+    "evidence": "experiment_id: running/phase2_multihold_provenance_fix/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      2
+    ],
+    "destination": "running/Phase2/simulator/running/eb_habitat/vista_skill/update_audit/7d09ee85e56640a6abdcf34a0dd4bfa4_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/853e27cceb494bd086d74f38d0831f98_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/pilot/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/update_audit/853e27cceb494bd086d74f38d0831f98_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/8692f160ff904c8dbd10bcf14128f4c3_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/update_audit/8692f160ff904c8dbd10bcf14128f4c3_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/99e0478f4617466599fe2cebdb945cd7_seed_0",
+    "phase": 5,
+    "evidence": "path reference: running/phase5_constraint_paired_pilot_20260902/seed_0/update_audit_rollouts/80/s103_052b4e954e04a6d3ae64888d15feb09285bd3dec72061a29210a94d57f8c792e.jsonl",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/update_audit/99e0478f4617466599fe2cebdb945cd7_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/a9dc6c97e23f44fe8c8e2765cf4bcc1a_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair_e8p_constraint/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/update_audit/a9dc6c97e23f44fe8c8e2765cf4bcc1a_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/c18020be18fa460db0cbbc42b7aa936f_seed_0",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8e_echo/full/seed_0/update_audit_rollouts/95/s101_8de4adcf650e676fb659577187d2fc0859006b77bccc502526fe9994e1c3495c.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/update_audit/c18020be18fa460db0cbbc42b7aa936f_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/c7d2c9e7ec8845be910cf54352b01c6a_seed_0",
+    "phase": 2,
+    "evidence": "experiment_id: running/phase2_effect_pick_inversion/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      2
+    ],
+    "destination": "running/Phase2/simulator/running/eb_habitat/vista_skill/update_audit/c7d2c9e7ec8845be910cf54352b01c6a_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/c7d2c9e7ec8845be910cf54352b01c6a_seed_0_resume_a2cb4b7b",
+    "phase": 2,
+    "evidence": "experiment_id: running/phase2_effect_pick_inversion/full/experiment_manifest.json",
+    "referenced_by_phases": [
+      2
+    ],
+    "destination": "running/Phase2/simulator/running/eb_habitat/vista_skill/update_audit/c7d2c9e7ec8845be910cf54352b01c6a_seed_0_resume_a2cb4b7b"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/d1411b43476c424880df778464289e9b_seed_0",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8f_echo2/full/seed_0/update_audit_rollouts/95/s101_8de4adcf650e676fb659577187d2fc0859006b77bccc502526fe9994e1c3495c.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/update_audit/d1411b43476c424880df778464289e9b_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/d77ca2508b7646aeba3553a98665ac03_seed_0",
+    "phase": 5,
+    "evidence": "path reference: running/phase5_discovery_recurrence_v2_20260902/seed_0/update_audit_rollouts/80/s102_052b4e954e04a6d3ae64888d15feb09285bd3dec72061a29210a94d57f8c792e.jsonl",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/update_audit/d77ca2508b7646aeba3553a98665ac03_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/e84d8862ffa049799e0cd29624b5db8c_seed_0",
+    "phase": 1,
+    "evidence": "experiment_id: running/fault_repair/full_v1_textonly/experiment_manifest.json",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/update_audit/e84d8862ffa049799e0cd29624b5db8c_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/ec58a78e02404913a2d2305d9e27e52e_seed_0",
+    "phase": 1,
+    "evidence": "path reference: running/fault_repair_e8c_falsepos/full/seed_0/update_audit_rollouts/95/s101_8de4adcf650e676fb659577187d2fc0859006b77bccc502526fe9994e1c3495c.jsonl",
+    "referenced_by_phases": [
+      1
+    ],
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/update_audit/ec58a78e02404913a2d2305d9e27e52e_seed_0"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/vista_skill_phase5_p56_shadow_confirmation_2026_09_03",
+    "phase": 5,
+    "evidence": "path reference: running/phase5_p56_shadow_confirmation_paired3_20260903/update_audit_rollouts/75/s0_052b4e954e04a6d3ae64888d15feb09285bd3dec72061a29210a94d57f8c792e.jsonl",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/update_audit/vista_skill_phase5_p56_shadow_confirmation_2026_09_03"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/vista_skill_phase5_p56_variance_audit_2026_09_03",
+    "phase": 5,
+    "evidence": "path reference: running/phase5_p56_variance_audit_paired3_20260903/update_audit_rollouts/65/s2_052b4e954e04a6d3ae64888d15feb09285bd3dec72061a29210a94d57f8c792e.jsonl",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/update_audit/vista_skill_phase5_p56_variance_audit_2026_09_03"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/vista_skill_phase5_p56_variance_audit_paired5_2026_09_03",
+    "phase": 5,
+    "evidence": "path reference: running/phase5_p56_variance_audit_paired5_20260903/update_audit_rollouts/65/s4_052b4e954e04a6d3ae64888d15feb09285bd3dec72061a29210a94d57f8c792e.jsonl",
+    "referenced_by_phases": [
+      5
+    ],
+    "destination": "running/Phase5/simulator/running/eb_habitat/vista_skill/update_audit/vista_skill_phase5_p56_variance_audit_paired5_2026_09_03"
+  },
+  {
+    "source": "running/eb_nav/vista_skill/evaluate/evaluate_5c1d770e3c274ddc8671b9a32e2426cb",
+    "phase": 4,
+    "evidence": "path reference: running/target_skill_oracle_v1/source_analysis.json",
+    "referenced_by_phases": [
+      4
+    ],
+    "destination": "running/Phase4/simulator/running/eb_nav/vista_skill/evaluate/evaluate_5c1d770e3c274ddc8671b9a32e2426cb"
+  },
+  {
+    "source": "running/eb_nav/vista_skill/evaluate/evaluate_7400e3c851624747bb25800fd44a9c43",
+    "phase": 4,
+    "evidence": "path reference: running/target_skill_oracle_v1/validation_common_sense_seed0_analysis.json",
+    "referenced_by_phases": [
+      4
+    ],
+    "destination": "running/Phase4/simulator/running/eb_nav/vista_skill/evaluate/evaluate_7400e3c851624747bb25800fd44a9c43"
+  },
+  {
+    "source": "running/eb_nav/vista_skill/evaluate/evaluate_7d147751609a4bd79c79d0230c7e043e",
+    "phase": 1,
+    "evidence": "path reference: running/vista_skill/nav_official/base/static_shared_skill/events.jsonl",
+    "referenced_by_phases": [
+      1,
+      4
+    ],
+    "destination": "running/Phase1/simulator/running/eb_nav/vista_skill/evaluate/evaluate_7d147751609a4bd79c79d0230c7e043e"
+  },
+  {
+    "source": "running/eb_nav/vista_skill/evaluate/evaluate_94f07679964f4c399fdfb13128910e1f",
+    "phase": 4,
+    "evidence": "path reference: running/target_skill_oracle_v1/validation_common_sense_seed0_analysis.json",
+    "referenced_by_phases": [
+      4
+    ],
+    "destination": "running/Phase4/simulator/running/eb_nav/vista_skill/evaluate/evaluate_94f07679964f4c399fdfb13128910e1f"
+  },
+  {
+    "source": "running/eb_nav/vista_skill/evaluate/evaluate_c22875f23dc64211b69bf4391ad27ddf",
+    "phase": 4,
+    "evidence": "path reference: running/target_skill_oracle_v1/validation_common_sense_seed0_analysis.json",
+    "referenced_by_phases": [
+      4
+    ],
+    "destination": "running/Phase4/simulator/running/eb_nav/vista_skill/evaluate/evaluate_c22875f23dc64211b69bf4391ad27ddf"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/013b8ef088cf448fbdb8ce001951b519_seed_0",
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/013b8ef088cf448fbdb8ce001951b519_seed_0",
+    "phase": 1,
+    "evidence": "VISTA image namespace and file timestamps within Phase1 campaign dates; originating JSONL not located; phase inferred, exact experiment unconfirmed",
+    "classification": "phase_inferred_orphan_images"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/1a8bffe81ed4499293d8dd764de25933_seed_0",
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/1a8bffe81ed4499293d8dd764de25933_seed_0",
+    "phase": 1,
+    "evidence": "VISTA image namespace and file timestamps within Phase1 campaign dates; originating JSONL not located; phase inferred, exact experiment unconfirmed",
+    "classification": "phase_inferred_orphan_images"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/1c61d947edf24eeaad7d1b2d50586b13_seed_0",
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/1c61d947edf24eeaad7d1b2d50586b13_seed_0",
+    "phase": 1,
+    "evidence": "VISTA image namespace and file timestamps within Phase1 campaign dates; originating JSONL not located; phase inferred, exact experiment unconfirmed",
+    "classification": "phase_inferred_orphan_images"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/708918f42fd44037bfcc9519692770fd_seed_0",
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/708918f42fd44037bfcc9519692770fd_seed_0",
+    "phase": 1,
+    "evidence": "VISTA image namespace and file timestamps within Phase1 campaign dates; originating JSONL not located; phase inferred, exact experiment unconfirmed",
+    "classification": "phase_inferred_orphan_images"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/7ecb4762354d4422b9eaaa4e480c922d_seed_0",
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/7ecb4762354d4422b9eaaa4e480c922d_seed_0",
+    "phase": 1,
+    "evidence": "VISTA image namespace and file timestamps within Phase1 campaign dates; originating JSONL not located; phase inferred, exact experiment unconfirmed",
+    "classification": "phase_inferred_orphan_images"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_3ca1c2e655214df4be09b81a11165a8b",
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_3ca1c2e655214df4be09b81a11165a8b",
+    "phase": 1,
+    "evidence": "VISTA image namespace and file timestamps within Phase1 campaign dates; originating JSONL not located; phase inferred, exact experiment unconfirmed",
+    "classification": "phase_inferred_orphan_images"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_32df1a06c66d4b6b8b0a20413237843f",
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_32df1a06c66d4b6b8b0a20413237843f",
+    "phase": 1,
+    "evidence": "VISTA image namespace and file timestamps within Phase1 campaign dates; originating JSONL not located; phase inferred, exact experiment unconfirmed",
+    "classification": "phase_inferred_orphan_images"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_f5b04c8fbb3c43118b774d35a42d3a32",
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_f5b04c8fbb3c43118b774d35a42d3a32",
+    "phase": 1,
+    "evidence": "VISTA image namespace and file timestamps within Phase1 campaign dates; originating JSONL not located; phase inferred, exact experiment unconfirmed",
+    "classification": "phase_inferred_orphan_images"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_4188bfd3a94343d481bd490975d376a3",
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_4188bfd3a94343d481bd490975d376a3",
+    "phase": 1,
+    "evidence": "VISTA image namespace and file timestamps within Phase1 campaign dates; originating JSONL not located; phase inferred, exact experiment unconfirmed",
+    "classification": "phase_inferred_orphan_images"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/evaluate/evaluate_ea583cb869784812910aaf55bc490938",
+    "destination": "running/Phase4/simulator/running/eb_habitat/vista_skill/evaluate/evaluate_ea583cb869784812910aaf55bc490938",
+    "phase": 4,
+    "evidence": "VISTA image namespace and file timestamps within Phase4 campaign dates; originating JSONL not located; phase inferred, exact experiment unconfirmed",
+    "classification": "phase_inferred_orphan_images"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/gate_smoke",
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/gate_smoke",
+    "phase": 1,
+    "evidence": "VISTA image namespace and file timestamps within Phase1 campaign dates; originating JSONL not located; phase inferred, exact experiment unconfirmed",
+    "classification": "phase_inferred_orphan_images"
+  },
+  {
+    "source": "running/eb_habitat/vista_skill/update_audit/gate_smoke",
+    "destination": "running/Phase1/simulator/running/eb_habitat/vista_skill/update_audit/gate_smoke",
+    "phase": 1,
+    "evidence": "VISTA image namespace and file timestamps within Phase1 campaign dates; originating JSONL not located; phase inferred, exact experiment unconfirmed",
+    "classification": "phase_inferred_orphan_images"
+  }
+]

@@ -1,0 +1,1 @@
+{"reward": 0.0, "num_invalid_actions": 8, "empty_plan": 1, "instruction": "Deposit all apple onto the TV stand.", "task_success": 0, "task_progress": 0, "subgoal_reward": 0, "num_steps": 16, "planner_steps": 5, "planner_output_error": 0, "num_invalid_action_ratio": 0.5, "episode_elapsed_seconds": 25.35782790184021}

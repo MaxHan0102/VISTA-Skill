@@ -4,7 +4,7 @@ set -euo pipefail
 cd /root/max/VISTA-Skill
 
 PY=/root/miniconda3/envs/max_embench/bin/python
-OUT=running/phase3b
+OUT=running/Phase3/phase3b
 
 run_stage() {
     local stage="$1"
@@ -30,9 +30,9 @@ run_stage analyze_executor \
 run_stage audit_temporal \
     env PYTHONPATH=. \
     "$PY" scripts/phase3b_audit_temporal_evidence.py \
-    --dataset running/phase3a/phase3a_dataset_v3_cachefix_20260825.json \
+    --dataset running/Phase3/phase3a/phase3a_dataset_v3_cachefix_20260825.json \
     --pair-strict "$OUT/T0_pair_strict.jsonl" \
     --temporal-strict "$OUT/T1_temporal_strict.jsonl" \
-    --images-feedback running/phase3a/cache_images_feedback_20260824.jsonl \
-    --images-only running/phase3a/cache_images_only_20260824.jsonl \
+    --images-feedback running/Phase3/phase3a/cache_images_feedback_20260824.jsonl \
+    --images-only running/Phase3/phase3a/cache_images_only_20260824.jsonl \
     --output "$OUT/phase3b_temporal_evidence_gated_analysis_20260825.json"

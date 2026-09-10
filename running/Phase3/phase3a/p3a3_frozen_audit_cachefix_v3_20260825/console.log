@@ -1,0 +1,9 @@
+[2026-08-25T10:27:42+08:00] START stage=p3a3_frozen_guard_audit_cachefix_v3
+[2026-08-25T10:27:42+08:00] COMMAND ["/root/miniconda3/envs/max_embench/bin/python", "scripts/phase3a_evidence_guard_audit.py", "--dataset", "running/Phase3/phase3a/phase3a_dataset_v3_cachefix_20260825.json", "--images-feedback", "running/Phase3/phase3a/cache_images_feedback_20260824.jsonl", "--images-only", "running/Phase3/phase3a/cache_images_only_20260824.jsonl", "--config", "configs/vista_fault_repair_fullsel_p10.json", "--output", "running/Phase3/phase3a/phase3a_guard_frozen_audit_cachefix_v3_20260825.json", "--bootstrap-samples", "2000", "--seed", "0"]
+{
+  "bootstrap": null,
+  "decision": "no_go_no_candidate_passed_dev_and_selection",
+  "frozen_arm": null,
+  "go_checks": null
+}
+[2026-08-25T10:27:44+08:00] END stage=p3a3_frozen_guard_audit_cachefix_v3 exit_code=0

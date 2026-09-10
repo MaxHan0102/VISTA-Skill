@@ -1,0 +1,250 @@
+[2026-08-25T12:22:20+08:00] START stage=evidence_T1_temporal_strict
+[2026-08-25T12:22:20+08:00] COMMAND ["env", "PYTHONPATH=.", "OPENAI_API_KEY=EMPTY", "/root/miniconda3/envs/max_embench/bin/python", "scripts/phase3b_extract_strict_temporal_evidence.py", "--dataset", "running/Phase3/phase3a/phase3a_dataset_v3_cachefix_20260825.json", "--condition", "T1_temporal_strict", "--base-url", "http://192.168.1.185:8000/v1", "--base-url", "http://192.168.1.173:8001/v1", "--output", "running/Phase3/phase3b/T1_temporal_strict.jsonl", "--summary", "running/Phase3/phase3b/T1_temporal_strict.summary.json"]
+condition=T1_temporal_strict sample=1/200 id=natural:0:s1 accepted=1 error=None
+condition=T1_temporal_strict sample=2/200 id=natural:0:s2 accepted=2 error=None
+condition=T1_temporal_strict sample=3/200 id=natural:0:s4 accepted=2 error=None
+condition=T1_temporal_strict sample=4/200 id=natural:11:s14 accepted=0 error=None
+condition=T1_temporal_strict sample=5/200 id=natural:2:s2 accepted=0 error=None
+condition=T1_temporal_strict sample=6/200 id=natural:0:s3 accepted=3 error=None
+condition=T1_temporal_strict sample=7/200 id=natural:10:s2 accepted=0 error=None
+condition=T1_temporal_strict sample=8/200 id=natural:10:s4 accepted=11 error=None
+condition=T1_temporal_strict sample=9/200 id=natural:11:s18 accepted=0 error=None
+condition=T1_temporal_strict sample=10/200 id=natural:9:s2 accepted=0 error=None
+condition=T1_temporal_strict sample=11/200 id=natural:10:s1 accepted=1 error=None
+condition=T1_temporal_strict sample=12/200 id=natural:11:s10 accepted=0 error=None
+condition=T1_temporal_strict sample=13/200 id=natural:1:s16 accepted=2 error=None
+condition=T1_temporal_strict sample=14/200 id=natural:10:s3 accepted=0 error=None
+condition=T1_temporal_strict sample=15/200 id=natural:11:s12 accepted=0 error=None
+condition=T1_temporal_strict sample=16/200 id=natural:1:s18 accepted=2 error=None
+condition=T1_temporal_strict sample=17/200 id=natural:11:s1 accepted=1 error=None
+condition=T1_temporal_strict sample=18/200 id=natural:11:s15 accepted=0 error=None
+condition=T1_temporal_strict sample=19/200 id=natural:3:s6 accepted=2 error=None
+condition=T1_temporal_strict sample=20/200 id=natural:11:s11 accepted=0 error=None
+condition=T1_temporal_strict sample=21/200 id=natural:11:s17 accepted=0 error=None
+condition=T1_temporal_strict sample=22/200 id=natural:4:s13 accepted=2 error=None
+condition=T1_temporal_strict sample=23/200 id=natural:11:s13 accepted=0 error=None
+condition=T1_temporal_strict sample=24/200 id=natural:11:s2 accepted=2 error=None
+condition=T1_temporal_strict sample=25/200 id=natural:6:s4 accepted=6 error=None
+condition=T1_temporal_strict sample=26/200 id=natural:11:s16 accepted=0 error=None
+condition=T1_temporal_strict sample=27/200 id=natural:11:s20 accepted=0 error=None
+condition=T1_temporal_strict sample=28/200 id=natural:8:s13 accepted=2 error=None
+condition=T1_temporal_strict sample=29/200 id=natural:11:s19 accepted=0 error=None
+condition=T1_temporal_strict sample=30/200 id=natural:11:s4 accepted=0 error=None
+condition=T1_temporal_strict sample=31/200 id=natural:11:s3 accepted=1 error=None
+condition=T1_temporal_strict sample=32/200 id=natural:11:s6 accepted=0 error=None
+condition=T1_temporal_strict sample=33/200 id=natural:11:s5 accepted=0 error=None
+condition=T1_temporal_strict sample=34/200 id=natural:11:s8 accepted=0 error=None
+condition=T1_temporal_strict sample=35/200 id=natural:11:s7 accepted=0 error=None
+condition=T1_temporal_strict sample=36/200 id=natural:1:s10 accepted=0 error=None
+condition=T1_temporal_strict sample=37/200 id=natural:11:s9 accepted=0 error=None
+condition=T1_temporal_strict sample=38/200 id=natural:1:s12 accepted=2 error=None
+condition=T1_temporal_strict sample=39/200 id=natural:12:s1 accepted=0 error=None
+condition=T1_temporal_strict sample=40/200 id=natural:1:s14 accepted=0 error=None
+condition=T1_temporal_strict sample=41/200 id=natural:1:s1 accepted=0 error=None
+condition=T1_temporal_strict sample=42/200 id=natural:1:s15 accepted=2 error=None
+condition=T1_temporal_strict sample=43/200 id=natural:1:s11 accepted=1 error=None
+condition=T1_temporal_strict sample=44/200 id=natural:1:s17 accepted=0 error=None
+condition=T1_temporal_strict sample=45/200 id=natural:1:s13 accepted=1 error=None
+condition=T1_temporal_strict sample=46/200 id=natural:1:s2 accepted=0 error=None
+condition=T1_temporal_strict sample=47/200 id=natural:1:s19 accepted=0 error=None
+condition=T1_temporal_strict sample=48/200 id=natural:1:s20 accepted=0 error=None
+condition=T1_temporal_strict sample=49/200 id=natural:1:s21 accepted=0 error=None
+condition=T1_temporal_strict sample=50/200 id=natural:1:s22 accepted=2 error=None
+condition=T1_temporal_strict sample=51/200 id=natural:1:s23 accepted=0 error=None
+condition=T1_temporal_strict sample=52/200 id=natural:1:s24 accepted=2 error=None
+condition=T1_temporal_strict sample=53/200 id=natural:1:s3 accepted=0 error=None
+condition=T1_temporal_strict sample=54/200 id=natural:1:s4 accepted=2 error=None
+condition=T1_temporal_strict sample=55/200 id=natural:1:s5 accepted=0 error=None
+condition=T1_temporal_strict sample=56/200 id=natural:1:s6 accepted=2 error=None
+condition=T1_temporal_strict sample=57/200 id=natural:1:s7 accepted=0 error=None
+condition=T1_temporal_strict sample=58/200 id=natural:1:s8 accepted=0 error=None
+condition=T1_temporal_strict sample=59/200 id=natural:1:s9 accepted=0 error=None
+condition=T1_temporal_strict sample=60/200 id=natural:3:s2 accepted=0 error=None
+condition=T1_temporal_strict sample=61/200 id=natural:2:s1 accepted=0 error=None
+condition=T1_temporal_strict sample=62/200 id=natural:3:s4 accepted=0 error=None
+condition=T1_temporal_strict sample=63/200 id=natural:3:s1 accepted=1 error=None
+condition=T1_temporal_strict sample=64/200 id=natural:4:s1 accepted=0 error=None
+condition=T1_temporal_strict sample=65/200 id=natural:3:s3 accepted=1 error=None
+condition=T1_temporal_strict sample=66/200 id=natural:4:s11 accepted=2 error=None
+condition=T1_temporal_strict sample=67/200 id=natural:3:s5 accepted=0 error=None
+condition=T1_temporal_strict sample=68/200 id=natural:4:s3 accepted=2 error=None
+condition=T1_temporal_strict sample=69/200 id=natural:4:s10 accepted=1 error=None
+condition=T1_temporal_strict sample=70/200 id=natural:4:s5 accepted=16 error=None
+condition=T1_temporal_strict sample=71/200 id=natural:4:s12 accepted=1 error=None
+condition=T1_temporal_strict sample=72/200 id=natural:4:s7 accepted=0 error=None
+condition=T1_temporal_strict sample=73/200 id=natural:4:s2 accepted=1 error=None
+condition=T1_temporal_strict sample=74/200 id=natural:4:s9 accepted=2 error=None
+condition=T1_temporal_strict sample=75/200 id=natural:4:s4 accepted=1 error=None
+condition=T1_temporal_strict sample=76/200 id=natural:6:s2 accepted=0 error=None
+condition=T1_temporal_strict sample=77/200 id=natural:4:s6 accepted=0 error=None
+condition=T1_temporal_strict sample=78/200 id=natural:7:s10 accepted=0 error=None
+condition=T1_temporal_strict sample=79/200 id=natural:4:s8 accepted=0 error=None
+condition=T1_temporal_strict sample=80/200 id=natural:7:s12 accepted=0 error=None
+condition=T1_temporal_strict sample=81/200 id=stress:40:s3 accepted=0 error=None
+condition=T1_temporal_strict sample=82/200 id=stress:40:s5 accepted=0 error=None
+condition=T1_temporal_strict sample=83/200 id=stress:40:s6 accepted=0 error=None
+condition=T1_temporal_strict sample=84/200 id=stress:41:s3 accepted=0 error=None
+condition=T1_temporal_strict sample=85/200 id=stress:41:s5 accepted=0 error=None
+condition=T1_temporal_strict sample=86/200 id=stress:41:s6 accepted=0 error=None
+condition=T1_temporal_strict sample=87/200 id=stress:42:s3 accepted=0 error=None
+condition=T1_temporal_strict sample=88/200 id=stress:42:s5 accepted=0 error=None
+condition=T1_temporal_strict sample=89/200 id=stress:42:s6 accepted=0 error=None
+condition=T1_temporal_strict sample=90/200 id=stress:43:s3 accepted=1 error=None
+condition=T1_temporal_strict sample=91/200 id=stress:43:s5 accepted=1 error=None
+condition=T1_temporal_strict sample=92/200 id=stress:43:s6 accepted=1 error=None
+condition=T1_temporal_strict sample=93/200 id=stress:40:s7 accepted=2 error=None
+condition=T1_temporal_strict sample=94/200 id=stress:40:s8 accepted=1 error=None
+condition=T1_temporal_strict sample=95/200 id=stress:41:s7 accepted=0 error=None
+condition=T1_temporal_strict sample=96/200 id=stress:41:s8 accepted=0 error=None
+condition=T1_temporal_strict sample=97/200 id=stress:42:s7 accepted=0 error=None
+condition=T1_temporal_strict sample=98/200 id=stress:42:s8 accepted=0 error=None
+condition=T1_temporal_strict sample=99/200 id=stress:43:s7 accepted=0 error=None
+condition=T1_temporal_strict sample=100/200 id=stress:43:s8 accepted=1 error=None
+condition=T1_temporal_strict sample=101/200 id=stress:44:s7 accepted=0 error=None
+condition=T1_temporal_strict sample=102/200 id=stress:44:s8 accepted=0 error=None
+condition=T1_temporal_strict sample=103/200 id=stress:45:s7 accepted=0 error=None
+condition=T1_temporal_strict sample=104/200 id=stress:45:s8 accepted=0 error=None
+condition=T1_temporal_strict sample=105/200 id=stress:40:s1 accepted=1 error=None
+condition=T1_temporal_strict sample=106/200 id=stress:41:s1 accepted=1 error=None
+condition=T1_temporal_strict sample=107/200 id=stress:42:s1 accepted=1 error=None
+condition=T1_temporal_strict sample=108/200 id=stress:43:s1 accepted=1 error=None
+condition=T1_temporal_strict sample=109/200 id=stress:44:s1 accepted=1 error=None
+condition=T1_temporal_strict sample=110/200 id=stress:40:s4 accepted=0 error=None
+condition=T1_temporal_strict sample=111/200 id=stress:40:s2 accepted=1 error=None
+condition=T1_temporal_strict sample=112/200 id=stress:45:s1 accepted=1 error=None
+condition=T1_temporal_strict sample=113/200 id=stress:44:s3 accepted=0 error=None
+condition=T1_temporal_strict sample=114/200 id=stress:41:s4 accepted=3 error=None
+condition=T1_temporal_strict sample=115/200 id=stress:41:s2 accepted=0 error=None
+condition=T1_temporal_strict sample=116/200 id=stress:46:s1 accepted=1 error=None
+condition=T1_temporal_strict sample=117/200 id=stress:44:s5 accepted=0 error=None
+condition=T1_temporal_strict sample=118/200 id=stress:42:s4 accepted=3 error=None
+condition=T1_temporal_strict sample=119/200 id=stress:42:s2 accepted=0 error=None
+condition=T1_temporal_strict sample=120/200 id=stress:44:s6 accepted=1 error=None
+condition=T1_temporal_strict sample=121/200 id=natural:20:s1 accepted=1 error=None
+condition=T1_temporal_strict sample=122/200 id=natural:20:s2 accepted=0 error=None
+condition=T1_temporal_strict sample=123/200 id=natural:24:s4 accepted=2 error=None
+condition=T1_temporal_strict sample=124/200 id=natural:21:s16 accepted=3 error=None
+condition=T1_temporal_strict sample=125/200 id=natural:23:s2 accepted=0 error=None
+condition=T1_temporal_strict sample=126/200 id=natural:21:s1 accepted=0 error=None
+condition=T1_temporal_strict sample=127/200 id=natural:21:s10 accepted=2 error=None
+condition=T1_temporal_strict sample=128/200 id=natural:21:s19 accepted=1 error=None
+condition=T1_temporal_strict sample=129/200 id=natural:21:s11 accepted=0 error=None
+condition=T1_temporal_strict sample=130/200 id=natural:21:s12 accepted=0 error=None
+condition=T1_temporal_strict sample=131/200 id=natural:21:s20 accepted=1 error=None
+condition=T1_temporal_strict sample=132/200 id=natural:21:s13 accepted=0 error=None
+condition=T1_temporal_strict sample=133/200 id=natural:21:s14 accepted=0 error=None
+condition=T1_temporal_strict sample=134/200 id=natural:25:s13 accepted=0 error=None
+condition=T1_temporal_strict sample=135/200 id=natural:21:s15 accepted=0 error=JSONDecodeError: Expecting ',' delimiter: line 128131 column 1 (char 128447)
+condition=T1_temporal_strict sample=136/200 id=natural:21:s17 accepted=0 error=None
+condition=T1_temporal_strict sample=137/200 id=natural:25:s15 accepted=0 error=None
+condition=T1_temporal_strict sample=138/200 id=natural:21:s18 accepted=1 error=None
+condition=T1_temporal_strict sample=139/200 id=natural:21:s2 accepted=0 error=None
+condition=T1_temporal_strict sample=140/200 id=natural:25:s17 accepted=0 error=None
+condition=T1_temporal_strict sample=141/200 id=natural:21:s3 accepted=0 error=None
+condition=T1_temporal_strict sample=142/200 id=natural:21:s4 accepted=0 error=None
+condition=T1_temporal_strict sample=143/200 id=natural:25:s3 accepted=1 error=None
+condition=T1_temporal_strict sample=144/200 id=natural:21:s5 accepted=1 error=None
+condition=T1_temporal_strict sample=145/200 id=natural:21:s6 accepted=2 error=None
+condition=T1_temporal_strict sample=146/200 id=natural:21:s7 accepted=1 error=None
+condition=T1_temporal_strict sample=147/200 id=natural:21:s8 accepted=2 error=None
+condition=T1_temporal_strict sample=148/200 id=natural:21:s9 accepted=1 error=None
+condition=T1_temporal_strict sample=149/200 id=natural:22:s10 accepted=2 error=None
+condition=T1_temporal_strict sample=150/200 id=natural:22:s1 accepted=0 error=None
+condition=T1_temporal_strict sample=151/200 id=natural:22:s12 accepted=2 error=None
+condition=T1_temporal_strict sample=152/200 id=natural:22:s11 accepted=0 error=None
+condition=T1_temporal_strict sample=153/200 id=natural:22:s14 accepted=2 error=None
+condition=T1_temporal_strict sample=154/200 id=natural:22:s13 accepted=0 error=None
+condition=T1_temporal_strict sample=155/200 id=natural:22:s16 accepted=2 error=None
+condition=T1_temporal_strict sample=156/200 id=natural:22:s15 accepted=0 error=None
+condition=T1_temporal_strict sample=157/200 id=natural:22:s18 accepted=2 error=None
+condition=T1_temporal_strict sample=158/200 id=natural:22:s17 accepted=1 error=None
+condition=T1_temporal_strict sample=159/200 id=natural:22:s2 accepted=2 error=None
+condition=T1_temporal_strict sample=160/200 id=natural:22:s19 accepted=0 error=None
+condition=T1_temporal_strict sample=161/200 id=natural:22:s20 accepted=0 error=None
+condition=T1_temporal_strict sample=162/200 id=natural:22:s3 accepted=0 error=None
+condition=T1_temporal_strict sample=163/200 id=natural:22:s4 accepted=2 error=None
+condition=T1_temporal_strict sample=164/200 id=natural:22:s5 accepted=0 error=None
+condition=T1_temporal_strict sample=165/200 id=natural:22:s6 accepted=2 error=None
+condition=T1_temporal_strict sample=166/200 id=natural:22:s7 accepted=3 error=None
+condition=T1_temporal_strict sample=167/200 id=natural:22:s8 accepted=2 error=None
+condition=T1_temporal_strict sample=168/200 id=natural:22:s9 accepted=0 error=None
+condition=T1_temporal_strict sample=169/200 id=natural:24:s2 accepted=0 error=None
+condition=T1_temporal_strict sample=170/200 id=natural:23:s1 accepted=1 error=None
+condition=T1_temporal_strict sample=171/200 id=natural:25:s11 accepted=2 error=None
+condition=T1_temporal_strict sample=172/200 id=natural:24:s1 accepted=0 error=None
+condition=T1_temporal_strict sample=173/200 id=natural:25:s19 accepted=2 error=None
+condition=T1_temporal_strict sample=174/200 id=stress:47:s3 accepted=0 error=None
+condition=T1_temporal_strict sample=175/200 id=stress:47:s5 accepted=0 error=None
+condition=T1_temporal_strict sample=176/200 id=stress:47:s6 accepted=0 error=None
+condition=T1_temporal_strict sample=177/200 id=stress:48:s3 accepted=0 error=None
+condition=T1_temporal_strict sample=178/200 id=stress:48:s5 accepted=0 error=None
+condition=T1_temporal_strict sample=179/200 id=stress:48:s6 accepted=0 error=None
+condition=T1_temporal_strict sample=180/200 id=stress:49:s3 accepted=0 error=None
+condition=T1_temporal_strict sample=181/200 id=stress:49:s5 accepted=0 error=None
+condition=T1_temporal_strict sample=182/200 id=stress:49:s6 accepted=0 error=None
+condition=T1_temporal_strict sample=183/200 id=stress:47:s7 accepted=0 error=None
+condition=T1_temporal_strict sample=184/200 id=stress:47:s8 accepted=0 error=None
+condition=T1_temporal_strict sample=185/200 id=stress:48:s7 accepted=0 error=None
+condition=T1_temporal_strict sample=186/200 id=stress:48:s8 accepted=0 error=None
+condition=T1_temporal_strict sample=187/200 id=stress:49:s7 accepted=0 error=None
+condition=T1_temporal_strict sample=188/200 id=stress:49:s8 accepted=0 error=None
+condition=T1_temporal_strict sample=189/200 id=stress:50:s7 accepted=3 error=None
+condition=T1_temporal_strict sample=190/200 id=stress:51:s7 accepted=0 error=None
+condition=T1_temporal_strict sample=191/200 id=stress:47:s1 accepted=1 error=None
+condition=T1_temporal_strict sample=192/200 id=stress:48:s1 accepted=1 error=None
+condition=T1_temporal_strict sample=193/200 id=stress:49:s1 accepted=1 error=None
+condition=T1_temporal_strict sample=194/200 id=stress:50:s1 accepted=1 error=None
+condition=T1_temporal_strict sample=195/200 id=stress:47:s4 accepted=3 error=None
+condition=T1_temporal_strict sample=196/200 id=stress:47:s2 accepted=1 error=None
+condition=T1_temporal_strict sample=197/200 id=stress:51:s1 accepted=1 error=None
+condition=T1_temporal_strict sample=198/200 id=stress:50:s3 accepted=1 error=None
+condition=T1_temporal_strict sample=199/200 id=stress:51:s8 accepted=0 error=None
+condition=T1_temporal_strict sample=200/200 id=stress:48:s4 accepted=0 error=None
+{
+  "accepted_evidence_count": 163,
+  "analysis_type": "phase3b_strict_no_feedback_evidence_cache",
+  "base_urls": [
+    "http://192.168.1.185:8000/v1",
+    "http://192.168.1.173:8001/v1"
+  ],
+  "condition": "T1_temporal_strict",
+  "dataset": "/root/max/VISTA-Skill/running/Phase3/phase3a/phase3a_dataset_v3_cachefix_20260825.json",
+  "dataset_id": "vista_phase3a_evidence_state_oracle_cachefix_v3",
+  "elapsed_seconds_this_invocation": 724.3267765759956,
+  "error_count": 1,
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "output": "/root/max/VISTA-Skill/running/Phase3/phase3b/T1_temporal_strict.jsonl",
+  "output_sha256": "ba088edfa48b36c5c871a74cafd9fe3e57f22fc3f0f48f2e6bca7b587a6968bc",
+  "request_seed": 0,
+  "sample_count": 200,
+  "splits": {
+    "audit": 0,
+    "dev": 120,
+    "selection": 80
+  },
+  "strict_isolation": true,
+  "tier_counts": {
+    "action_prior": 34,
+    "direct_current": 246,
+    "temporal": 6,
+    "unknown": 242
+  },
+  "usage": {
+    "calls": 202,
+    "completion_tokens": 54947,
+    "prompt_tokens": 209972
+  },
+  "usage_by_endpoint": {
+    "http://192.168.1.173:8001/v1": {
+      "calls": 102,
+      "completion_tokens": 33778,
+      "prompt_tokens": 105630
+    },
+    "http://192.168.1.185:8000/v1": {
+      "calls": 100,
+      "completion_tokens": 21169,
+      "prompt_tokens": 104342
+    }
+  }
+}
+[2026-08-25T12:34:25+08:00] END stage=evidence_T1_temporal_strict exit_code=2

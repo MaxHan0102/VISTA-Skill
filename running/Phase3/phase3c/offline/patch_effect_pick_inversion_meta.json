@@ -1,0 +1,241 @@
+{
+  "base_url": "http://127.0.0.1:8000/v1",
+  "fault": "effect_pick_inversion",
+  "meta_skill_sha256": "ec349ec8bbb0a6dced55267fc0d44c0259a4772f384b3adab765fa0faeff43cc",
+  "meta_skills": "frozen_v1",
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "passed": 10,
+  "total": 10,
+  "trials": [
+    {
+      "candidate_sha256": "877fa9621cd18158701649234887126370416541983bcf7ed34b3d4c031aed39",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "Picking up an object leaves the gripper holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "f88f4d4cdf2769379b8e",
+      "rationale": "Replay the condition 'holding(object)' after 'pick' in phase2:effect_pick_inversion. Parent: gripper empty \u2192 contradiction. Candidate: gripper holds object \u2192 resolves to 'false' as expected. Unrelated behavior (e.g., place, open, close) unchanged. Test intent: verify transition from pick to holding matches expected predicate, and no regression in other rules.",
+      "scope": "effect",
+      "seed": 0,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 307,
+          "prompt_tokens": 603
+        }
+      }
+    },
+    {
+      "candidate_sha256": "877fa9621cd18158701649234887126370416541983bcf7ed34b3d4c031aed39",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "Picking up an object leaves the gripper holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "f88f4d4cdf2769379b8e",
+      "rationale": "Replay the condition 'holding(object)' after 'pick' in phase2:effect_pick_inversion. Parent: gripper empty \u2192 candidate: gripper holds object. Unrelated behavior (e.g., place, open, close) must remain unchanged. Falsifiable test: verify holding(object) is true after pick, and confirm place/open/close rules unchanged.",
+      "scope": "effect",
+      "seed": 1,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 301,
+          "prompt_tokens": 603
+        }
+      }
+    },
+    {
+      "candidate_sha256": "877fa9621cd18158701649234887126370416541983bcf7ed34b3d4c031aed39",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "Picking up an object leaves the gripper holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "f88f4d4cdf2769379b8e",
+      "rationale": "Replay the condition 'holding(object)' after 'pick' in phase2:effect_pick_inversion. Parent: gripper empty \u2192 candidate: gripper holds object. Unrelated behavior (e.g., place, open, close) must remain unchanged. Falsifiable test: verify holding(object) is true after pick, and confirm place/open/close rules unchanged.",
+      "scope": "effect",
+      "seed": 2,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 301,
+          "prompt_tokens": 603
+        }
+      }
+    },
+    {
+      "candidate_sha256": "877fa9621cd18158701649234887126370416541983bcf7ed34b3d4c031aed39",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "Picking up an object leaves the gripper holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "f88f4d4cdf2769379b8e",
+      "rationale": "Replay the condition 'holding(object)' after 'pick' in phase2:effect_pick_inversion. Parent: gripper empty \u2192 candidate: gripper holds object. Unrelated behavior (e.g., place, open, close) must remain unchanged. Falsifiable test: verify holding(object) is true after pick, and confirm place/open/close rules unchanged.",
+      "scope": "effect",
+      "seed": 3,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 301,
+          "prompt_tokens": 603
+        }
+      }
+    },
+    {
+      "candidate_sha256": "877fa9621cd18158701649234887126370416541983bcf7ed34b3d4c031aed39",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "Picking up an object leaves the gripper holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "f88f4d4cdf2769379b8e",
+      "rationale": "Replay the condition 'holding(object)' after 'pick' in phase2:effect_pick_inversion. Parent: gripper empty \u2192 candidate: gripper holds object. Unrelated behavior (e.g., place, open, close) must remain unchanged. Falsifiable test: verify holding(object) is true after pick, and confirm place/open/close rules unchanged.",
+      "scope": "effect",
+      "seed": 4,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 301,
+          "prompt_tokens": 603
+        }
+      }
+    },
+    {
+      "candidate_sha256": "877fa9621cd18158701649234887126370416541983bcf7ed34b3d4c031aed39",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "Picking up an object leaves the gripper holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "f88f4d4cdf2769379b8e",
+      "rationale": "Replay the condition 'holding(object)' after 'pick' in phase2:effect_pick_inversion. Parent: gripper empty \u2192 candidate: gripper holds object. Unrelated behavior (e.g., place, open, close) must remain unchanged. Falsifiable test: verify holding(object) is true after pick, and confirm place/open/close rules unchanged.",
+      "scope": "effect",
+      "seed": 5,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 301,
+          "prompt_tokens": 603
+        }
+      }
+    },
+    {
+      "candidate_sha256": "877fa9621cd18158701649234887126370416541983bcf7ed34b3d4c031aed39",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "Picking up an object leaves the gripper holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "f88f4d4cdf2769379b8e",
+      "rationale": "Replay the condition 'holding(object)' after 'pick' in phase2:effect_pick_inversion. Parent: gripper empty \u2192 candidate: gripper holds object. Unrelated behavior (e.g., place, open, close) must remain unchanged. Falsifiable test: verify holding(object) is true after pick, and confirm place/open/close rules unchanged.",
+      "scope": "effect",
+      "seed": 6,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 301,
+          "prompt_tokens": 603
+        }
+      }
+    },
+    {
+      "candidate_sha256": "877fa9621cd18158701649234887126370416541983bcf7ed34b3d4c031aed39",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "Picking up an object leaves the gripper holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "f88f4d4cdf2769379b8e",
+      "rationale": "Replay the condition 'holding(object)' after 'pick' in phase2:effect_pick_inversion. Parent: gripper empty \u2192 candidate: gripper holds object. Unrelated behavior (e.g., place, open, close) must remain unchanged. Falsifiable test: verify holding(object) is true after pick, and confirm place/open/close rules unchanged.",
+      "scope": "effect",
+      "seed": 7,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 301,
+          "prompt_tokens": 603
+        }
+      }
+    },
+    {
+      "candidate_sha256": "877fa9621cd18158701649234887126370416541983bcf7ed34b3d4c031aed39",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "Picking up an object leaves the gripper holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "f88f4d4cdf2769379b8e",
+      "rationale": "Replay the condition 'holding(object)' after 'pick' in phase2:effect_pick_inversion. Parent: gripper empty \u2192 candidate: gripper holds object. Unrelated behavior (e.g., place, open, close) must remain unchanged. Falsifiable test: verify holding(object) is true after pick, and confirm place/open/close rules unchanged.",
+      "scope": "effect",
+      "seed": 8,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 301,
+          "prompt_tokens": 603
+        }
+      }
+    },
+    {
+      "candidate_sha256": "877fa9621cd18158701649234887126370416541983bcf7ed34b3d4c031aed39",
+      "environment_neutral": true,
+      "has_test_intent": false,
+      "new": "Picking up an object leaves the gripper holding the object.",
+      "old": "Picking up an object leaves the gripper empty.",
+      "operation": "replace_exact",
+      "passed": true,
+      "patch_id": "f88f4d4cdf2769379b8e",
+      "rationale": "Replay the condition 'holding(object)' after 'pick' in phase2:effect_pick_inversion. Parent: gripper empty \u2192 candidate: gripper holds object. Unrelated behavior (e.g., place, open, close) must remain unchanged. Falsifiable test: verify holding(object) is true after pick, and confirm place/open/close rules unchanged.",
+      "scope": "effect",
+      "seed": 9,
+      "target_rule_after": "true",
+      "target_rule_id": "effect_pick_holds_target_category",
+      "unrelated_same_field_rules_preserved": true,
+      "usage": {
+        "vista_meta_bounded_patch": {
+          "calls": 1,
+          "completion_tokens": 301,
+          "prompt_tokens": 603
+        }
+      }
+    }
+  ]
+}

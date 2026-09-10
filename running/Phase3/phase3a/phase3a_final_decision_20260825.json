@@ -1,0 +1,49 @@
+{
+  "phase": "Phase3A",
+  "status": "completed_with_preregistered_no_go",
+  "decision": "no_go",
+  "dataset": {
+    "path": "running/Phase3/phase3a/phase3a_dataset_v3_cachefix_20260825.json",
+    "sha256": "9c919ba50cd0da5eb2f591abb812f1473c5f38dd9eab8d8fc8a80dbee1b3bfb7",
+    "samples": 300,
+    "splits": {
+      "dev": 120,
+      "selection": 80,
+      "audit": 100
+    }
+  },
+  "frozen_arm": "E4_authority:0.50:0.00",
+  "matched_threshold_arm": "E2_threshold:0.50:0.00",
+  "audit": {
+    "path": "running/Phase3/phase3a/phase3a_guard_v2_frozen_audit_v4_20260825.json",
+    "sha256": "cb4d6394e5424707e1141e5fff517239f33553d4171c02fc2cbc063ad53b3674",
+    "opened_once": true,
+    "e0_false_contradiction_rate": 0.007380073800738007,
+    "guard_false_contradiction_rate": 0.0,
+    "paired_bootstrap_95_ci": [
+      0.0,
+      0.024793388429752067
+    ],
+    "e0_predicate_coverage": 0.7475247524752475,
+    "guard_predicate_coverage": 0.599009900990099,
+    "matched_threshold_predicate_coverage": 0.7475247524752475,
+    "e0_skill_update_recall": 1.0,
+    "guard_skill_update_recall": 1.0,
+    "e0_clean_false_skill_update_rate": 0.0,
+    "guard_clean_false_skill_update_rate": 0.0
+  },
+  "failed_go_checks": [
+    "paired_ci_excludes_zero",
+    "guard_gain_not_explained_by_matched_threshold"
+  ],
+  "conditional_stages": {
+    "P3A-4_live_pilot": "not_run_due_to_preregistered_no_go",
+    "P3A-5_scale_up": "not_run_due_to_preregistered_no_go"
+  },
+  "cost_amendment": "running/Phase3/phase3a/phase3a_guard_v2_frozen_audit_v4_20260825.cost_amendment.json",
+  "test_result": {
+    "pytest_passed": 232,
+    "py_compile": "passed",
+    "git_diff_check": "passed"
+  }
+}

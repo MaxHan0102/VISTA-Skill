@@ -1,0 +1,791 @@
+{
+  "analysis_type": "synthetic_oracle_noise_sensitivity",
+  "conditions": [
+    {
+      "metrics": {
+        "brier": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "ece": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "field_macro_f1": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "non_skill_false_update_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "predicate_f1": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "predicate_precision": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "predicate_recall": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "selective_risk_at_0_5": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "target_macro_f1": {
+          "mean": 1.0,
+          "std": 0.0
+        }
+      },
+      "noise": {
+        "drop": 0.0,
+        "false_positive": 0.0,
+        "flip": 0.0
+      },
+      "replicates": 20
+    },
+    {
+      "metrics": {
+        "brier": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "ece": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "field_macro_f1": {
+          "mean": 0.9708926479119552,
+          "std": 0.017877308995909478
+        },
+        "non_skill_false_update_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "predicate_f1": {
+          "mean": 0.9741718177588939,
+          "std": 0.0034756760680588476
+        },
+        "predicate_precision": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "predicate_recall": {
+          "mean": 0.9496666666666667,
+          "std": 0.006621140851306472
+        },
+        "selective_risk_at_0_5": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "target_macro_f1": {
+          "mean": 0.959342084573279,
+          "std": 0.020229293367351863
+        }
+      },
+      "noise": {
+        "drop": 0.05,
+        "false_positive": 0.0,
+        "flip": 0.0
+      },
+      "replicates": 20
+    },
+    {
+      "metrics": {
+        "brier": {
+          "mean": 0.051444444444444445,
+          "std": 0.00508082816229941
+        },
+        "ece": {
+          "mean": 0.051444444444444445,
+          "std": 0.005080828162299419
+        },
+        "field_macro_f1": {
+          "mean": 0.9715920837469032,
+          "std": 0.014060204250294974
+        },
+        "non_skill_false_update_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "predicate_f1": {
+          "mean": 0.9485555555555556,
+          "std": 0.0050808281622994195
+        },
+        "predicate_precision": {
+          "mean": 0.9485555555555556,
+          "std": 0.005080828162299419
+        },
+        "predicate_recall": {
+          "mean": 0.9485555555555556,
+          "std": 0.005080828162299419
+        },
+        "selective_risk_at_0_5": {
+          "mean": 0.051444444444444445,
+          "std": 0.00508082816229941
+        },
+        "target_macro_f1": {
+          "mean": 0.9656674547063493,
+          "std": 0.014712711273953778
+        }
+      },
+      "noise": {
+        "drop": 0.0,
+        "false_positive": 0.0,
+        "flip": 0.05
+      },
+      "replicates": 20
+    },
+    {
+      "metrics": {
+        "brier": {
+          "mean": 0.011074394742715559,
+          "std": 0.002152681779068975
+        },
+        "ece": {
+          "mean": 0.018457324571192597,
+          "std": 0.0035878029651149673
+        },
+        "field_macro_f1": {
+          "mean": 0.9732901222309561,
+          "std": 0.016806627424424285
+        },
+        "non_skill_false_update_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "predicate_f1": {
+          "mean": 0.9843692634147032,
+          "std": 0.0030820620896286886
+        },
+        "predicate_precision": {
+          "mean": 0.9692377923813457,
+          "std": 0.0059796716085249325
+        },
+        "predicate_recall": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "selective_risk_at_0_5": {
+          "mean": 0.03076220761865433,
+          "std": 0.005979671608524938
+        },
+        "target_macro_f1": {
+          "mean": 0.9640343665407852,
+          "std": 0.015522375212915369
+        }
+      },
+      "noise": {
+        "drop": 0.0,
+        "false_positive": 0.05,
+        "flip": 0.0
+      },
+      "replicates": 20
+    },
+    {
+      "metrics": {
+        "brier": {
+          "mean": 0.0628278756265997,
+          "std": 0.005795994526341289
+        },
+        "ece": {
+          "mean": 0.07075116378317206,
+          "std": 0.006264651757809826
+        },
+        "field_macro_f1": {
+          "mean": 0.9300382542033332,
+          "std": 0.021927773412238345
+        },
+        "non_skill_false_update_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "predicate_f1": {
+          "mean": 0.9069775076006169,
+          "std": 0.006956578202748629
+        },
+        "predicate_precision": {
+          "mean": 0.916043355955874,
+          "std": 0.007507386798405415
+        },
+        "predicate_recall": {
+          "mean": 0.8981111111111111,
+          "std": 0.0077626837665371465
+        },
+        "selective_risk_at_0_5": {
+          "mean": 0.08395664404412599,
+          "std": 0.0075073867984054195
+        },
+        "target_macro_f1": {
+          "mean": 0.9055840154094785,
+          "std": 0.025612558840365753
+        }
+      },
+      "noise": {
+        "drop": 0.05,
+        "false_positive": 0.05,
+        "flip": 0.05
+      },
+      "replicates": 20
+    },
+    {
+      "metrics": {
+        "brier": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "ece": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "field_macro_f1": {
+          "mean": 0.945806710700425,
+          "std": 0.021164939545787805
+        },
+        "non_skill_false_update_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "predicate_f1": {
+          "mean": 0.9481239634466062,
+          "std": 0.006820741614319049
+        },
+        "predicate_precision": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "predicate_recall": {
+          "mean": 0.9014444444444445,
+          "std": 0.01229322808663874
+        },
+        "selective_risk_at_0_5": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "target_macro_f1": {
+          "mean": 0.9300424921668411,
+          "std": 0.01912178855357701
+        }
+      },
+      "noise": {
+        "drop": 0.1,
+        "false_positive": 0.0,
+        "flip": 0.0
+      },
+      "replicates": 20
+    },
+    {
+      "metrics": {
+        "brier": {
+          "mean": 0.1025,
+          "std": 0.01074321491298888
+        },
+        "ece": {
+          "mean": 0.10250000000000001,
+          "std": 0.010743214912988889
+        },
+        "field_macro_f1": {
+          "mean": 0.9470053991839479,
+          "std": 0.022116495811894604
+        },
+        "non_skill_false_update_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "predicate_f1": {
+          "mean": 0.8975,
+          "std": 0.010743214912988889
+        },
+        "predicate_precision": {
+          "mean": 0.8975,
+          "std": 0.010743214912988889
+        },
+        "predicate_recall": {
+          "mean": 0.8975,
+          "std": 0.010743214912988889
+        },
+        "selective_risk_at_0_5": {
+          "mean": 0.1025,
+          "std": 0.01074321491298888
+        },
+        "target_macro_f1": {
+          "mean": 0.9299477840520177,
+          "std": 0.0214262482125572
+        }
+      },
+      "noise": {
+        "drop": 0.0,
+        "false_positive": 0.0,
+        "flip": 0.1
+      },
+      "replicates": 20
+    },
+    {
+      "metrics": {
+        "brier": {
+          "mean": 0.022534516288638486,
+          "std": 0.0024845399196658908
+        },
+        "ece": {
+          "mean": 0.03755752714773088,
+          "std": 0.004140899866109836
+        },
+        "field_macro_f1": {
+          "mean": 0.9472778967494695,
+          "std": 0.024134331772439975
+        },
+        "non_skill_false_update_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "predicate_f1": {
+          "mean": 0.9676777801201175,
+          "std": 0.0036693117520284996
+        },
+        "predicate_precision": {
+          "mean": 0.9374041214204486,
+          "std": 0.006901499776849696
+        },
+        "predicate_recall": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "selective_risk_at_0_5": {
+          "mean": 0.0625958785795514,
+          "std": 0.006901499776849707
+        },
+        "target_macro_f1": {
+          "mean": 0.9242636732255101,
+          "std": 0.023715621122150355
+        }
+      },
+      "noise": {
+        "drop": 0.0,
+        "false_positive": 0.1,
+        "flip": 0.0
+      },
+      "replicates": 20
+    },
+    {
+      "metrics": {
+        "brier": {
+          "mean": 0.11593895494861513,
+          "std": 0.008809476411701152
+        },
+        "ece": {
+          "mean": 0.132461411845317,
+          "std": 0.009347215262265469
+        },
+        "field_macro_f1": {
+          "mean": 0.8416861214251066,
+          "std": 0.04024819161557712
+        },
+        "non_skill_false_update_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "predicate_f1": {
+          "mean": 0.8251960197674197,
+          "std": 0.01009205878412983
+        },
+        "predicate_precision": {
+          "mean": 0.8400011599935134,
+          "std": 0.011031190771510657
+        },
+        "predicate_recall": {
+          "mean": 0.8109999999999999,
+          "std": 0.012755536198204439
+        },
+        "selective_risk_at_0_5": {
+          "mean": 0.15999884000648662,
+          "std": 0.011031190771510666
+        },
+        "target_macro_f1": {
+          "mean": 0.8130428017597122,
+          "std": 0.04323167740523665
+        }
+      },
+      "noise": {
+        "drop": 0.1,
+        "false_positive": 0.1,
+        "flip": 0.1
+      },
+      "replicates": 20
+    },
+    {
+      "metrics": {
+        "brier": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "ece": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "field_macro_f1": {
+          "mean": 0.8845019164348509,
+          "std": 0.03516008330509073
+        },
+        "non_skill_false_update_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "predicate_f1": {
+          "mean": 0.8869526093062556,
+          "std": 0.009561140581118515
+        },
+        "predicate_precision": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "predicate_recall": {
+          "mean": 0.797,
+          "std": 0.015287774507190903
+        },
+        "selective_risk_at_0_5": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "target_macro_f1": {
+          "mean": 0.8589937037286376,
+          "std": 0.029965725360343864
+        }
+      },
+      "noise": {
+        "drop": 0.2,
+        "false_positive": 0.0,
+        "flip": 0.0
+      },
+      "replicates": 20
+    },
+    {
+      "metrics": {
+        "brier": {
+          "mean": 0.19661111111111113,
+          "std": 0.015887237676438726
+        },
+        "ece": {
+          "mean": 0.1966111111111111,
+          "std": 0.015887237676438737
+        },
+        "field_macro_f1": {
+          "mean": 0.9061391471198509,
+          "std": 0.030436971625275314
+        },
+        "non_skill_false_update_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "predicate_f1": {
+          "mean": 0.8033888888888889,
+          "std": 0.015887237676438744
+        },
+        "predicate_precision": {
+          "mean": 0.8033888888888889,
+          "std": 0.015887237676438737
+        },
+        "predicate_recall": {
+          "mean": 0.8033888888888889,
+          "std": 0.015887237676438737
+        },
+        "selective_risk_at_0_5": {
+          "mean": 0.19661111111111113,
+          "std": 0.015887237676438726
+        },
+        "target_macro_f1": {
+          "mean": 0.8760270877187251,
+          "std": 0.021837303701469225
+        }
+      },
+      "noise": {
+        "drop": 0.0,
+        "false_positive": 0.0,
+        "flip": 0.2
+      },
+      "replicates": 20
+    },
+    {
+      "metrics": {
+        "brier": {
+          "mean": 0.041122107994568786,
+          "std": 0.002950074413423306
+        },
+        "ece": {
+          "mean": 0.06853684665761477,
+          "std": 0.0049167906890388085
+        },
+        "field_macro_f1": {
+          "mean": 0.8946543603166908,
+          "std": 0.03068905776670984
+        },
+        "non_skill_false_update_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "predicate_f1": {
+          "mean": 0.9394063164022902,
+          "std": 0.0046115732636964205
+        },
+        "predicate_precision": {
+          "mean": 0.8857719222373088,
+          "std": 0.008194651148398086
+        },
+        "predicate_recall": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "selective_risk_at_0_5": {
+          "mean": 0.1142280777626912,
+          "std": 0.008194651148398086
+        },
+        "target_macro_f1": {
+          "mean": 0.8654028111942528,
+          "std": 0.02509579853858831
+        }
+      },
+      "noise": {
+        "drop": 0.0,
+        "false_positive": 0.2,
+        "flip": 0.0
+      },
+      "replicates": 20
+    },
+    {
+      "metrics": {
+        "brier": {
+          "mean": 0.2235185603283366,
+          "std": 0.012177984183283608
+        },
+        "ece": {
+          "mean": 0.2571437423335606,
+          "std": 0.012083764578913811
+        },
+        "field_macro_f1": {
+          "mean": 0.6951815929474175,
+          "std": 0.051575702548639656
+        },
+        "non_skill_false_update_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "predicate_f1": {
+          "mean": 0.6607212814944401,
+          "std": 0.013372151969908059
+        },
+        "predicate_precision": {
+          "mean": 0.686814287657732,
+          "std": 0.012463688183803025
+        },
+        "predicate_recall": {
+          "mean": 0.6366111111111111,
+          "std": 0.015585190026051913
+        },
+        "selective_risk_at_0_5": {
+          "mean": 0.313185712342268,
+          "std": 0.012463688183803027
+        },
+        "target_macro_f1": {
+          "mean": 0.6675989558419195,
+          "std": 0.03858902030984173
+        }
+      },
+      "noise": {
+        "drop": 0.2,
+        "false_positive": 0.2,
+        "flip": 0.2
+      },
+      "replicates": 20
+    },
+    {
+      "metrics": {
+        "brier": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "ece": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "field_macro_f1": {
+          "mean": 0.8373167579791064,
+          "std": 0.04550339360586834
+        },
+        "non_skill_false_update_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "predicate_f1": {
+          "mean": 0.8242909926544726,
+          "std": 0.009934206965835118
+        },
+        "predicate_precision": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "predicate_recall": {
+          "mean": 0.7012222222222222,
+          "std": 0.01432385560895433
+        },
+        "selective_risk_at_0_5": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "target_macro_f1": {
+          "mean": 0.7981220974493601,
+          "std": 0.034315977240187326
+        }
+      },
+      "noise": {
+        "drop": 0.3,
+        "false_positive": 0.0,
+        "flip": 0.0
+      },
+      "replicates": 20
+    },
+    {
+      "metrics": {
+        "brier": {
+          "mean": 0.2961666666666667,
+          "std": 0.016392090082840278
+        },
+        "ece": {
+          "mean": 0.2961666666666667,
+          "std": 0.016392090082840278
+        },
+        "field_macro_f1": {
+          "mean": 0.8230681955827909,
+          "std": 0.03709977186043161
+        },
+        "non_skill_false_update_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "predicate_f1": {
+          "mean": 0.7038333333333333,
+          "std": 0.016392090082840247
+        },
+        "predicate_precision": {
+          "mean": 0.7038333333333333,
+          "std": 0.016392090082840278
+        },
+        "predicate_recall": {
+          "mean": 0.7038333333333333,
+          "std": 0.016392090082840278
+        },
+        "selective_risk_at_0_5": {
+          "mean": 0.2961666666666667,
+          "std": 0.016392090082840278
+        },
+        "target_macro_f1": {
+          "mean": 0.7981852860135459,
+          "std": 0.033962659642909745
+        }
+      },
+      "noise": {
+        "drop": 0.0,
+        "false_positive": 0.0,
+        "flip": 0.3
+      },
+      "replicates": 20
+    },
+    {
+      "metrics": {
+        "brier": {
+          "mean": 0.05969354781716049,
+          "std": 0.0029331450571534476
+        },
+        "ece": {
+          "mean": 0.09948924636193399,
+          "std": 0.004888575095255698
+        },
+        "field_macro_f1": {
+          "mean": 0.808927124331233,
+          "std": 0.0472759093388195
+        },
+        "non_skill_false_update_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "predicate_f1": {
+          "mean": 0.9095757705863303,
+          "std": 0.004825742090335868
+        },
+        "predicate_precision": {
+          "mean": 0.8341845893967762,
+          "std": 0.008147625158759577
+        },
+        "predicate_recall": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "selective_risk_at_0_5": {
+          "mean": 0.16581541060322377,
+          "std": 0.008147625158759586
+        },
+        "target_macro_f1": {
+          "mean": 0.7758343254175706,
+          "std": 0.03740065335892478
+        }
+      },
+      "noise": {
+        "drop": 0.0,
+        "false_positive": 0.3,
+        "flip": 0.0
+      },
+      "replicates": 20
+    },
+    {
+      "metrics": {
+        "brier": {
+          "mean": 0.3088306718357034,
+          "std": 0.012520992734448112
+        },
+        "ece": {
+          "mean": 0.36242168426120597,
+          "std": 0.013708217060108595
+        },
+        "field_macro_f1": {
+          "mean": 0.5413993588534676,
+          "std": 0.07612487412085517
+        },
+        "non_skill_false_update_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "predicate_f1": {
+          "mean": 0.51856929945365,
+          "std": 0.015035840402972565
+        },
+        "predicate_precision": {
+          "mean": 0.5482599616962862,
+          "std": 0.016532939532551767
+        },
+        "predicate_recall": {
+          "mean": 0.4920555555555555,
+          "std": 0.015867020693218128
+        },
+        "selective_risk_at_0_5": {
+          "mean": 0.4517400383037138,
+          "std": 0.016532939532551767
+        },
+        "target_macro_f1": {
+          "mean": 0.5296293676964963,
+          "std": 0.03788919099891786
+        }
+      },
+      "noise": {
+        "drop": 0.3,
+        "false_positive": 0.3,
+        "flip": 0.3
+      },
+      "replicates": 20
+    }
+  ],
+  "fault_cases_per_kind": 10,
+  "limitation": "Synthetic oracle/noise results validate sensitivity and the metrics harness; they do not estimate Qwen visual-evidence accuracy on natural Habitat events. Human/simulator gold annotation remains required.",
+  "n_requests": 300,
+  "replicates": 20
+}

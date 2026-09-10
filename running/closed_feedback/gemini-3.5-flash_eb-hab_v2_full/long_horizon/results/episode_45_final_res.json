@@ -1,0 +1,1 @@
+{"reward": 0.75, "num_invalid_actions": 8, "empty_plan": 0, "instruction": "Set down all the bowl onto the brown table.", "task_success": true, "task_progress": 1.0, "subgoal_reward": 0.0, "num_steps": 20, "planner_steps": 6, "planner_output_error": 0, "num_invalid_action_ratio": 0.4, "episode_elapsed_seconds": [140.89536786079407]}

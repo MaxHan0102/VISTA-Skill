@@ -1,0 +1,33 @@
+{
+  "artifact_sha256": "071f3da400da59a70f27d499045a8eadf76ef3d4abd3d77c12ab805113901a15",
+  "elapsed_seconds": 32.4460255309823,
+  "endpoint": "http://192.168.1.185:8000/v1",
+  "endpoint_index": 0,
+  "executor_usage": {
+    "by_phase": {
+      "mechanism": {
+        "calls": 5,
+        "completion_tokens": 1645,
+        "prompt_tokens": 22441
+      }
+    },
+    "calls": 5,
+    "completion_tokens": 1645,
+    "prompt_tokens": 22441
+  },
+  "local_metrics": {
+    "failed_target_triggers": 1,
+    "guard_blocks": 3,
+    "retries_without_new_evidence": 0,
+    "successful_retries_without_evidence": 0,
+    "target_evidence_recoveries": 0
+  },
+  "method_usage": {
+    "vista_visual_evidence": {
+      "calls": 1,
+      "completion_tokens": 322,
+      "prompt_tokens": 779
+    }
+  },
+  "skill_sha256": "b78a1c696deb6e94ededccbe5980d548b380e0ef137b8e4768e527630540d3df"
+}

@@ -1,0 +1,7 @@
+{
+  "start_index": 0,
+  "episodes": 60,
+  "seed": 0,
+  "dataset_sha256": "3e7d2cb4246b6e2edaeaabd318dba93e4dbbff114c8368ed0c862e64f417afcf",
+  "order": "stock dataset/iterator"
+}

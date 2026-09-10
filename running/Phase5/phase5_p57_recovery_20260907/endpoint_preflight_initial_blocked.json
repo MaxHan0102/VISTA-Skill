@@ -1,0 +1,14 @@
+{
+  "checks": [
+    {
+      "endpoint": "http://192.168.1.185:8000/v1",
+      "error": "URLError: <urlopen error [Errno 113] No route to host>",
+      "passed": false
+    },
+    {
+      "endpoint": "http://192.168.1.192:8000/v1",
+      "error": "URLError: <urlopen error [Errno 113] No route to host>",
+      "passed": false
+    }
+  ]
+}

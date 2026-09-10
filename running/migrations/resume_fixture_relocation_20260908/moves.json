@@ -1,0 +1,10 @@
+[
+  {
+    "source": "running/resume_v2_hab_fixture",
+    "destination": "running/test/resume_v2_hab_fixture"
+  },
+  {
+    "source": "running/resume_v2_nav_fixture",
+    "destination": "running/test/resume_v2_nav_fixture"
+  }
+]
